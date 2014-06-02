@@ -1,0 +1,41 @@
+//------------------------- Reset
+input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+textarea {
+    padding: 0;
+    width: 100%;
+    border: none;
+}
+
+//------------------------- Set
+legend {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field:last-child,
+.field-action {
+    margin-bottom: auto;
+}
+
+#{$form-input-type-text} {
+    padding: .5rem;
+}
+
+button {
+    padding: .5rem;
+}

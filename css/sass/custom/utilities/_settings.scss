@@ -1,0 +1,59 @@
+// Hide basic stuff
+
+// Basic
+legend,
+.assistive-text,
+
+// Classes
+.search-bar-title,
+.main-content-title,
+
+// WP
+.widget_search .widget-title,
+.widget_nav_menu .widget-title,
+.form-allowed-tags {
+    @extend %vhide;
+}
+
+
+// Border box on all elements to reset the box model
+* {
+    @extend %bbox;
+}
+
+
+// Reset spacing around elements
+#{$heading-tags},
+ul, ol,
+p,
+th, td,
+button,
+blockquote,
+dl {
+	margin: auto;
+	padding: 0;
+}
+
+
+// Bottom spacing on elements
+
+// Elements
+#{$heading-tags},
+p,
+ul, ol,
+table,
+blockquote,
+legend,
+dl,
+
+// Classes
+.field {
+    margin-bottom: 1rem;
+}
+
+p:last-child,
+li:last-child,
+.field:last-child,
+.field-action {
+    margin-bottom: auto !important;
+}

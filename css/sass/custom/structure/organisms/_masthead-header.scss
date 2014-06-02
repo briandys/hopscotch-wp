@@ -1,0 +1,17 @@
+// Center-align site title and site description
+@mixin header-plain-text-center {
+    
+    .masthead-header {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .site-title-heading {
+        margin-bottom: auto;
+        font-size: $font-xl;
+        line-height: normal;
+    }
+
+}
+
+@include header-plain-text-center;

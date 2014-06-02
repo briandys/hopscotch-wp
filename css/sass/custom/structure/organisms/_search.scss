@@ -1,0 +1,32 @@
+.header-sidebar-container {
+    
+    .widget_search {
+        padding: 0 1rem;
+        
+        label {
+            @extend %vhide;
+        }
+        
+        $floater: 5rem;
+        
+        .field {
+            float: left;
+            margin-bottom: auto;
+            width: 100%;
+            margin-right: -$floater;
+            
+            .field-cr {
+                margin-right: .5rem;
+                padding-right: $floater;
+            }
+            
+        }
+        
+        .field-action {
+            float: right;
+            width: $floater;
+        }
+        
+    }
+
+}

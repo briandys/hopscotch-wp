@@ -1,0 +1,5 @@
+.toolbar {
+    .action-item {
+        @extend %inline-blocker;
+    }
+}

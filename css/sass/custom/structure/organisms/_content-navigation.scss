@@ -1,0 +1,13 @@
+.content-navigation-list {
+    @include unlist;
+    
+    .action-item {
+        padding: 1rem;
+        
+        &:last-child {
+            margin-bottom: auto;
+        }
+        
+    }
+    
+}

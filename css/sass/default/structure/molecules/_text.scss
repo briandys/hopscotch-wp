@@ -1,0 +1,19 @@
+.note {
+    @include faint;
+}
+
+// Links
+a {
+    color: $color-link;
+}
+
+
+
+// Stack
+.site-header {
+    z-index: 90;
+}
+
+.action-list {
+    @include unlist;
+}

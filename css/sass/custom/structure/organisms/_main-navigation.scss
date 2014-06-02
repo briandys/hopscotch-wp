@@ -1,0 +1,71 @@
+// Main Navigation
+.main-navigation {
+    margin-top: -1rem;
+    
+    div.nav-menu {
+        
+        ul, ol {
+            @include unlist;
+        }
+        
+        a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        .children a {
+            padding-left: 1rem;
+        }
+        
+    }
+    
+}
+
+.main-navigation div.nav-menu {
+    
+    .status-main-nav-active & {
+        @include size(100%);
+        background-color: $color-pri;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        li, a {
+            color: $white;
+        }
+    }
+}
+
+
+// Heading
+.main-navigation-heading {
+    margin-bottom: auto;
+    padding: 1rem;
+    font-size: $font-m;
+    text-align: center;
+    text-transform: uppercase;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+    .status-main-nav-active & {
+        @extend %vhide;
+    }
+
+}
+
+.main-navigation-ct {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-top: $block-m;
+    @include size(100%);
+    transform: translate(0, 100%);
+    transition: transform 500ms ease 0s;
+    z-index: 100;
+    
+    .status-main-nav-active & {
+        transform: translate(0, 0%);
+    }
+
+}

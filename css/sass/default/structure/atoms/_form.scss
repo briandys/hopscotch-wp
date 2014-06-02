@@ -1,0 +1,30 @@
+input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+textarea {
+    @include size(100%, 2.5rem);
+    min-height: 2.5rem;
+}
+
+#{$form-input-type-text},
+textarea {
+    padding: .5rem;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    padding: .35rem .75rem;
+    line-height: normal;
+}
+
+label[for] {
+    &:hover {
+        cursor: pointer;
+    }
+}

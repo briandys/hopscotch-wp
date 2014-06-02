@@ -1,0 +1,132 @@
+$avatar-size: 4.5rem;
+
+@mixin avatar-adjust {
+    margin-left: 1rem;
+    padding-left: $avatar-size;
+}
+
+.comment-list {
+    @include unlist;
+    margin-bottom: 1rem;
+    
+    ol {
+        @include unlist;
+    }
+}
+
+.comment {
+    padding: 1rem;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.comment-cr {
+    position: relative;
+    padding-right: 1rem;
+}
+
+.comment-hr {
+    @include avatar-adjust;
+    
+    .timestamp {
+        text-align: right;
+    }
+    
+}
+
+.comments-hr {
+    padding: 0 1rem;
+}
+
+.comments-heading {
+    margin-bottom: auto;
+}
+
+.comment-timestamp-link {
+    @include faint;
+}
+
+.comment-author {
+    
+    .author-avatar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        .avatar {
+            @include circle;
+        }
+    }
+}
+
+.comment-ct {
+    @include avatar-adjust;   
+}
+
+.comment-message {
+    margin: auto;
+    font-size: $font-m;
+    font-style: normal;
+    font-family: inherit;
+    
+    p {
+        margin-bottom: .5rem;
+    }
+
+}
+
+.comment-author-name {
+    margin-top: -1.5rem;
+    padding-right: 5rem;
+    font-size: $font-m;
+}
+
+.comment-action {
+    @include avatar-adjust;
+    margin-top: .5rem;
+    
+    .action-item {
+        display: inline-block;
+        margin-right: 1rem;
+        
+        &:lasd-child {
+            margin-right: auto;
+        }
+        
+    }
+    
+}
+
+
+.comment-form {
+    
+    .field-comment {
+        
+        label {
+            @extend %vhide;
+        }
+    }
+}
+
+
+.comment-form-signed-in-as {
+    display: inline-block;
+}
+
+.comment-form-action {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.note-optional {
+    @include faint;
+}
+
+.form-submit {
+    margin-top: 1.5rem;
+}
+
+
+.comment-respond {
+    padding: 0 1rem;
+}

@@ -1,0 +1,5 @@
+.entry-thumbnail-link {
+    display: block;
+    @include size(10rem);
+    @include bg-img;
+}

@@ -1,0 +1,1797 @@
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 43, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 133, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 142, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 160, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 167, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 171, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 182, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 190, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 201, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 209, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 219, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 254, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 264, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 276, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 301, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 310, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 320, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 333, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 345, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 355, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 369, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 377, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 388, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 397, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 406, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 417, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 423, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 13, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 25, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 30, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 39, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 57, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 65, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 75, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+/* line 83, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+/* line 118, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+/* line 127, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 144, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/* line 157, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 174, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 179, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 206, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 214, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 218, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 222, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  /* line 232, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* line 237, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 242, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 247, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 251, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* line 257, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 263, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/h5bp/_main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* line 10, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_reset.scss */
+h1, h2, h3, h4, h5, h6,
+p,
+th, td,
+button,
+blockquote {
+  margin: auto;
+  padding: 0;
+}
+
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.recipient-list:before, .com-recipient-search-results .action-list:before, .conversation-thread-list:before, .voice-message-control .action-list:before, .recipient-list:after, .com-recipient-search-results .action-list:after, .conversation-thread-list:after, .voice-message-control .action-list:after {
+  content: " ";
+  display: table;
+}
+/* line 8, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.recipient-list:after, .com-recipient-search-results .action-list:after, .conversation-thread-list:after, .voice-message-control .action-list:after {
+  clear: both;
+}
+
+/* line 28, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+legend,
+label,
+.search-bar-hr,
+.screen-reader-text,
+.assistive-text, .main-navigation-title, .site-desc, .site-title, .main-navigation-label, .nav-item .label, .com-recipient-box .text-heading, .status-filled .recipient-box-label, .recipient-box-action .action-link-show-contacts .label, .punctuation, .extra-verb, .message-item .punctuation,
+.message-item .extra-verb,
+.message-item .person-handle, .com-compose-message-box .text-heading, .action-link-send-text-message .label, .com-voice-message-box-ct .action-link .label, [data-state~="profile-photo-active"] .person-profile-photo-image, .message-list-action .action-link .label, .main-content-title, .site-footer {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 61, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.recipient-item-box .action-link .label {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+/* line 53, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.recipient-item-box .action-link .label:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 91, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 99, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.action-list, .nav-menu > ul, .recipient-list, .conversation-thread-list, .message-list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+/* line 111, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.person-handle .contact-name,
+.person-handle .contact-mobile-number, .message-list .message-snippet p {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 138, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.nav-item a, .recipient-box-action .action-link-show-contacts, .action-link-send-text-message, .com-voice-message-box-ct .action-link, .message-list-action .action-link {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 149, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.toolbar .action-item, .recipient-list, .recipient-text-input, [data-type~="number"] .search-results-item-box .search-results-item-box-cr, .com-recipient-search-results .action-link .label, .voice-message-playback-control-action .action-list, .voice-message-timer, .voice-message-record-control-action .action-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 161, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+*, .com-recipient-box-ct, .message-list-item-box {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+/* line 168, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.site-title-link .icon:after, [data-type~="number"] .search-results-item-box:after, .com-recipient-search-results .action-link:after, .voice-message-timer:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  height: 100%;
+}
+
+/* line 12, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/utilities/_tools.scss */
+.action-link-close-voice-message .label {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
+  *text-indent: -9999px;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../img/svg/icons.svg);
+  background-size: 400% auto;
+  vertical-align: middle;
+}
+/* line 53, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/utilities/_tools.scss */
+.action-link-close-voice-message .label:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 41, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/themes/_theme-helper.scss */
+.note, .character-counter, .status-record-ready .voice-message-timer, .status-playback-ready .voice-message-timer, .message-list-item-box-cr .timestamp {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+/* line 92, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/themes/_theme-helper.scss */
+.recipient-item-box {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* line 100, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/themes/_theme-helper.scss */
+.message-box-cr, .voice-message-record-control-action .action-items-cr {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* Based on close values of Perfect Fourth */
+/* http://type-scale.com */
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_heading.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 8, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_heading.scss */
+h2 {
+  font-size: 2.25em;
+}
+
+/* line 12, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_heading.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 16, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_heading.scss */
+h4 {
+  font-size: 1.25em;
+}
+
+/* line 20, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_heading.scss */
+h5 {
+  font-size: 1em;
+}
+
+/* line 24, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_heading.scss */
+h6 {
+  font-size: 0.75em;
+  margin-bottom: 1em;
+}
+
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_paragraph.scss */
+p {
+  margin-bottom: 1rem;
+}
+
+/* line 5, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_paragraph.scss */
+p:last-child {
+  margin-bottom: auto !important;
+}
+
+/* line 9, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_paragraph.scss */
+p:empty {
+  display: none;
+}
+
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_table.scss */
+table {
+  width: 100%;
+}
+
+/* line 2, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+input {
+  width: 100%;
+}
+
+/* line 6, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+button {
+  width: 100%;
+}
+
+/* line 10, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+textarea {
+  width: 100%;
+}
+
+/* line 15, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+legend {
+  margin-bottom: 1rem;
+}
+
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+/* line 24, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+.field {
+  margin-bottom: 1rem;
+}
+
+/* line 29, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+.field:last-child,
+.field-action {
+  margin-bottom: auto;
+}
+
+/* line 33, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'] {
+  padding: .5rem;
+}
+
+/* line 37, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_form.scss */
+button {
+  padding: .5rem;
+}
+
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_link.scss */
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+/* line 6, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/atoms/_link.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 17, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/molecules/_text.scss */
+a {
+  color: #00aaff;
+}
+
+/* line 24, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/molecules/_text.scss */
+.site-header {
+  z-index: 90;
+}
+
+/* line 28, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/molecules/_text.scss */
+.action-list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+/* line 3, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_masthead-header.scss */
+.site-header,
+.masthead-cr {
+  height: 100%;
+}
+
+/* line 7, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_masthead-header.scss */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* line 13, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_masthead-header.scss */
+.masthead-cr {
+  width: 3.5rem;
+  background-color: #262626;
+}
+
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_masthead-header.scss */
+.site-title-cr {
+  font-size: 1rem;
+}
+
+/* line 23, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_masthead-header.scss */
+.site-title-link {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+}
+/* line 27, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_masthead-header.scss */
+.site-title-link .icon {
+  width: 1.5rem;
+  height: 3.5rem;
+  margin: auto;
+  fill: #ff7f00;
+}
+
+/* line 9, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_nav-bar.scss */
+.nav-menu > ul li {
+  display: block;
+}
+
+/* line 16, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_nav-bar.scss */
+.nav-item a {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_nav-bar.scss */
+.nav-item a:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* line 24, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_nav-bar.scss */
+.nav-item.status-active a {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 27, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_nav-bar.scss */
+.nav-item.status-active .icon {
+  fill: #00aaff;
+}
+/* line 31, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_nav-bar.scss */
+.nav-item .icon {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/default/structure/organisms/_site-info.scss */
+.site-info {
+  text-align: center;
+}
+
+/* line 6, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.com-recipient-box-ct {
+  position: relative;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.5rem 3.5rem;
+}
+/* line 12, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.status-filled .com-recipient-box-ct {
+  padding-left: .5rem;
+}
+/* line 15, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.com-recipient-box-ct:after {
+  left: 0;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.0625rem;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 24, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+/* line 30, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-label .label,
+.recipient-box-label .label:after {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 34, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-label .label {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #cccccc;
+}
+/* line 38, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-label .label:after {
+  content: '';
+  height: 100%;
+}
+
+/* line 48, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-items:hover {
+  cursor: text;
+}
+
+/* line 59, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-item {
+  float: left;
+  margin: .25rem;
+}
+
+/* line 64, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-item-box {
+  position: relative;
+  padding-right: 1.75rem;
+  min-height: 2rem;
+  max-width: 15rem;
+  color: white;
+  background-color: #404040;
+}
+/* line 72, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-item-box .action-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: .15rem;
+  padding: .5rem;
+}
+/* line 78, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-item-box .action-link .label {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-image: url(../img/svg/close-white-1.svg);
+  background-size: 100% auto;
+}
+/* line 86, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-item-box .person-handle {
+  display: block;
+  padding: .25rem .5rem;
+  padding-right: 0;
+}
+/* line 91, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-item-box:hover {
+  background-color: #262626;
+  cursor: pointer;
+}
+/* line 95, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+[data-state="selected"] .recipient-item-box {
+  background-color: #00aaff;
+}
+
+/* line 100, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-action {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 104, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-action .action-link-show-contacts {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+/* line 107, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-box-action .action-link-show-contacts .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* line 116, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-text-input {
+  padding: .25rem;
+  width: 10rem;
+}
+/* line 120, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-box.scss */
+.recipient-text-input input {
+  padding: 0;
+  border: none;
+}
+
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+/* line 8, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-box .com-recipient-search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -0.0625rem;
+  padding: 0 .75rem 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results-cr {
+  background-color: white;
+  border-top-width: 0;
+  border-right-width: 0.0625rem;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* line 28, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-item .person-handle .contact-name,
+.search-results-item .person-handle .contact-mobile-number {
+  display: block;
+}
+/* line 32, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-item:last-child .search-results-item-box {
+  border-bottom: 0;
+}
+
+/* line 37, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-item-box {
+  padding: .5rem;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+/* line 40, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+[data-type~="number"] .search-results-item-box {
+  height: 4rem;
+  overflow: hidden;
+}
+/* line 47, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+[data-type~="number"] .search-results-item-box .contact-mobile-number {
+  font-size: 1.125rem;
+}
+/* line 51, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-item-box .contact-name {
+  font-size: 1.125rem;
+}
+
+/* line 56, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-items {
+  overflow-y: auto;
+}
+
+/* line 61, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.search-results-item-box:hover {
+  background-color: rgba(0, 170, 255, 0.05);
+  cursor: pointer;
+}
+/* line 65, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+[data-state~="selected"] .search-results-item-box {
+  color: white;
+  background-color: #00aaff;
+}
+/* line 68, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+[data-state~="selected"] .search-results-item-box:hover {
+  color: white;
+  background-color: #00aaff;
+}
+
+/* line 77, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results .action-list {
+  border-top-width: 0.0625rem;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+/* line 81, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results .action-item {
+  float: right;
+  padding: .5rem .25rem;
+  width: 50%;
+  text-align: center;
+}
+/* line 86, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results .action-item:first-child {
+  padding-right: .5rem;
+}
+/* line 89, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results .action-item:last-child {
+  padding-left: .5rem;
+}
+/* line 93, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results .action-link {
+  display: block;
+  height: 3rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+/* line 102, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results [data-action-type~="primary"] .action-link {
+  color: white;
+  background-color: #262626;
+}
+/* line 106, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-recipient-search-results.scss */
+.com-recipient-search-results [data-action-type~="secondary"] .action-link {
+  border: 0.0625rem solid #262626;
+  color: #262626;
+}
+
+/* line 2, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.com-conversation-thread {
+  width: 100%;
+  height: 100%;
+  /* Calculate */
+  overflow-y: auto;
+}
+
+/* line 7, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.com-conversation-thread-cr {
+  padding: 1rem 0;
+}
+
+/* line 29, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-item {
+  clear: both;
+  margin-top: 1rem;
+  min-width: 7rem;
+  max-width: 80%;
+}
+
+/* line 41, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-item:first-child {
+  margin-top: auto;
+}
+
+/* line 45, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-box-cr {
+  position: relative;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  background-color: #e5e5e5;
+}
+/* line 51, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-box-cr .timestamp {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: .5rem;
+  font-size: 0.75rem;
+  line-height: normal;
+  opacity: .75;
+}
+/* line 59, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.type-contact .message-box-cr {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* line 63, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.type-owner .message-box-cr {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 70, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-item.type-contact {
+  float: left;
+}
+/* line 72, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-item.type-contact .message-box-cr {
+  color: white;
+  background-color: #ff7f00;
+}
+/* line 77, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-item.type-owner {
+  float: right;
+}
+/* line 81, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-conversation-thread.scss */
+.message-item .actual-message p {
+  margin-bottom: .5rem;
+  line-height: normal;
+}
+
+/* line 8, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-compose-message-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 15, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-compose-message-box-cr {
+  border-top-width: 0.0625rem;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+/* line 20, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-compose-message-box-ct {
+  position: relative;
+  min-height: 3rem;
+  padding: .75rem 1rem;
+}
+/* line 25, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-text-message-active .com-compose-message-box-ct, .status-text-message-inactive.status-voice-message-inactive .com-compose-message-box-ct {
+  padding-right: 4rem;
+}
+
+/* line 30, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.text-message-box-textarea {
+  height: 3rem;
+  min-height: 3rem;
+  max-height: 4.5rem;
+  outline: 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 38, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-box-action {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 .25rem;
+  width: 3.5rem;
+  height: 100%;
+}
+/* line 45, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-box-action .action-items-cr {
+  height: 100%;
+}
+/* line 48, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-box-action .action-list {
+  position: relative;
+  height: 100%;
+}
+
+/* line 54, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.action-item-show-voice-message {
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 59, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.action-link-send-text-message {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+/* line 62, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.action-link-send-text-message .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* line 71, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-voice-message-box-ct .action-link {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+/* line 74, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-voice-message-box-ct .action-link .icon {
+  width: 2rem;
+  height: 2rem;
+}
+/* line 77, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-voice-message-box-ct .action-link .icon-close {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* line 80, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.com-voice-message-box-ct .action-link .icon-record {
+  fill: #e53a2e;
+}
+
+/* line 90, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.action-link-close-voice-message .label {
+  margin: auto;
+  margin-right: 0;
+  background-position: -3rem -9rem;
+}
+
+/* line 98, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.send-text-message-action {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 .25rem;
+}
+
+/* line 105, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.character-counter {
+  margin-bottom: -0.35rem;
+  text-align: center;
+}
+
+/* line 113, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-text-message-inactive .send-text-message-action {
+  display: none;
+}
+
+/* line 119, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-text-message-active .send-text-message-action {
+  display: block;
+}
+/* line 122, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-text-message-active .com-voice-message-box {
+  display: none;
+}
+
+/* line 128, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-voice-message-inactive .action-item-close-voice-message {
+  display: none;
+}
+/* line 131, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-voice-message-inactive .voice-message-control {
+  display: none;
+}
+
+/* line 138, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-voice-message-active .com-text-message-box,
+.status-voice-message-active .action-item-show-voice-message {
+  display: none;
+}
+
+/* line 148, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-control .action-item {
+  float: left;
+  width: 100%;
+}
+/* line 151, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-control .action-item .label {
+  margin: auto;
+}
+/* line 155, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-control .note {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* line 161, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-playback-control-action {
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+/* line 169, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-timer {
+  width: auto;
+  height: 3.5rem;
+}
+/* line 173, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-timer > * {
+  float: left;
+  line-height: 3.5rem;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+
+/* line 186, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-record-control-action .action-items-cr {
+  padding: .25rem;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+/* line 192, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.voice-message-record-control-action .action-list {
+  width: 100%;
+}
+
+/* line 202, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-record-ready .voice-message-playback-control-action .action-list,
+.status-record-ready .action-item-stop-record-voice-message,
+.status-record-ready .action-item-send-voice-message {
+  display: none;
+}
+/* line 205, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-record-ready .action-item-record-voice-message {
+  display: table;
+}
+
+/* line 213, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-recording .voice-message-playback-control-action .action-list,
+.status-recording .action-item-record-voice-message,
+.status-recording .action-item-send-voice-message {
+  display: none;
+}
+/* line 216, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-recording .action-item-stop-record-voice-message {
+  display: table;
+}
+
+/* line 224, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playback-ready .action-item-pause-voice-message,
+.status-playback-ready .action-item-stop-record-voice-message,
+.status-playing .action-item-pause-voice-message,
+.status-playing .action-item-stop-record-voice-message {
+  display: none;
+}
+/* line 228, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playback-ready .voice-message-record-control-action .action-item,
+.status-playing .voice-message-record-control-action .action-item {
+  width: 50%;
+}
+/* line 230, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playback-ready .voice-message-record-control-action .action-item .label,
+.status-playing .voice-message-record-control-action .action-item .label {
+  margin: auto;
+}
+/* line 235, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playback-ready .voice-message-record-control-action .action-item-record-voice-message,
+.status-playback-ready .voice-message-record-control-action .action-item-send-voice-message,
+.status-playing .voice-message-record-control-action .action-item-record-voice-message,
+.status-playing .voice-message-record-control-action .action-item-send-voice-message {
+  display: table;
+}
+/* line 238, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playback-ready .voice-message-record-control-action .action-item:last-child,
+.status-playing .voice-message-record-control-action .action-item:last-child {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem;
+  border-style: dotted;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 245, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playing .action-item-play-voice-message {
+  display: none;
+}
+/* line 248, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-compose-message-box.scss */
+.status-playing .action-item-pause-voice-message {
+  display: block;
+}
+
+/* line 2, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-items {
+  width: 100%;
+  height: 100%;
+  /* Calculate */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 13, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-item-box {
+  padding: .75rem;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-item-box-cr {
+  position: relative;
+  padding-left: 3.5rem;
+}
+/* line 22, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-item-box-cr .timestamp {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -0.5rem;
+  margin-top: -0.75rem;
+}
+/* line 30, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-item-box-cr .person-handle {
+  font-size: 1.125rem;
+}
+
+/* line 36, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.person-profile-photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 42, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.person-profile-photo-link {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 47, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+[data-state~="profile-photo-inactive"] .person-profile-photo-link {
+  opacity: .15;
+}
+/* line 50, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+[data-state~="profile-photo-active"] .person-profile-photo-link {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 64, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-item-box:hover {
+  background-color: rgba(0, 170, 255, 0.05);
+  cursor: pointer;
+}
+/* line 68, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+[data-state~="active"] .message-list-item-box {
+  background-color: rgba(0, 170, 255, 0.25);
+}
+/* line 70, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+[data-state~="active"] .message-list-item-box:hover {
+  background-color: rgba(0, 170, 255, 0.25);
+}
+
+/* line 85, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-action {
+  background-color: #262626;
+}
+/* line 87, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-action .action-list {
+  text-align: right;
+}
+/* line 90, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-action .action-link {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+/* line 93, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-action .action-link .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+/* line 97, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-action .action-link .icon-more {
+  transform: rotate(90deg);
+}
+/* line 103, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/organisms/_com-message-list.scss */
+.message-list-action .action-link:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.mobile-number-country-code,
+.mobile-number-first-three,
+.mobile-number-second-three {
+  margin-right: .25rem;
+}
+
+/* line 15, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.content-area,
+.sidebar-container {
+  height: 100%;
+}
+
+/* line 19, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.content-area {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: 60%;
+}
+
+/* line 27, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+}
+
+/* line 34, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.secondary-cr {
+  margin-left: 3.5rem;
+  height: 100%;
+  border-top-width: 0;
+  border-right-width: 0.0625rem;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 41, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 49, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.colophon-cr {
+  margin-left: 3.5rem;
+}
+
+/* line 54, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch/css/sass/custom/structure/templates/_base.scss */
+.site-header {
+  z-index: 90;
+}

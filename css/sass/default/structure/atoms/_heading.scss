@@ -1,0 +1,30 @@
+// Resources:
+// http://type-scale.com
+
+h1 {
+    font-size: $font-xxxl;
+}
+
+h2 {
+    font-size: $font-xxl;
+}
+
+h3 {
+    font-size: $font-xl;
+}
+
+h4 {
+    font-size: $font-l;
+}
+
+h5 {
+    font-size: $font-m;
+}
+
+h6 {
+    font-size: $font-s;
+}
+
+#{$heading-tags} {
+    font-weight: normal;
+}

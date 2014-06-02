@@ -1,0 +1,17 @@
+.status-overlay-active {
+    
+    &.html {
+        overflow: hidden;
+        
+        &:after {
+            @include sudo-ct;
+            left: 0;
+            top: 0;
+            @include size(100%);
+            background-color: hsla(0, 0%, 0%, .75);
+            z-index: 90;
+        }
+        
+    }
+
+}

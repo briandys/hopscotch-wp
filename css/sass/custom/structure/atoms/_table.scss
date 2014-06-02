@@ -1,0 +1,28 @@
+th, td {
+    padding: .5rem;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    
+    tr {
+        @include table-border(bottom, .125rem);
+    }
+    
+}
+
+tbody {
+    
+    tr {
+        @include table-border(top);
+        
+        &:last-child {
+            @include table-border(bottom);
+        }
+    
+    }
+
+}

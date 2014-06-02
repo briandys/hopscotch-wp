@@ -1,0 +1,52 @@
+.alignleft {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aligncenter {
+    display: block;
+    margin: auto;
+}
+
+.alignnone {
+    display: block;
+    margin: auto;
+}
+
+.wp-caption {
+    margin-bottom: 1rem;
+}
+
+.wp-caption-text {
+    padding: .5rem;
+    font-size: $font-s-m;
+    color: $darken50;
+}
+
+.sharedaddy {
+    
+    .sd-title {
+        @extend %vhide;
+    }
+    
+    ul {
+        @include unlist;
+        margin-bottom: auto;
+        padding-left: 0;
+    }
+    
+    li {
+        display: inline-block;
+    }
+}
+
+.g-follow-wrapper {
+    margin-left: 1rem;
+}

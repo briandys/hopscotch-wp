@@ -1,0 +1,104 @@
+//------------------------- For CSS Gradients
+@import "compass/css3/images";
+
+
+//------------------------- Style Guide
+$basefonts: '"Helvetica", Arial, sans-serif';
+
+$white: #fff;
+$gray25: #404040;
+$gray50: #808080;
+$gray80: #ccc;
+$gray90: #e5e5e5;
+$black: #262626;
+
+$darken25: hsla(0, 0%, 0%, .25);
+$darken50: hsla(0, 0%, 0%, .50);
+
+$fontsmall: .75rem;
+$fontmedium: 1rem;
+
+$fontmediumtolarge: 1.125rem;
+
+$fontlarge: 1.25rem;
+$fontxlarge: 1.75rem;
+$fontxxlarge: 2.25rem;
+$fontxxxlarge: 3rem;
+
+
+//------------------------- Settings
+$font1: #{$basefonts};
+$font2: #{$basefonts};
+$font3: #{$font1};
+
+
+//------------------------- Faint
+@mixin faint {    
+    font-size: $fontsmall;
+    color: $gray50;
+}
+
+%faint {
+    @include faint;
+}
+
+
+//------------------------- Text Style
+@mixin textstyle1 {
+}
+
+//------------------------- Border Style
+// Dark Border
+@mixin borderstyle ($topwidth: $one, $rightwidth: $one, $bottomwidth: $one, $leftwidth: $one, $style: solid, $alpha: .35) {
+    border: {
+        top-width: $topwidth;
+        right-width: $rightwidth;
+        bottom-width: $bottomwidth;
+        left-width: $leftwidth;
+        style: $style;
+        color: hsla(0, 0%, 0%, $alpha);
+    }
+}
+
+%borderstyle {
+    @include borderstyle;
+}
+
+@mixin borderradius ($topleftradius: $one, $toprightradius: $topleftradius, $bottomrightradius: $topleftradius, $bottomleftradius: $topleftradius) {
+    border: {
+        top-left-radius: $topleftradius;
+        top-right-radius: $toprightradius;
+        bottom-right-radius: $bottomrightradius;
+        bottom-left-radius: $bottomleftradius;
+    }
+}
+
+%borderradius {
+    @include borderradius;
+}
+
+%borderradiussmall {
+    @include borderradius(.25rem);
+}
+
+%borderradiusmedium {
+    @include borderradius(.5rem);
+}
+
+@mixin circle {
+    border-radius: 50%;
+}
+
+//------------------------- Transitions -------------------------
+@mixin transition ($property: all, $duration: .125s, $easing: ease) {
+	-webkit-transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing;
+	-ms-transition: $property $duration $easing;
+	-o-transition: $property $duration $easing;
+	transition: $property $duration $easing;
+}
+
+// Example of @extend Directive
+%transition-bg {
+    @include transition(background-color);
+}
