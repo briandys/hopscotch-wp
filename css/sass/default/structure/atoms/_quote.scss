@@ -1,11 +1,9 @@
 blockquote {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-}
-
-blockquote {
-    font-size: $font-l;
+    @include font-size-rem($font-l);
     font-family: $font-family-quote;
+    color: $gray50;
 }
 
 q {

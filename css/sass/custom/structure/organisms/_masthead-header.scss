@@ -8,7 +8,7 @@
     
     .site-title-heading {
         margin-bottom: auto;
-        font-size: $font-xl;
+        @include font-size-rem($font-xl);
         line-height: normal;
     }
 

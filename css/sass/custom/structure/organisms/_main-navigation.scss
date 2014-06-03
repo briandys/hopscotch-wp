@@ -40,7 +40,7 @@
 .main-navigation-heading {
     margin-bottom: auto;
     padding: 1rem;
-    font-size: $font-m;
+    @include font-size-rem($font-m);
     text-align: center;
     text-transform: uppercase;
     

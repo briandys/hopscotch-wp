@@ -14,6 +14,17 @@
         padding-left: 0;
         padding-right: 0;
     }
+    
+    .show-more-content {
+        text-align: center;
+
+        .more-link {
+            display: block;
+            padding: 1rem;
+        }
+        
+    }
+    
 }
 
 .entry-title {
@@ -24,12 +35,17 @@
 
 .entry-hr-cr {
     margin-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: $gutter;
+    padding-right: $gutter;
     
     .entry-meta {
         margin-top: .5rem;
         margin-bottom: 1rem;
+    }
+    
+    .entry-thumbnail {
+        margin-left: -$gutter;
+        margin-right: -$gutter;
     }
 
 }
@@ -45,7 +61,7 @@
 .entry-ct-cr {    
     
     > * {
-        padding: 0 1rem;
+        padding: 0 $gutter;
         
         &:last-child {
             margin-bottom: auto;
@@ -76,13 +92,4 @@
         @include font-size-rem($font-s);
     }
     
-}
-
-.show-more-content {
-    text-align: center;
-    
-    .more-link {
-        display: block;
-        padding: 1rem;
-    }
 }

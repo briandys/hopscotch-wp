@@ -212,84 +212,11 @@
 }
 
 
-//------------------------- Normalize Header
-@mixin header-normalize {
-    .masthead-header,
-    .nav-bar,
-    .site-header .search-bar {
-        display: block;
-        height: auto;
-    }
-
-    .masthead-header,
-    .nav-bar {
-        text-align: center;
-    }
-}
+//------------------------- Converting 1px to rem
+$one: (1 / $font-size-base) + rem;
 
 
-//------------------------- Normalize Primary and Secondary Content
-@mixin pri-sec-content-normalize {
-    .entry-cr,
-    .comments-cr,
-    .page-nav,
-    #secondary-cr,
-    .main-content-hr-cr {
-        max-width: none;
-    }
-    
-    @include mq($monitor, true) {        
-        .secondary-sidebar-active {
-            #{$skeleton} {
-                max-width: 70rem;
-            }
-        } 
-        
-        .secondary-sidebar-active {
-            #primary {
-                float: left;
-                margin-right: -20rem;
-            }
-            #secondary {
-                float: right;
-                width: 20rem;
-            }
-            .site-content {
-                padding-right: 20rem;
-            }
-        } 
-    }
-    
-    #main-cr {
-        max-width: 70rem;
-    }
-}
-
-
-//------------------------- Dark Search Theme -------------------------
-@mixin search-invert {
-    .site-header {
-        .search-bar-title .label,
-        .search-submit {
-            background-position: 0 0;
-        }    
-        .search-field {
-            color: $color1;            
-            &::-webkit-input-placeholder {
-                color: $color1;
-            }
-            &::-moz-placeholder {
-                color: $color1;
-            }
-            &::-ms-input-placeholder {
-                color: $color1;
-            }
-        }
-    }  
-}
-
-
-// Fallback px for rem font sizes (to support IE8-)
+//------------------------- Fallback px for rem font sizes (to support IE8-)
 // http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 @function calculateRem($size) {
     $remSize: $size / $font-size-base;
@@ -312,40 +239,41 @@
 }
 
 
-// Converting 1px to rem
-$one: (1 / $font-size-base) + rem;
+//------------------------- Width and Height Size
+@mixin size(
+    $width,
+    $height: $width
+    ) {
+    width: $width;
+    height: $height;
+}
 
 
+//------------------------- Media Query
+// http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+@mixin mq($device-width, $ie9: false, $query1: min, $query2: width) {
+    @if $ie9 == true {
+        .lt-ie9 {
+            @content;
+        }
+    }
+    
+    @media only screen and (#{$query1}-#{$query2}: $device-width / $font-size-base + rem) {
+        @content;
+    }
+
+}
 
 
-// Media Query Max Width
+//------------------------- Media Query Max Width
 @mixin mq-max($device-width) {
     @media only screen and (max-width: $device-width+px - 1) {
         @content 
     }
 }
 
-// Width and Height Size
-@mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
-}
 
-// Media Query
-// http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
-@mixin mq($point, $IE9: false, $query1: min, $query2: width) {
-    @if $IE9 == true {
-        .lt-ie9 {
-            @content;
-        }
-    }
-    @media only screen and (#{$query1}-#{$query2}: $point / $font-size-base +em) {
-        @content;
-    }
-}
-
-
-// IE Fix Classes
+//------------------------- IE Fix Classes
 @mixin lt-ie9-fix {
     .lt-ie9 {
         @content;
@@ -356,31 +284,6 @@ $one: (1 / $font-size-base) + rem;
     .lt-ie8 {
         @content;
     }
-}
-
-// Tooltip
-@mixin tooltip {
-    &:hover:after {
-        content: attr(data-handle);
-        position: absolute;
-        left: 0;
-        top: 100%;
-        background-color: red;
-        z-index: 100;
-    }
-}
-
-@mixin text-input-unstyle {    
-    padding: 0;
-    border: none;
-}
-
-%text-input-unstyle {
-    @include text-input-unstyle;
-}
-
-@function func($some-number, $another-number){
-    @return $some-number + $another-number
 }
 
 @mixin breakpoint($name) {
@@ -399,4 +302,103 @@ $one: (1 / $font-size-base) + rem;
       @content;
     }
   }
+}
+
+
+//------------------------- For CSS Gradients
+@import "compass/css3/images";
+
+
+//------------------------- Faint
+@mixin faint {    
+    font-size: $font-s;
+    color: $gray50;
+}
+
+%faint {
+    @include faint;
+}
+
+
+//------------------------- Border Radius
+@mixin corner-radius (
+    $topleftradius: $one,
+    $toprightradius: $topleftradius,
+    $bottomrightradius: $topleftradius,
+    $bottomleftradius: $topleftradius
+    ) {
+    
+    border: {
+        top-left-radius: $topleftradius;
+        top-right-radius: $toprightradius;
+        bottom-right-radius: $bottomrightradius;
+        bottom-left-radius: $bottomleftradius;
+    }
+        
+}
+
+@mixin circle {
+    border-radius: 50%;
+}
+
+
+//------------------------- Border Style
+@mixin hopscotch-border-style (
+    $t-width: $one,
+    $r-width: $one,
+    $b-width: $one,
+    $l-width: $one,
+    $style: solid,
+    $alpha: .35
+    ) {
+    
+    border: {
+        top-width: $t-width;
+        right-width: $r-width;
+        bottom-width: $b-width;
+        left-width: $l-width;
+        style: $style;
+        color: hsla(0, 0%, 0%, $alpha);
+    }
+        
+}
+
+%hopscotch-border-style {
+    @include hopscotch-border-style;
+}
+
+@mixin list-div-v {
+    @include hopscotch-border-style(0, 0, $one, 0, solid, .15);
+}
+
+@mixin table-div-v {
+    @include hopscotch-border-style($one, 0, 0, 0, solid, .15);
+}
+
+@mixin hopscotch-table-border-single($pos: bottom, $size: $one, $style: solid, $alpha: .15) {
+    border: {
+        #{$pos}: $size $style rgba($black, $alpha);
+    }
+}
+
+//------------------------- Transition
+@mixin hopscotch-transition (
+    $property: all,
+    $duration: .125s,
+    $easing: ease
+    ) {
+    -webkit-transition: $property $duration $easing;
+    -moz-transition: $property $duration $easing;
+    -ms-transition: $property $duration $easing;
+    -o-transition: $property $duration $easing;
+    transition: $property $duration $easing;
+}
+
+%transition-bg-color {
+    @include hopscotch-transition(background-color);
+}
+
+
+@mixin bg-shade($alpha: 1) {
+    background-color: hsla(0, 0%, 0%, $alpha);
 }

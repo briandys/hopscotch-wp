@@ -878,15 +878,13 @@ p:empty {
 blockquote {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-
-/* line 6, sass/default/structure/atoms/_quote.scss */
-blockquote {
-  font-size: 1.5;
+  font-size: 24px;
+  font-size: 1.5rem;
   font-family: Georgia, serif;
+  color: gray;
 }
 
-/* line 11, sass/default/structure/atoms/_quote.scss */
+/* line 9, sass/default/structure/atoms/_quote.scss */
 q {
   font-family: Georgia, serif;
 }
@@ -982,7 +980,8 @@ tbody tr:last-child {
 /* line 9, sass/custom/structure/organisms/_masthead-header.scss */
 .site-title-heading {
   margin-bottom: auto;
-  font-size: 2;
+  font-size: 32px;
+  font-size: 2rem;
   line-height: normal;
 }
 
@@ -1004,83 +1003,87 @@ tbody tr:last-child {
   padding-left: 0;
   padding-right: 0;
 }
+/* line 18, sass/custom/structure/organisms/_entry.scss */
+.entry .show-more-content {
+  text-align: center;
+}
+/* line 21, sass/custom/structure/organisms/_entry.scss */
+.entry .show-more-content .more-link {
+  display: block;
+  padding: 1rem;
+}
 
-/* line 19, sass/custom/structure/organisms/_entry.scss */
+/* line 30, sass/custom/structure/organisms/_entry.scss */
 .entry-title {
   display: inline;
   font-size: 2.5;
   line-height: normal;
 }
 
-/* line 25, sass/custom/structure/organisms/_entry.scss */
+/* line 36, sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr {
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 30, sass/custom/structure/organisms/_entry.scss */
+/* line 41, sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-meta {
   margin-top: .5rem;
   margin-bottom: 1rem;
 }
+/* line 46, sass/custom/structure/organisms/_entry.scss */
+.entry-hr-cr .entry-thumbnail {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
 
-/* line 37, sass/custom/structure/organisms/_entry.scss */
+/* line 53, sass/custom/structure/organisms/_entry.scss */
 .entry-admin-action {
   display: inline-block;
 }
 
-/* line 41, sass/custom/structure/organisms/_entry.scss */
+/* line 57, sass/custom/structure/organisms/_entry.scss */
 .entry-ct {
   margin-bottom: 1rem;
 }
 
-/* line 47, sass/custom/structure/organisms/_entry.scss */
+/* line 63, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr > * {
   padding: 0 1rem;
 }
-/* line 50, sass/custom/structure/organisms/_entry.scss */
+/* line 66, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
-/* line 55, sass/custom/structure/organisms/_entry.scss */
+/* line 71, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr h1 {
   font-size: 36px;
   font-size: 2.25rem;
 }
-/* line 59, sass/custom/structure/organisms/_entry.scss */
+/* line 75, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr h2 {
   font-size: 30px;
   font-size: 1.875rem;
 }
-/* line 63, sass/custom/structure/organisms/_entry.scss */
+/* line 79, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 67, sass/custom/structure/organisms/_entry.scss */
+/* line 83, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr h4 {
   font-size: 18px;
   font-size: 1.125rem;
 }
-/* line 71, sass/custom/structure/organisms/_entry.scss */
+/* line 87, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 75, sass/custom/structure/organisms/_entry.scss */
+/* line 91, sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr h6 {
   font-size: 12px;
   font-size: 0.75rem;
-}
-
-/* line 81, sass/custom/structure/organisms/_entry.scss */
-.show-more-content {
-  text-align: center;
-}
-/* line 84, sass/custom/structure/organisms/_entry.scss */
-.show-more-content .more-link {
-  display: block;
-  padding: 1rem;
 }
 
 /* line 1, sass/custom/structure/organisms/_scroll-top.scss */
@@ -1169,7 +1172,8 @@ tbody tr:last-child {
 .main-navigation-heading {
   margin-bottom: auto;
   padding: 1rem;
-  font-size: 1;
+  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
 }
