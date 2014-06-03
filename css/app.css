@@ -721,7 +721,7 @@ li:last-child,
   margin-bottom: auto !important;
 }
 
-/* line 28, sass/default/utilities/_tools.scss */
+/* line 30, sass/default/utilities/_tools.scss */
 legend,
 .assistive-text,
 .search-bar-title,
@@ -739,75 +739,41 @@ legend,
   width: 1px;
 }
 
-/* line 94, sass/default/utilities/_tools.scss */
+/* line 102, sass/default/utilities/_tools.scss */
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 
-/* line 113, sass/default/utilities/_tools.scss */
+/* line 128, sass/default/utilities/_tools.scss */
 img, .wp-caption {
   max-width: 100%;
   height: auto;
 }
 
-/* line 142, sass/default/utilities/_tools.scss */
+/* line 140, sass/default/utilities/_tools.scss */
 .action-list, .nav-menu > ul {
   list-style: none;
   margin: auto;
   padding: 0;
 }
 
-/* line 192, sass/default/utilities/_tools.scss */
+/* line 194, sass/default/utilities/_tools.scss */
 .toolbar .action-item {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 4, sass/default/structure/atoms/_heading.scss */
-h1 {
-  font-size: 3rem;
+/* line 1, sass/default/structure/atoms/_definition.scss */
+dd {
+  margin-left: 2rem;
+  margin-bottom: .5rem;
 }
 
-/* line 8, sass/default/structure/atoms/_heading.scss */
-h2 {
-  font-size: 2.5rem;
-}
-
-/* line 12, sass/default/structure/atoms/_heading.scss */
-h3 {
-  font-size: 2rem;
-}
-
-/* line 16, sass/default/structure/atoms/_heading.scss */
-h4 {
-  font-size: 1.5rem;
-}
-
-/* line 20, sass/default/structure/atoms/_heading.scss */
-h5 {
-  font-size: 1rem;
-}
-
-/* line 24, sass/default/structure/atoms/_heading.scss */
-h6 {
-  font-size: 0.75rem;
-}
-
-/* line 28, sass/default/structure/atoms/_heading.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-/* line 1, sass/default/structure/atoms/_paragraph.scss */
-p:empty {
-  display: none;
-}
-
-/* line 1, sass/default/structure/atoms/_table.scss */
-table {
-  width: 100%;
+/* line 6, sass/default/structure/atoms/_definition.scss */
+dd:last-child {
+  margin-bottom: auto;
 }
 
 /* line 1, sass/default/structure/atoms/_form.scss */
@@ -846,6 +812,47 @@ label[for]:hover {
   cursor: pointer;
 }
 
+/* line 4, sass/default/structure/atoms/_heading.scss */
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+}
+
+/* line 8, sass/default/structure/atoms/_heading.scss */
+h2 {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+/* line 12, sass/default/structure/atoms/_heading.scss */
+h3 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+/* line 16, sass/default/structure/atoms/_heading.scss */
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+/* line 20, sass/default/structure/atoms/_heading.scss */
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+/* line 24, sass/default/structure/atoms/_heading.scss */
+h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* line 28, sass/default/structure/atoms/_heading.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 /* line 1, sass/default/structure/atoms/_link.scss */
 a {
   color: #00aaff;
@@ -859,7 +866,12 @@ a:hover {
 
 /* line 1, sass/default/structure/atoms/_list.scss */
 ul, ol {
-  padding-left: 2rem;
+  margin-left: 2rem;
+}
+
+/* line 1, sass/default/structure/atoms/_paragraph.scss */
+p:empty {
+  display: none;
 }
 
 /* line 1, sass/default/structure/atoms/_quote.scss */
@@ -870,7 +882,7 @@ blockquote {
 
 /* line 6, sass/default/structure/atoms/_quote.scss */
 blockquote {
-  font-size: 1.5rem;
+  font-size: 1.5;
   font-family: Georgia, serif;
 }
 
@@ -879,27 +891,15 @@ q {
   font-family: Georgia, serif;
 }
 
+/* line 1, sass/default/structure/atoms/_table.scss */
+table {
+  width: 100%;
+}
+
 /* line 1, sass/default/structure/molecules/_text.scss */
 .note {
-  font-size: 0.75rem;
+  font-size: 0.75;
   color: gray;
-}
-
-/* line 6, sass/default/structure/molecules/_text.scss */
-a {
-  color: #00aaff;
-}
-
-/* line 13, sass/default/structure/molecules/_text.scss */
-.site-header {
-  z-index: 90;
-}
-
-/* line 17, sass/default/structure/molecules/_text.scss */
-.action-list {
-  list-style: none;
-  margin: auto;
-  padding: 0;
 }
 
 /* line 1, sass/default/structure/organisms/_site-info.scss */
@@ -920,7 +920,7 @@ blockquote, q {
 
 /* line 1, sass/custom/structure/atoms/_table.scss */
 th, td {
-  padding: .5rem;
+  padding: .75rem 1rem;
 }
 
 /* line 5, sass/custom/structure/atoms/_table.scss */
@@ -947,8 +947,8 @@ tbody tr:last-child {
   display: block;
   width: 10rem;
   height: 10rem;
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -982,7 +982,7 @@ tbody tr:last-child {
 /* line 9, sass/custom/structure/organisms/_masthead-header.scss */
 .site-title-heading {
   margin-bottom: auto;
-  font-size: 2rem;
+  font-size: 2;
   line-height: normal;
 }
 
@@ -1008,7 +1008,7 @@ tbody tr:last-child {
 /* line 19, sass/custom/structure/organisms/_entry.scss */
 .entry-title {
   display: inline;
-  font-size: 2.5rem;
+  font-size: 2.5;
   line-height: normal;
 }
 
@@ -1042,12 +1042,42 @@ tbody tr:last-child {
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
+/* line 55, sass/custom/structure/organisms/_entry.scss */
+.entry-ct-cr h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+/* line 59, sass/custom/structure/organisms/_entry.scss */
+.entry-ct-cr h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+/* line 63, sass/custom/structure/organisms/_entry.scss */
+.entry-ct-cr h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+/* line 67, sass/custom/structure/organisms/_entry.scss */
+.entry-ct-cr h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+/* line 71, sass/custom/structure/organisms/_entry.scss */
+.entry-ct-cr h5 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 75, sass/custom/structure/organisms/_entry.scss */
+.entry-ct-cr h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
 
-/* line 57, sass/custom/structure/organisms/_entry.scss */
+/* line 81, sass/custom/structure/organisms/_entry.scss */
 .show-more-content {
   text-align: center;
 }
-/* line 60, sass/custom/structure/organisms/_entry.scss */
+/* line 84, sass/custom/structure/organisms/_entry.scss */
 .show-more-content .more-link {
   display: block;
   padding: 1rem;
@@ -1067,7 +1097,7 @@ tbody tr:last-child {
   padding: 0;
   text-align: center;
 }
-/* line 76, sass/default/utilities/_tools.scss */
+/* line 84, sass/default/utilities/_tools.scss */
 .site-footer .widget_nav_menu .menu > li {
   display: inline-block;
 }
@@ -1139,7 +1169,7 @@ tbody tr:last-child {
 .main-navigation-heading {
   margin-bottom: auto;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1157,7 +1187,7 @@ tbody tr:last-child {
   width: 100%;
   height: 100%;
   transform: translate(0, 100%);
-  transition: transform 500ms ease 0s;
+  hopscotch-transition: transform 500ms ease 0s;
   z-index: 100;
 }
 /* line 67, sass/custom/structure/organisms/_main-navigation.scss */
@@ -1236,7 +1266,7 @@ tbody tr:last-child {
 
 /* line 45, sass/custom/structure/organisms/_comment.scss */
 .comment-timestamp-link {
-  font-size: 0.75rem;
+  font-size: 0.75;
   color: gray;
 }
 
@@ -1260,7 +1290,7 @@ tbody tr:last-child {
 /* line 66, sass/custom/structure/organisms/_comment.scss */
 .comment-message {
   margin: auto;
-  font-size: 1rem;
+  font-size: 1;
   font-style: normal;
   font-family: inherit;
 }
@@ -1273,7 +1303,7 @@ tbody tr:last-child {
 .comment-author-name {
   margin-top: -1.5rem;
   padding-right: 5rem;
-  font-size: 1rem;
+  font-size: 1;
 }
 
 /* line 84, sass/custom/structure/organisms/_comment.scss */
@@ -1305,7 +1335,7 @@ tbody tr:last-child {
 
 /* line 121, sass/custom/structure/organisms/_comment.scss */
 .note-optional {
-  font-size: 0.75rem;
+  font-size: 0.75;
   color: gray;
 }
 
@@ -1364,7 +1394,7 @@ tbody tr:last-child {
 /* line 27, sass/custom/structure/templates/_wordpress.scss */
 .wp-caption-text {
   padding: .5rem;
-  font-size: 0.875rem;
+  font-size: 0.875;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1384,4 +1414,9 @@ tbody tr:last-child {
 /* line 50, sass/custom/structure/templates/_wordpress.scss */
 .g-follow-wrapper {
   margin-left: 1rem;
+}
+
+/* line 55, sass/custom/structure/templates/_wordpress.scss */
+.post-edit-link {
+  padding: 1rem;
 }

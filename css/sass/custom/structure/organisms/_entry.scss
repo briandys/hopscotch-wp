@@ -52,6 +52,30 @@
         }
     }
     
+    h1 {
+        @include font-size-rem($font-xxxl * $font-size-shrink-factor);
+    }
+
+    h2 {
+        @include font-size-rem($font-xxl * $font-size-shrink-factor);
+    }
+
+    h3 {
+        @include font-size-rem($font-xl * $font-size-shrink-factor);
+    }
+
+    h4 {
+        @include font-size-rem($font-l * $font-size-shrink-factor);
+    }
+
+    h5 {
+        @include font-size-rem($font-m);
+    }
+
+    h6 {
+        @include font-size-rem($font-s);
+    }
+    
 }
 
 .show-more-content {

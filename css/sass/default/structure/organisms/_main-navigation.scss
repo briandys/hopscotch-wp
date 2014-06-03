@@ -1,3 +1,9 @@
+// WordPress uses two instances of .nav-menu:
+// one is for the default navigation as: <div class="nav-menu"><ul><li>...
+// second is if you use a custom menu as: <ul class="nav-menu"><li>...
+// As general usage for WordPress and others (like plain HTML), refer to .nav-menu as div.nav-menu
+// and the <ul> as .nav-menu > ul
+
 .nav-menu {
     
     > ul {        

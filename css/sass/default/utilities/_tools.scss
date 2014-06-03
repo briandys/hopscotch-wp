@@ -10,7 +10,9 @@
     }    
 }
 
-%cf {@include cf;}
+%cf {
+    @include cf;
+}
 
 
 //------------------------- Visually Hidden
@@ -25,7 +27,9 @@
     width: 1px;
 }
 
-%vhide {@include vhide;}
+%vhide {
+    @include vhide;
+}
 
 
 //------------------------- Visually Hidden Reversed
@@ -39,7 +43,9 @@
     width: auto;
 }
 
-%vhide-rev {@include vhide-rev;}
+%vhide-rev {
+    @include vhide-rev;
+}
 
 
 //------------------------- Image Replacement
@@ -58,7 +64,9 @@
     }
 }
 
-%ir {@include ir;}
+%ir {
+    @include ir;
+}
 
 
 //------------------------- Pseudo Content
@@ -68,7 +76,7 @@
 }
 
 
-//------------------------- Center Lists
+//------------------------- Center List
 @mixin center-list {
     
     text-align: center;
@@ -97,10 +105,17 @@
 
 
 //------------------------- Background Image
-@mixin bg-img {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@mixin bg-img (
+    $repeat: no-repeat,
+    $position: center center,
+    $size: cover) {
+    
+    background: {
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+    }
+        
 }
 
 
@@ -115,24 +130,7 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//------------------------- Unlist
 @mixin unlist {
     list-style: none;
     margin: auto;
@@ -144,6 +142,7 @@
 }
 
 
+//------------------------- Truncate Texts
 @mixin truncate {
     display: block;
     overflow: hidden;
@@ -156,14 +155,17 @@
 }
 
 
-
-
 //------------------------- Iconize
-@mixin iconize($display: block, $width: 3, $height: 3) {
-    @include ir;
+@mixin iconize(
+    $display: block,
+    $width: 3,
+    $height: 3
+    ) {
+    
     display: $display;
     width: $width + rem;
     height: $height + rem;
+    @include ir;
 }
 
 %iconize {
@@ -172,35 +174,37 @@
 
 
 //------------------------- Icon Block using Table Cell (apply to icon images)
-@mixin iconblock {
+@mixin icon-block-cell {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
 
-%iconblock {
-    @include iconblock;
+%icon-block-cell {
+    @include icon-block-cell;
 }
 
 
 //------------------------- Inline Blocker
-@mixin inline-blocker {
+@mixin block-inline {
     display: inline-block;
     vertical-align: middle;
 }
 
-%inline-blocker {
-    @include inline-blocker;
+%block-inline {
+    @include block-inline;
 }
 
 
 //------------------------- Vertical Align Middle
 @mixin valign-mid {
+    
     &:after {
-        @include inline-blocker;
         content: '';
         height: 100%;
+        @include block-inline;
     }
+    
 }
 
 %valign-mid {
@@ -208,10 +212,8 @@
 }
 
 
-
 //------------------------- Normalize Header
 @mixin header-normalize {
-    .masthead-headers,
     .masthead-header,
     .nav-bar,
     .site-header .search-bar {
@@ -219,14 +221,14 @@
         height: auto;
     }
 
-    .masthead-headers,
     .masthead-header,
     .nav-bar {
         text-align: center;
     }
 }
 
-//------------------------- Normalize Primary and Secondary Content -------------------------
+
+//------------------------- Normalize Primary and Secondary Content
 @mixin pri-sec-content-normalize {
     .entry-cr,
     .comments-cr,
@@ -290,36 +292,31 @@
 // Fallback px for rem font sizes (to support IE8-)
 // http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 @function calculateRem($size) {
-    $remSize: $size / 16px;
+    $remSize: $size / $font-size-base;
     @return #{$remSize}rem;
 }
 
-@mixin fontSize($size) {
-    font-size: $size; //Fallback in px
+@function calculatePx($size) {
+    $pxSize: $size * $font-size-base;
+    @return #{$pxSize}px;
+}
+
+@mixin font-size-px($size) {
+    font-size: $size + px;
     font-size: calculateRem($size);
 }
 
-%fontSize {
-    @include fontSize(72px);
+@mixin font-size-rem($size) {
+    font-size: calculatePx($size);
+    font-size: $size + rem;
 }
-
-// Future Plan: lay down all typography style guide sizes and declare only their variables: Small, Medium, Large
 
 
 // Converting 1px to rem
-$base-font-size: 16;
-$one: (1 / $base-font-size) + rem;
+$one: (1 / $font-size-base) + rem;
 
 
-// Media Query
-$legacy: 240;
-$mobile: 320;
-$phablet: 600;
-$tablet: 768;
-$monitor: 980;
-$desktop: 1024;
-$widescreen: 1280;
-$moviehouse: 1440;
+
 
 // Media Query Max Width
 @mixin mq-max($device-width) {
@@ -342,7 +339,7 @@ $moviehouse: 1440;
             @content;
         }
     }
-    @media only screen and (#{$query1}-#{$query2}: $point / $base-font-size +em) {
+    @media only screen and (#{$query1}-#{$query2}: $point / $font-size-base +em) {
         @content;
     }
 }

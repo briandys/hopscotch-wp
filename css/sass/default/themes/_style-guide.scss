@@ -1,8 +1,8 @@
-$color-pri: $blue-superhero;
-$color-sec: $orange-chikka;
+$color-primary: $blue-superhero;
+$color-secondary: $orange-chikka;
 
-$color-link: $color-pri;
+$color-link: $color-primary;
 
-$color-hover-item: rgba($color-pri, .05);
-$color-selected-item: rgba($color-pri, 1);
-$color-active-item: rgba($color-pri, .25);
+$color-link-hover: rgba($color-primary, .05);
+$color-link-selected: rgba($color-primary, 1);
+$color-link-active: rgba($color-primary, .25);

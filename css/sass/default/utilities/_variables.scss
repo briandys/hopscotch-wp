@@ -1,3 +1,75 @@
 $heading-tags: "h1, h2, h3, h4, h5, h6";
 
 $form-input-type-text: "input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url']";
+
+
+// Media Query
+$legacy: 240;
+$mobile: 320;
+$phablet: 600;
+$tablet: 768;
+$monitor: 980;
+$desktop: 1024;
+$widescreen: 1280;
+$moviehouse: 1440;
+
+
+//------------------------- Font Family
+$font-family-base: Helvetica, Arial, sans-serif;
+$font-family-quote: Georgia, serif;
+
+
+//------------------------- Font Sizes
+$font-size-base: 16;
+
+$font-size-factor: .5;
+$font-size-shrink-factor: .75;
+
+$font-size-factor-s: $font-size-factor / 2;
+$font-size-factor-xs: $font-size-factor-s / 2;
+
+$font-m: 1;
+
+$font-s: $font-m - $font-size-factor-s;
+$font-s-m: $font-s + $font-size-factor-xs;
+$font-xs: $font-s - $font-size-factor-s;
+
+$font-l: $font-m + $font-size-factor;
+$font-xl: $font-l + $font-size-factor;
+$font-xxl: $font-xl + $font-size-factor;
+$font-xxxl: $font-xxl + $font-size-factor;
+
+
+//------------------------- Colors
+$white: hsl(0, 0%, 100%);
+$gray25: hsl(0, 0%, 25%);
+$gray50: hsl(0, 0%, 50%);
+$gray80: hsl(0, 0%, 80%);
+$gray90: hsl(0, 0%, 90%);
+$black: hsl(0, 0%, 0%);
+
+$blue-superhero: #00aaff; // Superhero Blue
+$orange-chikka: #ff7f00; // Chikka Orange
+$red-record: #e53a2e; // Record Red
+
+// Add a dark shade
+// Example usage: color overlays on menu items with exisint background colors
+$darken25: hsla(0, 0%, 0%, .25);
+$darken50: hsla(0, 0%, 0%, .50);
+$darken75: hsla(0, 0%, 0%, .75);
+
+
+//------------------------- Border Radius
+$radius-size-factor: .25;
+
+$radius-s: .25rem;
+$radius-m: $radius-s + $radius-size-factor;
+
+
+//------------------------- Block sizes
+// Usage: square areas of active elements require a minimum of 48px for touch
+$block-size-factor: .5;
+
+$block-m: 3rem;
+$block-l: $block-m + $block-size-factor;
+$block-xl: $block-l + $block-size-factor;

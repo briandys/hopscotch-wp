@@ -1,5 +1,5 @@
 th, td {
-    padding: .5rem;
+    padding: .75rem 1rem;
 }
 
 th {
@@ -9,7 +9,7 @@ th {
 thead {
     
     tr {
-        @include table-border(bottom, .125rem);
+        @include hopscotch-table-border-single(bottom, .125rem);
     }
     
 }
@@ -17,10 +17,10 @@ thead {
 tbody {
     
     tr {
-        @include table-border(top);
+        @include hopscotch-table-border-single(top);
         
         &:last-child {
-            @include table-border(bottom);
+            @include hopscotch-table-border-single(bottom);
         }
     
     }
