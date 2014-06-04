@@ -1,0 +1,16 @@
+li {
+    margin-bottom: $bottom-space;
+    
+}
+
+ol, ul {
+    
+    li {
+        
+        > ol, > ul {
+            margin-top: $bottom-space;
+        }
+        
+    }
+    
+}

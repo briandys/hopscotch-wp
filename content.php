@@ -5,7 +5,7 @@
 				
 				<?php
                     if ( is_single() || is_page() ) :
-                        the_title( '<h1 class="entry-title">', '</h1>' );
+                        the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
                     else :
                         the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
                     endif;
@@ -62,12 +62,14 @@
                 );
                 $the_query = new WP_Query( $args ); ?>
                 <?php if ( $the_query->have_posts() ) : ?>
-                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                
+                    <div class="child-page">
+                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <?php get_template_part( 'content', get_post_format() ); ?>
+                    <?php endwhile; ?>
+                    </div>
 
-                <?php get_template_part( 'content', get_post_format() ); ?>  
-
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
+                    <?php wp_reset_postdata(); ?>
                 <?php else: ?>
                 <?php endif; ?>
             <?php endif; ?>

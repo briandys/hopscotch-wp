@@ -1,0 +1,13 @@
+.child-page {
+    
+    margin-top: 1rem;
+    
+    .entry-meta {
+        @extend %vhide;
+    }
+    
+    .entry-title-link {
+        color: $font-color-base;
+    }
+    
+}

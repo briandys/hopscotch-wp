@@ -689,7 +689,7 @@ textarea {
     page-break-after: avoid;
   }
 }
-/* line 32, sass/custom/utilities/_settings.scss */
+/* line 34, sass/default/utilities/_settings.scss */
 h1, h2, h3, h4, h5, h6,
 ul, ol,
 p,
@@ -701,7 +701,7 @@ dl {
   padding: 0;
 }
 
-/* line 50, sass/custom/utilities/_settings.scss */
+/* line 52, sass/default/utilities/_settings.scss */
 h1, h2, h3, h4, h5, h6,
 p,
 ul, ol,
@@ -713,7 +713,7 @@ dl,
   margin-bottom: 1rem;
 }
 
-/* line 57, sass/custom/utilities/_settings.scss */
+/* line 59, sass/default/utilities/_settings.scss */
 p:last-child,
 li:last-child,
 .field:last-child,
@@ -721,14 +721,23 @@ li:last-child,
   margin-bottom: auto !important;
 }
 
+/* line 64, sass/default/utilities/_settings.scss */
+html {
+  color: #333333;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
 /* line 30, sass/default/utilities/_tools.scss */
 legend,
 .assistive-text,
 .search-bar-title,
-.main-content-title,
+.home .main-content-title,
+.blog .main-content-title,
+.search .main-content-title,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
-.form-allowed-tags, .skip-to-content-link, .status-main-nav-active .main-navigation-heading, .header-sidebar-container .widget_search label, .comment-form .field-comment label, .sharedaddy .sd-title {
+.form-allowed-tags, .skip-to-content-link, .child-page .entry-meta, .status-main-nav-active .main-navigation-heading, .header-sidebar-container .widget_search label, .comment-respond .verb-subject, .sharedaddy .sd-title {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -763,6 +772,38 @@ img, .wp-caption {
 .toolbar .action-item {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* line 296, sass/default/utilities/_tools.scss */
+.main-content-title .label {
+  font-size: 0.75;
+  color: gray;
+}
+
+/* line 1, sass/default/structure/atoms/_align.scss */
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 7, sass/default/structure/atoms/_align.scss */
+.alignright {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 13, sass/default/structure/atoms/_align.scss */
+.aligncenter {
+  display: block;
+  margin: auto;
+}
+
+/* line 18, sass/default/structure/atoms/_align.scss */
+.alignnone {
+  display: block;
+  margin: auto;
 }
 
 /* line 1, sass/default/structure/atoms/_definition.scss */
@@ -853,13 +894,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 1, sass/default/structure/atoms/_html.scss */
-html {
-  color: #333333;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
 /* line 1, sass/default/structure/atoms/_link.scss */
 a {
   color: #00aaff;
@@ -881,6 +915,21 @@ p:empty {
   display: none;
 }
 
+/* line 1, sass/default/structure/atoms/_placeholder.scss */
+::-webkit-input-placeholder {
+  color: #404040;
+}
+
+/* line 5, sass/default/structure/atoms/_placeholder.scss */
+::-moz-placeholder {
+  color: #404040;
+}
+
+/* line 9, sass/default/structure/atoms/_placeholder.scss */
+:-ms-input-placeholder {
+  color: #404040;
+}
+
 /* line 1, sass/default/structure/atoms/_quote.scss */
 blockquote {
   margin-left: 1.5rem;
@@ -888,12 +937,23 @@ blockquote {
   font-size: 24px;
   font-size: 1.5rem;
   font-family: Georgia, serif;
-  color: gray;
 }
 
-/* line 9, sass/default/structure/atoms/_quote.scss */
+/* line 8, sass/default/structure/atoms/_quote.scss */
 q {
   font-family: Georgia, serif;
+}
+
+/* line 1, sass/default/structure/atoms/_selection.scss */
+::-moz-selection {
+  color: white;
+  background-color: #12b32d;
+}
+
+/* line 6, sass/default/structure/atoms/_selection.scss */
+::selection {
+  color: #fff;
+  background-color: #00b34a;
 }
 
 /* line 1, sass/default/structure/atoms/_table.scss */
@@ -907,25 +967,98 @@ table {
   color: gray;
 }
 
+/* line 1, sass/default/structure/molecules/_caption.scss */
+.wp-caption {
+  margin-bottom: 1rem;
+}
+
+/* line 5, sass/default/structure/molecules/_caption.scss */
+.wp-caption-text {
+  padding: .5rem;
+  font-size: 0.875;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 1, sass/default/structure/organisms/_masthead-header.scss */
+.masthead-cr {
+  padding-bottom: 1rem;
+}
+
+/* line 1, sass/default/structure/organisms/_main-content.scss */
+.main-cr {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* line 5, sass/default/structure/organisms/_main-content.scss */
+.main-content-hr-cr {
+  padding: 0 1rem;
+}
+
+/* line 9, sass/default/structure/organisms/_main-content.scss */
+.main-content-title {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
 /* line 1, sass/default/structure/organisms/_site-info.scss */
 .site-info {
+  padding: 1rem;
   text-align: center;
 }
-/* line 4, sass/default/structure/organisms/_site-info.scss */
+/* line 5, sass/default/structure/organisms/_site-info.scss */
 .site-info a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 416, sass/default/utilities/_tools.scss */
+/* line 394, sass/default/utilities/_tools.scss */
 .site-info a:hover {
   border-bottom: none;
   text-decoration: none;
+}
+
+/* line 5, sass/default/structure/organisms/_site-footer.scss */
+.site-footer .widget_nav_menu .menu {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+/* line 84, sass/default/utilities/_tools.scss */
+.site-footer .widget_nav_menu .menu > li {
+  display: inline-block;
+}
+/* line 9, sass/default/structure/organisms/_site-footer.scss */
+.site-footer .widget_nav_menu .menu a {
+  display: inline-block;
+  padding: 1rem;
+}
+/* line 16, sass/default/structure/organisms/_site-footer.scss */
+.site-footer .widget_nav_menu .sub-menu {
+  display: inline-block;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+/* line 3, sass/default/structure/organisms/_tertiary-sidebar-container.scss */
+.tertiary-sidebar-container .menu .sub-menu li {
+  display: inline-block;
 }
 
 /* line 1, sass/custom/structure/atoms/_form.scss */
 label {
   display: block;
   margin-bottom: .5rem;
+}
+
+/* line 1, sass/custom/structure/atoms/_list.scss */
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* line 10, sass/custom/structure/atoms/_list.scss */
+ol li > ol, ol li > ul, ul li > ol, ul li > ul {
+  margin-top: 0.5rem;
 }
 
 /* line 1, sass/custom/structure/atoms/_quote.scss */
@@ -988,13 +1121,22 @@ tbody tr:last-child {
   padding: 0 1rem;
 }
 
-/* line 4, sass/custom/structure/organisms/_masthead-header.scss */
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_child-page.scss */
+.child-page {
+  margin-top: 1rem;
+}
+/* line 9, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_child-page.scss */
+.child-page .entry-title-link {
+  color: #333333;
+}
+
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_masthead-header.scss */
 .masthead-header {
   padding: 1rem;
   text-align: center;
 }
 
-/* line 9, sass/custom/structure/organisms/_masthead-header.scss */
+/* line 9, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_masthead-header.scss */
 .site-title-heading {
   margin-bottom: auto;
   font-size: 32px;
@@ -1002,201 +1144,228 @@ tbody tr:last-child {
   line-height: normal;
 }
 
-/* line 1, sass/custom/structure/organisms/_entry.scss */
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
-/* line 4, sass/custom/structure/organisms/_entry.scss */
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry .entry-thumbnail-link {
   width: 100%;
 }
-/* line 8, sass/custom/structure/organisms/_entry.scss */
+/* line 8, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry .image-cr {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 13, sass/custom/structure/organisms/_entry.scss */
+/* line 13, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry .wp-caption {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 18, sass/custom/structure/organisms/_entry.scss */
-.entry .show-more-content {
-  text-align: center;
-}
-/* line 21, sass/custom/structure/organisms/_entry.scss */
+/* line 20, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry .show-more-content .more-link {
-  display: block;
+  display: inline-block;
+  margin-left: -1rem;
   padding: 1rem;
+  color: #12b32d;
+}
+/* line 31, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.entry.sticky .entry-title-link {
+  color: #12b32d;
+}
+/* line 37, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.entry blockquote {
+  color: gray;
 }
 
-/* line 30, sass/custom/structure/organisms/_entry.scss */
+/* line 43, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-title {
   display: inline;
-  font-size: 2.5;
+  font-size: 40px;
+  font-size: 2.5rem;
   line-height: normal;
+  word-wrap: break-word;
+}
+/* line 49, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.logged-in .entry-title {
+  margin-right: 1rem;
 }
 
-/* line 36, sass/custom/structure/organisms/_entry.scss */
+/* line 55, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr {
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 41, sass/custom/structure/organisms/_entry.scss */
+/* line 60, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-meta {
   margin-top: .5rem;
   margin-bottom: 1rem;
 }
-/* line 46, sass/custom/structure/organisms/_entry.scss */
+/* line 65, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-thumbnail {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-/* line 52, sass/custom/structure/organisms/_entry.scss */
+/* line 71, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-timestamp a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 416, sass/default/utilities/_tools.scss */
+/* line 394, sass/default/utilities/_tools.scss */
 .entry-hr-cr .entry-timestamp a:hover {
   border-bottom: none;
   text-decoration: none;
 }
-/* line 58, sass/custom/structure/organisms/_entry.scss */
+/* line 77, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-byline a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 416, sass/default/utilities/_tools.scss */
+/* line 394, sass/default/utilities/_tools.scss */
 .entry-hr-cr .entry-byline a:hover {
   border-bottom: none;
   text-decoration: none;
 }
-/* line 63, sass/custom/structure/organisms/_entry.scss */
+/* line 82, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-user-action {
   margin-top: .5rem;
 }
 
-/* line 69, sass/custom/structure/organisms/_entry.scss */
+/* line 88, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-admin-action {
   display: inline-block;
 }
 
-/* line 73, sass/custom/structure/organisms/_entry.scss */
+/* line 92, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-ct {
   margin-bottom: 1rem;
 }
 
-/* line 79, sass/custom/structure/organisms/_entry.scss */
+/* line 98, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr > * {
   padding: 0 1rem;
+  word-wrap: break-word;
 }
-/* line 82, sass/custom/structure/organisms/_entry.scss */
+/* line 102, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
-/* line 87, sass/custom/structure/organisms/_entry.scss */
+/* line 411, sass/default/utilities/_tools.scss */
 .entry-ct-cr h1 {
   font-size: 36px;
   font-size: 2.25rem;
 }
-/* line 91, sass/custom/structure/organisms/_entry.scss */
+/* line 415, sass/default/utilities/_tools.scss */
 .entry-ct-cr h2 {
   font-size: 30px;
   font-size: 1.875rem;
 }
-/* line 95, sass/custom/structure/organisms/_entry.scss */
+/* line 419, sass/default/utilities/_tools.scss */
 .entry-ct-cr h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 99, sass/custom/structure/organisms/_entry.scss */
+/* line 423, sass/default/utilities/_tools.scss */
 .entry-ct-cr h4 {
   font-size: 18px;
   font-size: 1.125rem;
 }
-/* line 103, sass/custom/structure/organisms/_entry.scss */
+/* line 427, sass/default/utilities/_tools.scss */
 .entry-ct-cr h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 107, sass/custom/structure/organisms/_entry.scss */
+/* line 431, sass/default/utilities/_tools.scss */
 .entry-ct-cr h6 {
   font-size: 12px;
   font-size: 0.75rem;
 }
 
-/* line 1, sass/custom/structure/organisms/_scroll-top.scss */
+/* line 111, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.entry-fr {
+  margin-top: 1rem;
+}
+
+/* line 117, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.entry-tags a {
+  color: rgba(51, 51, 51, 0.75);
+  border-bottom: 0.0625rem dotted currentColor;
+}
+/* line 394, sass/default/utilities/_tools.scss */
+.entry-tags a:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+/* line 125, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.page-links > * {
+  display: inline-block;
+}
+/* line 129, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.page-links p {
+  margin-bottom: auto;
+}
+/* line 133, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.page-links a, .page-links > .label {
+  padding: 1rem;
+}
+
+/* line 140, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_entry.scss */
+.post-edit-link {
+  margin-left: -1rem;
+  padding: 1rem;
+}
+
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_scroll-top.scss */
 .scroll-top-link {
   display: block;
   padding: 1rem;
   text-align: center;
 }
 
-/* line 8, sass/custom/structure/organisms/_site-footer.scss */
-.site-footer .widget_nav_menu .menu {
-  list-style: none;
-  margin: auto;
-  padding: 0;
-  text-align: center;
-}
-/* line 84, sass/default/utilities/_tools.scss */
-.site-footer .widget_nav_menu .menu > li {
-  display: inline-block;
-}
-/* line 12, sass/custom/structure/organisms/_site-footer.scss */
-.site-footer .widget_nav_menu .menu a {
-  display: block;
-  padding: 1rem;
-}
-
-/* line 27, sass/custom/structure/organisms/_site-footer.scss */
-.site-info {
-  padding: 1rem;
-}
-
-/* line 1, sass/custom/structure/organisms/_content-navigation.scss */
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_content-navigation.scss */
 .content-navigation-list {
   list-style: none;
   margin: auto;
   padding: 0;
 }
-/* line 4, sass/custom/structure/organisms/_content-navigation.scss */
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_content-navigation.scss */
 .content-navigation-list .action-item {
   padding: 1rem;
 }
-/* line 7, sass/custom/structure/organisms/_content-navigation.scss */
+/* line 7, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_content-navigation.scss */
 .content-navigation-list .action-item:last-child {
   margin-bottom: auto;
 }
 
-/* line 3, sass/custom/structure/organisms/_widget.scss */
-.secondary-sidebar-container .widget_archive {
-  padding: 0 1rem;
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_page-navigation.scss */
+.page-navigation-list > * {
+  display: inline-block;
+  padding: 1rem;
 }
 
-/* line 2, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 2, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation {
   margin-top: -1rem;
 }
-/* line 7, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 7, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation div.nav-menu ul, .main-navigation div.nav-menu ol {
   list-style: none;
   margin: auto;
   padding: 0;
 }
-/* line 11, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 11, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation div.nav-menu a {
   display: block;
   padding: 1rem;
 }
-/* line 16, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 16, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation div.nav-menu .children a {
   padding-left: 1rem;
 }
 
-/* line 26, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 26, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .status-main-nav-active .main-navigation div.nav-menu {
   width: 100%;
   height: 100%;
@@ -1204,12 +1373,12 @@ tbody tr:last-child {
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* line 32, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 32, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .status-main-nav-active .main-navigation div.nav-menu li, .status-main-nav-active .main-navigation div.nav-menu a {
   color: white;
 }
 
-/* line 40, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 40, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
   margin-bottom: auto;
   padding: 1rem;
@@ -1218,12 +1387,12 @@ tbody tr:last-child {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 47, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 47, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation-heading:hover {
   cursor: pointer;
 }
 
-/* line 57, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 57, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .main-navigation-ct {
   position: fixed;
   left: 0;
@@ -1235,106 +1404,126 @@ tbody tr:last-child {
   hopscotch-transition: transform 500ms ease 0s;
   z-index: 100;
 }
-/* line 67, sass/custom/structure/organisms/_main-navigation.scss */
+/* line 67, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_main-navigation.scss */
 .status-main-nav-active .main-navigation-ct {
   transform: translate(0, 0%);
 }
 
-/* line 3, sass/custom/structure/organisms/_search.scss */
+/* line 3, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_search.scss */
 .header-sidebar-container .widget_search {
   padding: 0 1rem;
 }
-/* line 12, sass/custom/structure/organisms/_search.scss */
+/* line 12, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_search.scss */
 .header-sidebar-container .widget_search .field {
   float: left;
   margin-bottom: auto;
   width: 100%;
   margin-right: -5rem;
 }
-/* line 18, sass/custom/structure/organisms/_search.scss */
+/* line 18, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_search.scss */
 .header-sidebar-container .widget_search .field .field-cr {
   margin-right: .5rem;
   padding-right: 5rem;
 }
-/* line 25, sass/custom/structure/organisms/_search.scss */
+/* line 25, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_search.scss */
 .header-sidebar-container .widget_search .field-action {
   float: right;
   width: 5rem;
 }
 
-/* line 8, sass/custom/structure/organisms/_comment.scss */
+/* line 1, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_secondary-sidebar-container.scss */
+.secondary-sidebar-container {
+  margin-top: 2rem;
+}
+/* line 4, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_secondary-sidebar-container.scss */
+.secondary-sidebar-container .widget {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+/* line 8, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_secondary-sidebar-container.scss */
+.secondary-sidebar-container .widget:last-child {
+  margin-bottom: auto;
+}
+
+/* line 6, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-list {
   list-style: none;
   margin: auto;
   padding: 0;
   margin-bottom: 1rem;
 }
-/* line 12, sass/custom/structure/organisms/_comment.scss */
-.comment-list ol {
+/* line 10, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comment-list .children {
   list-style: none;
   margin: auto;
   padding: 0;
 }
 
-/* line 17, sass/custom/structure/organisms/_comment.scss */
+/* line 15, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment {
   padding: 1rem;
   padding-right: 0;
   padding-bottom: 0;
 }
 
-/* line 23, sass/custom/structure/organisms/_comment.scss */
+/* line 21, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-cr {
   position: relative;
   padding-right: 1rem;
 }
 
-/* line 28, sass/custom/structure/organisms/_comment.scss */
+/* line 26, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-hr {
   margin-left: 1rem;
   padding-left: 4.5rem;
 }
-/* line 31, sass/custom/structure/organisms/_comment.scss */
+/* line 29, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-hr .comment-timestamp {
   font-size: 12px;
   font-size: 0.75rem;
   text-align: right;
 }
 
-/* line 38, sass/custom/structure/organisms/_comment.scss */
+/* line 36, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comments-hr {
   padding: 0 1rem;
 }
 
-/* line 42, sass/custom/structure/organisms/_comment.scss */
+/* line 40, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comments-heading {
   margin-bottom: auto;
 }
 
-/* line 46, sass/custom/structure/organisms/_comment.scss */
+/* line 44, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comments-cr {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* line 49, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-timestamp-link {
   font-size: 0.75;
   color: gray;
 }
 
-/* line 52, sass/custom/structure/organisms/_comment.scss */
+/* line 55, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-author .author-avatar {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 57, sass/custom/structure/organisms/_comment.scss */
+/* line 60, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-author .author-avatar .avatar {
   border-radius: 50%;
 }
 
-/* line 63, sass/custom/structure/organisms/_comment.scss */
+/* line 66, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-ct {
   margin-left: 1rem;
   padding-left: 4.5rem;
 }
 
-/* line 67, sass/custom/structure/organisms/_comment.scss */
+/* line 70, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-message {
   margin: auto;
   font-size: 16px;
@@ -1342,120 +1531,106 @@ tbody tr:last-child {
   font-style: normal;
   font-family: inherit;
 }
-/* line 73, sass/custom/structure/organisms/_comment.scss */
+/* line 76, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-message p {
   margin-bottom: .5rem;
 }
+/* line 80, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comment-message blockquote {
+  color: gray;
+}
 
-/* line 79, sass/custom/structure/organisms/_comment.scss */
+/* line 86, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-author-name {
   margin-top: -1.25rem;
   padding-right: 5rem;
 }
 
-/* line 84, sass/custom/structure/organisms/_comment.scss */
+/* line 91, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-action {
   margin-left: 1rem;
   padding-left: 4.5rem;
   margin-top: .5rem;
 }
-/* line 88, sass/custom/structure/organisms/_comment.scss */
+/* line 95, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-action .action-item {
   display: inline-block;
   margin-right: 1rem;
 }
-/* line 92, sass/custom/structure/organisms/_comment.scss */
+/* line 99, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-action .action-item:lasd-child {
   margin-right: auto;
 }
 
-/* line 112, sass/custom/structure/organisms/_comment.scss */
+/* line 110, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comment-form textarea {
+  height: 4.25rem;
+  min-height: 2.5rem;
+  max-height: 7.25rem;
+}
+
+/* line 118, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-form-signed-in-as {
   display: inline-block;
 }
 
-/* line 116, sass/custom/structure/organisms/_comment.scss */
+/* line 122, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-form-action {
   display: inline-block;
   margin-left: 1rem;
 }
 
-/* line 121, sass/custom/structure/organisms/_comment.scss */
+/* line 127, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .note-optional {
   font-size: 0.75;
   color: gray;
 }
 
-/* line 125, sass/custom/structure/organisms/_comment.scss */
+/* line 131, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .form-submit {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
-/* line 129, sass/custom/structure/organisms/_comment.scss */
+/* line 135, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-respond {
+  margin-top: 1rem;
   padding: 0 1rem;
 }
-/* line 132, sass/custom/structure/organisms/_comment.scss */
+/* line 139, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comment .comment-respond {
+  padding-left: 5.5rem;
+}
+/* line 143, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-respond small {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 137, sass/custom/structure/organisms/_comment.scss */
+/* line 152, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+#cancel-comment-reply-link {
+  padding: 1rem;
+}
+
+/* line 156, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
 .comment-form-admin {
   margin-bottom: 1rem;
 }
 
-/* line 4, sass/custom/structure/templates/_home.scss */
-.home .entry,
-.blog .entry {
-  margin-bottom: 2rem;
+/* line 160, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comment-reply-title {
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 
-/* line 3, sass/custom/structure/templates/_single.scss */
-.single .entry {
-  margin-bottom: 2rem;
+/* line 164, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_comment.scss */
+.comment-pending {
+  margin-bottom: auto;
+  font-size: 0.75;
+  color: gray;
+  font-style: italic;
 }
 
-/* line 1, sass/custom/structure/templates/_wordpress.scss */
-.alignleft {
-  float: left;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* line 7, sass/custom/structure/templates/_wordpress.scss */
-.alignright {
-  float: right;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* line 13, sass/custom/structure/templates/_wordpress.scss */
-.aligncenter {
-  display: block;
-  margin: auto;
-}
-
-/* line 18, sass/custom/structure/templates/_wordpress.scss */
-.alignnone {
-  display: block;
-  margin: auto;
-}
-
-/* line 23, sass/custom/structure/templates/_wordpress.scss */
-.wp-caption {
-  margin-bottom: 1rem;
-}
-
-/* line 27, sass/custom/structure/templates/_wordpress.scss */
-.wp-caption-text {
-  padding: .5rem;
-  font-size: 0.875;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-/* line 39, sass/custom/structure/templates/_wordpress.scss */
+/* line 7, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_plug-in.scss */
 .sharedaddy ul {
   list-style: none;
   margin: auto;
@@ -1463,17 +1638,48 @@ tbody tr:last-child {
   margin-bottom: auto;
   padding-left: 0;
 }
-/* line 45, sass/custom/structure/templates/_wordpress.scss */
+/* line 13, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_plug-in.scss */
 .sharedaddy li {
   display: inline-block;
 }
 
-/* line 50, sass/custom/structure/templates/_wordpress.scss */
+/* line 18, C:/xampp/htdocs/projects/fed/wp-content/themes/hopscotch-wp/css/sass/custom/structure/organisms/_plug-in.scss */
 .g-follow-wrapper {
   margin-left: 1rem;
 }
 
-/* line 55, sass/custom/structure/templates/_wordpress.scss */
-.post-edit-link {
-  padding: 1rem;
+/* line 411, sass/default/utilities/_tools.scss */
+.page .child-page h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+/* line 415, sass/default/utilities/_tools.scss */
+.page .child-page h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+/* line 419, sass/default/utilities/_tools.scss */
+.page .child-page h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+/* line 423, sass/default/utilities/_tools.scss */
+.page .child-page h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+/* line 427, sass/default/utilities/_tools.scss */
+.page .child-page h5 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 431, sass/default/utilities/_tools.scss */
+.page .child-page h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* line 3, sass/custom/structure/templates/_single.scss */
+.single .entry {
+  margin-bottom: 2rem;
 }

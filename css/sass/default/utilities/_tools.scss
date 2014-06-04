@@ -286,28 +286,6 @@ $one: (1 / $font-size-base) + rem;
     }
 }
 
-@mixin breakpoint($name) {
-  @if $name == "small" {
-    @media (max-width: 767px) {
-      @content;
-    }
-  }
-  @else if $name == "medium" {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  }
-  @else if $name == "large" {
-    @media (min-width: 1025px) {
-      @content;
-    }
-  }
-}
-
-
-//------------------------- For CSS Gradients
-@import "compass/css3/images";
-
 
 //------------------------- Faint
 @mixin faint {    
@@ -410,11 +388,48 @@ $one: (1 / $font-size-base) + rem;
 }
 
 @mixin linkstyle-secondary {
-    color: rgba($color-link-secondary, .75);
+    color: rgba($color-link-tertiary, .75);
     border-bottom: $one dotted currentColor;        
     
     &:hover {
         border-bottom: none;
         text-decoration: none;
     }
+}
+
+
+
+// Border Radius
+$radius-size-factor: .25;
+
+$radius-s: .25rem;
+$radius-m: $radius-s + $radius-size-factor;
+
+
+@mixin shrink-heading {
+    
+    h1 {
+        @include font-size-rem($font-xxxl * $font-size-shrink-factor);
+    }
+
+    h2 {
+        @include font-size-rem($font-xxl * $font-size-shrink-factor);
+    }
+
+    h3 {
+        @include font-size-rem($font-xl * $font-size-shrink-factor);
+    }
+
+    h4 {
+        @include font-size-rem($font-l * $font-size-shrink-factor);
+    }
+
+    h5 {
+        @include font-size-rem($font-m);
+    }
+
+    h6 {
+        @include font-size-rem($font-s);
+    }
+    
 }

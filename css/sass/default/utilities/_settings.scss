@@ -6,7 +6,9 @@ legend,
 
 // Classes
 .search-bar-title,
-.main-content-title,
+.home .main-content-title,
+.blog .main-content-title,
+.search .main-content-title,
 
 // WP
 .widget_search .widget-title,
@@ -56,4 +58,11 @@ li:last-child,
 .field:last-child,
 .field-action {
     margin-bottom: auto !important;
+}
+
+
+html {
+    color: $font-color-base;
+    font-size: 1em;
+    line-height: 1.5;
 }

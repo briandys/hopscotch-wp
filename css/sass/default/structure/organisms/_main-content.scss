@@ -1,0 +1,16 @@
+.main-cr {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.main-content-hr-cr {
+    padding: 0 $gutter;
+}
+
+.main-content-title {
+    @include font-size-rem($font-xl);
+    
+    .label {
+        @extend %faint;
+    }
+    
+}

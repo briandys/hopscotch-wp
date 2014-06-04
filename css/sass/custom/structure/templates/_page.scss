@@ -1,0 +1,7 @@
+.page {
+    
+    .child-page {
+        @include shrink-heading;
+    }
+    
+}

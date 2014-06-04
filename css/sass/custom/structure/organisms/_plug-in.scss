@@ -1,0 +1,20 @@
+.sharedaddy {
+    
+    .sd-title {
+        @extend %vhide;
+    }
+    
+    ul {
+        @include unlist;
+        margin-bottom: auto;
+        padding-left: 0;
+    }
+    
+    li {
+        display: inline-block;
+    }
+}
+
+.g-follow-wrapper {
+    margin-left: 1rem;
+}

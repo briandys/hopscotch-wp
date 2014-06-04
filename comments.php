@@ -37,7 +37,7 @@ if ( post_password_required() )
                 'id_form'           => 'comment-form',
                 'id_submit'         => 'submit',
                 'title_reply'       => __( 'Compose Comment' ),                
-                'cancel_reply_link' => '<span class="action-item">Cancel Compose</span>',
+                'cancel_reply_link' => '<span class="action-item">Cancel <span class="verb-subject">Compose</span></span>',
                 'title_reply_to'    => __( 'Leave a Reply to %s' ),
                 'label_submit'      => __( 'Post' ),
                 'comment_notes_before' => '',

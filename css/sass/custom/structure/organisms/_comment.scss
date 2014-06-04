@@ -1,5 +1,3 @@
-$avatar-size: 4.5rem;
-
 @mixin avatar-adjust {
     margin-left: 1rem;
     padding-left: $avatar-size;
@@ -9,7 +7,7 @@ $avatar-size: 4.5rem;
     @include unlist;
     margin-bottom: 1rem;
     
-    ol {
+    .children {
         @include unlist;
     }
 }
@@ -43,6 +41,11 @@ $avatar-size: 4.5rem;
     margin-bottom: auto;
 }
 
+.comments-cr {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .comment-timestamp-link {
     @include faint;
 }
@@ -73,6 +76,10 @@ $avatar-size: 4.5rem;
     p {
         margin-bottom: .5rem;
     }
+    
+    blockquote {
+        color: $color-quote-text;
+    }
 
 }
 
@@ -100,11 +107,10 @@ $avatar-size: 4.5rem;
 
 .comment-form {
     
-    .field-comment {
-        
-        label {
-            @extend %vhide;
-        }
+    textarea {
+        height: 4.25rem;
+        min-height: 2.5rem;
+        max-height: 7.25rem;
     }
 }
 
@@ -123,17 +129,40 @@ $avatar-size: 4.5rem;
 }
 
 .form-submit {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .comment-respond {
+    margin-top: 1rem;
     padding: 0 1rem;
+    
+    .comment & {
+        padding-left: $avatar-size + 1;
+    }
     
     small {
         @include font-size-rem($font-m);
     }
+    
+    .verb-subject {
+        @extend %vhide;
+    }
+}
+
+#cancel-comment-reply-link {
+    padding: 1rem;
 }
 
 .comment-form-admin {
     margin-bottom: 1rem;
+}
+
+.comment-reply-title {
+    @include font-size-rem($font-l);
+}
+
+.comment-pending {
+    margin-bottom: auto;
+    @include faint;
+    font-style: italic;
 }

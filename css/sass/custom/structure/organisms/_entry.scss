@@ -1,5 +1,5 @@
 .entry {    
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     
     .entry-thumbnail-link {
         width: 100%;
@@ -16,21 +16,40 @@
     }
     
     .show-more-content {
-        text-align: center;
 
         .more-link {
-            display: block;
+            display: inline-block;
+            margin-left: -1rem;
             padding: 1rem;
+            color: $color-link-secondary;
         }
         
+    }
+    
+    &.sticky {
+        
+        .entry-title-link {
+            color: $color-link-secondary;
+        }
+        
+    }
+    
+    blockquote {
+        color: $color-quote-text;
     }
     
 }
 
 .entry-title {
     display: inline;
-    font-size: $font-xxl;
+    @include font-size-rem($font-xxl);
     line-height: normal;
+    word-wrap: break-word;
+    
+    .logged-in & {
+        margin-right: 1rem;
+    }
+    
 }
 
 .entry-hr-cr {
@@ -78,34 +97,47 @@
     
     > * {
         padding: 0 $gutter;
+        word-wrap: break-word;            
         
         &:last-child {
             margin-bottom: auto;
         }
     }
     
-    h1 {
-        @include font-size-rem($font-xxxl * $font-size-shrink-factor);
-    }
+    @include shrink-heading;
+    
+}
 
-    h2 {
-        @include font-size-rem($font-xxl * $font-size-shrink-factor);
-    }
+.entry-fr {
+    margin-top: 1rem;
+}
 
-    h3 {
-        @include font-size-rem($font-xl * $font-size-shrink-factor);
-    }
-
-    h4 {
-        @include font-size-rem($font-l * $font-size-shrink-factor);
-    }
-
-    h5 {
-        @include font-size-rem($font-m);
-    }
-
-    h6 {
-        @include font-size-rem($font-s);
+.entry-tags {
+    
+    a {
+        @include linkstyle-secondary;
     }
     
+}
+
+.page-links {
+    
+    > * {
+        display: inline-block;
+    }
+    
+    p {
+        margin-bottom: auto;
+    }
+    
+    a, > .label {
+        padding: 1rem;
+    }
+    
+}
+
+
+.post-edit-link {
+    margin-left: -1rem;
+    padding: 1rem;
 }

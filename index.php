@@ -13,18 +13,6 @@
                                 <?php if ( is_home() ) : ?>									
                                     <span class="label">Primary Content:</span> <span class="label-value">Home</span>
                                 
-                                <!-- Search -->
-                                <?php elseif ( is_search() ) : ?>                                
-									<?php
-									$entrySearch = new WP_Query( array( 's' => $s, 'showposts' => -1 ) );
-									$key = get_search_query();
-									$count = $entrySearch->post_count;
-									_e('<span class="label-value">'); echo $count . ' '; _e('</span>');
-									_e('<span class="label">'); if ($count == 0 || $count == 1) echo 'Search Result for '; else echo 'Search Results for '; _e('</span>');
-									_e('<span class="label-value">'); echo $key; _e('</span>');										
-									wp_reset_query();
-                                ?>
-                                
                                 <!-- Category -->
                                 <?php elseif ( is_category() ) : ?>
 									<?php printf( __( '<span class="label">Category:</span> <span class="label-value">%s</span>', 'hopscotch' ), single_cat_title( '', false ) ); ?>

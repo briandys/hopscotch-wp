@@ -1,32 +1,33 @@
+// Color Palettes
 $blue-superhero: #00aaff; // Superhero Blue
 $orange-chikka: #ff7f00; // Chikka Orange
 $red-record: #e53a2e; // Record Red
+$green-go: #12b32d; // Go Green
 
+// Color Scheme
 $font-color-base: $gray20;
-
-
 $color-primary: $blue-superhero;
-$color-secondary: $orange-chikka;
+$color-secondary: $green-go;
 
+// Links
 $color-link-primary: $color-primary;
-$color-link-secondary: $font-color-base;
+$color-link-secondary: $color-secondary;
+$color-link-tertiary: $font-color-base;
 
 $color-link-hover: rgba($color-primary, .05);
 $color-link-selected: rgba($color-primary, 1);
 $color-link-active: rgba($color-primary, .25);
 
+// Quote
+$color-quote-text: $gray50;
 
+// Placeholder
+$color-placeholder-text: $gray25;
 
+// Selection
+$color-selection-text: $white;
+$color-selection-bg: $color-secondary;
 
-
-
-//------------------------- Font Family
+// Font Family
 $font-family-base: Helvetica, Arial, sans-serif;
 $font-family-quote: Georgia, serif;
-
-
-//------------------------- Border Radius
-$radius-size-factor: .25;
-
-$radius-s: .25rem;
-$radius-m: $radius-s + $radius-size-factor;
