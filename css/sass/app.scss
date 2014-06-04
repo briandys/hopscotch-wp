@@ -5,12 +5,14 @@
 @import 'default/utilities/variables';
 @import 'custom/utilities/variables';
 
+@import 'default/theme/style-guide';
+
 @import 'custom/utilities/settings';
 
 @import 'default/utilities/tools';
 
 // Default
-@import 'default/themes/style-guide';
+
 
 // Default
 @import 'default/structure/atoms';

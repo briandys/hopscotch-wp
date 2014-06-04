@@ -402,3 +402,19 @@ $one: (1 / $font-size-base) + rem;
 @mixin bg-shade($alpha: 1) {
     background-color: hsla(0, 0%, 0%, $alpha);
 }
+
+
+//------------------------- Link Styles
+@mixin linkstyle-primary {
+    color: $color-primary;
+}
+
+@mixin linkstyle-secondary {
+    color: rgba($color-link-secondary, .75);
+    border-bottom: $one dotted currentColor;        
+    
+    &:hover {
+        border-bottom: none;
+        text-decoration: none;
+    }
+}

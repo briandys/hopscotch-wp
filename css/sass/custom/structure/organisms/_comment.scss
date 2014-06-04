@@ -28,7 +28,8 @@ $avatar-size: 4.5rem;
 .comment-hr {
     @include avatar-adjust;
     
-    .timestamp {
+    .comment-timestamp {
+        @include font-size-rem($font-s);
         text-align: right;
     }
     
@@ -65,7 +66,7 @@ $avatar-size: 4.5rem;
 
 .comment-message {
     margin: auto;
-    font-size: $font-m;
+    @include font-size-rem($font-m);
     font-style: normal;
     font-family: inherit;
     
@@ -76,9 +77,8 @@ $avatar-size: 4.5rem;
 }
 
 .comment-author-name {
-    margin-top: -1.5rem;
+    margin-top: -1.25rem;
     padding-right: 5rem;
-    font-size: $font-m;
 }
 
 .comment-action {
@@ -126,7 +126,14 @@ $avatar-size: 4.5rem;
     margin-top: 1.5rem;
 }
 
-
 .comment-respond {
     padding: 0 1rem;
+    
+    small {
+        @include font-size-rem($font-m);
+    }
+}
+
+.comment-form-admin {
+    margin-bottom: 1rem;
 }

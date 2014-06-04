@@ -596,10 +596,10 @@ if ( ! function_exists( 'hopscotch_comments' ) ) :
             <header class="comment-hr">            
                 <div class="comment-meta">                                                                        
                     <div class="comment-meta-cr">
-                        <div class="timestamp">
+                        <div class="timestamp comment-timestamp">
                             <span class="assistive-text label">Commented on</span>
                             <a class="timestamp-link comment-timestamp-link" href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>" rel="bookmark">
-                                <?php printf( __('<time class="comment-timestamp" datetime="%1$s"><span class="comment-date">%1$s</span> <span class="comment-time">%2$s</span></time>'), get_comment_date('m/d'),  get_comment_time('H:i')) ?>
+                                <?php printf( __('<time class="comment-time" datetime="%1$s"><span class="comment-date">%1$s</span> <span class="comment-time">%2$s</span></time>'), get_comment_date('m/d'),  get_comment_time('H:i')) ?>
                             </a>
                         </div>
                     </div><!-- comment-timestamp -->

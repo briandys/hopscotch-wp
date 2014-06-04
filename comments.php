@@ -36,7 +36,7 @@ if ( post_password_required() )
             <?php comment_form( array(
                 'id_form'           => 'comment-form',
                 'id_submit'         => 'submit',
-                'title_reply'       => __( '<h4>Compose Comment</h4>' ),                
+                'title_reply'       => __( 'Compose Comment' ),                
                 'cancel_reply_link' => '<span class="action-item">Cancel Compose</span>',
                 'title_reply_to'    => __( 'Leave a Reply to %s' ),
                 'label_submit'      => __( 'Post' ),
