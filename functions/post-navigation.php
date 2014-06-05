@@ -1,0 +1,10 @@
+<?php
+
+//------------------------- Post Navigation
+if (!function_exists('hopscotch_post_nav')) :
+	function hopscotch_post_nav() {
+        ?>
+		<?php get_template_part( ''.hopscotch_components_directory().'/post-navigation' ); ?>
+		<?php
+	}
+endif;

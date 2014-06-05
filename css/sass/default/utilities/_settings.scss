@@ -8,7 +8,6 @@ legend,
 .search-bar-title,
 .home .main-content-title,
 .blog .main-content-title,
-.search .main-content-title,
 
 // WP
 .widget_search .widget-title,
@@ -53,6 +52,7 @@ dl,
     margin-bottom: 1rem;
 }
 
+// Reset bottom spacing on elements
 p:last-child,
 li:last-child,
 .field:last-child,
@@ -61,8 +61,10 @@ li:last-child,
 }
 
 
+// Base setting
 html {
     color: $font-color-base;
     font-size: 1em;
     line-height: 1.5;
+    font-family: Raleway;
 }

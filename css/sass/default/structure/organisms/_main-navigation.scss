@@ -11,3 +11,82 @@
     }
 
 }
+
+
+// Main Navigation
+.main-navigation {
+    
+    div.nav-menu {
+        
+        ul {
+            @include unlist;
+        }
+        
+        a {
+            display: block;
+            padding: 1rem;
+            @extend %transition-bg-color;
+            
+            &:hover {
+                background-color: $darken5;
+                text-decoration: none;
+            }
+        }
+        
+        .children a {
+            padding-left: 1rem;
+        }
+        
+    }
+    
+}
+
+.main-navigation div.nav-menu {
+    
+    .status-main-nav-active & {
+        @include size(100%);
+        background-color: $color-primary;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        li, a {
+            color: $white;
+        }
+    }
+}
+
+
+// Heading
+.main-navigation-heading {
+    margin-bottom: auto;
+    @include font-size-rem($font-m);
+    text-align: center;
+    text-transform: uppercase;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+    .status-main-nav-active & {
+        @extend %vhide;
+    }
+    
+    .label {
+        @extend %buttonizer-primary;
+    }
+
+}
+
+.main-navigation-ct {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    @include size(100%);
+    @include transform(translate(0, 100%));
+    z-index: 100;
+    
+    .status-main-nav-active & {
+        @include transform(translate(0, $block-l));
+    }
+
+}

@@ -3,24 +3,21 @@
 
 // Variables
 @import 'default/utilities/variables';
-@import 'custom/utilities/variables';
 
-@import 'default/theme/style-guide';
+// Style Guide
+@import 'default/utilities/style-guide';
 
+// Initial Settings
 @import 'default/utilities/settings';
 
+// Tools
 @import 'default/utilities/tools';
 
-// Default
-
-
-// Default
+// Defaults
 @import 'default/structure/atoms';
 @import 'default/structure/molecules';
 @import 'default/structure/organisms';
+@import 'default/structure/templates';
 
 // Custom
-@import 'custom/structure/atoms';
-@import 'custom/structure/molecules';
 @import 'custom/structure/organisms';
-@import 'custom/structure/templates';

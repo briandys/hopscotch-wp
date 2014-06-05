@@ -1,0 +1,137 @@
+.entry {    
+    margin-bottom: 2rem;
+    
+    .entry-thumbnail-link {
+        width: 100%;
+    }
+    
+    .show-more-content {
+
+        .more-link {
+            display: inline-block;
+            margin-left: -1rem;
+            padding: 1rem;
+            color: $color-link-secondary;
+        }
+        
+    }
+    
+    &.sticky {
+        
+        .entry-title-link {
+            color: $color-link-secondary;
+        }
+        
+    }
+    
+    blockquote {
+        color: $color-quote-text;
+    }
+    
+}
+
+.entry-title {
+    display: inline;
+    @include font-size-rem($font-xl);
+    line-height: normal;
+    word-wrap: break-word;
+    
+    .logged-in & {
+        margin-right: .5rem;
+    }
+    
+}
+
+.entry-hr-cr {
+    margin-bottom: 1rem;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    
+    .entry-meta {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .entry-thumbnail {
+        margin-left: -$gutter;
+        margin-right: -$gutter;
+    }
+    
+    .entry-timestamp {
+        a {
+            @include linkstyle-secondary;
+        }
+    }
+    
+    .entry-byline {
+        a {
+            @include linkstyle-secondary;
+        }
+    }
+    
+    .entry-user-action {
+        margin-top: .5rem;
+    }
+
+}
+
+.entry-admin-action {
+    display: inline-block;
+}
+
+.entry-ct {
+    margin-bottom: 1rem;
+}
+
+.entry-ct-cr {    
+    
+    > * {
+        padding: 0 $gutter;
+        word-wrap: break-word;            
+        
+        &:last-child {
+            margin-bottom: auto;
+        }
+    }
+    
+    @include shrink-heading;
+    
+}
+
+.entry-fr {
+    margin-top: 1rem;
+}
+
+.entry-tags {
+    
+    a {
+        @include linkstyle-secondary;
+    }
+    
+}
+
+.page-links {
+    
+    > * {
+        display: inline-block;
+    }
+    
+    p {
+        margin-bottom: auto;
+    }
+    
+    a, > .label {
+        padding: 1rem;
+    }
+    
+}
+
+.entry-admin-action {
+    @include transform(translate(0, -0.25rem));
+}
+
+
+.post-edit-link {
+    @extend %buttonizer-primary;
+    @include font-size-rem($font-s);
+}

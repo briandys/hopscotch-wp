@@ -4,7 +4,8 @@ $form-input-type-text: "input[type='text'], input[type='email'], input[type='sea
 
 // Used as side spacing of elements
 $gutter: 1rem;
-$bottom-space: 1rem / 2;
+$bottom-space-m: 1rem;
+$bottom-space-s: $bottom-space-m / 2;
 
 // Avatar size in Comments
 $avatar-size: 4.5rem;
@@ -54,6 +55,7 @@ $black: hsl(0, 0%, 0%);
 
 // Add a dark shade
 // Example usage: color overlays on menu items with exisint background colors
+$darken5: hsla(0, 0%, 0%, .05);
 $darken25: hsla(0, 0%, 0%, .25);
 $darken50: hsla(0, 0%, 0%, .50);
 $darken75: hsla(0, 0%, 0%, .75);
@@ -66,3 +68,11 @@ $block-size-factor: .5;
 $block-m: 3rem;
 $block-l: $block-m + $block-size-factor;
 $block-xl: $block-l + $block-size-factor;
+$block-xxl: $block-xl + $block-size-factor;
+
+
+//------------------------- Border Radius
+$radius-size-factor: .25;
+
+$radius-s: .25rem;
+$radius-m: $radius-s + $radius-size-factor;

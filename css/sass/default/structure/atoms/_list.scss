@@ -1,3 +1,22 @@
 ul, ol {
     margin-left: 2rem;
 }
+
+
+li {
+    margin-bottom: $bottom-space-s;
+    
+}
+
+
+ol, ul {
+    
+    li {
+        
+        > ol, > ul {
+            margin-top: $bottom-space-s;
+        }
+        
+    }
+    
+}

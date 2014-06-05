@@ -1,3 +1,32 @@
 table {
 	width: 100%;
 }
+
+th, td {
+    padding: .75rem 1rem;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    
+    tr {
+        @include hopscotch-table-border-single(bottom, .125rem);
+    }
+    
+}
+
+tbody {
+    
+    tr {
+        @include hopscotch-table-border-single(top);
+        
+        &:last-child {
+            @include hopscotch-table-border-single(bottom);
+        }
+    
+    }
+
+}

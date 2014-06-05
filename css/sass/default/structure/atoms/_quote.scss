@@ -3,8 +3,10 @@ blockquote {
     margin-right: 1.5rem;
     @include font-size-rem($font-l);
     font-family: $font-family-quote;
+    font-style: italic;
 }
 
 q {
     font-family: $font-family-quote;
+    font-style: italic;
 }

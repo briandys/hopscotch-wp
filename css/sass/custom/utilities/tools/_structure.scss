@@ -1,0 +1,14 @@
+// Iconize
+@mixin ctm-desktop-iconize($display: block, $width: 3, $height: 3) {
+    @include ir;
+    display: $display;
+    width: $width + rem;
+    height: $height + rem;
+    background-image: url(../img/svg/icons.svg);
+    background-size: 400% auto;
+    vertical-align: middle;
+}
+
+%ctm-desktop-iconize {
+    @include ctm-desktop-iconize;
+}

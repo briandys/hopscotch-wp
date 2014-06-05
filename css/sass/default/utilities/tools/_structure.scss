@@ -1,0 +1,257 @@
+//------------------------- Structure SASS
+// Usage: Rules concerning overall structure and functionality
+
+
+//------------------------- Pseudo Content
+@mixin sudo-ct {
+    content: '';
+    position: absolute;
+}
+
+
+//------------------------- Center List
+@mixin center-list {
+    
+    text-align: center;
+    
+    & > li {
+        display: inline-block;
+    }
+
+}
+
+%center-list {
+    @include center-list;
+}
+
+
+//------------------------- Border Box
+@mixin bbox {
+    -webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+
+%bbox {
+    @include bbox;
+}
+
+
+//------------------------- Background Image
+@mixin bg-img (
+    $repeat: no-repeat,
+    $position: center center,
+    $size: cover) {
+    
+    background: {
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+    }
+        
+}
+
+
+//------------------------- Responsive Media
+@mixin responsive-media {
+    max-width: 100%;
+    height: auto;
+}
+
+%responsive-media {
+    @include responsive-media;
+}
+
+
+//------------------------- Unlist
+@mixin unlist {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+}
+
+%unlist {
+    @include unlist;
+}
+
+
+//------------------------- Truncate Texts
+@mixin truncate {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%truncate {
+    @include truncate;
+}
+
+
+//------------------------- Iconize
+@mixin iconize(
+    $display: block,
+    $width: 3,
+    $height: 3
+    ) {
+    
+    display: $display;
+    width: $width + rem;
+    height: $height + rem;
+    @include ir;
+}
+
+%iconize {
+    @include iconize;
+}
+
+
+//------------------------- Icon Block using Table Cell (apply to icon images)
+@mixin icon-block-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+%icon-block-cell {
+    @include icon-block-cell;
+}
+
+
+//------------------------- Inline Blocker
+@mixin block-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%block-inline {
+    @include block-inline;
+}
+
+
+//------------------------- Vertical Align Middle
+@mixin valign-mid {
+    
+    &:after {
+        content: '';
+        height: 100%;
+        @include block-inline;
+    }
+    
+}
+
+%valign-mid {
+    @include valign-mid;
+}
+
+
+//------------------------- Converting 1px to rem
+$one: (1 / $font-size-base) + rem;
+
+
+//------------------------- Fallback px for rem font sizes (to support IE8-)
+// http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+@function calculateRem($size) {
+    $remSize: $size / $font-size-base;
+    @return #{$remSize}rem;
+}
+
+@function calculatePx($size) {
+    $pxSize: $size * $font-size-base;
+    @return #{$pxSize}px;
+}
+
+@mixin font-size-px($size) {
+    font-size: $size + px;
+    font-size: calculateRem($size);
+}
+
+@mixin font-size-rem($size) {
+    font-size: calculatePx($size);
+    font-size: $size + rem;
+}
+
+
+//------------------------- Width and Height Size
+@mixin size(
+    $width,
+    $height: $width
+    ) {
+    width: $width;
+    height: $height;
+}
+
+
+//------------------------- Media Query
+// http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+@mixin mq($device-width, $ie9: false, $query1: min, $query2: width) {
+    @if $ie9 == true {
+        .lt-ie9 {
+            @content;
+        }
+    }
+    
+    @media only screen and (#{$query1}-#{$query2}: $device-width / $font-size-base + rem) {
+        @content;
+    }
+
+}
+
+
+//------------------------- Media Query Max Width
+@mixin mq-max($device-width) {
+    @media only screen and (max-width: $device-width+px - 1) {
+        @content 
+    }
+}
+
+
+//------------------------- IE Fix Classes
+@mixin lt-ie9-fix {
+    .lt-ie9 {
+        @content;
+    }
+}
+
+@mixin lt-ie8-fix {    
+    .lt-ie8 {
+        @content;
+    }
+}
+
+
+//------------------------- Smaller Headings
+// Usage: Headings inside entries
+@mixin shrink-heading {
+    
+    h1 {
+        @include font-size-rem($font-xxxl * $font-size-shrink-factor);
+    }
+
+    h2 {
+        @include font-size-rem($font-xxl * $font-size-shrink-factor);
+    }
+
+    h3 {
+        @include font-size-rem($font-xl * $font-size-shrink-factor);
+    }
+
+    h4 {
+        @include font-size-rem($font-l * $font-size-shrink-factor);
+    }
+
+    h5 {
+        @include font-size-rem($font-m);
+    }
+
+    h6 {
+        @include font-size-rem($font-s);
+    }
+    
+}
+
+//------------------------- Smaller Headings
+@mixin avatar-adjust {
+    margin-left: 1rem;
+    padding-left: $avatar-size;
+}

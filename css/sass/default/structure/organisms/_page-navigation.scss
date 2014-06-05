@@ -1,0 +1,17 @@
+.page-navigation-list {
+    
+    > * {
+        display: inline-block;
+        padding: 1rem;
+    }
+    
+}
+
+.page-numbers {
+    
+    &.dots {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+}

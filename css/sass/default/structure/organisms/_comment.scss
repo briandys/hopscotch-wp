@@ -1,14 +1,10 @@
-@mixin avatar-adjust {
-    margin-left: 1rem;
-    padding-left: $avatar-size;
-}
-
 .comment-list {
     @include unlist;
     margin-bottom: 1rem;
     
     .children {
         @include unlist;
+        padding-left: $avatar-size;
     }
 }
 

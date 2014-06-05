@@ -1,6 +1,15 @@
-@import 'organisms/masthead-header';
+@import 'organisms/child-page';
+@import 'organisms/comment';
+@import 'organisms/content-navigation';
 @import 'organisms/main-content';
+@import 'organisms/entry';
 @import 'organisms/main-navigation';
-@import 'organisms/site-info';
+@import 'organisms/masthead-header';
+@import 'organisms/page-navigation';
+@import 'organisms/plug-in';
+@import 'organisms/scroll-top';
+@import 'organisms/search';
+@import 'organisms/secondary-sidebar-container';
 @import 'organisms/site-footer';
+@import 'organisms/site-info';
 @import 'organisms/tertiary-sidebar-container';

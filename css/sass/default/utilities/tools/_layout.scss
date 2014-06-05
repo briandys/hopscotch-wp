@@ -1,4 +1,8 @@
-// Center-align site title and site description
+//------------------------- Layout SASS
+// Usage: Rules concerning design layout
+
+
+//------------------------- Center-align site title and site description
 @mixin header-plain-text-center {
     
     .masthead-header {
@@ -13,5 +17,3 @@
     }
 
 }
-
-@include header-plain-text-center;

@@ -1,0 +1,78 @@
+//------------------------- Patch SASS
+// Usage: Rules concerning common fixes
+
+
+//------------------------- Clearfix
+// Usage: For parents with floated children
+@mixin cf {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }    
+}
+
+%cf {
+    @include cf;
+}
+
+
+//------------------------- Visually Hidden
+// Usage: to hide elements on the visual level; visible to search engines and screenreaders
+@mixin vhide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+%vhide {
+    @include vhide;
+}
+
+
+//------------------------- Visually Hidden Reversed
+// Usage: to toggle visually-hidden elements
+@mixin vhide-rev {
+    clip: rect(auto, auto, auto, auto);
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    padding: 0;
+    position: static;
+    width: auto;
+}
+
+%vhide-rev {
+    @include vhide-rev;
+}
+
+
+//------------------------- Image Replacement
+// Usage: used in replacing texts with images
+// If text must have an image, use pseudo-element
+@mixin ir {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    overflow: hidden;
+    *text-indent: -9999px;
+    
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+
+%ir {
+    @include ir;
+}

@@ -1,3 +1,11 @@
 img {
     @extend %responsive-media;
 }
+
+.wp-caption {
+    @extend %responsive-media;
+}
+
+iframe {
+    @extend %responsive-media;
+}

@@ -23,8 +23,15 @@ input[type="reset"] {
     line-height: normal;
 }
 
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
 label[for] {
+    
     &:hover {
         cursor: pointer;
     }
+    
 }
