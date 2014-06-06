@@ -3,8 +3,7 @@
 
 
 //------------------------- Faint
-@mixin faint {    
-    @include font-size-rem($font-s);
+@mixin faint {
     color: $gray50;
 }
 

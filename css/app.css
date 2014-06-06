@@ -774,14 +774,7 @@ img, .wp-caption, iframe {
   vertical-align: middle;
 }
 
-/* line 11, sass/default/utilities/tools/_theme.scss */
-.main-content-title .label {
-  font-size: 12px;
-  font-size: 0.75rem;
-  color: gray;
-}
-
-/* line 90, sass/default/utilities/tools/_theme.scss */
+/* line 89, sass/default/utilities/tools/_theme.scss */
 .post-edit-link, .main-navigation-heading .label, .main-navigation div.nav-menu a {
   -webkit-transition: background-color 0.125s ease;
   -moz-transition: background-color 0.125s ease;
@@ -790,7 +783,7 @@ img, .wp-caption, iframe {
   transition: background-color 0.125s ease;
 }
 
-/* line 153, sass/default/utilities/tools/_theme.scss */
+/* line 152, sass/default/utilities/tools/_theme.scss */
 .post-edit-link, .main-navigation-heading .label {
   display: inline-block;
   padding: .25rem 1rem;
@@ -804,7 +797,7 @@ img, .wp-caption, iframe {
   border-bottom-left-radius: 0.25rem;
   text-transform: uppercase;
 }
-/* line 135, sass/default/utilities/tools/_theme.scss */
+/* line 134, sass/default/utilities/tools/_theme.scss */
 .post-edit-link:hover, .main-navigation-heading .label:hover {
   color: white;
   background-color: #00aaff;
@@ -1079,8 +1072,6 @@ tbody tr:last-child {
 
 /* line 1, sass/default/structure/molecules/_text.scss */
 .note {
-  font-size: 12px;
-  font-size: 0.75rem;
   color: gray;
 }
 
@@ -1151,8 +1142,6 @@ tbody tr:last-child {
 
 /* line 45, sass/default/structure/organisms/_comment.scss */
 .comment-timestamp-link {
-  font-size: 12px;
-  font-size: 0.75rem;
   color: gray;
 }
 
@@ -1232,8 +1221,6 @@ tbody tr:last-child {
 
 /* line 123, sass/default/structure/organisms/_comment.scss */
 .note-optional {
-  font-size: 12px;
-  font-size: 0.75rem;
   color: gray;
 }
 
@@ -1276,8 +1263,6 @@ tbody tr:last-child {
 /* line 160, sass/default/structure/organisms/_comment.scss */
 .comment-pending {
   margin-bottom: auto;
-  font-size: 12px;
-  font-size: 0.75rem;
   color: gray;
   font-style: italic;
 }
@@ -1313,6 +1298,10 @@ tbody tr:last-child {
 .main-content-title {
   font-size: 32px;
   font-size: 2rem;
+}
+/* line 13, sass/default/structure/organisms/_main-content.scss */
+.main-content-title .label {
+  color: gray;
 }
 
 /* line 1, sass/default/structure/organisms/_entry.scss */
@@ -1373,7 +1362,7 @@ tbody tr:last-child {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 113, sass/default/utilities/tools/_theme.scss */
+/* line 112, sass/default/utilities/tools/_theme.scss */
 .entry-hr-cr .entry-timestamp a:hover {
   border-bottom: none;
   text-decoration: none;
@@ -1383,7 +1372,7 @@ tbody tr:last-child {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 113, sass/default/utilities/tools/_theme.scss */
+/* line 112, sass/default/utilities/tools/_theme.scss */
 .entry-hr-cr .entry-byline a:hover {
   border-bottom: none;
   text-decoration: none;
@@ -1453,7 +1442,7 @@ tbody tr:last-child {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 113, sass/default/utilities/tools/_theme.scss */
+/* line 112, sass/default/utilities/tools/_theme.scss */
 .entry-tags a:hover {
   border-bottom: none;
   text-decoration: none;
@@ -1583,8 +1572,6 @@ tbody tr:last-child {
 
 /* line 15, sass/default/structure/organisms/_masthead-header.scss */
 .site-desc {
-  font-size: 12px;
-  font-size: 0.75rem;
   color: gray;
 }
 
@@ -1694,7 +1681,7 @@ tbody tr:last-child {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
-/* line 113, sass/default/utilities/tools/_theme.scss */
+/* line 112, sass/default/utilities/tools/_theme.scss */
 .site-info a:hover {
   border-bottom: none;
   text-decoration: none;

@@ -11,7 +11,7 @@
     @include font-size-rem($font-xl);
     
     .label {
-        @extend %faint;
+        color: $faint;
     }
     
 }

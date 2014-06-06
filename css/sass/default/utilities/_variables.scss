@@ -53,6 +53,8 @@ $gray80: hsl(0, 0%, 80%);
 $gray90: hsl(0, 0%, 90%);
 $black: hsl(0, 0%, 0%);
 
+$faint: $gray50;
+
 // Add a dark shade
 // Example usage: color overlays on menu items with exisint background colors
 $darken5: hsla(0, 0%, 0%, .05);
