@@ -1,0 +1,9 @@
+.widget {
+    margin-bottom: 2rem;
+    padding: 0 $gutter;
+
+    &:last-child {
+        margin-bottom: auto;
+    }
+
+}

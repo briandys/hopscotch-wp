@@ -689,46 +689,6 @@ textarea {
     page-break-after: avoid;
   }
 }
-/* line 33, sass/default/utilities/_settings.scss */
-h1, h2, h3, h4, h5, h6,
-ul, ol,
-p,
-th, td,
-button,
-blockquote,
-dl {
-  margin: auto;
-  padding: 0;
-}
-
-/* line 51, sass/default/utilities/_settings.scss */
-h1, h2, h3, h4, h5, h6,
-p,
-ul, ol,
-table,
-blockquote,
-legend,
-dl,
-.field {
-  margin-bottom: 1rem;
-}
-
-/* line 59, sass/default/utilities/_settings.scss */
-p:last-child,
-li:last-child,
-.field:last-child,
-.field-action {
-  margin-bottom: auto !important;
-}
-
-/* line 65, sass/default/utilities/_settings.scss */
-html {
-  color: #333333;
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: Raleway;
-}
-
 /* line 36, sass/default/utilities/tools/_patch.scss */
 legend,
 .assistive-text,
@@ -737,7 +697,7 @@ legend,
 .blog .main-content-title,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
-.form-allowed-tags, .child-page .entry-meta, .comment-respond .verb-subject, .status-main-nav-active .main-navigation-heading, .skip-to-content-link, .sharedaddy .sd-title, .header-sidebar-container .widget_search label {
+.form-allowed-tags, .child-page .entry-meta, .comment-respond .verb-subject, .error404 .main-content-hr, .status-main-nav-active .main-navigation-heading, .skip-to-content-link, .sharedaddy .sd-title, .widget_search label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -756,7 +716,7 @@ legend,
 }
 
 /* line 61, sass/default/utilities/tools/_structure.scss */
-img, .wp-caption, iframe {
+img, .wp-caption {
   max-width: 100%;
   height: auto;
 }
@@ -804,6 +764,48 @@ img, .wp-caption, iframe {
   text-decoration: none;
 }
 
+/* line 33, sass/default/utilities/_settings.scss */
+h1, h2, h3, h4, h5, h6,
+ul, ol,
+p,
+th, td,
+button,
+blockquote,
+dl {
+  margin: auto;
+  padding: 0;
+}
+
+/* line 51, sass/default/utilities/_settings.scss */
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+table,
+blockquote,
+legend,
+dl,
+.field {
+  margin-bottom: 1rem;
+}
+
+/* line 59, sass/default/utilities/_settings.scss */
+p:last-child,
+li:last-child,
+.field:last-child,
+.field-action {
+  margin-bottom: auto !important;
+}
+
+/* line 65, sass/default/utilities/_settings.scss */
+html {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
+}
+
 /* line 1, sass/default/structure/atoms/_align.scss */
 .alignleft {
   float: left;
@@ -827,7 +829,6 @@ img, .wp-caption, iframe {
 /* line 18, sass/default/structure/atoms/_align.scss */
 .alignnone {
   display: block;
-  margin: auto;
 }
 
 /* line 1, sass/default/structure/atoms/_definition.scss */
@@ -874,7 +875,7 @@ input[type="reset"] {
 
 /* line 26, sass/default/structure/atoms/_form.scss */
 label {
-  display: block;
+  display: inline-block;
   margin-bottom: .5rem;
 }
 
@@ -948,6 +949,11 @@ li {
 /* line 16, sass/default/structure/atoms/_list.scss */
 ol li > ol, ol li > ul, ul li > ol, ul li > ul {
   margin-top: 0.5rem;
+}
+
+/* line 9, sass/default/structure/atoms/_media.scss */
+iframe[src*="youtube.com"] {
+  max-width: 100%;
 }
 
 /* line 1, sass/default/structure/atoms/_paragraph.scss */
@@ -1063,11 +1069,6 @@ tbody tr:last-child {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 90;
-}
-
-/* line 3, sass/default/structure/molecules/_tag.scss */
-.entry-fr .entry-tags {
-  padding: 0 1rem;
 }
 
 /* line 1, sass/default/structure/molecules/_text.scss */
@@ -1231,7 +1232,7 @@ tbody tr:last-child {
 
 /* line 131, sass/default/structure/organisms/_comment.scss */
 .comment-respond {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 0 1rem;
 }
 /* line 135, sass/default/structure/organisms/_comment.scss */
@@ -1267,6 +1268,27 @@ tbody tr:last-child {
   font-style: italic;
 }
 
+/* line 168, sass/default/structure/organisms/_comment.scss */
+.comments .blank {
+  padding: 0 1rem;
+}
+
+/* line 174, sass/default/structure/organisms/_comment.scss */
+.comments-hr {
+  margin-bottom: 1rem;
+}
+
+/* line 178, sass/default/structure/organisms/_comment.scss */
+.blank-cr {
+  padding: .5rem 1rem;
+  background-color: #f2f2f2;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  text-align: center;
+}
+
 /* line 1, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation-list {
   list-style: none;
@@ -1289,17 +1311,17 @@ tbody tr:last-child {
   padding-bottom: 1rem;
 }
 
-/* line 6, sass/default/structure/organisms/_main-content.scss */
+/* line 7, sass/default/structure/organisms/_main-content.scss */
 .main-content-hr-cr {
   padding: 0 1rem;
 }
 
-/* line 10, sass/default/structure/organisms/_main-content.scss */
+/* line 11, sass/default/structure/organisms/_main-content.scss */
 .main-content-title {
   font-size: 32px;
   font-size: 2rem;
 }
-/* line 13, sass/default/structure/organisms/_main-content.scss */
+/* line 14, sass/default/structure/organisms/_main-content.scss */
 .main-content-title .label {
   color: gray;
 }
@@ -1357,47 +1379,55 @@ tbody tr:last-child {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-/* line 61, sass/default/structure/organisms/_entry.scss */
-.entry-hr-cr .entry-timestamp a {
-  color: rgba(51, 51, 51, 0.75);
-  border-bottom: 0.0625rem dotted currentColor;
-}
-/* line 112, sass/default/utilities/tools/_theme.scss */
-.entry-hr-cr .entry-timestamp a:hover {
-  border-bottom: none;
-  text-decoration: none;
-}
-/* line 67, sass/default/structure/organisms/_entry.scss */
-.entry-hr-cr .entry-byline a {
-  color: rgba(51, 51, 51, 0.75);
-  border-bottom: 0.0625rem dotted currentColor;
-}
-/* line 112, sass/default/utilities/tools/_theme.scss */
-.entry-hr-cr .entry-byline a:hover {
-  border-bottom: none;
-  text-decoration: none;
-}
-/* line 72, sass/default/structure/organisms/_entry.scss */
+/* line 60, sass/default/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-user-action {
   margin-top: .5rem;
 }
 
-/* line 78, sass/default/structure/organisms/_entry.scss */
+/* line 66, sass/default/structure/organisms/_entry.scss */
+.entry-fr-cr {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 74, sass/default/structure/organisms/_entry.scss */
+.entry-timestamp a {
+  color: rgba(51, 51, 51, 0.75);
+  border-bottom: 0.0625rem dotted currentColor;
+}
+/* line 112, sass/default/utilities/tools/_theme.scss */
+.entry-timestamp a:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+/* line 80, sass/default/structure/organisms/_entry.scss */
+.entry-byline a {
+  color: rgba(51, 51, 51, 0.75);
+  border-bottom: 0.0625rem dotted currentColor;
+}
+/* line 112, sass/default/utilities/tools/_theme.scss */
+.entry-byline a:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+/* line 85, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
   display: inline-block;
 }
 
-/* line 82, sass/default/structure/organisms/_entry.scss */
+/* line 89, sass/default/structure/organisms/_entry.scss */
 .entry-ct {
   margin-bottom: 1rem;
 }
 
-/* line 88, sass/default/structure/organisms/_entry.scss */
+/* line 95, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > * {
   padding: 0 1rem;
   word-wrap: break-word;
 }
-/* line 92, sass/default/structure/organisms/_entry.scss */
+/* line 99, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
@@ -1431,13 +1461,22 @@ tbody tr:last-child {
   font-size: 12px;
   font-size: 0.75rem;
 }
+/* line 109, sass/default/structure/organisms/_entry.scss */
+.format-status .entry-ct-cr > * {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
 
-/* line 101, sass/default/structure/organisms/_entry.scss */
+/* line 117, sass/default/structure/organisms/_entry.scss */
 .entry-fr {
   margin-top: 1rem;
 }
+/* line 120, sass/default/structure/organisms/_entry.scss */
+.entry-fr .entry-meta {
+  margin-bottom: 1rem;
+}
 
-/* line 107, sass/default/structure/organisms/_entry.scss */
+/* line 128, sass/default/structure/organisms/_entry.scss */
 .entry-tags a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
@@ -1448,20 +1487,20 @@ tbody tr:last-child {
   text-decoration: none;
 }
 
-/* line 115, sass/default/structure/organisms/_entry.scss */
+/* line 136, sass/default/structure/organisms/_entry.scss */
 .page-links > * {
   display: inline-block;
 }
-/* line 119, sass/default/structure/organisms/_entry.scss */
+/* line 140, sass/default/structure/organisms/_entry.scss */
 .page-links p {
   margin-bottom: auto;
 }
-/* line 123, sass/default/structure/organisms/_entry.scss */
+/* line 144, sass/default/structure/organisms/_entry.scss */
 .page-links a, .page-links > .label {
   padding: 1rem;
 }
 
-/* line 129, sass/default/structure/organisms/_entry.scss */
+/* line 150, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
   -webkit-transform: translate(0, -0.25rem);
   -moz-transform: translate(0, -0.25rem);
@@ -1470,7 +1509,7 @@ tbody tr:last-child {
   transform: translate(0, -0.25rem);
 }
 
-/* line 134, sass/default/structure/organisms/_entry.scss */
+/* line 155, sass/default/structure/organisms/_entry.scss */
 .post-edit-link {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1612,40 +1651,27 @@ tbody tr:last-child {
   text-align: center;
 }
 
-/* line 3, sass/default/structure/organisms/_search.scss */
-.header-sidebar-container .widget_search {
-  padding: 0 1rem;
-}
-/* line 12, sass/default/structure/organisms/_search.scss */
-.header-sidebar-container .widget_search .field {
+/* line 9, sass/default/structure/organisms/_search.scss */
+.widget_search .field {
   float: left;
   margin-bottom: auto;
   width: 100%;
   margin-right: -5rem;
 }
-/* line 18, sass/default/structure/organisms/_search.scss */
-.header-sidebar-container .widget_search .field .field-cr {
+/* line 15, sass/default/structure/organisms/_search.scss */
+.widget_search .field .field-cr {
   margin-right: .5rem;
   padding-right: 5rem;
 }
-/* line 25, sass/default/structure/organisms/_search.scss */
-.header-sidebar-container .widget_search .field-action {
+/* line 22, sass/default/structure/organisms/_search.scss */
+.widget_search .field-action {
   float: right;
   width: 5rem;
 }
 
-/* line 1, sass/default/structure/organisms/_secondary-sidebar-container.scss */
+/* line 1, sass/default/structure/organisms/_sidebar.scss */
 .secondary-sidebar-container {
   margin-top: 2rem;
-}
-/* line 4, sass/default/structure/organisms/_secondary-sidebar-container.scss */
-.secondary-sidebar-container .widget {
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-}
-/* line 8, sass/default/structure/organisms/_secondary-sidebar-container.scss */
-.secondary-sidebar-container .widget:last-child {
-  margin-bottom: auto;
 }
 
 /* line 5, sass/default/structure/organisms/_site-footer.scss */
@@ -1692,6 +1718,16 @@ tbody tr:last-child {
   display: inline-block;
 }
 
+/* line 1, sass/default/structure/organisms/_widget.scss */
+.widget {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+/* line 5, sass/default/structure/organisms/_widget.scss */
+.widget:last-child {
+  margin-bottom: auto;
+}
+
 /* line 227, sass/default/utilities/tools/_structure.scss */
 .page .child-page h1 {
   font-size: 36px;
@@ -1728,12 +1764,12 @@ tbody tr:last-child {
   margin-bottom: 2rem;
 }
 
-/* line 3, sass/custom/structure/organisms/_entry.scss */
+/* line 3, sass/hopscotch/structure/organisms/_entry.scss */
 .entry .img-cr {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 8, sass/custom/structure/organisms/_entry.scss */
+/* line 8, sass/hopscotch/structure/organisms/_entry.scss */
 .entry .wp-caption {
   padding-left: 0;
   padding-right: 0;

@@ -57,22 +57,29 @@
         margin-right: -$gutter;
     }
     
-    .entry-timestamp {
-        a {
-            @include linkstyle-secondary;
-        }
-    }
-    
-    .entry-byline {
-        a {
-            @include linkstyle-secondary;
-        }
-    }
-    
     .entry-user-action {
         margin-top: .5rem;
     }
 
+}
+
+.entry-fr-cr {
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+
+    
+.entry-timestamp {
+    a {
+        @include linkstyle-secondary;
+    }
+}
+
+.entry-byline {
+    a {
+        @include linkstyle-secondary;
+    }
 }
 
 .entry-admin-action {
@@ -96,10 +103,24 @@
     
     @include shrink-heading;
     
+    // Format: Status
+    .format-status & {
+        
+        > * {
+            @include font-size-rem($font-l);
+        }
+        
+    }
+    
 }
 
 .entry-fr {
     margin-top: 1rem;
+    
+    .entry-meta {
+        margin-bottom: 1rem;
+    }
+    
 }
 
 .entry-tags {

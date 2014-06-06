@@ -63,8 +63,9 @@ li:last-child,
 
 // Base setting
 html {
-    color: $font-color-base;
-    font-size: 1em;
+    @include font-size-rem($font-m);
+    font-family: $font-family-base;
     line-height: 1.5;
-    font-family: Raleway;
+    color: $font-color-base;
+    background-color: $white;
 }

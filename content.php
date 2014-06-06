@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?> data-state="<?php if ( has_post_thumbnail() || get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) : ?>entry-thumbnail-active<?php endif; ?>">
     <div class="entry-cr">
         <header class="entry-hr">
-            <div class="entry-hr-cr">            
+            <div class="entry-hr-cr">
 				
 				<?php
                     if ( is_single() || is_page() ) :
@@ -86,13 +86,11 @@
                     <?php hopscotch_entry_byline(); ?>
                 </div><!-- .entry-meta -->
                 
-                <?php hopscotch_entry_action_edit(); ?>
-                
                 <?php hopscotch_entry_action_comment(); ?>
                 
 				<?php endif; ?>
                 
-				<?php the_tags( '<div class="entry-tags"><span class="tag-links"><span class="label">Tags:</span> ', '<span class="separator">,</span> ', '</span></div>' ); ?>        
+				<?php the_tags( '<div class="entry-tags"><div class="tag-list"><span class="label">Tags:</span> ', '<span class="separator">,</span> ', '</div></div>' ); ?>        
             </div>
         </footer><!-- .entry-fr -->
         <?php endif; ?>

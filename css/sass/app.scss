@@ -7,11 +7,11 @@
 // Style Guide
 @import 'default/utilities/style-guide';
 
-// Initial Settings
-@import 'default/utilities/settings';
-
 // Tools
 @import 'default/utilities/tools';
+
+// Initial Settings
+@import 'default/utilities/settings';
 
 // Defaults
 @import 'default/structure/atoms';
@@ -20,4 +20,4 @@
 @import 'default/structure/templates';
 
 // Custom
-@import 'custom/structure/organisms';
+@import 'hopscotch/structure/organisms';

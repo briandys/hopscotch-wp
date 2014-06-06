@@ -37,18 +37,18 @@ add_filter('show_admin_bar', '__return_false');
 //------------------------- Widgets
 function hopscotch_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Header Sidebar', 'hopscotch' ),
-		'id'            => 'sidebar-header',
-		'description'   => __( 'Secondary content at the header', 'hopscotch' ),
+		'name'          => __( 'Secondary Sidebar', 'hopscotch' ),
+		'id'            => 'sidebar-secondary',
+		'description'   => __( 'Secondary content at the body', 'hopscotch' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'hopscotch' ),
-		'id'            => 'sidebar-secondary',
-		'description'   => __( 'Secondary content at the body', 'hopscotch' ),
+		'name'          => __( 'Header Sidebar', 'hopscotch' ),
+		'id'            => 'sidebar-header',
+		'description'   => __( 'Secondary content at the header', 'hopscotch' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -67,7 +67,7 @@ function hopscotch_widgets_init() {
 add_action( 'widgets_init', 'hopscotch_widgets_init' );
 
 
-//------------------------- Register Google Fonts
+//------------------------- Register Fonts
 if (!function_exists('hopscotch_fonts')) :
     function hopscotch_fonts() {
         /* translators: If there are characters in your language that are not supported

@@ -1,32 +1,27 @@
-.header-sidebar-container {
-    
-    .widget_search {
-        padding: 0 1rem;
+.widget_search {
         
-        label {
-            @extend %vhide;
+    label {
+        @extend %vhide;
+    }
+
+    $button-size: 5rem;
+
+    .field {
+        float: left;
+        margin-bottom: auto;
+        width: 100%;
+        margin-right: -$button-size;
+
+        .field-cr {
+            margin-right: .5rem;
+            padding-right: $button-size;
         }
-        
-        $floater: 5rem;
-        
-        .field {
-            float: left;
-            margin-bottom: auto;
-            width: 100%;
-            margin-right: -$floater;
-            
-            .field-cr {
-                margin-right: .5rem;
-                padding-right: $floater;
-            }
-            
-        }
-        
-        .field-action {
-            float: right;
-            width: $floater;
-        }
-        
+
+    }
+
+    .field-action {
+        float: right;
+        width: $button-size;
     }
 
 }

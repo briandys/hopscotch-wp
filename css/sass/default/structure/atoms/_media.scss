@@ -6,6 +6,6 @@ img {
     @extend %responsive-media;
 }
 
-iframe {
-    @extend %responsive-media;
+iframe[src*="youtube.com"] {
+    max-width: 100%;
 }

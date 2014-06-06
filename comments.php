@@ -12,24 +12,28 @@ if ( post_password_required() )
             
             <?php if ( have_comments() ) : ?>
             
-            <ol class="comment-list">
-				<?php
-                    wp_list_comments( array(
-                        'style'      => 'ol',
-                        'short_ping' => true,
-                        'avatar_size'=> 72,
-                        'callback' => 'hopscotch_comments'
-                    ) );
-                ?>
-            </ol><!-- .comment-list -->
-	
-			<?php if ( ! comments_open() ) : ?>
-            <p><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
-            <?php endif; ?>
-                    
-            <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>            
-                <?php get_template_part( ''.hopscotch_components_directory().'/comment-navigation' ); ?>            
-            <?php endif; ?>
+                <ol class="comment-list">
+                    <?php
+                        wp_list_comments( array(
+                            'style'      => 'ol',
+                            'short_ping' => true,
+                            'avatar_size'=> 72,
+                            'callback' => 'hopscotch_comments'
+                        ) );
+                    ?>
+                </ol><!-- .comment-list -->
+
+                <?php if ( ! comments_open() ) : ?>
+                <p><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
+                <?php endif; ?>
+
+                <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>            
+                    <?php get_template_part( ''.hopscotch_components_directory().'/comment-navigation' ); ?>            
+                <?php endif; ?>
+            
+            <?php else : ?>
+            
+            <div class="blank"><div class="blank-cr">No comment yet.</div></div>
             
             <?php endif; ?>
             

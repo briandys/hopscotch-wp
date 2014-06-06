@@ -129,7 +129,7 @@
 }
 
 .comment-respond {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0 1rem;
     
     .comment & {
@@ -161,4 +161,23 @@
     margin-bottom: auto;
     @include faint;
     font-style: italic;
+}
+
+.comments {
+    
+    .blank {
+        padding: 0 1rem;
+    }
+    
+}
+
+.comments-hr {
+    margin-bottom: 1rem;
+}
+
+.blank-cr {
+    padding: .5rem 1rem;
+    background-color: $cloud;
+    @include corner-radius($radius-s);
+    text-align: center;
 }

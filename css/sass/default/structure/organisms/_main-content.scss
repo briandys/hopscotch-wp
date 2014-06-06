@@ -3,6 +3,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
 .main-content-hr-cr {
     padding: 0 $gutter;
 }
@@ -12,6 +13,14 @@
     
     .label {
         color: $faint;
+    }
+    
+}
+
+.main-content-hr {
+    
+    .error404 & {
+        @extend %vhide;
     }
     
 }
