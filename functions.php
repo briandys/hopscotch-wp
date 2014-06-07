@@ -149,6 +149,7 @@ require get_template_directory() . '/functions/more-content-link-skip.php';
 require get_template_directory() . '/functions/html-class.php';
 require get_template_directory() . '/functions/body-class.php';
 require get_template_directory() . '/functions/shortcode-entry-class.php';
+require get_template_directory() . '/functions/shortcode-entry-subtitle.php';
 require get_template_directory() . '/functions/plain-image-class.php';
 
 // Shortcodes

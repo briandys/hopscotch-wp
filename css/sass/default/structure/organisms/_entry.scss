@@ -1,9 +1,5 @@
 .entry {    
-    margin-bottom: 2rem;
-    
-    .entry-thumbnail-link {
-        width: 100%;
-    }
+    margin-bottom: 4rem;
     
     .show-more-content {
 
@@ -28,6 +24,14 @@
         color: $color-quote-text;
     }
     
+    .page & {
+        
+        .entry-hr .entry-meta {
+            @extend %vhide;
+        }
+        
+    }
+    
 }
 
 .entry-title {
@@ -35,10 +39,6 @@
     @include font-size-rem($font-xl);
     line-height: normal;
     word-wrap: break-word;
-    
-    .logged-in & {
-        margin-right: .5rem;
-    }
     
 }
 
@@ -155,4 +155,14 @@
 .post-edit-link {
     @extend %buttonizer-primary;
     @include font-size-rem($font-s);
+}
+
+
+.entry-subtitle {
+    @include font-size-rem($font-m-l);
+    
+    .label {
+        @extend %vhide;
+    }
+    
 }

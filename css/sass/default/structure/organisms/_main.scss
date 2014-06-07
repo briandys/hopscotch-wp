@@ -1,0 +1,74 @@
+$content-width-percentage: 60%;
+$sidebar-width-percentage: 100% - $content-width-percentage;
+
+$total-width: 60rem;
+$content-width: 40rem;
+$sidebar-width: $total-width - $content-width;
+$sidebar-width-expand: 5;
+
+.main-cr {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    @include mq($tablet, iefixOn) {
+        @include cf;
+    }
+    
+    @include mq($widescreen, iefixOff) {
+        margin-top: auto;
+    }
+    
+}
+
+#primary {
+    
+    .secondary-sidebar-active & {
+    
+        @include mq($tablet, iefixOn) {
+            float: left;
+            width: $content-width-percentage;
+        }
+    
+        @include mq($widescreen, iefixOff) {
+            margin-right: -$sidebar-width;
+            width: 100%;
+        }
+    
+        @include mq($moviehouse, iefixOff) {
+            margin-right: -($sidebar-width + $sidebar-width-expand);
+        }
+        
+    }
+    
+    .site-content {
+        
+        @include mq($tablet, iefixOff) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: $content-width;
+        }
+        
+    }
+    
+}
+
+.secondary-sidebar-active {
+
+    #secondary {
+
+        @include mq($tablet, iefixOn) {
+            float: right;
+            width: $sidebar-width-percentage;
+        }
+
+        @include mq($widescreen, iefixOff) {
+            max-width: $sidebar-width;
+        }
+
+        @include mq($moviehouse, iefixOff) {
+            max-width: $sidebar-width + $sidebar-width-expand;
+        }
+
+    }
+    
+}

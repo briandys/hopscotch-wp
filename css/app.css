@@ -697,7 +697,7 @@ legend,
 .blog .main-content-title,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
-.form-allowed-tags, .child-page .entry-meta, .comment-respond .verb-subject, .error404 .main-content-hr, .status-main-nav-active .main-navigation-heading, .skip-to-content-link, .sharedaddy .sd-title, .widget_search label {
+.form-allowed-tags, .child-page .entry-meta, .comment-respond .verb-subject, .error404 .main-content-hr, .page .entry .entry-hr .entry-meta, .entry-subtitle .label, .status-main-nav-active .main-navigation-heading, .skip-to-content-link, .sharedaddy .sd-title, .widget_search label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1048,11 +1048,10 @@ tbody tr:last-child {
 /* line 1, sass/default/structure/molecules/_entry-thumbnail.scss */
 .entry-thumbnail-link {
   display: block;
-  width: 10rem;
+  width: 100%;
   height: 10rem;
-  background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* line 3, sass/default/structure/molecules/_overlay.scss */
@@ -1305,62 +1304,47 @@ tbody tr:last-child {
 }
 
 /* line 1, sass/default/structure/organisms/_main-content.scss */
-.main-cr {
-  margin-top: -1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-/* line 7, sass/default/structure/organisms/_main-content.scss */
 .main-content-hr-cr {
   padding: 0 1rem;
 }
 
-/* line 11, sass/default/structure/organisms/_main-content.scss */
+/* line 5, sass/default/structure/organisms/_main-content.scss */
 .main-content-title {
   font-size: 32px;
   font-size: 2rem;
 }
-/* line 14, sass/default/structure/organisms/_main-content.scss */
+/* line 8, sass/default/structure/organisms/_main-content.scss */
 .main-content-title .label {
   color: gray;
 }
 
 /* line 1, sass/default/structure/organisms/_entry.scss */
 .entry {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
-/* line 4, sass/default/structure/organisms/_entry.scss */
-.entry .entry-thumbnail-link {
-  width: 100%;
-}
-/* line 10, sass/default/structure/organisms/_entry.scss */
+/* line 6, sass/default/structure/organisms/_entry.scss */
 .entry .show-more-content .more-link {
   display: inline-block;
   margin-left: -1rem;
   padding: 1rem;
   color: #12b32d;
 }
-/* line 21, sass/default/structure/organisms/_entry.scss */
+/* line 17, sass/default/structure/organisms/_entry.scss */
 .entry.sticky .entry-title-link {
   color: #12b32d;
 }
-/* line 27, sass/default/structure/organisms/_entry.scss */
+/* line 23, sass/default/structure/organisms/_entry.scss */
 .entry blockquote {
   color: gray;
 }
 
-/* line 33, sass/default/structure/organisms/_entry.scss */
+/* line 37, sass/default/structure/organisms/_entry.scss */
 .entry-title {
   display: inline;
   font-size: 32px;
   font-size: 2rem;
   line-height: normal;
   word-wrap: break-word;
-}
-/* line 39, sass/default/structure/organisms/_entry.scss */
-.logged-in .entry-title {
-  margin-right: .5rem;
 }
 
 /* line 45, sass/default/structure/organisms/_entry.scss */
@@ -1431,32 +1415,32 @@ tbody tr:last-child {
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
-/* line 227, sass/default/utilities/tools/_structure.scss */
+/* line 233, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h1 {
   font-size: 36px;
   font-size: 2.25rem;
 }
-/* line 231, sass/default/utilities/tools/_structure.scss */
+/* line 237, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h2 {
   font-size: 30px;
   font-size: 1.875rem;
 }
-/* line 235, sass/default/utilities/tools/_structure.scss */
+/* line 241, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 239, sass/default/utilities/tools/_structure.scss */
+/* line 245, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h4 {
   font-size: 18px;
   font-size: 1.125rem;
 }
-/* line 243, sass/default/utilities/tools/_structure.scss */
+/* line 249, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 247, sass/default/utilities/tools/_structure.scss */
+/* line 253, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h6 {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1515,6 +1499,103 @@ tbody tr:last-child {
   font-size: 0.75rem;
 }
 
+/* line 161, sass/default/structure/organisms/_entry.scss */
+.entry-subtitle {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* line 9, sass/default/structure/organisms/_main.scss */
+.main-cr {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+/* line 9, sass/default/utilities/tools/_patch.scss */
+.lt-ie9 .main-cr:before, .lt-ie9 .main-cr:after {
+  content: " ";
+  display: table;
+}
+/* line 13, sass/default/utilities/tools/_patch.scss */
+.lt-ie9 .main-cr:after {
+  clear: both;
+}
+@media only screen and (min-width: 48rem) {
+  /* line 9, sass/default/utilities/tools/_patch.scss */
+  .main-cr:before, .main-cr:after {
+    content: " ";
+    display: table;
+  }
+  /* line 13, sass/default/utilities/tools/_patch.scss */
+  .main-cr:after {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  /* line 9, sass/default/structure/organisms/_main.scss */
+  .main-cr {
+    margin-top: auto;
+  }
+}
+
+/* line 189, sass/default/utilities/tools/_structure.scss */
+.lt-ie9 .secondary-sidebar-active #primary {
+  float: left;
+  width: 60%;
+}
+@media only screen and (min-width: 48rem) {
+  /* line 25, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active #primary {
+    float: left;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  /* line 25, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active #primary {
+    margin-right: -20rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  /* line 25, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active #primary {
+    margin-right: -25rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  /* line 43, sass/default/structure/organisms/_main.scss */
+  #primary .site-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40rem;
+  }
+}
+
+/* line 189, sass/default/utilities/tools/_structure.scss */
+.lt-ie9 .secondary-sidebar-active #secondary {
+  float: right;
+  width: 40%;
+}
+@media only screen and (min-width: 48rem) {
+  /* line 57, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active #secondary {
+    float: right;
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  /* line 57, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active #secondary {
+    max-width: 20rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  /* line 57, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active #secondary {
+    max-width: 25rem;
+  }
+}
+
 /* line 21, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation div.nav-menu ul {
   list-style: none;
@@ -1551,10 +1632,10 @@ tbody tr:last-child {
 
 /* line 60, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
+  display: inline-block;
   margin-bottom: auto;
   font-size: 16px;
   font-size: 1rem;
-  text-align: center;
   text-transform: uppercase;
 }
 /* line 66, sass/default/structure/organisms/_main-navigation.scss */
@@ -1563,6 +1644,11 @@ tbody tr:last-child {
 }
 
 /* line 80, sass/default/structure/organisms/_main-navigation.scss */
+.main-navigation-cr {
+  text-align: center;
+}
+
+/* line 84, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-ct {
   position: fixed;
   left: 0;
@@ -1574,15 +1660,25 @@ tbody tr:last-child {
   -ms-transform: translate(0, 100%);
   -o-transform: translate(0, 100%);
   transform: translate(0, 100%);
+  text-align: left;
   z-index: 100;
 }
-/* line 88, sass/default/structure/organisms/_main-navigation.scss */
+/* line 211, sass/default/utilities/tools/_structure.scss */
+.lt-ie9 .main-navigation-ct {
+  display: none;
+}
+/* line 97, sass/default/structure/organisms/_main-navigation.scss */
 .status-main-nav-active .main-navigation-ct {
   -webkit-transform: translate(0, 3.5rem);
   -moz-transform: translate(0, 3.5rem);
   -ms-transform: translate(0, 3.5rem);
   -o-transform: translate(0, 3.5rem);
   transform: translate(0, 3.5rem);
+}
+
+/* line 217, sass/default/utilities/tools/_structure.scss */
+.status-main-nav-active .main-navigation-ct.lt-ie9 {
+  display: block;
 }
 
 /* line 8, sass/default/utilities/tools/_layout.scss */
@@ -1673,6 +1769,12 @@ tbody tr:last-child {
 .secondary-sidebar-container {
   margin-top: 2rem;
 }
+@media only screen and (min-width: 48rem) {
+  /* line 1, sass/default/structure/organisms/_sidebar.scss */
+  .secondary-sidebar-container {
+    margin-top: auto;
+  }
+}
 
 /* line 5, sass/default/structure/organisms/_site-footer.scss */
 .site-footer .widget_nav_menu .menu {
@@ -1714,6 +1816,10 @@ tbody tr:last-child {
 }
 
 /* line 3, sass/default/structure/organisms/_tertiary-sidebar-container.scss */
+.tertiary-sidebar-container .menu li {
+  margin-bottom: auto;
+}
+/* line 7, sass/default/structure/organisms/_tertiary-sidebar-container.scss */
 .tertiary-sidebar-container .menu .sub-menu li {
   display: inline-block;
 }
@@ -1728,32 +1834,46 @@ tbody tr:last-child {
   margin-bottom: auto;
 }
 
-/* line 227, sass/default/utilities/tools/_structure.scss */
+/* line 11, sass/default/structure/organisms/_widget.scss */
+.widget-title {
+  line-height: normal;
+}
+
+/* line 17, sass/default/structure/organisms/_widget.scss */
+.widget_calendar th, .widget_calendar td {
+  padding: .5rem;
+}
+/* line 21, sass/default/structure/organisms/_widget.scss */
+.widget_calendar #next {
+  text-align: right;
+}
+
+/* line 233, sass/default/utilities/tools/_structure.scss */
 .page .child-page h1 {
   font-size: 36px;
   font-size: 2.25rem;
 }
-/* line 231, sass/default/utilities/tools/_structure.scss */
+/* line 237, sass/default/utilities/tools/_structure.scss */
 .page .child-page h2 {
   font-size: 30px;
   font-size: 1.875rem;
 }
-/* line 235, sass/default/utilities/tools/_structure.scss */
+/* line 241, sass/default/utilities/tools/_structure.scss */
 .page .child-page h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 239, sass/default/utilities/tools/_structure.scss */
+/* line 245, sass/default/utilities/tools/_structure.scss */
 .page .child-page h4 {
   font-size: 18px;
   font-size: 1.125rem;
 }
-/* line 243, sass/default/utilities/tools/_structure.scss */
+/* line 249, sass/default/utilities/tools/_structure.scss */
 .page .child-page h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 247, sass/default/utilities/tools/_structure.scss */
+/* line 253, sass/default/utilities/tools/_structure.scss */
 .page .child-page h6 {
   font-size: 12px;
   font-size: 0.75rem;

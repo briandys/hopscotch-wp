@@ -7,3 +7,19 @@
     }
 
 }
+
+.widget-title {
+    line-height: normal;
+}
+
+.widget_calendar {
+    
+    th, td {
+        padding: .5rem;
+    }
+    
+    #next {
+        text-align:right;
+    }
+    
+}

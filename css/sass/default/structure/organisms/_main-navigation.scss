@@ -58,9 +58,9 @@
 
 // Heading
 .main-navigation-heading {
+    display: inline-block;
     margin-bottom: auto;
     @include font-size-rem($font-m);
-    text-align: center;
     text-transform: uppercase;
     
     &:hover {
@@ -77,16 +77,37 @@
 
 }
 
+.main-navigation-cr {
+    text-align: center;
+}
+
 .main-navigation-ct {
     position: fixed;
     left: 0;
     bottom: 0;
     @include size(100%);
     @include transform(translate(0, 100%));
+    text-align: left;
     z-index: 100;
+    
+    @include lt-ie9-fix {
+        display: none;
+    }
     
     .status-main-nav-active & {
         @include transform(translate(0, $block-l));
+        
     }
 
+}
+
+.status-main-nav-active {
+    
+    .main-navigation-ct {
+        
+        @include lt-ie9-fix-attach {
+            display: block;
+        }
+        
+    }
 }

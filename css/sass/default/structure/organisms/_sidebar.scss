@@ -1,3 +1,8 @@
 .secondary-sidebar-container {
     margin-top: 2rem;
+    
+    @include mq($tablet, iefix-on) {
+        margin-top: auto;
+    }
+    
 }

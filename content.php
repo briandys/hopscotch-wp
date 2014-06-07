@@ -13,13 +13,7 @@
                 
                 <?php hopscotch_entry_action_edit(); ?>
                 
-                <!-- Custom Field - Key: entry-subtitle, Value: Subtitle -->
-				<?php
-                	if ( get_post_meta( get_the_ID(), 'entry-subtitle', true ) ) :
-						$entry_subtitle = "entry-subtitle";
-						echo '<div class="entry-subtitle"><p><span class="text-subtitle">Subtitle:</span> '.get_post_meta($post->ID, $entry_subtitle, true).'</p></div>';
-					endif;
-				?>
+                <?php hopscotch_entry_subtitle(); ?>
             
                 <?php if ( ! has_post_format( 'status' ) ) : ?>
                 <div class="entry-meta">
@@ -29,7 +23,11 @@
                 </div><!-- .entry-meta -->
                 <?php endif; ?>
                 
-                <?php hopscotch_entry_thumbnail(); ?>
+                <?php // Display Entry Thumbnail
+                    if ( is_home() || is_archive() || is_search() ) :
+                        hopscotch_entry_thumbnail();
+                    endif;
+                ?>
                 
             </div>            
         </header>

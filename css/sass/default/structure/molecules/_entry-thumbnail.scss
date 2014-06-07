@@ -1,5 +1,6 @@
 .entry-thumbnail-link {
     display: block;
-    @include size(10rem);
-    @include bg-img;
+    @include size(100%, 10rem);
+    background-position: center center;
+    background-size: contain;
 }

@@ -184,9 +184,9 @@ $one: (1 / $font-size-base) + rem;
 
 //------------------------- Media Query
 // http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
-@mixin mq($device-width, $ie9: false, $query1: min, $query2: width) {
-    @if $ie9 == true {
-        .lt-ie9 {
+@mixin mq($device-width, $ie9: iefixOff, $query1: min, $query2: width) {
+    @if $ie9 == iefixOn {
+        .lt-ie9 & {
             @content;
         }
     }
@@ -208,7 +208,13 @@ $one: (1 / $font-size-base) + rem;
 
 //------------------------- IE Fix Classes
 @mixin lt-ie9-fix {
-    .lt-ie9 {
+    .lt-ie9 & {
+        @content;
+    }
+}
+
+@mixin lt-ie9-fix-attach {
+    &.lt-ie9 {
         @content;
     }
 }

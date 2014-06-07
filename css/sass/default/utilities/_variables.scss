@@ -36,6 +36,7 @@ $font-s: $font-m - $font-size-factor-s;
 $font-s-m: $font-s + $font-size-factor-xs;
 $font-xs: $font-s - $font-size-factor-s;
 
+$font-m-l: $font-m + $font-size-factor-s;
 $font-l: $font-m + $font-size-factor;
 $font-xl: $font-l + $font-size-factor;
 $font-xxl: $font-xl + $font-size-factor;
