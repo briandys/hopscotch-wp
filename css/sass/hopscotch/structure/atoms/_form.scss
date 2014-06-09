@@ -43,14 +43,14 @@
     border-color: $color-secondary;
     color: $white;
     
+    &:active {
+        transform: translate(0, $one);
+    }
+    
     input {
         @include input-type-text-style;
         border: none;
         background-color: transparent;
-    }
-    
-    &:active {
-        transform: translate(0, $one);
     }
     
 }
