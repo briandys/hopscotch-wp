@@ -14,8 +14,7 @@ textarea {
 
 #{$form-input-type-text},
 textarea {
-    padding: .5rem;
-    min-height: 2.5rem;
+    @include input-type-text-style;
 }
 
 button,

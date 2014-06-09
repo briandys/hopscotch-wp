@@ -6,6 +6,26 @@ img {
     @extend %responsive-media;
 }
 
-iframe[src*="youtube.com"] {
-    max-width: 100%;
+// 16:9 ratio by default
+.iframe-cr {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding-bottom: 56.25%;
+}
+
+.iframe-cr iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+}
+
+.iframe-cr-4x3 {
+    padding-bottom: 75%;
+}
+
+.iframe-cr:last-child {
+    margin-bottom: auto;
 }

@@ -46,8 +46,8 @@ if ( post_password_required() )
                 'label_submit'      => __( 'Post' ),
                 'comment_notes_before' => '',
                 'comment_field'     => '<div class="field field-comment"><div class="field-cr"><label for="comment">' . _x( 'Comment', 'noun' ) .
-                '</label><textarea id="comment" title="Comment" placeholder="Write message" name="comment" required aria-required="true">' .
-                '</textarea></div>',
+                '</label><div class="sudo-input-text sudo-input-text-comment"><textarea id="comment" title="Comment" placeholder="Write message" name="comment" required aria-required="true">' .
+                '</textarea></div></div>',
                 
                 'must_log_in'       => '<div class="comment-form-user-name">' .
                 sprintf(

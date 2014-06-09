@@ -91,7 +91,8 @@
 .entry-ct-cr {    
     
     > * {
-        padding: 0 $gutter;
+        padding-left: $gutter;
+        padding-right: $gutter;
         word-wrap: break-word;            
         
         &:last-child {

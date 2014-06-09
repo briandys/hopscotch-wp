@@ -4,7 +4,8 @@
         overflow: hidden;
         
         &:after {
-            @include sudo-ct;
+            content: '';
+            position: fixed;
             left: 0;
             top: 0;
             @include size(100%);
@@ -12,6 +13,10 @@
             z-index: 90;
         }
         
+    }
+    
+    & body {
+        overflow: hidden;
     }
 
 }

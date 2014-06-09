@@ -157,3 +157,10 @@ $color-bg-darken: rgba($black, .05);
 %buttonizer-secondary {
     @include buttonizer(secondary);
 }
+
+
+
+@mixin input-type-text-style {
+    padding: .5rem;
+    min-height: 2.5rem;
+}

@@ -15,6 +15,10 @@
 		mainNavControl = mainNav.find( '#main-navigation-control' );
 		if ( ! mainNavControl )
 			return;
+        
+        mainNavContent = mainNav.find( '.main-navigation-ct' );
+		if ( ! mainNavContent )
+			return;
 
 		// Hide button if menu is missing or empty.
 		navMenu = mainNav.find( 'div.nav-menu > ul' );
@@ -47,7 +51,7 @@
 		});
 		
         // Overlay deactivates the nav
-		$( overlay ).on( 'click.hopscotch', function(e) {
+		$( mainNavContent ).on( 'click.hopscotch', function(e) {
 			if ( html.hasClass( mainNavActive )) {
 				navToggle();
 			}
@@ -92,10 +96,17 @@
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                 if (target.length) {
-                    $('html,body').animate({
-                            scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+                    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                        $('body').animate({
+                                scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    } else {
+                        $('html,body').animate({
+                                scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
                 }
             }
         });

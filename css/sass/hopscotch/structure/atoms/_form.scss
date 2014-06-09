@@ -1,0 +1,56 @@
+.sudo-input-text {    
+    @include hopscotch-border-style;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    
+    #{$form-input-type-text},
+    textarea {
+        @include input-type-text-style;
+        border: none;
+        
+        &:focus {
+            outline: 0;
+        }
+        
+    }
+    
+}
+
+.sudo-button { 
+    @include hopscotch-border-style;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $white;
+    
+    button {
+        @include input-type-text-style;
+        border: none;
+        background-color: transparent;
+    }
+    
+    &:active {
+        transform: translate(0, $one);
+    }
+}
+
+.form-submit {
+    @include hopscotch-border-style;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $white;
+    
+    input {
+        @include input-type-text-style;
+        border: none;
+        background-color: transparent;
+    }
+    
+    &:active {
+        transform: translate(0, $one);
+    }
+    
+}
