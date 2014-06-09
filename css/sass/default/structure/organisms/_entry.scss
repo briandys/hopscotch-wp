@@ -24,14 +24,6 @@
         color: $color-quote-text;
     }
     
-    .page & {
-        
-        .entry-hr .entry-meta {
-            @extend %vhide;
-        }
-        
-    }
-    
 }
 
 .entry-title {
@@ -50,11 +42,17 @@
     .entry-meta {
         margin-top: .5rem;
         margin-bottom: 1rem;
+        
+        .page & {
+            @extend %vhide;
+        }
+        
     }
     
     .entry-thumbnail {
         margin-left: -$gutter;
         margin-right: -$gutter;
+        margin-top: 1rem;
     }
     
     .entry-user-action {
@@ -148,7 +146,7 @@
 }
 
 .entry-admin-action {
-    @include transform(translate(0, -0.25rem));
+    @include transform(translate(0, -0.35rem));
 }
 
 
@@ -165,4 +163,8 @@
         @extend %vhide;
     }
     
+}
+
+.entry-meta {
+    @include font-size-rem($font-s-m);
 }

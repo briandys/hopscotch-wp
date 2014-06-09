@@ -123,7 +123,7 @@ $color-bg-darken: rgba($black, .05);
 @mixin buttonizer($level: primary) {
     @extend %transition-bg-color;
     display: inline-block;
-    padding: .25rem 1rem; 
+    padding: .25rem .5rem; 
     color: $color-link-primary;
     border-width: $one;
     border-style: solid;

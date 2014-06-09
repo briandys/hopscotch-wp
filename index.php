@@ -1,13 +1,13 @@
 <?php get_header(); ?>
                     
-        <div id="primary" class="content-area">
-            <div id="content" class="site-content" role="main">                            
+        <div id="primary-content" class="primary-content">
+            <div class="primary-content-cr" role="main">
                 
                 <section class="main-content">
                     <div class="main-content-cr">
                         <header class="main-content-hr">
                             <div class="main-content-hr-cr">                            
-                                <h2 class="main-content-title">
+                                <h2 class="main-content-heading">
                                    
                                 <!-- Author -->
                                 <?php if ( is_home() ) : ?>									
@@ -19,9 +19,9 @@
 									$entrySearch = new WP_Query( array( 's' => $s, 'showposts' => -1 ) );
 									$key = get_search_query();
 									$count = $entrySearch->post_count;
-									_e('<span class="label-value search-count">'); echo $count . ' '; _e('</span>');
+									_e('<span class="label-value counter counter-search-results">'); echo $count . ' '; _e('</span>');
 									_e('<span class="label">'); if ($count == 0 || $count == 1) echo 'Search Result for '; else echo 'Search Results for '; _e('</span>');
-									_e('<span class="label-value search-term">'); echo $key; _e('</span>');										
+									_e('<span class="label-value term-search">'); echo $key; _e('</span>');										
 									wp_reset_query();
                                 ?>
                                     
@@ -60,11 +60,11 @@
                                 </h2>
                                 
                                 <?php if ( category_description() ) : ?>
-                                <p class="main-content-meta category-description"><?php echo category_description(); ?></p>
+                                <p class="main-content-meta description category-description"><?php echo category_description(); ?></p>
                                 <?php endif; ?>
                                 
                                 <?php if ( is_author() && get_the_author_meta( 'description' ) ) : ?>
-                                <p class="main-content-meta author-description"><?php the_author_meta( 'description' ); ?></p>
+                                <p class="main-content-meta description author-description"><?php the_author_meta( 'description' ); ?></p>
                                 <?php endif; ?>
                                 
                                 <?php if ( is_tag() ) : ?>                                
@@ -93,8 +93,8 @@
                    </div>
                 </section><!-- main-content -->            
              
-            </div><!-- content -->
-        </div><!-- primary -->
+            </div>
+        </div><!-- primary-content -->
         
         <?php get_sidebar(); ?>
 

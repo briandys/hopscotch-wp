@@ -1,8 +1,12 @@
 .secondary-sidebar-container {
     margin-top: 2rem;
     
-    @include mq($tablet, iefix-on) {
+    @include mq($tablet, iefixOn) {
         margin-top: auto;
     }
     
+}
+
+.secondary-sidebar-heading {
+    @extend %vhide;
 }

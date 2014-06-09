@@ -1,4 +1,4 @@
-.tertiary-sidebar-container {
+.tertiary-sidebar {
     
     .menu li {
         margin-bottom: auto;
@@ -8,4 +8,8 @@
         display: inline-block;
     }
     
+}
+
+.tertiary-sidebar-heading {
+    @extend %vhide;
 }

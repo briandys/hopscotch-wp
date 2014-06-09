@@ -1,7 +1,7 @@
 <?php get_header(); ?>
                     
-        <div id="primary" class="content-area">
-            <div id="content" class="site-content" role="main">                            
+        <div id="primary-content" class="primary-content">
+            <div class="primary-content-cr" role="main">
                 
                 <section class="main-content">
                     <div class="main-content-cr">
@@ -24,8 +24,8 @@
                    </div><!-- .main-content-cr -->
                 </section><!-- .main-content -->            
              
-            </div><!-- #content -->
-        </div><!-- #primary -->
+            </div>
+        </div><!-- primary-content -->
         
         <?php get_sidebar(); ?>
 

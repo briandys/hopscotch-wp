@@ -2,8 +2,10 @@
     padding: 0 $gutter;
 }
 
-.main-content-title {
+.main-content-heading {
+    margin-bottom: auto;
     @include font-size-rem($font-xl);
+    line-height: normal;
     
     .label {
         color: $faint;
@@ -12,9 +14,14 @@
 }
 
 .main-content-hr {
+    margin-bottom: 2rem;
     
     .error404 & {
         @extend %vhide;
     }
     
+}
+
+.main-content-meta  {
+    @include font-size-rem($font-m-l);
 }

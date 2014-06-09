@@ -78,19 +78,27 @@
 	// Detect bottom of page
 	$( function () {
 		_window.scroll( function() {			
-			var scrollactive = 'scroll-top-active';			
+			var scrollActive = 'scroll-top-active';			
 			if ( _window.scrollTop() >= ( $( window ).height() / 2)) {
-				body.addClass( scrollactive );
+				body.addClass( scrollActive );
 			}
 			else {
-				body.removeClass( scrollactive );
+				body.removeClass( scrollActive );
 			}
 		});
 		
-		$('#scroll-top-link').on( 'click.hopscotch', function() {
-			$( html, body).animate({ scrollTop: 0 }, 'fast');
-			return(false);
-		});
+		$('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                            scrollTop: target.offset().top
+                    }, 5000);
+                    return false;
+                }
+            }
+        });
 	} );
 	
 	

@@ -4,6 +4,7 @@ input {
 
 button {
     width: 100%;
+    min-height: 2.5rem;
 }
 
 textarea {
@@ -14,6 +15,7 @@ textarea {
 #{$form-input-type-text},
 textarea {
     padding: .5rem;
+    min-height: 2.5rem;
 }
 
 button,

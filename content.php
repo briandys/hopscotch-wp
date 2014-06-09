@@ -19,8 +19,8 @@
                 <div class="entry-meta">
                     <?php hopscotch_entry_date(); ?>
                     <?php hopscotch_entry_byline(); ?>
-                    <?php hopscotch_entry_action_comment(); ?>
                 </div><!-- .entry-meta -->
+                <?php hopscotch_entry_action_comment(); ?>
                 <?php endif; ?>
                 
                 <?php // Display Entry Thumbnail

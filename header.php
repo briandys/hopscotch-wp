@@ -33,7 +33,7 @@
 
         <div id="page">
         
-            <header id="masthead" class="site-header" role="banner">
+            <header id="masthead" class="masthead" role="banner">
                 <div class="masthead-cr">
                     
                     <?php get_template_part( ''.hopscotch_components_directory().'/masthead-header' ); ?>
@@ -45,5 +45,5 @@
                 </div>
             </header><!-- masthead -->
 
-            <div id="main">
+            <div id="main" class="main">
                 <div class="main-cr">
