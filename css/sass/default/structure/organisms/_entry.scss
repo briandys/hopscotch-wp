@@ -153,6 +153,11 @@
 .post-edit-link {
     @extend %buttonizer-primary;
     @include font-size-rem($font-s);
+    
+    .label-verb-subject {
+        @extend %vhide;
+    }
+    
 }
 
 

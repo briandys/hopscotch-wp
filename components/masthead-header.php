@@ -4,5 +4,5 @@
             <span class="label"><?php bloginfo( 'name' ); ?></span>
         </a>
     </h1>
-    <p class=" description site-description"><?php bloginfo( 'description' ); ?></p>
+    <p class="description site-description"><?php bloginfo( 'description' ); ?></p>
 </div><!-- masthead-header -->

@@ -1,6 +1,6 @@
 .comment-list {
     @include unlist;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     
     .children {
         @include unlist;
@@ -23,8 +23,15 @@
     @include avatar-adjust;
     
     .comment-timestamp {
-        @include font-size-rem($font-s);
         text-align: right;
+    }
+    
+}
+
+.comment-timestamp {
+    
+    .label {
+        @extend %vhide;
     }
     
 }
@@ -43,19 +50,23 @@
 }
 
 .comment-timestamp-link {
+    @include font-size-rem($font-s);
     @include faint;
 }
 
-.comment-author {
+.comment {
     
     .author-avatar {
         position: absolute;
         top: 0;
         left: 0;
+        @include circle;
         
-        .avatar {
-            @include circle;
+        a {
+            display: block;
+            background-color: $gray90;
         }
+        
     }
 }
 
@@ -140,7 +151,7 @@
         @include font-size-rem($font-m);
     }
     
-    .verb-subject {
+    .label-verb-subject {
         @extend %vhide;
     }
 }
@@ -166,6 +177,7 @@
 .comments {
     
     .blank {
+        margin-bottom: 2rem;
         padding: 0 1rem;
     }
     
@@ -180,4 +192,18 @@
     background-color: $cloud;
     @include corner-radius($radius-s);
     text-align: center;
+}
+
+.comment-navigation-list {
+    
+    .action-item {
+        display: inline-block;
+        
+        a {
+            display: inline-block;
+            padding: 1rem;
+        }
+        
+    }
+    
 }

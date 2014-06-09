@@ -24,7 +24,7 @@ if ( post_password_required() )
                 </ol><!-- .comment-list -->
 
                 <?php if ( ! comments_open() ) : ?>
-                <p><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
+                <div class="blank"><div class="blank-cr"><?php _e( 'Comments are closed.', 'hopscotch' ); ?></div></div>
                 <?php endif; ?>
 
                 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>            
@@ -41,7 +41,7 @@ if ( post_password_required() )
                 'id_form'           => 'comment-form',
                 'id_submit'         => 'submit',
                 'title_reply'       => __( 'Compose Comment' ),                
-                'cancel_reply_link' => '<span class="action-item">Cancel <span class="verb-subject">Compose</span></span>',
+                'cancel_reply_link' => '<span class="action-item">Cancel <span class="label-verb-subject">Compose</span></span>',
                 'title_reply_to'    => __( 'Leave a Reply to %s' ),
                 'label_submit'      => __( 'Post' ),
                 'comment_notes_before' => '',
