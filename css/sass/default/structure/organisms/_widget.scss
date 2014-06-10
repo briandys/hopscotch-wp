@@ -1,11 +1,15 @@
-.widget {
-    margin-bottom: 2rem;
-    padding: 0 $gutter;
+.secondary-sidebar {
+   
+    .widget {
+        margin-bottom: 2rem;
+        padding: 0 $gutter;
 
-    &:last-child {
-        margin-bottom: auto;
+        &:last-child {
+            margin-bottom: auto;
+        }
+
     }
-
+    
 }
 
 .widget-title {

@@ -29,3 +29,7 @@ img {
 .iframe-cr:last-child {
     margin-bottom: auto;
 }
+
+iframe[src*="codepen"] {
+    margin-bottom: 1rem;
+}

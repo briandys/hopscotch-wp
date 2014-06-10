@@ -5,6 +5,10 @@
 //------------------------- Center-align site title and site description
 @mixin header-plain-text-center {
     
+    .masthead-cr {
+        padding-bottom: 1rem;
+    }
+    
     .masthead-header {
         padding: 1rem;
         text-align: center;
@@ -14,6 +18,43 @@
         margin-bottom: auto;
         @include font-size-rem($font-xl);
         line-height: normal;
+    }    
+
+    .header-sidebar {
+        margin-top: 2rem;
+    }
+
+}
+
+
+@mixin header-compact {
+    
+    .masthead-cr {
+        height: 8rem;
+    }
+    
+    .masthead-header {
+        @include valign-mid;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .site-title-heading {
+        margin-bottom: auto;
+        @include font-size-rem($font-xl);
+        line-height: normal;
+    }
+    
+    .site-description {
+        @extend %vhide;
+    }
+    
+    .main-navigation {
+        @include valign-mid;
+    }
+    
+    .header-sidebar {
+        @include valign-mid;
     }
 
 }

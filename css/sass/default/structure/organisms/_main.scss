@@ -42,9 +42,7 @@ $sidebar-width-expand: 5;
     
 }
 
-.masthead-cr,
-.primary-content-cr,
-.colophon-cr {
+.primary-content-cr {
     
     @include mq($tablet, iefixOff) {
         margin-left: auto;

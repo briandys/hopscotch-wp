@@ -4,6 +4,6 @@
 
 .wp-caption-text {
     padding: .5rem;
-    font-size: $font-s-m;
+    @include font-size-rem($font-s-m);
     color: $darken50;
 }

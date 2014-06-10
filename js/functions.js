@@ -89,6 +89,14 @@
 			else {
 				body.removeClass( scrollActive );
 			}
+            
+            var mastheadHeight = $('#masthead').height(); 
+            
+            if ($(window).scrollTop() > mastheadHeight) {
+                $( body ).addClass('sticky');
+            } else {
+                $( body ).removeClass('sticky');
+            }
 		});
 		
 		$('a[href*=#]:not([href=#])').click(function() {

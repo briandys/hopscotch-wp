@@ -6,6 +6,10 @@ ul, ol {
 li {
     margin-bottom: $bottom-space-s;
     
+    p:first-child {
+        margin-top: 1rem;
+    }
+    
 }
 
 
@@ -15,6 +19,10 @@ ol, ul {
         
         > ol, > ul {
             margin-top: $bottom-space-s;
+        }
+    
+        #{$heading-tags} {
+            margin-top: 1rem;
         }
         
     }

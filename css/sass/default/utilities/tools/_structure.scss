@@ -130,11 +130,17 @@
 
 
 //------------------------- Vertical Align Middle
-@mixin valign-mid {
+@mixin valign-mid {  
+    @include block-inline;
+    height: 100%;
     
     &:after {
         content: '';
         height: 100%;
+        @include block-inline;
+    }
+    
+    > * {
         @include block-inline;
     }
     

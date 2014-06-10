@@ -1,15 +1,7 @@
 @include header-plain-text-center;
 
-.masthead-cr {
-    padding-bottom: 1rem;
-}
-
 .skip-to-content-link {
     @extend %vhide;
-}
-
-.header-sidebar-container {
-    margin-top: 1rem;
 }
 
 .site-description {
