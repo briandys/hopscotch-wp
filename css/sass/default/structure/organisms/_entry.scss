@@ -1,5 +1,6 @@
-.entry {    
-    margin-bottom: 4rem;
+.entry {
+    @extend %cf;
+    margin-bottom: $block-m;
     
     .show-more-content {
 
@@ -29,9 +30,9 @@
 .entry-title {
     display: inline;
     @include font-size-rem($font-xl);
+    font-weight: 700;
     line-height: normal;
-    word-wrap: break-word;
-    
+    word-wrap: break-word;    
 }
 
 .entry-hr-cr {
@@ -69,15 +70,19 @@
 
     
 .entry-timestamp {
+   
     a {
         @include linkstyle-secondary;
     }
+    
 }
 
 .entry-byline {
+    
     a {
         @include linkstyle-secondary;
     }
+    
 }
 
 .entry-admin-action {
@@ -109,6 +114,15 @@
             @include font-size-rem($font-l);
         }
         
+    }
+    
+    > #{$heading-tags} {
+        margin-top: 1.5rem;
+        
+        &:first-child {
+            margin-top: auto;
+        }
+         
     }
     
 }

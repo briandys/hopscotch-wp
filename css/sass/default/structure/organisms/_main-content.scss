@@ -17,6 +17,7 @@
     margin-bottom: 2rem;
     
     .home &,
+    .single &,
     .error404 & {
         @extend %vhide;
     }

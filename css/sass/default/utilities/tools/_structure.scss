@@ -288,3 +288,15 @@ $one: (1 / $font-size-base) + rem;
  
 // @include generateRatios(16,9); // 16x9
 // @include generateRatios(4,3);  // 4x3
+
+
+//------------------------- Icon Block using Table Cell (apply to icon images)
+@mixin svg-iconize {
+    display: table-cell !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+%svg-iconize {
+    @include svg-iconize;
+}

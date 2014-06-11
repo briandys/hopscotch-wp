@@ -1,27 +1,106 @@
 .widget_search {
         
-    label {
-        @extend %vhide;
+    .secondary-sidebar &,
+    .tertiary-sidebar & {
+       
+        label {
+            @extend %vhide;
+        }
+
+        $button-size: 5rem;
+
+        .search--field--input {
+            float: left;
+            margin-bottom: auto;
+            width: 100%;
+            margin-right: -$button-size;
+
+            .field-cr {
+                margin-right: .5rem;
+                padding-right: $button-size;
+            }
+
+        }
+
+        .search--field-action {
+            float: right;
+            width: $button-size;
+        }
+        
+        .icon-search {
+            @extend %vhide;
+        }
+    
     }
 
-    $button-size: 5rem;
+}
 
-    .field {
-        float: left;
+
+.header-sidebar {
+
+    .search--sudo-input-text {
+        @extend %vhide;
+        border: none;
+    }
+
+    .search--sudo-button {
+        // Reset
+        background-color: transparent;
+        border: none;
+    }
+    
+    .search-form {
+        position: relative;
+    }
+    
+    .search--field--input {
         margin-bottom: auto;
-        width: 100%;
-        margin-right: -$button-size;
-
+        height: $block-l;
+        
         .field-cr {
-            margin-right: .5rem;
-            padding-right: $button-size;
+            @extend %valign-mid;
+        }
+        
+    }
+        
+    .search-control {
+        @extend %svg-iconize;
+        margin-bottom: auto;
+        @include size($block-l);
+
+        .label {
+            @extend %vhide;
+        }
+
+        .icon {
+            @include size($block-s);
+        }
+        
+        &:hover {
+            cursor: pointer;
         }
 
     }
 
-    .field-action {
-        float: right;
-        width: $button-size;
+    .search-submit {
+        @include size($block-l);
+        @extend %svg-iconize;
+
+        .label {
+            @extend %vhide;
+        }
+
+        .icon {
+            @include size($block-s);
+        }
+
+    }
+    
+    .search--field-action {
+        @extend %vhide;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
 }

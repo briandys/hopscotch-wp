@@ -33,3 +33,12 @@ img {
 iframe[src*="codepen"] {
     margin-bottom: 1rem;
 }
+
+svg.icon {
+    fill: $gray25;
+    
+     svg.icon:hover {
+        fill: $color-primary;
+    }
+    
+}

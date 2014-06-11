@@ -42,6 +42,8 @@ $font-xl: $font-l + $font-size-factor;
 $font-xxl: $font-xl + $font-size-factor;
 $font-xxxl: $font-xxl + $font-size-factor;
 
+$font-reset: $font-m;
+
 
 //------------------------- Colors
 $white: hsl(0, 0%, 100%);
@@ -72,6 +74,9 @@ $darken75: hsla(0, 0%, 0%, .75);
 $block-size-factor: .5;
 
 $block-m: 3rem;
+
+$block-s: $block-m / 2;
+
 $block-l: $block-m + $block-size-factor;
 $block-xl: $block-l + $block-size-factor;
 $block-xxl: $block-xl + $block-size-factor;

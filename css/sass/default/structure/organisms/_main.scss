@@ -42,6 +42,7 @@ $sidebar-width-expand: 5;
     
 }
 
+.header-sidebar-cr,
 .primary-content-cr {
     
     @include mq($tablet, iefixOff) {

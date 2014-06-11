@@ -25,7 +25,7 @@
     
     <body <?php body_class(); ?>>
     
-        <?php get_template_part( ''.hopscotch_components_directory().'/img/svg' ); ?>
+        <?php get_template_part( 'img/svg' ); ?>
         
         <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

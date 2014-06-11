@@ -69,3 +69,9 @@ html {
     color: $font-color-base;
     background-color: $white;
 }
+
+.masthead,
+.main,
+.colophon {
+    clear: both;
+}

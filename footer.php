@@ -1,4 +1,4 @@
-            <footer id="colophon" class="site-footer" role="contentinfo">
+            <footer id="colophon" class="colophon" role="contentinfo">
                 <div class="colophon-cr">                    
                     
                     <?php get_template_part( ''.hopscotch_components_directory().'/scroll-top' ); ?>

@@ -1,5 +1,6 @@
 .site-info {
     padding: 1rem;
+    @include font-size-rem($font-s-m);
     text-align: center;
     
     a {

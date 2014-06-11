@@ -23,38 +23,47 @@
     .header-sidebar {
         margin-top: 2rem;
     }
+    
+    .header-sidebar-cr {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
 }
 
 
+//------------------------- Header for small spaces
 @mixin header-compact {
     
     .masthead-cr {
-        height: 8rem;
+        @extend %cf;
+        height: $block-l;
     }
     
     .masthead-header {
         @include valign-mid;
-        width: 100%;
         text-align: center;
     }
     
     .site-title-heading {
         margin-bottom: auto;
-        @include font-size-rem($font-xl);
+        @include font-size-rem($font-m-l);
+        font-weight: 700;
         line-height: normal;
-    }
-    
-    .site-description {
-        @extend %vhide;
     }
     
     .main-navigation {
         @include valign-mid;
-    }
+        float: left;
+    }    
     
     .header-sidebar {
         @include valign-mid;
+        float: right;
+    }
+    
+    .site-description {
+        @extend %vhide;
     }
 
 }

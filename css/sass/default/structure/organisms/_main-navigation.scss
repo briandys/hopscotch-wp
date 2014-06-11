@@ -56,23 +56,25 @@
 }
 
 
-// Heading
 .main-navigation-heading {
-    display: inline-block;
     margin-bottom: auto;
-    @include font-size-rem($font-m);
-    text-transform: uppercase;
+    @include font-size-rem($font-reset);
+    
+    @include size($block-l);
+    @extend %svg-iconize;
+    
+    .icon {
+        @include size($block-s);
+        @include transition(fill);
+        
+    }
     
     &:hover {
         cursor: pointer;
     }
     
-    .status-main-nav-active & {
-        @extend %vhide;
-    }
-    
     .label {
-        @extend %buttonizer-primary;
+        @extend %vhide;
     }
 
 }
@@ -112,6 +114,7 @@
         
     }
 }
+
 
 /*
 .masthead {

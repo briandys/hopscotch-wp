@@ -1,3 +1,10 @@
+.header-sidebar-heading,
+.secondary-sidebar-heading,
+.tertiary-sidebar-heading {
+    @extend %vhide;
+}
+
+
 .secondary-sidebar-container {
     margin-top: 2rem;
     
@@ -7,6 +14,28 @@
     
 }
 
-.secondary-sidebar-heading {
-    @extend %vhide;
+
+.tertiary-sidebar {
+    
+    .menu {
+        @extend %center-list;
+        @include unlist;
+      
+        li {
+            margin-bottom: auto;
+            display: inline-block;
+        }
+        
+        a {
+            display: inline-block;
+            padding: .75rem;
+        }
+    
+    }
+    
+    .sub-menu {
+        display: inline;
+        @include unlist;
+    }
+    
 }

@@ -170,5 +170,5 @@ require get_template_directory() . '/functions/post-count-format.php';
 require get_template_directory() . '/functions/image-margin-fix.php';
 require get_template_directory() . '/functions/entry-thumbnail-state.php';
 require get_template_directory() . '/functions/page-id-via-slug.php';
-require get_template_directory() . '/functions/google-analytics.php';
 require get_template_directory() . '/functions/svg-enable.php';
+// require get_template_directory() . '/functions/google-analytics.php';

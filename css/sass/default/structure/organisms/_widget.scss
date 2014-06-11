@@ -1,4 +1,5 @@
-.secondary-sidebar {
+.secondary-sidebar,
+.tertiary-sidebar {
    
     .widget {
         margin-bottom: 2rem;
@@ -13,6 +14,8 @@
 }
 
 .widget-title {
+    margin-top: .75rem;
+    @include font-size-rem($font-m-l);
     line-height: normal;
 }
 
