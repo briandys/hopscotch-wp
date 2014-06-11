@@ -4,6 +4,9 @@
 function hopscotch_body_class( $classes ) {
 	global $post, $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
     
+    // Defaults
+    $classes[] = 'status-search-inactive status-scroll-top-inactive';
+    
     // Post Slug as Class
     if ( isset( $post ) &&  !is_home() ) {		
 		$classes[] = $post->post_type . '-' . $post->post_name;		

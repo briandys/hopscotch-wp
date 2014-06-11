@@ -35,9 +35,11 @@ iframe[src*="codepen"] {
 }
 
 svg.icon {
-    fill: $gray25;
-    
-     svg.icon:hover {
+    margin: $one; // Corrects cut edges
+    fill: $gray25;    
+    @include transition(fill);
+
+    &:hover {
         fill: $color-primary;
     }
     

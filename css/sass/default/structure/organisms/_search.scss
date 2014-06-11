@@ -38,19 +38,36 @@
 
 .header-sidebar {
 
+    .search-cr {
+        background-color: rgba($white, .95);
+    }
+    
     .search--sudo-input-text {
-        @extend %vhide;
         border: none;
+        
+        .status-search-inactive & {
+            @extend %vhide;
+        }
+        
     }
 
     .search--sudo-button {
         // Reset
         background-color: transparent;
         border: none;
+        
+        .status-search-inactive & {
+            @extend %vhide;
+        }
     }
     
     .search-form {
         position: relative;
+        
+        .status-search-active & {
+            padding-right: $block-l;
+        }
+        
     }
     
     .search--field--input {
@@ -79,6 +96,10 @@
         &:hover {
             cursor: pointer;
         }
+        
+        .status-search-active & {
+            @extend %vhide;
+        }
 
     }
 
@@ -97,10 +118,9 @@
     }
     
     .search--field-action {
-        @extend %vhide;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 0;        
     }
 
 }

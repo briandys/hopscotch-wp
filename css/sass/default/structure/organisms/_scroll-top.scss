@@ -1,8 +1,58 @@
 .scroll-top {
-    text-align: center;    
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding-right: .25rem;
+    padding-bottom: .25rem;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    
+    .status-scroll-top-active & {
+        animation-name: goIn;
+        transform: translateY(0);
+    }
+    .status-scroll-top-inactive & {
+        animation-name: goOut;
+        transform: translateY(100%);
+    }
+    
+}
+
+@keyframes goIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes goOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
 }
 
 .scroll-top-link {
-    display: inline-block;
-    padding: 1rem;
+    @extend %svg-iconize;
+    display: block;
+    @include size($block-l);
+    background-color: $gray25;
+    border-radius: $radius-s;
+    @include transition(background-color);
+    
+    .label {
+        @extend %vhide;
+    }
+    
+    .icon {
+        @include size($block-s);
+        transform: rotate(180deg);
+        fill: $white;
+    }
+    
+    &:hover {
+        background-color: $gray20;
+        
+        .icon {
+            fill: $color-primary;
+        }
+        
+    }
+    
 }

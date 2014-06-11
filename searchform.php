@@ -10,7 +10,7 @@
                             <svg class="icon icon-search" width="0" height="0" viewBox="0 0 48 48"><use xlink:href="#icon-search"></use></svg>
                         </label>
                         <div class="sudo-input-text search--sudo-input-text">
-                            <input type="search" class="search-field" placeholder="Type keyword" value="" name="s" title="Search" required>
+                            <input type="search" class="search-input" placeholder="Type keyword" value="" name="s" title="Search" required>
                         </div>
                     </div>
                 </div>

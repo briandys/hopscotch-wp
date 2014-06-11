@@ -1,6 +1,9 @@
 .entry {
     @extend %cf;
-    margin-bottom: $block-m;
+    
+    .home & {
+        margin-bottom: $block-m;
+    }
     
     .show-more-content {
 

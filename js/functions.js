@@ -4,10 +4,8 @@
 	    _window = $( window );
 
 	
-	// WP: Enables menu toggle for small screens
 	( function() {
 		
-		// Decalaring variables
 		var mainNav = $( '#main-navigation' ), mainNavControl, overlay, navMenu, mainNavActive, mainNavInactive;
 		if ( ! mainNav )
 			return;
@@ -20,7 +18,6 @@
 		if ( ! mainNavContent )
 			return;
 
-		// Hide button if menu is missing or empty.
 		navMenu = mainNav.find( 'div.nav-menu > ul' );
 		if ( ! navMenu || ! navMenu.children().length ) {
 			mainNavControl.hide();
@@ -64,6 +61,53 @@
 		});
 		
 	} )();
+    
+    
+	// Header Search
+	$( function () {
+		var search = $( '#header-sidebar .search' ),
+			searchControl = $( '#search-control' ),
+            searchField = $( '#header-sidebar .search-input' ),
+			searchActive = 'status-search-active',
+			searchInactive = 'status-search-inactive';
+        
+        if( ! search )
+            return;
+        
+        if( ! searchControl )
+            return;
+        
+        if( ! searchField )
+            return;
+		
+		searchControl.on( 'click.hopscotch', function(e){
+			body.toggleClass( searchActive ).toggleClass( searchInactive );
+			$( searchField ).focus();
+			e.stopPropagation();
+		});
+		
+		search.on( 'click.hopscotch', function(e){
+			e.stopPropagation();
+		});
+		
+		// Hide main nav
+		function searchToggle() {
+			body.toggleClass( searchActive ).toggleClass( searchInactive );
+		};
+		
+		$(document).on( 'click.hopscotch', function() {
+			if ( body.hasClass( searchActive )) {
+				searchToggle();
+			}
+		});
+		
+		$(document).on( 'keydown.hopscotch', function(e) {
+			if (e.which === 27 && body.hasClass( searchActive )) {
+				searchToggle();
+			}
+		});
+		
+	} );
 
 	
 	// WP: Twenty Fourteen - Makes "skip to content" link work correctly in IE9 and Chrome for better accessibility
@@ -77,29 +121,12 @@
 			element.focus();
 		}
 	} );
-	
-	
-	// Detect bottom of page
-	$( function () {
-		_window.scroll( function() {			
-			var scrollActive = 'scroll-top-active';			
-			if ( _window.scrollTop() >= ( $( window ).height() / 2)) {
-				body.addClass( scrollActive );
-			}
-			else {
-				body.removeClass( scrollActive );
-			}
-            
-            var mastheadHeight = $('#masthead').height(); 
-            
-            if ($(window).scrollTop() > mastheadHeight) {
-                $( body ).addClass('sticky');
-            } else {
-                $( body ).removeClass('sticky');
-            }
-		});
-		
-		$('a[href*=#]:not([href=#])').click(function() {
+    
+    
+    // Smooth scroll
+    $( function () {
+        
+        $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -118,45 +145,41 @@
                 }
             }
         });
-	} );
+        
+    } );
 	
 	
-	// Search Bar
+	// Scroll Top
 	$( function () {
-		var searchbar = $('#search-bar'),
-			searchicon = $('.site-header .search-bar-title'),
-			statussearchbaractive = 'status-search-bar-active',
-			searchbaractive = 'search-bar-active',
-			searchbarinactive = 'search-bar-inactive';
-		
-		searchicon.on( 'click.hopscotch', function(e){
-			body.toggleClass('status-search-bar-active');
-			searchbar.toggleClass( searchbarinactive ).toggleClass( searchbaractive );
-			$( this ).parents( searchbar ).find('.site-header .search-field').focus();
-			e.stopPropagation();
-		});
-		
-		searchbar.on( 'click.hopscotch', function(e){
-			e.stopPropagation();
-		});
-		
-		// Hide main nav
-		function searchOff() {
-			searchbar.toggleClass( searchbarinactive ).toggleClass( searchbaractive );
-			body.toggleClass( statussearchbaractive );
-		};
-		
-		$(document).on( 'click.hopscotch', function() {
-			if ( searchbar.hasClass( searchbaractive )) {
-				searchOff();
-			}
-		});
-		
-		$(document).on( 'keydown.hopscotch', function(e) {
-			if (e.which === 27 && searchbar.hasClass( searchbaractive )) {
-				searchOff();
-			}
-		});
+		_window.scroll( function() {			
+			
+            var scrollTopActive = 'status-scroll-top-active',
+                scrollTopInactive = 'status-scroll-top-inactive';
+			
+            function scrollTopActivate() {
+                body.addClass( scrollTopActive );
+                body.removeClass ( scrollTopInactive );
+            };
+			
+            function scrollTopDeactivate() {
+                body.addClass( scrollTopInactive );
+                body.removeClass ( scrollTopActive );
+            };
+            
+            if ( $(window).scrollTop() > ( $( window ).height() / 2)) {
+				scrollTopActivate();
+			} else {
+                scrollTopDeactivate();
+            }
+            
+            var mastheadHeight = $('#masthead').height(); 
+            
+            if ( $(window).scrollTop() > mastheadHeight ) {
+                $( body ).addClass('sticky');
+            } else {
+                $( body ).removeClass('sticky');
+            }
+		});		
 		
 	} );
 	

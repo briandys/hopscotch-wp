@@ -6,4 +6,10 @@
     a {
         @include linkstyle-secondary;
     }
+    
+    .status-scroll-top-active & {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
 }
