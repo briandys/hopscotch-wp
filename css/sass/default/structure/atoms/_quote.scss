@@ -1,12 +1,10 @@
 blockquote {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    @include font-size-rem($font-l);
+    @include font-size-rem($font-m-l);
     font-family: $font-family-quote;
-    font-style: italic;
 }
 
 q {
     font-family: $font-family-quote;
-    font-style: italic;
 }

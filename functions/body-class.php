@@ -9,7 +9,7 @@ function hopscotch_body_class( $classes ) {
     
     // Post Slug as Class
     if ( isset( $post ) &&  !is_home() ) {		
-		$classes[] = $post->post_type . '-' . $post->post_name;		
+		$classes[] = $post->post_type . '-' . $post->post_name;
 	}
     
     // Post Category as Class
