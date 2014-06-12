@@ -1,0 +1,7 @@
+.blank-cr {
+    padding: .5rem 1rem;
+    @include border($alpha: .15, $style: dotted);
+    @include corner-radius($radius-s);
+    text-align: center;
+    @include faint;
+}

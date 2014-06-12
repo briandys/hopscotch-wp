@@ -1,6 +1,7 @@
 .child-page {    
-    margin-top: 1rem;
+    margin-top: 2rem;
     
+    .entry-user-action,
     .entry-meta {
         @extend %vhide;
     }

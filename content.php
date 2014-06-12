@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?> data-state="<?php if ( has_post_thumbnail() || get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) : ?>entry-thumbnail-active<?php endif; ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
     <div class="entry-cr">
         <header class="entry-hr">
             <div class="entry-hr-cr">
@@ -20,7 +20,11 @@
                     <?php hopscotch_entry_date(); ?>
                     <?php hopscotch_entry_byline(); ?>
                 </div><!-- .entry-meta -->
-                <?php hopscotch_entry_action_comment(); ?>
+                
+                    <?php if ( ! is_search() ) : ?>
+                    <?php hopscotch_entry_action_comment(); ?>
+                    <?php endif; ?>
+                
                 <?php endif; ?>
                 
                 <?php // Display Entry Thumbnail

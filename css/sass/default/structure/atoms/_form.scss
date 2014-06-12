@@ -12,8 +12,7 @@ textarea {
     min-height: 2.5rem;
 }
 
-#{$form-input-type-text},
-textarea {
+#{$form-input-type-text} {
     @include input-type-text-style;
 }
 
@@ -33,6 +32,63 @@ label[for] {
     
     &:hover {
         cursor: pointer;
+    }
+    
+}
+
+
+.sudo-input-text {    
+    @include border;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    
+    #{$form-input-type-text} {
+        @include input-type-text-style;
+        border: none;
+        
+        &:focus {
+            outline: 0;
+        }
+        
+    }
+    
+}
+
+.sudo-button { 
+    @include border;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $white;
+    
+    button {
+        @include input-type-text-style;
+        border: none;
+        background-color: transparent;
+    }
+    
+    &:active {
+        transform: translate(0, $one);
+    }
+}
+
+.form-submit {
+    @include border;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $white;
+    
+    &:active {
+        transform: translate(0, $one);
+    }
+    
+    input {
+        @include input-type-text-style;
+        border: none;
+        background-color: transparent;
     }
     
 }

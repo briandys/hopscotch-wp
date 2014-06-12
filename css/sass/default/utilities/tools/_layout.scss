@@ -6,6 +6,7 @@
 @mixin header-plain-text-center {
     
     .masthead-cr {
+        position: relative;
         padding-bottom: 1rem;
     }
     
@@ -27,6 +28,20 @@
     .header-sidebar-cr {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    
+    .main-navigation {
+        @include position($t: 0, $l: 0);
+    }
+    
+    .header-sidebar {
+        margin-top: auto;
+        @include position($t: 0, $r: 0);
+    }
+    
+    .header-sidebar-cr {
+        padding-left: 0;
+        padding-right: 0;
     }
 
 }

@@ -48,6 +48,10 @@
         .status-search-inactive & {
             @extend %vhide;
         }
+       
+        .status-search-active & {
+            width: 7.5rem
+        }
         
     }
 

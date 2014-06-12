@@ -1,8 +1,13 @@
 .entry {
     @extend %cf;
     
-    .home & {
+    .home &,
+    .search & {
         margin-bottom: $block-m;
+    }
+    
+    .single & {
+        margin-bottom: 2rem;
     }
     
     .show-more-content {
@@ -10,7 +15,7 @@
         .more-link {
             display: inline-block;
             margin-left: -1rem;
-            padding: 1rem;
+            padding: .75rem 1rem;
             color: $color-link-secondary;
         }
         
@@ -28,6 +33,21 @@
         color: $color-quote-text;
     }
     
+    .img-cr {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .wp-caption {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
 }
 
 .entry-title {
@@ -36,6 +56,15 @@
     font-weight: 700;
     line-height: normal;
     word-wrap: break-word;    
+}
+
+.entry-title-link {
+    
+    .single &,
+    .page & {
+        color: $font-color-base;
+    }
+    
 }
 
 .entry-hr-cr {
@@ -108,6 +137,19 @@
         }
     }
     
+    @each $item in $heading-tags {
+
+        > #{$item} {
+            margin-top: 1.5rem;
+            
+            &:first-child {
+                margin-top: auto;
+            }
+            
+        }
+
+    }
+    
     @include shrink-heading;
     
     // Format: Status
@@ -117,15 +159,6 @@
             @include font-size-rem($font-l);
         }
         
-    }
-    
-    > #{$heading-tags} {
-        margin-top: 1.5rem;
-        
-        &:first-child {
-            margin-top: auto;
-        }
-         
     }
     
 }

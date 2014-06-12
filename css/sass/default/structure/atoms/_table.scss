@@ -1,4 +1,5 @@
-table {
+table,
+col.max {
 	width: 100%;
 }
 
@@ -13,7 +14,7 @@ th {
 thead {
     
     tr {
-        @include hopscotch-table-border-single(bottom, .125rem);
+        @include table-border-single(bottom, .125rem);
     }
     
 }
@@ -21,10 +22,10 @@ thead {
 tbody {
     
     tr {
-        @include hopscotch-table-border-single(top);
+        @include table-border-single(top);
         
         &:last-child {
-            @include hopscotch-table-border-single(bottom);
+            @include table-border-single(bottom);
         }
     
     }

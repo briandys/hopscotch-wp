@@ -36,11 +36,11 @@
 
 
 //------------------------- Border Style
-@mixin hopscotch-border-style (
+@mixin border (
     $t-width: $one,
-    $r-width: $one,
-    $b-width: $one,
-    $l-width: $one,
+    $r-width: $t-width,
+    $b-width: $t-width,
+    $l-width: $t-width,
     $style: solid,
     $alpha: .35
     ) {
@@ -56,19 +56,19 @@
         
 }
 
-%hopscotch-border-style {
-    @include hopscotch-border-style;
+%border {
+    @include border;
 }
 
 @mixin list-div-v {
-    @include hopscotch-border-style(0, 0, $one, 0, solid, .15);
+    @include border(0, 0, $one, 0, solid, .15);
 }
 
 @mixin table-div-v {
-    @include hopscotch-border-style($one, 0, 0, 0, solid, .15);
+    @include border($one, 0, 0, 0, solid, .15);
 }
 
-@mixin hopscotch-table-border-single($pos: bottom, $size: $one, $style: solid, $alpha: .15) {
+@mixin table-border-single($pos: bottom, $size: $one, $style: solid, $alpha: .15) {
     border: {
         #{$pos}: $size $style rgba($black, $alpha);
     }

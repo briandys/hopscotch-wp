@@ -18,6 +18,7 @@
     
     .home &,
     .single &,
+    .page &,
     .error404 & {
         @extend %vhide;
     }

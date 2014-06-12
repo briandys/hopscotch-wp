@@ -1,6 +1,14 @@
-$heading-tags: "h1, h2, h3, h4, h5, h6";
+$heading-tags: h1, h2, h3, h4, h5, h6;
 
-$form-input-type-text: "input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url']";
+$form-input-type-text: "input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea";
+
+$content-width-percentage: 60%;
+$sidebar-width-percentage: 100% - $content-width-percentage;
+
+$total-width: 60rem;
+$content-width: 45rem;
+$sidebar-width: $total-width - $content-width;
+$sidebar-width-expand: 5;
 
 // Used as side spacing of elements
 $gutter: 1rem;
@@ -25,7 +33,7 @@ $moviehouse: 1440;
 $font-size-base: 16;
 
 $font-size-factor: .5;
-$font-size-shrink-factor: .75;
+$font-size-shrink-factor: 1;
 
 $font-size-factor-s: $font-size-factor / 2;
 $font-size-factor-xs: $font-size-factor-s / 2;
@@ -43,6 +51,9 @@ $font-xxl: $font-xl + $font-size-factor;
 $font-xxxl: $font-xxl + $font-size-factor;
 
 $font-reset: $font-m;
+
+$one: (1 / $font-size-base) + rem;
+$two: .125rem;
 
 
 //------------------------- Colors

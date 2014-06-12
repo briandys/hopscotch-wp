@@ -75,6 +75,11 @@
     
     .label {
         @extend %vhide;
+    
+        .modernizr-no-inlinesvg & {
+            @extend %vhide-rev;
+        }
+        
     }
 
 }
@@ -93,10 +98,6 @@
     text-align: left;
     z-index: 100;
     
-    @include lt-ie9-fix {
-        display: none;
-    }
-    
     .status-main-nav-active & {
         @include transform(translate(0, 0));
         
@@ -114,30 +115,3 @@
         
     }
 }
-
-
-/*
-.masthead {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    background-color: rgba($white, .95);
-    animation: slider-back 1s;
-}
-
-.sticky .masthead {
-    position: fixed;
-    top: 0;
-    animation: slider 1s;
-}
-
-@keyframes slider {
-    from { top: -100%; }
-    to { top: 0; }
-}
-
-@keyframes slider-back {
-    from { top: 0; }
-    to { top: -100%; }
-}
-*/
