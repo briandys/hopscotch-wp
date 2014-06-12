@@ -151,10 +151,6 @@
 }
 
 
-//------------------------- Converting 1px to rem
-$one: (1 / $font-size-base) + rem;
-
-
 //------------------------- Fallback px for rem font sizes (to support IE8-)
 // http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 @function calculateRem($size) {
@@ -190,6 +186,7 @@ $one: (1 / $font-size-base) + rem;
 
 //------------------------- Media Query
 // http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+
 @mixin mq($device-width, $ie9: iefixOff, $query1: min, $query2: width) {
     @if $ie9 == iefixOn {
         .lt-ie9 & {
@@ -197,8 +194,18 @@ $one: (1 / $font-size-base) + rem;
         }
     }
     
-    @media only screen and (#{$query1}-#{$query2}: $device-width / $font-size-base + rem) {
-        @content;
+    @if $query1 == 'max' {
+
+        @media only screen and (#{$query1}-#{$query2}: ($device-width - 1) / $font-size-base + rem) {
+            @content;
+        }
+
+    } @else {
+        
+        @media only screen and (#{$query1}-#{$query2}: $device-width / $font-size-base + rem) {
+            @content;
+        }
+
     }
 
 }
@@ -237,19 +244,19 @@ $one: (1 / $font-size-base) + rem;
 @mixin shrink-heading {
     
     h1 {
-        @include font-size-rem($font-xxxl * $font-size-shrink-factor);
-    }
-
-    h2 {
         @include font-size-rem($font-xxl * $font-size-shrink-factor);
     }
 
-    h3 {
+    h2 {
         @include font-size-rem($font-xl * $font-size-shrink-factor);
     }
 
-    h4 {
+    h3 {
         @include font-size-rem($font-l * $font-size-shrink-factor);
+    }
+
+    h4 {
+        @include font-size-rem($font-m * $font-size-shrink-factor);
     }
 
     h5 {
@@ -262,7 +269,7 @@ $one: (1 / $font-size-base) + rem;
     
 }
 
-//------------------------- Smaller Headings
+//------------------------- Avatar Adjust
 @mixin avatar-adjust {
     margin-left: 1rem;
     padding-left: $avatar-size;
@@ -299,4 +306,29 @@ $one: (1 / $font-size-base) + rem;
 
 %svg-iconize {
     @include svg-iconize;
+}
+
+
+//------------------------- Transition
+@mixin transform ($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;
+}
+
+
+@mixin position(
+    $pos: absolute,
+    $t: auto,
+    $r: auto,
+    $b: auto,
+    $l: auto
+    ) {            
+    position: absolute;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
 }
