@@ -146,6 +146,16 @@
 
 .comment-author-name {
     
+    .bypostauthor & {
+        color: $color-secondary;
+        font-weight: 700;
+        
+        & a {
+            color: $color-link-secondary;
+        }
+        
+    }
+    
     @include mq($phablet, $query1: max) {
         float: right;
         @include valign-mid;
@@ -179,6 +189,11 @@
 
 .comment-form {
     
+    .field-comment,
+    .field-author {
+        clear: both;
+    }
+    
     textarea {
         height: 4.25rem;
         min-height: 2.5rem;
@@ -205,6 +220,7 @@
 }
 
 .comment-respond {
+    @extend %cf;
     margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -237,10 +253,14 @@
 }
 
 .comment-form-admin {
+    float: right;
+    margin-left: 2rem;
+    margin-top: .5rem;
     margin-bottom: 1rem;
 }
 
 .comment-reply-title {
+    float: left;
     @include font-size-rem($font-l);
 }
 

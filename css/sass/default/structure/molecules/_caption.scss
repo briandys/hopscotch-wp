@@ -2,7 +2,8 @@
     margin-bottom: 1rem;
 }
 
-.wp-caption-text {
+.wp-caption-text,
+.gallery-caption {
     padding: .5rem;
     @include font-size-rem($font-s-m);
     color: $darken50;

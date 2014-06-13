@@ -35,9 +35,9 @@
         foreach ($files as $file):
             echo '<div class="pattern">';
             echo '<div class="display">';
-            $tae = file_get_contents('components/'.$file);
+            $hehe = file_get_contents('components/'.$file);
 
-$hehe = preg_replace('#<\?#s', '$1', $tae);
+$hehe = preg_replace('#<\?#s', '$1', $hehe);
 
             echo $hehe;
             echo '</div>';

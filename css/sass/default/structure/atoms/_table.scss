@@ -1,4 +1,14 @@
-table,
+table {
+	width: 100%;
+    
+    @include mq($mobile, ieFixOff, max) {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+}
+
 col.max {
 	width: 100%;
 }

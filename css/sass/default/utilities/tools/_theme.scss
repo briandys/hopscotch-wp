@@ -111,6 +111,7 @@
     border-bottom: $one dotted currentColor;        
     
     &:hover {
+        color: rgba($color-link-tertiary, 1);
         border-bottom: none;
         text-decoration: none;
     }

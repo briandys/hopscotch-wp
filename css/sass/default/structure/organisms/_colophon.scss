@@ -1,3 +1,15 @@
+.colophon {
+    
+    .status-vertical-content-contain & {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+}
+
+
 .site-info {
     padding: 1rem;
     @include font-size-rem($font-s-m);
@@ -5,11 +17,6 @@
     
     a {
         @include linkstyle-secondary;
-    }
-    
-    .status-scroll-top-active & {
-        padding-left: 5rem;
-        padding-right: 5rem;
     }
     
 }

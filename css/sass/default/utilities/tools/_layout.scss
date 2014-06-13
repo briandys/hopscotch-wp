@@ -52,6 +52,7 @@
     
     .masthead-cr {
         @extend %cf;
+        position: relative;
         height: $block-l;
     }
     
@@ -75,6 +76,7 @@
     .header-sidebar {
         @include valign-mid;
         float: right;
+        @include position($t: 0, $r: 0);
     }
     
     .site-description {

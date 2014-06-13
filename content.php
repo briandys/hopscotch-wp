@@ -1,4 +1,4 @@
-<article id="<?php do_action( 'hopscotch_post_id' ); ?>" <?php post_class('entry'); ?>>
+<article id="<?php do_action('hopscotch_post_id'); ?>" <?php post_class('entry'); ?>>
     <div class="entry-cr">
         <header class="entry-hr">
             <div class="entry-hr-cr">

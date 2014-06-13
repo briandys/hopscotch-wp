@@ -151,7 +151,7 @@
 	
 	// Scroll Top
 	$( function () {
-		_window.scroll( function() {			
+		_window.scroll( function() {
 			
             var scrollTopActive = 'status-scroll-top-active',
                 scrollTopInactive = 'status-scroll-top-inactive';
@@ -179,12 +179,34 @@
             } else {
                 $( body ).removeClass('sticky');
             }
-		});		
+            
+		});
 		
 	} );
-	
-	
-	// Various
+    
+    // Check if the content is little enough to make the footer sticky
+    $( function () {
+        
+        $( window ).resize( function() {
+            var windowHeight = $(window).height(),
+                mastheadHeight = $('#masthead').height(),
+                mainHeight = $('#main').height(),
+                colophonHeight = $('#colophon').height(),
+                contentHeight = mastheadHeight + mainHeight + colophonHeight;
+
+            if ( contentHeight > windowHeight ) {
+                $( body ).addClass('status-vertical-content-overflow');
+                $( body ).removeClass('status-vertical-content-contain');
+            } else {
+                $( body ).addClass('status-vertical-content-contain');
+                $( body ).removeClass('status-vertical-content-overflow');
+            }
+        });
+        
+    } );
+    
+    
+    // Various
 	$( function () {
 		
 		// Focusing on form UIs
