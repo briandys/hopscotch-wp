@@ -2,7 +2,7 @@
 // Usage: Rules concerning design layout
 
 
-//------------------------- Center-align site title and site description
+//------------------------- Header for Non-mobile mode
 @mixin header-plain-text-center {
     
     .masthead-cr {
@@ -30,10 +30,6 @@
         padding-right: 1rem;
     }
     
-    .main-navigation {
-        @include position($t: 0, $l: 0);
-    }
-    
     .header-sidebar {
         margin-top: auto;
         @include position($t: 0, $r: 0);
@@ -47,18 +43,13 @@
 }
 
 
-//------------------------- Header for small spaces
+//------------------------- Header for Mobile mode
 @mixin header-compact {
     
     .masthead-cr {
-        @extend %cf;
-        
-        // Mobile mode
-        @include mq($tablet, ieFixOn, max) {
-            position: relative;
-            height: $block-l;
-        }
-        
+        @include cf;        
+        position: relative;
+        height: $block-l;        
     }
     
     .masthead-header {
@@ -73,24 +64,19 @@
         line-height: normal;
     }
     
-    // Mobile mode
-    @include mq($tablet, ieFixOn, max) {
-        
-        .main-navigation {
-            @include valign-mid;
-            float: left;
-        }
-        
+    .main-navigation {
+        @include valign-mid;
+        float: left;
     }
     
     .header-sidebar {
         @include valign-mid;
-        float: right;
         @include position($t: 0, $r: 0);
+        float: right;
     }
     
     .site-description {
-        @extend %vhide;
+        @include vhide;
     }
 
 }

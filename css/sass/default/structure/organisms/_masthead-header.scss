@@ -1,4 +1,10 @@
-@include header-compact;
+@include mq($tablet, $query1: max) {
+    @include header-compact;
+}
+
+@include mq($tablet, ieFixOn) {
+    @include header-plain-text-center;
+}
 
 .skip-to-content-link {
     @extend %vhide;

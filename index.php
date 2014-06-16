@@ -12,7 +12,7 @@
                                 <div class="main-content-hr-cr">                            
                                     <h2 class="main-content-heading">
 
-                                    <!-- Author -->
+                                    <!-- Home -->
                                     <?php if ( is_home() ) : ?>									
                                         <span class="label">Primary Content:</span> <span class="label-value">Home</span>
 

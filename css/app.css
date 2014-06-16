@@ -690,12 +690,12 @@ textarea {
   }
 }
 /* line 9, sass/default/utilities/tools/_patch.scss */
-.comment-hr:before, .comment-respond:before, .entry:before, .masthead-cr:before, .comment-hr:after, .comment-respond:after, .entry:after, .masthead-cr:after {
+.comment-hr:before, .comment-respond:before, .entry:before, .comment-hr:after, .comment-respond:after, .entry:after {
   content: " ";
   display: table;
 }
 /* line 13, sass/default/utilities/tools/_patch.scss */
-.comment-hr:after, .comment-respond:after, .entry:after, .masthead-cr:after {
+.comment-hr:after, .comment-respond:after, .entry:after {
   clear: both;
 }
 
@@ -708,7 +708,7 @@ legend,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
 .form-allowed-tags, .child-page .entry-user-action,
-.child-page .entry-meta, .comment-timestamp .label, .comment-respond .label-verb-subject, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .site-description, .skip-to-content-link, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .header-sidebar-heading,
+.child-page .entry-meta, .comment-timestamp .label, .comment-respond .label-verb-subject, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .skip-to-content-link, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .header-sidebar-heading,
 .secondary-sidebar-heading,
 .tertiary-sidebar-heading {
   border: 0;
@@ -744,7 +744,7 @@ img, .wp-caption {
 }
 
 /* line 73, sass/default/utilities/tools/_structure.scss */
-.action-list, .nav-menu > ul {
+.action-list, .main-navigation div.nav-menu ul {
   list-style: none;
   margin: auto;
   padding: 0;
@@ -2130,61 +2130,13 @@ tbody tr:last-child {
   }
 }
 
-/* line 21, sass/default/structure/organisms/_main-navigation.scss */
-.main-navigation div.nav-menu ul {
-  list-style: none;
-  margin: auto;
-  padding: 0;
-}
-/* line 25, sass/default/structure/organisms/_main-navigation.scss */
-.main-navigation div.nav-menu li {
+/* line 9, sass/default/structure/organisms/_main-navigation.scss */
+div.nav-menu li {
   margin-bottom: auto;
-}
-@media only screen and (min-width: 48rem) {
-  /* line 31, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation div.nav-menu > ul {
-    text-align: center;
-  }
-  /* line 17, sass/default/utilities/tools/_structure.scss */
-  .main-navigation div.nav-menu > ul > li {
-    display: inline-block;
-  }
-  /* line 36, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation div.nav-menu li {
-    vertical-align: top;
-  }
-}
-/* line 42, sass/default/structure/organisms/_main-navigation.scss */
-.main-navigation div.nav-menu a {
-  display: block;
-  padding: 1rem;
-}
-@media only screen and (min-width: 48rem) {
-  /* line 42, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation div.nav-menu a {
-    -webkit-transition: background-color 0.125s ease;
-    -moz-transition: background-color 0.125s ease;
-    -ms-transition: background-color 0.125s ease;
-    -o-transition: background-color 0.125s ease;
-    transition: background-color 0.125s ease;
-  }
-}
-@media only screen and (max-width: 47.9375rem) {
-  /* line 54, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation div.nav-menu a :hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-  }
-}
-@media only screen and (max-width: 47.9375rem) {
-  /* line 67, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation div.nav-menu .children a {
-    padding-left: 1rem;
-  }
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 83, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 24, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation div.nav-menu {
     width: 100%;
     height: 100%;
@@ -2192,13 +2144,102 @@ tbody tr:last-child {
     overflow-x: hidden;
     overflow-y: auto;
   }
-  /* line 90, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 31, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation div.nav-menu li, .status-mobile-main-nav-active .main-navigation div.nav-menu a {
     color: white;
   }
 }
+@media only screen and (min-width: 48rem) {
+  /* line 46, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu > ul {
+    text-align: center;
+  }
+  /* line 17, sass/default/utilities/tools/_structure.scss */
+  .main-navigation div.nav-menu > ul > li {
+    display: inline-block;
+  }
+}
+/* line 52, sass/default/structure/organisms/_main-navigation.scss */
+.main-navigation div.nav-menu li {
+  margin-bottom: auto;
+}
+@media only screen and (min-width: 48rem) {
+  /* line 52, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu li {
+    vertical-align: top;
+  }
+}
+/* line 62, sass/default/structure/organisms/_main-navigation.scss */
+.main-navigation div.nav-menu a {
+  display: block;
+  padding: 1rem;
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
+}
+@media only screen and (max-width: 47.9375rem) {
+  /* line 71, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 47.9375rem) {
+  /* line 83, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .children a {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  /* line 78, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .children {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  /* line 96, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children {
+    position: relative;
+  }
+  /* line 102, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children:hover {
+    background-color: #00aaff;
+  }
+  /* line 106, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children:hover > * {
+    color: white;
+  }
+  /* line 111, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children:hover .children {
+    clip: rect(auto, auto, auto, auto);
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    padding: 0;
+    position: static;
+    width: auto;
+    position: absolute;
+    top: 100%;
+    background-color: green;
+    white-space: nowrap;
+  }
+  /* line 118, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children:hover .children a {
+    color: white;
+    background-color: #00aaff;
+  }
+}
 
-/* line 101, sass/default/structure/organisms/_main-navigation.scss */
+/* line 136, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
   margin-bottom: auto;
   border: 0;
@@ -2211,7 +2252,7 @@ tbody tr:last-child {
   width: 1px;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 101, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 136, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     clip: rect(auto, auto, auto, auto);
     height: auto;
@@ -2228,7 +2269,7 @@ tbody tr:last-child {
     text-align: center;
     vertical-align: middle;
   }
-  /* line 115, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 149, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -2238,11 +2279,21 @@ tbody tr:last-child {
     -o-transition: fill 0.125s ease;
     transition: fill 0.125s ease;
   }
-  /* line 121, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation-heading :hover {
+  /* line 153, sass/default/structure/organisms/_main-navigation.scss */
+  .modernizr-no-inlinesvg .main-navigation-heading .icon {
+    clip: rect(auto, auto, auto, auto);
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    padding: 0;
+    position: static;
+    width: auto;
+  }
+  /* line 159, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation-heading:hover {
     cursor: pointer;
   }
-  /* line 125, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 163, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .label {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2253,26 +2304,17 @@ tbody tr:last-child {
     position: absolute;
     width: 1px;
   }
-  /* line 128, sass/default/structure/organisms/_main-navigation.scss */
-  .modernizr-no-inlinesvg .main-navigation-heading .label {
-    clip: rect(auto, auto, auto, auto);
-    height: auto;
-    margin: auto;
-    overflow: auto;
-    padding: 0;
-    position: static;
-    width: auto;
-  }
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 141, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 171, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-cr {
     text-align: center;
   }
 }
+
 @media only screen and (max-width: 47.9375rem) {
-  /* line 147, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 180, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
     position: fixed;
     left: 0;
@@ -2288,7 +2330,7 @@ tbody tr:last-child {
     text-align: left;
     z-index: 100;
   }
-  /* line 161, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 194, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -2297,52 +2339,59 @@ tbody tr:last-child {
     transform: translate(0, 0);
   }
 }
-
-@media only screen and (max-width: 47.9375rem) {
+@media only screen and (max-width: 47.9375rem) and (max-width: 47.9375rem) {
   /* line 230, sass/default/utilities/tools/_structure.scss */
   .status-mobile-main-nav-active .main-navigation-ct.lt-ie9 {
     display: block;
   }
 }
+
 @media only screen and (max-width: 47.9375rem) {
-  /* line 53, sass/default/utilities/tools/_layout.scss */
+  /* line 49, sass/default/utilities/tools/_layout.scss */
   .masthead-cr {
     position: relative;
     height: 3.5rem;
   }
-}
+  /* line 9, sass/default/utilities/tools/_patch.scss */
+  .masthead-cr:before, .masthead-cr:after {
+    content: " ";
+    display: table;
+  }
+  /* line 13, sass/default/utilities/tools/_patch.scss */
+  .masthead-cr:after {
+    clear: both;
+  }
 
-/* line 64, sass/default/utilities/tools/_layout.scss */
-.masthead-header {
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  text-align: center;
-}
-/* line 137, sass/default/utilities/tools/_structure.scss */
-.masthead-header:after {
-  content: '';
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 143, sass/default/utilities/tools/_structure.scss */
-.masthead-header > * {
-  display: inline-block;
-  vertical-align: middle;
-}
+  /* line 55, sass/default/utilities/tools/_layout.scss */
+  .masthead-header {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    text-align: center;
+  }
+  /* line 137, sass/default/utilities/tools/_structure.scss */
+  .masthead-header:after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* line 143, sass/default/utilities/tools/_structure.scss */
+  .masthead-header > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-/* line 69, sass/default/utilities/tools/_layout.scss */
-.site-title-heading {
-  margin-bottom: auto;
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: normal;
-}
+  /* line 60, sass/default/utilities/tools/_layout.scss */
+  .site-title-heading {
+    margin-bottom: auto;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-@media only screen and (max-width: 47.9375rem) {
-  /* line 79, sass/default/utilities/tools/_layout.scss */
+  /* line 67, sass/default/utilities/tools/_layout.scss */
   .main-navigation {
     display: inline-block;
     vertical-align: middle;
@@ -2361,33 +2410,93 @@ tbody tr:last-child {
     display: inline-block;
     vertical-align: middle;
   }
-}
-/* line 86, sass/default/utilities/tools/_layout.scss */
-.header-sidebar {
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: auto;
-}
-/* line 137, sass/default/utilities/tools/_structure.scss */
-.header-sidebar:after {
-  content: '';
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 143, sass/default/utilities/tools/_structure.scss */
-.header-sidebar > * {
-  display: inline-block;
-  vertical-align: middle;
-}
 
-/* line 7, sass/default/structure/organisms/_masthead-header.scss */
+  /* line 72, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    float: right;
+  }
+  /* line 137, sass/default/utilities/tools/_structure.scss */
+  .header-sidebar:after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* line 143, sass/default/utilities/tools/_structure.scss */
+  .header-sidebar > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* line 78, sass/default/utilities/tools/_layout.scss */
+  .site-description {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  /* line 8, sass/default/utilities/tools/_layout.scss */
+  .masthead-cr {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  /* line 13, sass/default/utilities/tools/_layout.scss */
+  .masthead-header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  /* line 18, sass/default/utilities/tools/_layout.scss */
+  .site-title-heading {
+    margin-bottom: auto;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  /* line 24, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar {
+    margin-top: 2rem;
+  }
+
+  /* line 28, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar-cr {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* line 33, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar {
+    margin-top: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+
+  /* line 38, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar-cr {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 13, sass/default/structure/organisms/_masthead-header.scss */
 .site-description {
   color: gray;
 }

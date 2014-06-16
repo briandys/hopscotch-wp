@@ -4,10 +4,10 @@
 // As general usage for WordPress and others (like plain HTML), refer to .nav-menu as div.nav-menu
 // and the <ul> as .nav-menu > ul
 
-.nav-menu {
+div.nav-menu {
     
-    > ul {        
-        @extend %unlist;
+    li {
+        margin-bottom: auto;
     }
 
 }
@@ -18,22 +18,42 @@
     
     div.nav-menu {
         
-        ul {
-            @include unlist;            
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
+
+            .status-mobile-main-nav-active & {
+
+                @include size(100%);
+                background-color: $color-primary;
+                overflow-x: hidden;
+                overflow-y: auto;
+
+                li, a {
+                    color: $white;
+                }
+
+            }
+
         }
         
-        li {
-            margin-bottom: auto;
+        ul {        
+            @extend %unlist;
         }
         
         // Non-mobile mode
         @include mq($tablet, ieFixOn) {
+            
             > ul {
                 @include center-list;
-
             }
             
-            li {
+        }
+        
+        li {
+            margin-bottom: auto;
+            
+            // Non-mobile mode
+            @include mq($tablet, ieFixOn) {
                 vertical-align: top;
             }
             
@@ -42,55 +62,70 @@
         a {
             display: block;
             padding: 1rem;
+            @include transition-bg-color;            
+        }
+        
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
             
-            // Non-mobile mode
-            @include mq($tablet, ieFixOn) {
-                @include transition-bg-color;
+            a:hover {
+                background-color: $darken5;
+                text-decoration: none;
             }
-            
-            // Mobile mode
-            @include mq($tablet, ieFixOn, max) {
-                
-                :hover {
-                    background-color: $darken5;
-                    text-decoration: none;
-                }
-                
-            }
-            
+
         }
         
         .children {
             
             // Mobile mode
-            @include mq($tablet, ieFixOn, max) {
+            @include mq($tablet, $query1: max) {
+                
                 a {
-                    padding-left: 1rem;
+                    padding-left: 2rem;
                 }
+                
+            }
+            
+            // Non-mobile mode
+            @include mq($tablet, ieFixOn) {
+                @include vhide;
             }
         
         }
         
-    }
-    
-}
-
-.main-navigation div.nav-menu {
-    
-    // Mobile mode
-    @include mq($tablet, ieFixOn, max) {
-       
-        .status-mobile-main-nav-active & {
-
-            @include size(100%);
-            background-color: $color-primary;
-            overflow-x: hidden;
-            overflow-y: auto;
-
-            li, a {
-                color: $white;
+        .page_item_has_children {
+            
+            // Non-mobile mode
+            @include mq($tablet, ieFixOn) {                
+                position: relative;
+                
+                &:hover {
+                    background-color: $color-primary;
+                    
+                    
+                    > * {
+                        color: $white;
+                    }
+                    
+                    
+                    .children {
+                        @include vhide-rev;
+                        position: absolute;
+                        top: 100%;
+                        background-color: green;
+                        white-space: nowrap;
+                        
+                        a {
+                            color: $white;
+                            background-color: $color-primary;
+                        }
+                        
+                    }
+                                        
+                }
+                
             }
-
+            
         }
         
     }
@@ -100,11 +135,10 @@
 
 .main-navigation-heading {
     margin-bottom: auto;
-    @include vhide;
-    
+    @include vhide;    
     
     // Mobile mode
-    @include mq($tablet, ieFixOn, max) {
+    @include mq($tablet, $query1: max) {
     
         @include vhide-rev;
         @include font-size-rem($font-reset);
@@ -115,30 +149,29 @@
         .icon {
             @include size($block-s);
             @include transition(fill);
+            
+            .modernizr-no-inlinesvg & {
+                @include vhide-rev;
+            }
 
         }
 
-        :hover {
+        &:hover {
             cursor: pointer;
         }
 
         .label {
             @include vhide;
-
-            .modernizr-no-inlinesvg & {
-                @include vhide-rev;
-            }
-
         }
         
     }
 
 }
 
-// Mobile mode
-@include mq($tablet, ieFixOn, max) {
-
-    .main-navigation-cr {
+.main-navigation-cr {
+    
+    // Mobile mode
+    @include mq($tablet, $query1: max) {
         text-align: center;
     }
     
@@ -159,26 +192,19 @@
         z-index: 100;
 
         .status-mobile-main-nav-active & {
+            
             @include transform(translate(0, 0));
+            
+            @include mq($tablet, $query1: max) {
+                
+                @include lt-ie9-fix-attach {
+                    display: block;
+                }
+                
+            }
 
         }
         
     }
 
-}
-
-// Mobile mode
-@include mq($tablet, $query1: max) {
-
-    .status-mobile-main-nav-active {
-
-        .main-navigation-ct {
-
-            @include lt-ie9-fix-attach {
-                display: block;
-            }
-
-        }
-    }
-    
 }
