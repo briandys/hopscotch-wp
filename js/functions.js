@@ -28,8 +28,8 @@
 		if ( ! overlay )
 			return;
 		
-		mainNavActive = 'status-main-nav-active';
-		mainNavInactive = 'status-main-nav-inactive';
+		mainNavActive = 'status-mobile-main-nav-active';
+		mainNavInactive = 'status-mobile-main-nav-inactive';
         overlayActive = 'status-overlay-active';
 
 		function navToggle() {
@@ -172,38 +172,49 @@
                 scrollTopDeactivate();
             }
             
-            var mastheadHeight = $('#masthead').height(); 
+		});
+		
+	} );
+    
+    
+    /*
+    // Sticky Footer
+	$( function () {
+		
+        var windowHeight = $(window).height(),
+            mastheadHeight = $('#masthead').height(),
+            mainHeight = $('#main').height(),
+            colophonHeight = $('#colophon').height(),
+            contentHeight = mastheadHeight + mainHeight + colophonHeight;
+        
+        function stickyActivate() {
+            body.addClass('status-vertical-content-overflow');
+            body.removeClass('status-vertical-content-contain');
+        };
+
+        function stickyDeactivate() {
+            body.addClass('status-vertical-content-contain');
+            body.removeClass('status-vertical-content-overflow');
+        };
+        
+        if ( contentHeight > windowHeight ) {
+            stickyActivate();
+        } else {
+            stickyDeactivate();
+        }
+        
+        _window.resize( function() {
             
-            if ( $(window).scrollTop() > mastheadHeight ) {
-                $( body ).addClass('sticky');
-            } else {
-                $( body ).removeClass('sticky');
+            if ( contentHeight > windowHeight ) {
+				stickyActivate();
+			} else {
+                stickyDeactivate();
             }
             
 		});
 		
 	} );
-    
-    // Check if the content is little enough to make the footer sticky
-    $( function () {
-        
-        $( window ).resize( function() {
-            var windowHeight = $(window).height(),
-                mastheadHeight = $('#masthead').height(),
-                mainHeight = $('#main').height(),
-                colophonHeight = $('#colophon').height(),
-                contentHeight = mastheadHeight + mainHeight + colophonHeight;
-
-            if ( contentHeight > windowHeight ) {
-                $( body ).addClass('status-vertical-content-overflow');
-                $( body ).removeClass('status-vertical-content-contain');
-            } else {
-                $( body ).addClass('status-vertical-content-contain');
-                $( body ).removeClass('status-vertical-content-overflow');
-            }
-        });
-        
-    } );
+    */
     
     
     // Various

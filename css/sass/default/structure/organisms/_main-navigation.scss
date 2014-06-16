@@ -19,22 +19,56 @@
     div.nav-menu {
         
         ul {
-            @include unlist;
+            @include unlist;            
+        }
+        
+        li {
+            margin-bottom: auto;
+        }
+        
+        // Non-mobile mode
+        @include mq($tablet, ieFixOn) {
+            > ul {
+                @include center-list;
+
+            }
+            
+            li {
+                vertical-align: top;
+            }
+            
         }
         
         a {
             display: block;
             padding: 1rem;
-            @extend %transition-bg-color;
             
-            &:hover {
-                background-color: $darken5;
-                text-decoration: none;
+            // Non-mobile mode
+            @include mq($tablet, ieFixOn) {
+                @include transition-bg-color;
             }
+            
+            // Mobile mode
+            @include mq($tablet, ieFixOn, max) {
+                
+                :hover {
+                    background-color: $darken5;
+                    text-decoration: none;
+                }
+                
+            }
+            
         }
         
-        .children a {
-            padding-left: 1rem;
+        .children {
+            
+            // Mobile mode
+            @include mq($tablet, ieFixOn, max) {
+                a {
+                    padding-left: 1rem;
+                }
+            }
+        
         }
         
     }
@@ -43,75 +77,108 @@
 
 .main-navigation div.nav-menu {
     
-    .status-main-nav-active & {
-        @include size(100%);
-        background-color: $color-primary;
-        overflow-x: hidden;
-        overflow-y: auto;
-        
-        li, a {
-            color: $white;
+    // Mobile mode
+    @include mq($tablet, ieFixOn, max) {
+       
+        .status-mobile-main-nav-active & {
+
+            @include size(100%);
+            background-color: $color-primary;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            li, a {
+                color: $white;
+            }
+
         }
+        
     }
+    
 }
 
 
 .main-navigation-heading {
     margin-bottom: auto;
-    @include font-size-rem($font-reset);
+    @include vhide;
     
-    @include size($block-l);
-    @extend %svg-iconize;
     
-    .icon {
-        @include size($block-s);
-        @include transition(fill);
-        
-    }
+    // Mobile mode
+    @include mq($tablet, ieFixOn, max) {
     
-    &:hover {
-        cursor: pointer;
-    }
-    
-    .label {
-        @extend %vhide;
-    
-        .modernizr-no-inlinesvg & {
-            @extend %vhide-rev;
+        @include vhide-rev;
+        @include font-size-rem($font-reset);
+
+        @include size($block-l);
+        @include svg-iconize;
+
+        .icon {
+            @include size($block-s);
+            @include transition(fill);
+
+        }
+
+        :hover {
+            cursor: pointer;
+        }
+
+        .label {
+            @include vhide;
+
+            .modernizr-no-inlinesvg & {
+                @include vhide-rev;
+            }
+
         }
         
     }
 
 }
 
-.main-navigation-cr {
-    text-align: center;
+// Mobile mode
+@include mq($tablet, ieFixOn, max) {
+
+    .main-navigation-cr {
+        text-align: center;
+    }
+    
 }
 
 .main-navigation-ct {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding-top: $block-l;
-    @include size(100%);
-    @include transform(translate(0, 100%));
-    text-align: left;
-    z-index: 100;
     
-    .status-main-nav-active & {
-        @include transform(translate(0, 0));
+    // Mobile mode
+    @include mq($tablet, $query1: max) {
+    
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding-top: $block-l;
+        @include size(100%);
+        @include transform(translate(0, 100%));
+        text-align: left;
+        z-index: 100;
+
+        .status-mobile-main-nav-active & {
+            @include transform(translate(0, 0));
+
+        }
         
     }
 
 }
 
-.status-main-nav-active {
-    
-    .main-navigation-ct {
-        
-        @include lt-ie9-fix-attach {
-            display: block;
+// Mobile mode
+@include mq($tablet, $query1: max) {
+
+    .status-mobile-main-nav-active {
+
+        .main-navigation-ct {
+
+            @include lt-ie9-fix-attach {
+                display: block;
+            }
+
         }
-        
     }
+    
 }

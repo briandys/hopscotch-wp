@@ -44,6 +44,3 @@
                 
                 </div>
             </header><!-- masthead -->
-
-            <div id="main" class="main">
-                <div class="main-cr">

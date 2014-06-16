@@ -87,6 +87,10 @@
     transition: $property $duration $easing;
 }
 
+@mixin transition-bg-color {
+    @include transition(background-color);
+}
+
 %transition-bg-color {
     @include transition(background-color);
 }
