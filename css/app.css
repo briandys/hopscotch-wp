@@ -1349,7 +1349,7 @@ ins {
 }
 /* line 9, sass/default/structure/organisms/_child-page.scss */
 .child-page .entry-title-link {
-  font-weight: normal;
+  font-weight: 600;
 }
 
 /* line 3, sass/default/structure/organisms/_colophon.scss */
@@ -2322,11 +2322,9 @@ div.nav-menu li {
 @media only screen and (max-width: 47.9375rem) {
   /* line 181, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
-    position: absolute;
-    top: 100%;
-    right: auto;
-    bottom: auto;
+    position: fixed;
     left: 0;
+    bottom: 0;
     padding-top: 3.5rem;
     width: 100%;
     height: 100%;
@@ -2338,7 +2336,7 @@ div.nav-menu li {
     text-align: left;
     z-index: 100;
   }
-  /* line 193, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 194, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);

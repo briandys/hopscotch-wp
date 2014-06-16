@@ -182,8 +182,9 @@ div.nav-menu {
     
     // Mobile mode
     @include mq($tablet, $query1: max) {
-    
-        @include position(fixed, 100%, $l: 0);
+        position: fixed;
+        left: 0;
+        bottom: 0;        
         padding-top: $block-l;
         @include size(100%);
         @include transform(translate(0, 100%));

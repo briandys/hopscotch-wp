@@ -9,7 +9,7 @@ if (!function_exists('hopscotch_fonts')) :
 
             $protocol = is_ssl() ? 'https' : 'http';
 
-            wp_register_style( 'hopscotch-font-raleway', "$protocol://fonts.googleapis.com/css?family=Raleway:400,700", array(), null );
+            wp_register_style( 'hopscotch-font-raleway', "$protocol://fonts.googleapis.com/css?family=Raleway:400,600,700", array(), null );
 
         }
     }
