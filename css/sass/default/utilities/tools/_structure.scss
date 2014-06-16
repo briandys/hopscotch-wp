@@ -318,6 +318,8 @@
     transform: $property;
 }
 
+//------------------------- Position
+// Usage: @include pos($t: 100%, $l: 0);
 
 @mixin position(
     $pos: absolute,

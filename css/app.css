@@ -1338,6 +1338,11 @@ tbody tr:last-child {
   color: gray;
 }
 
+/* line 5, sass/default/structure/molecules/_text.scss */
+ins {
+  text-decoration: none;
+}
+
 /* line 1, sass/default/structure/organisms/_child-page.scss */
 .child-page {
   margin-top: 2rem;
@@ -2228,18 +2233,19 @@ div.nav-menu li {
     position: static;
     width: auto;
     position: absolute;
+    left: 0;
     top: 100%;
-    background-color: green;
+    text-align: left;
     white-space: nowrap;
   }
-  /* line 118, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 119, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation div.nav-menu .page_item_has_children:hover .children a {
     color: white;
     background-color: #00aaff;
   }
 }
 
-/* line 136, sass/default/structure/organisms/_main-navigation.scss */
+/* line 137, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
   margin-bottom: auto;
   border: 0;
@@ -2252,7 +2258,7 @@ div.nav-menu li {
   width: 1px;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 136, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 137, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     clip: rect(auto, auto, auto, auto);
     height: auto;
@@ -2269,7 +2275,7 @@ div.nav-menu li {
     text-align: center;
     vertical-align: middle;
   }
-  /* line 149, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 150, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -2279,7 +2285,7 @@ div.nav-menu li {
     -o-transition: fill 0.125s ease;
     transition: fill 0.125s ease;
   }
-  /* line 153, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 154, sass/default/structure/organisms/_main-navigation.scss */
   .modernizr-no-inlinesvg .main-navigation-heading .icon {
     clip: rect(auto, auto, auto, auto);
     height: auto;
@@ -2289,11 +2295,11 @@ div.nav-menu li {
     position: static;
     width: auto;
   }
-  /* line 159, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 160, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading:hover {
     cursor: pointer;
   }
-  /* line 163, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 164, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .label {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2307,18 +2313,20 @@ div.nav-menu li {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 171, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 172, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-cr {
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 180, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 181, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
-    position: fixed;
+    position: absolute;
+    top: 100%;
+    right: auto;
+    bottom: auto;
     left: 0;
-    bottom: 0;
     padding-top: 3.5rem;
     width: 100%;
     height: 100%;
@@ -2330,7 +2338,7 @@ div.nav-menu li {
     text-align: left;
     z-index: 100;
   }
-  /* line 194, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 193, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -2339,15 +2347,9 @@ div.nav-menu li {
     transform: translate(0, 0);
   }
 }
-@media only screen and (max-width: 47.9375rem) and (max-width: 47.9375rem) {
-  /* line 230, sass/default/utilities/tools/_structure.scss */
-  .status-mobile-main-nav-active .main-navigation-ct.lt-ie9 {
-    display: block;
-  }
-}
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 49, sass/default/utilities/tools/_layout.scss */
+  /* line 50, sass/default/utilities/tools/_layout.scss */
   .masthead-cr {
     position: relative;
     height: 3.5rem;
@@ -2362,7 +2364,7 @@ div.nav-menu li {
     clear: both;
   }
 
-  /* line 55, sass/default/utilities/tools/_layout.scss */
+  /* line 56, sass/default/utilities/tools/_layout.scss */
   .masthead-header {
     display: inline-block;
     vertical-align: middle;
@@ -2382,7 +2384,7 @@ div.nav-menu li {
     vertical-align: middle;
   }
 
-  /* line 60, sass/default/utilities/tools/_layout.scss */
+  /* line 61, sass/default/utilities/tools/_layout.scss */
   .site-title-heading {
     margin-bottom: auto;
     font-size: 20px;
@@ -2391,7 +2393,7 @@ div.nav-menu li {
     line-height: normal;
   }
 
-  /* line 67, sass/default/utilities/tools/_layout.scss */
+  /* line 68, sass/default/utilities/tools/_layout.scss */
   .main-navigation {
     display: inline-block;
     vertical-align: middle;
@@ -2411,7 +2413,7 @@ div.nav-menu li {
     vertical-align: middle;
   }
 
-  /* line 72, sass/default/utilities/tools/_layout.scss */
+  /* line 73, sass/default/utilities/tools/_layout.scss */
   .header-sidebar {
     display: inline-block;
     vertical-align: middle;
@@ -2436,7 +2438,7 @@ div.nav-menu li {
     vertical-align: middle;
   }
 
-  /* line 78, sass/default/utilities/tools/_layout.scss */
+  /* line 79, sass/default/utilities/tools/_layout.scss */
   .site-description {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2458,10 +2460,11 @@ div.nav-menu li {
   /* line 13, sass/default/utilities/tools/_layout.scss */
   .masthead-header {
     padding: 1rem;
+    padding-bottom: 0;
     text-align: center;
   }
 
-  /* line 18, sass/default/utilities/tools/_layout.scss */
+  /* line 19, sass/default/utilities/tools/_layout.scss */
   .site-title-heading {
     margin-bottom: auto;
     font-size: 32px;
@@ -2469,18 +2472,18 @@ div.nav-menu li {
     line-height: normal;
   }
 
-  /* line 24, sass/default/utilities/tools/_layout.scss */
+  /* line 25, sass/default/utilities/tools/_layout.scss */
   .header-sidebar {
     margin-top: 2rem;
   }
 
-  /* line 28, sass/default/utilities/tools/_layout.scss */
+  /* line 29, sass/default/utilities/tools/_layout.scss */
   .header-sidebar-cr {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  /* line 33, sass/default/utilities/tools/_layout.scss */
+  /* line 34, sass/default/utilities/tools/_layout.scss */
   .header-sidebar {
     margin-top: auto;
     position: absolute;
@@ -2490,7 +2493,7 @@ div.nav-menu li {
     left: auto;
   }
 
-  /* line 38, sass/default/utilities/tools/_layout.scss */
+  /* line 39, sass/default/utilities/tools/_layout.scss */
   .header-sidebar-cr {
     padding-left: 0;
     padding-right: 0;
