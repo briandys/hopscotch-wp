@@ -107,19 +107,22 @@ div.nav-menu {
                         color: $white;
                     }
                     
+                    a {
+                        color: $white;
+
+                        &:hover {
+                            background-color: $darken5;
+                            text-decoration: none;
+                        }
+
+                    }                    
                     
                     .children {
                         @include vhide-rev;
-                        position: absolute;
-                        left: 0;
-                        top: 100%;
+                        @include position($t: 100%);
                         text-align: left;
                         white-space: nowrap;
-                        
-                        a {
-                            color: $white;
-                            background-color: $color-primary;
-                        }
+                        background-color: $color-primary;                        
                         
                     }
                                         

@@ -1,22 +1,51 @@
 .colophon {
+    margin-top: 2rem;
     
-    .status-vertical-content-contain & {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+    [data-state-colophon="fixed"] & {
+        @include position(fixed, $l: 0, $b: 0);
         width: 100%;
     }
+        
+    .widget_nav_menu {
+
+        .menu {
+            @include unlist;
+            @include center-list;
+
+            a {
+                display: inline-block;
+                padding: 1rem;
+            }
+
+        }
+
+        .sub-menu {
+            display: inline;
+            margin-left: auto;
+            margin-bottom: auto;
+        }
+
+    } 
     
 }
 
 
 .site-info {
-    padding: 1rem;
+    padding: .5rem 1rem;
     @include font-size-rem($font-s-m);
     text-align: center;
     
+    > * {
+        display: inline-block;
+        padding: .5rem;
+    }
+    
     a {
         @include linkstyle-secondary;
+    }
+    
+    .web-designer {
+        margin-bottom: auto;
     }
     
 }

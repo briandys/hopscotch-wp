@@ -787,7 +787,7 @@ img, .wp-caption {
 }
 
 /* line 94, sass/default/utilities/tools/_theme.scss */
-.post-edit-link {
+.post-edit-link, .form-submit {
   -webkit-transition: background-color 0.125s ease;
   -moz-transition: background-color 0.125s ease;
   -ms-transition: background-color 0.125s ease;
@@ -1003,35 +1003,6 @@ label[for]:hover {
 /* line 71, sass/default/structure/atoms/_form.scss */
 .sudo-button:active {
   transform: translate(0, 0.0625rem);
-}
-
-/* line 76, sass/default/structure/atoms/_form.scss */
-.form-submit {
-  border-top-width: 0.0625rem;
-  border-right-width: 0.0625rem;
-  border-bottom-width: 0.0625rem;
-  border-left-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.35);
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  overflow: hidden;
-  background-color: #12b32d;
-  border-color: #12b32d;
-  color: white;
-}
-/* line 84, sass/default/structure/atoms/_form.scss */
-.form-submit:active {
-  transform: translate(0, 0.0625rem);
-}
-/* line 88, sass/default/structure/atoms/_form.scss */
-.form-submit input {
-  padding: .5rem;
-  min-height: 2.5rem;
-  border: none;
-  background-color: transparent;
 }
 
 /* line 4, sass/default/structure/atoms/_heading.scss */
@@ -1352,22 +1323,55 @@ ins {
   font-weight: 600;
 }
 
-/* line 3, sass/default/structure/organisms/_colophon.scss */
-.status-vertical-content-contain .colophon {
-  position: fixed;
-  left: 0;
+/* line 1, sass/default/structure/organisms/_colophon.scss */
+.colophon {
+  margin-top: 2rem;
+}
+/* line 4, sass/default/structure/organisms/_colophon.scss */
+[data-state-colophon="fixed"] .colophon {
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
-
-/* line 13, sass/default/structure/organisms/_colophon.scss */
-.site-info {
+/* line 11, sass/default/structure/organisms/_colophon.scss */
+.colophon .widget_nav_menu .menu {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+/* line 17, sass/default/utilities/tools/_structure.scss */
+.colophon .widget_nav_menu .menu > li {
+  display: inline-block;
+}
+/* line 15, sass/default/structure/organisms/_colophon.scss */
+.colophon .widget_nav_menu .menu a {
+  display: inline-block;
   padding: 1rem;
+}
+/* line 22, sass/default/structure/organisms/_colophon.scss */
+.colophon .widget_nav_menu .sub-menu {
+  display: inline;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+/* line 33, sass/default/structure/organisms/_colophon.scss */
+.site-info {
+  padding: .5rem 1rem;
   font-size: 14px;
   font-size: 0.875rem;
   text-align: center;
 }
-/* line 18, sass/default/structure/organisms/_colophon.scss */
+/* line 38, sass/default/structure/organisms/_colophon.scss */
+.site-info > * {
+  display: inline-block;
+  padding: .5rem;
+}
+/* line 43, sass/default/structure/organisms/_colophon.scss */
 .site-info a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
@@ -1377,6 +1381,10 @@ ins {
   color: #333333;
   border-bottom: none;
   text-decoration: none;
+}
+/* line 47, sass/default/structure/organisms/_colophon.scss */
+.site-info .web-designer {
+  margin-bottom: auto;
 }
 
 /* line 1, sass/default/structure/organisms/_comment.scss */
@@ -1709,6 +1717,49 @@ ins {
 /* line 309, sass/default/structure/organisms/_comment.scss */
 .sudo-input-text-comment {
   padding: .25rem;
+}
+
+/* line 315, sass/default/structure/organisms/_comment.scss */
+.sudo-input-text[data-state-form-element="focused"] {
+  border-top-width: 0.0625rem;
+  border-right-width: 0.0625rem;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.75);
+}
+
+/* line 323, sass/default/structure/organisms/_comment.scss */
+.form-submit {
+  border-top-width: 0.0625rem;
+  border-right-width: 0.0625rem;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.35);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  overflow: hidden;
+  background-color: #12b32d;
+  border-color: #12b32d;
+  color: white;
+}
+/* line 335, sass/default/structure/organisms/_comment.scss */
+.form-submit:active {
+  transform: translate(0, 0.0625rem);
+}
+/* line 339, sass/default/structure/organisms/_comment.scss */
+.form-submit input {
+  padding: .5rem;
+  min-height: 2.5rem;
+  border: none;
+  background-color: transparent;
+}
+/* line 345, sass/default/structure/organisms/_comment.scss */
+.form-submit[data-state-form-element="focused"] {
+  background-color: #00c521;
 }
 
 /* line 1, sass/default/structure/organisms/_content-navigation.scss */
@@ -2223,29 +2274,36 @@ div.nav-menu li {
   .main-navigation div.nav-menu .page_item_has_children:hover > * {
     color: white;
   }
-  /* line 111, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 110, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children:hover a {
+    color: white;
+  }
+  /* line 113, sass/default/structure/organisms/_main-navigation.scss */
+  .main-navigation div.nav-menu .page_item_has_children:hover a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+  /* line 120, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation div.nav-menu .page_item_has_children:hover .children {
     clip: rect(auto, auto, auto, auto);
     height: auto;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
     padding: 0;
     position: static;
     width: auto;
     position: absolute;
-    left: 0;
     top: 100%;
+    right: auto;
+    bottom: auto;
+    left: auto;
     text-align: left;
     white-space: nowrap;
-  }
-  /* line 119, sass/default/structure/organisms/_main-navigation.scss */
-  .main-navigation div.nav-menu .page_item_has_children:hover .children a {
-    color: white;
     background-color: #00aaff;
   }
 }
 
-/* line 137, sass/default/structure/organisms/_main-navigation.scss */
+/* line 140, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
   margin-bottom: auto;
   border: 0;
@@ -2258,12 +2316,12 @@ div.nav-menu li {
   width: 1px;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 137, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 140, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     clip: rect(auto, auto, auto, auto);
     height: auto;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
     padding: 0;
     position: static;
     width: auto;
@@ -2275,7 +2333,7 @@ div.nav-menu li {
     text-align: center;
     vertical-align: middle;
   }
-  /* line 150, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 153, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -2285,21 +2343,21 @@ div.nav-menu li {
     -o-transition: fill 0.125s ease;
     transition: fill 0.125s ease;
   }
-  /* line 154, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 157, sass/default/structure/organisms/_main-navigation.scss */
   .modernizr-no-inlinesvg .main-navigation-heading .icon {
     clip: rect(auto, auto, auto, auto);
     height: auto;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
     padding: 0;
     position: static;
     width: auto;
   }
-  /* line 160, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 163, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading:hover {
     cursor: pointer;
   }
-  /* line 164, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 167, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .label {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2313,14 +2371,14 @@ div.nav-menu li {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 172, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 175, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-cr {
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 181, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 184, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
     position: fixed;
     left: 0;
@@ -2336,7 +2394,7 @@ div.nav-menu li {
     text-align: left;
     z-index: 100;
   }
-  /* line 194, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 197, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -2751,33 +2809,6 @@ div.nav-menu li {
   list-style: none;
   margin: auto;
   padding: 0;
-}
-
-/* line 1, sass/default/structure/organisms/_site-footer.scss */
-.colophon {
-  margin-top: 2rem;
-}
-/* line 6, sass/default/structure/organisms/_site-footer.scss */
-.colophon .widget_nav_menu .menu {
-  list-style: none;
-  margin: auto;
-  padding: 0;
-  text-align: center;
-}
-/* line 17, sass/default/utilities/tools/_structure.scss */
-.colophon .widget_nav_menu .menu > li {
-  display: inline-block;
-}
-/* line 10, sass/default/structure/organisms/_site-footer.scss */
-.colophon .widget_nav_menu .menu a {
-  display: inline-block;
-  padding: 1rem;
-}
-/* line 17, sass/default/structure/organisms/_site-footer.scss */
-.colophon .widget_nav_menu .sub-menu {
-  display: inline;
-  margin-left: auto;
-  margin-bottom: auto;
 }
 
 /* line 4, sass/default/structure/organisms/_widget.scss */

@@ -309,3 +309,41 @@
 .sudo-input-text-comment {
     padding: .25rem;
 }
+
+.sudo-input-text {
+    
+    &[data-state-form-element="focused"] {  
+        @include border($alpha: .75);
+    }
+    
+}
+
+
+
+.form-submit {
+    $color-form-submit: $color-secondary;
+    
+    @include border;
+    @include corner-radius($radius-s);
+    overflow: hidden;
+    background-color: $color-form-submit;
+    border-color: $color-form-submit;
+    color: $white;
+    
+    @extend %transition-bg-color;
+    
+    &:active {
+        transform: translate(0, $one);
+    }
+    
+    input {
+        @include input-type-text-style;
+        border: none;
+        background-color: transparent;
+    }
+    
+    &[data-state-form-element="focused"] {
+        background-color: saturate($color-form-submit, 25%);
+    }
+    
+}

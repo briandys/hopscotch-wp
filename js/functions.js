@@ -177,57 +177,48 @@
 	} );
     
     
-    /*
-    // Sticky Footer
-	$( function () {
-		
-        var windowHeight = $(window).height(),
-            mastheadHeight = $('#masthead').height(),
-            mainHeight = $('#main').height(),
-            colophonHeight = $('#colophon').height(),
-            contentHeight = mastheadHeight + mainHeight + colophonHeight;
+    // Sticky footer
+    $( function () {
         
-        function stickyActivate() {
-            body.addClass('status-vertical-content-overflow');
-            body.removeClass('status-vertical-content-contain');
-        };
+        $(window).on('resize', function(){
+            
+            var windowHeight = $(window).height(),
+                mastheadHeight = $('#masthead').outerHeight( true ),
+                mainHeight = $('#main').outerHeight( true ),
+                colophonHeight = $('#colophon').outerHeight( true ),
+                contentHeight = mastheadHeight + mainHeight + colophonHeight;            
+            
+            function fixedFooterActivate() {
+                body.addClass('status-vertical-content-overflow');
+                body.removeClass('status-vertical-content-contain');
+                body.attr('data-state-colophon', 'unfixed');
+            };
 
-        function stickyDeactivate() {
-            body.addClass('status-vertical-content-contain');
-            body.removeClass('status-vertical-content-overflow');
-        };
-        
-        if ( contentHeight > windowHeight ) {
-            stickyActivate();
-        } else {
-            stickyDeactivate();
-        }
-        
-        _window.resize( function() {
+            function fixedFooterDeactivate() {
+                body.addClass('status-vertical-content-contain');
+                body.removeClass('status-vertical-content-overflow');
+                body.attr('data-state-colophon', 'fixed');
+            };
             
-            if ( contentHeight > windowHeight ) {
-				stickyActivate();
-			} else {
-                stickyDeactivate();
-            }
-            
-		});
-		
-	} );
-    */
+            ( contentHeight > windowHeight ) ? fixedFooterActivate() : fixedFooterDeactivate();
+        
+        }).resize();
+    
+    } );
     
     
-    // Various
+    // Various functions
 	$( function () {
 		
 		// Focusing on form UIs
 		var form = $( 'form' );
 		
-		$( form ).on('focus', 'input, textarea, button', function() {
-			$(this).parent().toggleClass('status-focus-on');
+		form.on('focus', 'input, textarea, button', function() {
+			$(this).parent().attr('data-state-form-element', 'focused');
 		});
-		$( form ).on('focusout', 'input, textarea, button', function() {
-			$(this).parent().toggleClass('status-focus-on');
+		
+        form.on('focusout', 'input, textarea, button', function() {
+			$(this).parent().attr('data-state-form-element', 'unfocused');
 		});
 		
 		// Check if nav li has children

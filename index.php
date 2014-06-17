@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-    <div id="main" class="main">
-        <div class="main-cr">
+    
                     
             <div id="primary-content" class="primary-content">
                 <div class="primary-content-cr" role="main">
