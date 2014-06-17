@@ -207,7 +207,7 @@
     } );
     
     
-    // Various functions
+    // Focusing on form elements
 	$( function () {
 		
 		// Focusing on form UIs
@@ -220,27 +220,86 @@
         form.on('focusout', 'input, textarea, button', function() {
 			$(this).parent().attr('data-state-form-element', 'unfocused');
 		});
-		
+        
+    } );
+    
+    
+    // Adding 'parent-menu' to nav items with children
+    $( function () {		
 		// Check if nav li has children
 		$('.nav-menu .menu-item:has(.children, .sub-menu), .nav-menu .page_item:has(.children, .sub-menu)').addClass('parent-menu');
-		
-		// Define orientation of images
-		$('.entry-ct img').each(function(){
-			$(this).addClass(this.width > this.height ? 'image-landscape' : 'image-portrait');
+	} );
+    
+    
+    // Define orientation of images
+    $( function () {	
+		$('.entry-ct img').each(function(){			
+            if (this.width == this.height) {
+                $(this).parents( '.img-cr' ).addClass( 'img-orientation-square' );
+            } else if (this.width > this.height) {
+                $(this).parents( '.img-cr' ).addClass( 'img-orientation-landscape' );
+            } else if (this.width < this.height) {
+                $(this).parents( '.img-cr' ).addClass( 'img-orientation-portrait' );
+            }
 		});
-        
-        // WP: remove "novalidate" from Comment Form
-        $("#comment-form").removeAttr("novalidate");
    
     } );
-	
-    // Add class to image parents
-	$( function () {
-        $('.image-cr img:not([class])').closest('.image-cr').addClass('image-align-center');
-        $('.image-cr img.alignnone').closest('.image-cr').addClass('image-align-none');
-        $('.image-cr img.aligncenter').closest('.image-cr').addClass('image-align-center');
-        $('.image-cr img.alignright').closest('.image-cr').addClass('image-align-right');
-        $('.image-cr img.alignleft').closest('.image-cr').addClass('image-align-left');
-	} );
+    
+    
+    // WP: remove "novalidate" from Comment Form
+    $( function () {   
+        $("#comment-form").removeAttr("novalidate");	
+    } );
+    
+    
+    // Add alignment classes to image containers
+	$( function () {	
+		$('.entry-ct img').each(function(){			
+            if ( $(this).is( '.alignleft' ) ) {
+                $(this).parents( '.img-cr' ).addClass( 'img-alignment-left' );
+            } else if ( $(this).is( '.alignright' ) ) {
+                $(this).parents( '.img-cr' ).addClass( 'img-alignment-right' );
+            } else if ( $(this).is( '.aligncenter' ) ) {
+                $(this).parents( '.img-cr' ).addClass( 'img-alignment-center' );
+            } else if ( $(this).is( '.alignnone' ) ) {
+                $(this).parents( '.img-cr' ).addClass( 'img-alignment-none' );
+            };
+		});
+   
+    } );
+    
+    
+    $( function() {
+		
+        /*
+        function submenuToggle() {
+			$( html ).toggleClass( mainNavActive ).toggleClass( mainNavInactive ).toggleClass( overlayActive );
+		};
+        
+        // Overlay deactivates the nav
+		$( body ).on( 'click.hopscotch', function(e) {
+			if ( html.hasClass( mainNavActive )) {
+				navToggle();
+			}
+		});
+		
+		$(document).on( 'keydown.hopscotch', function(e) {
+			if (e.which === 27 && html.hasClass( mainNavActive )  ) {
+				navToggle();
+			}
+		});
+        */
+        
+        $('.page_item_has_children a').on('click.hopscotch', function(e) {
+            if ( ! $(this).parent().hasClass('active') ) {
+                $(this).parent().addClass('active');
+                e.preventDefault();
+            } else {
+                return true;
+            }
+        });
+    
+    });
+    
 	
 } )( jQuery );

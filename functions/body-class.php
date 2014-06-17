@@ -31,14 +31,14 @@ function hopscotch_body_class( $classes ) {
 	if($is_iphone) $classes[] = 'device-iphone';
     
     // Sidebar Class Toggle
-    if( is_active_sidebar( 'sidebar-header' ) && ! is_page() ) $classes[] = 'header-sidebar-active';
+    if( is_active_sidebar( 'sidebar-header' ) ) $classes[] = 'header-sidebar-active';
 	else $classes[] = 'header-sidebar-inactive';
     
     // Sidebar Class Toggle
-    if( is_active_sidebar( 'sidebar-secondary' ) && ! is_page() ) $classes[] = 'secondary-sidebar-active';
+    if( is_active_sidebar( 'sidebar-secondary' ) ) $classes[] = 'secondary-sidebar-active';
 	else $classes[] = 'secondary-sidebar-inactive';
 	
-    if( is_active_sidebar( 'sidebar-tertiary' ) && ! is_page() ) $classes[] = 'tertiary-sidebar-active';
+    if( is_active_sidebar( 'sidebar-tertiary' ) ) $classes[] = 'tertiary-sidebar-active';
 	else $classes[] = 'tertiary-sidebar-inactive';
     
     // Custom Field: entry-template; Usage: Custom Field Name: entry-template; Custom Field Value: [any class name you want]

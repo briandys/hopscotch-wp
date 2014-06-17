@@ -99,7 +99,26 @@ div.nav-menu {
             @include mq($tablet, ieFixOn) {                
                 position: relative;
                 
-                &:hover {
+                > a {
+                    padding-right: 2.5rem;
+                }
+                
+                &:after {
+                    
+                    $icon-size: .75rem;
+                    
+                    @include sudo-ct;
+                    @include position-offset($icon-size);
+                    @include size($icon-size);
+                    @include background-image-icon('../img/more.svg');
+                    margin-right: .75rem;
+                }
+                
+                &.active:after {
+                    @include background-image-icon('../img/more-light.svg');
+                }
+                
+                &.active {
                     background-color: $color-primary;
                     
                     
@@ -115,15 +134,18 @@ div.nav-menu {
                             text-decoration: none;
                         }
 
-                    }                    
+                    }
+                    
+                    > .children {
+                        @include vhide-rev;
+                    }
                     
                     .children {
-                        @include vhide-rev;
                         @include position($t: 100%);
+                        min-width: 10rem;
+                        background-color: $color-primary;
                         text-align: left;
-                        white-space: nowrap;
-                        background-color: $color-primary;                        
-                        
+                        white-space: nowrap;                        
                     }
                                         
                 }

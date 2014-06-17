@@ -168,4 +168,29 @@ $color-bg-darken: rgba($black, .05);
 @mixin input-type-text-style {
     padding: .5rem;
     min-height: 2.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+
+@mixin button-style-default {    
+    @extend %transition-bg-color;    
+    @include corner-radius($radius-s);
+    color: $white;
+    background-color: $color-button-default;
+    overflow: hidden;
+    
+    > * {
+        @include input-type-text-style;
+    }
+
+    &[data-state-form-element="focused"],
+    &:hover {
+        background-color: saturate($color-button-default, 25%);
+    }
+    
+    &:active {
+        transform: translate(0, $one);
+    }
+    
 }

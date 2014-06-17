@@ -2,6 +2,11 @@
 // Usage: Rules concerning overall structure and functionality
 
 
+@import 'structure/position-offset';
+
+@import 'structure/background-image-icon';
+
+
 //------------------------- Pseudo Content
 @mixin sudo-ct {
     content: '';

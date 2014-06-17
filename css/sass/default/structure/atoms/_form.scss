@@ -54,21 +54,6 @@ label[for] {
     
 }
 
-.sudo-button { 
-    @include border;
-    @include corner-radius($radius-s);
-    overflow: hidden;
-    background-color: $color-secondary;
-    border-color: $color-secondary;
-    color: $white;
-    
-    button {
-        @include input-type-text-style;
-        border: none;
-        background-color: transparent;
-    }
-    
-    &:active {
-        transform: translate(0, $one);
-    }
+.sudo-button {    
+    @include button-style-default;    
 }

@@ -1,4 +1,4 @@
-<?php if ( is_active_sidebar( 'sidebar-secondary' ) && ! is_page() ) : ?>
+<?php if ( is_active_sidebar( 'sidebar-secondary' ) ) : ?>
 <section id="secondary-sidebar" class="sidebar secondary-sidebar" role="complementary">
     <div class="secondary-sidebar-cr">
         <h2 class="secondary-sidebar-heading">Secondary Content</h2>
