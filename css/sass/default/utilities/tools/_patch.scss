@@ -41,10 +41,10 @@
 //------------------------- Visually Hidden Reversed
 // Usage: to toggle visually-hidden elements
 @mixin vhide-rev {
-    clip: rect(auto, auto, auto, auto);
+    clip: auto;
     height: auto;
     margin: auto;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
     position: static;
     width: auto;

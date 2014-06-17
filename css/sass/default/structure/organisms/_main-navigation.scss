@@ -5,6 +5,8 @@
 // and the <ul> as .nav-menu > ul
 
 div.nav-menu {
+    position: relative;
+    z-index: 900;
     
     li {
         margin-bottom: auto;
@@ -22,7 +24,6 @@ div.nav-menu {
         @include mq($tablet, $query1: max) {
 
             .status-mobile-main-nav-active & {
-
                 @include size(100%);
                 background-color: $color-primary;
                 overflow-x: hidden;
@@ -40,10 +41,10 @@ div.nav-menu {
             @extend %unlist;
         }
         
-        // Non-mobile mode
-        @include mq($tablet, ieFixOn) {
-            
-            > ul {
+        > ul {
+        
+            // Non-mobile mode
+            @include mq($tablet, ieFixOn) {
                 @include center-list;
             }
             
@@ -55,6 +56,10 @@ div.nav-menu {
             // Non-mobile mode
             @include mq($tablet, ieFixOn) {
                 vertical-align: top;
+            }
+            
+            &:last-child {
+                margin-right: auto;
             }
             
         }
@@ -75,7 +80,9 @@ div.nav-menu {
 
         }
         
-        .children {
+        .children,
+        .sub-menu {
+            @include vhide;
             
             // Mobile mode
             @include mq($tablet, $query1: max) {
@@ -85,71 +92,117 @@ div.nav-menu {
                 }
                 
             }
-            
-            // Non-mobile mode
-            @include mq($tablet, ieFixOn) {
-                @include vhide;
-            }
         
         }
         
-        .page_item_has_children {
+        .page_item_has_children,
+        .menu-item-has-children {            
+            position: relative;
             
             // Non-mobile mode
-            @include mq($tablet, ieFixOn) {                
-                position: relative;
+            @include mq($tablet, ieFixOn) {
+                padding-right: $block-l;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:after {                    
+                $icon-size: .75rem;
+                @include sudo-ct;
+                @include position-offset($icon-size);
+                @include size($icon-size);
+                @include background-image-icon('../img/more.svg');
+                @include transition(opacity);
+                margin-right: 1.35rem;
+                opacity: .25;
                 
-                > a {
-                    padding-right: 2.5rem;
+                // Mobile mode
+                @include mq($tablet, $query1: max) {
+                    top: 1.65rem;
+                    @include size(1rem);
                 }
                 
-                &:after {
+            }
+
+            &:hover:after {
+                opacity: .5;
+            }
+
+            &.status-sub-nav-active:after {
+                @include background-image-icon('../img/more-light.svg');
+                @include transform(rotate(180deg));
+                opacity: .75;                    
+            }
+
+            &.status-sub-nav-active:hover:after {
+                opacity: .95;
+            }
+            
+            &.status-sub-nav-active:hover {
+                background-color: darken($color-primary, 5%);
+            }
+
+            &.status-sub-nav-active {
+                background-color: $color-primary;
+                @include transition-bg-color;
+
+                > * {
+                    color: $white;
                     
-                    $icon-size: .75rem;
+                    // Mobile mode
+                    @include mq($tablet, $query1: max) {
+                        background-color: $darken15;
+                    }
                     
-                    @include sudo-ct;
-                    @include position-offset($icon-size);
-                    @include size($icon-size);
-                    @include background-image-icon('../img/more.svg');
-                    margin-right: .75rem;
                 }
-                
-                &.active:after {
-                    @include background-image-icon('../img/more-light.svg');
+
+                a {
+                    color: $white;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
                 }
-                
-                &.active {
+
+                > .children,
+                > .sub-menu {
+                    @include vhide-rev;
+                }
+
+                .children,
+                .sub-menu {
                     background-color: $color-primary;
+                    text-align: left;
                     
-                    
-                    > * {
-                        color: $white;
+                    // Mobile mode
+                    @include mq($tablet, $query1: max) {
+                        background-color: $darken15;
                     }
                     
-                    a {
-                        color: $white;
-
-                        &:hover {
-                            background-color: $darken5;
-                            text-decoration: none;
-                        }
-
-                    }
-                    
-                    > .children {
-                        @include vhide-rev;
-                    }
-                    
-                    .children {
+                    // Non-mobile mode
+                    @include mq($tablet, ieFixOn) {
                         @include position($t: 100%);
-                        min-width: 10rem;
-                        background-color: $color-primary;
-                        text-align: left;
-                        white-space: nowrap;                        
+                        min-width: 15rem;
+                        white-space: nowrap;
                     }
-                                        
+                    
+                    a:hover {
+                        background-color: $darken5;
+                    }
+                    
                 }
+
+            }
+
+            > a {
                 
+                // Non-mobile mode
+                @include mq($tablet, ieFixOn) {
+                    padding-right: 0;
+                }
             }
             
         }

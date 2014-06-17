@@ -313,16 +313,6 @@
     @include svg-iconize;
 }
 
-
-//------------------------- Transition
-@mixin transform ($property) {
-    -webkit-transform: $property;
-    -moz-transform: $property;
-    -ms-transform: $property;
-    -o-transform: $property;
-    transform: $property;
-}
-
 //------------------------- Position
 // Usage: @include pos($t: 100%, $l: 0);
 

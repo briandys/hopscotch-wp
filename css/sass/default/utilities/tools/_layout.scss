@@ -8,6 +8,7 @@
     .masthead-cr {
         position: relative;
         padding-bottom: 1rem;
+        text-align: center;
     }
     
     .masthead-header {
@@ -40,6 +41,10 @@
         padding-left: 0;
         padding-right: 0;
     }
+    
+    .main-navigation {
+        display: inline-block;
+    }
 
 }
 
@@ -65,11 +70,6 @@
         line-height: normal;
     }
     
-    .main-navigation {
-        @include valign-mid;
-        float: left;
-    }
-    
     .header-sidebar {
         @include valign-mid;
         @include position($t: 0, $r: 0);
@@ -78,6 +78,11 @@
     
     .site-description {
         @include vhide;
+    }
+    
+    .main-navigation {
+        @include valign-mid;
+        float: left;
     }
 
 }

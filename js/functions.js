@@ -4,29 +4,27 @@
 	    _window = $( window );
 
 	
+    // Main navigation toggle for mobile mode
 	( function() {
 		
-		var mainNav = $( '#main-navigation' ), mainNavControl, overlay, navMenu, mainNavActive, mainNavInactive;
-		if ( ! mainNav )
+		var mainNav = $( '#main-navigation' ),
+            mainNavControl = mainNav.find( '#main-navigation-control' ),
+            mainNavContent = mainNav.find( '.main-navigation-ct' ),
+            navMenu = mainNav.find( 'div.nav-menu > ul' );
+		
+        if ( ! mainNav )
 			return;
-
-		mainNavControl = mainNav.find( '#main-navigation-control' );
+		
 		if ( ! mainNavControl )
-			return;
+			return;        
         
-        mainNavContent = mainNav.find( '.main-navigation-ct' );
 		if ( ! mainNavContent )
 			return;
-
-		navMenu = mainNav.find( 'div.nav-menu > ul' );
+		
 		if ( ! navMenu || ! navMenu.children().length ) {
 			mainNavControl.hide();
 			return;
 		}
-
-		overlay = html;
-		if ( ! overlay )
-			return;
 		
 		mainNavActive = 'status-mobile-main-nav-active';
 		mainNavInactive = 'status-mobile-main-nav-inactive';
@@ -37,18 +35,18 @@
 		};
 		
         // Activates the nav
-		$( mainNavControl ).on( 'click.hopscotch', function(e) {
+		mainNavControl.on( 'click.hopscotch', function(e) {
 			navToggle();
 			e.stopPropagation();
 		} );
 		
         // Prevents the actual nav to deactivate the nav
-		$( navMenu ).on( 'click.hopscotch', function(e) {
+		navMenu.on( 'click.hopscotch', function(e) {
 			e.stopPropagation();
 		});
 		
         // Overlay deactivates the nav
-		$( mainNavContent ).on( 'click.hopscotch', function(e) {
+		html.on( 'click.hopscotch', function(e) {
 			if ( html.hasClass( mainNavActive )) {
 				navToggle();
 			}
@@ -61,6 +59,70 @@
 		});
 		
 	} )();
+    
+   
+    // Sub navigation toggle
+    $( function() {
+		
+        var subNavMenuMain = $( 'div.nav-menu' ),
+            subNavMenuParent = subNavMenuMain.find( '.page_item_has_children, .menu-item-has-children' ),
+            subNavMenuChildren = subNavMenuParent.find( '.children' ),
+            subNavMenuControl = subNavMenuParent.children( 'a' ),
+            subNavMenu = subNavMenuParent.find( '.children, .sub-menu' ),
+            subNavActive = 'status-sub-nav-active',
+            subNavInactive = 'status-sub-nav-inactive';
+        
+        if( ! subNavMenuMain )
+            return;
+        
+        if ( ! subNavMenuParent )
+            return;
+        
+        if ( ! subNavMenuControl )
+            return;
+        
+        if ( ! subNavMenu || ! subNavMenu.children().length ) {
+            subNavMenu.hide();
+            return;
+        }
+        
+        function subNavToggle() {
+			subNavMenuParent.removeClass( subNavActive ).siblings().removeClass( subNavActive );
+            subNavMenuParent.addClass( subNavInactive );
+		};
+        
+        subNavToggle();
+        
+        
+        // Toggle list item; on second activation, go to link
+        subNavMenuParent.on('click.hopscotch', function(e) {
+            if ( ! $(this).hasClass( subNavActive ) ) {
+                $(this).addClass( subNavActive ).removeClass( subNavInactive ).siblings().removeClass( subNavActive );
+                e.preventDefault();
+            } else {
+                $(this).addClass( subNavInactive ).removeClass( subNavActive );
+            }
+        });
+        
+        // HTML toggle
+		html.on( 'click.hopscotch', function(e) {
+			if ( subNavMenuParent.hasClass( subNavActive )) {
+				subNavToggle();
+			}
+		});
+        
+        // ESC key toggle
+        $(document).on( 'keydown.hopscotch', function(e) {
+			if (e.which === 27 && subNavMenuParent.hasClass( subNavActive )  ) {
+				subNavToggle();
+			}
+		});
+		
+        subNavMenuChildren.on( 'click.hopscotch', function(e) {
+			e.stopPropagation();
+		});
+    
+    });
     
     
 	// Header Search
@@ -267,39 +329,6 @@
 		});
    
     } );
-    
-    
-    $( function() {
-		
-        /*
-        function submenuToggle() {
-			$( html ).toggleClass( mainNavActive ).toggleClass( mainNavInactive ).toggleClass( overlayActive );
-		};
-        
-        // Overlay deactivates the nav
-		$( body ).on( 'click.hopscotch', function(e) {
-			if ( html.hasClass( mainNavActive )) {
-				navToggle();
-			}
-		});
-		
-		$(document).on( 'keydown.hopscotch', function(e) {
-			if (e.which === 27 && html.hasClass( mainNavActive )  ) {
-				navToggle();
-			}
-		});
-        */
-        
-        $('.page_item_has_children a').on('click.hopscotch', function(e) {
-            if ( ! $(this).parent().hasClass('active') ) {
-                $(this).parent().addClass('active');
-                e.preventDefault();
-            } else {
-                return true;
-            }
-        });
-    
-    });
     
 	
 } )( jQuery );
