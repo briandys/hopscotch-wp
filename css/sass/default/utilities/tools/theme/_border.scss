@@ -1,0 +1,38 @@
+//------------------------- Border
+@mixin border (
+    $t-width: $one,
+    $r-width: $t-width,
+    $b-width: $t-width,
+    $l-width: $t-width,
+    $style: solid,
+    $alpha: .35
+    ) {
+    
+    border: {
+        top-width: $t-width;
+        right-width: $r-width;
+        bottom-width: $b-width;
+        left-width: $l-width;
+        style: $style;
+        color: hsla(0, 0%, 0%, $alpha);
+    }
+        
+}
+
+%border {
+    @include border;
+}
+
+@mixin list-div-v {
+    @include border(0, 0, $one, 0, solid, .15);
+}
+
+@mixin table-div-v {
+    @include border($one, 0, 0, 0, solid, .15);
+}
+
+@mixin table-border-single($pos: bottom, $size: $one, $style: solid, $alpha: .15) {
+    border: {
+        #{$pos}: $size $style rgba($black, $alpha);
+    }
+}
