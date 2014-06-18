@@ -1,6 +1,14 @@
+//------------------------- Basic tags
 $heading-tags: h1, h2, h3, h4, h5, h6;
-
 $form-input-type-text: "input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea";
+
+
+//------------------------- Navigation menu
+$sub-menu-classes-each: '.children', '.sub-menu';
+$sub-menu-parent-classes-each: '.page_item_has_children', '.menu-item-has-children';
+
+$sub-menu-classes: '.children, .sub-menu';
+$sub-menu-parent-classes: '.page_item_has_children, .menu-item-has-children';
 
 $content-width-percentage: 60%;
 $sidebar-width-percentage: 100% - $content-width-percentage;
@@ -9,6 +17,7 @@ $total-width: 60rem;
 $content-width: 45rem;
 $sidebar-width: $total-width - $content-width;
 $sidebar-width-expand: 5;
+
 
 // Used as side spacing of elements
 $gutter: 1rem;

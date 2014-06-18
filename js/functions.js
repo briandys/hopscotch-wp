@@ -46,7 +46,7 @@
 		});
 		
         // Overlay deactivates the nav
-		html.on( 'click.hopscotch', function(e) {
+		mainNavContent.on( 'click.hopscotch', function(e) {
 			if ( html.hasClass( mainNavActive )) {
 				navToggle();
 			}
@@ -66,7 +66,7 @@
 		
         var subNavMenuMain = $( 'div.nav-menu' ),
             subNavMenuParent = subNavMenuMain.find( '.page_item_has_children, .menu-item-has-children' ),
-            subNavMenuChildren = subNavMenuParent.find( '.children' ),
+            subNavMenuChildren = subNavMenuParent.find( '.children, .sub-menu' ),
             subNavMenuControl = subNavMenuParent.children( 'a' ),
             subNavMenu = subNavMenuParent.find( '.children, .sub-menu' ),
             subNavActive = 'status-sub-nav-active',

@@ -4,26 +4,44 @@
 // As general usage for WordPress and others (like plain HTML), refer to .nav-menu as div.nav-menu
 // and the <ul> as .nav-menu > ul
 
-div.nav-menu {
-    position: relative;
-    z-index: 900;
-    
-    li {
-        margin-bottom: auto;
-    }
 
-}
-
-
-// Main Navigation
 .main-navigation {
     
     div.nav-menu {
+        position: relative;
+        z-index: 900;
         
-        // Mobile mode
-        @include mq($tablet, $query1: max) {
+        > ul {
+                
+            @each $item in $sub-menu-parent-classes-each {
 
-            .status-mobile-main-nav-active & {
+                > #{$item}.status-sub-nav-inactive:after {
+                    
+                    // Non-mobile mode
+                    @include mq($tablet, ieFixOn) {
+                        @include background-image-icon('../img/more.svg');
+                        opacity: .25;
+                    }
+                    
+                }
+                
+                > #{$item}.status-sub-nav-inactive:hover:after {
+                    
+                    // Non-mobile mode
+                    @include mq($tablet, ieFixOn) {
+                        opacity: .5;
+                    }
+                    
+                }
+
+            }
+
+        }
+        
+        .status-mobile-main-nav-active & {
+            
+            // Mobile mode
+            @include mq($tablet, $query1: max) {
                 @include size(100%);
                 background-color: $color-primary;
                 overflow-x: hidden;
@@ -32,10 +50,10 @@ div.nav-menu {
                 li, a {
                     color: $white;
                 }
-
+                
             }
-
-        }
+            
+        }        
         
         ul {        
             @extend %unlist;
@@ -67,56 +85,58 @@ div.nav-menu {
         a {
             display: block;
             padding: 1rem;
-            @include transition-bg-color;            
-        }
-        
-        // Mobile mode
-        @include mq($tablet, $query1: max) {
+            @include transition-bg-color;  
             
-            a:hover {
-                background-color: $darken5;
-                text-decoration: none;
-            }
-
-        }
-        
-        .children,
-        .sub-menu {
-            @include vhide;
-            
-            // Mobile mode
-            @include mq($tablet, $query1: max) {
+            &:hover {
                 
-                a {
-                    padding-left: 2rem;
+                // Mobile mode
+                @include mq($tablet, $query1: max) {
+                    text-decoration: none;
                 }
                 
             }
-        
         }
         
-        .page_item_has_children,
-        .menu-item-has-children {            
+        #{$sub-menu-classes} {
+            @include vhide;
+        }
+        
+        #{$sub-menu-parent-classes} {
             position: relative;
             
-            // Non-mobile mode
-            @include mq($tablet, ieFixOn) {
-                padding-right: $block-l;
+            &:hover {
+                
+                // Mobile mode
+                @include mq($tablet, $query1: max) {
+                    background-color: $darken15;
+                }
+                
+            }
+            
+            > a {
+                margin-right: $block-l;
+                
+                // Non-mobile mode
+                @include mq($tablet, ieFixOn) {
+                    padding-right: 0;
+                }
+                
             }
 
             &:hover {
                 cursor: pointer;
             }
-
+            
+            // Pseudo-element for the more icon
             &:after {                    
                 $icon-size: .75rem;
                 @include sudo-ct;
                 @include position-offset($icon-size);
-                @include size($icon-size);
-                @include background-image-icon('../img/more.svg');
+                @include size($icon-size);                
                 @include transition(opacity);
                 margin-right: 1.35rem;
-                opacity: .25;
+                opacity: .5;
+                @include background-image-icon('../img/more-light.svg');
                 
                 // Mobile mode
                 @include mq($tablet, $query1: max) {
@@ -126,36 +146,20 @@ div.nav-menu {
                 
             }
 
-            &:hover:after {
-                opacity: .5;
-            }
-
+            // Light more icon
             &.status-sub-nav-active:after {
-                @include background-image-icon('../img/more-light.svg');
                 @include transform(rotate(180deg));
-                opacity: .75;                    
             }
 
             &.status-sub-nav-active:hover:after {
-                opacity: .95;
-            }
-            
-            &.status-sub-nav-active:hover {
-                background-color: darken($color-primary, 5%);
+                opacity: 1;
             }
 
             &.status-sub-nav-active {
                 background-color: $color-primary;
-                @include transition-bg-color;
 
                 > * {
-                    color: $white;
-                    
-                    // Mobile mode
-                    @include mq($tablet, $query1: max) {
-                        background-color: $darken15;
-                    }
-                    
+                    color: $white;                    
                 }
 
                 a {
@@ -166,43 +170,40 @@ div.nav-menu {
                     }
 
                 }
+                
+                @each $item in $sub-menu-classes-each {
 
-                > .children,
-                > .sub-menu {
-                    @include vhide-rev;
+                    > #{$item} {
+                        @include vhide-rev;
+                    }
+
                 }
 
-                .children,
-                .sub-menu {
+                #{$sub-menu-classes} {
                     background-color: $color-primary;
                     text-align: left;
-                    
-                    // Mobile mode
-                    @include mq($tablet, $query1: max) {
-                        background-color: $darken15;
-                    }
                     
                     // Non-mobile mode
                     @include mq($tablet, ieFixOn) {
                         @include position($t: 100%);
-                        min-width: 15rem;
+                        min-width: 100%;
                         white-space: nowrap;
                     }
-                    
-                    a:hover {
-                        background-color: $darken5;
+                
+                    li:hover {
+                        background-color: $darken15;
                     }
                     
                 }
 
-            }
-
-            > a {
+            }            
                 
-                // Non-mobile mode
-                @include mq($tablet, ieFixOn) {
-                    padding-right: 0;
+            @each $item in $sub-menu-classes-each {
+
+                > #{$item} {
+                    @include vhide;
                 }
+
             }
             
         }
@@ -214,46 +215,47 @@ div.nav-menu {
 
 .main-navigation-heading {
     margin-bottom: auto;
-    @include vhide;    
     
     // Mobile mode
-    @include mq($tablet, $query1: max) {
-    
-        @include vhide-rev;
+    @include mq($tablet, $query1: max) {    
         @include font-size-rem($font-reset);
-
         @include size($block-l);
-        @include svg-iconize;
+        @include svg-iconize;        
+    }
+    
+    // Non-mobile mode
+    @include mq($tablet, ieFixOn) {
+        @include vhide;
+    }
+    
+    .icon {
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
 
-        .icon {
             @include size($block-s);
             @include transition(fill);
-            
+
             .modernizr-no-inlinesvg & {
                 @include vhide-rev;
             }
 
         }
-
-        &:hover {
+    }
+    
+    &:hover {
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
             cursor: pointer;
         }
-
-        .label {
+    }
+    
+    .label {
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
             @include vhide;
         }
-        
     }
 
-}
-
-.main-navigation-cr {
-    
-    // Mobile mode
-    @include mq($tablet, $query1: max) {
-        text-align: center;
-    }
-    
 }
 
 .main-navigation-ct {
@@ -267,12 +269,14 @@ div.nav-menu {
         @include size(100%);
         @include transform(translate(0, 100%));
         text-align: left;
-        z-index: 100;
+        z-index: 100;        
+    }
 
-        .status-mobile-main-nav-active & {
-            
+    .status-mobile-main-nav-active & {
+        
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
             @include transform(translate(0, 0));
-
         }
         
     }
