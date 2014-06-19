@@ -1,19 +1,29 @@
 .breadcrumb-item {
+    position: relative;
     display: inline-block;
-    margin-right: .5rem;
+    margin-right: 1.5rem;
     @include font-size-rem($font-s-m);
+    
+    a {
+        @include linkstyle-secondary;
+    }
     
     &:last-child {
         margin-right: auto;
     }
     
     &:after {
-        content: '>';
+        $icon-size: .65rem;
+        @include sudo-ct;
+        @include position-offset($icon-size, left, 100%);
         margin-left: .5rem;
-        color: $gray75;
+        @include size($icon-size);
+        @include background-image-icon('../img/more.svg');
+        opacity: .25;
+        @include transform(rotate(-90deg));
     }
     
     &:last-child:after {
-        content: '';
+        display: none;
     }
 }

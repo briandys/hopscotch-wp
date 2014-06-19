@@ -14,14 +14,16 @@
                 <?php hopscotch_entry_subtitle(); ?>
             
                 <?php if ( ! has_post_format( 'status' ) ) : ?>
-                <div class="entry-meta">
-                    <?php hopscotch_entry_date(); ?>
-                    <?php hopscotch_entry_byline(); ?>
-                </div><!-- .entry-meta -->
-                
-                    <?php if ( ! is_search() ) : ?>
-                    <?php hopscotch_entry_action_comment(); ?>
-                    <?php endif; ?>
+                    <div class="entry-meta">
+                        <?php hopscotch_entry_date(); ?>
+                        <?php hopscotch_entry_byline(); ?>
+                    </div><!-- .entry-meta -->
+
+                    <?php
+                        if ( ! is_search() ) :
+                            hopscotch_entry_action_comment();
+                        endif;
+                    ?>
                 
                 <?php endif; ?>
                 

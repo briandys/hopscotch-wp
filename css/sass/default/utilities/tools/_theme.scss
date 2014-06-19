@@ -3,6 +3,7 @@
 
 
 @import 'theme/border';
+@import 'theme/linkstyle';
 
 
 //------------------------- Faint
@@ -69,21 +70,7 @@
 }
 
 
-//------------------------- Link Styles
-@mixin linkstyle-primary {
-    color: $color-primary;
-}
 
-@mixin linkstyle-secondary {
-    color: rgba($color-link-tertiary, .75);
-    border-bottom: $one dotted currentColor;        
-    
-    &:hover {
-        color: rgba($color-link-tertiary, 1);
-        border-bottom: none;
-        text-decoration: none;
-    }
-}
 
 
 $color-bg-darken: rgba($black, .05);

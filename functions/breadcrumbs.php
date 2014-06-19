@@ -10,7 +10,7 @@ function hopscotch_breadcrumbs() {
         
     global $post;
     
-    if ( is_page() && $post->post_parent > 0 || is_single() || is_category() ) {
+    if ( is_page() && $post->post_parent > 0 ) {
 
         echo '<div class="action-items breadcrumbs">';
         echo '<p class="assistive-text">Breadcrumbs:</p>';
@@ -24,9 +24,11 @@ function hopscotch_breadcrumbs() {
                 foreach ($ancestors as $crumb) {
                     echo '<li class="action-item breadcrumb-item"><a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a></li>';
                 }
+                echo '</ul>';
             }
         }
 
+        /*
         if (is_single()) {
             $category = get_the_category();
             echo '<ul class="action-list breadcrumb-list">';
@@ -38,11 +40,11 @@ function hopscotch_breadcrumbs() {
             echo '<ul class="action-list breadcrumb-list">';
             echo '<li class="action-item breadcrumb-item">'.$category[0]->cat_name.'</li>';
         }
-
-        echo '</ul>';
+        */
+        
         echo '</div>';
 
-    } elseif (is_front_page()) {
+    } /* elseif (is_front_page()) {
 
         $ancestors = get_post_ancestors($post);
         echo '<div class="action-items breadcrumbs">';
@@ -57,7 +59,7 @@ function hopscotch_breadcrumbs() {
         }
         echo '</ul>';
         echo '</div>';
-    }
+    } */
     ?>
 
 <?php }
