@@ -283,7 +283,7 @@
     
     
     // Sticky footer
-    $( function () {
+    ( function() {
         
         $(window).on('resize', function(){
             
@@ -309,7 +309,7 @@
         
         }).resize();
     
-    } );
+    } )();
     
     
     // Focusing on form elements
