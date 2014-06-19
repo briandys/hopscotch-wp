@@ -71,6 +71,10 @@
         margin-top: .5rem;
         margin-bottom: 1rem;
         
+        > * {
+            display: inline-block;
+        }
+        
         .page & {
             @extend %vhide;
         }
@@ -100,6 +104,10 @@
    
     a {
         @include linkstyle-secondary;
+    }
+    
+    .entry-hr & {
+        margin-right: 1rem;
     }
     
 }

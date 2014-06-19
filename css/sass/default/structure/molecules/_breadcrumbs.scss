@@ -1,0 +1,19 @@
+.breadcrumb-item {
+    display: inline-block;
+    margin-right: .5rem;
+    @include font-size-rem($font-s-m);
+    
+    &:last-child {
+        margin-right: auto;
+    }
+    
+    &:after {
+        content: '>';
+        margin-left: .5rem;
+        color: $gray75;
+    }
+    
+    &:last-child:after {
+        content: '';
+    }
+}

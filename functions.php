@@ -12,7 +12,7 @@ function hopscotch_components_directory() {
 
 
 // Front-end
-require_once( trailingslashit(get_template_directory()) . 'functions/font.php');
+// require_once( trailingslashit(get_template_directory()) . 'functions/font.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
@@ -32,6 +32,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.p
 // Navigation
 require_once( trailingslashit(get_template_directory()) . 'functions/page-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/post-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumbs.php');
 
 // Entry
 require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');

@@ -3,15 +3,13 @@
         <header class="entry-hr">
             <div class="entry-hr-cr">
 				
-				<?php
-                    if ( is_single() || is_page() ) :
-                        the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-                    else :
-                        the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-                    endif;
-                ?>
+				<?php the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+                
+                <?php get_template_part( ''.hopscotch_components_directory().'/breadcrumbs' ); ?>
                 
                 <?php hopscotch_entry_action_edit(); ?>
+                
+                <?php hopscotch_breadcrumbs(); ?>
                 
                 <?php hopscotch_entry_subtitle(); ?>
             
@@ -54,7 +52,7 @@
                 <?php endif; ?>
             </div>
             
-            <?php if ( is_page() ) : ?>
+            <?php if ( is_page() && ! is_page_template( 'templates/parent.php' ) ) : ?>
                 <?php  // Display child page
                 $parent = $post->ID;
                 $args = array(

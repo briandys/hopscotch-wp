@@ -3,7 +3,7 @@
 
 
 //------------------------- Header for Non-mobile mode
-@mixin header-plain-text-center {
+@mixin header-plain-text {
     
     .masthead-cr {
         position: relative;
@@ -13,7 +13,6 @@
     
     .masthead-header {
         padding: 1rem;
-        padding-bottom: 0;
         text-align: center;
     }
     
@@ -21,7 +20,12 @@
         margin-bottom: auto;
         @include font-size-rem($font-xl);
         line-height: normal;
-    }    
+    } 
+    
+    .site-title-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }   
 
     .header-sidebar {
         margin-top: 2rem;
@@ -55,7 +59,9 @@
     .masthead-cr {
         @include cf;        
         position: relative;
-        height: $block-l;        
+        
+        // Activate if there needs to be a fixed height
+        // height: $block-l;
     }
     
     .masthead-header {
@@ -74,6 +80,11 @@
         @include valign-mid;
         @include position($t: 0, $r: 0);
         float: right;
+        
+        .search-form {
+            background-color: $white;
+        }
+
     }
     
     .site-description {
@@ -83,6 +94,81 @@
     .main-navigation {
         @include valign-mid;
         float: left;
+    }
+
+}
+
+
+//------------------------- Search theme light
+@mixin search-theme-reverse {
+    
+    @include placeholder($white);
+    
+    .header-sidebar .search-control .icon,
+    .header-sidebar .search-submit .icon {
+        fill: $white;
+    }
+    
+    .header-sidebar .search-form {
+        background-color: $color-primary;
+    }
+    
+    .header-sidebar .search-control {
+        opacity: .75;
+        @include transition(opacity);
+    }
+    
+    .header-sidebar .search-control:hover {
+        opacity: 1;
+    }
+    
+    .header-sidebar .search-input {
+        color: $white;
+    }
+    
+}
+
+
+//------------------------- Header for all seasons
+@mixin header-semi-compact {
+    
+    @include header-compact;    
+    @include search-theme-reverse;
+    
+    .masthead-cr {
+        background-color: $color-primary;
+    }
+    
+    .site-title-link {
+        padding: 1rem;
+        color: $white;
+        @include transition(background-color);
+        
+        &:hover {
+            background-color: darken($color-primary, 5%);
+            text-decoration: none;
+        }
+    }
+    
+    div.nav-menu > ul > li {
+        
+        > a {
+            color: $white;
+            
+            &:hover {
+                text-decoration: none;
+            }
+            
+        }
+        
+        &:hover {
+            background-color: darken($color-primary, 5%);
+        }
+        
+    }
+    
+    .main-navigation {
+        float: none;
     }
 
 }

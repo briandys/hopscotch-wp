@@ -8,14 +8,23 @@
 div.nav-menu {
     position: relative;
     z-index: 900;
-
+    
     > ul {
+        
+        // Non-mobile mode
+        @include mq($tablet, ieFixOn) {
+            @include center-list;
+        }
 
         > {
             
             .page_item_has_children,
             .menu-item-has-children {
 
+                &.status-sub-nav-active {
+                    background-color: darken($color-primary, 5%);
+                }
+                
                 &.status-sub-nav-inactive:after {
                     @include mq($tablet, ieFixOn) {
                         @include background-image-icon('../img/more.svg');
@@ -36,40 +45,15 @@ div.nav-menu {
             
         }
 
-    }
-
-    .status-mobile-main-nav-active & {
-
-        // Mobile mode
-        @include mq($tablet, $query1: max) {
-            @include size(100%);
-            background-color: $color-primary;
-            overflow-x: hidden;
-            overflow-y: auto;
-
-            li, a {
-                color: $white;
-            }
-
-        }
-
     }        
 
     ul {        
         @extend %unlist;
     }
 
-    > ul {
-
-        // Non-mobile mode
-        @include mq($tablet, ieFixOn) {
-            @include center-list;
-        }
-
-    }
-
     li {
         margin-bottom: auto;
+        @include transition(background-color);
 
         // Non-mobile mode
         @include mq($tablet, ieFixOn) {
@@ -78,6 +62,15 @@ div.nav-menu {
 
         &:last-child {
             margin-right: auto;
+        }
+        
+        &:hover {
+            
+            // Mobile mode
+            @include mq($tablet, $query1: max) {
+                background-color: darken($color-primary, 5%);
+            }
+            
         }
 
     }
@@ -97,21 +90,29 @@ div.nav-menu {
         }
     }
 
+    .status-mobile-main-nav-active & {
+
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
+            @include size(100%);
+            background-color: darken($color-primary, 10%);
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            li, a {
+                color: $white;
+            }
+
+        }
+
+    }
+
     .children, .sub-menu {
         @include vhide;
     }
 
     .page_item_has_children, .menu-item-has-children {
         position: relative;
-
-        &:hover {
-
-            // Mobile mode
-            @include mq($tablet, $query1: max) {
-                background-color: $darken15;
-            }
-
-        }
 
         > a {
             margin-right: $block-l;
@@ -135,8 +136,9 @@ div.nav-menu {
             @include size($icon-size);                
             @include transition(opacity);
             margin-right: 1.35rem;
-            opacity: .5;
             @include background-image-icon('../img/more-light.svg');
+            opacity: .5;
+            z-index: 90;
 
             // Mobile mode
             @include mq($tablet, $query1: max) {
@@ -157,6 +159,11 @@ div.nav-menu {
 
         &.status-sub-nav-active {
             background-color: $color-primary;
+            @include transition(background-color);
+            
+            &:hover {
+                background-color: darken($color-primary, 5%);
+            }
 
             a {
                 color: $white;
@@ -182,8 +189,10 @@ div.nav-menu {
 
             .children,
             .sub-menu {
-                background-color: $color-primary;
+                $fold-size: .75rem;
+                background-color: darken($color-primary, 2.5%);
                 text-align: left;
+                z-index: 90;
 
                 // Non-mobile mode
                 @include mq($tablet, ieFixOn) {
@@ -192,13 +201,51 @@ div.nav-menu {
                     white-space: nowrap;
                     
                     // Folding list
-                    margin-top: -.5rem;
-                    margin-left: .5rem;
-                    border: $one solid $white;
+                    margin-top: -$fold-size;
+                    margin-left: $fold-size;
+                
                 }
-
-                li:hover {
-                    background-color: $darken15;
+                
+                li {
+                    @include transition(background-color);
+                    
+                    &:hover {
+                        background-color: $darken15;
+                    }
+                    
+                }
+                
+                // White line
+                &:before {
+                    
+                    // Non-mobile mode
+                    @include mq($tablet, ieFixOn) {
+                        @include sudo-ct;
+                        top: 0;
+                        left: 0;
+                        @include size(100%, $one);
+                        background-color: rgba($white, .25);
+                        z-index: 90;
+                    }
+                    
+                }
+                
+                // Triangle shadow
+                &:after {
+                    
+                    // Non-mobile mode
+                    @include mq($tablet, ieFixOn) {
+                        @include sudo-ct;
+                        top: 0;
+                        left: 0;
+                        margin-left: -$fold-size;
+                        @include size(0);
+                        border-style: solid;
+                        border-width: 0 0 $fold-size $fold-size;
+                        border-color: transparent transparent $darken15 transparent;
+                        z-index: 90;
+                    }
+                    
                 }
 
             }
@@ -217,8 +264,6 @@ div.nav-menu {
     }
 
 }
-    
-
 
 
 .main-navigation-heading {

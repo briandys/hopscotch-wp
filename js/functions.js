@@ -1,9 +1,37 @@
 (function ($) {
 	var html    = $( 'html' ),
 		body    = $( 'body' ),
-	    _window = $( window );
+	    _window = $( window ),
+        wideViewportClass = 'type-wide-viewport';
 
 	
+    // Media query for wide or narrow viewport
+    $( function () {
+        
+        $(window).on('resize', function(){
+            
+            var windowWidth = $(window).width(),
+                nonMobileWidth = 768,
+                narrowViewportClass = 'type-narrow-viewport';
+            
+            function mqNonMobile() {
+                html.addClass( wideViewportClass );
+                html.removeClass( narrowViewportClass );
+                
+            };
+
+            function mqMobile() {
+                html.addClass( narrowViewportClass );
+                html.removeClass( wideViewportClass );
+            };
+            
+            ( windowWidth >= nonMobileWidth ) ? mqNonMobile() : mqMobile();
+        
+        }).resize();
+    
+    } );
+    
+    
     // Main navigation toggle for mobile mode
 	( function() {
 		
@@ -70,7 +98,8 @@
             subNavMenuControl = subNavMenuParent.children( 'a' ),
             subNavMenu = subNavMenuParent.find( '.children, .sub-menu' ),
             subNavActive = 'status-sub-nav-active',
-            subNavInactive = 'status-sub-nav-inactive';
+            subNavInactive = 'status-sub-nav-inactive',            
+            subNavMenuSecondParent = subNavMenu.find( subNavMenuParent );
         
         if( ! subNavMenuMain )
             return;
@@ -87,8 +116,8 @@
         }
         
         function subNavToggle() {
-			subNavMenuParent.removeClass( subNavActive ).siblings().removeClass( subNavActive );
             subNavMenuParent.addClass( subNavInactive );
+			subNavMenuParent.removeClass( subNavActive ).siblings().removeClass( subNavActive );
 		};
         
         subNavToggle();
@@ -97,12 +126,14 @@
         // Toggle list item; on second activation, go to link
         subNavMenuParent.on('click.hopscotch', function(e) {
             if ( ! $(this).hasClass( subNavActive ) ) {
-                $(this).addClass( subNavActive ).removeClass( subNavInactive ).siblings().removeClass( subNavActive );
+                $(this).addClass( subNavActive ).removeClass( subNavInactive );
+                $(this).siblings( '.page_item_has_children, .menu-item-has-children' ).removeClass( subNavActive ).addClass( subNavInactive );
                 e.preventDefault();
             } else {
                 $(this).addClass( subNavInactive ).removeClass( subNavActive );
-            }
+            }            
         });
+        
         
         // HTML toggle
 		html.on( 'click.hopscotch', function(e) {
@@ -121,11 +152,22 @@
         subNavMenuChildren.on( 'click.hopscotch', function(e) {
 			e.stopPropagation();
 		});
+        
+        // Sub nav toggle for wide viewport
+        subNavMenuSecondParent.on('click.hopscotch', function() {            
+            if ( html.hasClass( wideViewportClass )) {				
+                if ( $(this).hasClass( 'status-sub-nav-active' )) {                
+                    $(this).nextAll().hide();
+                } else {
+                    $(this).nextAll().show();
+                }                
+			}            
+        });
     
     });
     
     
-	// Header Search
+	// Search located on header
 	$( function () {
 		var search = $( '#header-sidebar .search' ),
 			searchControl = $( '#search-control' ),
@@ -213,7 +255,8 @@
 	
 	// Scroll Top
 	$( function () {
-		_window.scroll( function() {
+		
+        $(window).on('scroll', function(){
 			
             var scrollTopActive = 'status-scroll-top-active',
                 scrollTopInactive = 'status-scroll-top-inactive';
@@ -234,7 +277,7 @@
                 scrollTopDeactivate();
             }
             
-		});
+		}).scroll();
 		
 	} );
     

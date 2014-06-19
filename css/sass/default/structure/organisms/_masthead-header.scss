@@ -1,13 +1,21 @@
+// Narrow viewport
 @include mq($tablet, $query1: max) {
     @include header-compact;
 }
 
+// Wide viewport
 @include mq($tablet, ieFixOn) {
-    @include header-plain-text-center;
+    @include header-semi-compact;
 }
 
 .skip-to-content-link {
     @extend %vhide;
+}
+
+.site-title-link {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .site-description {

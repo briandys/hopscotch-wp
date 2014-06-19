@@ -1,5 +1,9 @@
-ul, ol {
-    margin-left: 2rem;
+ol, ul {
+    margin-left: 2rem;   
+    
+    &:last-child {
+        margin-bottom: auto;
+    }
 }
 
 
@@ -10,14 +14,7 @@ li {
         margin-top: 1rem;
     }
     
-}
-
-
-ol, ul {
-    
-    li {
-        
-        > ol, > ul {
+    > ol, > ul {
             margin-top: $bottom-space-s;
         }
     
@@ -41,7 +38,5 @@ ol, ul {
             }
 
         }
-        
-    }
     
 }

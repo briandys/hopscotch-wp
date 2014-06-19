@@ -1,5 +1,5 @@
 .colophon {
-    margin-top: 2rem;
+    margin-top: 1rem;
     
     [data-state-colophon="fixed"] & {
         @include position(fixed, $l: 0, $b: 0);

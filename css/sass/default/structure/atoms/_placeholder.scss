@@ -1,11 +1,17 @@
-::-webkit-input-placeholder {
-    color: $color-placeholder-text;
+@mixin placeholder($color: $color-placeholder-text) {
+
+    ::-webkit-input-placeholder {
+        color: $color;
+    }
+
+    ::-moz-placeholder {
+        color: $color;
+    }
+
+    :-ms-input-placeholder {
+        color: $color;
+    }
+    
 }
 
-::-moz-placeholder {
-    color: $color-placeholder-text;
-}
-
-:-ms-input-placeholder {
-    color: $color-placeholder-text;
-}
+@include placeholder($color-placeholder-text);
