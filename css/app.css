@@ -2885,11 +2885,25 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 
   /* line 138, sass/default/utilities/tools/_layout.scss */
+  .masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+  }
+
+  /* line 146, sass/default/utilities/tools/_layout.scss */
+  .main {
+    padding-top: 3.5rem;
+  }
+
+  /* line 150, sass/default/utilities/tools/_layout.scss */
   .masthead-cr {
     background-color: #00aaff;
   }
 
-  /* line 142, sass/default/utilities/tools/_layout.scss */
+  /* line 154, sass/default/utilities/tools/_layout.scss */
   .site-title-link {
     padding: 1rem;
     color: white;
@@ -2899,26 +2913,26 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: background-color 0.125s ease;
     transition: background-color 0.125s ease;
   }
-  /* line 147, sass/default/utilities/tools/_layout.scss */
+  /* line 159, sass/default/utilities/tools/_layout.scss */
   .site-title-link:hover {
     background-color: #0099e6;
     text-decoration: none;
   }
 
-  /* line 155, sass/default/utilities/tools/_layout.scss */
+  /* line 167, sass/default/utilities/tools/_layout.scss */
   div.nav-menu > ul > li > a {
     color: white;
   }
-  /* line 158, sass/default/utilities/tools/_layout.scss */
+  /* line 170, sass/default/utilities/tools/_layout.scss */
   div.nav-menu > ul > li > a:hover {
     text-decoration: none;
   }
-  /* line 164, sass/default/utilities/tools/_layout.scss */
+  /* line 176, sass/default/utilities/tools/_layout.scss */
   div.nav-menu > ul > li:hover {
     background-color: #0099e6;
   }
 
-  /* line 170, sass/default/utilities/tools/_layout.scss */
+  /* line 182, sass/default/utilities/tools/_layout.scss */
   .main-navigation {
     float: none;
   }

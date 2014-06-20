@@ -135,6 +135,18 @@
     @include header-compact;    
     @include search-theme-reverse;
     
+    .masthead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 900;
+    }
+    
+    .main {
+        padding-top: $block-l;
+    }
+    
     .masthead-cr {
         background-color: $color-primary;
     }
