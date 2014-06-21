@@ -1,9 +1,9 @@
 <article id="<?php do_action('hopscotch_post_id'); ?>"
-    <?php if ( is_page_template( 'templates/info-card.php' ) ) : ?>
+    <?php if ( ! is_page_template( 'templates/info-card.php' ) ) : ?>
+         <?php post_class('entry'); ?>
+    <?php else : ?>
          <?php post_class('entry vcard'); ?>
          itemscope itemtype="http://schema.org/Organization"
-    <?php else : ?>
-         <?php post_class('entry'); ?>
     <?php endif; ?>
 >
     <div class="entry-cr">
@@ -11,10 +11,10 @@
             <div class="entry-hr-cr">
 				
                 <!-- Entry title -->
-                <?php if ( is_page_template( 'templates/info-card.php' ) ) : ?>
-				<?php the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
-                <?php else : ?>
+                <?php if ( ! is_page_template( 'templates/info-card.php' ) ) : ?>
                 <?php the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+                <?php else : ?>
+				<?php the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
                 <?php endif; ?>
                 
                 <!-- Edit entry action -->
