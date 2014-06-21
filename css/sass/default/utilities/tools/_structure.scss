@@ -278,10 +278,8 @@
 }
 
 
-/**
- * Ratios
- * Returns the ratio for specified dimensions.
- */
+// Ratios
+// Returns the ratio for specified dimensions
 @function ratio($width, $height) {
   @return percentage( $height / $width);
 }

@@ -2,7 +2,6 @@
 
 // Setup
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/page-excerpt.php');
 
 
 //------------------------- Components Directory
@@ -18,6 +17,12 @@ function hopscotch_components_directory() {
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
+
+// Text domain
+require_once( trailingslashit(get_template_directory()) . 'functions/text-domain.php');
+
+// Page Excerpt
+require_once( trailingslashit(get_template_directory()) . 'functions/page-excerpt.php');
 
 // Register Sidebars
 require_once( trailingslashit(get_template_directory()) . 'functions/sidebar.php');
@@ -75,5 +80,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via
 require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
 
 // require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
+
 
 ?>
