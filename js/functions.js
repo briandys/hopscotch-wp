@@ -90,7 +90,7 @@
     
    
     // Sub navigation toggle
-    $( function() {
+    ( function() {
 		
         var subNavMenuMain = $( 'div.nav-menu' ),
             subNavMenuParent = subNavMenuMain.find( '.page_item_has_children, .menu-item-has-children' ),
@@ -164,11 +164,11 @@
 			}            
         });
     
-    });
+    } )();
     
     
 	// Search located on header
-	$( function () {
+	( function() {
 		var search = $( '#header-sidebar .search' ),
 			searchControl = $( '#search-control' ),
             searchField = $( '#header-sidebar .search-input' ),
@@ -211,24 +211,28 @@
 			}
 		});
 		
-	} );
+	} )();
 
 	
 	// WP: Twenty Fourteen - Makes "skip to content" link work correctly in IE9 and Chrome for better accessibility
-	_window.on( 'hashchange', function() {
-		var element = document.getElementById( location.hash.substring( 1 ) );
+	( function() {
+        
+        _window.on( 'hashchange', function() {
+            var element = document.getElementById( location.hash.substring( 1 ) );
 
-		if ( element ) {
-			if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) )
-				element.tabIndex = -1;
+            if ( element ) {
+                if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) )
+                    element.tabIndex = -1;
 
-			element.focus();
-		}
-	} );
+                element.focus();
+            }
+        } );
+        
+    } )();
     
     
     // Smooth scroll
-    $( function () {
+    ( function() {
         
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -250,11 +254,11 @@
             }
         });
         
-    } );
+    } )();
 	
 	
 	// Scroll Top
-	$( function () {
+	( function() {
 		
         $(window).on('scroll', function(){
 			
@@ -279,7 +283,7 @@
             
 		}).scroll();
 		
-	} );
+	} )();
     
     
     // Sticky footer
@@ -313,7 +317,7 @@
     
     
     // Focusing on form elements
-	$( function () {
+	( function() {
 		
 		// Focusing on form UIs
 		var form = $( 'form' );
@@ -326,19 +330,19 @@
 			$(this).parent().attr('data-state-form-element', 'unfocused');
 		});
         
-    } );
+    } )();
     
     
     // Adding 'parent-menu' to nav items with children
-    $( function () {		
-		// Check if nav li has children
-		$('.nav-menu .menu-item:has(.children, .sub-menu), .nav-menu .page_item:has(.children, .sub-menu)').addClass('parent-menu');
-	} );
+    ( function() {
+		$('.menu-item:has(.children, .sub-menu), .page_item:has(.children, .sub-menu)').addClass('parent-menu');
+	} )();
     
     
     // Define orientation of images
-    $( function () {	
-		$('.entry-ct img').each(function(){			
+    ( function() {	
+		
+        $('.entry-ct img').each(function(){			
             if (this.width == this.height) {
                 $(this).parents( '.img-cr' ).addClass( 'img-orientation-square' );
             } else if (this.width > this.height) {
@@ -348,18 +352,19 @@
             }
 		});
    
-    } );
+    } )();
     
     
     // WP: remove "novalidate" from Comment Form
-    $( function () {   
+    ( function() {
         $("#comment-form").removeAttr("novalidate");	
-    } );
+    } )();
     
     
     // Add alignment classes to image containers
-	$( function () {	
-		$('.entry-ct img').each(function(){			
+	( function() {
+		
+        $('.entry-ct img').each(function(){			
             if ( $(this).is( '.alignleft' ) ) {
                 $(this).parents( '.img-cr' ).addClass( 'img-alignment-left' );
             } else if ( $(this).is( '.alignright' ) ) {
@@ -371,7 +376,7 @@
             };
 		});
    
-    } );
+    } )();
     
 	
 } )( jQuery );

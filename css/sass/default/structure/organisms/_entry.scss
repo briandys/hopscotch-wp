@@ -126,14 +126,23 @@
 
 .entry-ct-cr {    
     
-    > * {
-        padding-left: $gutter;
-        padding-right: $gutter;
-        word-wrap: break-word;            
+    > {
         
-        &:last-child {
-            margin-bottom: auto;
+        * {
+            padding-left: $gutter;
+            padding-right: $gutter;
+            word-wrap: break-word;            
+
+            &:last-child {
+                margin-bottom: auto;
+            }
+            
         }
+        
+        p {
+            line-height: 1.75;
+        }
+        
     }
     
     @each $item in $heading-tags {

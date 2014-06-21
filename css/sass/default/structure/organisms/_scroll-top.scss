@@ -55,4 +55,8 @@
         
     }
     
+    &:active {
+        @include transform(translate(0, $one));
+    }
+    
 }

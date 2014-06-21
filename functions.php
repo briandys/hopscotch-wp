@@ -1,6 +1,8 @@
 <?php
 
+// Setup
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/page-excerpt.php');
 
 
 //------------------------- Components Directory
@@ -22,7 +24,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/sidebar.php
 
 // Customizer
 require_once( trailingslashit(get_template_directory()) . 'functions/customizer-structure.php');
-
 //require_once( trailingslashit(get_template_directory()) . 'functions/customizer-theme.php');
 
 // Header

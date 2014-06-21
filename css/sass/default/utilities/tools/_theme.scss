@@ -141,7 +141,7 @@ $color-bg-darken: rgba($black, .05);
     }
     
     &:active {
-        transform: translate(0, $one);
+        @include transform(translate(0, $one));
     }
     
 }

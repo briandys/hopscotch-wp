@@ -5,7 +5,7 @@
     @include font-size-rem($font-s-m);
     
     a {
-        @include linkstyle-secondary;
+        @include linkstyle-tertiary;
     }
     
     &:last-child {
@@ -17,6 +17,7 @@
         @include sudo-ct;
         @include position-offset($icon-size, left, 100%);
         margin-left: .5rem;
+        margin-top: -.25rem; // Override
         @include size($icon-size);
         @include background-image-icon('../img/more.svg');
         opacity: .25;

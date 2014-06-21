@@ -218,3 +218,6 @@ pip-log.txt
 
 **/.sass-cache
 **/.sass-cache/*
+
+#Project Files
+**/img/projects/*

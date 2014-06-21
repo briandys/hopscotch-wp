@@ -1,20 +1,24 @@
-.alignleft {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
+@include mq($tablet, ieFixOn) {
 
-.alignright {
-    float: right;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-}
+    .alignleft {
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
 
-.aligncenter {
-    display: block;
-    margin: auto;
-}
+    .alignright {
+        float: right;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
 
-.alignnone {
-    display: block;
+    .aligncenter {
+        display: block;
+        margin: auto;
+    }
+
+    .alignnone {
+        display: block;
+    }
+    
 }

@@ -1,0 +1,14 @@
+//------------------------- Pseudo Content
+@mixin sudo-ct {
+    content: '';
+    position: absolute;
+}
+
+@mixin pseudo-content($pos) {
+    position: relative;
+    
+    &:#{$pos} {
+        @include sudo-ct;
+        @content;
+    }
+}

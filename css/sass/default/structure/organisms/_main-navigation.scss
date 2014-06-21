@@ -74,7 +74,7 @@ div.nav-menu {
         }
 
     }
-
+    
     a {
         display: block;
         padding: 1rem;
@@ -88,6 +88,30 @@ div.nav-menu {
             }
 
         }
+        
+    }    
+        
+    .current_page_item {
+        
+        @include pseudo-content(before) {            
+            left: 0;
+            bottom: 0;
+            @include size(100%, .35rem);
+            background-color: $darken15;
+        }
+        
+        &.status-sub-nav-active {
+            
+            @include pseudo-content(before) {
+                display: none;
+            }
+            
+        }
+        
+        > a {
+            font-weight: 600;
+        }
+        
     }
 
     .status-mobile-main-nav-active & {

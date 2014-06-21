@@ -44,9 +44,9 @@ function hopscotch_customize_main_css() {
     $options_main = get_option(hopscotch_customize_main);
 	?>
     <style type="text/css">
-        .masthead-cr,
-        .main-cr,
-        .colophon-cr {
+        /* Ref: _main.scss */
+        .header-sidebar-cr,
+        .primary-content-cr {
             max-width: <?php echo $options_main['max_content_width']; ?>;
         }
      </style>
