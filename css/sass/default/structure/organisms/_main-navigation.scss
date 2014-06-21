@@ -7,7 +7,7 @@
 
 div.nav-menu {
     position: relative;
-    z-index: 900;
+    @include z($layer1);
     
     > ul {
         
@@ -94,16 +94,26 @@ div.nav-menu {
     .current_page_item {
         
         @include pseudo-content(before) {            
-            left: 0;
-            bottom: 0;
-            @include size(100%, .35rem);
-            background-color: $darken15;
+            
+            // Non-mobile mode
+            @include mq($tablet, ieFixOn) {
+                left: 0;
+                bottom: 0;
+                @include size(100%, .35rem);
+                background-color: $darken15;
+            }
+            
         }
         
         &.status-sub-nav-active {
             
             @include pseudo-content(before) {
-                display: none;
+                
+                // Non-mobile mode
+                @include mq($tablet, ieFixOn) {
+                    display: none;
+                }
+                
             }
             
         }

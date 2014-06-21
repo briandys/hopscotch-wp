@@ -1,5 +1,19 @@
 .widget_search {
         
+    .header-sidebar & {
+        position: relative;
+        @include z($layer1);
+    }
+    
+    .sudo-input-text {
+        
+        .search-input {
+            padding-left: 1rem;
+            padding-right: 0;
+        }
+        
+    }
+    
     .secondary-sidebar &,
     .tertiary-sidebar & {
        

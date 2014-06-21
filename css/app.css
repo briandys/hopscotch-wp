@@ -721,55 +721,55 @@ legend,
   width: 1px;
 }
 
-/* line 24, sass/default/utilities/tools/_structure.scss */
+/* line 25, sass/default/utilities/tools/_structure.scss */
 .tertiary-sidebar .menu {
   text-align: center;
 }
-/* line 18, sass/default/utilities/tools/_structure.scss */
+/* line 19, sass/default/utilities/tools/_structure.scss */
 .tertiary-sidebar .menu > li {
   display: inline-block;
 }
 
-/* line 36, sass/default/utilities/tools/_structure.scss */
+/* line 37, sass/default/utilities/tools/_structure.scss */
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 
-/* line 62, sass/default/utilities/tools/_structure.scss */
+/* line 63, sass/default/utilities/tools/_structure.scss */
 img, .wp-caption {
   max-width: 100%;
   height: auto;
 }
 
-/* line 74, sass/default/utilities/tools/_structure.scss */
+/* line 75, sass/default/utilities/tools/_structure.scss */
 .action-list, div.nav-menu ul {
   list-style: none;
   margin: auto;
   padding: 0;
 }
 
-/* line 128, sass/default/utilities/tools/_structure.scss */
+/* line 129, sass/default/utilities/tools/_structure.scss */
 .toolbar .action-item {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 150, sass/default/utilities/tools/_structure.scss */
+/* line 151, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 138, sass/default/utilities/tools/_structure.scss */
+/* line 139, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr:after {
   content: '';
   height: 100%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 144, sass/default/utilities/tools/_structure.scss */
+/* line 145, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr > * {
   display: inline-block;
   vertical-align: middle;
@@ -779,7 +779,7 @@ img, .wp-caption {
  * Ratios
  * Returns the ratio for specified dimensions.
  */
-/* line 308, sass/default/utilities/tools/_structure.scss */
+/* line 309, sass/default/utilities/tools/_structure.scss */
 .scroll-top-link, .header-sidebar .search-control, .header-sidebar .search-submit {
   display: table-cell !important;
   text-align: center;
@@ -1407,7 +1407,7 @@ ins {
   padding: 0;
   text-align: center;
 }
-/* line 18, sass/default/utilities/tools/_structure.scss */
+/* line 19, sass/default/utilities/tools/_structure.scss */
 .colophon .widget_nav_menu .menu > li {
   display: inline-block;
 }
@@ -1619,14 +1619,14 @@ ins {
     vertical-align: middle;
     height: 100%;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .comment-author-name:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .comment-author-name > * {
     display: inline-block;
     vertical-align: middle;
@@ -2048,32 +2048,32 @@ ins {
 .entry-ct-cr > h6:first-child {
   margin-top: auto;
 }
-/* line 247, sass/default/utilities/tools/_structure.scss */
+/* line 248, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h1 {
   font-size: 40px;
   font-size: 2.5rem;
 }
-/* line 251, sass/default/utilities/tools/_structure.scss */
+/* line 252, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h2 {
   font-size: 32px;
   font-size: 2rem;
 }
-/* line 255, sass/default/utilities/tools/_structure.scss */
+/* line 256, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 259, sass/default/utilities/tools/_structure.scss */
+/* line 260, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h4 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 263, sass/default/utilities/tools/_structure.scss */
+/* line 264, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 267, sass/default/utilities/tools/_structure.scss */
+/* line 268, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h6 {
   font-size: 12px;
   font-size: 0.75rem;
@@ -2194,7 +2194,7 @@ ins {
   }
 }
 
-/* line 193, sass/default/utilities/tools/_structure.scss */
+/* line 194, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-active .primary-content {
   float: left;
   width: 60%;
@@ -2230,7 +2230,7 @@ ins {
   }
 }
 
-/* line 193, sass/default/utilities/tools/_structure.scss */
+/* line 194, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-active .secondary-sidebar {
   float: right;
   width: 40%;
@@ -2265,7 +2265,7 @@ div.nav-menu {
   div.nav-menu > ul {
     text-align: center;
   }
-  /* line 18, sass/default/utilities/tools/_structure.scss */
+  /* line 19, sass/default/utilities/tools/_structure.scss */
   div.nav-menu > ul > li {
     display: inline-block;
   }
@@ -2338,32 +2338,42 @@ div.nav-menu a {
 div.nav-menu .current_page_item {
   position: relative;
 }
-/* line 10, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/structure/_pseudo-content.scss */
+/* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu .current_page_item:before {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.35rem;
-  background-color: rgba(0, 0, 0, 0.15);
 }
-/* line 103, sass/default/structure/organisms/_main-navigation.scss */
+@media only screen and (min-width: 48rem) {
+  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  div.nav-menu .current_page_item:before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.35rem;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+/* line 108, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .current_page_item.status-sub-nav-active {
   position: relative;
 }
-/* line 10, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/structure/_pseudo-content.scss */
+/* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu .current_page_item.status-sub-nav-active:before {
   content: '';
   position: absolute;
-  display: none;
 }
-/* line 111, sass/default/structure/organisms/_main-navigation.scss */
+@media only screen and (min-width: 48rem) {
+  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  div.nav-menu .current_page_item.status-sub-nav-active:before {
+    display: none;
+  }
+}
+/* line 121, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .current_page_item > a {
   font-weight: 600;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 117, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 127, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active div.nav-menu {
     width: 100%;
     height: 100%;
@@ -2371,12 +2381,12 @@ div.nav-menu .current_page_item > a {
     overflow-x: hidden;
     overflow-y: auto;
   }
-  /* line 126, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 136, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active div.nav-menu li, .status-mobile-main-nav-active div.nav-menu a {
     color: white;
   }
 }
-/* line 134, sass/default/structure/organisms/_main-navigation.scss */
+/* line 144, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .children, div.nav-menu .sub-menu {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2387,25 +2397,25 @@ div.nav-menu .children, div.nav-menu .sub-menu {
   position: absolute;
   width: 1px;
 }
-/* line 138, sass/default/structure/organisms/_main-navigation.scss */
+/* line 148, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children, div.nav-menu .menu-item-has-children {
   position: relative;
 }
-/* line 141, sass/default/structure/organisms/_main-navigation.scss */
+/* line 151, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children > a, div.nav-menu .menu-item-has-children > a {
   margin-right: 3.5rem;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 141, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 151, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children > a, div.nav-menu .menu-item-has-children > a {
     padding-right: 0;
   }
 }
-/* line 151, sass/default/structure/organisms/_main-navigation.scss */
+/* line 161, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children:hover, div.nav-menu .menu-item-has-children:hover {
   cursor: pointer;
 }
-/* line 156, sass/default/structure/organisms/_main-navigation.scss */
+/* line 166, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children:after, div.nav-menu .menu-item-has-children:after {
   content: '';
   position: absolute;
@@ -2428,14 +2438,14 @@ div.nav-menu .page_item_has_children:after, div.nav-menu .menu-item-has-children
   z-index: 90;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 156, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 166, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children:after, div.nav-menu .menu-item-has-children:after {
     top: 1.65rem;
     width: 1rem;
     height: 1rem;
   }
 }
-/* line 176, sass/default/structure/organisms/_main-navigation.scss */
+/* line 186, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:after, div.nav-menu .menu-item-has-children.status-sub-nav-active:after {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -2443,11 +2453,11 @@ div.nav-menu .page_item_has_children.status-sub-nav-active:after, div.nav-menu .
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 180, sass/default/structure/organisms/_main-navigation.scss */
+/* line 190, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:hover:after, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover:after {
   opacity: 1;
 }
-/* line 184, sass/default/structure/organisms/_main-navigation.scss */
+/* line 194, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-item-has-children.status-sub-nav-active {
   background-color: #00aaff;
   -webkit-transition: background-color 0.125s ease;
@@ -2456,23 +2466,23 @@ div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-i
   -o-transition: background-color 0.125s ease;
   transition: background-color 0.125s ease;
 }
-/* line 188, sass/default/structure/organisms/_main-navigation.scss */
+/* line 198, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover {
   background-color: #0099e6;
 }
-/* line 192, sass/default/structure/organisms/_main-navigation.scss */
+/* line 202, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active a, div.nav-menu .menu-item-has-children.status-sub-nav-active a {
   color: white;
 }
-/* line 195, sass/default/structure/organisms/_main-navigation.scss */
+/* line 205, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active a:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active a:hover {
   text-decoration: none;
 }
-/* line 203, sass/default/structure/organisms/_main-navigation.scss */
+/* line 213, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active > *, div.nav-menu .menu-item-has-children.status-sub-nav-active > * {
   color: white;
 }
-/* line 208, sass/default/structure/organisms/_main-navigation.scss */
+/* line 218, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active > .children,
 div.nav-menu .page_item_has_children.status-sub-nav-active > .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active > .children,
 div.nav-menu .menu-item-has-children.status-sub-nav-active > .sub-menu {
@@ -2484,7 +2494,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active > .sub-menu {
   position: static;
   width: auto;
 }
-/* line 215, sass/default/structure/organisms/_main-navigation.scss */
+/* line 225, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active .children,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
@@ -2493,7 +2503,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
   z-index: 90;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 215, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 225, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active .children,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
@@ -2508,7 +2518,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
     margin-left: 0.75rem;
   }
 }
-/* line 233, sass/default/structure/organisms/_main-navigation.scss */
+/* line 243, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children li,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu li, div.nav-menu .menu-item-has-children.status-sub-nav-active .children li,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li {
@@ -2518,14 +2528,14 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li {
   -o-transition: background-color 0.125s ease;
   transition: background-color 0.125s ease;
 }
-/* line 236, sass/default/structure/organisms/_main-navigation.scss */
+/* line 246, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children li:hover,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu li:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active .children li:hover,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
 @media only screen and (min-width: 48rem) {
-  /* line 243, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 253, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children:before,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu:before, div.nav-menu .menu-item-has-children.status-sub-nav-active .children:before,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu:before {
@@ -2540,7 +2550,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li:hover {
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 258, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 268, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children:after,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu:after, div.nav-menu .menu-item-has-children.status-sub-nav-active .children:after,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu:after {
@@ -2557,7 +2567,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li:hover {
     z-index: 90;
   }
 }
-/* line 282, sass/default/structure/organisms/_main-navigation.scss */
+/* line 292, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children > .children,
 div.nav-menu .page_item_has_children > .sub-menu, div.nav-menu .menu-item-has-children > .children,
 div.nav-menu .menu-item-has-children > .sub-menu {
@@ -2571,12 +2581,12 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   width: 1px;
 }
 
-/* line 293, sass/default/structure/organisms/_main-navigation.scss */
+/* line 303, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
   margin-bottom: auto;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 293, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 303, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     font-size: 16px;
     font-size: 1rem;
@@ -2588,7 +2598,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 293, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 303, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2601,7 +2611,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 308, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 318, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -2611,7 +2621,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: fill 0.125s ease;
     transition: fill 0.125s ease;
   }
-  /* line 315, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 325, sass/default/structure/organisms/_main-navigation.scss */
   .modernizr-no-inlinesvg .main-navigation-heading .icon {
     clip: auto;
     height: auto;
@@ -2623,13 +2633,13 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 322, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 332, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading:hover {
     cursor: pointer;
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 329, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 339, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .label {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2643,7 +2653,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 338, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 348, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
     position: fixed;
     left: 0;
@@ -2661,7 +2671,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 352, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 362, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -2693,14 +2703,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     text-align: center;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
@@ -2727,14 +2737,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     left: auto;
     float: right;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .header-sidebar:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .header-sidebar > * {
     display: inline-block;
     vertical-align: middle;
@@ -2763,14 +2773,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     float: left;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
@@ -2798,14 +2808,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     text-align: center;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
@@ -2832,14 +2842,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     left: auto;
     float: right;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .header-sidebar:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .header-sidebar > * {
     display: inline-block;
     vertical-align: middle;
@@ -2868,14 +2878,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     float: left;
   }
-  /* line 138, sass/default/utilities/tools/_structure.scss */
+  /* line 139, sass/default/utilities/tools/_structure.scss */
   .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 144, sass/default/utilities/tools/_structure.scss */
+  /* line 145, sass/default/utilities/tools/_structure.scss */
   .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
@@ -3132,76 +3142,86 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   transform: translate(0, 0.0625rem);
 }
 
-/* line 12, sass/default/structure/organisms/_search.scss */
+/* line 3, sass/default/structure/organisms/_search.scss */
+.header-sidebar .widget_search {
+  position: relative;
+  z-index: 900;
+}
+/* line 10, sass/default/structure/organisms/_search.scss */
+.widget_search .sudo-input-text .search-input {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+/* line 26, sass/default/structure/organisms/_search.scss */
 .secondary-sidebar .widget_search .search--field-input, .tertiary-sidebar .widget_search .search--field-input {
   float: left;
   margin-bottom: auto;
   width: 100%;
   margin-right: -5rem;
 }
-/* line 18, sass/default/structure/organisms/_search.scss */
+/* line 32, sass/default/structure/organisms/_search.scss */
 .secondary-sidebar .widget_search .search--field-input .field-cr, .tertiary-sidebar .widget_search .search--field-input .field-cr {
   margin-right: .5rem;
   padding-right: 5rem;
 }
-/* line 25, sass/default/structure/organisms/_search.scss */
+/* line 39, sass/default/structure/organisms/_search.scss */
 .secondary-sidebar .widget_search .search--field-action, .tertiary-sidebar .widget_search .search--field-action {
   float: right;
   width: 5rem;
 }
 
-/* line 41, sass/default/structure/organisms/_search.scss */
+/* line 55, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--sudo-input-text {
   border: none;
 }
-/* line 48, sass/default/structure/organisms/_search.scss */
+/* line 62, sass/default/structure/organisms/_search.scss */
 .status-search-active .header-sidebar .search--sudo-input-text {
   max-width: 8rem;
 }
-/* line 54, sass/default/structure/organisms/_search.scss */
+/* line 68, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--sudo-button {
   background-color: transparent;
   border: none;
 }
-/* line 64, sass/default/structure/organisms/_search.scss */
+/* line 78, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-form {
   position: relative;
 }
-/* line 67, sass/default/structure/organisms/_search.scss */
+/* line 81, sass/default/structure/organisms/_search.scss */
 .status-search-active .header-sidebar .search-form {
   padding-right: 3.5rem;
 }
-/* line 73, sass/default/structure/organisms/_search.scss */
+/* line 87, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--field-input {
   margin-bottom: auto;
   height: 3.5rem;
 }
-/* line 83, sass/default/structure/organisms/_search.scss */
+/* line 97, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-control {
   margin-bottom: auto;
   width: 3.5rem;
   height: 3.5rem;
 }
-/* line 92, sass/default/structure/organisms/_search.scss */
+/* line 106, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-control .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
-/* line 96, sass/default/structure/organisms/_search.scss */
+/* line 110, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-control:hover {
   cursor: pointer;
 }
-/* line 106, sass/default/structure/organisms/_search.scss */
+/* line 120, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-submit {
   width: 3.5rem;
   height: 3.5rem;
 }
-/* line 114, sass/default/structure/organisms/_search.scss */
+/* line 128, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-submit .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
-/* line 120, sass/default/structure/organisms/_search.scss */
+/* line 134, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--field-action {
   position: absolute;
   top: 0;
@@ -3212,7 +3232,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 .secondary-sidebar-container {
   margin-top: 2rem;
 }
-/* line 193, sass/default/utilities/tools/_structure.scss */
+/* line 194, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-container {
   margin-top: auto;
 }
