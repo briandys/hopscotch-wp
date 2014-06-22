@@ -3,6 +3,9 @@
 // Setup
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
 
+// Action hooks
+require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
+
 
 //------------------------- Components Directory
 function hopscotch_components_directory() {

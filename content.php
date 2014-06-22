@@ -1,3 +1,5 @@
+<?php hopscotch_content_header(); ?>
+
 <article id="<?php do_action('hopscotch_post_id'); ?>"
     <?php if ( ! is_page_template( 'templates/info-card.php' ) ) : ?>
          <?php post_class('entry'); ?>
@@ -61,6 +63,9 @@
                 <?php else : ?>
 
                 <!-- Content -->
+                
+                <?php hopscotch_entry_content(); ?>
+                
                 <?php the_content( __( 'More', 'hopscotch' ) );
                     wp_link_pages( array(
                         'before'      => '<div class="page-links"><p class="page-links-title">' . __( 'Pages:', 'hopscotch' ) . '</p>',
