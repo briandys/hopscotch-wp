@@ -21,6 +21,9 @@ require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
 
+// Prepend attachment
+require_once( trailingslashit(get_template_directory()) . 'functions/prepend-attachment.php');
+
 // Text domain
 require_once( trailingslashit(get_template_directory()) . 'functions/text-domain.php');
 
@@ -60,8 +63,10 @@ require_once( trailingslashit(get_template_directory()) . 'functions/html-class.
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/post-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/post-id.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/shortcode-entry-subtitle.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
+
+// Custom Fields
+require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-subtitle.php');
 
 // Shortcodes
 require_once( trailingslashit(get_template_directory()) . 'functions/shortcode-custom-fields.php');

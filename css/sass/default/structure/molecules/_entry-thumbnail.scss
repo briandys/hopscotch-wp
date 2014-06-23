@@ -1,6 +1,19 @@
 .entry-thumbnail-link {
-    display: block;
-    @include size(100%, 10rem);
+    display: inline-block;
+    @include size(10rem);
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
+    
+    .site-default & {
+        @include circle;
+    }
+    
+}
+
+.entry-thumbnail {
+    
+    .site-default & {
+        text-align: center;
+    }
+    
 }

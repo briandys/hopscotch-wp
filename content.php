@@ -12,40 +12,43 @@
         <header class="entry-hr">
             <div class="entry-hr-cr">
 				
-                <!-- Entry title -->
-                <?php if ( ! is_page_template( 'templates/info-card.php' ) ) : ?>
-                <?php the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
-                <?php else : ?>
-				<?php the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
-                <?php endif; ?>
+                <?php // Entry title
+                if ( ! is_page_template( 'templates/info-card.php' ) ) :
+                    the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+                else :
+				    the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+                endif;
+                ?>
                 
-                <!-- Edit entry action -->
-                <?php hopscotch_entry_action_edit(); ?>
+                <?php // Edit entry action
+                hopscotch_entry_action_edit();
+                ?>
                 
-                <!-- Breadcrumb navigation -->
-                <?php hopscotch_breadcrumbs(); ?>
+                <?php // Breadcrumb navigation
+                hopscotch_breadcrumbs();
+                ?>
                 
-                <!-- Subtitle -->
-                <?php hopscotch_entry_subtitle(); ?>
+                <?php // Subtitle
+                hopscotch_entry_subtitle();
+                ?>
             
-                <!-- Format: status -->
-                <?php if ( ! has_post_format( 'status' ) ) : ?>
+                <?php // Format: Status
+                if ( ! has_post_format( 'status' ) ) : ?>
+                    
                     <div class="entry-meta">
                         <?php hopscotch_entry_date(); ?>
                         <?php hopscotch_entry_byline(); ?>
                     </div><!-- .entry-meta -->
-                    <?php
-                        if ( ! is_search() ) :
-                            hopscotch_entry_action_comment();
-                        endif;
-                    ?>                
+                    
+                    <?php // Comment link
+                    if ( ! is_search() ) :
+                        hopscotch_entry_action_comment();
+                    endif;
+                    ?>
                 <?php endif; ?>
                 
-                <!-- Entry thumbnail -->
-                <?php
-                    if ( is_home() || is_archive() || is_search() ) :
-                        hopscotch_entry_thumbnail();
-                    endif;
+                <?php // Entry thumbnail
+                hopscotch_entry_thumbnail();
                 ?>
                 
             </div>            
@@ -54,27 +57,29 @@
         <div class="entry-ct<?php if ( is_search() ) : ?> entry-summary<?php endif; ?>">
             <div class="entry-ct-cr">
 				
-				<!-- Entry content -->
-                <?php if ( is_search() || is_author() ) : ?>
+				<!--  -->
+                <?php // Entry content
+                if ( is_search() || is_author() ) : ?>
                     
-                <!-- Excerpt -->    
-                <?php the_excerpt(); ?>
+                    <?php // Excerpt
+                    the_excerpt();
+                    ?>
                 
                 <?php else : ?>
 
-                <!-- Content -->
-                
-                <?php hopscotch_entry_content(); ?>
-                
-                <?php the_content( __( 'More', 'hopscotch' ) );
+                    <?php // HopScotch Content hook
+                    hopscotch_entry_content();
+                    ?>
+
+                    <?php // Content
+                    the_content( __( 'More', 'hopscotch' ) );
                     wp_link_pages( array(
                         'before'      => '<div class="page-links"><p class="page-links-title">' . __( 'Pages:', 'hopscotch' ) . '</p>',
                         'after'       => '</div>',
                         'link_before' => '<span class="label">',
                         'link_after'  => '</span>',
                     ) );
-                ?>
-                
+                    ?>                
                 <?php endif; ?>
             </div>
             

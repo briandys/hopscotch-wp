@@ -1,6 +1,14 @@
 <?php
 
 //------------------------- Action hooks
+function hopscotch_html_class() {
+    do_action('hopscotch_html_class');
+}
+
+function hopscotch_post_id() {
+    do_action('hopscotch_post_id');
+}
+
 function hopscotch_content_header() {
     do_action('hopscotch_content_header');
 }

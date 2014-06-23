@@ -78,8 +78,6 @@
     }
     
     .entry-thumbnail {
-        margin-left: -$gutter;
-        margin-right: -$gutter;
         margin-top: 1rem;
     }
     
@@ -169,7 +167,7 @@
         
     }
     
-    a:not(.more-link) {
+    a:not( .more-link ):not( .entry-thumbnail-link ) {
         @include linkstyle-secondary;
     }
     

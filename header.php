@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]><html class="no-js <?php do_action( 'hopscotch_html_class' ); ?> lt-ie9 lt-ie8" <?php language_attributes(); ?>><![endif]-->
-<!--[if lt IE 9]><html class="no-js <?php do_action( 'hopscotch_html_class' ); ?> lt-ie9" <?php language_attributes(); ?>><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js <?php do_action( 'hopscotch_html_class' ); ?>" <?php language_attributes(); ?>><!--<![endif]-->
+<!--[if lt IE 8]><html class="no-js <?php hopscotch_html_class(); ?> lt-ie9 lt-ie8" <?php language_attributes(); ?>><![endif]-->
+<!--[if lt IE 9]><html class="no-js <?php hopscotch_html_class(); ?> lt-ie9" <?php language_attributes(); ?>><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>><!--<![endif]-->
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
