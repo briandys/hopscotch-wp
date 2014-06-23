@@ -1,15 +1,22 @@
 <?php
 
 //------------------------- Is Child Conditional
-function hopscotch_is_child($page_id_or_slug) { 
-	global $post; 
-	if(!is_int($page_id_or_slug)) {
-		$page = get_page_by_path($page_id_or_slug);
-		$page_id_or_slug = $page->ID;
-	} 
-	if(is_page() && $post->post_parent == $page_id_or_slug ) {
-       		return true;
-	} else { 
-       		return false; 
-	}
+// http://www.kevinleary.net/wordpress-is_child-for-advanced-navigation/
+
+function is_child( $parent = '' ) {
+    global $post;
+
+    $parent_obj = get_page( $post->post_parent, ARRAY_A );
+    $parent = (string) $parent;
+    $parent_array = (array) $parent;
+
+    if ( in_array( (string) $parent_obj['ID'], $parent_array ) ) {
+        return true;
+    } elseif ( in_array( (string) $parent_obj['post_title'], $parent_array ) ) {
+        return true;    
+    } elseif ( in_array( (string) $parent_obj['post_name'], $parent_array ) ) {
+        return true;
+    } else {
+        return false;
+    }
 }
