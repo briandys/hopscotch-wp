@@ -1,0 +1,37 @@
+.page-navigation-list {
+    
+    > * {
+        display: inline-block;
+        padding: 1rem;
+    }
+    
+}
+
+.page-numbers {
+    
+    &.dots {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+}
+
+.post-navigation-list {
+    @include center-list;
+    
+    .action-item {
+        width: 50%;
+        vertical-align: top;
+        
+        a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        .label {
+            @include textstyle-label-primary;
+        }
+        
+    }
+    
+}

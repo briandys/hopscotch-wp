@@ -1,0 +1,6 @@
+//------------------------- Text Styles
+@mixin textstyle-label-primary {
+    @include font-size-rem($font-s);
+    @include faint;
+    text-transform: uppercase;
+}
