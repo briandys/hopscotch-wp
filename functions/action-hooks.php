@@ -9,6 +9,10 @@ function hopscotch_post_id() {
     do_action('hopscotch_post_id');
 }
 
+function hopscotch_slug_class() {
+    do_action('hopscotch_slug_class');
+}
+
 function hopscotch_content_header() {
     do_action('hopscotch_content_header');
 }

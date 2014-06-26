@@ -721,61 +721,61 @@ legend,
   width: 1px;
 }
 
-/* line 25, sass/default/utilities/tools/_structure.scss */
+/* line 26, sass/default/utilities/tools/_structure.scss */
 .tertiary-sidebar .menu {
   text-align: center;
 }
-/* line 19, sass/default/utilities/tools/_structure.scss */
+/* line 20, sass/default/utilities/tools/_structure.scss */
 .tertiary-sidebar .menu > li {
   display: inline-block;
 }
 
-/* line 37, sass/default/utilities/tools/_structure.scss */
+/* line 38, sass/default/utilities/tools/_structure.scss */
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 
-/* line 63, sass/default/utilities/tools/_structure.scss */
+/* line 64, sass/default/utilities/tools/_structure.scss */
 img, .wp-caption {
   max-width: 100%;
   height: auto;
 }
 
-/* line 75, sass/default/utilities/tools/_structure.scss */
+/* line 76, sass/default/utilities/tools/_structure.scss */
 .action-list, div.nav-menu ul {
   list-style: none;
   margin: auto;
   padding: 0;
 }
 
-/* line 129, sass/default/utilities/tools/_structure.scss */
+/* line 130, sass/default/utilities/tools/_structure.scss */
 .toolbar .action-item {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 151, sass/default/utilities/tools/_structure.scss */
+/* line 152, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 139, sass/default/utilities/tools/_structure.scss */
+/* line 140, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr:after {
   content: '';
   height: 100%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 145, sass/default/utilities/tools/_structure.scss */
+/* line 146, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr > * {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 307, sass/default/utilities/tools/_structure.scss */
+/* line 308, sass/default/utilities/tools/_structure.scss */
 .scroll-top-link, .header-sidebar .search-control, .header-sidebar .search-submit {
   display: table-cell !important;
   text-align: center;
@@ -1413,7 +1413,7 @@ ins {
   padding: 0;
   text-align: center;
 }
-/* line 19, sass/default/utilities/tools/_structure.scss */
+/* line 20, sass/default/utilities/tools/_structure.scss */
 .colophon .widget_nav_menu .menu > li {
   display: inline-block;
 }
@@ -1625,14 +1625,14 @@ ins {
     vertical-align: middle;
     height: 100%;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .comment-author-name:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .comment-author-name > * {
     display: inline-block;
     vertical-align: middle;
@@ -2000,105 +2000,102 @@ ins {
 
 /* line 140, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
   word-wrap: break-word;
 }
-/* line 143, sass/default/structure/organisms/_entry.scss */
+/* line 145, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
-/* line 149, sass/default/structure/organisms/_entry.scss */
-.entry-ct-cr > *:not(.entry) {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-/* line 154, sass/default/structure/organisms/_entry.scss */
+/* line 151, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > p {
   line-height: 1.75;
 }
-/* line 162, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h1 {
   margin-top: 1.5rem;
 }
-/* line 165, sass/default/structure/organisms/_entry.scss */
+/* line 162, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h1:first-child {
   margin-top: auto;
 }
-/* line 162, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h2 {
   margin-top: 1.5rem;
 }
-/* line 165, sass/default/structure/organisms/_entry.scss */
+/* line 162, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h2:first-child {
   margin-top: auto;
 }
-/* line 162, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h3 {
   margin-top: 1.5rem;
 }
-/* line 165, sass/default/structure/organisms/_entry.scss */
+/* line 162, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h3:first-child {
   margin-top: auto;
 }
-/* line 162, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h4 {
   margin-top: 1.5rem;
 }
-/* line 165, sass/default/structure/organisms/_entry.scss */
+/* line 162, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h4:first-child {
   margin-top: auto;
 }
-/* line 162, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h5 {
   margin-top: 1.5rem;
 }
-/* line 165, sass/default/structure/organisms/_entry.scss */
+/* line 162, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h5:first-child {
   margin-top: auto;
 }
-/* line 162, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h6 {
   margin-top: 1.5rem;
 }
-/* line 165, sass/default/structure/organisms/_entry.scss */
+/* line 162, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h6:first-child {
   margin-top: auto;
 }
-/* line 248, sass/default/utilities/tools/_structure.scss */
+/* line 249, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h1 {
   font-size: 40px;
   font-size: 2.5rem;
 }
-/* line 252, sass/default/utilities/tools/_structure.scss */
+/* line 253, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h2 {
   font-size: 32px;
   font-size: 2rem;
 }
-/* line 256, sass/default/utilities/tools/_structure.scss */
+/* line 257, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 260, sass/default/utilities/tools/_structure.scss */
+/* line 261, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h4 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 264, sass/default/utilities/tools/_structure.scss */
+/* line 265, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 268, sass/default/utilities/tools/_structure.scss */
+/* line 269, sass/default/utilities/tools/_structure.scss */
 .entry-ct-cr h6 {
   font-size: 12px;
   font-size: 0.75rem;
 }
-/* line 178, sass/default/structure/organisms/_entry.scss */
+/* line 175, sass/default/structure/organisms/_entry.scss */
 .format-status .entry-ct-cr > * {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 184, sass/default/structure/organisms/_entry.scss */
+/* line 181, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr a:not(.more-link):not(.entry-thumbnail-link) {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
@@ -2110,16 +2107,16 @@ ins {
   text-decoration: none;
 }
 
-/* line 190, sass/default/structure/organisms/_entry.scss */
+/* line 187, sass/default/structure/organisms/_entry.scss */
 .entry-fr {
   margin-top: 1rem;
 }
-/* line 193, sass/default/structure/organisms/_entry.scss */
+/* line 190, sass/default/structure/organisms/_entry.scss */
 .entry-fr .entry-meta {
   margin-bottom: 1rem;
 }
 
-/* line 201, sass/default/structure/organisms/_entry.scss */
+/* line 198, sass/default/structure/organisms/_entry.scss */
 .entry-tags a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
@@ -2131,20 +2128,20 @@ ins {
   text-decoration: none;
 }
 
-/* line 209, sass/default/structure/organisms/_entry.scss */
+/* line 206, sass/default/structure/organisms/_entry.scss */
 .page-links > * {
   display: inline-block;
 }
-/* line 213, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .page-links p {
   margin-bottom: auto;
 }
-/* line 217, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .page-links a, .page-links > .label {
   padding: 1rem;
 }
 
-/* line 223, sass/default/structure/organisms/_entry.scss */
+/* line 220, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
   -webkit-transform: translate(0, -0.35rem);
   -moz-transform: translate(0, -0.35rem);
@@ -2153,25 +2150,25 @@ ins {
   transform: translate(0, -0.35rem);
 }
 
-/* line 228, sass/default/structure/organisms/_entry.scss */
+/* line 225, sass/default/structure/organisms/_entry.scss */
 .post-edit-link {
   font-size: 12px;
   font-size: 0.75rem;
 }
 
-/* line 239, sass/default/structure/organisms/_entry.scss */
+/* line 236, sass/default/structure/organisms/_entry.scss */
 .entry-subtitle {
   font-size: 20px;
   font-size: 1.25rem;
 }
 
-/* line 248, sass/default/structure/organisms/_entry.scss */
+/* line 245, sass/default/structure/organisms/_entry.scss */
 .entry-meta {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 254, sass/default/structure/organisms/_entry.scss */
+/* line 251, sass/default/structure/organisms/_entry.scss */
 .format-image .img-cr {
   padding-left: 0;
   padding-right: 0;
@@ -2193,7 +2190,7 @@ ins {
 .post-navigation-list {
   text-align: center;
 }
-/* line 19, sass/default/utilities/tools/_structure.scss */
+/* line 20, sass/default/utilities/tools/_structure.scss */
 .post-navigation-list > li {
   display: inline-block;
 }
@@ -2247,7 +2244,7 @@ ins {
   }
 }
 
-/* line 194, sass/default/utilities/tools/_structure.scss */
+/* line 195, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-active .primary-content {
   float: left;
   width: 60%;
@@ -2283,7 +2280,7 @@ ins {
   }
 }
 
-/* line 194, sass/default/utilities/tools/_structure.scss */
+/* line 195, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-active .secondary-sidebar {
   float: right;
   width: 40%;
@@ -2318,7 +2315,7 @@ div.nav-menu {
   div.nav-menu > ul {
     text-align: center;
   }
-  /* line 19, sass/default/utilities/tools/_structure.scss */
+  /* line 20, sass/default/utilities/tools/_structure.scss */
   div.nav-menu > ul > li {
     display: inline-block;
   }
@@ -2756,14 +2753,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     text-align: center;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
@@ -2790,14 +2787,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     left: auto;
     float: right;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .header-sidebar:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .header-sidebar > * {
     display: inline-block;
     vertical-align: middle;
@@ -2826,14 +2823,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     float: left;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
@@ -2861,14 +2858,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     text-align: center;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
@@ -2895,14 +2892,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     left: auto;
     float: right;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .header-sidebar:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .header-sidebar > * {
     display: inline-block;
     vertical-align: middle;
@@ -2931,14 +2928,14 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     height: 100%;
     float: left;
   }
-  /* line 139, sass/default/utilities/tools/_structure.scss */
+  /* line 140, sass/default/utilities/tools/_structure.scss */
   .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 145, sass/default/utilities/tools/_structure.scss */
+  /* line 146, sass/default/utilities/tools/_structure.scss */
   .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
@@ -3273,7 +3270,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 .secondary-sidebar-container {
   margin-top: 2rem;
 }
-/* line 194, sass/default/utilities/tools/_structure.scss */
+/* line 195, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-container {
   margin-top: auto;
 }

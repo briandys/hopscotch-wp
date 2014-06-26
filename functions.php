@@ -61,12 +61,13 @@ require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php
 // Classes
 require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/post-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/post-id.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-id.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
 
 // Custom Fields
 require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-subtitle.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-class.php');
 
 // Shortcodes
 require_once( trailingslashit(get_template_directory()) . 'functions/shortcode-custom-fields.php');

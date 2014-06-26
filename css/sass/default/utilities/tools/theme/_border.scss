@@ -36,3 +36,7 @@
         #{$pos}: $size $style rgba($black, $alpha);
     }
 }
+
+@mixin borderstyle-perforated {
+    border-bottom: $one dotted rgba($black, .15);
+}

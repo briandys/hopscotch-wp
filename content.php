@@ -1,15 +1,15 @@
 <?php hopscotch_content_header(); ?>
 
-<article id="<?php do_action('hopscotch_post_id'); ?>"
-    <?php if ( ! is_page_template( 'templates/info-card.php' ) ) : ?>
-         <?php post_class('entry'); ?>
+<article id="<?php hopscotch_post_id(); ?>"
+    <?php if ( ! is_page_template( 'templates/info-card.php' ) ) : ?>         
+         <?php post_class(); ?>
     <?php else : ?>
          <?php post_class('entry vcard'); ?>
          itemscope itemtype="http://schema.org/Organization"
     <?php endif; ?>
 >
-    <div class="entry-cr">
-        <header class="entry-hr">
+    <div class="entry-cr <?php hopscotch_slug_class(); ?>--entry-cr">
+        <header class="entry-hr <?php hopscotch_slug_class(); ?>--entry-hr">
             <div class="entry-hr-cr">
 				
                 <?php // Entry title
@@ -54,7 +54,7 @@
             </div>            
         </header>
         
-        <div class="entry-ct<?php if ( is_search() ) : ?> entry-summary<?php endif; ?>">
+        <div class="entry-ct  <?php hopscotch_slug_class(); ?>--enry-ct <?php if ( is_search() ) : ?>entry-summary<?php endif; ?>">
             <div class="entry-ct-cr">
 				
 				<!--  -->
@@ -109,7 +109,7 @@
         
         <!-- Format: status, Tag -->
         <?php if ( has_tag() || has_post_format( 'status' ) ) : ?>
-        <footer class="entry-fr">
+        <footer class="entry-fr <?php hopscotch_slug_class(); ?>--entry-fr">
             <div class="entry-fr-cr">
 				
 				<?php if ( has_post_format( 'status' ) ) : ?>

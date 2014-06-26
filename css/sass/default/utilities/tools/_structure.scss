@@ -4,6 +4,7 @@
 
 @import 'structure/position-offset';
 @import 'structure/background-image-icon';
+@import 'structure/position';
 @import 'structure/pseudo-content';
 @import 'structure/transform';
 @import 'structure/z-index';
@@ -306,21 +307,4 @@
 
 %svg-iconize {
     @include svg-iconize;
-}
-
-//------------------------- Position
-// Usage: @include pos($t: 100%, $l: 0);
-
-@mixin position(
-    $pos: absolute,
-    $t: auto,
-    $r: auto,
-    $b: auto,
-    $l: auto
-    ) {            
-    position: absolute;
-    top: $t;
-    right: $r;
-    bottom: $b;
-    left: $l;
 }

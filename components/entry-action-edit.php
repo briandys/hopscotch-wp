@@ -1,4 +1,4 @@
-<div class="action-items entry-action entry-admin-action">
+<div class="action-item entry-action entry-admin-action">
     <ul class="action-list entry-action-list">
         
         <!-- Edit Entry -->
