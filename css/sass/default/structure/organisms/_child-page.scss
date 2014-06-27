@@ -1,6 +1,11 @@
 .child-page {    
     margin-top: 2rem;
     
+    > *:not(.entry) {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+    
     .entry-user-action,
     .entry-meta {
         @extend %vhide;
@@ -12,6 +17,10 @@
     
     .breadcrumbs {
         @extend %vhide;
+    }
+    
+    &:first-child {
+        margin-top: auto;
     }
     
 }

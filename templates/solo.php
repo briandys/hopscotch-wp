@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Template Name: Regular Page
+ * Template Name: Solo Page
  * Description: A Page Template displaying only the parent page.
  */
 

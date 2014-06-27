@@ -1388,9 +1388,18 @@ ins {
 .child-page {
   margin-top: 2rem;
 }
-/* line 9, sass/default/structure/organisms/_child-page.scss */
+/* line 4, sass/default/structure/organisms/_child-page.scss */
+.child-page > *:not(.entry) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* line 14, sass/default/structure/organisms/_child-page.scss */
 .child-page .entry-title-link {
   font-weight: 600;
+}
+/* line 22, sass/default/structure/organisms/_child-page.scss */
+.child-page:first-child {
+  margin-top: auto;
 }
 
 /* line 1, sass/default/structure/organisms/_colophon.scss */
