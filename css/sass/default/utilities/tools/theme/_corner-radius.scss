@@ -1,0 +1,21 @@
+//------------------------- Border Radius
+@mixin corner-radius (
+    $topleftradius: $one,
+    $toprightradius: $topleftradius,
+    $bottomrightradius: $topleftradius,
+    $bottomleftradius: $topleftradius
+    ) {
+    
+    border: {
+        top-left-radius: $topleftradius;
+        top-right-radius: $toprightradius;
+        bottom-right-radius: $bottomrightradius;
+        bottom-left-radius: $bottomleftradius;
+    }
+        
+}
+
+@mixin circle {
+    border-radius: 50%;
+    overflow: hidden;
+}

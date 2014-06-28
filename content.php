@@ -126,5 +126,5 @@ hopscotch_content_header();
         </footer><!-- .entry-fr -->
         <?php endif; ?>
     
-    </div><!-- .post-cr -->
+    </div><!-- .entry-cr -->
 </article>

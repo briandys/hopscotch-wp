@@ -782,7 +782,7 @@ img, .wp-caption {
   vertical-align: middle;
 }
 
-/* line 60, sass/default/utilities/tools/_theme.scss */
+/* line 39, sass/default/utilities/tools/_theme.scss */
 .post-edit-link, .sudo-button, .form-submit {
   -webkit-transition: background-color 0.125s ease;
   -moz-transition: background-color 0.125s ease;
@@ -791,7 +791,7 @@ img, .wp-caption {
   transition: background-color 0.125s ease;
 }
 
-/* line 110, sass/default/utilities/tools/_theme.scss */
+/* line 89, sass/default/utilities/tools/_theme.scss */
 .post-edit-link {
   display: inline-block;
   padding: .25rem .5rem;
@@ -805,7 +805,7 @@ img, .wp-caption {
   border-bottom-left-radius: 0.25rem;
   text-transform: uppercase;
 }
-/* line 92, sass/default/utilities/tools/_theme.scss */
+/* line 71, sass/default/utilities/tools/_theme.scss */
 .post-edit-link:hover {
   color: white;
   background-color: #00aaff;
@@ -987,18 +987,18 @@ label[for]:hover {
   background-color: #12b32d;
   overflow: hidden;
 }
-/* line 135, sass/default/utilities/tools/_theme.scss */
+/* line 114, sass/default/utilities/tools/_theme.scss */
 .sudo-button > * {
   padding: .5rem;
   min-height: 2.5rem;
   border: none;
   background-color: transparent;
 }
-/* line 140, sass/default/utilities/tools/_theme.scss */
+/* line 119, sass/default/utilities/tools/_theme.scss */
 .sudo-button[data-state-form-element="focused"], .sudo-button:hover {
   background-color: #00c521;
 }
-/* line 144, sass/default/utilities/tools/_theme.scss */
+/* line 123, sass/default/utilities/tools/_theme.scss */
 .sudo-button:active {
   -webkit-transform: translate(0, 0.0625rem);
   -moz-transform: translate(0, 0.0625rem);
@@ -1818,18 +1818,18 @@ ins {
   background-color: #12b32d;
   overflow: hidden;
 }
-/* line 135, sass/default/utilities/tools/_theme.scss */
+/* line 114, sass/default/utilities/tools/_theme.scss */
 .form-submit > * {
   padding: .5rem;
   min-height: 2.5rem;
   border: none;
   background-color: transparent;
 }
-/* line 140, sass/default/utilities/tools/_theme.scss */
+/* line 119, sass/default/utilities/tools/_theme.scss */
 .form-submit[data-state-form-element="focused"], .form-submit:hover {
   background-color: #00c521;
 }
-/* line 144, sass/default/utilities/tools/_theme.scss */
+/* line 123, sass/default/utilities/tools/_theme.scss */
 .form-submit:active {
   -webkit-transform: translate(0, 0.0625rem);
   -moz-transform: translate(0, 0.0625rem);
@@ -2280,10 +2280,8 @@ ins {
 }
 
 @media only screen and (min-width: 48rem) {
-  /* line 39, sass/default/structure/organisms/_main.scss */
-  .comments-cr,
-  .entry-cr,
-  .content-navigation-cr {
+  /* line 37, sass/default/structure/organisms/_main.scss */
+  .primary-content-cr {
     margin-left: auto;
     margin-right: auto;
     max-width: 45rem;
@@ -2296,20 +2294,20 @@ ins {
   width: 40%;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 52, sass/default/structure/organisms/_main.scss */
+  /* line 50, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
     float: right;
     width: 40%;
   }
 }
 @media only screen and (min-width: 80rem) {
-  /* line 52, sass/default/structure/organisms/_main.scss */
+  /* line 50, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
     max-width: 15rem;
   }
 }
 @media only screen and (min-width: 90rem) {
-  /* line 52, sass/default/structure/organisms/_main.scss */
+  /* line 50, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
     max-width: 20rem;
   }
