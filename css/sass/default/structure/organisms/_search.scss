@@ -1,8 +1,17 @@
 .widget_search {
-        
+    
     .header-sidebar & {
-        position: relative;
-        @include z($layer1);
+            
+        [data-state-search="active"] & {
+            width: 100%;
+            
+            // Wide mode
+            @include mq($tablet, ieFixOn) {
+                max-width: 15rem;
+            }
+            
+        }
+        
     }
     
     .sudo-input-text {
@@ -10,6 +19,7 @@
         .search-input {
             padding-left: 1rem;
             padding-right: 0;
+            
         }
         
     }
@@ -60,7 +70,7 @@
         }
        
         .status-search-active & {
-            max-width: 8rem
+            width: 100%;            
         }
         
     }
@@ -78,6 +88,11 @@
     .search-form {
         position: relative;
         
+        // Narrow mode
+        @include mq($tablet, $query1: max) {
+            background-color: $white;
+        }
+        
         .status-search-active & {
             padding-right: $block-l;
         }
@@ -90,6 +105,7 @@
         
         .field-cr {
             @extend %valign-mid;
+            width: 100%;
         }
         
     }
@@ -135,6 +151,19 @@
         position: absolute;
         top: 0;
         right: 0;        
+    }
+
+}
+
+ .search {
+        
+    [data-state-search="active"] & {
+        
+        // Narrow mode
+        @include mq($tablet, $query1: max) {
+            padding-left: $block-l;
+        }
+        
     }
 
 }

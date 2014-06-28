@@ -169,7 +169,8 @@
     
 	// Search located on header
 	( function() {
-		var search = $( '#header-sidebar .search' ),
+        
+        var search = $( '#header-sidebar .search' ),
 			searchControl = $( '#search-control' ),
             searchField = $( '#header-sidebar .search-input' ),
 			searchActive = 'status-search-active',
@@ -184,8 +185,19 @@
         if( ! searchField )
             return;
 		
+        if ( body.hasClass( searchInactive )) {
+            searchDeactivate();
+        } else {
+            searchActivate();
+        }
+		
 		searchControl.on( 'click.hopscotch', function(e){
-			body.toggleClass( searchActive ).toggleClass( searchInactive );
+			searchToggle();
+            
+            if ( body.hasClass( searchActive )) {
+                searchActivate();
+            }
+            
 			$( searchField ).focus();
 			e.stopPropagation();
 		});
@@ -198,16 +210,26 @@
 		function searchToggle() {
 			body.toggleClass( searchActive ).toggleClass( searchInactive );
 		};
+        
+        function searchActivate() {
+            body.attr('data-state-search', 'active');
+        };
+
+        function searchDeactivate() {
+            body.attr('data-state-search', 'inactive');
+        };
 		
 		$(document).on( 'click.hopscotch', function() {
 			if ( body.hasClass( searchActive )) {
 				searchToggle();
+                searchDeactivate();
 			}
 		});
 		
 		$(document).on( 'keydown.hopscotch', function(e) {
 			if (e.which === 27 && body.hasClass( searchActive )) {
 				searchToggle();
+                searchDeactivate();
 			}
 		});
 		

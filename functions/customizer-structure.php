@@ -45,8 +45,8 @@ function hopscotch_customize_main_css() {
 	?>
     <style type="text/css">
         /* Ref: _main.scss */
-        .header-sidebar-cr,
-        .primary-content-cr {
+        .comments-cr,
+        .entry-cr {
             max-width: <?php echo $options_main['max_content_width']; ?>;
         }
      </style>

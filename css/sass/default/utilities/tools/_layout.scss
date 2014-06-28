@@ -2,58 +2,7 @@
 // Usage: Rules concerning design layout
 
 
-//------------------------- Header for Non-mobile mode
-@mixin header-plain-text {
-    
-    .masthead-cr {
-        position: relative;
-        padding-bottom: 1rem;
-        text-align: center;
-    }
-    
-    .masthead-header {
-        padding: 1rem;
-        text-align: center;
-    }
-    
-    .site-title-heading {
-        margin-bottom: auto;
-        @include font-size-rem($font-xl);
-        line-height: normal;
-    } 
-    
-    .site-title-link {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }   
-
-    .header-sidebar {
-        margin-top: 2rem;
-    }
-    
-    .header-sidebar-cr {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    
-    .header-sidebar {
-        margin-top: auto;
-        @include position($t: 0, $r: 0);
-    }
-    
-    .header-sidebar-cr {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-    .main-navigation {
-        display: inline-block;
-    }
-
-}
-
-
-//------------------------- Header for Mobile mode
+//------------------------- Header for Narrow Mode
 @mixin header-compact {
     
     .masthead-cr {
@@ -61,7 +10,7 @@
         position: relative;
         
         // Activate if there needs to be a fixed height
-        // height: $block-l;
+        height: $block-l;
     }
     
     .masthead-header {
@@ -77,14 +26,12 @@
     }
     
     .header-sidebar {
-        @include valign-mid;
-        @include position($t: 0, $r: 0);
-        float: right;
-        
-        .search-form {
-            background-color: $white;
+    
+        .widget_search {
+            @include position($t: 0, $r: 0);
+            @include z($layer1);
         }
-
+        
     }
     
     .site-description {
@@ -95,44 +42,33 @@
         @include valign-mid;
         float: left;
     }
+    
+    .main-navigation-heading {
+        position: relative;
+        @include z($layer1+1);
+    
+        .status-mobile-main-nav-active & {
+            
+            .icon {
+                fill: #fff;
+                opacity: .85;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            
+        }
+        
+    }
 
 }
 
 
-//------------------------- Search theme light
-@mixin search-theme-reverse {
-    
-    @include placeholder($white);
-    
-    .header-sidebar .search-control .icon,
-    .header-sidebar .search-submit .icon {
-        fill: $white;
-    }
-    
-    .header-sidebar .search-form {
-        background-color: $color-primary;
-    }
-    
-    .header-sidebar .search-control {
-        opacity: .75;
-        @include transition(opacity);
-    }
-    
-    .header-sidebar .search-control:hover {
-        opacity: 1;
-    }
-    
-    .header-sidebar .search-input {
-        color: $white;
-    }
-    
-}
-
-
-//------------------------- Header for all seasons
+//------------------------- Header for Wide Mode
 @mixin header-semi-compact {
     
-    @include header-compact;    
+    @include header-compact;
     @include search-theme-reverse;
     
     .masthead {
@@ -183,4 +119,71 @@
         float: none;
     }
 
+}
+
+
+//------------------------- Header Simple
+@mixin header-plain-text {
+    
+    .masthead-cr {
+        position: relative;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .masthead-header {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .site-title-heading {
+        margin-bottom: auto;
+        @include font-size-rem($font-xl);
+        line-height: normal;
+    } 
+    
+    .site-title-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .header-sidebar {
+        margin-top: auto;
+        @include position($t: 0, $r: 0);
+    }
+    
+    .main-navigation {
+        display: inline-block;
+    }
+
+}
+
+
+//------------------------- Search theme light
+@mixin search-theme-reverse {
+    
+    @include placeholder($white);
+    
+    .header-sidebar .search-control .icon,
+    .header-sidebar .search-submit .icon {
+        fill: $white;
+    }
+    
+    .header-sidebar .search-form {
+        background-color: $color-primary;
+    }
+    
+    .header-sidebar .search-control {
+        opacity: .75;
+        @include transition(opacity);
+    }
+    
+    .header-sidebar .search-control:hover {
+        opacity: 1;
+    }
+    
+    .header-sidebar .search-input {
+        color: $white;
+    }
+    
 }

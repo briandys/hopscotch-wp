@@ -34,8 +34,9 @@
     
 }
 
-.header-sidebar-cr,
-.primary-content-cr {
+.comments-cr,
+.entry-cr,
+.content-navigation-cr {
     
     @include mq($tablet, iefixOff) {
         margin-left: auto;

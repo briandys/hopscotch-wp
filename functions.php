@@ -16,7 +16,7 @@ function hopscotch_components_directory() {
 
 
 // Front-end
-// require_once( trailingslashit(get_template_directory()) . 'functions/font.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/font.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
@@ -56,8 +56,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumb
 require_once( trailingslashit(get_template_directory()) . 'functions/more-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
 
-// require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
-
 // Classes
 require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
@@ -90,6 +88,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via
 require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
 
 // require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
+// require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
 
 
 ?>
