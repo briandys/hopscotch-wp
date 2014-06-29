@@ -95,6 +95,7 @@ hopscotch_content_header();
         $the_query = new WP_Query( $args );
         ?>                
             <?php if ( $the_query->have_posts() ) : ?>
+          
             <div class="child-page">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                     <?php get_template_part( 'content', get_post_format() ); ?>

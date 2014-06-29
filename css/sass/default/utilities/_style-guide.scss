@@ -34,6 +34,8 @@ $color-placeholder-text: $gray25;
 $color-selection-text: $white;
 $color-selection-bg: $color-secondary;
 
+$custom-font: 'Raleway';
+
 // Font Family
-$font-family-base: Raleway, Helvetica, Arial, sans-serif;
+$font-family-base: $custom-font, Helvetica, Arial, sans-serif;
 $font-family-quote: Georgia, serif;

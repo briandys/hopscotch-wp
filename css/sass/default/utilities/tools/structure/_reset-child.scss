@@ -1,0 +1,5 @@
+@mixin reset-child($property: margin-bottom, $value: auto, $nth: last) {
+    &:#{$nth}-child {
+        #{$property}: $value;
+    }
+}

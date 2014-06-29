@@ -721,61 +721,61 @@ legend,
   width: 1px;
 }
 
-/* line 26, sass/default/utilities/tools/_structure.scss */
+/* line 28, sass/default/utilities/tools/_structure.scss */
 .tertiary-sidebar .menu {
   text-align: center;
 }
-/* line 20, sass/default/utilities/tools/_structure.scss */
+/* line 22, sass/default/utilities/tools/_structure.scss */
 .tertiary-sidebar .menu > li {
   display: inline-block;
 }
 
-/* line 38, sass/default/utilities/tools/_structure.scss */
+/* line 40, sass/default/utilities/tools/_structure.scss */
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 
-/* line 64, sass/default/utilities/tools/_structure.scss */
+/* line 66, sass/default/utilities/tools/_structure.scss */
 img, .wp-caption {
   max-width: 100%;
   height: auto;
 }
 
-/* line 76, sass/default/utilities/tools/_structure.scss */
+/* line 78, sass/default/utilities/tools/_structure.scss */
 .action-list, div.nav-menu ul {
   list-style: none;
   margin: auto;
   padding: 0;
 }
 
-/* line 130, sass/default/utilities/tools/_structure.scss */
+/* line 132, sass/default/utilities/tools/_structure.scss */
 .toolbar .action-item {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 152, sass/default/utilities/tools/_structure.scss */
+/* line 154, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 140, sass/default/utilities/tools/_structure.scss */
+/* line 142, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr:after {
   content: '';
   height: 100%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 146, sass/default/utilities/tools/_structure.scss */
+/* line 148, sass/default/utilities/tools/_structure.scss */
 .header-sidebar .search--field-input .field-cr > * {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 308, sass/default/utilities/tools/_structure.scss */
+/* line 282, sass/default/utilities/tools/_structure.scss */
 .scroll-top-link, .header-sidebar .search-control, .header-sidebar .search-submit {
   display: table-cell !important;
   text-align: center;
@@ -812,7 +812,7 @@ img, .wp-caption {
   text-decoration: none;
 }
 
-/* line 33, sass/default/utilities/_settings.scss */
+/* line 33, sass/default/utilities/_set.scss */
 h1, h2, h3, h4, h5, h6,
 ul, ol,
 p,
@@ -824,7 +824,7 @@ dl {
   padding: 0;
 }
 
-/* line 51, sass/default/utilities/_settings.scss */
+/* line 51, sass/default/utilities/_set.scss */
 h1, h2, h3, h4, h5, h6,
 p,
 ul, ol,
@@ -836,7 +836,7 @@ dl,
   margin-bottom: 1rem;
 }
 
-/* line 59, sass/default/utilities/_settings.scss */
+/* line 59, sass/default/utilities/_set.scss */
 p:last-child,
 li:last-child,
 .field:last-child,
@@ -844,21 +844,21 @@ li:last-child,
   margin-bottom: auto !important;
 }
 
-/* line 65, sass/default/utilities/_settings.scss */
-html {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: #333333;
-  background-color: white;
-}
-
-/* line 75, sass/default/utilities/_settings.scss */
+/* line 65, sass/default/utilities/_set.scss */
 .masthead,
 .main,
 .colophon {
   clear: both;
+}
+
+/* line 2, sass/default/utilities/_settings.scss */
+html {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -1019,33 +1019,39 @@ h2 {
   font-size: 2.5rem;
 }
 
-/* line 12, sass/default/structure/atoms/_heading.scss */
-h3 {
+/* line 13, sass/default/structure/atoms/_heading.scss */
+h3,
+.text-heading {
   font-size: 32px;
   font-size: 2rem;
 }
 
-/* line 16, sass/default/structure/atoms/_heading.scss */
+/* line 17, sass/default/structure/atoms/_heading.scss */
 h4 {
   font-size: 24px;
   font-size: 1.5rem;
 }
 
-/* line 20, sass/default/structure/atoms/_heading.scss */
+/* line 21, sass/default/structure/atoms/_heading.scss */
 h5 {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 24, sass/default/structure/atoms/_heading.scss */
+/* line 25, sass/default/structure/atoms/_heading.scss */
 h6 {
   font-size: 12px;
   font-size: 0.75rem;
 }
 
-/* line 28, sass/default/structure/atoms/_heading.scss */
+/* line 29, sass/default/structure/atoms/_heading.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+/* line 33, sass/default/structure/atoms/_heading.scss */
+.text-heading {
+  font-weight: 600;
 }
 
 /* line 1, sass/default/structure/atoms/_link.scss */
@@ -1422,7 +1428,7 @@ ins {
   padding: 0;
   text-align: center;
 }
-/* line 20, sass/default/utilities/tools/_structure.scss */
+/* line 22, sass/default/utilities/tools/_structure.scss */
 .colophon .widget_nav_menu .menu > li {
   display: inline-block;
 }
@@ -1634,14 +1640,14 @@ ins {
     vertical-align: middle;
     height: 100%;
   }
-  /* line 140, sass/default/utilities/tools/_structure.scss */
+  /* line 142, sass/default/utilities/tools/_structure.scss */
   .comment-author-name:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 146, sass/default/utilities/tools/_structure.scss */
+  /* line 148, sass/default/utilities/tools/_structure.scss */
   .comment-author-name > * {
     display: inline-block;
     vertical-align: middle;
@@ -2069,32 +2075,33 @@ ins {
 .entry-ct-cr > h6:first-child {
   margin-top: auto;
 }
-/* line 249, sass/default/utilities/tools/_structure.scss */
+/* line 5, sass/default/utilities/tools/structure/_shrink-heading.scss */
 .entry-ct-cr h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 30px;
+  font-size: 1.875rem;
 }
-/* line 253, sass/default/utilities/tools/_structure.scss */
+/* line 9, sass/default/utilities/tools/structure/_shrink-heading.scss */
 .entry-ct-cr h2 {
-  font-size: 32px;
-  font-size: 2rem;
-}
-/* line 257, sass/default/utilities/tools/_structure.scss */
-.entry-ct-cr h3 {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 261, sass/default/utilities/tools/_structure.scss */
-.entry-ct-cr h4 {
-  font-size: 16px;
-  font-size: 1rem;
+/* line 14, sass/default/utilities/tools/structure/_shrink-heading.scss */
+.entry-ct-cr h3,
+.entry-ct-cr .text-heading {
+  font-size: 18px;
+  font-size: 1.125rem;
 }
-/* line 265, sass/default/utilities/tools/_structure.scss */
+/* line 18, sass/default/utilities/tools/structure/_shrink-heading.scss */
+.entry-ct-cr h4 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+/* line 22, sass/default/utilities/tools/structure/_shrink-heading.scss */
 .entry-ct-cr h5 {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 269, sass/default/utilities/tools/_structure.scss */
+/* line 26, sass/default/utilities/tools/structure/_shrink-heading.scss */
 .entry-ct-cr h6 {
   font-size: 12px;
   font-size: 0.75rem;
@@ -2199,7 +2206,7 @@ ins {
 .post-navigation-list {
   text-align: center;
 }
-/* line 20, sass/default/utilities/tools/_structure.scss */
+/* line 22, sass/default/utilities/tools/_structure.scss */
 .post-navigation-list > li {
   display: inline-block;
 }
@@ -2253,7 +2260,7 @@ ins {
   }
 }
 
-/* line 195, sass/default/utilities/tools/_structure.scss */
+/* line 197, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-active .primary-content {
   float: left;
   width: 60%;
@@ -2288,7 +2295,7 @@ ins {
   }
 }
 
-/* line 195, sass/default/utilities/tools/_structure.scss */
+/* line 197, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-active .secondary-sidebar {
   float: right;
   width: 40%;
@@ -2323,7 +2330,7 @@ div.nav-menu {
   div.nav-menu > ul {
     text-align: center;
   }
-  /* line 20, sass/default/utilities/tools/_structure.scss */
+  /* line 22, sass/default/utilities/tools/_structure.scss */
   div.nav-menu > ul > li {
     display: inline-block;
   }
@@ -2778,7 +2785,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 8, sass/default/utilities/tools/_layout.scss */
+  /* line 25, sass/default/utilities/tools/_layout.scss */
   .masthead-cr {
     position: relative;
     height: 3.5rem;
@@ -2793,27 +2800,27 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     clear: both;
   }
 
-  /* line 16, sass/default/utilities/tools/_layout.scss */
+  /* line 33, sass/default/utilities/tools/_layout.scss */
   .masthead-header {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     text-align: center;
   }
-  /* line 140, sass/default/utilities/tools/_structure.scss */
+  /* line 142, sass/default/utilities/tools/_structure.scss */
   .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 146, sass/default/utilities/tools/_structure.scss */
+  /* line 148, sass/default/utilities/tools/_structure.scss */
   .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
   }
 
-  /* line 21, sass/default/utilities/tools/_layout.scss */
+  /* line 38, sass/default/utilities/tools/_layout.scss */
   .site-title-heading {
     margin-bottom: auto;
     font-size: 20px;
@@ -2822,7 +2829,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     line-height: normal;
   }
 
-  /* line 30, sass/default/utilities/tools/_layout.scss */
+  /* line 47, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .widget_search {
     position: absolute;
     top: 0;
@@ -2832,7 +2839,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     z-index: 900;
   }
 
-  /* line 37, sass/default/utilities/tools/_layout.scss */
+  /* line 54, sass/default/utilities/tools/_layout.scss */
   .site-description {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2844,43 +2851,43 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     width: 1px;
   }
 
-  /* line 41, sass/default/utilities/tools/_layout.scss */
+  /* line 58, sass/default/utilities/tools/_layout.scss */
   .main-navigation {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     float: left;
   }
-  /* line 140, sass/default/utilities/tools/_structure.scss */
+  /* line 142, sass/default/utilities/tools/_structure.scss */
   .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 146, sass/default/utilities/tools/_structure.scss */
+  /* line 148, sass/default/utilities/tools/_structure.scss */
   .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
   }
 
-  /* line 46, sass/default/utilities/tools/_layout.scss */
+  /* line 63, sass/default/utilities/tools/_layout.scss */
   .main-navigation-heading {
     position: relative;
     z-index: 901;
   }
-  /* line 52, sass/default/utilities/tools/_layout.scss */
+  /* line 69, sass/default/utilities/tools/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon {
     fill: #fff;
     opacity: .85;
   }
-  /* line 56, sass/default/utilities/tools/_layout.scss */
+  /* line 73, sass/default/utilities/tools/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon:hover {
     opacity: 1;
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 8, sass/default/utilities/tools/_layout.scss */
+  /* line 25, sass/default/utilities/tools/_layout.scss */
   .masthead-cr {
     position: relative;
     height: 3.5rem;
@@ -2895,27 +2902,27 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     clear: both;
   }
 
-  /* line 16, sass/default/utilities/tools/_layout.scss */
+  /* line 33, sass/default/utilities/tools/_layout.scss */
   .masthead-header {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     text-align: center;
   }
-  /* line 140, sass/default/utilities/tools/_structure.scss */
+  /* line 142, sass/default/utilities/tools/_structure.scss */
   .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 146, sass/default/utilities/tools/_structure.scss */
+  /* line 148, sass/default/utilities/tools/_structure.scss */
   .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
   }
 
-  /* line 21, sass/default/utilities/tools/_layout.scss */
+  /* line 38, sass/default/utilities/tools/_layout.scss */
   .site-title-heading {
     margin-bottom: auto;
     font-size: 20px;
@@ -2924,7 +2931,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     line-height: normal;
   }
 
-  /* line 30, sass/default/utilities/tools/_layout.scss */
+  /* line 47, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .widget_search {
     position: absolute;
     top: 0;
@@ -2934,7 +2941,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     z-index: 900;
   }
 
-  /* line 37, sass/default/utilities/tools/_layout.scss */
+  /* line 54, sass/default/utilities/tools/_layout.scss */
   .site-description {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2946,37 +2953,37 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     width: 1px;
   }
 
-  /* line 41, sass/default/utilities/tools/_layout.scss */
+  /* line 58, sass/default/utilities/tools/_layout.scss */
   .main-navigation {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     float: left;
   }
-  /* line 140, sass/default/utilities/tools/_structure.scss */
+  /* line 142, sass/default/utilities/tools/_structure.scss */
   .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 146, sass/default/utilities/tools/_structure.scss */
+  /* line 148, sass/default/utilities/tools/_structure.scss */
   .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
   }
 
-  /* line 46, sass/default/utilities/tools/_layout.scss */
+  /* line 63, sass/default/utilities/tools/_layout.scss */
   .main-navigation-heading {
     position: relative;
     z-index: 901;
   }
-  /* line 52, sass/default/utilities/tools/_layout.scss */
+  /* line 69, sass/default/utilities/tools/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon {
     fill: #fff;
     opacity: .85;
   }
-  /* line 56, sass/default/utilities/tools/_layout.scss */
+  /* line 73, sass/default/utilities/tools/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon:hover {
     opacity: 1;
   }
@@ -2996,18 +3003,18 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     color: white;
   }
 
-  /* line 168, sass/default/utilities/tools/_layout.scss */
+  /* line 173, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .search-control .icon,
   .header-sidebar .search-submit .icon {
     fill: white;
   }
 
-  /* line 172, sass/default/utilities/tools/_layout.scss */
+  /* line 177, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .search-form {
     background-color: #00aaff;
   }
 
-  /* line 176, sass/default/utilities/tools/_layout.scss */
+  /* line 181, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .search-control {
     opacity: .75;
     -webkit-transition: opacity 0.125s ease;
@@ -3017,36 +3024,22 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     transition: opacity 0.125s ease;
   }
 
-  /* line 181, sass/default/utilities/tools/_layout.scss */
+  /* line 186, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .search-control:hover {
     opacity: 1;
   }
 
-  /* line 185, sass/default/utilities/tools/_layout.scss */
+  /* line 190, sass/default/utilities/tools/_layout.scss */
   .header-sidebar .search-input {
     color: white;
   }
 
-  /* line 74, sass/default/utilities/tools/_layout.scss */
-  .masthead {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 900;
-  }
-
-  /* line 82, sass/default/utilities/tools/_layout.scss */
-  .main {
-    padding-top: 3.5rem;
-  }
-
-  /* line 86, sass/default/utilities/tools/_layout.scss */
+  /* line 91, sass/default/utilities/tools/_layout.scss */
   .masthead-cr {
     background-color: #00aaff;
   }
 
-  /* line 90, sass/default/utilities/tools/_layout.scss */
+  /* line 95, sass/default/utilities/tools/_layout.scss */
   .site-title-link {
     padding: 1rem;
     color: white;
@@ -3056,26 +3049,26 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: background-color 0.125s ease;
     transition: background-color 0.125s ease;
   }
-  /* line 95, sass/default/utilities/tools/_layout.scss */
+  /* line 100, sass/default/utilities/tools/_layout.scss */
   .site-title-link:hover {
     background-color: #0099e6;
     text-decoration: none;
   }
 
-  /* line 103, sass/default/utilities/tools/_layout.scss */
+  /* line 108, sass/default/utilities/tools/_layout.scss */
   div.nav-menu > ul > li > a {
     color: white;
   }
-  /* line 106, sass/default/utilities/tools/_layout.scss */
+  /* line 111, sass/default/utilities/tools/_layout.scss */
   div.nav-menu > ul > li > a:hover {
     text-decoration: none;
   }
-  /* line 112, sass/default/utilities/tools/_layout.scss */
+  /* line 117, sass/default/utilities/tools/_layout.scss */
   div.nav-menu > ul > li:hover {
     background-color: #0099e6;
   }
 
-  /* line 118, sass/default/utilities/tools/_layout.scss */
+  /* line 123, sass/default/utilities/tools/_layout.scss */
   .main-navigation {
     float: none;
   }
@@ -3332,7 +3325,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 .secondary-sidebar-container {
   margin-top: 2rem;
 }
-/* line 195, sass/default/utilities/tools/_structure.scss */
+/* line 197, sass/default/utilities/tools/_structure.scss */
 .lt-ie9 .secondary-sidebar-container {
   margin-top: auto;
 }

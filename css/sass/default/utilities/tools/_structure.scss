@@ -8,6 +8,8 @@
 @import 'structure/pseudo-content';
 @import 'structure/transform';
 @import 'structure/z-index';
+@import 'structure/shrink-heading';
+@import 'structure/reset-child';
 
 
 
@@ -242,35 +244,7 @@
 }
 
 
-//------------------------- Smaller Headings
-// Usage: Headings inside entries
-@mixin shrink-heading {
-    
-    h1 {
-        @include font-size-rem($font-xxl * $font-size-shrink-factor);
-    }
 
-    h2 {
-        @include font-size-rem($font-xl * $font-size-shrink-factor);
-    }
-
-    h3 {
-        @include font-size-rem($font-l * $font-size-shrink-factor);
-    }
-
-    h4 {
-        @include font-size-rem($font-m * $font-size-shrink-factor);
-    }
-
-    h5 {
-        @include font-size-rem($font-m);
-    }
-
-    h6 {
-        @include font-size-rem($font-s);
-    }
-    
-}
 
 //------------------------- Avatar Adjust
 @mixin avatar-adjust {

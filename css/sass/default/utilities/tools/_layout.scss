@@ -2,6 +2,23 @@
 // Usage: Rules concerning design layout
 
 
+@mixin fixed-header {
+    
+    .masthead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include z($layer1);
+    }
+    
+    .main {
+        padding-top: $block-l;
+    }
+    
+}
+
+
 //------------------------- Header for Narrow Mode
 @mixin header-compact {
     
@@ -70,18 +87,6 @@
     
     @include header-compact;
     @include search-theme-reverse;
-    
-    .masthead {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        @include z($layer1);
-    }
-    
-    .main {
-        padding-top: $block-l;
-    }
     
     .masthead-cr {
         background-color: $color-primary;
