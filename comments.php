@@ -40,12 +40,12 @@ if ( post_password_required() )
             <?php comment_form( array(
                 'id_form'           => 'comment-form',
                 'id_submit'         => 'submit',
-                'title_reply'       => __( 'Compose Comment' ),                
+                'title_reply'       => __( 'Compose Comment', 'hopscotch' ),                
                 'cancel_reply_link' => '<span class="action-item">Cancel <span class="label-verb-subject">Compose</span></span>',
-                'title_reply_to'    => __( 'Leave a Reply to %s' ),
-                'label_submit'      => __( 'Post' ),
+                'title_reply_to'    => __( 'Leave a Reply to %s', 'hopscotch' ),
+                'label_submit'      => __( 'Post', 'hopscotch' ),
                 'comment_notes_before' => '',
-                'comment_field'     => '<div class="field field-comment"><div class="field-cr"><label for="comment">' . _x( 'Comment', 'noun' ) .
+                'comment_field'     => '<div class="field field-comment"><div class="field-cr"><label for="comment">' . _x( 'Comment', 'noun', 'hopscotch' ) .
                 '</label><div class="sudo-input-text sudo-input-text-comment" data-state-form-element="unfocused"><textarea id="comment" title="Comment" placeholder="Write message" name="comment" required aria-required="true">' .
                 '</textarea></div></div>',
                 

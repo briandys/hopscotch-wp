@@ -1,0 +1,60 @@
+@mixin button-style-default {    
+    @extend %transition-bg-color;    
+    @include corner-radius($radius-s);
+    color: $white;
+    background-color: $color-button-default;
+    overflow: hidden;
+    
+    > * {
+        @include input-type-text-style;
+    }
+
+    &[data-state-form-element="focused"],
+    &:hover {
+        background-color: saturate($color-button-default, 25%);
+    }
+    
+    &:active {
+        @include transform(translate(0, $one));
+    }
+    
+}
+
+
+//------------------------- Buttonizer primary
+@mixin buttonizer($level: primary) {
+    @extend %transition-bg-color;
+    display: inline-block;
+    padding: .25rem .5rem; 
+    color: $color-link-primary;
+    border-width: $one;
+    border-style: solid;
+    border-color: currentColor;
+    @include corner-radius($radius-s);
+    text-transform: uppercase;
+    
+    &:hover {
+        color: $white;
+        background-color: $color-link-primary;
+        text-decoration: none;
+    }
+    
+    @if $level == 'secondary' {
+        color: $color-link-secondary;
+        border-color: currentColor;
+        
+        &:hover {
+            background-color: $color-link-secondary;
+        }
+        
+    }
+    
+}
+
+%buttonizer-primary {
+    @include buttonizer;
+}
+
+%buttonizer-secondary {
+    @include buttonizer(secondary);
+}

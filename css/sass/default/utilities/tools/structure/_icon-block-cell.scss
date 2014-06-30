@@ -1,0 +1,10 @@
+//------------------------- Icon Block using Table Cell (apply to icon images)
+@mixin icon-block-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+%icon-block-cell {
+    @include icon-block-cell;
+}

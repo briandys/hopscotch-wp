@@ -18,12 +18,20 @@
                                     <!-- Search -->
                                     <?php elseif ( is_search() ) : ?>                                
                                         <?php
-                                        $entrySearch = new WP_Query( array( 's' => $s, 'showposts' => -1 ) );
+                                        $entrySearch = new WP_Query( array(
+                                            's'         => $s,
+                                            'showposts' => -1,
+                                        ) );
                                         $key = get_search_query();
                                         $count = $entrySearch->post_count;
-                                        _e('<span class="label-value counter counter-search-results">'); echo $count . ' '; _e('</span>');
-                                        _e('<span class="label">'); if ($count == 0 || $count == 1) echo 'Search Result for '; else echo 'Search Results for '; _e('</span>');
-                                        _e('<span class="label-value term-search">'); echo $key; _e('</span>');										
+                                        echo '<span class="label-value counter search-results--count">' . $count . '</span>';
+                                        echo '&nbsp;';
+                                        echo '<span class="label">';
+                                        if ($count == 0 || $count == 1)
+                                            echo 'Search result for';                                        
+                                        echo '</span>';
+                                        echo '&nbsp;';                                        
+                                        echo '<span class="label-value search-results--term">' . $key . '</span>';
                                         wp_reset_query();
                                     ?>
 

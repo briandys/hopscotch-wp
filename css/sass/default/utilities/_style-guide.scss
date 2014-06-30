@@ -9,6 +9,8 @@ $font-color-base: $gray20;
 $color-primary: $blue-superhero;
 $color-secondary: $green-go;
 
+$color-bg-darken: rgba($black, .05);
+
 // Links
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
@@ -17,7 +19,6 @@ $color-link-tertiary: $font-color-base;
 $color-link-hover: rgba($color-primary, .05);
 $color-link-selected: rgba($color-primary, 1);
 $color-link-active: rgba($color-primary, .25);
-
 
 // Forms
 $color-button-default: $color-secondary;

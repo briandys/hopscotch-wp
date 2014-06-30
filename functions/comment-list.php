@@ -42,7 +42,7 @@ if ( ! function_exists( 'hopscotch_comments' ) ) :
 
             <div class="comment-ct">
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <p class="comment-pending"><?php _e('Your comment is awaiting moderation.') ?></p>
+                    <p class="comment-pending"><?php _e('Your comment is awaiting moderation.', 'hopscotch') ?></p>
                 <?php endif; ?>
                 <blockquote class="comment-message"><?php comment_text() ?></blockquote>
             </div><!-- .comment-content -->
@@ -51,7 +51,7 @@ if ( ! function_exists( 'hopscotch_comments' ) ) :
             <div class="action-items comment-action">
                 <ul class="action-list comment-action-list">
                     <?php if ( current_user_can('edit_posts') ) : ?>
-                    <li class="action-item action-edit comment-action-edit"><?php edit_comment_link(__('Edit'),'  ','' ); ?>
+                    <li class="action-item action-edit comment-action-edit"><?php edit_comment_link(__('Edit', 'hopscotch'),'  ','' ); ?>
                     <?php endif; ?>
                     <?php if ( comments_open() ) : ?>
                     <li class="action-item action-reply comment-action-reply"><?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => 1, 'max_depth' => $args['max_depth']))) ?>

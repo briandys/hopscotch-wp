@@ -4,3 +4,20 @@
     @include faint;
     text-transform: uppercase;
 }
+
+
+@mixin input-type-text-style {
+    padding: .5rem;
+    min-height: 2.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+//------------------------- Faint
+@mixin faint {
+    color: $gray50;
+}
+
+%faint {
+    @include faint;
+}

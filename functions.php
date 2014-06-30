@@ -86,8 +86,8 @@ require_once( trailingslashit(get_template_directory()) . 'functions/image-margi
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail-state-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 
-// require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 // require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
 
 
