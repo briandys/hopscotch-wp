@@ -33,6 +33,8 @@
     .masthead-header {
         @include valign-mid;
         text-align: center;
+        height: $block-l;
+        overflow: hidden;
     }
     
     .site-title-heading {

@@ -38,7 +38,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/customizer-
 //require_once( trailingslashit(get_template_directory()) . 'functions/customizer-theme.php');
 
 // Header
-require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
+// require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.php');
 
 // Navigation
