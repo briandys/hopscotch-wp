@@ -23,6 +23,16 @@ div.nav-menu {
 
                 &.status-sub-nav-active {
                     background-color: darken($color-primary, 5%);
+                    
+                    @include pseudo-content(before) {
+
+                        // Non-mobile mode
+                        @include mq($tablet, ieFixOn) {
+                            display: none;
+                        }
+
+                    }
+                    
                 }
                 
                 &.status-sub-nav-inactive:after {
@@ -131,11 +141,13 @@ div.nav-menu {
         .current_page_item {
         
             // Sub nav highlight
-            @include pseudo-content(before) {
-                left: 0;
-                top: 0;
-                @include size(.5rem, 100%);
-                background-color: $darken25;
+            @include mq($tablet, ieFixOn) {
+                @include pseudo-content(before) {
+                    left: 0;
+                    top: 0;
+                    @include size(.5rem, 100%);
+                    background-color: $darken15;
+                }
             }
             
         }
@@ -150,21 +162,8 @@ div.nav-menu {
             @include mq($tablet, ieFixOn) {
                 left: 0;
                 bottom: 0;
-                @include size(100%, .35rem);
+                @include size(100%, .5rem);
                 background-color: $darken15;
-            }
-            
-        }
-        
-        &.status-sub-nav-active {
-            
-            @include pseudo-content(before) {
-                
-                // Non-mobile mode
-                @include mq($tablet, ieFixOn) {
-                    display: none;
-                }
-                
             }
             
         }
@@ -200,11 +199,26 @@ div.nav-menu {
         position: relative;
 
         > a {
-            margin-right: $block-l;
+            margin-right: $block-m;
 
             // Non-mobile mode
             @include mq($tablet, ieFixOn) {
-                padding-right: 0;
+                @include pseudo-content;
+                
+                &:after {
+                    // Temp
+                    display: none;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -.75rem;
+                    @include size($one, 1.5rem);
+                    border-right: $one dotted rgba($white, .5);
+                }
+                
+                &:hover {
+                    background-color: $darken5;
+                }
+                
             }
 
         }
@@ -214,13 +228,13 @@ div.nav-menu {
         }
 
         // Pseudo-element for the more icon
-        &:after {                    
+        &:after {
             $icon-size: .75rem;
             @include sudo-ct;
             @include position-offset($icon-size);
             @include size($icon-size);                
             @include transition(opacity);
-            margin-right: 1.35rem;
+            margin-right: 1.25rem;
             @include background-image-icon('../img/more-light.svg');
             opacity: .5;
             z-index: 90;
