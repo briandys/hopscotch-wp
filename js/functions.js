@@ -6,7 +6,7 @@
 
 	
     // Media query for wide or narrow viewport
-    $( function () {
+    ( function() {
         
         $(window).on('resize', function(){
             
@@ -29,7 +29,7 @@
         
         }).resize();
     
-    } );
+    } )();
     
     
     // Main navigation toggle for mobile mode
