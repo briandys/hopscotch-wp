@@ -2,11 +2,26 @@
 
 //------------------------- HopScotch Setup
 function hopscotch_setup() {
-	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+	
+    load_theme_textdomain( 'hopscotch', get_template_directory() . '/languages' );
+    
+    add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'hopscotch' ) );
     remove_filter('term_description','wpautop');
+    
+    update_option('thumbnail_size_w', 160);
+    update_option('thumbnail_size_h', 160);
+    update_option('medium_size_w', 640);
+    update_option('medium_size_h', 640);
+    update_option('large_size_w', 1200);
+    update_option('large_size_h', 1200);
+    
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 160, 160, true );
+	add_image_size( 'hopscotch-regular', 800, 600, true );
+
 }
 add_action( 'after_setup_theme', 'hopscotch_setup' );
 
