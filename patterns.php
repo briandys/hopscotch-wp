@@ -25,9 +25,9 @@
 
     <?php
         $files = array();
-        $handle=opendir('components');
+        $handle=opendir('patterns');
         while (false !== ($file = readdir($handle))):
-            if(stristr($file,'.php')):
+            if(stristr($file,'.html')):
                 $files[] = $file;
             endif;
         endwhile;
@@ -35,7 +35,7 @@
         foreach ($files as $file):
             echo '<div class="pattern">';
             echo '<div class="display">';
-            $hehe = file_get_contents('components/'.$file);
+            $hehe = file_get_contents('patterns/'.$file);
 
 $hehe = preg_replace('#<\?#s', '$1', $hehe);
 
@@ -44,7 +44,7 @@ $hehe = preg_replace('#<\?#s', '$1', $hehe);
             echo '<div class="source">';
             echo '<p>'.$file.'</p>';
             echo '<textarea rows="6" cols="30">';
-            echo htmlspecialchars(file_get_contents('components/'.$file));
+            echo htmlspecialchars(file_get_contents('patterns/'.$file));
             echo '</textarea>';
             echo '</div>';
             echo '</div>';
