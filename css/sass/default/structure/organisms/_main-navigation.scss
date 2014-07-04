@@ -163,7 +163,7 @@ div.nav-menu {
                 left: 0;
                 bottom: 0;
                 @include size(100%, .5rem);
-                background-color: $darken15;
+                background-color: $darken5;
             }
             
         }
@@ -213,10 +213,6 @@ div.nav-menu {
                     margin-top: -.75rem;
                     @include size($one, 1.5rem);
                     border-right: $one dotted rgba($white, .5);
-                }
-                
-                &:hover {
-                    background-color: $darken5;
                 }
                 
             }
@@ -282,6 +278,14 @@ div.nav-menu {
                 .children,
                 .sub-menu {                        
                      @include vhide-rev;
+                }
+                
+                a {
+                    
+                    &:hover {
+                        background-color: $darken5;
+                    }
+                    
                 }
 
             }

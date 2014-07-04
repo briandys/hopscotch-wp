@@ -2483,7 +2483,7 @@ div.nav-menu .current_page_item:before {
     bottom: 0;
     width: 100%;
     height: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
   }
 }
 /* line 171, sass/default/structure/organisms/_main-navigation.scss */
@@ -2543,16 +2543,12 @@ div.nav-menu .page_item_has_children > a, div.nav-menu .menu-item-has-children >
     height: 1.5rem;
     border-right: 0.0625rem dotted rgba(255, 255, 255, 0.5);
   }
-  /* line 218, sass/default/structure/organisms/_main-navigation.scss */
-  div.nav-menu .page_item_has_children > a:hover, div.nav-menu .menu-item-has-children > a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
 }
-/* line 226, sass/default/structure/organisms/_main-navigation.scss */
+/* line 222, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children:hover, div.nav-menu .menu-item-has-children:hover {
   cursor: pointer;
 }
-/* line 231, sass/default/structure/organisms/_main-navigation.scss */
+/* line 227, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children:after, div.nav-menu .menu-item-has-children:after {
   content: '';
   position: absolute;
@@ -2575,14 +2571,14 @@ div.nav-menu .page_item_has_children:after, div.nav-menu .menu-item-has-children
   z-index: 90;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 231, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 227, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children:after, div.nav-menu .menu-item-has-children:after {
     top: 1.65rem;
     width: 1rem;
     height: 1rem;
   }
 }
-/* line 251, sass/default/structure/organisms/_main-navigation.scss */
+/* line 247, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:after, div.nav-menu .menu-item-has-children.status-sub-nav-active:after {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -2590,11 +2586,11 @@ div.nav-menu .page_item_has_children.status-sub-nav-active:after, div.nav-menu .
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 255, sass/default/structure/organisms/_main-navigation.scss */
+/* line 251, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:hover:after, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover:after {
   opacity: 1;
 }
-/* line 259, sass/default/structure/organisms/_main-navigation.scss */
+/* line 255, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-item-has-children.status-sub-nav-active {
   background-color: #00aaff;
   -webkit-transition: background-color 0.125s ease;
@@ -2603,23 +2599,23 @@ div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-i
   -o-transition: background-color 0.125s ease;
   transition: background-color 0.125s ease;
 }
-/* line 263, sass/default/structure/organisms/_main-navigation.scss */
+/* line 259, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover {
   background-color: #0099e6;
 }
-/* line 267, sass/default/structure/organisms/_main-navigation.scss */
+/* line 263, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active a, div.nav-menu .menu-item-has-children.status-sub-nav-active a {
   color: white;
 }
-/* line 270, sass/default/structure/organisms/_main-navigation.scss */
+/* line 266, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active a:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active a:hover {
   text-decoration: none;
 }
-/* line 278, sass/default/structure/organisms/_main-navigation.scss */
+/* line 274, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active > *, div.nav-menu .menu-item-has-children.status-sub-nav-active > * {
   color: white;
 }
-/* line 283, sass/default/structure/organisms/_main-navigation.scss */
+/* line 279, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active > .children,
 div.nav-menu .page_item_has_children.status-sub-nav-active > .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active > .children,
 div.nav-menu .menu-item-has-children.status-sub-nav-active > .sub-menu {
@@ -2631,7 +2627,11 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active > .sub-menu {
   position: static;
   width: auto;
 }
-/* line 290, sass/default/structure/organisms/_main-navigation.scss */
+/* line 285, sass/default/structure/organisms/_main-navigation.scss */
+div.nav-menu .page_item_has_children.status-sub-nav-active > a:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active > a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* line 294, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active .children,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
@@ -2640,7 +2640,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
   z-index: 90;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 290, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 294, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active .children,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
@@ -2655,7 +2655,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
     margin-left: 0.75rem;
   }
 }
-/* line 308, sass/default/structure/organisms/_main-navigation.scss */
+/* line 312, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children li,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu li, div.nav-menu .menu-item-has-children.status-sub-nav-active .children li,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li {
@@ -2665,14 +2665,14 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li {
   -o-transition: background-color 0.125s ease;
   transition: background-color 0.125s ease;
 }
-/* line 311, sass/default/structure/organisms/_main-navigation.scss */
+/* line 315, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children li:hover,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu li:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active .children li:hover,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
 @media only screen and (min-width: 48rem) {
-  /* line 318, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 322, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children:before,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu:before, div.nav-menu .menu-item-has-children.status-sub-nav-active .children:before,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu:before {
@@ -2687,7 +2687,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li:hover {
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 333, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 337, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children:after,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu:after, div.nav-menu .menu-item-has-children.status-sub-nav-active .children:after,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu:after {
@@ -2704,7 +2704,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu li:hover {
     z-index: 90;
   }
 }
-/* line 357, sass/default/structure/organisms/_main-navigation.scss */
+/* line 361, sass/default/structure/organisms/_main-navigation.scss */
 div.nav-menu .page_item_has_children > .children,
 div.nav-menu .page_item_has_children > .sub-menu, div.nav-menu .menu-item-has-children > .children,
 div.nav-menu .menu-item-has-children > .sub-menu {
@@ -2718,12 +2718,12 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   width: 1px;
 }
 
-/* line 368, sass/default/structure/organisms/_main-navigation.scss */
+/* line 372, sass/default/structure/organisms/_main-navigation.scss */
 .main-navigation-heading {
   margin-bottom: auto;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 368, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 372, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     font-size: 16px;
     font-size: 1rem;
@@ -2735,7 +2735,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 368, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 372, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2748,7 +2748,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 383, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 387, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -2758,7 +2758,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: fill 0.125s ease;
     transition: fill 0.125s ease;
   }
-  /* line 390, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 394, sass/default/structure/organisms/_main-navigation.scss */
   .modernizr-no-inlinesvg .main-navigation-heading .icon {
     clip: auto;
     height: auto;
@@ -2770,13 +2770,13 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 397, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 401, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading:hover {
     cursor: pointer;
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 404, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 408, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .label {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2790,7 +2790,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 413, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 417, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
     position: fixed;
     left: 0;
@@ -2807,7 +2807,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 426, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 430, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
