@@ -199,11 +199,12 @@ div.nav-menu {
         position: relative;
 
         > a {
-            margin-right: $block-m;
+            margin-right: $block-l;
 
             // Non-mobile mode
             @include mq($tablet, ieFixOn) {
                 @include pseudo-content;
+                margin-right: $block-m;
                 
                 &:after {
                     // Temp
