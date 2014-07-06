@@ -11,26 +11,21 @@ function hopscotch_setup() {
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'hopscotch' ) );
     remove_filter('term_description','wpautop');
     
+    add_theme_support( 'post-thumbnails' );
+    
     update_option('thumbnail_size_w', 160);
     update_option('thumbnail_size_h', 160);
+    update_option('thumbnail_crop', 1);
+    
+    add_image_size( 'hopscotch-small', 320 );
     update_option('medium_size_w', 640);
     update_option('medium_size_h', 640);
+    add_image_size( 'hopscotch-regular', 800 );    
     update_option('large_size_w', 1200);
     update_option('large_size_h', 1200);
-    
-    add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 160, 160, true );
-	add_image_size( 'hopscotch-regular', 800, 600, true );
 
 }
 add_action( 'after_setup_theme', 'hopscotch_setup' );
-
-
-//------------------------- Featured Image
-if ( function_exists( 'add_theme_support' ) ) {
-	add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 160, 160, true );
-}
 
 
 //------------------------- Content Width

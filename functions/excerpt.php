@@ -11,7 +11,7 @@ endif;
 
 //------------------------- Excerpt Ellipsis
 function hopscotch_excerpt_more( $more ) {
-return '&hellip;'; // nicer without the brackets
+    return '&hellip;'; // nicer without the brackets
 }
 add_filter( 'excerpt_more', 'hopscotch_excerpt_more' );
 
