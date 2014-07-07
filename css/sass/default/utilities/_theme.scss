@@ -1,6 +1,13 @@
 // Theme Rules
 
 
+@include selection( $color-selection-primary, $white );
+
+a {
+    color: $color-link-primary;
+}
+
+
 svg.icon {
     
     &:hover {
@@ -87,4 +94,15 @@ div.nav-menu {
         
     }
     
+}
+
+
+@include mq($tablet, $query1: max) {
+    
+}
+
+
+@include mq($tablet, ieFixOn) {
+    @include header-semi-compact-theme;
+    @include search-theme-reverse-theme;
 }

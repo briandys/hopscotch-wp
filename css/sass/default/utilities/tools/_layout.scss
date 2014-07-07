@@ -91,7 +91,7 @@
     @include search-theme-reverse;
     
     .masthead-cr {
-        background-color: $color-primary;
+        // Themed Mixin
     }
     
     .site-title-link {
@@ -100,7 +100,7 @@
         @include transition(background-color);
         
         &:hover {
-            background-color: darken($color-primary, 5%);
+            // Themed Mixin
             text-decoration: none;
         }
     }
@@ -117,7 +117,7 @@
         }
         
         &:hover {
-            background-color: darken($color-primary, 5%);
+            // Themed Mixin
         }
         
     }
@@ -127,6 +127,23 @@
     }
 
 }
+
+@mixin header-semi-compact-theme {
+        
+    .masthead-cr {
+        background-color: $color-primary;
+    }
+    
+    .site-title-link:hover {
+        background-color: darken($color-primary, 5%);
+    }
+    
+    div.nav-menu > ul > li:hover {
+        background-color: darken($color-primary, 5%);
+    }
+}
+
+
 
 
 //------------------------- Header Simple
@@ -177,7 +194,7 @@
     }
     
     .header-sidebar .search-form {
-        background-color: $color-primary;
+        // Themed Mixin
     }
     
     .header-sidebar .search-control {
@@ -193,4 +210,10 @@
         color: $white;
     }
     
+}
+
+@mixin search-theme-reverse-theme {    
+    .header-sidebar .search-form {
+        background-color: $color-primary;
+    }
 }

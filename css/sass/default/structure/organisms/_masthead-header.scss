@@ -1,11 +1,13 @@
 // Narrow viewport
 @include mq($tablet, $query1: max) {
     @include header-compact;
+    // Themed
 }
 
 // Wide viewport
 @include mq($tablet, ieFixOn) {
     @include header-semi-compact;
+    // Themed
 }
 
 .skip-to-content-link {
