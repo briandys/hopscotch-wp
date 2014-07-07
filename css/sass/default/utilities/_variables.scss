@@ -71,7 +71,7 @@ $two: .125rem;
 
 
 //------------------------- Colors
-$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
 $gray10: hsl(0, 0%, 10%);
 $gray15: hsl(0, 0%, 15%);
 $gray20: hsl(0, 0%, 20%);
@@ -90,7 +90,7 @@ $gray80: hsl(0, 0%, 80%);
 $gray85: hsl(0, 0%, 85%);
 $gray90: hsl(0, 0%, 90%);
 $gray95: hsl(0, 0%, 95%);
-$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
 
 $faint: $gray50;
 
@@ -99,7 +99,9 @@ $cloud: $gray95;
 // Add a dark shade
 // Example usage: color overlays on menu items with exisint background colors
 $darken5: hsla(0, 0%, 0%, .05);
+$darken10: hsla(0, 0%, 0%, .10);
 $darken15: hsla(0, 0%, 0%, .15);
+$darken20: hsla(0, 0%, 0%, .20);
 $darken25: hsla(0, 0%, 0%, .25);
 $darken50: hsla(0, 0%, 0%, .50);
 $darken75: hsla(0, 0%, 0%, .75);
@@ -123,3 +125,10 @@ $radius-size-factor: .25;
 
 $radius-s: .25rem;
 $radius-m: $radius-s + $radius-size-factor;
+
+
+// Color Palettes
+$blue-superhero: #00aaff; // Superhero Blue
+$orange-chikka: #ff7f00; // Chikka Orange
+$red-record: #e53a2e; // Record Red
+$green-go: #12b32d; // Go Green

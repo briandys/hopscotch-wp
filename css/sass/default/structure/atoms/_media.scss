@@ -38,11 +38,11 @@ svg.icon {
     margin: $one; // Corrects cut edges
     fill: $gray25;    
     @include transition(fill);
-
-    &:hover {
-        fill: $color-primary;
-    }
     
+    &:hover {
+        // Themed
+    }
+
     .modernizr-no-inlinesvg & {
         display: none;
     }

@@ -18,11 +18,16 @@ div.nav-menu {
 
         > {
             
+            a,
+            *:first-child {
+                white-space: nowrap;
+            }
+            
             .page_item_has_children,
             .menu-item-has-children {
 
                 &.status-sub-nav-active {
-                    background-color: darken($color-primary, 5%);
+                    // Themed
                     
                     @include pseudo-content(before) {
 
@@ -88,7 +93,7 @@ div.nav-menu {
             
             // Mobile mode
             @include mq($tablet, $query1: max) {
-                background-color: darken($color-primary, 5%);
+                // Themed
             }
             
         }
@@ -163,7 +168,7 @@ div.nav-menu {
                 left: 0;
                 bottom: 0;
                 @include size(100%, .5rem);
-                background-color: $darken25;
+                background-color: $darken15;
             }
             
         }
@@ -179,7 +184,7 @@ div.nav-menu {
         // Mobile mode
         @include mq($tablet, $query1: max) {
             @include size(100%);
-            background-color: darken($color-primary, 10%);
+            // Themed
             overflow-x: hidden;
             overflow-y: auto;
 
@@ -254,11 +259,11 @@ div.nav-menu {
         }
 
         &.status-sub-nav-active {
-            background-color: $color-primary;
+            // Themed
             @include transition(background-color);
             
             &:hover {
-                background-color: darken($color-primary, 5%);
+                // Themed
             }
 
             a {
@@ -294,7 +299,7 @@ div.nav-menu {
             .children,
             .sub-menu {
                 $fold-size: .75rem;
-                background-color: darken($color-primary, 2.5%);
+                // Themed
                 text-align: left;
                 z-index: 90;
 

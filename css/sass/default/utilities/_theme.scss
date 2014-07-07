@@ -1,0 +1,90 @@
+// Theme Rules
+
+
+svg.icon {
+    
+    &:hover {
+        fill: $color-primary;
+    } 
+    
+}
+
+.scroll-top-link {
+    
+    &:hover {
+        
+        .icon {
+            fill: $color-primary;
+        }
+        
+    }
+    
+}
+
+div.nav-menu {
+    
+    > ul {
+    
+        > {
+            .page_item_has_children,
+            .menu-item-has-children {
+
+                &.status-sub-nav-active {
+                    background-color: darken($color-primary, 5%);
+                }
+
+            }
+
+        }
+        
+    }
+    
+    li {
+
+        &:hover {
+
+            // Mobile mode
+            @include mq($tablet, $query1: max) {
+                background-color: darken($color-primary, 5%);
+            }
+
+        }
+
+    }
+    
+    .status-mobile-main-nav-active & {
+
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
+            background-color: darken($color-primary, 10%);
+        }
+
+    }
+    
+    .page_item_has_children, .menu-item-has-children {
+        
+        &.status-sub-nav-active {
+            background-color: $color-primary;
+            
+            &:hover {
+                background-color: darken($color-primary, 5%);
+            }
+            
+        }
+        
+    }
+    
+    .page_item_has_children, .menu-item-has-children {
+       
+        &.status-sub-nav-active {
+            
+            .children,
+            .sub-menu {
+                background-color: darken($color-primary, 2.5%);
+            }
+            
+        }
+        
+    }
+    
+}
