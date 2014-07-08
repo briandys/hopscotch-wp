@@ -1,11 +1,11 @@
 .entry-thumbnail-link {
     display: inline-block;
-    @include size(10rem);
     background-position: center center;
     background-size: cover;
     
     .site-default & {
         @include circle;
+        @include size(10rem);
     }
     
 }

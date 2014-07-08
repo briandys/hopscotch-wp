@@ -10,7 +10,7 @@ function hopscotch_add_entry_class($classes) {
     $classes[] = 'hopscotch-' . $post->post_name;
     
     // Info Card vCard
-    if ( is_page_template( 'templates/info-card.php' ) ) $classes[] = 'vcard';
+    if ( is_page_template( 'templates/info-card.php' ) ) $classes[] = 'vcard org';
 	return $classes;
 }
 add_filter('post_class', "hopscotch_add_entry_class");

@@ -1421,15 +1421,15 @@ tbody tr:last-child {
 /* line 1, sass/default/structure/molecules/_entry-thumbnail.scss */
 .entry-thumbnail-link {
   display: inline-block;
-  width: 10rem;
-  height: 10rem;
   background-position: center center;
   background-size: cover;
 }
-/* line 7, sass/default/structure/molecules/_entry-thumbnail.scss */
+/* line 6, sass/default/structure/molecules/_entry-thumbnail.scss */
 .site-default .entry-thumbnail-link {
   border-radius: 50%;
   overflow: hidden;
+  width: 10rem;
+  height: 10rem;
 }
 
 /* line 15, sass/default/structure/molecules/_entry-thumbnail.scss */
