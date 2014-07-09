@@ -763,13 +763,6 @@ img, .wp-caption {
   vertical-align: middle;
 }
 
-/* line 8, sass/default/utilities/tools/structure/_truncate-text.scss */
-.action-list, div.nav-menu ul {
-  list-style: none;
-  margin: auto;
-  padding: 0;
-}
-
 /* line 8, sass/default/utilities/tools/structure/_unlist.scss */
 .action-list, div.nav-menu ul {
   list-style: none;
@@ -808,6 +801,7 @@ img, .wp-caption {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+  border-overflow: hidden;
   text-transform: uppercase;
 }
 /* line 36, sass/default/utilities/tools/visual/_buttonstyle.scss */
@@ -1056,6 +1050,7 @@ label[for]:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+  border-overflow: hidden;
   overflow: hidden;
 }
 /* line 45, sass/default/structure/atoms/_form.scss */
@@ -1077,6 +1072,7 @@ label[for]:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+  border-overflow: hidden;
   color: white;
   background-color: #12b32d;
   overflow: hidden;
@@ -1345,6 +1341,7 @@ tbody tr:last-child {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+  border-overflow: hidden;
   text-align: center;
   color: gray;
 }
@@ -1897,6 +1894,7 @@ ins {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+  border-overflow: hidden;
   color: white;
   background-color: #12b32d;
   overflow: hidden;
