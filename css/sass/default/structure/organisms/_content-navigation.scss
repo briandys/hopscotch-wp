@@ -2,11 +2,18 @@
     clear: both;
 }
 
+.content-navigation-cr {
+    @include borderstyle-perforated;
+    @include borderstyle-perforated( top );
+}
+
 .content-navigation-list {
     @include unlist;
     
     .action-item {
+        margin-bottom: auto;
         padding: 1rem;
+        padding-bottom: 0;
         
         &:last-child {
             margin-bottom: auto;

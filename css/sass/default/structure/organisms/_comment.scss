@@ -52,6 +52,7 @@
 }
 
 .comments-hr {
+    @extend %vhide;
     padding: 0 1rem;
 }
 
@@ -244,6 +245,14 @@
             @include avatar-adjust;
         }        
         
+    }
+    
+}
+
+.comments-ct {
+    
+    .blank {
+        @extend %vhide;
     }
     
 }
