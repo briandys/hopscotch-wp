@@ -178,7 +178,7 @@
         
     }
     
-    a:not( .more-link ):not( .entry-thumbnail-link ) {
+    a:not( .more-link ):not( .entry-thumbnail-link ):not( .gallery-icon a ) {
         @include linkstyle-secondary;
     }
     
@@ -218,7 +218,7 @@
 }
 
 .entry-admin-action {
-    @include transform(translate(0, -0.35rem));
+    @include transform(translate(0, 0.25rem));
 }
 
 

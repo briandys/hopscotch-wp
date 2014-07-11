@@ -801,7 +801,7 @@ img, .wp-caption {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  border-overflow: hidden;
+  overflow: hidden;
   text-transform: uppercase;
 }
 /* line 36, sass/default/utilities/tools/visual/_buttonstyle.scss */
@@ -820,6 +820,16 @@ img, .wp-caption {
   transition: background-color 0.125s ease;
 }
 
+/* line 5, sass/default/utilities/_theme.scss */
+html {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
+}
+
 /* line 3, sass/default/utilities/tools/visual/_selection.scss */
 ::-moz-selection {
   color: white;
@@ -832,47 +842,47 @@ img, .wp-caption {
   background-color: #12b32d;
 }
 
-/* line 6, sass/default/utilities/_theme.scss */
+/* line 16, sass/default/utilities/_theme.scss */
 a {
   color: #00aaff;
 }
 
-/* line 13, sass/default/utilities/_theme.scss */
+/* line 23, sass/default/utilities/_theme.scss */
 svg.icon:hover {
   fill: #00aaff;
 }
 
-/* line 23, sass/default/utilities/_theme.scss */
+/* line 33, sass/default/utilities/_theme.scss */
 .scroll-top-link:hover .icon {
   fill: #00aaff;
 }
 
-/* line 39, sass/default/utilities/_theme.scss */
+/* line 49, sass/default/utilities/_theme.scss */
 div.nav-menu > ul > .page_item_has_children.status-sub-nav-active,
 div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active {
   background-color: #0099e6;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 51, sass/default/utilities/_theme.scss */
+  /* line 61, sass/default/utilities/_theme.scss */
   div.nav-menu li:hover {
     background-color: #0099e6;
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 62, sass/default/utilities/_theme.scss */
+  /* line 72, sass/default/utilities/_theme.scss */
   .status-mobile-main-nav-active div.nav-menu {
     background-color: #0088cc;
   }
 }
-/* line 73, sass/default/utilities/_theme.scss */
+/* line 83, sass/default/utilities/_theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-item-has-children.status-sub-nav-active {
   background-color: #00aaff;
 }
-/* line 76, sass/default/utilities/_theme.scss */
+/* line 86, sass/default/utilities/_theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover {
   background-color: #0099e6;
 }
-/* line 89, sass/default/utilities/_theme.scss */
+/* line 99, sass/default/utilities/_theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children,
 div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu, div.nav-menu .menu-item-has-children.status-sub-nav-active .children,
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
@@ -900,19 +910,20 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
     background-color: #00aaff;
   }
 }
-/* line 33, sass/default/utilities/_set.scss */
+/* line 34, sass/default/utilities/_settings.scss */
 h1, h2, h3, h4, h5, h6,
 ul, ol,
 p,
 th, td,
 button,
 blockquote,
-dl {
+dl,
+figure {
   margin: auto;
   padding: 0;
 }
 
-/* line 51, sass/default/utilities/_set.scss */
+/* line 52, sass/default/utilities/_settings.scss */
 h1, h2, h3, h4, h5, h6,
 p,
 ul, ol,
@@ -924,7 +935,7 @@ dl,
   margin-bottom: 1rem;
 }
 
-/* line 59, sass/default/utilities/_set.scss */
+/* line 60, sass/default/utilities/_settings.scss */
 p:last-child,
 li:last-child,
 .field:last-child,
@@ -932,21 +943,11 @@ li:last-child,
   margin-bottom: auto !important;
 }
 
-/* line 65, sass/default/utilities/_set.scss */
+/* line 66, sass/default/utilities/_settings.scss */
 .masthead,
 .main,
 .colophon {
   clear: both;
-}
-
-/* line 2, sass/default/utilities/_settings.scss */
-html {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: #333333;
-  background-color: white;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -1050,7 +1051,7 @@ label[for]:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  border-overflow: hidden;
+  overflow: hidden;
   overflow: hidden;
 }
 /* line 45, sass/default/structure/atoms/_form.scss */
@@ -1072,7 +1073,7 @@ label[for]:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  border-overflow: hidden;
+  overflow: hidden;
   color: white;
   background-color: #12b32d;
   overflow: hidden;
@@ -1341,7 +1342,7 @@ tbody tr:last-child {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  border-overflow: hidden;
+  overflow: hidden;
   text-align: center;
   color: gray;
 }
@@ -1894,7 +1895,7 @@ ins {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  border-overflow: hidden;
+  overflow: hidden;
   color: white;
   background-color: #12b32d;
   overflow: hidden;
@@ -1922,27 +1923,28 @@ ins {
 /* line 1, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation {
   clear: both;
+  margin-top: 2rem;
 }
 
-/* line 5, sass/default/structure/organisms/_content-navigation.scss */
+/* line 6, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation-cr {
   border-bottom: 0.0625rem dotted rgba(0, 0, 0, 0.15);
   border-top: 0.0625rem dotted rgba(0, 0, 0, 0.15);
 }
 
-/* line 10, sass/default/structure/organisms/_content-navigation.scss */
+/* line 11, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation-list {
   list-style: none;
   margin: auto;
   padding: 0;
 }
-/* line 13, sass/default/structure/organisms/_content-navigation.scss */
+/* line 14, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation-list .action-item {
   margin-bottom: auto;
   padding: 1rem;
   padding-bottom: 0;
 }
-/* line 18, sass/default/structure/organisms/_content-navigation.scss */
+/* line 19, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation-list .action-item:last-child {
   margin-bottom: auto;
 }
@@ -2195,12 +2197,12 @@ ins {
   font-size: 1.5rem;
 }
 /* line 181, sass/default/structure/organisms/_entry.scss */
-.entry-ct-cr a:not(.more-link):not(.entry-thumbnail-link) {
+.entry-ct-cr a:not(.more-link):not(.entry-thumbnail-link):not(.gallery-icon a) {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
 }
 /* line 10, sass/default/utilities/tools/visual/_linkstyle.scss */
-.entry-ct-cr a:not(.more-link):not(.entry-thumbnail-link):hover {
+.entry-ct-cr a:not(.more-link):not(.entry-thumbnail-link):not(.gallery-icon a):hover {
   color: #333333;
   border-bottom: none;
   text-decoration: none;
@@ -2242,11 +2244,11 @@ ins {
 
 /* line 220, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
-  -webkit-transform: translate(0, -0.35rem);
-  -moz-transform: translate(0, -0.35rem);
-  -ms-transform: translate(0, -0.35rem);
-  -o-transform: translate(0, -0.35rem);
-  transform: translate(0, -0.35rem);
+  -webkit-transform: translate(0, 0.25rem);
+  -moz-transform: translate(0, 0.25rem);
+  -ms-transform: translate(0, 0.25rem);
+  -o-transform: translate(0, 0.25rem);
+  transform: translate(0, 0.25rem);
 }
 
 /* line 225, sass/default/structure/organisms/_entry.scss */
@@ -2310,6 +2312,66 @@ ins {
   font-size: 0.75rem;
   color: gray;
   text-transform: uppercase;
+}
+
+/* line 1, sass/default/structure/organisms/_gallery.scss */
+.gallery {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+/* line 6, sass/default/structure/organisms/_gallery.scss */
+.gallery-item {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  vertical-align: top;
+}
+/* line 12, sass/default/structure/organisms/_gallery.scss */
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+/* line 16, sass/default/structure/organisms/_gallery.scss */
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+/* line 20, sass/default/structure/organisms/_gallery.scss */
+.gallery-columns-3 .gallery-item {
+  width: 33%;
+}
+/* line 24, sass/default/structure/organisms/_gallery.scss */
+.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+/* line 30, sass/default/structure/organisms/_gallery.scss */
+.gallery-icon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+/* line 35, sass/default/structure/organisms/_gallery.scss */
+.gallery-icon a {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 11rem;
+  height: 11rem;
+  border-top-width: 0.0625rem;
+  border-right-width: 0.0625rem;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  overflow: hidden;
+}
+
+/* line 45, sass/default/structure/organisms/_gallery.scss */
+.gallery-caption {
+  text-align: center;
 }
 
 /* line 1, sass/default/structure/organisms/_main.scss */
