@@ -8,7 +8,7 @@
     $b: auto,
     $l: auto
     ) {            
-    position: absolute;
+    position: $pos;
     top: $t;
     right: $r;
     bottom: $b;

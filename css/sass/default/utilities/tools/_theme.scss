@@ -107,7 +107,27 @@ div.nav-menu {
 }
 
 
-@include mq($tablet, ieFixOn) {
-    @include header-semi-compact-theme;
-    @include search-theme-reverse-theme;
+@mixin header-semi-compact-theme {
+        
+    .masthead-cr {
+        background-color: $color-primary;
+    }
+    
+    .site-title-link:hover {
+        background-color: darken($color-primary, 5%);
+    }
+    
+    div.nav-menu > ul > li:hover {
+        background-color: darken($color-primary, 5%);
+    }
+}
+
+
+
+@mixin search-theme-reverse-theme {
+    
+    .header-sidebar .search-form {
+        background-color: $color-primary;
+    }
+    
 }

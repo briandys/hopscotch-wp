@@ -1,7 +1,7 @@
 <?php
 
 //------------------------- Entry Classes
-function hopscotch_add_entry_class($classes) {
+function hopscotch_add_entry_class( $classes ) {
 	global $post;
     // Defaults
     $classes[] = 'entry';    

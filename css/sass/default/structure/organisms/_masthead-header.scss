@@ -1,14 +1,11 @@
-// Narrow viewport
-@include mq($tablet, $query1: max) {
-    
-    @include header-compact;
-    
-}
+// Defaults
 
 // Wide viewport
 @include mq($tablet, ieFixOn) {
     
-    @include header-semi-compact;
+    .masthead-cr {
+        text-align: center;
+    }
     
 }
 
@@ -24,4 +21,23 @@
 
 .site-description {
     @include faint;
+}
+
+
+// Narrow viewport
+@include mq($tablet, $query1: max) {
+    
+    .site-default {
+        @include header-compact;
+    }
+    
+}
+
+// Wide viewport
+@include mq($tablet, ieFixOn) {
+    
+    .site-default {
+        @include header-semi-compact;
+    }
+    
 }
