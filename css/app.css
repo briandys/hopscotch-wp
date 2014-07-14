@@ -708,7 +708,7 @@ legend,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
 .form-allowed-tags, .child-page .entry-user-action,
-.child-page .entry-meta, .child-page .breadcrumbs, .comment-timestamp .label, .comments-hr, .logged-in .comment-form .field-comment label, .comment-respond .label-verb-subject, .comments-ct .blank, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .skip-to-content-link, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .header-sidebar-heading,
+.child-page .entry-meta, .child-page .breadcrumbs, .comment-timestamp .label, .comments-hr, .logged-in .comment-form .field-comment label, .comment-respond .label-verb-subject, .comments-ct .blank, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .header-sidebar-heading,
 .secondary-sidebar-heading,
 .tertiary-sidebar-heading {
   border: 0;
@@ -2983,41 +2983,71 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 
+/* line 2, sass/default/structure/organisms/_masthead-header.scss */
+.skip-to-content-link {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 @media only screen and (min-width: 48rem) {
-  /* line 6, sass/default/structure/organisms/_masthead-header.scss */
+  /* line 8, sass/default/structure/organisms/_masthead-header.scss */
   .masthead-cr {
     text-align: center;
   }
-}
-/* line 16, sass/default/structure/organisms/_masthead-header.scss */
-.site-title-link {
-  display: inline-block;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 
-/* line 22, sass/default/structure/organisms/_masthead-header.scss */
-.site-description {
-  color: gray;
-}
+  /* line 12, sass/default/structure/organisms/_masthead-header.scss */
+  .site-title-heading {
+    margin-bottom: auto;
+  }
 
-@media only screen and (max-width: 47.9375rem) {
+  /* line 16, sass/default/structure/organisms/_masthead-header.scss */
+  .site-title-link {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* line 22, sass/default/structure/organisms/_masthead-header.scss */
+  .site-description {
+    color: gray;
+  }
+
   /* line 25, sass/default/utilities/tools/_layout.scss */
-  .site-default .masthead-cr {
+  .masthead-cr {
+    position: relative;
+  }
+
+  /* line 31, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 47.9375rem) {
+  /* line 64, sass/default/utilities/tools/_layout.scss */
+  .masthead-cr {
     position: relative;
     height: 3.5rem;
   }
   /* line 9, sass/default/utilities/tools/_patch.scss */
-  .site-default .masthead-cr:before, .site-default .masthead-cr:after {
+  .masthead-cr:before, .masthead-cr:after {
     content: " ";
     display: table;
   }
   /* line 13, sass/default/utilities/tools/_patch.scss */
-  .site-default .masthead-cr:after {
+  .masthead-cr:after {
     clear: both;
   }
-  /* line 33, sass/default/utilities/tools/_layout.scss */
-  .site-default .masthead-header {
+
+  /* line 72, sass/default/utilities/tools/_layout.scss */
+  .masthead-header {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
@@ -3026,27 +3056,29 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     overflow: hidden;
   }
   /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .site-default .masthead-header:after {
+  .masthead-header:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
   /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .site-default .masthead-header > * {
+  .masthead-header > * {
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 40, sass/default/utilities/tools/_layout.scss */
-  .site-default .site-title-heading {
+
+  /* line 79, sass/default/utilities/tools/_layout.scss */
+  .site-title-heading {
     margin-bottom: auto;
     font-size: 20px;
     font-size: 1.25rem;
     font-weight: 700;
     line-height: normal;
   }
-  /* line 49, sass/default/utilities/tools/_layout.scss */
-  .site-default .header-sidebar .widget_search {
+
+  /* line 88, sass/default/utilities/tools/_layout.scss */
+  .header-sidebar .widget_search {
     position: absolute;
     top: 0;
     right: 0;
@@ -3054,8 +3086,9 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     left: auto;
     z-index: 900;
   }
-  /* line 56, sass/default/utilities/tools/_layout.scss */
-  .site-default .site-description {
+
+  /* line 95, sass/default/utilities/tools/_layout.scss */
+  .site-description {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -3065,42 +3098,54 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     position: absolute;
     width: 1px;
   }
-  /* line 60, sass/default/utilities/tools/_layout.scss */
-  .site-default .main-navigation {
+
+  /* line 99, sass/default/utilities/tools/_layout.scss */
+  .main-navigation {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     float: left;
   }
   /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .site-default .main-navigation:after {
+  .main-navigation:after {
     content: '';
     height: 100%;
     display: inline-block;
     vertical-align: middle;
   }
   /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .site-default .main-navigation > * {
+  .main-navigation > * {
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 65, sass/default/utilities/tools/_layout.scss */
-  .site-default .main-navigation-heading {
+
+  /* line 104, sass/default/utilities/tools/_layout.scss */
+  .main-navigation-heading {
     position: relative;
     z-index: 901;
   }
-  /* line 71, sass/default/utilities/tools/_layout.scss */
-  .status-mobile-main-nav-active .site-default .main-navigation-heading .icon {
+  /* line 110, sass/default/utilities/tools/_layout.scss */
+  .status-mobile-main-nav-active .main-navigation-heading .icon {
     fill: #fff;
     opacity: .85;
   }
-  /* line 75, sass/default/utilities/tools/_layout.scss */
-  .status-mobile-main-nav-active .site-default .main-navigation-heading .icon:hover {
+  /* line 114, sass/default/utilities/tools/_layout.scss */
+  .status-mobile-main-nav-active .main-navigation-heading .icon:hover {
     opacity: 1;
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 25, sass/default/utilities/tools/_layout.scss */
+  /* line 44, sass/default/utilities/tools/_layout.scss */
+  .site-default .masthead-cr {
+    position: static;
+  }
+  /* line 50, sass/default/utilities/tools/_layout.scss */
+  .site-default .header-sidebar .search {
+    position: static;
+    top: auto;
+    right: auto;
+  }
+  /* line 64, sass/default/utilities/tools/_layout.scss */
   .site-default .masthead-cr {
     position: relative;
     height: 3.5rem;
@@ -3114,7 +3159,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   .site-default .masthead-cr:after {
     clear: both;
   }
-  /* line 33, sass/default/utilities/tools/_layout.scss */
+  /* line 72, sass/default/utilities/tools/_layout.scss */
   .site-default .masthead-header {
     display: inline-block;
     vertical-align: middle;
@@ -3135,7 +3180,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 40, sass/default/utilities/tools/_layout.scss */
+  /* line 79, sass/default/utilities/tools/_layout.scss */
   .site-default .site-title-heading {
     margin-bottom: auto;
     font-size: 20px;
@@ -3143,7 +3188,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     font-weight: 700;
     line-height: normal;
   }
-  /* line 49, sass/default/utilities/tools/_layout.scss */
+  /* line 88, sass/default/utilities/tools/_layout.scss */
   .site-default .header-sidebar .widget_search {
     position: absolute;
     top: 0;
@@ -3152,7 +3197,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     left: auto;
     z-index: 900;
   }
-  /* line 56, sass/default/utilities/tools/_layout.scss */
+  /* line 95, sass/default/utilities/tools/_layout.scss */
   .site-default .site-description {
     border: 0;
     clip: rect(0 0 0 0);
@@ -3163,7 +3208,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     position: absolute;
     width: 1px;
   }
-  /* line 60, sass/default/utilities/tools/_layout.scss */
+  /* line 99, sass/default/utilities/tools/_layout.scss */
   .site-default .main-navigation {
     display: inline-block;
     vertical-align: middle;
@@ -3182,26 +3227,38 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 65, sass/default/utilities/tools/_layout.scss */
+  /* line 104, sass/default/utilities/tools/_layout.scss */
   .site-default .main-navigation-heading {
     position: relative;
     z-index: 901;
   }
-  /* line 71, sass/default/utilities/tools/_layout.scss */
+  /* line 110, sass/default/utilities/tools/_layout.scss */
   .status-mobile-main-nav-active .site-default .main-navigation-heading .icon {
     fill: #fff;
     opacity: .85;
   }
-  /* line 75, sass/default/utilities/tools/_layout.scss */
+  /* line 114, sass/default/utilities/tools/_layout.scss */
   .status-mobile-main-nav-active .site-default .main-navigation-heading .icon:hover {
     opacity: 1;
   }
-  /* line 177, sass/default/utilities/tools/_layout.scss */
+  /* line 112, sass/default/utilities/tools/_theme.scss */
+  .site-default .masthead-cr {
+    background-color: #00aaff;
+  }
+  /* line 116, sass/default/utilities/tools/_theme.scss */
+  .site-default .site-title-link:hover {
+    background-color: #0099e6;
+  }
+  /* line 120, sass/default/utilities/tools/_theme.scss */
+  .site-default div.nav-menu > ul > li:hover {
+    background-color: #0099e6;
+  }
+  /* line 220, sass/default/utilities/tools/_layout.scss */
   .site-default .header-sidebar .search-control .icon,
   .site-default .header-sidebar .search-submit .icon {
     fill: white;
   }
-  /* line 185, sass/default/utilities/tools/_layout.scss */
+  /* line 228, sass/default/utilities/tools/_layout.scss */
   .site-default .header-sidebar .search-control {
     opacity: .75;
     -webkit-transition: opacity 0.125s ease;
@@ -3210,11 +3267,11 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: opacity 0.125s ease;
     transition: opacity 0.125s ease;
   }
-  /* line 190, sass/default/utilities/tools/_layout.scss */
+  /* line 233, sass/default/utilities/tools/_layout.scss */
   .site-default .header-sidebar .search-control:hover {
     opacity: 1;
   }
-  /* line 194, sass/default/utilities/tools/_layout.scss */
+  /* line 237, sass/default/utilities/tools/_layout.scss */
   .site-default .header-sidebar .search-input {
     color: white;
   }
@@ -3234,11 +3291,11 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   .site-default :-ms-input-placeholder {
     color: white;
   }
-  /* line 96, sass/default/utilities/tools/_layout.scss */
+  /* line 139, sass/default/utilities/tools/_layout.scss */
   .site-default .masthead-cr {
     text-align: left;
   }
-  /* line 101, sass/default/utilities/tools/_layout.scss */
+  /* line 144, sass/default/utilities/tools/_layout.scss */
   .site-default .site-title-link {
     padding: 1rem;
     color: white;
@@ -3248,33 +3305,21 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: background-color 0.125s ease;
     transition: background-color 0.125s ease;
   }
-  /* line 106, sass/default/utilities/tools/_layout.scss */
+  /* line 149, sass/default/utilities/tools/_layout.scss */
   .site-default .site-title-link:hover {
     text-decoration: none;
   }
-  /* line 114, sass/default/utilities/tools/_layout.scss */
+  /* line 157, sass/default/utilities/tools/_layout.scss */
   .site-default div.nav-menu > ul > li > a {
     color: white;
   }
-  /* line 117, sass/default/utilities/tools/_layout.scss */
+  /* line 160, sass/default/utilities/tools/_layout.scss */
   .site-default div.nav-menu > ul > li > a:hover {
     text-decoration: none;
   }
-  /* line 129, sass/default/utilities/tools/_layout.scss */
+  /* line 172, sass/default/utilities/tools/_layout.scss */
   .site-default .main-navigation {
     float: none;
-  }
-  /* line 112, sass/default/utilities/tools/_theme.scss */
-  .site-default .masthead-cr {
-    background-color: #00aaff;
-  }
-  /* line 116, sass/default/utilities/tools/_theme.scss */
-  .site-default .site-title-link:hover {
-    background-color: #0099e6;
-  }
-  /* line 120, sass/default/utilities/tools/_theme.scss */
-  .site-default div.nav-menu > ul > li:hover {
-    background-color: #0099e6;
   }
 }
 /* line 7, sass/default/structure/organisms/_plug-in.scss */

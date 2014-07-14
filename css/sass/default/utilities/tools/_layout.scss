@@ -19,6 +19,45 @@
 }
 
 
+// Positions the search at the top-right corner of the header
+@mixin corner-search {
+    
+    .masthead-cr {
+        position: relative;
+    }
+    
+    .header-sidebar {
+        
+        .search {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+    }
+    
+}
+
+
+@mixin corner-search-rev {
+    
+    .masthead-cr {
+        position: static;
+    }
+    
+    .header-sidebar {
+        
+        .search {
+            position: static;
+            top: auto;
+            right: auto;
+        }
+        
+    }
+    
+}
+
+
 //------------------------- Header for Narrow Mode
 @mixin header-compact {
     
@@ -87,7 +126,11 @@
 //------------------------- Header for Wide Mode
 @mixin header-semi-compact {
     
+    @include corner-search-rev;
+    
     @include header-compact;
+    @include header-semi-compact-theme;
+    
     @include search-theme-reverse;
     @include search-theme-reverse-theme;
     

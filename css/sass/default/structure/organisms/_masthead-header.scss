@@ -1,44 +1,44 @@
-// Defaults
+// Default style of the header
+.skip-to-content-link {
+    @include vhide;
+}
 
-// Wide viewport
 @include mq($tablet, ieFixOn) {
-    
+
     .masthead-cr {
         text-align: center;
     }
-    
-}
 
-.skip-to-content-link {
-    @extend %vhide;
-}
+    .site-title-heading {
+        margin-bottom: auto;
+    }
 
-.site-title-link {
-    display: inline-block;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
+    .site-title-link {
+        display: inline-block;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
-.site-description {
-    @include faint;
-}
-
-
-// Narrow viewport
-@include mq($tablet, $query1: max) {
-    
-    .site-default {
-        @include header-compact;
+    .site-description {
+        @include faint;
     }
     
+    @include corner-search;
+    
 }
 
-// Wide viewport
+
+// Header style for narrow viewports
+@include mq($tablet, $query1: max) {
+    @include header-compact;
+}
+
+
+// Parent-specific style of header for wide viewports
 @include mq($tablet, ieFixOn) {
     
     .site-default {
         @include header-semi-compact;
-        @include header-semi-compact-theme;
     }
     
 }
