@@ -405,6 +405,15 @@ div.nav-menu {
             }
 
         }
+        
+        .status-mobile-main-nav-active & {
+            
+            @include mq($tablet, $query1: max) {
+                fill: $white;
+            }
+            
+        }
+        
     }
     
     &:hover {

@@ -10,14 +10,6 @@ $sub-menu-parent-classes-each: '.page_item_has_children', '.menu-item-has-childr
 $sub-menu-classes: '.children, .sub-menu';
 $sub-menu-parent-classes: '.page_item_has_children, .menu-item-has-children';
 
-$content-width-percentage: 60%;
-$sidebar-width-percentage: 100% - $content-width-percentage;
-
-$total-width: 60rem;
-$content-width: 45rem;
-$sidebar-width: $total-width - $content-width;
-$sidebar-width-expand: 5;
-
 
 // Used as side spacing of elements
 $gutter: 1rem;
@@ -41,6 +33,7 @@ $monitor: 980;
 $desktop: 1024;
 $widescreen: 1280;
 $moviehouse: 1440;
+$minorityreport: 1920;
 
 
 //------------------------- Font Sizes

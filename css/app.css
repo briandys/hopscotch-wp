@@ -2310,42 +2310,50 @@ ins {
 }
 
 /* line 1, sass/default/structure/organisms/_gallery.scss */
-.gallery {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
-/* line 6, sass/default/structure/organisms/_gallery.scss */
 .gallery-item {
-  display: inline-block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  vertical-align: top;
+  margin-bottom: 2rem;
 }
-/* line 12, sass/default/structure/organisms/_gallery.scss */
-.gallery-columns-1 .gallery-item {
-  width: 100%;
-}
-/* line 16, sass/default/structure/organisms/_gallery.scss */
-.gallery-columns-2 .gallery-item {
-  width: 50%;
-}
-/* line 20, sass/default/structure/organisms/_gallery.scss */
-.gallery-columns-3 .gallery-item {
-  width: 33%;
-}
-/* line 24, sass/default/structure/organisms/_gallery.scss */
-.gallery-columns-4 .gallery-item {
-  width: 25%;
+/* line 4, sass/default/structure/organisms/_gallery.scss */
+.gallery-item:last-child {
+  margin-bottom: auto;
 }
 
-/* line 30, sass/default/structure/organisms/_gallery.scss */
+@media only screen and (min-width: 37.5rem) {
+  /* line 12, sass/default/structure/organisms/_gallery.scss */
+  .gallery-item {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    vertical-align: top;
+  }
+  /* line 18, sass/default/structure/organisms/_gallery.scss */
+  .gallery-columns-1 .gallery-item {
+    width: 100%;
+  }
+  /* line 22, sass/default/structure/organisms/_gallery.scss */
+  .gallery-columns-2 .gallery-item {
+    width: 50%;
+  }
+  /* line 26, sass/default/structure/organisms/_gallery.scss */
+  .gallery-columns-3 .gallery-item {
+    width: 33%;
+  }
+  /* line 30, sass/default/structure/organisms/_gallery.scss */
+  .gallery-columns-4 .gallery-item {
+    width: 25%;
+  }
+
+  /* line 36, sass/default/structure/organisms/_gallery.scss */
+  .gallery-icon {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/* line 43, sass/default/structure/organisms/_gallery.scss */
 .gallery-icon {
-  margin-left: 1rem;
-  margin-right: 1rem;
   text-align: center;
 }
-/* line 35, sass/default/structure/organisms/_gallery.scss */
+/* line 46, sass/default/structure/organisms/_gallery.scss */
 .gallery-icon a {
   display: inline-block;
   padding: 0.5rem;
@@ -2368,22 +2376,22 @@ ins {
   -o-transition: border 0.125s ease;
   transition: border 0.125s ease;
 }
-/* line 43, sass/default/structure/organisms/_gallery.scss */
+/* line 54, sass/default/structure/organisms/_gallery.scss */
 .gallery-icon a:hover {
   border-top-width: 0.0625rem;
   border-right-width: 0.0625rem;
   border-bottom-width: 0.0625rem;
   border-left-width: 0.0625rem;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 51, sass/default/structure/organisms/_gallery.scss */
+/* line 62, sass/default/structure/organisms/_gallery.scss */
 .gallery-caption {
   text-align: center;
 }
 
-/* line 1, sass/default/structure/organisms/_main.scss */
+/* line 10, sass/default/structure/organisms/_main.scss */
 .main-cr {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -2397,7 +2405,7 @@ ins {
 .lt-ie9 .main-cr:after {
   clear: both;
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 64rem) {
   /* line 9, sass/default/utilities/tools/_patch.scss */
   .main-cr:before, .main-cr:after {
     content: " ";
@@ -2409,7 +2417,7 @@ ins {
   }
 }
 @media only screen and (min-width: 80rem) {
-  /* line 1, sass/default/structure/organisms/_main.scss */
+  /* line 10, sass/default/structure/organisms/_main.scss */
   .main-cr {
     margin-top: auto;
   }
@@ -2418,59 +2426,77 @@ ins {
 /* line 6, sass/default/utilities/tools/structure/_media-query.scss */
 .lt-ie9 .secondary-sidebar-active .primary-content {
   float: left;
-  width: 60%;
+  width: 65%;
 }
-@media only screen and (min-width: 48rem) {
-  /* line 17, sass/default/structure/organisms/_main.scss */
+@media only screen and (min-width: 64rem) {
+  /* line 26, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .primary-content {
     float: left;
-    width: 60%;
+    width: 65%;
   }
 }
 @media only screen and (min-width: 80rem) {
-  /* line 17, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .primary-content {
-    margin-right: -15rem;
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 90rem) {
-  /* line 17, sass/default/structure/organisms/_main.scss */
+  /* line 26, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .primary-content {
     margin-right: -20rem;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  /* line 39, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active .primary-content .primary-content-cr {
+    padding-right: 20rem;
+  }
+}
+@media only screen and (min-width: 120rem) {
+  /* line 39, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active .primary-content .primary-content-cr {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    max-width: 70rem;
   }
 }
 
-@media only screen and (min-width: 48rem) {
-  /* line 37, sass/default/structure/organisms/_main.scss */
-  .primary-content-cr {
+/* line 58, sass/default/structure/organisms/_main.scss */
+.primary-content,
+.secondary-sidebar {
+  width: 100%;
+}
+/* line 6, sass/default/utilities/tools/structure/_media-query.scss */
+.lt-ie9 .primary-content, .lt-ie9
+.secondary-sidebar {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+}
+@media only screen and (min-width: 61.25rem) {
+  /* line 58, sass/default/structure/organisms/_main.scss */
+  .primary-content,
+  .secondary-sidebar {
     margin-left: auto;
     margin-right: auto;
-    max-width: 45rem;
+    max-width: 48rem;
   }
 }
 
 /* line 6, sass/default/utilities/tools/structure/_media-query.scss */
 .lt-ie9 .secondary-sidebar-active .secondary-sidebar {
   float: right;
-  width: 40%;
+  width: 35%;
 }
-@media only screen and (min-width: 48rem) {
-  /* line 50, sass/default/structure/organisms/_main.scss */
+@media only screen and (min-width: 64rem) {
+  /* line 71, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
     float: right;
-    width: 40%;
+    width: 35%;
   }
 }
 @media only screen and (min-width: 80rem) {
-  /* line 50, sass/default/structure/organisms/_main.scss */
+  /* line 71, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
-    max-width: 15rem;
-  }
-}
-@media only screen and (min-width: 90rem) {
-  /* line 50, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .secondary-sidebar {
+    width: 100%;
     max-width: 20rem;
   }
 }
@@ -2903,13 +2929,19 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 410, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 409, sass/default/structure/organisms/_main-navigation.scss */
+  .status-mobile-main-nav-active .main-navigation-heading .icon {
+    fill: white;
+  }
+}
+@media only screen and (max-width: 47.9375rem) {
+  /* line 419, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading:hover {
     cursor: pointer;
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 417, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 426, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-heading .label {
     border: 0;
     clip: rect(0 0 0 0);
@@ -2923,7 +2955,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 426, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 435, sass/default/structure/organisms/_main-navigation.scss */
   .main-navigation-ct {
     position: fixed;
     left: 0;
@@ -2940,7 +2972,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 439, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 448, sass/default/structure/organisms/_main-navigation.scss */
   .status-mobile-main-nav-active .main-navigation-ct {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -3527,8 +3559,16 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 .tertiary-sidebar .widget:last-child {
   margin-bottom: auto;
 }
+/* line 12, sass/default/structure/organisms/_widget.scss */
+.secondary-sidebar .widget .post-date,
+.tertiary-sidebar .widget .post-date {
+  margin-left: .5rem;
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #a6a6a6;
+}
 
-/* line 16, sass/default/structure/organisms/_widget.scss */
+/* line 22, sass/default/structure/organisms/_widget.scss */
 .widget-title {
   margin-top: .75rem;
   font-size: 20px;
@@ -3536,11 +3576,11 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   line-height: normal;
 }
 
-/* line 24, sass/default/structure/organisms/_widget.scss */
+/* line 30, sass/default/structure/organisms/_widget.scss */
 .widget_calendar th, .widget_calendar td {
   padding: .5rem;
 }
-/* line 28, sass/default/structure/organisms/_widget.scss */
+/* line 34, sass/default/structure/organisms/_widget.scss */
 .widget_calendar #next {
   text-align: right;
 }

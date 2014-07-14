@@ -8,6 +8,12 @@
         &:last-child {
             margin-bottom: auto;
         }
+        
+        .post-date {
+            margin-left: .5rem;
+            @include font-size-rem( $font-s );
+            color: $gray65;
+        }
 
     }
     
