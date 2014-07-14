@@ -708,7 +708,7 @@ legend,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
 .form-allowed-tags, .child-page .entry-user-action,
-.child-page .entry-meta, .child-page .breadcrumbs, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .skip-to-content-link, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .header-sidebar-heading,
+.child-page .entry-meta, .child-page .breadcrumbs, .comment-timestamp .label, .comments-hr, .logged-in .comment-form .field-comment label, .comment-respond .label-verb-subject, .comments-ct .blank, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .skip-to-content-link, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .header-sidebar-heading,
 .secondary-sidebar-heading,
 .tertiary-sidebar-heading {
   border: 0;
@@ -763,6 +763,15 @@ img, .wp-caption {
   vertical-align: middle;
 }
 
+/* line 18, sass/default/utilities/tools/structure/_transition.scss */
+.post-edit-link, .sudo-button, .form-submit {
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
+}
+
 /* line 8, sass/default/utilities/tools/structure/_unlist.scss */
 .action-list, div.nav-menu ul {
   list-style: none;
@@ -809,15 +818,6 @@ img, .wp-caption {
   color: white;
   background-color: #00aaff;
   text-decoration: none;
-}
-
-/* line 18, sass/default/utilities/tools/visual/_transition.scss */
-.post-edit-link, .sudo-button, .form-submit {
-  -webkit-transition: background-color 0.125s ease;
-  -moz-transition: background-color 0.125s ease;
-  -ms-transition: background-color 0.125s ease;
-  -o-transition: background-color 0.125s ease;
-  transition: background-color 0.125s ease;
 }
 
 /* line 5, sass/default/utilities/tools/_theme.scss */
@@ -1726,72 +1726,75 @@ ins {
   }
 }
 
-/* line 194, sass/default/structure/organisms/_comment.scss */
-.comment-form .field-comment,
+/* line 193, sass/default/structure/organisms/_comment.scss */
+.comment-form .field-comment {
+  clear: both;
+}
+/* line 206, sass/default/structure/organisms/_comment.scss */
 .comment-form .field-author {
   clear: both;
 }
-/* line 198, sass/default/structure/organisms/_comment.scss */
+/* line 210, sass/default/structure/organisms/_comment.scss */
 .comment-form textarea {
   height: 4.25rem;
-  min-height: 2.5rem;
-  max-height: 7.25rem;
+  min-height: 4.25rem;
+  max-height: 10rem;
 }
 
-/* line 206, sass/default/structure/organisms/_comment.scss */
+/* line 218, sass/default/structure/organisms/_comment.scss */
 .comment-form-signed-in-as {
   display: inline-block;
 }
 
-/* line 210, sass/default/structure/organisms/_comment.scss */
+/* line 222, sass/default/structure/organisms/_comment.scss */
 .comment-form-action {
   display: inline-block;
   margin-left: 1rem;
 }
 
-/* line 215, sass/default/structure/organisms/_comment.scss */
+/* line 227, sass/default/structure/organisms/_comment.scss */
 .note-optional {
   color: gray;
 }
 
-/* line 219, sass/default/structure/organisms/_comment.scss */
+/* line 231, sass/default/structure/organisms/_comment.scss */
 .form-submit {
   margin-top: 1rem;
 }
 
-/* line 223, sass/default/structure/organisms/_comment.scss */
+/* line 235, sass/default/structure/organisms/_comment.scss */
 .comment-respond {
   margin-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 229, sass/default/structure/organisms/_comment.scss */
+/* line 241, sass/default/structure/organisms/_comment.scss */
 .comment-respond small {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 237, sass/default/structure/organisms/_comment.scss */
+/* line 249, sass/default/structure/organisms/_comment.scss */
 .comments-ct .comment-respond {
   padding-left: 1rem;
 }
-/* line 241, sass/default/structure/organisms/_comment.scss */
+/* line 253, sass/default/structure/organisms/_comment.scss */
 .comment-list .comment-respond {
   padding-left: 0;
 }
 @media only screen and (min-width: 37.5rem) {
-  /* line 241, sass/default/structure/organisms/_comment.scss */
+  /* line 253, sass/default/structure/organisms/_comment.scss */
   .comment-list .comment-respond {
     margin-left: 1rem;
     padding-left: 4.5rem;
   }
 }
 
-/* line 260, sass/default/structure/organisms/_comment.scss */
+/* line 272, sass/default/structure/organisms/_comment.scss */
 #cancel-comment-reply-link {
   padding: 1rem;
 }
 
-/* line 264, sass/default/structure/organisms/_comment.scss */
+/* line 276, sass/default/structure/organisms/_comment.scss */
 .comment-form-admin {
   float: right;
   margin-left: 2rem;
@@ -1799,57 +1802,57 @@ ins {
   margin-bottom: 1rem;
 }
 
-/* line 271, sass/default/structure/organisms/_comment.scss */
+/* line 283, sass/default/structure/organisms/_comment.scss */
 .comment-reply-title {
   float: left;
   font-size: 24px;
   font-size: 1.5rem;
 }
 
-/* line 276, sass/default/structure/organisms/_comment.scss */
+/* line 288, sass/default/structure/organisms/_comment.scss */
 .comment-pending {
   margin-bottom: auto;
   color: gray;
   font-style: italic;
 }
 
-/* line 284, sass/default/structure/organisms/_comment.scss */
+/* line 296, sass/default/structure/organisms/_comment.scss */
 .comments .blank {
   margin-bottom: 2rem;
   padding: 0 1rem;
 }
 
-/* line 291, sass/default/structure/organisms/_comment.scss */
+/* line 303, sass/default/structure/organisms/_comment.scss */
 .comments-hr {
   margin-bottom: 1rem;
 }
 
-/* line 297, sass/default/structure/organisms/_comment.scss */
+/* line 309, sass/default/structure/organisms/_comment.scss */
 .comment-navigation-list .action-item {
   display: inline-block;
 }
-/* line 300, sass/default/structure/organisms/_comment.scss */
+/* line 312, sass/default/structure/organisms/_comment.scss */
 .comment-navigation-list .action-item a {
   display: inline-block;
   padding: 1rem;
 }
 
-/* line 310, sass/default/structure/organisms/_comment.scss */
+/* line 322, sass/default/structure/organisms/_comment.scss */
 .comment-subscription-form {
   margin-bottom: auto;
 }
 
-/* line 314, sass/default/structure/organisms/_comment.scss */
+/* line 326, sass/default/structure/organisms/_comment.scss */
 .comment-date {
   margin-right: .5rem;
 }
 
-/* line 318, sass/default/structure/organisms/_comment.scss */
+/* line 330, sass/default/structure/organisms/_comment.scss */
 .sudo-input-text-comment {
   padding: .25rem;
 }
 
-/* line 324, sass/default/structure/organisms/_comment.scss */
+/* line 336, sass/default/structure/organisms/_comment.scss */
 .sudo-input-text[data-state-form-element="focused"] {
   border-top-width: 0.0625rem;
   border-right-width: 0.0625rem;
@@ -1859,7 +1862,7 @@ ins {
   border-color: rgba(0, 0, 0, 0.75);
 }
 
-/* line 330, sass/default/structure/organisms/_comment.scss */
+/* line 342, sass/default/structure/organisms/_comment.scss */
 .form-submit {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -1890,6 +1893,28 @@ ins {
   transform: translate(0, 0.0625rem);
 }
 
+@media only screen and (min-width: 48rem) {
+  /* line 351, sass/default/structure/organisms/_comment.scss */
+  .comment-form .field-comment {
+    position: relative;
+  }
+  /* line 355, sass/default/structure/organisms/_comment.scss */
+  .comment-form .form-submit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  /* line 363, sass/default/structure/organisms/_comment.scss */
+  .comment-form .form-submit [type="submit"] {
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+  }
+}
 /* line 1, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation {
   clear: both;
@@ -2337,9 +2362,23 @@ ins {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
   overflow: hidden;
+  -webkit-transition: border 0.125s ease;
+  -moz-transition: border 0.125s ease;
+  -ms-transition: border 0.125s ease;
+  -o-transition: border 0.125s ease;
+  transition: border 0.125s ease;
+}
+/* line 43, sass/default/structure/organisms/_gallery.scss */
+.gallery-icon a:hover {
+  border-top-width: 0.0625rem;
+  border-right-width: 0.0625rem;
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 45, sass/default/structure/organisms/_gallery.scss */
+/* line 51, sass/default/structure/organisms/_gallery.scss */
 .gallery-caption {
   text-align: center;
 }
@@ -3192,6 +3231,18 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   /* line 129, sass/default/utilities/tools/_layout.scss */
   .site-default .main-navigation {
     float: none;
+  }
+  /* line 112, sass/default/utilities/tools/_theme.scss */
+  .site-default .masthead-cr {
+    background-color: #00aaff;
+  }
+  /* line 116, sass/default/utilities/tools/_theme.scss */
+  .site-default .site-title-link:hover {
+    background-color: #0099e6;
+  }
+  /* line 120, sass/default/utilities/tools/_theme.scss */
+  .site-default div.nav-menu > ul > li:hover {
+    background-color: #0099e6;
   }
 }
 /* line 7, sass/default/structure/organisms/_plug-in.scss */

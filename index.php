@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-    
                     
             <div id="primary-content" class="primary-content">
                 <div class="primary-content-cr" role="main">
@@ -28,7 +26,9 @@
                                         echo '&nbsp;';
                                         echo '<span class="label">';
                                         if ($count == 0 || $count == 1)
-                                            echo 'Search result for';                                        
+                                            echo __( 'Search Result for', 'hopscotch' );
+                                        else
+                                            echo __( 'Search Results for', 'hopscotch' );
                                         echo '</span>';
                                         echo '&nbsp;';                                        
                                         echo '<span class="label-value search-results--term">' . $key . '</span>';

@@ -38,6 +38,12 @@
         @include size( 10rem + $gutter );
         @include border( $alpha: .15 );
         @include corner-radius( $radius-s );
+        @include transition( border );
+        
+        &:hover {
+            @include border( $alpha: .5 );
+        }
+        
     }
     
 }

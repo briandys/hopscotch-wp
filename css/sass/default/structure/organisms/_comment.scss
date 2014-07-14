@@ -190,15 +190,27 @@
 
 .comment-form {
     
-    .field-comment,
+    .field-comment {
+        clear: both;
+        
+        label {
+            
+            .logged-in & {
+                @extend %vhide;
+            }
+            
+        }
+        
+    }
+    
     .field-author {
         clear: both;
     }
     
     textarea {
         height: 4.25rem;
-        min-height: 2.5rem;
-        max-height: 7.25rem;
+        min-height: 4.25rem;
+        max-height: 10rem;
     }
 }
 
@@ -329,4 +341,38 @@
 
 .form-submit {
     @include button-style-default;       
+}
+
+// Minimal form button
+@mixin min-form-button {
+    
+    .comment-form {
+
+        .field-comment {
+            position: relative;
+        }
+
+        .form-submit {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin-right: $gutter;
+            margin-bottom: $gutter;
+            @include circle;
+            
+            [type="submit"] {
+                padding: 0;
+                @include size( $block-m );
+            }
+            
+        }
+
+    }
+    
+}
+
+@include mq( $tablet, ieFixOn) {
+    
+    @include min-form-button;
+    
 }

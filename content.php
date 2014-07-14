@@ -83,7 +83,7 @@ hopscotch_content_header();
             ?>                
         <?php endif; ?>
 
-        <?php if ( ! is_page_template( 'templates/solo.php' ) ) : ?>
+        <?php if ( ! is_page_template( 'templates/solo.php' ) && ! is_search() ) : ?>
 
         <?php  // Display child page
         $parent = $post->ID;

@@ -38,6 +38,7 @@
     
     .site-default {
         @include header-semi-compact;
+        @include header-semi-compact-theme;
     }
     
 }
