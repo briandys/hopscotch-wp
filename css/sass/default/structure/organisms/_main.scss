@@ -54,8 +54,8 @@ $width-expand: 2;
     
 }
 
-.primary-content,
-.secondary-sidebar {
+.primary-content-cr,
+.secondary-sidebar-cr {
     width: 100%;
     
     @include mq($monitor, iefixOn) {

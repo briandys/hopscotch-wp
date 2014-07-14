@@ -7,6 +7,11 @@ function hopscotch_body_class( $classes ) {
     // Defaults
     $classes[] = 'status-search-inactive status-scroll-top-inactive';
     
+    // Inner page
+    if ( ! is_front_page() ) {
+        $classes[] = 'inner-page';
+    }
+    
     // Post Slug as Class
     if ( isset( $post ) &&  !is_home() ) {		
 		$classes[] = $post->post_type . '-' . $post->post_name;
