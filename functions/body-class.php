@@ -9,7 +9,7 @@ function hopscotch_body_class( $classes ) {
     
     // Inner page
     if ( ! is_front_page() ) {
-        $classes[] = 'inner-page';
+        $classes[] = 'page-inner';
     }
     
     // Post Slug as Class
