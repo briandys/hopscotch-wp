@@ -1001,11 +1001,16 @@ textarea {
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
   padding: .5rem;
   min-height: 2.5rem;
+}
+/* line 20, sass/default/structure/atoms/_form.scss */
+.sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
+  padding: .5rem;
+  min-height: 2.5rem;
   border: none;
   background-color: transparent;
 }
 
-/* line 21, sass/default/structure/atoms/_form.scss */
+/* line 28, sass/default/structure/atoms/_form.scss */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -1013,18 +1018,18 @@ input[type="reset"] {
   line-height: normal;
 }
 
-/* line 26, sass/default/structure/atoms/_form.scss */
+/* line 33, sass/default/structure/atoms/_form.scss */
 label {
   display: inline-block;
   margin-bottom: .5rem;
 }
 
-/* line 33, sass/default/structure/atoms/_form.scss */
+/* line 40, sass/default/structure/atoms/_form.scss */
 label[for]:hover {
   cursor: pointer;
 }
 
-/* line 40, sass/default/structure/atoms/_form.scss */
+/* line 47, sass/default/structure/atoms/_form.scss */
 .sudo-input-text {
   border-top-width: 0.0625rem;
   border-right-width: 0.0625rem;
@@ -1039,7 +1044,7 @@ label[for]:hover {
   overflow: hidden;
   overflow: hidden;
 }
-/* line 45, sass/default/structure/atoms/_form.scss */
+/* line 52, sass/default/structure/atoms/_form.scss */
 .sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
   padding: .5rem;
   min-height: 2.5rem;
@@ -1047,12 +1052,12 @@ label[for]:hover {
   background-color: transparent;
   border: none;
 }
-/* line 49, sass/default/structure/atoms/_form.scss */
+/* line 56, sass/default/structure/atoms/_form.scss */
 .sudo-input-text input[type='text']:focus, .sudo-input-text input[type='email']:focus, .sudo-input-text input[type='search']:focus, .sudo-input-text input[type='password']:focus, .sudo-input-text input[type='url']:focus, .sudo-input-text textarea:focus {
   outline: 0;
 }
 
-/* line 57, sass/default/structure/atoms/_form.scss */
+/* line 64, sass/default/structure/atoms/_form.scss */
 .sudo-button {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;

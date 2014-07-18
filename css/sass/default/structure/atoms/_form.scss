@@ -13,7 +13,14 @@ textarea {
 }
 
 #{$form-input-type-text} {
-    @include input-type-text-style;
+    
+    padding: .5rem;
+    min-height: 2.5rem;
+    
+    .sudo-input-text & {
+        @include input-type-text-style;
+    }
+    
 }
 
 button,
@@ -55,5 +62,5 @@ label[for] {
 }
 
 .sudo-button {    
-    @include button-style-default;    
+    @include button-style-default;
 }
