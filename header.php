@@ -13,25 +13,29 @@
         <meta name="description" content="<?php bloginfo( 'description' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         
-        <?php get_template_part( ''.hopscotch_components_directory().'/ie-javascript' ); ?>
+        <?php get_template_part( 'components/ie-javascript' ); ?>
         
-        <?php wp_head(); ?>
-        
+        <?php wp_head(); ?>        
     </head>
     
     <body <?php body_class(); ?>>
     
-        <?php get_template_part( 'img/svg' ); ?>        
-        <?php get_template_part( ''.hopscotch_components_directory().'/browse-happy' ); ?>
+        <?php // HopScotch Body hook
+        hopscotch_body_content();
+        ?>
+        
+        <?php get_template_part( 'img/svg' ); ?>
+        <?php get_template_part( 'components/browse-happy' ); ?>
 
         <div id="page">
         
             <header id="masthead" class="masthead" role="banner">
                 <div class="masthead-cr">
                     
-                    <?php get_template_part( ''.hopscotch_components_directory().'/masthead-header' ); ?>                    
-                    <?php get_template_part( ''.hopscotch_components_directory().'/main-navigation' ); ?>                    
-                    <?php get_template_part( ''.hopscotch_components_directory().'/sidebar-header' ); ?>
+                    <?php get_template_part( 'components/masthead-header'); ?>
+                    
+                    <?php get_template_part( 'components/main-navigation' ); ?>                    
+                    <?php get_template_part( 'components/sidebar-header' ); ?>
                 
                 </div>
             </header><!-- masthead -->

@@ -17,6 +17,10 @@ function hopscotch_content_header() {
     do_action('hopscotch_content_header');
 }
 
+function hopscotch_body_content() {
+    do_action('hopscotch_body_content');
+}
+
 function hopscotch_entry_content() {
     do_action('hopscotch_entry_content');
 }

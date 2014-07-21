@@ -9,7 +9,7 @@ $width-expand: 2;
 
 .main-cr {
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     
     @include mq($desktop, iefixOn) {
         @include cf;

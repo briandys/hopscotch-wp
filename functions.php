@@ -90,5 +90,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/google-anal
 
 // require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
 
+require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
+
 
 ?>

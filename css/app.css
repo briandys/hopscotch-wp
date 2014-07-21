@@ -705,6 +705,7 @@ legend,
 .search-bar-title,
 .home .main-content-title,
 .blog .main-content-title,
+#wpstats,
 .widget_search .widget-title,
 .widget_nav_menu .widget-title,
 .form-allowed-tags, .child-page .entry-user-action,
@@ -889,7 +890,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
   background-color: #00a1f2;
 }
 
-/* line 34, sass/default/utilities/_settings.scss */
+/* line 35, sass/default/utilities/_settings.scss */
 h1, h2, h3, h4, h5, h6,
 ul, ol,
 p,
@@ -903,8 +904,7 @@ figure {
 }
 
 /* line 42, sass/default/utilities/_settings.scss */
-html,
-body {
+html {
   height: 100%;
 }
 
@@ -2394,7 +2394,7 @@ ins {
 /* line 10, sass/default/structure/organisms/_main.scss */
 .main-cr {
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 /* line 9, sass/default/utilities/tools/_patch.scss */
 .lt-ie9 .main-cr:before, .lt-ie9 .main-cr:after {
