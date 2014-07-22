@@ -357,7 +357,7 @@
             right: 0;
             bottom: 0;
             margin-right: $gutter;
-            margin-bottom: $gutter;
+            margin-bottom: $gutter !important;
             @include circle;
             
             [type="submit"] {

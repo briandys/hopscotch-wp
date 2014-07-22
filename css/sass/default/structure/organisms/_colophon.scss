@@ -1,9 +1,15 @@
 .colophon {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    
+    opacity: 0;
+    @include transition( opacity );
     
     [data-state-colophon="fixed"] & {
-        @include position(fixed, $l: 0, $b: 0);
+        position: fixed;
+        left: 0;
+        bottom: 0;
         width: 100%;
+        opacity: 1;
     }
         
     .widget_nav_menu {
@@ -25,8 +31,16 @@
             margin-bottom: auto;
         }
 
-    } 
+    }
     
+    .web-designer {
+        
+        .phrase {
+            white-space: nowrap;
+        }
+        
+    }
+
 }
 
 
