@@ -11,6 +11,10 @@
         width: 100%;
         opacity: 1;
     }
+    
+    [data-state-colophon="unfixed"] & {
+        opacity: 1;
+    }
         
     .widget_nav_menu {
 
