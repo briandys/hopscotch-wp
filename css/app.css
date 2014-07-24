@@ -2437,7 +2437,7 @@ ins {
   text-align: center;
 }
 
-/* line 10, sass/default/structure/organisms/_main.scss */
+/* line 9, sass/default/structure/organisms/_main.scss */
 .main-cr {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -2463,13 +2463,13 @@ ins {
   }
 }
 @media only screen and (min-width: 80rem) {
-  /* line 10, sass/default/structure/organisms/_main.scss */
+  /* line 9, sass/default/structure/organisms/_main.scss */
   .main-cr {
     margin-top: auto;
   }
 }
 
-/* line 26, sass/default/structure/organisms/_main.scss */
+/* line 25, sass/default/structure/organisms/_main.scss */
 .primary-content-cr,
 .secondary-sidebar-cr {
   width: 100%;
@@ -2482,7 +2482,7 @@ ins {
   max-width: 48rem;
 }
 @media only screen and (min-width: 61.25rem) {
-  /* line 26, sass/default/structure/organisms/_main.scss */
+  /* line 25, sass/default/structure/organisms/_main.scss */
   .primary-content-cr,
   .secondary-sidebar-cr {
     margin-left: auto;
@@ -2504,12 +2504,19 @@ ins {
   }
 }
 @media only screen and (min-width: 120rem) {
-  /* line 48, sass/default/structure/organisms/_main.scss */
+  /* line 38, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active .primary-content {
+    margin-right: -30rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 120rem) {
+  /* line 50, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .primary-content .primary-content-cr {
     margin-left: auto;
     margin-right: auto;
     padding-right: 0;
-    max-width: 70rem;
+    max-width: 48rem;
   }
 }
 
@@ -2519,10 +2526,16 @@ ins {
   width: 35%;
 }
 @media only screen and (min-width: 64rem) {
-  /* line 65, sass/default/structure/organisms/_main.scss */
+  /* line 67, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
     float: right;
     width: 35%;
+  }
+}
+@media only screen and (min-width: 120rem) {
+  /* line 67, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active .secondary-sidebar {
+    width: 30rem;
   }
 }
 

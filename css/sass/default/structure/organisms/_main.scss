@@ -1,10 +1,9 @@
 $content-width-percentage: 65%;
 $sidebar-width-percentage: 100% - $content-width-percentage;
 
-$total-width: 68rem;
+$total-width: 78rem;
 $content-width: 48rem;
 $sidebar-width: $total-width - $content-width;
-$width-expand: 2;
 
 
 .main-cr {
@@ -35,14 +34,17 @@ $width-expand: 2;
 
 .primary-content {
     
+    // Active Secondary Sidebar
     .secondary-sidebar-active & {
     
         @include mq($desktop, iefixOn) {
             float: left;
             width: $content-width-percentage;
         }
-    
-        @include mq($widescreen, iefixOff) {
+        
+        @include mq($minorityreport, iefixOff) {
+            margin-right: -$sidebar-width;
+            width: 100%;
         }
         
         .primary-content-cr {
@@ -50,7 +52,7 @@ $width-expand: 2;
             @include mq($minorityreport, iefixOff) {
                 @include margin-center;
                 padding-right: 0;
-                max-width: $total-width + $width-expand;
+                max-width: $content-width;
             }
             
         }
@@ -69,7 +71,8 @@ $width-expand: 2;
             width: $sidebar-width-percentage;
         }
 
-        @include mq($widescreen, iefixOff) {
+        @include mq($minorityreport, iefixOff) {
+            width: $sidebar-width;
         }
 
     }
