@@ -361,6 +361,7 @@
             @include circle;
             
             [type="submit"] {
+                margin-top: auto;
                 padding: 0;
                 @include size( $block-m );
             }

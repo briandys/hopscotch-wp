@@ -62,9 +62,11 @@ label[for] {
 // Form element - Button VisD
 .sudo-button {    
     @include button-style-default;
+    margin-top: 2rem;
     
     button,
     input {
+        margin: auto;
         @include reset-button-style;
         @include input-type-text-style;
     }
@@ -76,4 +78,5 @@ input[type="submit"] {
     @include reset-button-style;
     @include button-style-default;
     @include input-type-text-style;
+    margin-top: 2rem;
 }

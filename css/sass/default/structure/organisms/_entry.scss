@@ -145,10 +145,6 @@
         
     }
     
-    form {
-        margin-bottom: 1rem;
-    }
-    
     @each $item in $heading-tags {
 
         > #{$item} {
