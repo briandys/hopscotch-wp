@@ -41,7 +41,7 @@ label[for] {
 }
 
 
-// Form Element Visual Design
+// Form element - Text Input Fields VisD
 .sudo-input-text {    
     @include border;
     @include corner-radius($radius-s);
@@ -59,6 +59,7 @@ label[for] {
     
 }
 
+// Form element - Button VisD
 .sudo-button {    
     @include button-style-default;
     
@@ -69,6 +70,7 @@ label[for] {
     }
 }
 
+// Default Buttons
 button,
 input[type="submit"] {
     @include reset-button-style;
