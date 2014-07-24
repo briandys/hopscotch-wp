@@ -29,14 +29,6 @@
     
     .contact-submit {
         margin-top: 1rem;
-        
-        input[type="submit"] {
-            @include button-style-default;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-            border: none;
-        }
-        
     }
     
     textarea {

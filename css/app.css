@@ -765,7 +765,7 @@ img, .wp-caption {
 }
 
 /* line 18, sass/default/utilities/tools/structure/_transition.scss */
-.post-edit-link, .sudo-button, .form-submit, .contact-form .contact-submit input[type="submit"] {
+.post-edit-link {
   -webkit-transition: background-color 0.125s ease;
   -moz-transition: background-color 0.125s ease;
   -ms-transition: background-color 0.125s ease;
@@ -799,7 +799,7 @@ img, .wp-caption {
   vertical-align: middle;
 }
 
-/* line 54, sass/default/utilities/tools/visual/_buttonstyle.scss */
+/* line 55, sass/default/utilities/tools/visual/_buttonstyle.scss */
 .post-edit-link {
   display: inline-block;
   padding: .25rem .5rem;
@@ -814,7 +814,7 @@ img, .wp-caption {
   overflow: hidden;
   text-transform: uppercase;
 }
-/* line 36, sass/default/utilities/tools/visual/_buttonstyle.scss */
+/* line 37, sass/default/utilities/tools/visual/_buttonstyle.scss */
 .post-edit-link:hover {
   color: white;
   background-color: #00aaff;
@@ -1002,15 +1002,8 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   padding: .5rem;
   min-height: 2.5rem;
 }
-/* line 20, sass/default/structure/atoms/_form.scss */
-.sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
-  padding: .5rem;
-  min-height: 2.5rem;
-  border: none;
-  background-color: transparent;
-}
 
-/* line 28, sass/default/structure/atoms/_form.scss */
+/* line 24, sass/default/structure/atoms/_form.scss */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -1018,18 +1011,19 @@ input[type="reset"] {
   line-height: normal;
 }
 
-/* line 33, sass/default/structure/atoms/_form.scss */
+/* line 29, sass/default/structure/atoms/_form.scss */
 label {
   display: inline-block;
   margin-bottom: .5rem;
+  font-weight: bold;
 }
 
-/* line 40, sass/default/structure/atoms/_form.scss */
+/* line 37, sass/default/structure/atoms/_form.scss */
 label[for]:hover {
   cursor: pointer;
 }
 
-/* line 47, sass/default/structure/atoms/_form.scss */
+/* line 45, sass/default/structure/atoms/_form.scss */
 .sudo-input-text {
   border-top-width: 0.0625rem;
   border-right-width: 0.0625rem;
@@ -1044,43 +1038,84 @@ label[for]:hover {
   overflow: hidden;
   overflow: hidden;
 }
-/* line 52, sass/default/structure/atoms/_form.scss */
+/* line 50, sass/default/structure/atoms/_form.scss */
 .sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
-  padding: .5rem;
-  min-height: 2.5rem;
-  border: none;
-  background-color: transparent;
+  padding: .75rem;
+  min-height: 3rem;
   border: none;
 }
-/* line 56, sass/default/structure/atoms/_form.scss */
+/* line 54, sass/default/structure/atoms/_form.scss */
 .sudo-input-text input[type='text']:focus, .sudo-input-text input[type='email']:focus, .sudo-input-text input[type='search']:focus, .sudo-input-text input[type='password']:focus, .sudo-input-text input[type='url']:focus, .sudo-input-text textarea:focus {
   outline: 0;
 }
 
-/* line 64, sass/default/structure/atoms/_form.scss */
+/* line 62, sass/default/structure/atoms/_form.scss */
 .sudo-button {
+  color: white;
+  background-color: #12b32d;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
   overflow: hidden;
-  color: white;
-  background-color: #12b32d;
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
   overflow: hidden;
 }
-/* line 8, sass/default/utilities/tools/visual/_buttonstyle.scss */
-.sudo-button > * {
-  padding: .5rem;
-  min-height: 2.5rem;
-  border: none;
-  background-color: transparent;
-}
-/* line 13, sass/default/utilities/tools/visual/_buttonstyle.scss */
+/* line 9, sass/default/utilities/tools/visual/_buttonstyle.scss */
 .sudo-button[data-state-form-element="focused"], .sudo-button:hover {
   background-color: #00c521;
 }
-/* line 17, sass/default/utilities/tools/visual/_buttonstyle.scss */
+/* line 13, sass/default/utilities/tools/visual/_buttonstyle.scss */
 .sudo-button:active {
+  -webkit-transform: translate(0, 0.0625rem);
+  -moz-transform: translate(0, 0.0625rem);
+  -ms-transform: translate(0, 0.0625rem);
+  -o-transform: translate(0, 0.0625rem);
+  transform: translate(0, 0.0625rem);
+}
+/* line 66, sass/default/structure/atoms/_form.scss */
+.sudo-button button,
+.sudo-button input {
+  background-color: transparent;
+  border: none;
+  padding: .75rem;
+  min-height: 3rem;
+}
+
+/* line 73, sass/default/structure/atoms/_form.scss */
+button,
+input[type="submit"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  background-color: #12b32d;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  overflow: hidden;
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
+  overflow: hidden;
+  padding: .75rem;
+  min-height: 3rem;
+}
+/* line 9, sass/default/utilities/tools/visual/_buttonstyle.scss */
+button[data-state-form-element="focused"], button:hover,
+input[type="submit"][data-state-form-element="focused"],
+input[type="submit"]:hover {
+  background-color: #00c521;
+}
+/* line 13, sass/default/utilities/tools/visual/_buttonstyle.scss */
+button:active,
+input[type="submit"]:active {
   -webkit-transform: translate(0, 0.0625rem);
   -moz-transform: translate(0, 0.0625rem);
   -ms-transform: translate(0, 0.0625rem);
@@ -1882,27 +1917,25 @@ ins {
 
 /* line 342, sass/default/structure/organisms/_comment.scss */
 .form-submit {
+  color: white;
+  background-color: #12b32d;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
   overflow: hidden;
-  color: white;
-  background-color: #12b32d;
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
   overflow: hidden;
 }
-/* line 8, sass/default/utilities/tools/visual/_buttonstyle.scss */
-.form-submit > * {
-  padding: .5rem;
-  min-height: 2.5rem;
-  border: none;
-  background-color: transparent;
-}
-/* line 13, sass/default/utilities/tools/visual/_buttonstyle.scss */
+/* line 9, sass/default/utilities/tools/visual/_buttonstyle.scss */
 .form-submit[data-state-form-element="focused"], .form-submit:hover {
   background-color: #00c521;
 }
-/* line 17, sass/default/utilities/tools/visual/_buttonstyle.scss */
+/* line 13, sass/default/utilities/tools/visual/_buttonstyle.scss */
 .form-submit:active {
   -webkit-transform: translate(0, 0.0625rem);
   -moz-transform: translate(0, 0.0625rem);
@@ -2436,43 +2469,7 @@ ins {
   }
 }
 
-/* line 6, sass/default/utilities/tools/structure/_media-query.scss */
-.lt-ie9 .secondary-sidebar-active .primary-content {
-  float: left;
-  width: 65%;
-}
-@media only screen and (min-width: 64rem) {
-  /* line 26, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .primary-content {
-    float: left;
-    width: 65%;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  /* line 26, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .primary-content {
-    margin-right: -20rem;
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  /* line 39, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .primary-content .primary-content-cr {
-    padding-right: 20rem;
-  }
-}
-@media only screen and (min-width: 120rem) {
-  /* line 39, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .primary-content .primary-content-cr {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 0;
-    max-width: 70rem;
-  }
-}
-
-/* line 58, sass/default/structure/organisms/_main.scss */
+/* line 26, sass/default/structure/organisms/_main.scss */
 .primary-content-cr,
 .secondary-sidebar-cr {
   width: 100%;
@@ -2485,7 +2482,7 @@ ins {
   max-width: 48rem;
 }
 @media only screen and (min-width: 61.25rem) {
-  /* line 58, sass/default/structure/organisms/_main.scss */
+  /* line 26, sass/default/structure/organisms/_main.scss */
   .primary-content-cr,
   .secondary-sidebar-cr {
     margin-left: auto;
@@ -2495,22 +2492,37 @@ ins {
 }
 
 /* line 6, sass/default/utilities/tools/structure/_media-query.scss */
+.lt-ie9 .secondary-sidebar-active .primary-content {
+  float: left;
+  width: 65%;
+}
+@media only screen and (min-width: 64rem) {
+  /* line 38, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active .primary-content {
+    float: left;
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 120rem) {
+  /* line 48, sass/default/structure/organisms/_main.scss */
+  .secondary-sidebar-active .primary-content .primary-content-cr {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    max-width: 70rem;
+  }
+}
+
+/* line 6, sass/default/utilities/tools/structure/_media-query.scss */
 .lt-ie9 .secondary-sidebar-active .secondary-sidebar {
   float: right;
   width: 35%;
 }
 @media only screen and (min-width: 64rem) {
-  /* line 71, sass/default/structure/organisms/_main.scss */
+  /* line 65, sass/default/structure/organisms/_main.scss */
   .secondary-sidebar-active .secondary-sidebar {
     float: right;
     width: 35%;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  /* line 71, sass/default/structure/organisms/_main.scss */
-  .secondary-sidebar-active .secondary-sidebar {
-    width: 100%;
-    max-width: 20rem;
   }
 }
 
@@ -3362,40 +3374,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 .contact-form .contact-submit {
   margin-top: 1rem;
 }
-/* line 33, sass/default/structure/organisms/_plug-in.scss */
-.contact-form .contact-submit input[type="submit"] {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  overflow: hidden;
-  color: white;
-  background-color: #12b32d;
-  overflow: hidden;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  border: none;
-}
-/* line 8, sass/default/utilities/tools/visual/_buttonstyle.scss */
-.contact-form .contact-submit input[type="submit"] > * {
-  padding: .5rem;
-  min-height: 2.5rem;
-  border: none;
-  background-color: transparent;
-}
-/* line 13, sass/default/utilities/tools/visual/_buttonstyle.scss */
-.contact-form .contact-submit input[type="submit"][data-state-form-element="focused"], .contact-form .contact-submit input[type="submit"]:hover {
-  background-color: #00c521;
-}
-/* line 17, sass/default/utilities/tools/visual/_buttonstyle.scss */
-.contact-form .contact-submit input[type="submit"]:active {
-  -webkit-transform: translate(0, 0.0625rem);
-  -moz-transform: translate(0, 0.0625rem);
-  -ms-transform: translate(0, 0.0625rem);
-  -o-transform: translate(0, 0.0625rem);
-  transform: translate(0, 0.0625rem);
-}
-/* line 42, sass/default/structure/organisms/_plug-in.scss */
+/* line 34, sass/default/structure/organisms/_plug-in.scss */
 .contact-form textarea {
   height: 4.5rem !important;
   min-height: 4.5rem;

@@ -17,10 +17,6 @@ textarea {
     padding: .5rem;
     min-height: 2.5rem;
     
-    .sudo-input-text & {
-        @include input-type-text-style;
-    }
-    
 }
 
 button,
@@ -33,6 +29,7 @@ input[type="reset"] {
 label {
     display: inline-block;
     margin-bottom: .5rem;
+    font-weight: bold;
 }
 
 label[for] {
@@ -44,6 +41,7 @@ label[for] {
 }
 
 
+// Form Element Visual Design
 .sudo-input-text {    
     @include border;
     @include corner-radius($radius-s);
@@ -63,4 +61,17 @@ label[for] {
 
 .sudo-button {    
     @include button-style-default;
+    
+    button,
+    input {
+        @include reset-button-style;
+        @include input-type-text-style;
+    }
+}
+
+button,
+input[type="submit"] {
+    @include reset-button-style;
+    @include button-style-default;
+    @include input-type-text-style;
 }

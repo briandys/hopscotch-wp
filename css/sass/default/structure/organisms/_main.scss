@@ -21,6 +21,18 @@ $width-expand: 2;
     
 }
 
+// Default layout of Primary and Secondary Content
+.primary-content-cr,
+.secondary-sidebar-cr {
+    width: 100%;
+    
+    @include mq($monitor, iefixOn) {
+        @include margin-center;
+        max-width: $content-width;
+    }
+    
+}
+
 .primary-content {
     
     .secondary-sidebar-active & {
@@ -31,16 +43,9 @@ $width-expand: 2;
         }
     
         @include mq($widescreen, iefixOff) {
-            margin-right: -$sidebar-width;
-            width: 100%;
-            max-width: 100%;
         }
         
         .primary-content-cr {
-            
-            @include mq($widescreen, iefixOff) {
-                padding-right: $sidebar-width;
-            }
             
             @include mq($minorityreport, iefixOff) {
                 @include margin-center;
@@ -50,17 +55,6 @@ $width-expand: 2;
             
         }
         
-    }
-    
-}
-
-.primary-content-cr,
-.secondary-sidebar-cr {
-    width: 100%;
-    
-    @include mq($monitor, iefixOn) {
-        @include margin-center;
-        max-width: $content-width;
     }
     
 }
@@ -76,8 +70,6 @@ $width-expand: 2;
         }
 
         @include mq($widescreen, iefixOff) {
-            width: 100%;
-            max-width: $sidebar-width;
         }
 
     }

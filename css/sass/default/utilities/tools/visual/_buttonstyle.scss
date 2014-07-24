@@ -1,13 +1,9 @@
-@mixin button-style-default {    
-    @extend %transition-bg-color;    
-    @include corner-radius($radius-s);
+@mixin button-style-default {
     color: $white;
     background-color: $color-button-default;
+    @include corner-radius( $radius-s );
+    @include transition( background-color );
     overflow: hidden;
-    
-    > * {
-        @include input-type-text-style;
-    }
 
     &[data-state-form-element="focused"],
     &:hover {
@@ -20,8 +16,13 @@
     
 }
 
+@mixin reset-button-style {
+    background-color: transparent;
+    border: none;
+}
 
-//------------------------- Buttonizer primary
+
+//------------------------- Buttonizer primary (hollow button style)
 @mixin buttonizer($level: primary) {
     @extend %transition-bg-color;
     display: inline-block;

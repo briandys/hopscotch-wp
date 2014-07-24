@@ -7,10 +7,8 @@
 
 
 @mixin input-type-text-style {
-    padding: .5rem;
-    min-height: 2.5rem;
-    border: none;
-    background-color: transparent;
+    padding: .75rem;
+    min-height: $block-m;
 }
 
 //------------------------- Faint
