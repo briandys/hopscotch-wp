@@ -65,7 +65,8 @@ form,
 p:last-child,
 li:last-child,
 .field:last-child,
-.field-action {
+.field-action,
+table:last-child {
     margin-bottom: auto !important;
 }
 
