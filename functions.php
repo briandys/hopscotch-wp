@@ -85,12 +85,15 @@ require_once( trailingslashit(get_template_directory()) . 'functions/post-count-
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail-state-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 
 // require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
+
+// Admin Dashboard
+require_once( trailingslashit(get_template_directory()) . 'functions/allow-html-attributes.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
 
 
 ?>
