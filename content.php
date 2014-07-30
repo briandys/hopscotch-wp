@@ -57,57 +57,51 @@ hopscotch_content_header();
         echo '">';
         ?>
         
-        <?php // Entry content
-        if ( is_search() || is_author() ) : ?>
+            <div class="entry-ct-cr">
+            <?php // Entry content
+            if ( is_search() || is_author() ) : ?>
 
-            <div class="entry-ct-cr"><?php the_excerpt(); ?></div>
+                <?php the_excerpt(); ?>
 
-        <?php else : ?>
+            <?php else : ?>
 
+                <?php // Content
+                if( trim( get_the_content() ) !== "" ) {                    
+                    the_content( __( 'More', 'hopscotch' ) );
+                }
+                ?>
+                <?php hopscotch_wp_link_pages(); ?>
+            <?php endif; ?>
+                
             <?php // HopScotch Content hook
             hopscotch_entry_content();
             ?>
 
-            <?php // Content
-            if( trim( get_the_content() ) !== "" ) {                    
-                echo '<div class="entry-ct-cr">';
-                the_content( __( 'More', 'hopscotch' ) );
-                echo '</div>';
-            }
-            wp_link_pages( array(
-                'before'      => '<div class="page-links"><p class="page-links-title">' . __( 'Pages:', 'hopscotch' ) . '</p>',
-                'after'       => '</div>',
-                'link_before' => '<span class="label">',
-                'link_after'  => '</span>',
-            ) );
+            <?php if ( ! is_page_template( 'templates/solo.php' ) && ! is_search() ) : ?>
+
+            <?php  // Display child page
+            $parent = $post->ID;
+            $args = array(
+                'post_type' => 'page',
+                'post_parent' => $parent,
+                'order' => 'ASC'
+            );
+            $the_query = new WP_Query( $args );
             ?>                
-        <?php endif; ?>
+                <?php if ( $the_query->have_posts() ) : ?>
 
-        <?php if ( ! is_page_template( 'templates/solo.php' ) && ! is_search() ) : ?>
+                <div class="child-page">
+                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <?php get_template_part( 'content', get_post_format() ); ?>
+                    <?php endwhile; ?>
+                </div>
 
-        <?php  // Display child page
-        $parent = $post->ID;
-        $args = array(
-            'post_type' => 'page',
-            'post_parent' => $parent,
-            'order' => 'ASC'
-        );
-        $the_query = new WP_Query( $args );
-        ?>                
-            <?php if ( $the_query->have_posts() ) : ?>
-          
-            <div class="child-page">
-                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                <?php endwhile; ?>
-            </div>
+                <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
 
-            <?php wp_reset_postdata(); ?>
             <?php endif; ?>
-
-        <?php endif; ?>
-            
-        </div><!-- .entry-ct -->
+            </div>
+        </div><!-- entry-ct -->
         
         <!-- Format: Status, Tag -->
         <?php if ( has_tag() || has_post_format( 'status' ) ) : ?>
@@ -124,8 +118,8 @@ hopscotch_content_header();
                 
 				<?php the_tags( '<div class="entry-tags"><div class="tag-list"><span class="label">Tags:</span> ', '<span class="separator">,</span> ', '</div></div>' ); ?>        
             </div>
-        </footer><!-- .entry-fr -->
+        </footer><!-- entry-fr -->
         <?php endif; ?>
     
-    </div><!-- .entry-cr -->
+    </div><!-- entry-cr -->
 </article>

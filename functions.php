@@ -16,7 +16,7 @@ function hopscotch_components_directory() {
 
 
 // Front-end
-require_once( trailingslashit(get_template_directory()) . 'functions/font.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
@@ -90,6 +90,8 @@ require_once( trailingslashit(get_template_directory()) . 'functions/google-anal
 // require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
+
+require_once( trailingslashit(get_template_directory()) . 'functions/wp-link-pages.php');
 
 // Admin Dashboard
 require_once( trailingslashit(get_template_directory()) . 'functions/allow-html-attributes.php');
