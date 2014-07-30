@@ -172,6 +172,18 @@
     a:not( .more-link ):not( .entry-thumbnail-link ):not( .gallery-icon a ) {
         @include linkstyle-secondary;
     }
+
+    // Fix SVG <img> width and height in Galleries
+    img[src*=".svg"],
+    img[src*=".png"] {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgb3BhY2l0eT0iMC4xNSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiLz48L2c+PC9zdmc+);
+        background-size: 1.125rem;
+    }
+    
+    img[src*=".svg"][width="1"] {
+        width: 100%;
+        height: auto;
+    }
     
 }
 

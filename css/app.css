@@ -2269,17 +2269,28 @@ ins {
   border-bottom: none;
   text-decoration: none;
 }
-
 /* line 178, sass/default/structure/organisms/_entry.scss */
+.entry-ct-cr img[src*=".svg"],
+.entry-ct-cr img[src*=".png"] {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgb3BhY2l0eT0iMC4xNSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiLz48L2c+PC9zdmc+);
+  background-size: 1.125rem;
+}
+/* line 183, sass/default/structure/organisms/_entry.scss */
+.entry-ct-cr img[src*=".svg"][width="1"] {
+  width: 100%;
+  height: auto;
+}
+
+/* line 190, sass/default/structure/organisms/_entry.scss */
 .entry-fr {
   margin-top: 1rem;
 }
-/* line 181, sass/default/structure/organisms/_entry.scss */
+/* line 193, sass/default/structure/organisms/_entry.scss */
 .entry-fr .entry-meta {
   margin-bottom: 1rem;
 }
 
-/* line 189, sass/default/structure/organisms/_entry.scss */
+/* line 201, sass/default/structure/organisms/_entry.scss */
 .entry-tags a {
   color: rgba(51, 51, 51, 0.75);
   border-bottom: 0.0625rem dotted currentColor;
@@ -2291,20 +2302,20 @@ ins {
   text-decoration: none;
 }
 
-/* line 197, sass/default/structure/organisms/_entry.scss */
+/* line 209, sass/default/structure/organisms/_entry.scss */
 .page-links > * {
   display: inline-block;
 }
-/* line 201, sass/default/structure/organisms/_entry.scss */
+/* line 213, sass/default/structure/organisms/_entry.scss */
 .page-links p {
   margin-bottom: auto;
 }
-/* line 205, sass/default/structure/organisms/_entry.scss */
+/* line 217, sass/default/structure/organisms/_entry.scss */
 .page-links a, .page-links > .label {
   padding: 1rem;
 }
 
-/* line 211, sass/default/structure/organisms/_entry.scss */
+/* line 223, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
   -webkit-transform: translate(0, 0.25rem);
   -moz-transform: translate(0, 0.25rem);
@@ -2313,25 +2324,25 @@ ins {
   transform: translate(0, 0.25rem);
 }
 
-/* line 216, sass/default/structure/organisms/_entry.scss */
+/* line 228, sass/default/structure/organisms/_entry.scss */
 .post-edit-link {
   font-size: 12px;
   font-size: 0.75rem;
 }
 
-/* line 227, sass/default/structure/organisms/_entry.scss */
+/* line 239, sass/default/structure/organisms/_entry.scss */
 .entry-subtitle {
   font-size: 20px;
   font-size: 1.25rem;
 }
 
-/* line 236, sass/default/structure/organisms/_entry.scss */
+/* line 248, sass/default/structure/organisms/_entry.scss */
 .entry-meta {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 242, sass/default/structure/organisms/_entry.scss */
+/* line 254, sass/default/structure/organisms/_entry.scss */
 .format-image .img-cr {
   padding-left: 0;
   padding-right: 0;
