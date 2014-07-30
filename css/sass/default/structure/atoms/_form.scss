@@ -40,6 +40,10 @@ label[for] {
     
 }
 
+form br {
+    display: none;
+}
+
 
 // Form element - Text Input Fields VisD
 .sudo-input-text {    
@@ -78,5 +82,5 @@ input[type="submit"] {
     @include reset-button-style;
     @include button-style-default;
     @include input-type-text-style;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
