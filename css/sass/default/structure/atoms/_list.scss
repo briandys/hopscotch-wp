@@ -10,7 +10,7 @@ ol, ul {
 li {
     margin-bottom: $bottom-space-s;
     
-    p:first-child {
+    > p:first-child {
         margin-top: 1rem;
     }
     

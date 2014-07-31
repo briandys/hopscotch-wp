@@ -1,39 +1,56 @@
-<div class='multisite-category'>
-    <h2>Multisite Category</h2>
-    <ul class='multisite-category-list'>
+<?php
+// http://wordpress.stackexchange.com/a/41819
 
-    <?php
-    // http://wordpress.stackexchange.com/a/41819
+// get all blogs
+$blogs = get_blog_list( 0, 'all' );
 
-    // get all blogs
-    $blogs = get_blog_list( 0, 'all' );
+if ( 0 < count( $blogs ) ) : ?>
 
-    if ( 0 < count( $blogs ) ) :
-        foreach( $blogs as $blog ) : 
-            switch_to_blog( $blog[ 'blog_id' ] );
+    <div class="com multisite-category">
+        <div class="com-cr multisite-category--cr">
+            <div class="com-hr multisite-category--hr">
+                <h2 class="com-title multisite-category--title">Multisite Category</h2>
+            </div>
+            <div class="com-ct multisite-category--ct">
+                <ul class="multisite-category-list">
 
-            if ( get_theme_mod( 'show_in_home', 'on' ) !== 'on' ) {
-                continue;
-            }
+                <?php foreach( $blogs as $blog ) : 
+                    switch_to_blog( $blog[ 'blog_id' ] );
 
-            $description  = get_bloginfo( 'description' );
-            $blog_details = get_blog_details( $blog[ 'blog_id' ] );
-            ?>
-            <li class="multisite-category-item">
+                    if ( get_theme_mod( 'show_in_home', 'on' ) !== 'on' ) {
+                        continue;
+                    }
 
-                <p class="multisite-title">
-                    <a href="<?php echo $blog_details->path ?>">
-                        <?php echo  $blog_details->blogname; ?>
-                    </a>
-                </p>
+                    $description  = get_bloginfo( 'description' );
+                    $blog_details = get_blog_details( $blog[ 'blog_id' ] );
+                    $header_image = get_header_image();
+                    ?>
 
-                <div class="multisite-description">
-                    <?php echo $description; ?>
-                </div>
+                    <li class="multisite-category-item">
+                        <div class="multisite-category-item--cr">
+                            <div class="multisite-category-item--ct">
+                                <div class="thumbnail"><a class="thumbnail-link" href="<?php echo $blog_details->path ?>" style="background-image: url( <?php echo $header_image; ?> )"></a></div>
+                                <p class="multisite-title">
+                                    <a href="<?php echo $blog_details->path ?>" target="_blank">
+                                        <?php echo  $blog_details->blogname; ?>
+                                    </a>
+                                </p>
+                                <div class="multisite-description">
+                                    <?php echo $description; ?>
+                                </div>
+                                <?php if ( current_user_can('edit_posts') ) : ?>
+                                    <a class="dashboard-link" href="<?php echo $blog_details->path ?>wp-admin" target="_blank">Dashboard</a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
 
                 <?php restore_current_blog(); ?>
-            </li>
-    <?php endforeach;
-    endif; ?>
-    </ul>
-</div><!-- multisite-category -->
+
+                <?php endforeach; ?>
+
+                </ul>
+            </div>
+        </div>
+    </div><!-- multisite-category -->
+
+<?php endif; ?>

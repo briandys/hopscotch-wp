@@ -3,6 +3,8 @@
 // Setup
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
 
+require_once( trailingslashit(get_template_directory()) . 'functions/custom-header.php');
+
 // Action hooks
 require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
 
