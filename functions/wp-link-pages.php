@@ -1,7 +1,7 @@
 <?php
 
 //------------------------- wp_link_pages
-// Displays the pages of a post (done by <!--nextpage--> 
+// Displays the pages of a post (done by <!--nextpage-->)
 
 function hopscotch_wp_link_pages() {
     ?>

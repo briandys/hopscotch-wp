@@ -75,3 +75,11 @@ table:last-child {
 .colophon {
     clear: both;
 }
+
+html {
+    @include font-size-rem($font-m);
+    font-family: $font-family-base;
+    line-height: 1.5;
+    color: $font-color-base;
+    background-color: $white;
+}

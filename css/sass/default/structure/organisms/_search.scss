@@ -77,8 +77,17 @@
 
     .search--sudo-button {
         // Reset
+        margin-top: auto;
         background-color: transparent;
         border: none;
+        
+        button {
+        
+            &:hover {
+                background-color: transparent;
+            }
+            
+        }
         
         .status-search-inactive & {
             @extend %vhide;
@@ -87,6 +96,7 @@
     
     .search-form {
         position: relative;
+        margin-bottom: auto;
         
         // Narrow mode
         @include mq($tablet, $query1: max) {

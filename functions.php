@@ -50,7 +50,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumbs
 
 // Entry
 require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-edit.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-edit.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-comment.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-date.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-byline.php');
@@ -93,7 +93,9 @@ require_once( trailingslashit(get_template_directory()) . 'functions/google-anal
 
 require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
 
+// WordPress Native Functions
 require_once( trailingslashit(get_template_directory()) . 'functions/wp-link-pages.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');
 
 // Admin Dashboard
 require_once( trailingslashit(get_template_directory()) . 'functions/allow-html-attributes.php');

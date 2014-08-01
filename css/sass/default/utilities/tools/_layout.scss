@@ -123,6 +123,35 @@
 }
 
 
+//------------------------- Search theme light
+@mixin search-theme-reverse {
+    
+    .header-sidebar .search-control .icon,
+    .header-sidebar .search-submit .icon {
+        fill: $white;
+    }
+    
+    .header-sidebar .search-form {
+        // Themed Mixin
+    }
+    
+    .header-sidebar .search-control {
+        opacity: .75;
+        @include transition(opacity);
+    }
+    
+    .header-sidebar .search-control:hover {
+        opacity: 1;
+    }
+    
+    .header-sidebar .search-input {
+        background-color: transparent;
+        color: $white;
+    }
+    
+}
+
+
 //------------------------- Header for Wide Mode
 @mixin header-semi-compact {
     
@@ -176,8 +205,6 @@
 }
 
 
-
-
 //------------------------- Header Simple
 @mixin header-plain-text {
     
@@ -210,32 +237,4 @@
         display: inline-block;
     }
 
-}
-
-
-//------------------------- Search theme light
-@mixin search-theme-reverse {
-    
-    .header-sidebar .search-control .icon,
-    .header-sidebar .search-submit .icon {
-        fill: $white;
-    }
-    
-    .header-sidebar .search-form {
-        // Themed Mixin
-    }
-    
-    .header-sidebar .search-control {
-        opacity: .75;
-        @include transition(opacity);
-    }
-    
-    .header-sidebar .search-control:hover {
-        opacity: 1;
-    }
-    
-    .header-sidebar .search-input {
-        color: $white;
-    }
-    
 }

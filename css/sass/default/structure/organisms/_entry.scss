@@ -1,3 +1,6 @@
+$entry-byline-avatar-size: 2rem;
+
+
 .entry {
     @extend %cf;
     
@@ -29,11 +32,6 @@
         
     }
     
-    .wp-caption {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
     hr {
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -57,10 +55,6 @@
     .entry-meta {
         margin-top: .5rem;
         margin-bottom: 1rem;
-        
-        > * {
-            display: inline-block;
-        }
         
         .page & {
             @extend %vhide;
@@ -86,6 +80,7 @@
 
     
 .entry-timestamp {
+    display: inline-block;
    
     a {
         @include linkstyle-secondary;
@@ -98,9 +93,20 @@
 }
 
 .entry-byline {
+    @extend %cf;
+    display: inline-block;
+    margin-top: .25rem;
+    line-height: $entry-byline-avatar-size;
     
     a {
         @include linkstyle-secondary;
+    }
+    
+    .avatar {
+        float: left;
+        margin-right: .5rem;
+        @include size( $entry-byline-avatar-size );
+        @include circle;
     }
     
 }
@@ -110,7 +116,6 @@
 }
 
 .entry-ct {
-    margin-bottom: 1rem;
     
     > * {
         margin-bottom: 1rem;

@@ -1,4 +1,4 @@
-<?php // HopScotch Content Header hook
+<?php // Content Header hook
 hopscotch_content_header();
 ?>
 
@@ -16,9 +16,15 @@ hopscotch_content_header();
                 endif;
                 ?>
                 
-                <?php // Edit entry action
+                <?php // Edit Post Action
                 hopscotch_entry_action_edit();
+                ?>
+                
+                <?php // Custom Field: Subtitle
                 hopscotch_entry_subtitle();
+                ?>
+                
+                <?php // Breadcrumbs
                 hopscotch_breadcrumbs();
                 ?>
             
@@ -45,18 +51,7 @@ hopscotch_content_header();
         </header>
         
         
-        <?php // Entry Content opening tags
-        echo '<div class="entry-ct ';
-        hopscotch_slug_class();
-        echo '--entry-ct ';
-
-        if ( is_search() ) :
-        echo 'entry-summary';
-        endif;
-
-        echo '">';
-        ?>
-        
+        <div class="entry-ct <?php hopscotch_slug_class(); ?>--entry-ct <?php if( is_search() ) echo 'entry-summary'; ?>">
             <div class="entry-ct-cr">
             <?php // Entry content
             if ( is_search() || is_author() ) : ?>
@@ -76,35 +71,39 @@ hopscotch_content_header();
             <?php // HopScotch Content hook
             hopscotch_entry_content();
             ?>
+            </div>
+            
+            <?php // Child Page
+            // Use Page Template: Solo to display only the main content of that page
+            if ( ! is_page_template( 'templates/solo.php' ) && ! is_search() ) :
+            ?>
 
-            <?php if ( ! is_page_template( 'templates/solo.php' ) && ! is_search() ) : ?>
+                <?php
+                $parent = $post->ID;
+                $args = array(
+                    'post_type'     => 'page',
+                    'post_status'   => 'publish',
+                    'post_parent'   => $parent,
+                    'order'         => 'ASC'
+                );
+                $the_query = new WP_Query( $args );
+                ?>                
 
-            <?php  // Display child page
-            $parent = $post->ID;
-            $args = array(
-                'post_type' => 'page',
-                'post_parent' => $parent,
-                'order' => 'ASC'
-            );
-            $the_query = new WP_Query( $args );
-            ?>                
                 <?php if ( $the_query->have_posts() ) : ?>
-
-                <div class="child-page">
-                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <?php get_template_part( 'content', get_post_format() ); ?>
-                    <?php endwhile; ?>
-                </div>
-
-                <?php wp_reset_postdata(); ?>
+                    <div class="child-page child-content">
+                        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <?php get_template_part( 'content', get_post_format() ); ?>
+                        <?php endwhile; ?>
+                    </div>
+                    <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
 
             <?php endif; ?>
-            </div>
         </div><!-- entry-ct -->
         
-        <!-- Format: Status, Tag -->
-        <?php if ( has_tag() || has_post_format( 'status' ) ) : ?>
+        <?php // Post Formats: Status, Tag
+        if ( has_tag() || has_post_format( 'status' ) ) :
+        ?>
         <footer class="entry-fr <?php hopscotch_slug_class(); ?>--entry-fr">
             <div class="entry-fr-cr">
 				
@@ -113,10 +112,10 @@ hopscotch_content_header();
                     <?php hopscotch_entry_date(); ?>
                     <?php hopscotch_entry_byline(); ?>
                 </div><!-- .entry-meta -->                
-                <?php hopscotch_entry_action_comment(); ?>                
+                <?php hopscotch_entry_action_comment(); ?>
 				<?php endif; ?>
                 
-				<?php the_tags( '<div class="entry-tags"><div class="tag-list"><span class="label">Tags:</span> ', '<span class="separator">,</span> ', '</div></div>' ); ?>        
+                <?php hopscotch_the_tags(); ?>
             </div>
         </footer><!-- entry-fr -->
         <?php endif; ?>
