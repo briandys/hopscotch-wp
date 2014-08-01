@@ -44,7 +44,7 @@
 			return;
 		
 		if ( ! mainNavControl )
-			return;        
+			return;
         
 		if ( ! mainNavContent )
 			return;
@@ -341,8 +341,25 @@
     // Focusing on form elements
 	( function() {
 		
+		$( '.ui-tablist-item a' ).on( 'click', function() {
+            
+            var tab_id = $( this ).attr('aria-controls');
+            
+            $( '.ui-tablist-item a' ).attr('aria-selected', 'false');
+            $( '.ui-tabpanel-item' ).attr('aria-hidden', 'true');
+            
+            $( this ).attr('aria-selected', 'true');
+            $( "#"+tab_id ).attr('aria-hidden', 'false');
+        })
+        
+    } )();
+    
+    
+    // Focusing on form elements
+	( function() {
+		
 		// Focusing on form UIs
-		var form = $( 'form' );
+		var ui_tabs = $( 'ui-tabs' );
 		
 		form.on('focus', 'input, textarea, button', function() {
 			$(this).parent().attr('data-state-form-element', 'focused');

@@ -42,7 +42,7 @@ $entry-byline-avatar-size: 2rem;
 .entry-title {
     display: inline;
     @include font-size-rem($font-xl);
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
     word-wrap: break-word;    
 }
