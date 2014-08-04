@@ -100,6 +100,3 @@ require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.ph
 // Admin Dashboard
 require_once( trailingslashit(get_template_directory()) . 'functions/allow-html-attributes.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
-
-
-?>
