@@ -168,6 +168,8 @@
     .masthead-cr {
         // Themed Mixin
         text-align: left;
+        height: auto;
+        min-height: $block-l;
     }
     
     .site-title-link {

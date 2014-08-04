@@ -48,12 +48,12 @@ $entry-byline-avatar-size: 2rem;
 }
 
 .entry-hr-cr {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding-left: $gutter;
     padding-right: $gutter;
     
     .entry-meta {
-        margin-top: .5rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         
         .page & {
@@ -70,11 +70,6 @@ $entry-byline-avatar-size: 2rem;
         margin-top: .5rem;
     }
 
-}
-
-.entry-fr-cr {
-    padding-left: $gutter;
-    padding-right: $gutter;
 }
 
 
@@ -150,10 +145,14 @@ $entry-byline-avatar-size: 2rem;
         
     }
     
+    p {
+        margin-bottom: 1.5rem;
+    }
+    
     @each $item in $heading-tags {
 
         > #{$item} {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             
             &:first-child {
                 margin-top: auto;
@@ -199,6 +198,11 @@ $entry-byline-avatar-size: 2rem;
         margin-bottom: 1rem;
     }
     
+}
+
+.entry-fr-cr {
+    padding-left: $gutter;
+    padding-right: $gutter;
 }
 
 .entry-tags {

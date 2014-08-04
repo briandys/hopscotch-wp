@@ -11,7 +11,21 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         
         <meta name="description" content="<?php bloginfo( 'description' ); ?>">
+        
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta http-equiv="cleartype" content="on">
+        
+        <!-- Android Home Screen -->
+        <meta name="mobile-web-app-capable" content="yes">
+        
+        <!-- iOS Home Screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?>">
+        
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         
         <?php get_template_part( 'components/ie-javascript' ); ?>
         

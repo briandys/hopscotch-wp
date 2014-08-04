@@ -530,12 +530,10 @@ ins { text-decoration: none; }
 
 .entry-title { display: inline; font-size: 32px; font-size: 2rem; font-weight: 600; line-height: normal; word-wrap: break-word; }
 
-.entry-hr-cr { margin-bottom: 1rem; padding-left: 1rem; padding-right: 1rem; }
-.entry-hr-cr .entry-meta { margin-top: .5rem; margin-bottom: 1rem; }
+.entry-hr-cr { margin-bottom: 2rem; padding-left: 1rem; padding-right: 1rem; }
+.entry-hr-cr .entry-meta { margin-top: 1rem; margin-bottom: 1rem; }
 .entry-hr-cr .entry-thumbnail { margin-top: 1rem; }
 .entry-hr-cr .entry-user-action { margin-top: .5rem; }
-
-.entry-fr-cr { padding-left: 1rem; padding-right: 1rem; }
 
 .entry-timestamp { display: inline-block; }
 .entry-timestamp a { color: rgba(51, 51, 51, 0.75); border-bottom: 0.0625rem dotted currentColor; }
@@ -555,17 +553,18 @@ ins { text-decoration: none; }
 .entry-ct-cr > * { padding-left: 1rem; padding-right: 1rem; word-wrap: break-word; }
 .entry-ct-cr > *:last-child { margin-bottom: auto; }
 .entry-ct-cr > p { line-height: 1.75; }
-.entry-ct-cr > h1 { margin-top: 1.5rem; }
+.entry-ct-cr p { margin-bottom: 1.5rem; }
+.entry-ct-cr > h1 { margin-top: 2rem; }
 .entry-ct-cr > h1:first-child { margin-top: auto; }
-.entry-ct-cr > h2 { margin-top: 1.5rem; }
+.entry-ct-cr > h2 { margin-top: 2rem; }
 .entry-ct-cr > h2:first-child { margin-top: auto; }
-.entry-ct-cr > h3 { margin-top: 1.5rem; }
+.entry-ct-cr > h3 { margin-top: 2rem; }
 .entry-ct-cr > h3:first-child { margin-top: auto; }
-.entry-ct-cr > h4 { margin-top: 1.5rem; }
+.entry-ct-cr > h4 { margin-top: 2rem; }
 .entry-ct-cr > h4:first-child { margin-top: auto; }
-.entry-ct-cr > h5 { margin-top: 1.5rem; }
+.entry-ct-cr > h5 { margin-top: 2rem; }
 .entry-ct-cr > h5:first-child { margin-top: auto; }
-.entry-ct-cr > h6 { margin-top: 1.5rem; }
+.entry-ct-cr > h6 { margin-top: 2rem; }
 .entry-ct-cr > h6:first-child { margin-top: auto; }
 .entry-ct-cr h1 { font-size: 30px; font-size: 1.875rem; }
 .entry-ct-cr h2 { font-size: 24px; font-size: 1.5rem; }
@@ -581,6 +580,8 @@ ins { text-decoration: none; }
 
 .entry-fr { margin-top: 1rem; }
 .entry-fr .entry-meta { margin-bottom: 1rem; }
+
+.entry-fr-cr { padding-left: 1rem; padding-right: 1rem; }
 
 .entry-tags a { color: rgba(51, 51, 51, 0.75); border-bottom: 0.0625rem dotted currentColor; }
 .entry-tags a:hover { color: #333333; border-bottom: none; text-decoration: none; }
@@ -758,7 +759,7 @@ div.nav-menu .page_item_has_children > .children, div.nav-menu .page_item_has_ch
   .site-default ::-webkit-input-placeholder { color: white; }
   .site-default ::-moz-placeholder { color: white; }
   .site-default :-ms-input-placeholder { color: white; }
-  .site-default .masthead-cr { text-align: left; }
+  .site-default .masthead-cr { text-align: left; height: auto; min-height: 3.5rem; }
   .site-default .site-title-link { padding: 1rem; color: white; -webkit-transition: background-color 0.125s ease; -moz-transition: background-color 0.125s ease; -ms-transition: background-color 0.125s ease; -o-transition: background-color 0.125s ease; transition: background-color 0.125s ease; }
   .site-default .site-title-link:hover { text-decoration: none; }
   .site-default div.nav-menu > ul > li > a { color: white; }
@@ -834,8 +835,8 @@ div.nav-menu .page_item_has_children > .children, div.nav-menu .page_item_has_ch
 .ui-tablist { list-style: none; margin: auto; padding: 0; margin-left: auto; margin-bottom: auto; }
 
 .ui-tablist-item { float: left; margin-bottom: auto; }
-.ui-tablist-item a { display: block; padding: .75rem; min-width: 8rem; background-color: white; border: 1px solid #ccc; border-bottom: none; white-space: nowrap; text-align: center; }
-.ui-tablist-item a[aria-selected="true"] { -webkit-transform: translateY(1px); -moz-transform: translateY(1px); -ms-transform: translateY(1px); -o-transform: translateY(1px); transform: translateY(1px); margin-left: -1px; margin-right: -1px; }
+.ui-tablist-item a { display: block; margin-right: -1px; padding: .75rem; min-width: 8rem; background-color: white; border: 1px solid #ccc; border-bottom: none; white-space: nowrap; text-align: center; }
+.ui-tablist-item a[aria-selected="true"] { position: relative; top: 1px; margin-left: -1px; }
 .ui-tablist-item a[aria-selected="false"] { margin-top: .5rem; padding-top: .5rem; padding-bottom: .5rem; }
 .ui-tablist-item:first-child [aria-selected="true"] { margin-left: auto; }
 .ui-tablist-item:last-child [aria-selected="true"] { margin-right: auto; }
