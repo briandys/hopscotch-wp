@@ -1,11 +1,13 @@
-@import 'organisms/child-page';
+@import 'organisms/child-content';
 @import 'organisms/colophon';
-@import 'organisms/comment';
 @import 'organisms/content-navigation';
-@import 'organisms/main-content';
+
+// Comment uses .entry-ct-cr
 @import 'organisms/entry';
-@import 'organisms/entry-navigation';
+@import 'organisms/comment';
+
 @import 'organisms/gallery';
+@import 'organisms/link';
 @import 'organisms/main';
 @import 'organisms/main-navigation';
 @import 'organisms/masthead-header';

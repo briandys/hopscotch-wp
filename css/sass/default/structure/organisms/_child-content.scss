@@ -1,5 +1,14 @@
-.child-page {    
-    margin-top: 2rem;
+.child-content {    
+    margin-top: 2.5rem;
+    
+    .entry {
+        margin-bottom: 2.5rem;
+        
+        &:last-child {
+            margin-bottom: auto;
+        }
+        
+    }
     
     > *:not(.entry) {
         padding-left: $gutter;
@@ -11,16 +20,16 @@
         @extend %vhide;
     }
     
-    .entry-title-link {
-        font-weight: 600;
-    }
-    
     .breadcrumbs {
         @extend %vhide;
     }
     
     &:first-child {
         margin-top: auto;
+    }
+    
+    .entry-title {
+        font-weight: normal;
     }
     
 }

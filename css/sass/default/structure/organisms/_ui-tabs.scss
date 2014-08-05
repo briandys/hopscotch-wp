@@ -3,11 +3,13 @@
     @include unlist;
     margin-left: auto;
     margin-bottom: auto;
+    white-space: nowrap;
 }
 
 .ui-tablist-item {
-    float: left;
+    display: inline-block;
     margin-bottom: auto;
+    vertical-align: bottom;
     
     a {
         display: block;
@@ -24,6 +26,7 @@
             position: relative;
             top: 1px;
             margin-left: -1px;
+            color: currentColor;
             
         }
         

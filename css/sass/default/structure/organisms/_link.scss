@@ -1,0 +1,19 @@
+a {
+    @include linkstyle-secondary;
+}
+
+.entry-title-link {
+    @include linkstyle-primary;
+}
+
+.entry-thumbnail-link {
+    @include linkstyle-reset;
+}
+
+.entry-user-action--action-link {
+    @include linkstyle-primary;
+}
+
+.comment-author-name a {
+    @include linkstyle-primary;
+}

@@ -1,17 +1,7 @@
 $entry-byline-avatar-size: 2rem;
 
-
 .entry {
     @extend %cf;
-    
-    .home &,
-    .search & {
-        margin-bottom: $block-m;
-    }
-    
-    .single & {
-        margin-bottom: 2rem;
-    }
     
     .show-more-content {
 
@@ -20,6 +10,8 @@ $entry-byline-avatar-size: 2rem;
             margin-left: -1rem;
             padding: .75rem 1rem;
             color: $color-link-secondary;
+            border-bottom: none;
+            
         }
         
     }
@@ -39,12 +31,26 @@ $entry-byline-avatar-size: 2rem;
     
 }
 
+
+.entry-cr {
+    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+}
+
+
 .entry-title {
     display: inline;
     @include font-size-rem($font-xl);
     font-weight: 600;
     line-height: normal;
-    word-wrap: break-word;    
+    word-wrap: break-word;
+    
+    @include mq( $tablet, $query1: max ) {
+        @include font-size-rem( $font-l );
+    }
+    
 }
 
 .entry-hr-cr {
@@ -81,7 +87,8 @@ $entry-byline-avatar-size: 2rem;
         @include linkstyle-secondary;
     }
     
-    .entry-hr & {
+    .entry-hr &,
+    .entry-fr & {
         margin-right: 1rem;
     }
     
@@ -104,6 +111,10 @@ $entry-byline-avatar-size: 2rem;
         @include circle;
     }
     
+    .mid-label {
+        margin-right: .5rem;
+    }
+    
 }
 
 .entry-admin-action {
@@ -124,7 +135,7 @@ $entry-byline-avatar-size: 2rem;
 }
 
 
-.entry-ct-cr {    
+.entry-ct-cr {
     
     > {
         
@@ -145,8 +156,29 @@ $entry-byline-avatar-size: 2rem;
         
     }
     
-    p {
+    p,
+    pre,
+    dd,
+    dl,
+    table,
+    blockquote,
+    .wp-caption {
         margin-bottom: 1.5rem;
+    }
+    
+    .pull-quote {
+
+        @include mq( $tablet, iefixOn ) {
+
+            float: left;
+            margin-left: auto;
+            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-right: 0;
+            width: 30%;
+            @include font-size-rem( $font-xl );
+        }
+
     }
     
     @each $item in $heading-tags {
@@ -160,6 +192,13 @@ $entry-byline-avatar-size: 2rem;
             
         }
 
+    }
+    
+    pre {
+        margin-left: $gutter;
+        margin-right: $gutter;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     @include shrink-heading;
@@ -192,7 +231,6 @@ $entry-byline-avatar-size: 2rem;
 }
 
 .entry-fr {
-    margin-top: 1rem;
     
     .entry-meta {
         margin-bottom: 1rem;
@@ -201,14 +239,61 @@ $entry-byline-avatar-size: 2rem;
 }
 
 .entry-fr-cr {
+    margin-top: 1.5rem;
     padding-left: $gutter;
     padding-right: $gutter;
 }
 
-.entry-tags {
+
+// Categories & Tags
+.categories-list,
+.tag-list {
     
     a {
+        display: inline-block;
+        margin: .25rem;
+        margin-left: -.25rem;
+        margin-right: .5rem;
+        padding: .25rem .5rem;
         @include linkstyle-secondary;
+        border-bottom: none;
+        background-color: $gray95;
+        @include corner-radius( $radius-s );
+        @include transition( background-color );
+        vertical-align: middle;
+        
+        &:hover {
+            background-color: $gray90;
+        }
+        
+    }
+    
+}
+
+.categories-list {
+    
+    a {
+        line-height: normal;
+    }
+    
+    .separator {
+        @extend %vhide;
+    }
+    
+}
+
+.tag-list {
+    
+    a {
+        @include font-size-rem( $font-s );
+    }
+    
+    .label {
+        margin-right: .5rem;
+    }
+    
+    .separator {
+        @extend %vhide;
     }
     
 }
@@ -258,11 +343,25 @@ $entry-byline-avatar-size: 2rem;
     @include font-size-rem($font-s-m);
 }
 
-.format-image {
+
+// Post Format: Status
+.format-status {
     
-    .img-cr {
-        padding-left: 0;
-        padding-right: 0;
+    .entry-hr {
+        @extend %vhide;
+    }
+    
+    .entry-fr-cr {
+        
+        .entry-meta {
+            display: inline-block;
+        }
+        
+        .entry-admin-action {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
     }
     
 }

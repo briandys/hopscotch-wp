@@ -104,6 +104,7 @@ div.nav-menu {
     }
     
     a {
+        @include linkstyle-reset;
         display: block;
         padding: 1rem;
         @include transition-bg-color;  

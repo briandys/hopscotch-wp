@@ -32,7 +32,8 @@ th, td,
 button,
 blockquote,
 dl,
-figure {
+figure,
+pre {
 	margin: auto;
 	padding: 0;
 }
@@ -54,7 +55,9 @@ table,
 blockquote,
 legend,
 dl,
+dd,
 form,
+pre,
 
 // Classes
 .field {

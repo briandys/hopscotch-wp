@@ -3,6 +3,11 @@
     @include vhide;
 }
 
+.site-title-link {
+    @include linkstyle-primary;
+}
+
+
 @include mq($tablet, ieFixOn) {
 
     .masthead-cr {

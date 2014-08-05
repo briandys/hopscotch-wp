@@ -1,9 +1,24 @@
 //------------------------- Link Styles
+
+@mixin linkstyle-reset {
+    border: none;
+}
+
 @mixin linkstyle-primary {
+    @include linkstyle-reset;
+    
     color: $color-primary;
+    
+    &:hover {
+        color: $color-primary;
+        border-bottom: $one dotted currentColor;
+    }
+    
 }
 
 @mixin linkstyle-secondary {
+    @include linkstyle-reset;
+    
     color: rgba($color-link-tertiary, .75);
     border-bottom: $one dotted currentColor;
     
@@ -14,7 +29,9 @@
     }
 }
 
-@mixin linkstyle-tertiary {    
+@mixin linkstyle-tertiary {  
+    @include linkstyle-reset;  
+    
     @include linkstyle-secondary;
     border-bottom: none;  
     

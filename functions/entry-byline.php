@@ -15,10 +15,10 @@ if ( ! function_exists( 'hopscotch_entry_byline' ) ) :
         }
 
         // Translators: used between list items, there is a space after the comma.
-        $categories_list = get_the_category_list( __( ', ', 'twentythirteen' ) );
+        $categories_list = get_the_category_list( __( '<span class="separator">,</span> ', 'hopscotch' ) );
         if ( $categories_list ) {
             echo ' <span class="mid-label">on</span>';
-            echo ' <span class="categories-links">' . $categories_list . '</span></div><!-- .entry-byline -->';
+            echo ' <span class="categories-list">' . $categories_list . '</span></div><!-- .entry-byline -->';
         }
     }
 endif;

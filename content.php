@@ -8,28 +8,28 @@ hopscotch_content_header();
         <header class="entry-hr <?php hopscotch_slug_class(); ?>--entry-hr">
             <div class="entry-hr-cr">
 				
-                <?php // Entry title
-                if ( ! is_page_template( 'templates/info-card.php' ) ) :
-                    the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-                else :
-				    the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-                endif;
-                ?>
-                
-                <?php // Edit Post Action
-                hopscotch_entry_action_edit();
-                ?>
-                
-                <?php // Custom Field: Subtitle
-                hopscotch_entry_subtitle();
-                ?>
-                
-                <?php // Breadcrumbs
-                hopscotch_breadcrumbs();
-                ?>
-            
                 <?php // Format: Not Status
                 if ( ! has_post_format( 'status' ) ) : ?>
+                
+                    <?php // Entry title
+                    if ( ! is_page_template( 'templates/info-card.php' ) ) :
+                        the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+                    else :
+                        the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+                    endif;
+                    ?>
+                
+                    <?php // Edit Post Action
+                    hopscotch_entry_action_edit();
+                    ?>
+
+                    <?php // Custom Field: Subtitle
+                    hopscotch_entry_subtitle();
+                    ?>
+
+                    <?php // Breadcrumbs
+                    hopscotch_breadcrumbs();
+                    ?>
                     
                     <div class="entry-meta">
                         <?php hopscotch_entry_date(); ?>
@@ -41,6 +41,8 @@ hopscotch_content_header();
                         hopscotch_entry_action_comment();
                     endif;
                     ?>
+                <?php else : ?>
+                    <h1 class="entry-title">Status Message</h1>
                 <?php endif; ?>
                 
                 <?php // Entry thumbnail
@@ -71,6 +73,7 @@ hopscotch_content_header();
             <?php // HopScotch Content hook
             hopscotch_entry_content();
             ?>
+                
             </div>
             
             <?php // Child Page
@@ -111,7 +114,8 @@ hopscotch_content_header();
                 <div class="entry-meta">			
                     <?php hopscotch_entry_date(); ?>
                     <?php hopscotch_entry_byline(); ?>
-                </div><!-- .entry-meta -->                
+                </div><!-- .entry-meta -->
+                <?php hopscotch_entry_action_edit(); ?>
                 <?php hopscotch_entry_action_comment(); ?>
 				<?php endif; ?>
                 

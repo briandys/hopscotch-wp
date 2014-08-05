@@ -41,11 +41,13 @@ if ( ! function_exists( 'hopscotch_comments' ) ) :
             </header>
 
             <div class="comment-ct">
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <p class="comment-pending"><?php _e('Your comment is awaiting moderation.', 'hopscotch') ?></p>
-                <?php endif; ?>
-                <blockquote class="comment-message"><?php comment_text() ?></blockquote>
-            </div><!-- .comment-content -->
+                <div class="entry-ct-cr comments-ct-cr">
+                    <?php if ($comment->comment_approved == '0') : ?>
+                        <p class="comment-pending"><?php _e('Your comment is awaiting moderation.', 'hopscotch') ?></p>
+                    <?php endif; ?>
+                    <blockquote class="comment-message"><?php comment_text() ?></blockquote>
+                </div>
+            </div><!-- comment-ct -->
             
             <?php if ( is_user_logged_in() || comments_open() ) : ?>
             <div class="action-items comment-action">

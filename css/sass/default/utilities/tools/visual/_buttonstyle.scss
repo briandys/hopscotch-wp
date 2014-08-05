@@ -38,6 +38,8 @@
         color: $white;
         background-color: $color-link-primary;
         text-decoration: none;
+        border-width: $one;
+        border-style: solid;
     }
     
     @if $level == 'secondary' {

@@ -80,7 +80,9 @@ form br {
 button,
 input[type="submit"] {
     @include reset-button-style;
+    
+    margin-top: 1rem;
     @include button-style-default;
     @include input-type-text-style;
-    margin-top: 1rem;
+    
 }

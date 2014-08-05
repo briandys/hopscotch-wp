@@ -338,7 +338,7 @@
     } )();
     
     
-    // Focusing on form elements
+    // UI Tabs
 	( function() {
 		
 		$( '.ui-tablist-item a' ).on( 'click', function() {

@@ -3,6 +3,13 @@ blockquote {
     margin-right: 1.5rem;
     @include font-size-rem($font-m-l);
     font-family: $font-family-quote;
+    
+    cite {
+        display: block;
+        margin-top: 1rem;
+        text-align: right;
+    }
+    
 }
 
 q {

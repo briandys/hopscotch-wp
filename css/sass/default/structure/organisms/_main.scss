@@ -7,8 +7,6 @@ $sidebar-width: $total-width - $content-width;
 
 
 .main-cr {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     
     @include mq($desktop, iefixOn) {
         @include cf;
@@ -77,4 +75,36 @@ $sidebar-width: $total-width - $content-width;
 
     }
 
+}
+
+
+.main-content-hr-cr {
+    padding: 0 $gutter;
+}
+
+.main-content-heading {
+    margin-bottom: auto;
+    @include font-size-rem($font-xl);
+    line-height: normal;
+    
+    .label {
+        color: $faint;
+    }
+    
+}
+
+.main-content-hr {
+    margin-bottom: 2rem;
+    
+    .home &,
+    .single &,
+    .page &,
+    .error404 & {
+        @extend %vhide;
+    }
+    
+}
+
+.main-content-meta  {
+    @include font-size-rem($font-m-l);
 }

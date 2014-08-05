@@ -3,3 +3,13 @@
         #{$property}: $value;
     }
 }
+
+
+@mixin reset-spacing {
+    margin: auto;
+    padding: 0;
+}
+
+@mixin reset-padding {
+    padding: 0;
+}
