@@ -40,14 +40,14 @@ $sidebar-width: $total-width - $content-width;
             width: $content-width-percentage;
         }
         
-        @include mq($minorityreport, iefixOff) {
+        @include mq($moviehouse, iefixOff) {
             margin-right: -$sidebar-width;
             width: 100%;
         }
         
         .primary-content-cr {
             
-            @include mq($minorityreport, iefixOff) {
+            @include mq($moviehouse, iefixOff) {
                 @include margin-center;
                 padding-right: 0;
                 max-width: $content-width;
@@ -69,6 +69,10 @@ $sidebar-width: $total-width - $content-width;
             width: $sidebar-width-percentage;
         }
 
+        @include mq($moviehouse, iefixOff) {
+            width: $sidebar-width - 10;
+        }
+
         @include mq($minorityreport, iefixOff) {
             width: $sidebar-width;
         }
@@ -79,7 +83,8 @@ $sidebar-width: $total-width - $content-width;
 
 
 .main-content-hr-cr {
-    padding: 0 $gutter;
+    margin-bottom: 1rem;
+    padding: 2rem $gutter 0;
 }
 
 .main-content-heading {
@@ -94,7 +99,6 @@ $sidebar-width: $total-width - $content-width;
 }
 
 .main-content-hr {
-    margin-bottom: 2rem;
     
     .home &,
     .single &,
