@@ -160,9 +160,12 @@ $entry-byline-avatar-size: 2rem;
     dd,
     dl,
     table,
-    blockquote,
     .wp-caption {
         margin-bottom: 1.5rem;
+    }
+    
+    blockquote {
+        margin-bottom: 2rem;
     }
     
     .pull-quote {
