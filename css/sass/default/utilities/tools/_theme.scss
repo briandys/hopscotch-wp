@@ -4,6 +4,8 @@
 
 @include selection( $color-selection-primary, $white );
 
+
+// Default text links must standout
 a {
     color: $color-link-primary;
 }

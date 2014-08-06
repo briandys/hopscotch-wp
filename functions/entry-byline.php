@@ -18,7 +18,7 @@ if ( ! function_exists( 'hopscotch_entry_byline' ) ) :
         $categories_list = get_the_category_list( __( '<span class="separator">,</span> ', 'hopscotch' ) );
         if ( $categories_list ) {
             echo ' <span class="mid-label">on</span>';
-            echo ' <span class="categories-list">' . $categories_list . '</span></div><!-- .entry-byline -->';
+            echo ' <span class="category-list">' . $categories_list . '</span></div><!-- .entry-byline -->';
         }
     }
 endif;

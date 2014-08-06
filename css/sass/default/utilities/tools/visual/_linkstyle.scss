@@ -1,6 +1,7 @@
 //------------------------- Link Styles
 
 @mixin linkstyle-reset {
+    text-decoration: none;
     border: none;
 }
 
@@ -37,6 +38,44 @@
     
     &:hover {
         border-bottom: $one dotted currentColor;
+    }
+    
+}
+
+// A simple link
+@mixin linkstyle-faint {
+    color: $gray35;
+    border-bottom: $one dotted $gray65;
+    @include transition( color );
+    
+    &:hover {
+        color: $color-link-primary;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
+}
+
+// Colored box
+@mixin linkstyle-boxed {
+    display: inline-block;
+    margin: .25rem;
+    margin-left: -.25rem;
+    margin-right: .5rem;
+    padding: .25rem .5rem;
+        
+    color: $gray35;
+    background-color: $gray95;
+
+    @include corner-radius( $radius-s );
+    @include transition( background-color );
+    
+    vertical-align: middle;
+    line-height: normal;
+
+    &:hover {
+        color: $gray15;
+        background-color: $gray90;
     }
     
 }

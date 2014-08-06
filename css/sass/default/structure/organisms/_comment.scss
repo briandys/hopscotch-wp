@@ -67,7 +67,7 @@
 
 .comment-timestamp-link {
     @include font-size-rem($font-s);
-    @include faint;
+    @include linkstyle-faint;
 }
 
 .comment {

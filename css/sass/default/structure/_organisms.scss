@@ -2,18 +2,18 @@
 @import 'organisms/colophon';
 @import 'organisms/content-navigation';
 
-// Comment uses .entry-ct-cr
+// Comment uses .entry-ct-cr so it must refer to Entry
 @import 'organisms/entry';
 @import 'organisms/comment';
 
 @import 'organisms/gallery';
-@import 'organisms/link';
 @import 'organisms/main';
 @import 'organisms/main-navigation';
 @import 'organisms/masthead-header';
 @import 'organisms/plug-in';
 @import 'organisms/scroll-top';
 @import 'organisms/search';
+@import 'organisms/taxonomy';
 @import 'organisms/widget';
 
 

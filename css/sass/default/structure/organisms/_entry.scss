@@ -81,10 +81,6 @@ $entry-byline-avatar-size: 2rem;
     
 .entry-timestamp {
     display: inline-block;
-   
-    a {
-        @include linkstyle-secondary;
-    }
     
     .entry-hr &,
     .entry-fr & {
@@ -93,15 +89,15 @@ $entry-byline-avatar-size: 2rem;
     
 }
 
+.entry-timestamp-link {
+    @include linkstyle-faint;
+}
+
 .entry-byline {
     @extend %cf;
     display: inline-block;
     margin-top: .25rem;
     line-height: $entry-byline-avatar-size;
-    
-    a {
-        @include linkstyle-secondary;
-    }
     
     .avatar {
         float: left;
@@ -112,6 +108,10 @@ $entry-byline-avatar-size: 2rem;
     
     .mid-label {
         margin-right: .5rem;
+    }
+    
+    .author a {
+        @include linkstyle-faint;
     }
     
 }
@@ -153,6 +153,11 @@ $entry-byline-avatar-size: 2rem;
             line-height: 1.75;
         }
         
+    }
+    
+    // Entry Links
+    a {
+        @include linkstyle-faint;
     }
     
     p,
@@ -244,60 +249,6 @@ $entry-byline-avatar-size: 2rem;
     margin-top: 1.5rem;
     padding-left: $gutter;
     padding-right: $gutter;
-}
-
-
-// Categories & Tags
-.categories-list,
-.tag-list {
-    
-    a {
-        display: inline-block;
-        margin: .25rem;
-        margin-left: -.25rem;
-        margin-right: .5rem;
-        padding: .25rem .5rem;
-        @include linkstyle-secondary;
-        border-bottom: none;
-        background-color: $gray95;
-        @include corner-radius( $radius-s );
-        @include transition( background-color );
-        vertical-align: middle;
-        
-        &:hover {
-            background-color: $gray90;
-        }
-        
-    }
-    
-}
-
-.categories-list {
-    
-    a {
-        line-height: normal;
-    }
-    
-    .separator {
-        @extend %vhide;
-    }
-    
-}
-
-.tag-list {
-    
-    a {
-        @include font-size-rem( $font-s );
-    }
-    
-    .label {
-        margin-right: .5rem;
-    }
-    
-    .separator {
-        @extend %vhide;
-    }
-    
 }
 
 .page-links {
