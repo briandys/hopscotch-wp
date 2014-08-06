@@ -42,8 +42,10 @@
     
 }
 
-// A simple link
+
+// A simple link with border as underline
 @mixin linkstyle-faint {
+    @include linkstyle-reset; 
     color: $gray35;
     border-bottom: $one dotted $gray65;
     @include transition( color );
@@ -56,8 +58,10 @@
     
 }
 
+
 // Colored box
 @mixin linkstyle-boxed {
+    @include linkstyle-reset; 
     display: inline-block;
     margin: .25rem;
     margin-left: -.25rem;
@@ -78,4 +82,40 @@
         background-color: $gray90;
     }
     
+}
+
+
+// Content navigation
+@mixin linkstyle-highlight {
+    @include linkstyle-reset;    
+    padding: 1rem;
+    color: $color-link-primary;
+    @include corner-radius( $radius-s );
+    @include transition( background-color );
+
+    &:hover {
+        background-color: rgba( $color-link-primary, .1 );
+    }
+    
+}
+
+
+@mixin linkstyle-cube {
+    @include linkstyle-reset; 
+    display: inline-block;
+    padding: 1rem;
+    min-width: $block-m;
+    min-height: $block-m;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+@mixin linkstyle-cube-current {
+    @include linkstyle-reset; 
+    color: $white;
+    background-color: $color-primary;
+    @include corner-radius( $radius-s );
+    overflow: visible;
 }

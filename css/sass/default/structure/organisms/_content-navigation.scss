@@ -1,3 +1,4 @@
+// Generic Content Navigation
 .content-navigation {
     clear: both;
     margin-top: 2rem;
@@ -24,88 +25,39 @@
 }
 
 
-.page-navigation-list,
-.page-links {
+// Global Page Navigation (Page 1 2 3 )
+.page-navigation {
     
-    > * {
-        display: inline-block;
-        min-width: $block-m;
-        min-height: $block-m;
-        padding: 1rem;
-        line-height: 1;
-        text-align: center;
-    }
-    
-    a {
-        @include linkstyle-reset;
-        @include transition( background-color );
-        
-        &:hover {
-            background-color: $gray95;
-            text-decoration: none;
-            @include corner-radius( $radius-s );
-            overflow: visible;
-        }
-        
+    .content-navigation-cr {
+        padding: $gutter;
     }
     
 }
-
-
-.mixin-current-page {
-    background-color: $gray95;
-    @include corner-radius( $radius-s );
-    overflow: visible;
-}
-
 
 .page-navigation-list {
-    padding-left: $gutter;
-    padding-right: $gutter;
     text-align: center;
     
     @include mq( $tablet ) {
         text-align: left;
     }
     
-    .current {
-        @extend .mixin-current-page;
-    }
-    
-}
-
-
-.page-links {
-    
-    > .label {
-        @extend .mixin-current-page;
-    }
-    
     a {
-        border-bottom: none !important;
+        @include linkstyle-highlight;
     }
     
-    .page-links-title {
-        margin-right: .5rem;
-        padding-left: 0;
-        padding-right: 0;
+    .page-numbers {
+        @include linkstyle-cube;
     }
     
-}
-
-
-// Entry Navigation
-
-.page-numbers {
-    
-    &.dots {
-        padding-left: 0;
-        padding-right: 0;
+    .current {
+        @include linkstyle-cube-current;
     }
     
 }
 
-.post-navigation-list {
+
+// Entry Navigation (Previous / Next )
+.entry-navigation-list {
     display: block;
     text-align: center;
     
@@ -123,23 +75,44 @@
         
         a {
             display: block;
-            padding: 1rem;
-            @include linkstyle-reset;
-            color: $color-link-primary;
-            @include transition( background-color );
-            
-            &:hover {
-                background-color: rgba( $color-link-primary, .1 );
-                text-decoration: none;
-                @include corner-radius( $radius-s );
-            }
-            
+            @include linkstyle-highlight;
         }
         
         .label {
             @include textstyle-label-primary;
         }
         
+    }
+    
+}
+
+
+// Entry Page Navigation (Pagination within Entry)
+.entry-page-navigation {
+    
+    .content-navigation-cr {
+        border: none;
+    }
+    
+}
+
+.entry-page-navigation-list {
+    
+    > * {
+        @include linkstyle-cube;
+    }
+    
+    > .label {
+        @include linkstyle-cube-current;
+    }
+    
+    a {
+        @include linkstyle-highlight;
+    }
+    
+    .text-label {
+        margin-bottom: auto;
+        @include textstyle-label-primary;
     }
     
 }

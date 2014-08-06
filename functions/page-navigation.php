@@ -38,11 +38,13 @@ function hopscotch_paging_nav() {
 	if ( $links ) :
 
 	?>
-	<nav class="action-items content-navigation page-navigation-action page-navigation" role="navigation">
-		<h1 class="assistive-text"><?php _e( 'Page Navigation', 'hopscotch' ); ?></h1>
-		<div class="acton-list content-navigation-list page-navigation-list">
-			<?php echo $links; ?>
-		</div>
+	<nav class="action-items content-navigation content-pagination page-navigation page-navigation-action" role="navigation">
+		<div class="content-navigation-cr">
+            <h1 class="assistive-text"><?php _e( 'Page Navigation', 'hopscotch' ); ?></h1>
+            <div class="acton-list content-navigation-list page-navigation-list">
+                <?php echo $links; ?>
+            </div>
+        </div>
 	</nav><!-- action-items -->
 	
     <?php

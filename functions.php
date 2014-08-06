@@ -45,7 +45,13 @@ require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.p
 
 // Navigation
 require_once( trailingslashit(get_template_directory()) . 'functions/page-navigation.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/post-navigation.php');
+
+// Previous Entry / Next Entry
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
+
+// Pagination in Entry
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-page-navigation.php');
+
 require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumbs.php');
 
 // Entry
@@ -94,7 +100,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/google-anal
 require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
 
 // WordPress Native Functions
-require_once( trailingslashit(get_template_directory()) . 'functions/wp-link-pages.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');
 
 // Admin Dashboard
