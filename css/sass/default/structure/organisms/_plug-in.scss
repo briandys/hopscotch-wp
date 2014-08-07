@@ -37,3 +37,9 @@
     }
 
 }
+
+
+// Codepen.io
+iframe[src*="codepen.io"] {
+    border-bottom: $one solid #ccc;
+}

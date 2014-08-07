@@ -29,7 +29,7 @@
 .page-navigation {
     
     .content-navigation-cr {
-        padding: $gutter;
+        padding: .5rem $gutter;
     }
     
 }
@@ -66,6 +66,9 @@
     }
     
     .action-item {
+        position: relative;
+        padding: 2rem;
+        padding-top: .5rem;
         width: 100%;
         vertical-align: top;
         
@@ -79,6 +82,11 @@
         }
         
         .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: .5rem;
+            width: 100%;
             @include textstyle-label-primary;
         }
         
@@ -113,6 +121,7 @@
     .text-label {
         margin-bottom: auto;
         @include textstyle-label-primary;
+        line-height: normal;
     }
     
 }
