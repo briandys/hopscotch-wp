@@ -1,6 +1,4 @@
-<!--
-Used for Page and Post Navigation
--->
+<?php // Used for Page and Post Navigation ?>
 
 <nav class="action-items content-navigation" role="navigation">
     <h1 class="assistive-text"><?php _e( 'Page Navigation', 'hopscotch' ); ?></h1>

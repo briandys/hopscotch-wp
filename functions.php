@@ -71,6 +71,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-id.ph
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/slug-class.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-page-template.php');
 
 // Custom Fields
 require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-subtitle.php');

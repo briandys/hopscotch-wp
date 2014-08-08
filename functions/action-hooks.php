@@ -32,3 +32,7 @@ function hopscotch_web_designer() {
 function hopscotch_copyright() {
     do_action('hopscotch_copyright');
 }
+
+function hopscotch_hook_extra_content() {
+    do_action('hopscotch_hook_extra_content');
+}

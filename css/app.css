@@ -573,8 +573,8 @@ ins { text-decoration: none; }
 
 @media only screen and (max-width: 37.4375rem) { .comment-meta { float: right; } }
 
-.comment-author-name { font-weight: bold; }
-.bypostauthor .comment-author-name { color: #12b32d; font-weight: 700; }
+.comment-author-name a { font-weight: 600; }
+.bypostauthor .comment-author-name { color: #12b32d; font-weight: 600; }
 .bypostauthor .comment-author-name a { color: #12b32d; }
 @media only screen and (max-width: 37.4375rem) { .comment-author-name { float: right; display: inline-block; vertical-align: middle; height: 100%; }
   .comment-author-name:after { content: ''; height: 100%; display: inline-block; vertical-align: middle; }

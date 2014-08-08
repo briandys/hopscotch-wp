@@ -2,7 +2,7 @@
 hopscotch_content_header();
 ?>
 
-<article id="<?php hopscotch_post_id(); ?>" <?php post_class(); ?> <?php if ( is_page_template( 'templates/info-card.php' ) ) : echo 'itemscope itemtype="http://schema.org/Organization"'; endif; ?>>
+<article id="<?php hopscotch_post_id(); ?>" <?php post_class(); ?> <?php if ( is_page_template( 'template-info-card.php' ) ) : echo 'itemscope itemtype="http://schema.org/Organization"'; endif; ?>>
     
     <div class="entry-cr <?php hopscotch_slug_class(); ?>--entry-cr">
         <header class="entry-hr <?php hopscotch_slug_class(); ?>--entry-hr">
@@ -12,7 +12,7 @@ hopscotch_content_header();
                 if ( ! has_post_format( 'status' ) ) : ?>
                 
                     <?php // Entry title
-                    if ( ! is_page_template( 'templates/info-card.php' ) ) :
+                    if ( ! is_page_template( 'template-info-card.php' ) ) :
                         the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
                     else :
                         the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
@@ -73,12 +73,15 @@ hopscotch_content_header();
             <?php // HopScotch Content hook
             hopscotch_entry_content();
             ?>
-                
             </div>
+                
+            <?php // HopScotch Extra Content hook
+            hopscotch_hook_extra_content();
+            ?>
             
             <?php // Child Page
             // Use Page Template: Solo to display only the main content of that page
-            if ( ! is_page_template( 'templates/solo.php' ) && ! is_search() ) :
+            if ( ! is_page_template( 'template-solo.php' ) && ! is_search() ) :
             ?>
 
                 <?php

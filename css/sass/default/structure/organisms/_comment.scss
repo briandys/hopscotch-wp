@@ -142,11 +142,14 @@
 }
 
 .comment-author-name {
-    font-weight: bold;
+    
+    a {
+        font-weight: 600;
+    }
     
     .bypostauthor & {
         color: $color-secondary;
-        font-weight: 700;
+        font-weight: 600;
         
         & a {
             color: $color-link-secondary;

@@ -22,7 +22,7 @@
                         
                         </div><!-- .main-content-ct -->
                    </div><!-- .main-content-cr -->
-                </section><!-- .main-content -->            
+                </section><!-- .main-content -->
              
             </div>
         </div><!-- primary-content -->
