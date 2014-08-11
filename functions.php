@@ -64,14 +64,23 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumb
 require_once( trailingslashit(get_template_directory()) . 'functions/more-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
 
+
+
+// ID
+require_once( trailingslashit(get_template_directory()) . 'functions/id-entry.php');
+
 // Classes
-require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-id.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/slug-class.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-html.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-body.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-entry.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-plain-image.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-slug.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/class-page-template.php');
+
+
+// get_the_content Formatted
+require_once( trailingslashit(get_template_directory()) . 'functions/get-the-content-formatted.php');
+
 
 // Custom Fields
 require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-subtitle.php');

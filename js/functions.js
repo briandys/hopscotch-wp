@@ -359,7 +359,8 @@
 	( function() {
 		
 		// Focusing on form UIs
-		var ui_tabs = $( 'ui-tabs' );
+		var ui_tabs = $( 'ui-tabs' ),
+            form = $( 'form' );
 		
 		form.on('focus', 'input, textarea, button', function() {
 			$(this).parent().attr('data-state-form-element', 'focused');

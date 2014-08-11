@@ -118,7 +118,7 @@ $entry-byline-avatar-size: 2rem;
 .entry-ct {
     
     > * {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     
         &:last-child {
             margin-bottom: auto;
@@ -134,8 +134,8 @@ $entry-byline-avatar-size: 2rem;
     > {
         
         * {
-            padding-left: $gutter;
-            padding-right: $gutter;
+            margin-left: $gutter;
+            margin-right: $gutter;
             word-wrap: break-word;            
 
             &:last-child {
@@ -165,7 +165,8 @@ $entry-byline-avatar-size: 2rem;
     dd,
     dl,
     table,
-    .wp-caption {
+    .wp-caption,
+    .field {
         margin-bottom: 1.5rem;
     }
     
