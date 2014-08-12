@@ -256,7 +256,7 @@
     // Smooth scroll
     ( function() {
         
-        $('a[href*=#]:not([href=#])').click(function() {
+        $('a[href*=#]:not([href=#]):not(.ui a)').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -341,7 +341,7 @@
     // UI Tabs
 	( function() {
 		
-		$( '.ui-tablist-item a' ).on( 'click', function() {
+		$( '.ui-tablist-item a' ).on( 'click', function(e) {
             
             var tab_id = $( this ).attr('aria-controls');
             
@@ -350,6 +350,8 @@
             
             $( this ).attr('aria-selected', 'true');
             $( "#"+tab_id ).attr('aria-hidden', 'false');
+            
+            e.preventDefault();
         })
         
     } )();

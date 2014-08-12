@@ -54,7 +54,13 @@ hopscotch_content_header();
         
         
         <div class="entry-ct <?php hopscotch_slug_class(); ?>--entry-ct <?php if( is_search() ) echo 'entry-summary'; ?>">
+            
+            <?php // HopScotch Pre-content Hook
+            hopscotch_hook_pre_content();
+            ?>
+            
             <div class="entry-ct-cr">
+                
             <?php // Entry content
             if ( is_search() || is_author() ) : ?>
 
@@ -63,19 +69,25 @@ hopscotch_content_header();
             <?php else : ?>
 
                 <?php // Content
-                if( trim( get_the_content() ) !== "" ) {                    
-                    the_content( __( 'More', 'hopscotch' ) );
-                }
-                ?>
+                if( $post->post_content !="" ) {?>
+                    
+                    <?php // HopScotch Content Title Hook
+                    hopscotch_hook_content_title();
+                    ?>
+                
+                    <?php the_content( __( 'More', 'hopscotch' ) ); ?>
+                
+                <?php } ?>
                 <?php hopscotch_wp_link_pages(); ?>
+            
             <?php endif; ?>
                 
-            <?php // HopScotch Content hook
+            <?php // HopScotch Content Hook
             hopscotch_entry_content();
             ?>
             </div>
                 
-            <?php // HopScotch Extra Content hook
+            <?php // HopScotch Extra Content Hook
             hopscotch_hook_extra_content();
             ?>
             

@@ -36,3 +36,11 @@ function hopscotch_copyright() {
 function hopscotch_hook_extra_content() {
     do_action('hopscotch_hook_extra_content');
 }
+
+function hopscotch_hook_pre_content() {
+    do_action('hopscotch_hook_pre_content');
+}
+
+function hopscotch_hook_content_title() {
+    do_action('hopscotch_hook_content_title');
+}

@@ -151,13 +151,18 @@ $entry-byline-avatar-size: 2rem;
     }
     
     // Entry Links
-    a:not( .entry-age-navigation a ) {
+    a {
         @include linkstyle-faint;
     }
     
     hr {
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+    
+    ul + p,
+    ol + p {
+        margin-top: -1rem;
     }
     
     p,
