@@ -36,7 +36,7 @@
 	( function() {
 		
 		var mainNav = $( '#main-navigation' ),
-            mainNavControl = mainNav.find( '#main-navigation-control' ),
+            mainNavControl = mainNav.find( '#main-navigation-heading' ),
             mainNavContent = mainNav.find( '.main-navigation-ct' ),
             navMenu = mainNav.find( 'div.nav-menu > ul' );
 		

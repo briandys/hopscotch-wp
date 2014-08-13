@@ -1,6 +1,6 @@
 <nav id="main-navigation" class="main-navigation" role="navigation">
     <div class="main-navigation-cr">
-        <h2 id="main-navigation-control" class="main-navigation-heading" title="Main Navigation">
+        <h2 id="main-navigation-heading" class="main-navigation-heading" title="Main Navigation">
             <span class="label"><?php _e( 'Main Navigation', 'hopscotch' ); ?></span>
             <svg class="icon icon-menu" width="0" height="0" viewBox="0 0 48 48"><use xlink:href="#icon-menu"></use></svg>
         </h2>

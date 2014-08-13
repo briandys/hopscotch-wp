@@ -130,12 +130,12 @@ $entry-byline-avatar-size: 2rem;
 
 
 .entry-ct-cr {
+    padding-left: $gutter;
+    padding-right: $gutter;
     
     > {
         
         * {
-            margin-left: $gutter;
-            margin-right: $gutter;
             word-wrap: break-word;            
 
             &:last-child {
