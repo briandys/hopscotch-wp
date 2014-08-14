@@ -101,7 +101,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyri
 require_once( trailingslashit(get_template_directory()) . 'functions/conditional-is-child.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/post-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail-state-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 

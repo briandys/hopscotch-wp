@@ -239,13 +239,11 @@ div.nav-menu .page_item_has_children.status-sub-nav-active .children, div.nav-me
 
 .ui-tablist-item a { color: #00aaff; }
 
-h1, h2, h3, h4, h5, h6, ul, ol, p, th, td, button, blockquote, dl, figure, pre { margin: auto; padding: 0; }
-
 html { height: 100%; }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, table, blockquote, legend, dl, dd, form, pre, .field { margin-bottom: 1rem; }
+h1, h2, h3, h4, h5, h6, ul, ol, p, th, td, button, blockquote, dl, figure, pre { margin: auto; padding: 0; }
 
-p:last-child, li:last-child, .field:last-child, .field-action, table:last-child { margin-bottom: auto !important; }
+h1, h2, h3, h4, h5, h6, p, ul, ol, table, blockquote, legend, dl, dd, form, pre, .field { margin-bottom: 1rem; }
 
 .masthead, .main, .colophon { clear: both; }
 
@@ -496,7 +494,7 @@ ins { text-decoration: none; }
 .entry-ct-cr ul + p, .entry-ct-cr ol + p { margin-top: -1rem; }
 .entry-ct-cr p, .entry-ct-cr pre, .entry-ct-cr dd, .entry-ct-cr dl, .entry-ct-cr table, .entry-ct-cr .wp-caption, .entry-ct-cr .field { margin-bottom: 1.5rem; }
 .entry-ct-cr blockquote, .entry-ct-cr form { margin-bottom: 2rem; }
-.lt-ie9 .entry-ct-cr .pull-quote { float: left; margin-left: auto; margin-right: 1.5rem; margin-bottom: 1.5rem; padding-right: 0; width: 30%; font-size: 32px; font-size: 2rem; }
+.entry-ct-cr p:last-child, .entry-ct-cr li:last-child, .entry-ct-cr .field:last-child, .entry-ct-cr .field-action, .entry-ct-cr table:last-child { margin-bottom: auto; }
 @media only screen and (min-width: 48rem) { .entry-ct-cr .pull-quote { float: left; margin-left: auto; margin-right: 1.5rem; margin-bottom: 1.5rem; padding-right: 0; width: 30%; font-size: 32px; font-size: 2rem; } }
 .entry-ct-cr > h1 { margin-top: 2rem; margin-bottom: 2rem; }
 .entry-ct-cr > h1:first-child { margin-top: auto; }

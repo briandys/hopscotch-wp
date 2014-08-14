@@ -4,7 +4,7 @@
 if (!function_exists('hopscotch_site_info')) :
 	function hopscotch_site_info() {
 		?>
-		<?php get_template_part( ''.hopscotch_components_directory().'/web-designer' ); ?>
+		<?php get_template_part( 'components/web-designer' ); ?>
 		<?php
 	}
 	add_action( 'hopscotch_web_designer', 'hopscotch_site_info');

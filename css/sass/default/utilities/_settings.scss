@@ -1,5 +1,9 @@
-// Hide basic stuff
+html {
+    height: 100%;
+}
 
+
+// Hide basic stuff
 // Basic
 legend,
 .assistive-text,
@@ -39,15 +43,7 @@ pre {
 }
 
 
-// Height
-html {
-    height: 100%;
-}
-
-
 // Bottom spacing on elements
-
-// Elements
 #{$heading-tags},
 p,
 ul, ol,
@@ -58,19 +54,8 @@ dl,
 dd,
 form,
 pre,
-
-// Classes
 .field {
     margin-bottom: 1rem;
-}
-
-// Reset bottom spacing on elements
-p:last-child,
-li:last-child,
-.field:last-child,
-.field-action,
-table:last-child {
-    margin-bottom: auto !important;
 }
 
 .masthead,

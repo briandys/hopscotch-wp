@@ -69,7 +69,7 @@ hopscotch_content_header();
             <?php else : ?>
 
                 <?php // Content
-                if( $post->post_content !="" ) {?>
+                if( $post->post_content !== "" ) {?>
                     
                     <?php // HopScotch Content Title Hook
                     hopscotch_hook_content_title();

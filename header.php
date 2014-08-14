@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]><html class="no-js <?php hopscotch_html_class(); ?> lt-ie9 lt-ie8" <?php language_attributes(); ?>><![endif]-->
-<!--[if lt IE 9]><html class="no-js <?php hopscotch_html_class(); ?> lt-ie9" <?php language_attributes(); ?>><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>><!--<![endif]-->
+<html class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,16 +23,12 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?>">
         
-        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-        
-        <?php get_template_part( 'components/ie-javascript' ); ?>
-        
         <?php wp_head(); ?>        
     </head>
     
     <body <?php body_class(); ?>>
     
-        <?php // HopScotch Body hook
+        <?php // HopScotch Body Hook
         hopscotch_body_content();
         ?>
         
@@ -47,7 +41,6 @@
                 <div class="masthead-cr">
                     
                     <?php get_template_part( 'components/masthead-header'); ?>
-                    
                     <?php get_template_part( 'components/navigation-main' ); ?>                    
                     <?php get_template_part( 'components/sidebar-header' ); ?>
                 

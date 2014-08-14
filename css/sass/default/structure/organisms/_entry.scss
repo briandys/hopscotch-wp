@@ -153,6 +153,7 @@ $entry-byline-avatar-size: 2rem;
     // Entry Links
     a {
         @include linkstyle-faint;
+        
     }
     
     hr {
@@ -179,10 +180,19 @@ $entry-byline-avatar-size: 2rem;
     form {
         margin-bottom: 2rem;
     }
+
+    // Reset bottom spacing on elements
+    p:last-child,
+    li:last-child,
+    .field:last-child,
+    .field-action,
+    table:last-child {
+        margin-bottom: auto;
+    }
     
     .pull-quote {
 
-        @include mq( $tablet, iefixOn ) {
+        @include mq( $tablet ) {
 
             float: left;
             margin-left: auto;
