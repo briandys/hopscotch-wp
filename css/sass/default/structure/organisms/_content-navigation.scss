@@ -119,7 +119,10 @@
     }
     
     .text-label {
+        margin-right: 1rem;
         margin-bottom: auto;
+        padding-left: 0;
+        padding-right: 0;
         @include textstyle-label-primary;
         line-height: normal;
     }

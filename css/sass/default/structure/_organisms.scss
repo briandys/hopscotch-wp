@@ -1,10 +1,10 @@
 @import 'organisms/child-content';
 @import 'organisms/colophon';
-@import 'organisms/content-navigation';
 
 // Comment uses .entry-ct-cr so it must refer to Entry
 @import 'organisms/entry';
 @import 'organisms/comment';
+@import 'organisms/content-navigation';
 
 @import 'organisms/gallery';
 @import 'organisms/main';
