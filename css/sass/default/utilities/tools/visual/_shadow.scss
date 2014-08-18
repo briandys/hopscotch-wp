@@ -1,0 +1,8 @@
+//------------------------- Shadow
+@mixin box-shadow( $alpha: .125 ) {
+    box-shadow: 0 .25rem .25rem hsla(0, 0%, 0%, $alpha);
+}
+
+%box-shadow {
+    @include box-shadow;
+}
