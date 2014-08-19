@@ -5,7 +5,7 @@
     @include font-size-rem($font-s-m);
     
     a {
-        @include linkstyle-tertiary;
+        @include linkstyle-faint;
     }
     
     &:last-child {

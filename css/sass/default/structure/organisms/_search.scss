@@ -173,7 +173,7 @@
 
 }
 
- .search {
+.search {
         
     [data-state-search="active"] & {
         
@@ -184,4 +184,13 @@
         
     }
 
+}
+
+
+.search-form {
+    
+    legend {
+        @extend %vhide;
+    }
+    
 }

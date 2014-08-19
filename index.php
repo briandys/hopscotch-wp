@@ -3,7 +3,7 @@
             <div id="primary-content" class="primary-content">
                 <div class="primary-content-cr" role="main">
 
-                    <section class="main-content">
+                    <div class="main-content">
                         <div class="main-content-cr">
                             <header class="main-content-hr">
                                 <div class="main-content-hr-cr">                            
@@ -101,7 +101,7 @@
 
                             </div>
                        </div>
-                    </section><!-- main-content -->            
+                    </div><!-- main-content -->            
 
                 </div>
             </div><!-- primary-content -->
