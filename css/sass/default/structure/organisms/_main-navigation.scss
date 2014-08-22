@@ -12,7 +12,7 @@ div.nav-menu {
     > ul {
         
         // Non-mobile mode
-        @include mq($tablet, ieFixOn) {
+        @include mq( $tablet ) {
             @include center-list;
         }
 
@@ -27,7 +27,7 @@ div.nav-menu {
                     @include pseudo-content(before) {
 
                         // Non-mobile mode
-                        @include mq($tablet, ieFixOn) {
+                        @include mq( $tablet ) {
                             display: none;
                         }
 
@@ -36,7 +36,7 @@ div.nav-menu {
                 }
                 
                 &.status-sub-nav-inactive:after {
-                    @include mq($tablet, ieFixOn) {
+                    @include mq( $tablet ) {
                         @include background-image-icon('../img/more.svg');
                         opacity: .25;
                     }
@@ -45,7 +45,7 @@ div.nav-menu {
                 &.status-sub-nav-inactive:hover:after {
 
                     // Non-mobile mode
-                    @include mq($tablet, ieFixOn) {
+                    @include mq( $tablet ) {
                         opacity: .5;
                     }
 
@@ -65,7 +65,7 @@ div.nav-menu {
             .menu-item {
                 
                 // Wide mode
-                @include mq($tablet, ieFixOn) {
+                @include mq( $tablet ) {
                     border-bottom: none;
                 }
                 
@@ -84,7 +84,7 @@ div.nav-menu {
         @include transition(background-color);
 
         // Non-mobile mode
-        @include mq($tablet, ieFixOn) {
+        @include mq( $tablet ) {
             vertical-align: top;
         }
 
@@ -139,7 +139,7 @@ div.nav-menu {
             &.status-sub-nav-active {
                 
                 // Wide mode
-                @include mq($tablet, ieFixOn) {
+                @include mq( $tablet ) {
                     border-bottom: none;
                 }
                 
@@ -150,7 +150,7 @@ div.nav-menu {
         .current_page_item {
         
             // Sub nav highlight
-            @include mq($tablet, ieFixOn) {
+            @include mq( $tablet ) {
                 @include pseudo-content(before) {
                     left: 0;
                     top: 0;
@@ -170,7 +170,7 @@ div.nav-menu {
         @include pseudo-content(before) {            
             
             // Non-mobile mode
-            @include mq($tablet, ieFixOn) {
+            @include mq( $tablet ) {
                 left: 0;
                 bottom: 0;
                 @include size(100%, .5rem);
@@ -213,7 +213,7 @@ div.nav-menu {
             margin-right: $block-l;
 
             // Non-mobile mode
-            @include mq($tablet, ieFixOn) {
+            @include mq( $tablet ) {
                 @include pseudo-content;
                 margin-right: $block-m;
                 
@@ -310,7 +310,7 @@ div.nav-menu {
                 z-index: 90;
 
                 // Non-mobile mode
-                @include mq($tablet, ieFixOn) {
+                @include mq( $tablet ) {
                     @include position($t: 100%);
                     min-width: 100%;
                     white-space: nowrap;
@@ -334,7 +334,7 @@ div.nav-menu {
                 &:before {
                     
                     // Non-mobile mode
-                    @include mq($tablet, ieFixOn) {
+                    @include mq( $tablet ) {
                         @include sudo-ct;
                         top: 0;
                         left: 0;
@@ -349,7 +349,7 @@ div.nav-menu {
                 &:after {
                     
                     // Non-mobile mode
-                    @include mq($tablet, ieFixOn) {
+                    @include mq( $tablet ) {
                         @include sudo-ct;
                         top: 0;
                         left: 0;
@@ -392,7 +392,7 @@ div.nav-menu {
     }
     
     // Non-mobile mode
-    @include mq($tablet, ieFixOn) {
+    @include mq( $tablet ) {
         @include vhide;
     }
     

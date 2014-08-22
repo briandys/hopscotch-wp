@@ -33,3 +33,7 @@ h6 {
 .text-heading {
     font-weight: 600;
 }
+
+.friendly-name {
+    @include font-size-rem($font-xl);
+}

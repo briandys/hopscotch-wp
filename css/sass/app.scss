@@ -10,12 +10,8 @@
 // Tools
 @import 'default/utilities/tools';
 
-
-
 // Initial Settings
 @import 'default/utilities/settings';
 
 // Defaults
-@import 'default/structure/atoms';
-@import 'default/structure/molecules';
-@import 'default/structure/organisms';
+@import 'default/structure';

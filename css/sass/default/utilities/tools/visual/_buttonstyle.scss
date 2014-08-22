@@ -5,7 +5,7 @@
     @include transition( background-color );
     overflow: hidden;
 
-    &[data-state-form-element="focused"],
+    [data-state-form-element="focused"] &,
     &:hover {
         background-color: saturate($color-button-default, 25%);
     }

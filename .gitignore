@@ -218,8 +218,3 @@ pip-log.txt
 
 **/.sass-cache
 **/.sass-cache/*
-
-#Project Files
-**/img/projects/*
-**/css/sass/challenge-travel/*
-**/css/challenge-travel/*
