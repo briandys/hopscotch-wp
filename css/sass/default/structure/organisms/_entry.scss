@@ -9,17 +9,12 @@ $entry-byline-avatar-size: 2rem;
             display: inline-block;
             margin-left: -1rem;
             padding: .75rem 1rem;
-            color: $color-link-secondary;
             border-bottom: none;
             
-        }
-        
-    }
-    
-    &.sticky {
-        
-        .entry-title-link {
-            color: $color-link-secondary;
+            &:hover {
+                text-decoration: underline;
+            }
+            
         }
         
     }
@@ -172,7 +167,8 @@ $entry-byline-avatar-size: 2rem;
     dl,
     table,
     .wp-caption,
-    .field {
+    .field,
+    .notice {
         margin-bottom: 1.5rem;
     }
     

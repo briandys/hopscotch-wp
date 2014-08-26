@@ -32,7 +32,6 @@
     @extend %svg-iconize;
     display: block;
     @include size($block-m);
-    background-color: rgba($gray25, .75);
     border-radius: $radius-s;
     @include transition(background-color);
     
@@ -43,16 +42,6 @@
     .icon {
         @include size($block-s);
         @include transform(rotate(180deg));
-        fill: $white;
-    }
-    
-    &:hover {
-        background-color: rgba($gray25, .95);
-        
-        .icon {
-            // Themed
-        }
-        
     }
     
     &:active {

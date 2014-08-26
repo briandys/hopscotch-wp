@@ -1,0 +1,21 @@
+.notice-cr {
+	position: relative;
+	padding: .5rem .75rem;
+    @include corner-radius( $radius-s );
+}
+
+.notice p {
+	margin-top: auto;
+}
+
+// Regular
+.notice-cr {	
+	background-color: #fff9b8;
+	border: .125rem solid #ffed60;
+}
+
+// Error
+.notice-error .notice-cr {
+	background-color: #ffdcdd;
+	border-color: #ffbec0;
+}

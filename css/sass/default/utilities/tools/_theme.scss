@@ -2,47 +2,64 @@
 // This set can be extended to child templates
 
 
-@include selection( $color-selection-primary, $white );
+@include selection( $color-selection-bg, $color-selection-fg );
 
 
-// Default text links must standout
+// Text Links
 a {
-    color: $color-link-primary;
+    color: $color-link;
 }
 
 
-svg.icon {
-    
-    &:hover {
-        fill: $color-primary;
-    } 
-    
+// SVG Icon Color
+svg.icon:hover {
+    fill: $color-svg-icon;
 }
 
+
+// Scroll Top
 .scroll-top-link {
+    background-color: $color-scroll-top-bg;
+    
+    .icon {
+        fill: $color-scroll-top-arrow;
+    }
     
     &:hover {
-        
+        background-color: $color-scroll-top-bg-hover;
+    
         .icon {
-            fill: $color-primary;
+            fill: $color-scroll-top-arrow-hover;
         }
         
     }
     
 }
 
+
+
+// More Link
+.show-more-content .more-link {
+    color: $color-more-link;
+}
+
+
+// Sticky Entry Title
+.sticky .entry-title-link {
+    color: $color-sticky-entry-title;
+}
+
+
+// Main Navigation
 div.nav-menu {
     
-    > ul {
+    > ul > {
     
-        > {
-            .page_item_has_children,
-            .menu-item-has-children {
+        .page_item_has_children,
+        .menu-item-has-children {
 
-                &.status-sub-nav-active {
-                    background-color: darken($color-primary, 5%);
-                }
-
+            &.status-sub-nav-active {
+                background-color: $color-nav-menu-sub-nav-active-bg;
             }
 
         }
@@ -53,9 +70,8 @@ div.nav-menu {
 
         &:hover {
 
-            // Mobile mode
             @include mq($tablet, $query1: max) {
-                background-color: darken($color-primary, 5%);
+                background-color: $color-nav-menu-bg-hover;
             }
 
         }
@@ -64,33 +80,44 @@ div.nav-menu {
     
     .status-mobile-main-nav-active & {
 
-        // Mobile mode
         @include mq($tablet, $query1: max) {
-            background-color: darken($color-primary, 10%);
+            background-color: color-nav-menu-mobile-nav-bg;
         }
 
     }
     
-    .page_item_has_children, .menu-item-has-children {
+    .page_item_has_children,
+    .menu-item-has-children {
         
         &.status-sub-nav-active {
-            background-color: $color-primary;
+            background-color: $color-nav-menu-sub-nav-active-bg;
             
             &:hover {
-                background-color: darken($color-primary, 5%);
+                background-color: $color-nav-menu-sub-nav-active-hover-bg;
             }
             
         }
         
     }
     
-    .page_item_has_children, .menu-item-has-children {
+    .page_item_has_children {
        
         &.status-sub-nav-active {
             
-            .children,
+            .children {
+                background-color: $color-nav-sub-menu-bg;
+            }
+            
+        }
+        
+    }
+    
+    .menu-item-has-children {
+       
+        &.status-sub-nav-active {
+            
             .sub-menu {
-                background-color: darken($color-primary, 2.5%);
+                background-color: $color-nav-sub-menu-bg;
             }
             
         }
@@ -102,31 +129,33 @@ div.nav-menu {
 
 // UI Tabs
 .ui-tablist-item a {
-    color: $color-link-primary;
+    color: $color-tab-item;
 }
 
 
+// Header Theme
 @mixin header-semi-compact-theme {
         
     .masthead {
-        background-color: $color-primary;
+        background-color: $color-masthead-bg;
     }
     
     .site-title-link:hover {
-        background-color: darken($color-primary, 5%);
+        background-color: $color-site-title-bg;
     }
     
     div.nav-menu > ul > li:hover {
-        background-color: darken($color-primary, 5%);
+        background-color: $color-nav-menu-bg;
     }
+
 }
 
 
-
+// Search Theme
 @mixin search-theme-reverse-theme {
     
     .header-sidebar .search-form {
-        background-color: $color-primary;
+        background-color: $color-header-search;
     }
     
 }
