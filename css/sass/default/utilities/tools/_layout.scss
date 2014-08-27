@@ -9,7 +9,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        @include z($layer1);
+        @include z( $layer1 );
     }
     
     .main {
@@ -39,6 +39,7 @@
 }
 
 
+// Reverses the effect of corner-search
 @mixin corner-search-rev {
     
     .masthead-cr {
@@ -124,29 +125,15 @@
 
 
 //------------------------- Search theme light
-@mixin search-theme-reverse {
-    
-    .header-sidebar .search-control .icon,
-    .header-sidebar .search-submit .icon {
-        fill: $white;
-    }
-    
-    .header-sidebar .search-form {
-        // Themed Mixin
-    }
+@mixin search-header-reverse {
     
     .header-sidebar .search-control {
         opacity: .75;
-        @include transition(opacity);
+        @include transition( opacity );
     }
     
     .header-sidebar .search-control:hover {
         opacity: 1;
-    }
-    
-    .header-sidebar .search-input {
-        background-color: transparent;
-        color: $white;
     }
     
 }
@@ -155,18 +142,20 @@
 //------------------------- Header for Wide Mode
 @mixin header-semi-compact {
     
+    // Colored bg, white icon
     @include corner-search-rev;
     
+    // Mobile first
     @include header-compact;
+    
+    // Colors
     @include header-semi-compact-theme;
     
-    @include search-theme-reverse;
-    @include search-theme-reverse-theme;
     
-    @include placeholder($white);
+    @include search-header-reverse;
+    @include search-header-reverse-theme;
     
     .masthead-cr {
-        // Themed Mixin
         text-align: left;
         height: auto;
         min-height: $block-l;
@@ -175,10 +164,9 @@
     .site-title-link {
         padding: 1rem;
         color: $white;
-        @include transition(background-color);
+        @include transition( background-color );
         
         &:hover {
-            // Themed Mixin
             text-decoration: none;
         }
     }
@@ -194,10 +182,6 @@
             
         }
         
-        &:hover {
-            // Themed Mixin
-        }
-        
     }
     
     .main-navigation {
@@ -207,7 +191,7 @@
 }
 
 
-//------------------------- Header Simple
+//------------------------- Simple Header
 @mixin header-plain-text {
     
     .masthead-cr {
@@ -238,5 +222,11 @@
     .main-navigation {
         display: inline-block;
     }
+
+    .site-description {
+        @include faint;
+    }
+    
+    @include corner-search;
 
 }

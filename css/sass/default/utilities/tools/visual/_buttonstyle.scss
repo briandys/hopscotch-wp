@@ -1,15 +1,12 @@
 @mixin button-style-default {
     color: $white;
-    background-color: $color-button-default;
+    
+    @include button-style-default-theme;
+    
     @include corner-radius( $radius-s );
     @include transition( background-color );
     overflow: hidden;
 
-    [data-state-form-element="focused"] &,
-    &:hover {
-        background-color: saturate($color-button-default, 25%);
-    }
-    
     &:active {
         @include transform(translate(0, $one));
     }
@@ -23,11 +20,25 @@
 
 
 //------------------------- Buttonizer primary (hollow button style)
+
+
+
+@mixin buttonizer-theme {
+    color: $color-link-primary;
+    
+    &:hover {
+        color: $white;
+        background-color: $color-link-primary;
+    }
+    
+}
+
+
 @mixin buttonizer($level: primary) {
     @extend %transition-bg-color;
+    @include buttonizer-theme;
     display: inline-block;
     padding: .25rem .5rem; 
-    color: $color-link-primary;
     border-width: $one;
     border-style: solid;
     border-color: currentColor;
@@ -35,8 +46,6 @@
     text-transform: uppercase;
     
     &:hover {
-        color: $white;
-        background-color: $color-link-primary;
         text-decoration: none;
         border-width: $one;
         border-style: solid;

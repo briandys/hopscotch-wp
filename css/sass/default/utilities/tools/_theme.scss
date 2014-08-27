@@ -2,34 +2,41 @@
 // This set can be extended to child templates
 
 
-@include selection( $color-selection-bg, $color-selection-fg );
+@include selection( $color-primary, $white );
+
+
+// Font Family
+html {
+    font-family: $font-family-base;
+    color: $font-color-base;
+}
 
 
 // Text Links
 a {
-    color: $color-link;
+    color: $color-primary;
 }
 
 
 // SVG Icon Color
 svg.icon:hover {
-    fill: $color-svg-icon;
+    fill: $color-primary;
 }
 
 
 // Scroll Top
 .scroll-top-link {
-    background-color: $color-scroll-top-bg;
+    background-color: rgba($gray25, .75);
     
     .icon {
-        fill: $color-scroll-top-arrow;
+        fill: $white;
     }
     
     &:hover {
-        background-color: $color-scroll-top-bg-hover;
+        background-color: rgba($gray25, .95);
     
         .icon {
-            fill: $color-scroll-top-arrow-hover;
+            fill: $color-primary;
         }
         
     }
@@ -37,16 +44,15 @@ svg.icon:hover {
 }
 
 
-
 // More Link
 .show-more-content .more-link {
-    color: $color-more-link;
+    color: $color-secondary;
 }
 
 
 // Sticky Entry Title
 .sticky .entry-title-link {
-    color: $color-sticky-entry-title;
+    color: $color-secondary;
 }
 
 
@@ -59,7 +65,7 @@ div.nav-menu {
         .menu-item-has-children {
 
             &.status-sub-nav-active {
-                background-color: $color-nav-menu-sub-nav-active-bg;
+                background-color: darken( $color-primary, 5%);
             }
 
         }
@@ -69,9 +75,10 @@ div.nav-menu {
     li {
 
         &:hover {
+            background-color: darken( $color-primary, 5% );
 
-            @include mq($tablet, $query1: max) {
-                background-color: $color-nav-menu-bg-hover;
+            @include mq( $tablet, $query1: max ) {
+                background-color: darken( $color-primary, 5% );
             }
 
         }
@@ -81,7 +88,7 @@ div.nav-menu {
     .status-mobile-main-nav-active & {
 
         @include mq($tablet, $query1: max) {
-            background-color: color-nav-menu-mobile-nav-bg;
+            background-color: darken( $color-primary, 10%);
         }
 
     }
@@ -90,10 +97,10 @@ div.nav-menu {
     .menu-item-has-children {
         
         &.status-sub-nav-active {
-            background-color: $color-nav-menu-sub-nav-active-bg;
+            background-color: darken( $color-primary, 5%);
             
             &:hover {
-                background-color: $color-nav-menu-sub-nav-active-hover-bg;
+                background-color: darken( $color-primary, 5%);
             }
             
         }
@@ -105,7 +112,7 @@ div.nav-menu {
         &.status-sub-nav-active {
             
             .children {
-                background-color: $color-nav-sub-menu-bg;
+                background-color: darken($color-primary, 2.5%);
             }
             
         }
@@ -117,7 +124,7 @@ div.nav-menu {
         &.status-sub-nav-active {
             
             .sub-menu {
-                background-color: $color-nav-sub-menu-bg;
+                background-color: darken($color-primary, 2.5%);
             }
             
         }
@@ -129,7 +136,26 @@ div.nav-menu {
 
 // UI Tabs
 .ui-tablist-item a {
-    color: $color-tab-item;
+    color: $color-primary;
+}
+
+
+//Comment
+.comment-author-name {
+    
+    .bypostauthor & {
+        color: $color-secondary;
+        
+        & a {
+            color: $color-link-secondary;
+        }
+        
+    }
+    
+}
+
+.comment .author-avatar a {
+    background-color: $gray90;
 }
 
 
@@ -137,25 +163,43 @@ div.nav-menu {
 @mixin header-semi-compact-theme {
         
     .masthead {
-        background-color: $color-masthead-bg;
+        background-color: $color-primary;
     }
     
     .site-title-link:hover {
-        background-color: $color-site-title-bg;
-    }
-    
-    div.nav-menu > ul > li:hover {
-        background-color: $color-nav-menu-bg;
+        background-color: darken( $color-primary, 5% );
     }
 
 }
 
 
 // Search Theme
-@mixin search-theme-reverse-theme {
+@mixin search-header-reverse-theme {
     
-    .header-sidebar .search-form {
-        background-color: $color-header-search;
+    .header-sidebar .search-control .icon,
+    .header-sidebar .search-submit .icon {
+        fill: $white;
     }
     
+    .header-sidebar .search-form {
+        background-color: $color-primary;
+    }
+    
+    .header-sidebar .search-input {
+        background-color: transparent;
+        color: $white;
+    }
+    
+    @include placeholder( $white );
+    
+}
+
+
+@mixin button-style-default-theme {
+    background-color: $color-button-default;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: saturate($color-button-default, 25%);
+    }
 }

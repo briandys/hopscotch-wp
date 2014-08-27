@@ -1,13 +1,5 @@
-// Default style of the header
-.skip-to-content-link {
-    @include vhide;
-}
-
-.site-title-link {
-}
-
-
-@include mq($tablet, ieFixOn) {
+// Default header style if nothing is set for wide viewport
+@include mq( $tablet ) {
 
     .masthead-cr {
         text-align: center;
@@ -32,16 +24,19 @@
 }
 
 
+
 // Header style for narrow viewports
-@include mq($tablet, $query1: max) {
+// Default for parent and child
+@include mq( $tablet, $query1: max ) {
     @include header-compact;
 }
 
 
 // Parent-specific style of header for wide viewports
-@include mq($tablet, ieFixOn) {
+// This must be set on a child theme using a specific site class
+@include mq( $tablet ) {
     
-    .site-default {
+    .hopscotch--site {
         @include header-semi-compact;
     }
     

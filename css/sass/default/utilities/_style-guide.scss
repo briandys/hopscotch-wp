@@ -18,17 +18,9 @@ $color-secondary: $green-go;
 
 $color-bg-darken: rgba($black, .05);
 
-// Links
-$color-link: $color-primary;
-$color-more-link: $color-secondary;
-
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
 $color-link-tertiary: $font-color-base;
-
-$color-link-hover: rgba($color-primary, .05);
-$color-link-selected: rgba($color-primary, 1);
-$color-link-active: rgba($color-primary, .25);
 
 // Forms
 $color-button-default: $color-secondary;
@@ -37,49 +29,3 @@ $color-button-secondary: $color-secondary;
 
 // Quote
 $color-quote-text: $gray50;
-
-// Placeholder
-$color-placeholder-text: $gray25;
-
-// Element Selection
-$color-selection-fg: $white;
-$color-selection-bg: $color-primary;
-
-// Sticky Entry Title
-$color-sticky-entry-title: $color-secondary;
-
-// SVG Icon
-$color-svg-icon: $color-primary;
-
-// Scroll Top
-$color-scroll-top: $gray25;
-$color-scroll-top-arrow: $white;
-$color-scroll-top-arrow-hover: $color-primary;
-$color-scroll-top-bg: rgba($color-scroll-top, .75);
-$color-scroll-top-bg-hover: rgba($color-scroll-top, .95);
-
-
-// Masthead
-$color-masthead-bg: $color-primary;
-
-// Nav Menu
-$color-nav-menu-bg: $color-primary;
-$color-nav-menu-bg-hover: darken( $color-nav-menu-bg, 5% );
-$color-nav-menu-sub-nav-active-bg: darken( $color-nav-menu-bg, 5%);
-$color-nav-menu-sub-nav-active-hover-bg: darken( $color-nav-menu-bg, 5%);
-
-// Sub Menu
-$color-nav-sub-menu-bg: darken($color-nav-menu-bg, 2.5%);
-
-// Mobile Menu
-$color-nav-menu-mobile-nav-bg: darken( $color-nav-menu-bg, 10%);
-
-
-// Tab
-$color-tab-item: $color-primary;
-
-// Site Title
-$color-site-title-bg: darken( $color-primary, 5% );
-
-// Header Search
-$color-header-search: $color-primary;

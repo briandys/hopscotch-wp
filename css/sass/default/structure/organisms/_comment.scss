@@ -78,7 +78,6 @@
 
         a {
             display: block;
-            background-color: $gray90;
         }
     
         @include mq($phablet, ieFixOff, max) {
@@ -148,12 +147,7 @@
     }
     
     .bypostauthor & {
-        color: $color-secondary;
         font-weight: 600;
-        
-        & a {
-            color: $color-link-secondary;
-        }
         
     }
     
