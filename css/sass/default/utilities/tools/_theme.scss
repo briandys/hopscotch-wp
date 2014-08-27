@@ -4,6 +4,11 @@
 
 @include selection( $color-selection-bg, $color-selection-fg );
 
+// Font Family
+html {
+    font-family: $font-family-base;
+}
+
 
 // Text Links
 a {
