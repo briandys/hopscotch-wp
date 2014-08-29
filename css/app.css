@@ -191,6 +191,39 @@ textarea { resize: vertical; }
   img { max-width: 100% !important; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; } }
+::-moz-selection { color: white; background-color: #12b32d; }
+
+::selection { color: white; background-color: #12b32d; }
+
+html { font-family: Raleway, Helvetica, Arial, sans-serif; color: #333333; }
+
+a { color: #00aaff; }
+
+svg.icon:hover { fill: #00aaff; }
+
+.scroll-top-link { background-color: rgba(64, 64, 64, 0.75); }
+.scroll-top-link .icon { fill: white; }
+.scroll-top-link:hover { background-color: rgba(64, 64, 64, 0.95); }
+.scroll-top-link:hover .icon { fill: #00aaff; }
+
+.show-more-content .more-link { color: #12b32d; }
+
+.sticky .entry-title-link { color: #12b32d; }
+
+div.nav-menu > ul > .page_item_has_children.status-sub-nav-active, div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active { background-color: #0099e6; }
+div.nav-menu li:hover { background-color: #0099e6; }
+div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-item-has-children.status-sub-nav-active { background-color: #0099e6; }
+div.nav-menu .page_item_has_children.status-sub-nav-active:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover { background-color: #0099e6; }
+div.nav-menu .page_item_has_children.status-sub-nav-active .children { background-color: #00a1f2; }
+div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu { background-color: #00a1f2; }
+
+.ui-tablist-item a { color: #00aaff; }
+
+.bypostauthor .comment-author-name { color: #12b32d; }
+.bypostauthor .comment-author-name a { color: #12b32d; }
+
+.comment .author-avatar a { background-color: #e6e6e6; }
+
 .entry:before, .entry-byline:before, .comment-hr:before, .comment-respond:before, .ui-tablist:before, .entry:after, .entry-byline:after, .comment-hr:after, .comment-respond:after, .ui-tablist:after { content: " "; display: table; }
 .entry:after, .entry-byline:after, .comment-hr:after, .comment-respond:after, .ui-tablist:after { clear: both; }
 
@@ -220,41 +253,6 @@ img, .wp-caption { max-width: 100%; height: auto; }
 .post-edit-link { color: #00aaff; display: inline-block; padding: .25rem .5rem; border-width: 0.0625rem; border-style: solid; border-color: currentColor; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; overflow: hidden; text-transform: uppercase; }
 .post-edit-link:hover { color: white; background-color: #00aaff; }
 .post-edit-link:hover { text-decoration: none; border-width: 0.0625rem; border-style: solid; }
-
-::-moz-selection { color: white; background-color: #00aaff; }
-
-::selection { color: white; background-color: #00aaff; }
-
-html { font-family: Raleway, Helvetica, Arial, sans-serif; color: #333333; }
-
-a { color: #00aaff; }
-
-svg.icon:hover { fill: #00aaff; }
-
-.scroll-top-link { background-color: rgba(64, 64, 64, 0.75); }
-.scroll-top-link .icon { fill: white; }
-.scroll-top-link:hover { background-color: rgba(64, 64, 64, 0.95); }
-.scroll-top-link:hover .icon { fill: #00aaff; }
-
-.show-more-content .more-link { color: #12b32d; }
-
-.sticky .entry-title-link { color: #12b32d; }
-
-div.nav-menu > ul > .page_item_has_children.status-sub-nav-active, div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active { background-color: #0099e6; }
-div.nav-menu li:hover { background-color: #0099e6; }
-@media only screen and (max-width: 47.9375rem) { div.nav-menu li:hover { background-color: #0099e6; } }
-@media only screen and (max-width: 47.9375rem) { .status-mobile-main-nav-active div.nav-menu { background-color: #0088cc; } }
-div.nav-menu .page_item_has_children.status-sub-nav-active, div.nav-menu .menu-item-has-children.status-sub-nav-active { background-color: #0099e6; }
-div.nav-menu .page_item_has_children.status-sub-nav-active:hover, div.nav-menu .menu-item-has-children.status-sub-nav-active:hover { background-color: #0099e6; }
-div.nav-menu .page_item_has_children.status-sub-nav-active .children { background-color: #00a1f2; }
-div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu { background-color: #00a1f2; }
-
-.ui-tablist-item a { color: #00aaff; }
-
-.bypostauthor .comment-author-name { color: #12b32d; }
-.bypostauthor .comment-author-name a { color: #12b32d; }
-
-.comment .author-avatar a { background-color: #e6e6e6; }
 
 html { height: 100%; }
 
@@ -302,13 +300,13 @@ form br { display: none; }
 .sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea { padding: .75rem; min-height: 3rem; border: none; }
 .sudo-input-text input[type='text']:focus, .sudo-input-text input[type='email']:focus, .sudo-input-text input[type='search']:focus, .sudo-input-text input[type='password']:focus, .sudo-input-text input[type='url']:focus, .sudo-input-text textarea:focus { outline: 0; }
 
-.sudo-button { color: white; background-color: #12b32d; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; overflow: hidden; -webkit-transition: background-color 0.125s ease; -moz-transition: background-color 0.125s ease; -ms-transition: background-color 0.125s ease; -o-transition: background-color 0.125s ease; transition: background-color 0.125s ease; overflow: hidden; margin-top: 2rem; }
-[data-state-form-element="focused"] .sudo-button, .sudo-button:hover { background-color: #00c521; }
+.sudo-button { color: white; background-color: #00aaff; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; overflow: hidden; -webkit-transition: background-color 0.125s ease; -moz-transition: background-color 0.125s ease; -ms-transition: background-color 0.125s ease; -o-transition: background-color 0.125s ease; transition: background-color 0.125s ease; overflow: hidden; margin-top: 2rem; }
+[data-state-form-element="focused"] .sudo-button, .sudo-button:hover { background-color: #00aaff; }
 .sudo-button:active { -webkit-transform: translate(0, 0.0625rem); -moz-transform: translate(0, 0.0625rem); -ms-transform: translate(0, 0.0625rem); -o-transform: translate(0, 0.0625rem); transform: translate(0, 0.0625rem); }
 .sudo-button button, .sudo-button input { margin: auto; background-color: transparent; border: none; padding: .75rem; min-height: 3rem; }
 
-button, input[type="submit"] { background-color: transparent; border: none; margin-top: 1rem; color: white; background-color: #12b32d; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; overflow: hidden; -webkit-transition: background-color 0.125s ease; -moz-transition: background-color 0.125s ease; -ms-transition: background-color 0.125s ease; -o-transition: background-color 0.125s ease; transition: background-color 0.125s ease; overflow: hidden; padding: .75rem; min-height: 3rem; }
-[data-state-form-element="focused"] button, button:hover, [data-state-form-element="focused"] input[type="submit"], input[type="submit"]:hover { background-color: #00c521; }
+button, input[type="submit"] { background-color: transparent; border: none; margin-top: 1rem; color: white; background-color: #00aaff; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; overflow: hidden; -webkit-transition: background-color 0.125s ease; -moz-transition: background-color 0.125s ease; -ms-transition: background-color 0.125s ease; -o-transition: background-color 0.125s ease; transition: background-color 0.125s ease; overflow: hidden; padding: .75rem; min-height: 3rem; }
+[data-state-form-element="focused"] button, button:hover, [data-state-form-element="focused"] input[type="submit"], input[type="submit"]:hover { background-color: #00aaff; }
 button:active, input[type="submit"]:active { -webkit-transform: translate(0, 0.0625rem); -moz-transform: translate(0, 0.0625rem); -ms-transform: translate(0, 0.0625rem); -o-transform: translate(0, 0.0625rem); transform: translate(0, 0.0625rem); }
 
 h1 { font-size: 48px; font-size: 3rem; }
@@ -443,6 +441,8 @@ ins { text-decoration: none; }
 .entry-title { display: inline; font-size: 32px; font-size: 2rem; font-weight: 600; line-height: normal; word-wrap: break-word; }
 @media only screen and (max-width: 47.9375rem) { .entry-title { font-size: 24px; font-size: 1.5rem; } }
 
+.single .entry-title-link, .page .entry-title-link { color: #333333; }
+
 .entry-hr-cr { margin-bottom: 2rem; padding-left: 1rem; padding-right: 1rem; }
 .entry-hr-cr .entry-meta { margin-top: 1rem; margin-bottom: 1rem; }
 .entry-hr-cr .entry-thumbnail { margin-top: 1rem; }
@@ -525,6 +525,8 @@ ins { text-decoration: none; }
 .comment-list .children > li { margin-bottom: 1rem; }
 
 .comment { padding-top: 1rem; padding-left: 1rem; }
+.comment .entry-ct-cr { padding-left: 0; padding-right: 0; }
+.comment .entry-ct-cr p { margin-top: 1rem; }
 
 .comment-cr { position: relative; padding-right: 1rem; }
 

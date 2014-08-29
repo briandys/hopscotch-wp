@@ -2,7 +2,15 @@
 // This set can be extended to child templates
 
 
-@include selection( $color-primary, $white );
+::-moz-selection {
+    color: $white;
+    background-color: $color-secondary;
+}
+
+::selection {
+    color: $white;
+    background-color: $color-secondary;
+}
 
 
 // Font Family
@@ -56,6 +64,15 @@ svg.icon:hover {
 }
 
 
+@mixin nav-menu-list-item-bg-theme {
+    background-color: darken( $color-primary, 5% );
+}
+
+@mixin nav-menu-mobile-main-nav-bg-theme {
+    background-color: darken( $color-primary, 10%);
+}
+
+
 // Main Navigation
 div.nav-menu {
     
@@ -76,19 +93,6 @@ div.nav-menu {
 
         &:hover {
             background-color: darken( $color-primary, 5% );
-
-            @include mq( $tablet, $query1: max ) {
-                background-color: darken( $color-primary, 5% );
-            }
-
-        }
-
-    }
-    
-    .status-mobile-main-nav-active & {
-
-        @include mq($tablet, $query1: max) {
-            background-color: darken( $color-primary, 10%);
         }
 
     }
@@ -202,4 +206,15 @@ div.nav-menu {
     &:hover {
         background-color: saturate($color-button-default, 25%);
     }
+}
+
+
+@mixin buttonizer-theme {
+    color: $color-link-primary;
+    
+    &:hover {
+        color: $white;
+        background-color: $color-link-primary;
+    }
+    
 }

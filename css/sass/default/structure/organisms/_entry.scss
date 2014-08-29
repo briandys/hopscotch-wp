@@ -42,6 +42,15 @@ $entry-byline-avatar-size: 2rem;
     
 }
 
+.entry-title-link {
+    
+    .single &,
+    .page & {
+        color: $font-color-base;
+    }
+    
+}
+
 .entry-hr-cr {
     margin-bottom: 2rem;
     padding-left: $gutter;

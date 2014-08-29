@@ -23,15 +23,7 @@
 
 
 
-@mixin buttonizer-theme {
-    color: $color-link-primary;
-    
-    &:hover {
-        color: $white;
-        background-color: $color-link-primary;
-    }
-    
-}
+
 
 
 @mixin buttonizer($level: primary) {
@@ -52,11 +44,11 @@
     }
     
     @if $level == 'secondary' {
-        color: $color-link-secondary;
+        color: red;
         border-color: currentColor;
         
         &:hover {
-            background-color: $color-link-secondary;
+            background-color: red;
         }
         
     }
