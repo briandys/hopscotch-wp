@@ -91,7 +91,7 @@ $faint: $gray50;
 $cloud: $gray95;
 
 // Add a dark shade
-// Example usage: color overlays on menu items with exisint background colors
+// Example usage: color overlays on menu items with existing background colors
 $darken5: hsla(0, 0%, 0%, .05);
 $darken10: hsla(0, 0%, 0%, .10);
 $darken15: hsla(0, 0%, 0%, .15);
@@ -105,6 +105,7 @@ $darken75: hsla(0, 0%, 0%, .75);
 // Usage: square areas of active elements require a minimum of 48px for touch
 $block-size-factor: .5;
 
+$block: 3rem;
 $block-m: 3rem;
 
 $block-s: $block-m / 2;

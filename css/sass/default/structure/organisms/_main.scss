@@ -18,6 +18,24 @@ $sidebar-width: $total-width - $content-width;
     
 }
 
+
+.main-cr {
+    [data-state-colophon="fixed"] & {
+        position: relative;
+        @include z( $layer2 );
+    }
+    
+}
+
+.colophon-cr {
+    
+    [data-state-colophon="fixed"] & {
+        @include z( $layer3 );
+    }
+    
+}
+
+
 // Default layout of Primary and Secondary Content
 .primary-content-cr,
 .secondary-sidebar-cr {

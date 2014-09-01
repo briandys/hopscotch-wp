@@ -10,17 +10,22 @@ $custom-font: Raleway;
 $font-family-base: $custom-font, Helvetica, Arial, sans-serif;
 $font-family-quote: Georgia, serif;
 
-
 // Color Scheme
-$font-color-base: $gray20;
 $color-primary: $blue-superhero;
 $color-secondary: $green-go;
+
+// Site Background Color
+$color-site-bg: $white;
+
+
+// Font Color
+$color-font: $gray20;
 
 $color-bg-darken: rgba($black, .05);
 
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
-$color-link-tertiary: $font-color-base;
+$color-link-tertiary: $color-font;
 
 // Forms
 $color-button-default: $color-primary;

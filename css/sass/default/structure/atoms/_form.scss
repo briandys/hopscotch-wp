@@ -52,7 +52,9 @@ form br {
     overflow: hidden;
     
     #{$form-input-type-text} {
-        @include input-type-text-style;
+        
+        padding: .75rem;
+        min-height: $block-l;
         border: none;
         
         &:focus {
@@ -73,7 +75,15 @@ form br {
         margin: auto;
         @include reset-button-style;
         @include input-type-text-style;
+        
+        background-color: transparent;
+        
+        &:hover {
+            background-color: transparent;
+        }
+        
     }
+    
 }
 
 // Default Buttons

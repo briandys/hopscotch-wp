@@ -9,6 +9,7 @@
 
 .wp-caption-text,
 .gallery-caption {
+    margin-top: 0;
     padding: .5rem;
     @include font-size-rem($font-s-m);
     color: $darken50;

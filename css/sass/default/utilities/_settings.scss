@@ -37,7 +37,7 @@ blockquote,
 dl,
 figure,
 pre {
-	margin: auto;
+	margin: 0;
 	padding: 0;
 }
 
@@ -66,5 +66,4 @@ pre,
 html {
     @include font-size-rem($font-m);
     line-height: 1.5;
-    background-color: $white;
 }

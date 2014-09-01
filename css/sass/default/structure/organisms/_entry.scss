@@ -42,15 +42,6 @@ $entry-byline-avatar-size: 2rem;
     
 }
 
-.entry-title-link {
-    
-    .single &,
-    .page & {
-        color: $font-color-base;
-    }
-    
-}
-
 .entry-hr-cr {
     margin-bottom: 2rem;
     padding-left: $gutter;
@@ -267,7 +258,12 @@ $entry-byline-avatar-size: 2rem;
         height: auto;
     }
     
-}
+    // WP Caption Text
+    .wp-caption-text {
+        margin-top: 0;
+    }
+    
+} // .entry-ct-cr
 
 .entry-fr {
     
@@ -290,7 +286,7 @@ $entry-byline-avatar-size: 2rem;
 
 
 .post-edit-link {
-    @extend %buttonizer-primary;
+    @include buttonizer;
     @include font-size-rem($font-s);
     
     .label-verb-subject {

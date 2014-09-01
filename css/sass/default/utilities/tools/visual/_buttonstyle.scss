@@ -1,8 +1,6 @@
 @mixin button-style-default {
     color: $white;
     
-    @include button-style-default-theme;
-    
     @include corner-radius( $radius-s );
     @include transition( background-color );
     overflow: hidden;
@@ -14,7 +12,6 @@
 }
 
 @mixin reset-button-style {
-    background-color: transparent;
     border: none;
 }
 
@@ -27,8 +24,9 @@
 
 
 @mixin buttonizer($level: primary) {
-    @extend %transition-bg-color;
-    @include buttonizer-theme;
+    
+    @include transition( background-color );
+    
     display: inline-block;
     padding: .25rem .5rem; 
     border-width: $one;

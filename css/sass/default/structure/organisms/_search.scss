@@ -88,6 +88,7 @@
         margin-top: auto;
         background-color: transparent;
         border: none;
+        border-radius: 0;
         
         button {
         
@@ -100,6 +101,15 @@
         .status-search-inactive & {
             @extend %vhide;
         }
+        
+        &:hover {
+            background-color: transparent;
+        }
+        
+    }
+    
+    [data-state-form-element="focused"] &:hover {
+        background-color: transparent;
     }
     
     .search-form {

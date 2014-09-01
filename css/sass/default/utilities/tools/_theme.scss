@@ -16,8 +16,37 @@
 // Font Family
 html {
     font-family: $font-family-base;
-    color: $font-color-base;
+    color: $color-font;
 }
+
+
+// Background Color
+html {
+    background-color: $color-site-bg;
+}
+
+.main-cr {
+    @include background-image( linear-gradient( top, $color-site-bg 95%, rgba( $color-site-bg, 0) 100% ) );
+}
+
+
+// Entry Title
+.entry-title-link {
+    
+    // If the Entry Title is on a listing
+    .blog &,
+    .home & {
+        color: $color-link-secondary;
+    }
+    
+    // If the Entry Title in on its page
+    .single &,
+    .page & {
+        color: $color-font;
+    }
+    
+}
+    
 
 
 // Text Links
@@ -163,6 +192,17 @@ div.nav-menu {
 }
 
 
+// Colophone
+.site-info {
+    
+    .web-designer,
+    .copyright {
+        color: $faint;
+    }
+    
+}
+
+
 // Header Theme
 @mixin header-semi-compact-theme {
         
@@ -199,22 +239,43 @@ div.nav-menu {
 }
 
 
-@mixin button-style-default-theme {
-    background-color: $color-button-default;
-    
-    [data-state-form-element="focused"] &,
-    &:hover {
-        background-color: saturate($color-button-default, 25%);
-    }
-}
-
-
 @mixin buttonizer-theme {
     color: $color-link-primary;
     
     &:hover {
         color: $white;
         background-color: $color-link-primary;
+    }
+    
+}
+
+
+.post-edit-link {
+    @include buttonizer-theme;
+}
+
+.sudo-button,
+button,
+input[type="submit"] {
+    background-color: $color-button-default;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: saturate($color-button-default, 25%);
+    }
+    
+}
+
+
+
+.search--sudo-button {
+    
+    &[data-state-form-element="focused"] {
+        
+        .header-sidebar & {
+            background-color: $darken5;
+        }
+        
     }
     
 }
