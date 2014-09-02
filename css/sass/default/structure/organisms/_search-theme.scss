@@ -1,0 +1,34 @@
+.search--sudo-button {
+    
+    &[data-state-form-element="focused"] {
+        
+        .header-sidebar &,
+        &:hover {
+            background-color: $darken5;
+        }
+        
+    }
+    
+}
+
+
+.header-sidebar {
+
+    .search--sudo-button {
+        background-color: transparent;
+        
+        &:hover {
+            background-color: $darken5;
+        }
+        
+    }
+    
+    .search-form {
+        
+        @include mq( $tablet, $query1: max ) {
+            background-color: $white;
+        }
+        
+    }
+    
+}

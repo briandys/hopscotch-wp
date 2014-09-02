@@ -1,6 +1,9 @@
 //------------------------- Basic tags
 $heading-tags: h1, h2, h3, h4, h5, h6;
+
 $form-input-type-text: "input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea";
+
+$form-buttons: "button, input[type='submit'], input[type='reset']";
 
 
 //------------------------- Navigation menu
@@ -66,6 +69,7 @@ $two: .125rem;
 
 //------------------------- Colors
 $black: hsl(0, 0%, 0%);
+$gray5: hsl(0, 0%, 5%);
 $gray10: hsl(0, 0%, 10%);
 $gray15: hsl(0, 0%, 15%);
 $gray20: hsl(0, 0%, 20%);
@@ -97,8 +101,20 @@ $darken10: hsla(0, 0%, 0%, .10);
 $darken15: hsla(0, 0%, 0%, .15);
 $darken20: hsla(0, 0%, 0%, .20);
 $darken25: hsla(0, 0%, 0%, .25);
+$darken30: hsla(0, 0%, 0%, .30);
+$darken35: hsla(0, 0%, 0%, .35);
+$darken40: hsla(0, 0%, 0%, .40);
+$darken45: hsla(0, 0%, 0%, .45);
 $darken50: hsla(0, 0%, 0%, .50);
+$darken55: hsla(0, 0%, 0%, .55);
+$darken60: hsla(0, 0%, 0%, .60);
+$darken65: hsla(0, 0%, 0%, .65);
+$darken70: hsla(0, 0%, 0%, .70);
 $darken75: hsla(0, 0%, 0%, .75);
+$darken80: hsla(0, 0%, 0%, .80);
+$darken85: hsla(0, 0%, 0%, .85);
+$darken90: hsla(0, 0%, 0%, .90);
+$darken95: hsla(0, 0%, 0%, .95);
 
 
 //------------------------- Block sizes

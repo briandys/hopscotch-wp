@@ -193,36 +193,6 @@
 }
 
 
-.comment-form {
-    
-    .field-comment {
-        clear: both;
-        
-        label {
-            
-            .logged-in & {
-                @extend %vhide;
-            }
-            
-        }
-        
-    }
-    
-    .field-author {
-        clear: both;
-    }
-    
-    textarea {
-        $textarea-height: 4.5rem;
-        
-        display: block;
-        height: $textarea-height;
-        min-height: $textarea-height;
-        max-height: $textarea-height + 6;
-    }
-}
-
-
 .comment-form-signed-in-as {
     display: inline-block;
 }
@@ -289,20 +259,29 @@
 }
 
 .comment-form-admin {
-    float: right;
-    margin-left: 2rem;
     margin-top: .5rem;
     margin-bottom: 1rem;
+    text-align: center;
+    
+    @include mq( $phablet ) {
+        float: right;
+        margin-left: 2rem;
+    }
+    
 }
 
 .comment-reply-title {
-    float: left;
     @include font-size-rem($font-l);
+    text-align: center;
+    
+    @include mq( $phablet ) {
+        float: left;
+    }
+    
 }
 
 .comment-pending {
     margin-bottom: auto;
-    @include faint;
     font-style: italic;
 }
 
@@ -342,45 +321,68 @@
     margin-right: .5rem;
 }
 
-.sudo-input-text {
+
+// Submit Button
+.comment-form {
     
-    &[data-state-form-element="focused"] {  
-        @include border($alpha: .75);
+    textarea {
+        $textarea-dimension: 4.5rem;
+        
+        display: block;
+        height: $textarea-dimension;
+        min-height: $textarea-dimension;
+        
+        @include mq( $mobile ) {
+            padding-right: $textarea-dimension;
+        }
+        
     }
-    
-}
 
-// Minimal form button
-@mixin min-form-button {
-    
-    .comment-form {
-
-        .field-comment {
+    .field-comment {
+        clear: both;
+        
+        label {
+            
+            .logged-in & {
+                @extend %vhide;
+            }
+            
+        }
+        
+        // Minimal Submit Button
+        @include mq( $mobile ) {
             position: relative;
         }
+        
+    }
+    
+    .field-author {
+        clear: both;
+    }
 
-        .form-submit {
+    .form-submit {
+        
+        // Minimal Submit Button
+        @include mq( $mobile ) {
             position: absolute;
             right: 0;
             bottom: 0;
             margin-right: .75rem;
-            margin-bottom: .75rem !important;
-            @include circle;
+            margin-bottom: .75rem;
+        }
+
+        [type="submit"] {
             
-            [type="submit"] {
-                margin-top: auto;
+            // Minimal Submit Button
+            @include mq( $mobile ) {
+                margin-top: 0;
                 padding: 0;
-                @include size( $block-m );
+                @include size( $block );
+                @include circle;
             }
             
         }
 
     }
-    
-}
 
-@include mq( $tablet, ieFixOn) {
-    
-    @include min-form-button;
-    
 }

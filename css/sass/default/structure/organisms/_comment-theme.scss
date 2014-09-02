@@ -1,0 +1,23 @@
+//Comment
+.comment-author-name {
+    
+    .bypostauthor & {
+        color: $color-primary;
+        
+        & a {
+            color: $color-link-secondary;
+        }
+        
+    }
+    
+}
+
+.comment .author-avatar a {
+    background-color: $gray90;
+}
+
+
+// Comments
+.comment-pending {
+    color: $faint;
+}

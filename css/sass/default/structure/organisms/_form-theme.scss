@@ -1,0 +1,50 @@
+#{$form-input-type-text} {
+    border-color: $darken35;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        border-color: adjust-hue( $color-primary, 5deg );
+    }
+}
+
+
+#{$form-buttons} {
+    background-color: $color-primary;
+    color: $white;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: adjust-hue( $color-primary, 5deg );
+    }
+    
+    &:active {
+        background-color: adjust-hue( $color-primary, 10deg );
+    }
+    
+}
+
+
+.sudo-input-text {
+    border-color: $darken35;
+    
+    &[data-state-form-element="focused"],
+    &:hover {
+        border-color: adjust-hue( $color-primary, 5deg );
+    }
+    
+}
+
+.sudo-button {
+    color: $white;
+    background-color: $color-primary;
+    
+    &[data-state-form-element="focused"],
+    &:hover {
+        background-color: adjust-hue( $color-primary, 5deg );
+    }
+
+    &:active {
+        background-color: adjust-hue( $color-primary, 10deg );
+    }
+    
+}

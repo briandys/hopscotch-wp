@@ -1,14 +1,14 @@
 .ui-tablist {
     @extend %cf;
     @include unlist;
-    margin-left: auto;
-    margin-bottom: auto;
+    margin-left: 0;
+    margin-bottom: 0;
     white-space: nowrap;
 }
 
 .ui-tablist-item {
     display: inline-block;
-    margin-bottom: auto;
+    margin-bottom: 0;
     vertical-align: bottom;
     
     a {
@@ -16,8 +16,8 @@
         margin-right: -1px;
         padding: .75rem;
         min-width: 8rem;
-        background-color: $white;
-        border: 1px solid #ccc;
+        border-width: $one;
+        border-style: solid;
         border-bottom: none;
         white-space: nowrap;
         text-align: center;
@@ -26,7 +26,6 @@
             position: relative;
             top: 1px;
             margin-left: -1px;
-            color: currentColor;
             
         }
         
@@ -66,6 +65,6 @@
 
 .ui-tabpanel {
     padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: $white;
+    border-width: $one;
+    border-style: solid;
 }

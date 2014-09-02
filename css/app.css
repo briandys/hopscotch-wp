@@ -689,30 +689,173 @@ textarea {
     page-break-after: avoid;
   }
 }
-/* line 5, sass/default/utilities/tools/_theme.scss */
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/atoms/_link-theme.scss */
+a {
+  color: #00aaff;
+}
+
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/atoms/_selection-theme.scss */
 ::-moz-selection {
   color: white;
   background-color: #12b32d;
 }
 
-/* line 10, sass/default/utilities/tools/_theme.scss */
+/* line 6, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/atoms/_selection-theme.scss */
 ::selection {
   color: white;
   background-color: #12b32d;
 }
 
-/* line 17, sass/default/utilities/tools/_theme.scss */
-html {
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  color: #333333;
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
+  border-color: rgba(0, 0, 0, 0.35);
+}
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+[data-state-form-element="focused"] input[type='text'], input[type='text']:hover, [data-state-form-element="focused"] input[type='email'], input[type='email']:hover, [data-state-form-element="focused"] input[type='search'], input[type='search']:hover, [data-state-form-element="focused"] input[type='password'], input[type='password']:hover, [data-state-form-element="focused"] input[type='url'], input[type='url']:hover, [data-state-form-element="focused"] textarea, textarea:hover {
+  border-color: #0095ff;
 }
 
-/* line 24, sass/default/utilities/tools/_theme.scss */
-html {
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+button, input[type='submit'], input[type='reset'] {
+  background-color: #00aaff;
+  color: white;
+}
+/* line 16, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+[data-state-form-element="focused"] button, button:hover, [data-state-form-element="focused"] input[type='submit'], input[type='submit']:hover, [data-state-form-element="focused"] input[type='reset'], input[type='reset']:hover {
+  background-color: #0095ff;
+}
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+button:active, input[type='submit']:active, input[type='reset']:active {
+  background-color: #007fff;
+}
+
+/* line 27, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+.sudo-input-text {
+  border-color: rgba(0, 0, 0, 0.35);
+}
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+.sudo-input-text[data-state-form-element="focused"], .sudo-input-text:hover {
+  border-color: #0095ff;
+}
+
+/* line 37, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+.sudo-button {
+  color: white;
+  background-color: #00aaff;
+}
+/* line 42, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+.sudo-button[data-state-form-element="focused"], .sudo-button:hover {
+  background-color: #0095ff;
+}
+/* line 46, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_form-theme.scss */
+.sudo-button:active {
+  background-color: #007fff;
+}
+
+/* line 4, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_comment-theme.scss */
+.bypostauthor .comment-author-name {
+  color: #00aaff;
+}
+/* line 7, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_comment-theme.scss */
+.bypostauthor .comment-author-name a {
+  color: #12b32d;
+}
+
+/* line 15, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_comment-theme.scss */
+.comment .author-avatar a {
+  background-color: #e6e6e6;
+}
+
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_comment-theme.scss */
+.comment-pending {
+  color: gray;
+}
+
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_entry-theme.scss */
+.blog .entry-title-link, .home .entry-title-link {
+  color: #00aaff;
+}
+/* line 23, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_entry-theme.scss */
+.single .entry-title-link, .page .entry-title-link {
+  color: #333333;
+}
+/* line 28, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_entry-theme.scss */
+.sticky .entry-title-link {
+  color: #0088cc;
+}
+
+/* line 36, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_entry-theme.scss */
+.show-more-content .more-link {
+  color: #12b32d;
+}
+
+/* line 42, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_entry-theme.scss */
+.post-edit-link {
+  color: #00aaff;
+}
+/* line 4, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_entry-theme.scss */
+.post-edit-link:hover {
+  color: white;
+  background-color: #00aaff;
+}
+
+/* line 4, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_colophon-theme.scss */
+.site-info .web-designer,
+.site-info .copyright {
+  color: gray;
+}
+
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_ui-tabs-theme.scss */
+.ui-tablist-item a {
+  color: #00aaff;
+}
+
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_ui-tabs-theme.scss */
+.ui-tabpanel {
+  border-color: #ccc;
   background-color: white;
 }
 
-/* line 28, sass/default/utilities/tools/_theme.scss */
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_ui-tabs-theme.scss */
+.ui-tablist-item {
+  display: inline-block;
+  margin-bottom: auto;
+  vertical-align: bottom;
+}
+/* line 15, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_ui-tabs-theme.scss */
+.ui-tablist-item a {
+  background-color: white;
+  border-color: #ccc;
+}
+/* line 19, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_ui-tabs-theme.scss */
+.ui-tablist-item a[aria-selected="true"] {
+  color: currentColor;
+}
+
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_scroll-top-theme.scss */
+.scroll-top-link {
+  background-color: rgba(64, 64, 64, 0.75);
+}
+/* line 4, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_scroll-top-theme.scss */
+.scroll-top-link .icon {
+  fill: white;
+}
+/* line 8, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_scroll-top-theme.scss */
+.scroll-top-link:hover {
+  background-color: rgba(64, 64, 64, 0.95);
+}
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_scroll-top-theme.scss */
+.scroll-top-link:hover .icon {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-theme.scss */
+html {
+  color: #333333;
+  background-color: white;
+}
+
+/* line 6, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-theme.scss */
 .main-cr {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(95%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(top, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
@@ -721,133 +864,62 @@ html {
   background-image: linear-gradient(top, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
 }
 
-/* line 38, sass/default/utilities/tools/_theme.scss */
-.blog .entry-title-link, .home .entry-title-link {
-  color: #12b32d;
-}
-/* line 44, sass/default/utilities/tools/_theme.scss */
-.single .entry-title-link, .page .entry-title-link {
-  color: #333333;
-}
-
-/* line 53, sass/default/utilities/tools/_theme.scss */
-a {
-  color: #00aaff;
-}
-
-/* line 59, sass/default/utilities/tools/_theme.scss */
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_svg-theme.scss */
 svg.icon:hover {
   fill: #00aaff;
 }
 
-/* line 65, sass/default/utilities/tools/_theme.scss */
-.scroll-top-link {
-  background-color: rgba(64, 64, 64, 0.75);
-}
-/* line 68, sass/default/utilities/tools/_theme.scss */
-.scroll-top-link .icon {
-  fill: white;
-}
-/* line 72, sass/default/utilities/tools/_theme.scss */
-.scroll-top-link:hover {
-  background-color: rgba(64, 64, 64, 0.95);
-}
-/* line 75, sass/default/utilities/tools/_theme.scss */
-.scroll-top-link:hover .icon {
-  fill: #00aaff;
-}
-
-/* line 85, sass/default/utilities/tools/_theme.scss */
-.show-more-content .more-link {
-  color: #12b32d;
-}
-
-/* line 91, sass/default/utilities/tools/_theme.scss */
-.sticky .entry-title-link {
-  color: #12b32d;
-}
-
-/* line 113, sass/default/utilities/tools/_theme.scss */
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-navigation-theme.scss */
 div.nav-menu > ul > .page_item_has_children.status-sub-nav-active,
 div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active {
   background-color: #0099e6;
 }
-/* line 123, sass/default/utilities/tools/_theme.scss */
+/* line 27, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-navigation-theme.scss */
 div.nav-menu li:hover {
   background-color: #0099e6;
 }
-/* line 132, sass/default/utilities/tools/_theme.scss */
+/* line 36, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active,
 div.nav-menu .menu-item-has-children.status-sub-nav-active {
   background-color: #0099e6;
 }
-/* line 135, sass/default/utilities/tools/_theme.scss */
+/* line 39, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active:hover,
 div.nav-menu .menu-item-has-children.status-sub-nav-active:hover {
   background-color: #0099e6;
 }
-/* line 147, sass/default/utilities/tools/_theme.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children {
   background-color: #00a1f2;
 }
-/* line 159, sass/default/utilities/tools/_theme.scss */
+/* line 63, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
   background-color: #00a1f2;
 }
 
-/* line 171, sass/default/utilities/tools/_theme.scss */
-.ui-tablist-item a {
-  color: #00aaff;
-}
-
-/* line 179, sass/default/utilities/tools/_theme.scss */
-.bypostauthor .comment-author-name {
-  color: #12b32d;
-}
-/* line 182, sass/default/utilities/tools/_theme.scss */
-.bypostauthor .comment-author-name a {
-  color: #12b32d;
-}
-
-/* line 190, sass/default/utilities/tools/_theme.scss */
-.comment .author-avatar a {
-  background-color: #e6e6e6;
-}
-
-/* line 199, sass/default/utilities/tools/_theme.scss */
-.site-info .web-designer,
-.site-info .copyright {
-  color: gray;
-}
-
-/* line 253, sass/default/utilities/tools/_theme.scss */
-.post-edit-link {
-  color: #00aaff;
-}
-/* line 245, sass/default/utilities/tools/_theme.scss */
-.post-edit-link:hover {
-  color: white;
-  background-color: #00aaff;
-}
-
-/* line 259, sass/default/utilities/tools/_theme.scss */
-.sudo-button,
-button,
-input[type="submit"] {
-  background-color: #00aaff;
-}
-/* line 263, sass/default/utilities/tools/_theme.scss */
-[data-state-form-element="focused"] .sudo-button, .sudo-button:hover, [data-state-form-element="focused"]
-button,
-button:hover, [data-state-form-element="focused"]
-input[type="submit"],
-input[type="submit"]:hover {
-  background-color: #00aaff;
-}
-
-/* line 275, sass/default/utilities/tools/_theme.scss */
-.header-sidebar .search--sudo-button[data-state-form-element="focused"] {
+/* line 6, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_search-theme.scss */
+.header-sidebar .search--sudo-button[data-state-form-element="focused"], .search--sudo-button[data-state-form-element="focused"]:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_search-theme.scss */
+.header-sidebar .search--sudo-button {
+  background-color: transparent;
+}
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_search-theme.scss */
+.header-sidebar .search--sudo-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+@media only screen and (max-width: 47.9375rem) {
+  /* line 26, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_search-theme.scss */
+  .header-sidebar .search-form {
+    background-color: white;
+  }
+}
+
+/* line 2, sass/default/utilities/tools/_font-theme.scss */
+html {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
 }
 
 /* line 9, sass/default/utilities/tools/_patch.scss */
@@ -872,7 +944,7 @@ legend,
 .widget_nav_menu .widget-title,
 .form-allowed-tags,
 .skip-to-content-link, .child-content .entry-user-action,
-.child-content .entry-meta, .child-content .breadcrumbs, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .logged-in .comment-form .field-comment label, .comment-respond .label-verb-subject, .comments-ct .blank, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading,
+.child-content .entry-meta, .child-content .breadcrumbs, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading,
 .secondary-sidebar-heading,
 .tertiary-sidebar-heading {
   border: 0;
@@ -1058,147 +1130,25 @@ dd:last-child {
 }
 
 /* line 1, sass/default/structure/atoms/_form.scss */
-input {
-  width: 100%;
-}
-
-/* line 5, sass/default/structure/atoms/_form.scss */
-button {
-  width: 100%;
-  min-height: 2.5rem;
-}
-
-/* line 10, sass/default/structure/atoms/_form.scss */
-textarea {
-  width: 100%;
-  height: 2.5rem;
-  min-height: 2.5rem;
-}
-
-/* line 15, sass/default/structure/atoms/_form.scss */
-input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
-  padding: .5rem;
-  min-height: 2.5rem;
-}
-
-/* line 24, sass/default/structure/atoms/_form.scss */
-button,
-input[type="submit"],
-input[type="reset"] {
-  padding: .35rem .75rem;
-  line-height: normal;
-}
-
-/* line 29, sass/default/structure/atoms/_form.scss */
 label {
-  display: inline-block;
   margin-bottom: .5rem;
   font-weight: bold;
 }
-
-/* line 37, sass/default/structure/atoms/_form.scss */
-label[for]:hover {
+/* line 5, sass/default/structure/atoms/_form.scss */
+label[for] {
   cursor: pointer;
 }
 
-/* line 43, sass/default/structure/atoms/_form.scss */
-form br {
-  display: none;
-}
-
-/* line 49, sass/default/structure/atoms/_form.scss */
-.sudo-input-text {
-  border-top-width: 0.0625rem;
-  border-right-width: 0.0625rem;
-  border-bottom-width: 0.0625rem;
-  border-left-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.35);
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  overflow: hidden;
-  overflow: hidden;
-}
-/* line 54, sass/default/structure/atoms/_form.scss */
-.sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
+/* line 12, sass/default/structure/atoms/_form.scss */
+input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
   padding: .75rem;
-  min-height: 3.5rem;
-  border: none;
-}
-/* line 60, sass/default/structure/atoms/_form.scss */
-.sudo-input-text input[type='text']:focus, .sudo-input-text input[type='email']:focus, .sudo-input-text input[type='search']:focus, .sudo-input-text input[type='password']:focus, .sudo-input-text input[type='url']:focus, .sudo-input-text textarea:focus {
-  outline: 0;
 }
 
-/* line 69, sass/default/structure/atoms/_form.scss */
-.sudo-button {
-  color: white;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  overflow: hidden;
-  -webkit-transition: background-color 0.125s ease;
-  -moz-transition: background-color 0.125s ease;
-  -ms-transition: background-color 0.125s ease;
-  -o-transition: background-color 0.125s ease;
-  transition: background-color 0.125s ease;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-/* line 8, sass/default/utilities/tools/visual/_buttonstyle.scss */
-.sudo-button:active {
-  -webkit-transform: translate(0, 0.0625rem);
-  -moz-transform: translate(0, 0.0625rem);
-  -ms-transform: translate(0, 0.0625rem);
-  -o-transform: translate(0, 0.0625rem);
-  transform: translate(0, 0.0625rem);
-}
-/* line 74, sass/default/structure/atoms/_form.scss */
-.sudo-button button,
-.sudo-button input {
-  margin: auto;
-  border: none;
-  padding: .75rem;
-  min-height: 3rem;
-  background-color: transparent;
-}
-/* line 81, sass/default/structure/atoms/_form.scss */
-.sudo-button button:hover,
-.sudo-button input:hover {
-  background-color: transparent;
-}
-
-/* line 91, sass/default/structure/atoms/_form.scss */
-button,
-input[type="submit"] {
-  border: none;
+/* line 17, sass/default/structure/atoms/_form.scss */
+button, input[type='submit'], input[type='reset'] {
   margin-top: 1rem;
-  color: white;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  overflow: hidden;
-  -webkit-transition: background-color 0.125s ease;
-  -moz-transition: background-color 0.125s ease;
-  -ms-transition: background-color 0.125s ease;
-  -o-transition: background-color 0.125s ease;
-  transition: background-color 0.125s ease;
-  overflow: hidden;
   padding: .75rem;
-  min-height: 3rem;
-}
-/* line 8, sass/default/utilities/tools/visual/_buttonstyle.scss */
-button:active,
-input[type="submit"]:active {
-  -webkit-transform: translate(0, 0.0625rem);
-  -moz-transform: translate(0, 0.0625rem);
-  -ms-transform: translate(0, 0.0625rem);
-  -o-transform: translate(0, 0.0625rem);
-  transform: translate(0, 0.0625rem);
+  line-height: normal;
 }
 
 /* line 4, sass/default/structure/atoms/_heading.scss */
@@ -2333,169 +2283,179 @@ ins {
   }
 }
 
-/* line 198, sass/default/structure/organisms/_comment.scss */
-.comment-form .field-comment {
-  clear: both;
-}
-/* line 211, sass/default/structure/organisms/_comment.scss */
-.comment-form .field-author {
-  clear: both;
-}
-/* line 215, sass/default/structure/organisms/_comment.scss */
-.comment-form textarea {
-  display: block;
-  height: 4.5rem;
-  min-height: 4.5rem;
-  max-height: 10.5rem;
-}
-
-/* line 226, sass/default/structure/organisms/_comment.scss */
+/* line 196, sass/default/structure/organisms/_comment.scss */
 .comment-form-signed-in-as {
   display: inline-block;
 }
 
-/* line 230, sass/default/structure/organisms/_comment.scss */
+/* line 200, sass/default/structure/organisms/_comment.scss */
 .comment-form-action {
   display: inline-block;
   margin-left: 1rem;
 }
 
-/* line 235, sass/default/structure/organisms/_comment.scss */
+/* line 205, sass/default/structure/organisms/_comment.scss */
 .note-optional {
   color: gray;
   font-weight: normal;
 }
 
-/* line 240, sass/default/structure/organisms/_comment.scss */
+/* line 210, sass/default/structure/organisms/_comment.scss */
 .form-submit {
   margin-bottom: auto;
 }
 
-/* line 244, sass/default/structure/organisms/_comment.scss */
+/* line 214, sass/default/structure/organisms/_comment.scss */
 .comment-respond {
   margin-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 250, sass/default/structure/organisms/_comment.scss */
+/* line 220, sass/default/structure/organisms/_comment.scss */
 .comment-respond small {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 258, sass/default/structure/organisms/_comment.scss */
+/* line 228, sass/default/structure/organisms/_comment.scss */
 .comments-ct .comment-respond {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 263, sass/default/structure/organisms/_comment.scss */
+/* line 233, sass/default/structure/organisms/_comment.scss */
 .comment-list .comment-respond {
   padding-left: 0;
 }
 @media only screen and (min-width: 37.5rem) {
-  /* line 263, sass/default/structure/organisms/_comment.scss */
+  /* line 233, sass/default/structure/organisms/_comment.scss */
   .comment-list .comment-respond {
     margin-left: 1rem;
     padding-left: 4.5rem;
   }
 }
 
-/* line 282, sass/default/structure/organisms/_comment.scss */
+/* line 252, sass/default/structure/organisms/_comment.scss */
 .comments-ct-cr > * {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 287, sass/default/structure/organisms/_comment.scss */
+/* line 257, sass/default/structure/organisms/_comment.scss */
 #cancel-comment-reply-link {
   margin-left: 1rem;
 }
 
-/* line 291, sass/default/structure/organisms/_comment.scss */
+/* line 261, sass/default/structure/organisms/_comment.scss */
 .comment-form-admin {
-  float: right;
-  margin-left: 2rem;
   margin-top: .5rem;
   margin-bottom: 1rem;
+  text-align: center;
+}
+@media only screen and (min-width: 37.5rem) {
+  /* line 261, sass/default/structure/organisms/_comment.scss */
+  .comment-form-admin {
+    float: right;
+    margin-left: 2rem;
+  }
 }
 
-/* line 298, sass/default/structure/organisms/_comment.scss */
+/* line 273, sass/default/structure/organisms/_comment.scss */
 .comment-reply-title {
-  float: left;
   font-size: 24px;
   font-size: 1.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 37.5rem) {
+  /* line 273, sass/default/structure/organisms/_comment.scss */
+  .comment-reply-title {
+    float: left;
+  }
 }
 
-/* line 303, sass/default/structure/organisms/_comment.scss */
+/* line 283, sass/default/structure/organisms/_comment.scss */
 .comment-pending {
   margin-bottom: auto;
-  color: gray;
   font-style: italic;
 }
 
-/* line 311, sass/default/structure/organisms/_comment.scss */
+/* line 290, sass/default/structure/organisms/_comment.scss */
 .comments .blank {
   margin-bottom: 2rem;
   padding: 0 1rem;
 }
 
-/* line 318, sass/default/structure/organisms/_comment.scss */
+/* line 297, sass/default/structure/organisms/_comment.scss */
 .comments-hr {
   margin-bottom: 1rem;
 }
 
-/* line 324, sass/default/structure/organisms/_comment.scss */
+/* line 303, sass/default/structure/organisms/_comment.scss */
 .comment-navigation-list .action-item {
   display: inline-block;
 }
-/* line 327, sass/default/structure/organisms/_comment.scss */
+/* line 306, sass/default/structure/organisms/_comment.scss */
 .comment-navigation-list .action-item a {
   display: inline-block;
   padding: 1rem;
 }
 
-/* line 337, sass/default/structure/organisms/_comment.scss */
+/* line 316, sass/default/structure/organisms/_comment.scss */
 .comment-subscription-form {
   margin-bottom: auto;
 }
 
-/* line 341, sass/default/structure/organisms/_comment.scss */
+/* line 320, sass/default/structure/organisms/_comment.scss */
 .comment-date {
   margin-right: .5rem;
 }
 
-/* line 347, sass/default/structure/organisms/_comment.scss */
-.sudo-input-text[data-state-form-element="focused"] {
-  border-top-width: 0.0625rem;
-  border-right-width: 0.0625rem;
-  border-bottom-width: 0.0625rem;
-  border-left-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.75);
+/* line 328, sass/default/structure/organisms/_comment.scss */
+.comment-form textarea {
+  display: block;
+  height: 4.5rem;
+  min-height: 4.5rem;
 }
-
-@media only screen and (min-width: 48rem) {
-  /* line 358, sass/default/structure/organisms/_comment.scss */
+@media only screen and (min-width: 20rem) {
+  /* line 328, sass/default/structure/organisms/_comment.scss */
+  .comment-form textarea {
+    padding-right: 4.5rem;
+  }
+}
+/* line 341, sass/default/structure/organisms/_comment.scss */
+.comment-form .field-comment {
+  clear: both;
+}
+@media only screen and (min-width: 20rem) {
+  /* line 341, sass/default/structure/organisms/_comment.scss */
   .comment-form .field-comment {
     position: relative;
   }
-  /* line 362, sass/default/structure/organisms/_comment.scss */
+}
+/* line 359, sass/default/structure/organisms/_comment.scss */
+.comment-form .field-author {
+  clear: both;
+}
+@media only screen and (min-width: 20rem) {
+  /* line 363, sass/default/structure/organisms/_comment.scss */
   .comment-form .form-submit {
     position: absolute;
     right: 0;
     bottom: 0;
     margin-right: .75rem;
-    margin-bottom: .75rem !important;
-    border-radius: 50%;
-    overflow: hidden;
+    margin-bottom: .75rem;
   }
-  /* line 370, sass/default/structure/organisms/_comment.scss */
+}
+@media only screen and (min-width: 20rem) {
+  /* line 374, sass/default/structure/organisms/_comment.scss */
   .comment-form .form-submit [type="submit"] {
-    margin-top: auto;
+    margin-top: 0;
     padding: 0;
     width: 3rem;
     height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
   }
 }
+
 /* line 2, sass/default/structure/organisms/_content-navigation.scss */
 .content-navigation {
   clear: both;
@@ -2724,6 +2684,118 @@ ins {
   color: gray;
   text-transform: uppercase;
   line-height: normal;
+}
+
+/* line 2, sass/default/structure/organisms/_form.scss */
+label {
+  display: inline-block;
+}
+
+/* line 7, sass/default/structure/organisms/_form.scss */
+input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
+  width: 100%;
+  min-height: 3rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+/* line 15, sass/default/structure/organisms/_form.scss */
+[data-state-form-element="focused"] input[type='text'], [data-state-form-element="focused"] input[type='email'], [data-state-form-element="focused"] input[type='search'], [data-state-form-element="focused"] input[type='password'], [data-state-form-element="focused"] input[type='url'], [data-state-form-element="focused"] textarea {
+  border-width: .125rem;
+}
+
+/* line 21, sass/default/structure/organisms/_form.scss */
+button, input[type='submit'], input[type='reset'] {
+  width: 100%;
+  min-height: 3rem;
+  border: none;
+  border-radius: 0.25rem;
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
+  overflow: hidden;
+}
+/* line 30, sass/default/structure/organisms/_form.scss */
+button:active, input[type='submit']:active, input[type='reset']:active {
+  -webkit-transform: translate(0, 0.0625rem);
+  -moz-transform: translate(0, 0.0625rem);
+  -ms-transform: translate(0, 0.0625rem);
+  -o-transform: translate(0, 0.0625rem);
+  transform: translate(0, 0.0625rem);
+}
+
+/* line 37, sass/default/structure/organisms/_form.scss */
+textarea {
+  height: 4.5rem;
+  min-height: 3rem;
+}
+
+/* line 43, sass/default/structure/organisms/_form.scss */
+.sudo-input-text {
+  margin: .125rem 0;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+/* line 50, sass/default/structure/organisms/_form.scss */
+.sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
+  border: none;
+  border-radius: 0;
+  overflow: auto;
+}
+/* line 55, sass/default/structure/organisms/_form.scss */
+.sudo-input-text input[type='text']:focus, .sudo-input-text input[type='email']:focus, .sudo-input-text input[type='search']:focus, .sudo-input-text input[type='password']:focus, .sudo-input-text input[type='url']:focus, .sudo-input-text textarea:focus {
+  outline: 0;
+}
+/* line 61, sass/default/structure/organisms/_form.scss */
+.sudo-input-text[data-state-form-element="focused"] {
+  margin: 0;
+  border-width: .125rem;
+}
+
+/* line 68, sass/default/structure/organisms/_form.scss */
+.sudo-button {
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease;
+  overflow: hidden;
+}
+/* line 74, sass/default/structure/organisms/_form.scss */
+.sudo-button:active {
+  -webkit-transform: translate(0, 0.0625rem);
+  -moz-transform: translate(0, 0.0625rem);
+  -ms-transform: translate(0, 0.0625rem);
+  -o-transform: translate(0, 0.0625rem);
+  transform: translate(0, 0.0625rem);
+}
+/* line 78, sass/default/structure/organisms/_form.scss */
+.sudo-button button, .sudo-button input[type='submit'], .sudo-button input[type='reset'] {
+  margin-top: 0;
+  border-radius: 0;
+  background-color: transparent;
+  overflow: auto;
+}
+/* line 84, sass/default/structure/organisms/_form.scss */
+.sudo-button button:hover, .sudo-button input[type='submit']:hover, .sudo-button input[type='reset']:hover {
+  background-color: transparent;
+}
+/* line 88, sass/default/structure/organisms/_form.scss */
+.sudo-button button:active, .sudo-button input[type='submit']:active, .sudo-button input[type='reset']:active {
+  background-color: transparent;
+  transform: translate(0);
+}
+
+/* line 99, sass/default/structure/organisms/_form.scss */
+.sudo-button[data-state-form-element="focused"] button, .sudo-button[data-state-form-element="focused"] input[type='submit'], .sudo-button[data-state-form-element="focused"] input[type='reset']:hover {
+  background-color: transparent;
 }
 
 /* line 1, sass/default/structure/organisms/_gallery.scss */
@@ -3677,11 +3749,11 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   .status-mobile-main-nav-active .hopscotch--site .main-navigation-heading .icon:hover {
     opacity: 1;
   }
-  /* line 209, sass/default/utilities/tools/_theme.scss */
+  /* line 4, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_masthead-header-theme.scss */
   .hopscotch--site .masthead {
     background-color: #00aaff;
   }
-  /* line 213, sass/default/utilities/tools/_theme.scss */
+  /* line 8, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_masthead-header-theme.scss */
   .hopscotch--site .site-title-link:hover {
     background-color: #0099e6;
   }
@@ -3698,16 +3770,16 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   .hopscotch--site .header-sidebar .search-control:hover {
     opacity: 1;
   }
-  /* line 224, sass/default/utilities/tools/_theme.scss */
+  /* line 19, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_masthead-header-theme.scss */
   .hopscotch--site .header-sidebar .search-control .icon,
   .hopscotch--site .header-sidebar .search-submit .icon {
     fill: white;
   }
-  /* line 228, sass/default/utilities/tools/_theme.scss */
+  /* line 23, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_masthead-header-theme.scss */
   .hopscotch--site .header-sidebar .search-form {
     background-color: #00aaff;
   }
-  /* line 232, sass/default/utilities/tools/_theme.scss */
+  /* line 27, /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/tools/../../structure/organisms/_masthead-header-theme.scss */
   .hopscotch--site .header-sidebar .search-input {
     background-color: transparent;
     color: white;
@@ -3971,72 +4043,53 @@ iframe[src*="codepen.io"] {
 /* line 86, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--sudo-button {
   margin-top: auto;
-  background-color: transparent;
   border: none;
   border-radius: 0;
 }
-/* line 95, sass/default/structure/organisms/_search.scss */
-.header-sidebar .search--sudo-button button:hover {
-  background-color: transparent;
-}
-/* line 105, sass/default/structure/organisms/_search.scss */
-.header-sidebar .search--sudo-button:hover {
-  background-color: transparent;
-}
-/* line 111, sass/default/structure/organisms/_search.scss */
-[data-state-form-element="focused"] .header-sidebar:hover {
-  background-color: transparent;
-}
-/* line 115, sass/default/structure/organisms/_search.scss */
+/* line 98, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-form {
   position: relative;
   margin-bottom: auto;
 }
-@media only screen and (max-width: 47.9375rem) {
-  /* line 115, sass/default/structure/organisms/_search.scss */
-  .header-sidebar .search-form {
-    background-color: white;
-  }
-}
-/* line 124, sass/default/structure/organisms/_search.scss */
+/* line 102, sass/default/structure/organisms/_search.scss */
 .status-search-active .header-sidebar .search-form {
   padding-right: 3.5rem;
 }
-/* line 130, sass/default/structure/organisms/_search.scss */
+/* line 108, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--field-input {
   margin-bottom: auto;
   height: 3.5rem;
 }
-/* line 134, sass/default/structure/organisms/_search.scss */
+/* line 112, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--field-input .field-cr {
   width: 100%;
 }
-/* line 141, sass/default/structure/organisms/_search.scss */
+/* line 119, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-control {
   margin-bottom: auto;
   width: 3.5rem;
   height: 3.5rem;
 }
-/* line 150, sass/default/structure/organisms/_search.scss */
+/* line 128, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-control .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
-/* line 154, sass/default/structure/organisms/_search.scss */
+/* line 132, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-control:hover {
   cursor: pointer;
 }
-/* line 164, sass/default/structure/organisms/_search.scss */
+/* line 142, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-submit {
   width: 3.5rem;
   height: 3.5rem;
 }
-/* line 172, sass/default/structure/organisms/_search.scss */
+/* line 150, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search-submit .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
-/* line 178, sass/default/structure/organisms/_search.scss */
+/* line 156, sass/default/structure/organisms/_search.scss */
 .header-sidebar .search--field-action {
   position: absolute;
   top: 0;
@@ -4044,7 +4097,7 @@ iframe[src*="codepen.io"] {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 188, sass/default/structure/organisms/_search.scss */
+  /* line 166, sass/default/structure/organisms/_search.scss */
   [data-state-search="active"] .search {
     padding-left: 3.5rem;
   }
@@ -4185,15 +4238,15 @@ iframe[src*="codepen.io"] {
   list-style: none;
   margin: auto;
   padding: 0;
-  margin-left: auto;
-  margin-bottom: auto;
+  margin-left: 0;
+  margin-bottom: 0;
   white-space: nowrap;
 }
 
 /* line 9, sass/default/structure/organisms/_ui-tabs.scss */
 .ui-tablist-item {
   display: inline-block;
-  margin-bottom: auto;
+  margin-bottom: 0;
   vertical-align: bottom;
 }
 /* line 14, sass/default/structure/organisms/_ui-tabs.scss */
@@ -4202,8 +4255,8 @@ iframe[src*="codepen.io"] {
   margin-right: -1px;
   padding: .75rem;
   min-width: 8rem;
-  background-color: white;
-  border: 1px solid #ccc;
+  border-width: 0.0625rem;
+  border-style: solid;
   border-bottom: none;
   white-space: nowrap;
   text-align: center;
@@ -4213,36 +4266,35 @@ iframe[src*="codepen.io"] {
   position: relative;
   top: 1px;
   margin-left: -1px;
-  color: currentColor;
 }
-/* line 33, sass/default/structure/organisms/_ui-tabs.scss */
+/* line 32, sass/default/structure/organisms/_ui-tabs.scss */
 .ui-tablist-item a[aria-selected="false"] {
   margin-top: .5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
-/* line 43, sass/default/structure/organisms/_ui-tabs.scss */
+/* line 42, sass/default/structure/organisms/_ui-tabs.scss */
 .ui-tablist-item:first-child [aria-selected="true"] {
   margin-left: auto;
 }
-/* line 51, sass/default/structure/organisms/_ui-tabs.scss */
+/* line 50, sass/default/structure/organisms/_ui-tabs.scss */
 .ui-tablist-item:last-child [aria-selected="true"] {
   margin-right: auto;
 }
 
-/* line 59, sass/default/structure/organisms/_ui-tabs.scss */
+/* line 58, sass/default/structure/organisms/_ui-tabs.scss */
 [aria-hidden="true"] {
   display: none;
 }
 
-/* line 63, sass/default/structure/organisms/_ui-tabs.scss */
+/* line 62, sass/default/structure/organisms/_ui-tabs.scss */
 [aria-hidden="false"] {
   display: block;
 }
 
-/* line 67, sass/default/structure/organisms/_ui-tabs.scss */
+/* line 66, sass/default/structure/organisms/_ui-tabs.scss */
 .ui-tabpanel {
   padding: 1rem;
-  border: 1px solid #ccc;
-  background-color: white;
+  border-width: 0.0625rem;
+  border-style: solid;
 }

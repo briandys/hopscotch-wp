@@ -1,0 +1,103 @@
+//------------------------- Form Elements
+label {
+    display: inline-block;
+}
+
+
+#{$form-input-type-text} {
+    width: 100%;
+    min-height: $block;
+    border-width: $one;
+    border-style:solid;
+    border-radius: $radius-s;
+    overflow: hidden;
+    
+    [data-state-form-element="focused"] & {
+        border-width: .125rem;
+    }
+}
+
+
+#{$form-buttons} {
+    width: 100%;
+    min-height: $block;
+    border: none;
+    
+    border-radius: $radius-s;
+    @include transition( background-color );
+    overflow: hidden;
+    
+    &:active {
+        @include transform( translate( 0, $one ) );
+    }
+    
+}
+
+
+textarea {
+    height: 4.5rem;
+    min-height: $block;
+}
+
+//------------------------- Pseudo Form Elements
+.sudo-input-text {
+    margin: .125rem 0;
+    border-width: $one;
+    border-style:solid;
+    border-radius: $radius-s;
+    overflow: hidden;
+    
+    #{$form-input-type-text} {
+        border: none;
+        border-radius: 0;
+        overflow: auto;
+        
+        &:focus {
+            outline: 0;
+        }
+        
+    }
+    
+    &[data-state-form-element="focused"] {
+        margin: 0;
+        border-width: .125rem;
+    }
+    
+}
+
+.sudo-button {
+    margin-top: 1rem;
+    border-radius: $radius-s;
+    @include transition( background-color );
+    overflow: hidden;
+
+    &:active {
+        @include transform( translate(0, $one) );
+    }
+    
+    #{$form-buttons} {
+        margin-top: 0;
+        border-radius: 0;
+        background-color: transparent;
+        overflow: auto;
+        
+        &:hover {
+            background-color: transparent;
+        }
+        
+        &:active {
+            background-color: transparent;
+            transform: translate( 0 );
+        }
+        
+    }
+    
+}
+
+.sudo-button[data-state-form-element="focused"] {
+    
+    #{$form-buttons}:hover {
+        background-color: transparent;
+    }
+    
+}

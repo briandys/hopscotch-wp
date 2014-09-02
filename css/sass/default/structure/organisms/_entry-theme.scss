@@ -1,0 +1,44 @@
+@mixin buttonizer-theme {
+    color: $color-link-primary;
+    
+    &:hover {
+        color: $white;
+        background-color: $color-link-primary;
+    }
+    
+}
+
+
+// Entry Title Link
+.entry-title-link {
+    
+    // If the Entry Title is on a listing
+    .blog &,
+    .home & {
+        color: $color-link-primary;
+    }
+    
+    // If the Entry Title in on its page
+    .single &,
+    .page & {
+        color: $color-font;
+    }
+    
+    // Sticky Posts
+    .sticky & {
+        color: darken( $color-primary, 10% );
+    }
+    
+}
+
+
+// More Link
+.show-more-content .more-link {
+    color: $color-link-secondary;
+}
+
+
+
+.post-edit-link {
+    @include buttonizer-theme;
+}

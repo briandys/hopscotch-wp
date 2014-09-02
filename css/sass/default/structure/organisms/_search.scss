@@ -86,40 +86,18 @@
     .search--sudo-button {
         // Reset
         margin-top: auto;
-        background-color: transparent;
         border: none;
         border-radius: 0;
-        
-        button {
-        
-            &:hover {
-                background-color: transparent;
-            }
-            
-        }
         
         .status-search-inactive & {
             @extend %vhide;
         }
         
-        &:hover {
-            background-color: transparent;
-        }
-        
-    }
-    
-    [data-state-form-element="focused"] &:hover {
-        background-color: transparent;
     }
     
     .search-form {
         position: relative;
         margin-bottom: auto;
-        
-        // Narrow mode
-        @include mq($tablet, $query1: max) {
-            background-color: $white;
-        }
         
         .status-search-active & {
             padding-right: $block-l;

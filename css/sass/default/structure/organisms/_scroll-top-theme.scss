@@ -1,0 +1,17 @@
+.scroll-top-link {
+    background-color: rgba($gray25, .75);
+    
+    .icon {
+        fill: $white;
+    }
+    
+    &:hover {
+        background-color: rgba($gray25, .95);
+    
+        .icon {
+            fill: rgba( $white, .5 );
+        }
+        
+    }
+    
+}

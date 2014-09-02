@@ -1,0 +1,34 @@
+// Header Theme
+@mixin header-semi-compact-theme {
+        
+    .masthead {
+        background-color: $color-primary;
+    }
+    
+    .site-title-link:hover {
+        background-color: darken( $color-primary, 5% );
+    }
+
+}
+
+
+// Search Theme
+@mixin search-header-reverse-theme {
+    
+    .header-sidebar .search-control .icon,
+    .header-sidebar .search-submit .icon {
+        fill: $white;
+    }
+    
+    .header-sidebar .search-form {
+        background-color: $color-primary;
+    }
+    
+    .header-sidebar .search-input {
+        background-color: transparent;
+        color: $white;
+    }
+    
+    @include placeholder( $white );
+    
+}
