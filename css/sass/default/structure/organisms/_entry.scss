@@ -27,10 +27,6 @@ $entry-byline-avatar-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     
-    .entry:only-of-type & {
-        margin-bottom: 0;
-    }
-    
 }
 
 
@@ -148,6 +144,11 @@ $entry-byline-avatar-size: 2rem;
             line-height: 1.75;
         }
         
+        ol,
+        ul {
+            margin-left: $gutter;
+        }
+        
     }
     
     // Entry Links
@@ -158,11 +159,6 @@ $entry-byline-avatar-size: 2rem;
     hr {
         margin-top: 2rem;
         margin-bottom: 2rem;
-    }
-    
-    ul + p,
-    ol + p {
-        margin-top: -1rem;
     }
     
     p,

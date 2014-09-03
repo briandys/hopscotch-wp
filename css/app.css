@@ -982,21 +982,6 @@ button:active, input[type='submit']:active, input[type='reset']:active {
   fill: rgba(255, 255, 255, 0.5);
 }
 
-/* line 1, sass/default/structure/organisms/_main-theme.scss */
-html {
-  color: #333333;
-  background-color: white;
-}
-
-/* line 6, sass/default/structure/organisms/_main-theme.scss */
-.main-cr {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(95%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(top, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-linear-gradient(top, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(top, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-}
-
 /* line 1, sass/default/structure/organisms/_svg-theme.scss */
 svg.icon:hover {
   fill: #00aaff;
@@ -1714,12 +1699,8 @@ html {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-/* line 30, sass/default/structure/organisms/_entry.scss */
-.entry:only-of-type .entry-cr {
-  margin-bottom: 0;
-}
 
-/* line 37, sass/default/structure/organisms/_entry.scss */
+/* line 33, sass/default/structure/organisms/_entry.scss */
 .entry-title {
   display: inline;
   font-size: 32px;
@@ -1729,43 +1710,43 @@ html {
   word-wrap: break-word;
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 37, sass/default/structure/organisms/_entry.scss */
+  /* line 33, sass/default/structure/organisms/_entry.scss */
   .entry-title {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 
-/* line 50, sass/default/structure/organisms/_entry.scss */
+/* line 46, sass/default/structure/organisms/_entry.scss */
 .entry-hr-cr {
   margin-bottom: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 55, sass/default/structure/organisms/_entry.scss */
+/* line 51, sass/default/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-meta {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-/* line 65, sass/default/structure/organisms/_entry.scss */
+/* line 61, sass/default/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-thumbnail {
   margin-top: 1rem;
 }
-/* line 69, sass/default/structure/organisms/_entry.scss */
+/* line 65, sass/default/structure/organisms/_entry.scss */
 .entry-hr-cr .entry-user-action {
   margin-top: .5rem;
 }
 
-/* line 77, sass/default/structure/organisms/_entry.scss */
+/* line 73, sass/default/structure/organisms/_entry.scss */
 .entry-timestamp {
   display: inline-block;
 }
-/* line 81, sass/default/structure/organisms/_entry.scss */
+/* line 77, sass/default/structure/organisms/_entry.scss */
 .entry-hr .entry-timestamp, .entry-fr .entry-timestamp {
   margin-right: 1rem;
 }
 
-/* line 87, sass/default/structure/organisms/_entry.scss */
+/* line 83, sass/default/structure/organisms/_entry.scss */
 .entry-timestamp-link {
   text-decoration: none;
   border: none;
@@ -1783,13 +1764,13 @@ html {
   border-bottom: none;
 }
 
-/* line 91, sass/default/structure/organisms/_entry.scss */
+/* line 87, sass/default/structure/organisms/_entry.scss */
 .entry-byline {
   display: inline-block;
   margin-top: .25rem;
   line-height: 2rem;
 }
-/* line 97, sass/default/structure/organisms/_entry.scss */
+/* line 93, sass/default/structure/organisms/_entry.scss */
 .entry-byline .avatar {
   float: left;
   margin-right: .5rem;
@@ -1798,11 +1779,11 @@ html {
   border-radius: 50%;
   overflow: hidden;
 }
-/* line 104, sass/default/structure/organisms/_entry.scss */
+/* line 100, sass/default/structure/organisms/_entry.scss */
 .entry-byline .mid-label {
   margin-right: .5rem;
 }
-/* line 108, sass/default/structure/organisms/_entry.scss */
+/* line 104, sass/default/structure/organisms/_entry.scss */
 .entry-byline .author a {
   text-decoration: none;
   border: none;
@@ -1820,38 +1801,43 @@ html {
   border-bottom: none;
 }
 
-/* line 114, sass/default/structure/organisms/_entry.scss */
+/* line 110, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
   display: inline-block;
 }
 
-/* line 120, sass/default/structure/organisms/_entry.scss */
+/* line 116, sass/default/structure/organisms/_entry.scss */
 .entry-ct > * {
   margin-bottom: 2rem;
 }
-/* line 123, sass/default/structure/organisms/_entry.scss */
+/* line 119, sass/default/structure/organisms/_entry.scss */
 .entry-ct > *:last-child {
   margin-bottom: auto;
 }
 
-/* line 132, sass/default/structure/organisms/_entry.scss */
+/* line 128, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 138, sass/default/structure/organisms/_entry.scss */
+/* line 134, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > * {
   word-wrap: break-word;
 }
-/* line 141, sass/default/structure/organisms/_entry.scss */
+/* line 137, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > *:last-child {
   margin-bottom: auto;
 }
-/* line 147, sass/default/structure/organisms/_entry.scss */
+/* line 143, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > p {
   line-height: 1.75;
 }
-/* line 154, sass/default/structure/organisms/_entry.scss */
+/* line 148, sass/default/structure/organisms/_entry.scss */
+.entry-ct-cr > ol,
+.entry-ct-cr > ul {
+  margin-left: 1rem;
+}
+/* line 155, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr a {
   text-decoration: none;
   border: none;
@@ -1868,17 +1854,12 @@ html {
   text-decoration: none;
   border-bottom: none;
 }
-/* line 158, sass/default/structure/organisms/_entry.scss */
+/* line 159, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 164, sass/default/structure/organisms/_entry.scss */
-.entry-ct-cr ul + p,
-.entry-ct-cr ol + p {
-  margin-top: -1rem;
-}
-/* line 175, sass/default/structure/organisms/_entry.scss */
+/* line 171, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr p,
 .entry-ct-cr pre,
 .entry-ct-cr dd,
@@ -1889,16 +1870,16 @@ html {
 .entry-ct-cr .notice {
   margin-bottom: 1.5rem;
 }
-/* line 180, sass/default/structure/organisms/_entry.scss */
+/* line 176, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr blockquote,
 .entry-ct-cr form {
   margin-bottom: 2rem;
 }
-/* line 184, sass/default/structure/organisms/_entry.scss */
+/* line 180, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr p {
   margin-top: 2rem;
 }
-/* line 193, sass/default/structure/organisms/_entry.scss */
+/* line 189, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr p:last-child,
 .entry-ct-cr li:last-child,
 .entry-ct-cr .field:last-child,
@@ -1907,7 +1888,7 @@ html {
   margin-bottom: auto;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 197, sass/default/structure/organisms/_entry.scss */
+  /* line 193, sass/default/structure/organisms/_entry.scss */
   .entry-ct-cr .pull-quote {
     float: left;
     margin-left: auto;
@@ -1919,71 +1900,71 @@ html {
     font-size: 2rem;
   }
 }
-/* line 214, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h1 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 218, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h1:first-child {
   margin-top: auto;
 }
-/* line 214, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 218, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h2:first-child {
   margin-top: auto;
 }
-/* line 214, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 218, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h3:first-child {
   margin-top: auto;
 }
-/* line 214, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h4 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 218, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h4:first-child {
   margin-top: auto;
 }
-/* line 214, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h5 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 218, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h5:first-child {
   margin-top: auto;
 }
-/* line 214, sass/default/structure/organisms/_entry.scss */
+/* line 210, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h6 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* line 218, sass/default/structure/organisms/_entry.scss */
+/* line 214, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr > h6:first-child {
   margin-top: auto;
 }
-/* line 226, sass/default/structure/organisms/_entry.scss */
+/* line 222, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr h3 {
   font-weight: 600;
 }
-/* line 230, sass/default/structure/organisms/_entry.scss */
+/* line 226, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr h4 {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 600;
 }
-/* line 235, sass/default/structure/organisms/_entry.scss */
+/* line 231, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr pre {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -2021,40 +2002,40 @@ html {
   font-size: 12px;
   font-size: 0.75rem;
 }
-/* line 247, sass/default/structure/organisms/_entry.scss */
+/* line 243, sass/default/structure/organisms/_entry.scss */
 .format-status .entry-ct-cr > * {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 255, sass/default/structure/organisms/_entry.scss */
+/* line 251, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr img[src*=".svg"],
 .entry-ct-cr img[src*=".png"] {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgb3BhY2l0eT0iMC4xNSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiLz48L2c+PC9zdmc+);
   background-size: 1.125rem;
 }
-/* line 260, sass/default/structure/organisms/_entry.scss */
+/* line 256, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr img[src*=".svg"][width="1"] {
   width: 100%;
   height: auto;
 }
-/* line 266, sass/default/structure/organisms/_entry.scss */
+/* line 262, sass/default/structure/organisms/_entry.scss */
 .entry-ct-cr .wp-caption-text {
   margin-top: 0;
 }
 
-/* line 274, sass/default/structure/organisms/_entry.scss */
+/* line 270, sass/default/structure/organisms/_entry.scss */
 .entry-fr .entry-meta {
   margin-bottom: 1rem;
 }
 
-/* line 280, sass/default/structure/organisms/_entry.scss */
+/* line 276, sass/default/structure/organisms/_entry.scss */
 .entry-fr-cr {
   margin-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/* line 287, sass/default/structure/organisms/_entry.scss */
+/* line 283, sass/default/structure/organisms/_entry.scss */
 .entry-admin-action {
   -webkit-transform: translate(0, 0.25rem);
   -moz-transform: translate(0, 0.25rem);
@@ -2063,7 +2044,7 @@ html {
   transform: translate(0, 0.25rem);
 }
 
-/* line 292, sass/default/structure/organisms/_entry.scss */
+/* line 288, sass/default/structure/organisms/_entry.scss */
 .post-edit-link {
   -webkit-transition: background-color 0.125s ease;
   -moz-transition: background-color 0.125s ease;
@@ -2091,23 +2072,23 @@ html {
   border-style: solid;
 }
 
-/* line 303, sass/default/structure/organisms/_entry.scss */
+/* line 299, sass/default/structure/organisms/_entry.scss */
 .entry-subtitle {
   font-size: 20px;
   font-size: 1.25rem;
 }
 
-/* line 312, sass/default/structure/organisms/_entry.scss */
+/* line 308, sass/default/structure/organisms/_entry.scss */
 .entry-meta {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 326, sass/default/structure/organisms/_entry.scss */
+/* line 322, sass/default/structure/organisms/_entry.scss */
 .format-status .entry-fr-cr .entry-meta {
   display: inline-block;
 }
-/* line 330, sass/default/structure/organisms/_entry.scss */
+/* line 326, sass/default/structure/organisms/_entry.scss */
 .format-status .entry-fr-cr .entry-admin-action {
   display: inline-block;
   vertical-align: middle;

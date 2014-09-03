@@ -1,8 +1,0 @@
-html {
-    color: $color-font;
-    background-color: $color-site-bg;
-}
-
-.main-cr {
-    @include background-image( linear-gradient( top, $color-site-bg 95%, rgba( $color-site-bg, 0) 100% ) );
-}
