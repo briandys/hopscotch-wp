@@ -26,6 +26,11 @@ $entry-byline-avatar-size: 2rem;
     margin-bottom: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    
+    .entry:only-of-type & {
+        margin-bottom: 0;
+    }
+    
 }
 
 
@@ -148,7 +153,6 @@ $entry-byline-avatar-size: 2rem;
     // Entry Links
     a {
         @include linkstyle-faint;
-        
     }
     
     hr {

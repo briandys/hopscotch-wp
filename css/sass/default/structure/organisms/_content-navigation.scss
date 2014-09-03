@@ -1,12 +1,13 @@
 // Generic Content Navigation
 .content-navigation {
     clear: both;
-    margin-top: 2rem;
 }
 
 .content-navigation-cr {
     @include borderstyle-perforated;
     @include borderstyle-perforated( top );
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .content-navigation-list {
@@ -41,16 +42,16 @@
         text-align: left;
     }
     
-    a {
-        @include linkstyle-highlight;
-    }
-    
     .page-numbers {
         @include linkstyle-cube;
     }
     
     .current {
         @include linkstyle-cube-current;
+    }
+    
+    a {
+        @include linkstyle-highlight;
     }
     
 }
@@ -72,13 +73,13 @@
         width: 100%;
         vertical-align: top;
         
-        @include mq( $tablet, iefixOn ) {
+        @include mq( $tablet ) {
             width: 50%;
         }
         
         a {
-            display: block;
             @include linkstyle-highlight;
+            display: block;
         }
         
         .label {
@@ -114,10 +115,6 @@
         @include linkstyle-cube-current;
     }
     
-    a {
-        @include linkstyle-highlight;
-    }
-    
     .text-label {
         margin-right: 1rem;
         margin-bottom: auto;
@@ -125,6 +122,10 @@
         padding-right: 0;
         @include textstyle-label-primary;
         line-height: normal;
+    }
+    
+    a {
+        @include linkstyle-highlight;
     }
     
 }

@@ -1,12 +1,3 @@
-@mixin nav-menu-list-item-bg-theme {
-    background-color: darken( $color-primary, 5% );
-}
-
-@mixin nav-menu-mobile-main-nav-bg-theme {
-    background-color: darken( $color-primary, 10%);
-}
-
-
 div.nav-menu {
     
     > ul > {

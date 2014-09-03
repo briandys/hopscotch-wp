@@ -30,7 +30,8 @@
     }
 }
 
-@mixin linkstyle-tertiary {  
+
+@mixin linkstyle-tertiary {
     @include linkstyle-reset;  
     
     @include linkstyle-secondary;
@@ -45,13 +46,12 @@
 
 // A simple link with border as underline
 @mixin linkstyle-faint {
-    @include linkstyle-reset; 
-    color: $gray35;
-    border-bottom: $one dotted $gray65;
+    @include linkstyle-reset;
+    border-bottom-width: $one;
+    border-bottom-style: dotted;
     @include transition( color );
     
     &:hover {
-        color: $color-link-primary;
         text-decoration: none;
         border-bottom: none;
     }
@@ -89,14 +89,8 @@
 @mixin linkstyle-highlight {
     @include linkstyle-reset;    
     padding: 1rem;
-    color: $color-link-primary;
     @include corner-radius( $radius-s );
     @include transition( background-color );
-
-    &:hover {
-        background-color: rgba( $color-link-primary, .1 );
-    }
-    
 }
 
 

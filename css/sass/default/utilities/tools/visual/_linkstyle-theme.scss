@@ -1,0 +1,19 @@
+@mixin linkstyle-highlight-theme {
+    color: $color-link-primary;
+
+    &:hover {
+        background-color: rgba( $color-link-primary, .1 );
+    }
+    
+}
+
+
+@mixin linkstyle-faint-theme {
+    color: $gray35;
+    border-bottom-color: $gray65;
+    
+    &:hover {
+        color: $color-link-primary;
+    }
+    
+}

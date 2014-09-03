@@ -1,0 +1,25 @@
+.page-navigation-list {
+    
+    a {
+        @include linkstyle-highlight-theme;
+    }
+    
+}
+
+
+.entry-navigation-list {
+    
+    .action-item a {
+        @include linkstyle-highlight-theme;
+    }
+    
+}
+
+
+.entry-page-navigation-list {
+    
+    a {
+        @include linkstyle-highlight-theme;
+    }
+    
+}

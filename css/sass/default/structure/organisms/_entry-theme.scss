@@ -42,3 +42,21 @@
 .post-edit-link {
     @include buttonizer-theme;
 }
+
+
+.entry-timestamp-link {
+    @include linkstyle-faint-theme;
+}
+
+.entry-byline {
+    
+    .author a {
+        @include linkstyle-faint-theme;
+    }
+    
+}
+
+
+.entry-ct-cr a {
+    @include linkstyle-faint-theme;
+}
