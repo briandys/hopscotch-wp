@@ -47,6 +47,15 @@
 }
 
 
+.colophon-cr {
+    
+    [data-state-colophon="fixed"] & {
+        @include z( $layer3 );
+    }
+    
+}
+
+
 .site-info {
     padding: .5rem 1rem;
     @include font-size-rem($font-s-m);

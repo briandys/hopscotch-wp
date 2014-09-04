@@ -213,7 +213,6 @@
 
 .comment-respond {
     @extend %cf;
-    margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
     
@@ -256,6 +255,11 @@
 
 #cancel-comment-reply-link {
     margin-left: 1rem;
+    @include linkstyle-faint;
+}
+
+.comment-reply-link {
+    @include linkstyle-faint;
 }
 
 .comment-form-admin {
@@ -271,11 +275,12 @@
 }
 
 .comment-reply-title {
-    @include font-size-rem($font-l);
+    @include font-size-rem($font-m-l);
     text-align: center;
     
     @include mq( $phablet ) {
         float: left;
+        margin-top: .5rem;
     }
     
 }
@@ -385,4 +390,15 @@
 
     }
 
+}
+
+
+
+.comment-form-admin {
+    
+    .signed-in-as-link,
+    .comment-form-exit-link {
+        @include linkstyle-faint;
+    }
+    
 }

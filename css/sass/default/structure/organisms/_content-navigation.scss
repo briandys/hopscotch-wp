@@ -42,16 +42,14 @@
         text-align: left;
     }
     
-    .page-numbers {
+    > * {
         @include linkstyle-cube;
-    }
-    
-    .current {
-        @include linkstyle-cube-current;
+        line-height: 1;
     }
     
     a {
-        @include linkstyle-highlight;
+        @include linkstyle-reset;
+        @include linkstyle-nudge;
     }
     
 }
@@ -62,7 +60,7 @@
     display: block;
     text-align: center;
     
-    @include mq( $tablet, iefixOn ) {
+    @include mq( $tablet ) {
         @include center-list;
     }
     
@@ -78,8 +76,10 @@
         }
         
         a {
-            @include linkstyle-highlight;
+            @include linkstyle-cube;
             display: block;
+            @include transition( background-color );
+            @include linkstyle-nudge;
         }
         
         .label {
@@ -107,25 +107,27 @@
 
 .entry-page-navigation-list {
     
-    > * {
-        @include linkstyle-cube;
-    }
-    
-    > .label {
-        @include linkstyle-cube-current;
-    }
-    
+    // Label
     .text-label {
+        margin-top: 0;
         margin-right: 1rem;
-        margin-bottom: auto;
+        margin-bottom: 0;
         padding-left: 0;
         padding-right: 0;
-        @include textstyle-label-primary;
         line-height: normal;
+        @include textstyle-label-primary;
     }
     
+    > * {
+        @include linkstyle-cube;
+        line-height: 1;
+    }
+    
+    // Linked pages
     a {
-        @include linkstyle-highlight;
+        @include linkstyle-reset;
+        @include transition( background-color );
+        @include linkstyle-nudge;
     }
     
 }

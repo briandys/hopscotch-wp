@@ -37,6 +37,7 @@
     }
 }
 
-@mixin borderstyle-perforated($pos: bottom, $color: $black, $alpha: .15) {
-    border-#{$pos}: $one dotted rgba($color, $alpha);
+// Dotted-style border
+@mixin borderstyle-perforated($pos: bottom, $lightness: 50%, $alpha: .35) {
+    border-#{$pos}: $one dotted hsla( 0, 0%, $lightness, $alpha);
 }

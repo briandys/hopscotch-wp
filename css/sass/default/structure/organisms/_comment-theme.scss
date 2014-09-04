@@ -21,3 +21,20 @@
 .comment-pending {
     color: $faint;
 }
+
+
+.comment-form-admin {
+    
+    .signed-in-as-link,
+    .comment-form-exit-link {
+        @include linkstyle-faint-theme;
+    }
+    
+}
+
+
+.comment-timestamp-link,
+.comment-reply-link,
+#cancel-comment-reply-link {
+    @include linkstyle-faint-theme;
+}

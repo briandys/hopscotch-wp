@@ -1,9 +1,30 @@
 //------------------------- Link Styles
 
+
 @mixin linkstyle-reset {
     text-decoration: none;
     border: none;
 }
+
+
+// A simple link with border as underline
+@mixin linkstyle-faint {
+    @include linkstyle-reset;
+    border-bottom-width: $one;
+    border-bottom-style: dotted;
+    @include transition( color );
+    
+    &:hover {
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
+}
+
+
+
+
+
 
 @mixin linkstyle-primary {
     @include linkstyle-reset;
@@ -44,22 +65,28 @@
 }
 
 
-// A simple link with border as underline
-@mixin linkstyle-faint {
-    @include linkstyle-reset;
-    border-bottom-width: $one;
-    border-bottom-style: dotted;
-    @include transition( color );
+@mixin linkstyle-cube {
+    @include linkstyle-reset; 
+    display: inline-block;
+    padding: 1rem;
+    min-width: $block-m;
+    min-height: $block-m;
+    border-radius: $radius-s;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+@mixin linkstyle-nudge {
     
-    &:hover {
-        text-decoration: none;
-        border-bottom: none;
+    &:active {
+        transform: translateY( 1px );
     }
     
 }
 
 
-// Colored box
+// Colored box (used for Tags, Categories)
 @mixin linkstyle-boxed {
     @include linkstyle-reset; 
     display: inline-block;
@@ -67,49 +94,31 @@
     margin-left: -.25rem;
     margin-right: .5rem;
     padding: .25rem .5rem;
-        
-    color: $gray35;
-    background-color: $gray95;
-
-    @include corner-radius( $radius-s );
+    border-radius: $radius-s;
     @include transition( background-color );
-    
     vertical-align: middle;
     line-height: normal;
+}
 
+
+@mixin buttonizer {
+    display: inline-block;
+    padding: .25rem .5rem; 
+    border-width: $one;
+    border-style: solid;
+    border-color: currentColor;
+    borer-radius: $radius-s;
+    text-transform: uppercase;
+    border-radius: $radius-s;
+    overflow: hidden;
+    @include transition( background-color );
+    
     &:hover {
-        color: $gray15;
-        background-color: $gray90;
+        @include linkstyle-reset;
     }
     
-}
-
-
-// Content navigation
-@mixin linkstyle-highlight {
-    @include linkstyle-reset;    
-    padding: 1rem;
-    @include corner-radius( $radius-s );
-    @include transition( background-color );
-}
-
-
-@mixin linkstyle-cube {
-    @include linkstyle-reset; 
-    display: inline-block;
-    padding: 1rem;
-    min-width: $block-m;
-    min-height: $block-m;
-    line-height: 1;
-    text-align: center;
-    vertical-align: middle;
-}
-
-
-@mixin linkstyle-cube-current {
-    @include linkstyle-reset; 
-    color: $white;
-    background-color: $color-primary;
-    @include corner-radius( $radius-s );
-    overflow: visible;
+    &:active {
+        @include linkstyle-nudge;
+    }
+    
 }

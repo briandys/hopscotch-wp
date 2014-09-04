@@ -136,3 +136,21 @@ $radius-size-factor: .25;
 
 $radius-s: .25rem;
 $radius-m: $radius-s + $radius-size-factor;
+
+
+//------------------------- Content Width
+$content-width-percentage: 65%;
+$sidebar-width-percentage: 100% - $content-width-percentage;
+
+$total-width: 78rem;
+$content-width: 48rem;
+$sidebar-width: $total-width - $content-width;
+
+
+//------------------------- Defaults
+
+// Font Color
+$color-font: $gray20;
+
+// Quote Font
+$font-family-quote: Georgia, serif;

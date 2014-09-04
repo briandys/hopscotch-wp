@@ -29,6 +29,13 @@
             background-color: $white;
         }
         
+        &:after {
+            @include mq( $tablet ) {
+                @include background-image( linear-gradient( left,  rgba( $color-primary, 0 ) 0%, $color-primary 100% ) );
+            }
+            
+        }
+        
     }
     
 }

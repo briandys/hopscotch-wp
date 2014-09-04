@@ -8,12 +8,41 @@
 }
 
 
+@mixin linkstyle-highlight-current-theme {
+    color: $white;
+    background-color: $color-primary;
+}
+
+
 @mixin linkstyle-faint-theme {
     color: $gray35;
     border-bottom-color: $gray65;
     
     &:hover {
         color: $color-link-primary;
+    }
+    
+}
+
+
+@mixin linkstyle-boxed-theme {
+    color: $gray35;
+    background-color: $gray95;
+
+    &:hover {
+        color: $gray15;
+        background-color: $gray90;
+    }
+    
+}
+
+
+@mixin buttonizer-theme {
+    color: $color-link-primary;
+    
+    &:hover {
+        color: $white;
+        background-color: $color-link-primary;
     }
     
 }

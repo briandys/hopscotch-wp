@@ -23,9 +23,12 @@ $entry-byline-avatar-size: 2rem;
 
 
 .entry-cr {
-    margin-bottom: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    
+    @include mq( $tablet ) {
+        margin-bottom: 1rem;
+    }
     
 }
 
@@ -49,8 +52,11 @@ $entry-byline-avatar-size: 2rem;
     padding-right: $gutter;
     
     .entry-meta {
-        margin-top: 1rem;
         margin-bottom: 1rem;
+        
+        @include mq( $tablet ) {
+            margin-top: 1rem;
+        }
         
         .page & {
             @extend %vhide;
@@ -144,11 +150,11 @@ $entry-byline-avatar-size: 2rem;
             line-height: 1.75;
         }
         
-        ol,
-        ul {
-            margin-left: $gutter;
-        }
+    }
         
+    ol,
+    ul {
+        margin-left: $gutter;
     }
     
     // Entry Links
@@ -175,6 +181,17 @@ $entry-byline-avatar-size: 2rem;
     blockquote,
     form {
         margin-bottom: 2rem;
+    }
+    
+    blockquote {
+        margin-left: $gutter;
+        margin-right: $gutter;
+        
+        @include mq( $tablet ) {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        
     }
     
     p {
@@ -284,10 +301,20 @@ $entry-byline-avatar-size: 2rem;
     @include transform(translate(0, 0.25rem));
 }
 
+.action-edit-entry {
+    margin-bottom: 0;
+}
+
 
 .post-edit-link {
-    @include buttonizer;
     @include font-size-rem($font-s);
+    @include buttonizer;
+    
+    
+    
+    
+    
+    
     
     .label-verb-subject {
         @extend %vhide;

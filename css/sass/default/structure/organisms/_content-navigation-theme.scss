@@ -23,3 +23,22 @@
     }
     
 }
+
+
+.entry-page-navigation-list {
+    
+    // Current page
+    > .label {
+        @include linkstyle-highlight-current-theme;
+    }
+    
+}
+
+
+.page-navigation-list {
+    
+    .current {
+        @include linkstyle-highlight-current-theme;
+    }
+    
+}
