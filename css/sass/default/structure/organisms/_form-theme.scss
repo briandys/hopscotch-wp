@@ -3,24 +3,8 @@
     
     [data-state-form-element="focused"] &,
     &:hover {
-        border-color: adjust-hue( $color-primary, 5deg );
+        border-color: adjust-hue( $color-form-fg, 5deg );
     }
-}
-
-
-#{$form-buttons} {
-    background-color: $color-primary;
-    color: $white;
-    
-    [data-state-form-element="focused"] &,
-    &:hover {
-        background-color: adjust-hue( $color-primary, 5deg );
-    }
-    
-    &:active {
-        background-color: adjust-hue( $color-primary, 10deg );
-    }
-    
 }
 
 
@@ -29,22 +13,38 @@
     
     &[data-state-form-element="focused"],
     &:hover {
-        border-color: adjust-hue( $color-primary, 5deg );
+        border-color: adjust-hue( $color-form-fg, 5deg );
+    }
+    
+}
+
+
+#{$form-buttons} {
+    background-color: $color-form-bg;
+    color: $white;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: adjust-hue( $color-form-bg, 5deg );
+    }
+    
+    &:active {
+        background-color: adjust-hue( $color-form-bg, 10deg );
     }
     
 }
 
 .sudo-button {
     color: $white;
-    background-color: $color-primary;
+    background-color: $color-form-bg;
     
     &[data-state-form-element="focused"],
     &:hover {
-        background-color: adjust-hue( $color-primary, 5deg );
+        background-color: adjust-hue( $color-form-bg, 5deg );
     }
 
     &:active {
-        background-color: adjust-hue( $color-primary, 10deg );
+        background-color: adjust-hue( $color-form-bg, 10deg );
     }
     
 }

@@ -50,6 +50,8 @@ $entry-byline-avatar-size: 2rem;
     margin-bottom: 2rem;
     padding-left: $gutter;
     padding-right: $gutter;
+    padding-bottom: $gutter;
+    @include borderstyle-perforated;
     
     .entry-meta {
         margin-bottom: 1rem;

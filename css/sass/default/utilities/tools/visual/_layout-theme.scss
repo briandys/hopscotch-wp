@@ -1,0 +1,52 @@
+// Header Theme
+@mixin header-semi-compact-theme {
+        
+    .masthead {
+        background-color: $color-masthead-bg;
+    }
+    
+    .site-title-link:hover {
+        background-color: $color-masthead-hightlight-bg;
+    }
+
+}
+
+
+// Search Theme
+@mixin search-header-reverse-theme {
+    
+    .header-sidebar .search-control .icon,
+    .header-sidebar .search-submit .icon {
+        fill: $color-masthead-icon;
+    }
+    
+    .header-sidebar .search-form {
+        background-color: $color-masthead-bg;
+    }
+    
+    .header-sidebar .search-input {
+        background-color: transparent;
+        color: $color-masthead-fg;
+    }
+    
+    @include placeholder( $color-masthead-fg );
+    
+}
+
+
+@mixin searchbar-side-fade-theme {
+    
+    .header-sidebar {
+
+        .search-form {
+
+            &:after {
+                @include background-image( linear-gradient( left,  rgba( $color-masthead-bg, 0 ) 0%, $color-masthead-bg 100% ) );
+
+            }
+
+        }
+
+    }
+
+}

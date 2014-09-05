@@ -122,8 +122,6 @@ div.nav-menu {
     
     .page_item,
     .menu-item {
-        
-        @include borderstyle-perforated( $lightness: 0%, $alpha: .15 );
 
         &:last-child {
             border-bottom: none;
@@ -155,7 +153,6 @@ div.nav-menu {
                     left: 0;
                     top: 0;
                     @include size(.5rem, 100%);
-                    background-color: $darken15;
                     border-radius: .125rem .125rem 0 0;
                 }
                 
@@ -174,7 +171,6 @@ div.nav-menu {
                 left: 0;
                 bottom: 0;
                 @include size(100%, .5rem);
-                background-color: $darken15;
             }
             
         }
@@ -190,13 +186,8 @@ div.nav-menu {
         // Mobile mode
         @include mq($tablet, $query1: max) {
             @include size(100%);
-            // Themed
             overflow-x: hidden;
             overflow-y: auto;
-
-            li, a {
-                color: $white;
-            }
 
         }
 
@@ -218,13 +209,12 @@ div.nav-menu {
                 margin-right: $block-m;
                 
                 &:after {
-                    // Temp
-                    display: none;
                     top: 50%;
                     right: 0;
                     margin-top: -.75rem;
                     @include size($one, 1.5rem);
-                    border-right: $one dotted rgba($white, .5);
+                    border-right-width: $one;
+                    border-right-style: dotted;
                 }
                 
             }
@@ -239,9 +229,9 @@ div.nav-menu {
         &:after {
             $icon-size: .75rem;
             @include sudo-ct;
-            @include position-offset($icon-size);
-            @include size($icon-size);                
-            @include transition(opacity);
+            @include position-offset( $icon-size );
+            @include size( $icon-size );                
+            @include transition( opacity );
             margin-right: 1.25rem;
             @include background-image-icon('../img/more-light.svg');
             opacity: .5;
@@ -267,13 +257,8 @@ div.nav-menu {
         &.status-sub-nav-active {
             // Themed
             @include transition(background-color);
-            
-            &:hover {
-                // Themed
-            }
 
             a {
-                color: $white;
 
                 &:hover {
                     text-decoration: none;
@@ -283,21 +268,9 @@ div.nav-menu {
 
             > {
 
-                * {
-                    color: $white;
-                }
-
                 .children,
                 .sub-menu {                        
                      @include vhide-rev;
-                }
-                
-                a {
-                    
-                    &:hover {
-                        background-color: $darken5;
-                    }
-                    
                 }
 
             }
@@ -305,7 +278,6 @@ div.nav-menu {
             .children,
             .sub-menu {
                 $fold-size: .75rem;
-                // Themed
                 text-align: left;
                 z-index: 90;
 
@@ -323,11 +295,6 @@ div.nav-menu {
                 
                 li {
                     @include transition(background-color);
-                    
-                    &:hover {
-                        background-color: $darken15;
-                    }
-                    
                 }
                 
                 // White line
@@ -339,7 +306,6 @@ div.nav-menu {
                         top: 0;
                         left: 0;
                         @include size(100%, $one);
-                        background-color: rgba($white, .25);
                         z-index: 90;
                     }
                     
@@ -357,7 +323,6 @@ div.nav-menu {
                         @include size(0);
                         border-style: solid;
                         border-width: 0 0 $fold-size $fold-size;
-                        border-color: transparent transparent $darken15 transparent;
                         z-index: 90;
                     }
                     
@@ -384,20 +349,18 @@ div.nav-menu {
 .main-navigation-heading {
     margin-bottom: auto;
     
-    // Mobile mode
     @include mq($tablet, $query1: max) {    
         @include font-size-rem($font-reset);
         @include size($block-l);
         @include svg-iconize;        
     }
     
-    // Non-mobile mode
     @include mq( $tablet ) {
         @include vhide;
     }
     
     .icon {
-        // Mobile mode
+        
         @include mq($tablet, $query1: max) {
 
             @include size($block-s);
@@ -420,24 +383,25 @@ div.nav-menu {
     }
     
     &:hover {
-        // Mobile mode
+        
         @include mq($tablet, $query1: max) {
             cursor: pointer;
         }
+        
     }
     
     .label {
-        // Mobile mode
+        
         @include mq($tablet, $query1: max) {
             @include vhide;
         }
+        
     }
 
 }
 
 .main-navigation-ct {
     
-    // Mobile mode
     @include mq($tablet, $query1: max) {
         position: fixed;
         left: 0;
@@ -450,7 +414,6 @@ div.nav-menu {
 
     .status-mobile-main-nav-active & {
         
-        // Mobile mode
         @include mq($tablet, $query1: max) {
             @include transform(translate(0, 0));
             @include z($layer1);

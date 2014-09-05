@@ -28,7 +28,9 @@
 // Header style for narrow viewports
 // Default for parent and child
 @include mq( $tablet, $query1: max ) {
+    
     @include header-compact;
+    
 }
 
 

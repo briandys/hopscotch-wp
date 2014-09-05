@@ -32,8 +32,10 @@ hopscotch_content_header();
                     ?>
                     
                     <div class="entry-meta">
+                        <div class="entry-meta-cr">
                         <?php hopscotch_entry_date(); ?>
                         <?php hopscotch_entry_byline(); ?>
+                        </div>
                     </div>
                     
                     <?php // Comment link

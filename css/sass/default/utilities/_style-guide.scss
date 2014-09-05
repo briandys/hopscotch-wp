@@ -10,19 +10,29 @@ $custom-font: Raleway;
 $color-primary: $blue-superhero;
 $color-secondary: $green-go;
 
-// Site Background Color
-$color-site-bg: $white;
-
-$color-bg-darken: rgba($black, .05);
-
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
-$color-link-tertiary: $color-font;
 
 // Forms
 $color-button-default: $color-primary;
+
 $color-button-primary: $color-primary;
 $color-button-secondary: $color-secondary;
 
-// Quote
-$color-quote-text: $gray50;
+// Form
+$color-form-bg: $color-primary;
+$color-form-fg: $color-primary;
+
+
+// Masthead
+$color-masthead-bg: $color-primary;
+$color-masthead-fg: $white;
+$color-masthead-hover-bg: darken( $color-masthead-bg, 5% );
+$color-masthead-hightlight-bg: darken( $color-masthead-bg, 10% );
+$color-masthead-icon: $white;
+
+
+// Content Navigation
+$color-content-nav-fg: $white;
+$color-content-nav-bg: $color-secondary;
+$color-content-nav-link: $color-font;

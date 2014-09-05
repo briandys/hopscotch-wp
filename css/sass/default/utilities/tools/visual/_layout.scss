@@ -139,6 +139,30 @@
 }
 
 
+//------------------------- Header Search - fading color to overlap other elements
+@mixin searchbar-side-fade {
+
+    .header-sidebar {
+
+        .search-form {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 100%;
+                width: $block-l;
+                height: 100%;
+            }
+
+        }
+
+    }
+    
+}
+
+
 //------------------------- Header for Wide Mode
 @mixin header-semi-compact {
     
@@ -151,9 +175,11 @@
     // Colors
     @include header-semi-compact-theme;
     
-    
+    // Search
     @include search-header-reverse;
     @include search-header-reverse-theme;
+    @include searchbar-side-fade;
+    @include searchbar-side-fade-theme;
     
     .masthead-cr {
         text-align: left;

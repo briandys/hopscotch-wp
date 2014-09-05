@@ -1,7 +1,12 @@
 .page-navigation-list {
     
     a {
-        @include linkstyle-highlight-theme;
+        color: $color-content-nav-link;
+
+        &:hover {
+            background-color: rgba( $color-content-nav-bg, .1 );
+        }
+        
     }
     
 }
@@ -10,7 +15,12 @@
 .entry-navigation-list {
     
     .action-item a {
-        @include linkstyle-highlight-theme;
+        color: $color-content-nav-link;
+
+        &:hover {
+            background-color: rgba( $color-content-nav-bg, .1 );
+        }
+        
     }
     
 }
@@ -19,7 +29,12 @@
 .entry-page-navigation-list {
     
     a {
-        @include linkstyle-highlight-theme;
+        color: $color-content-nav-link;
+
+        &:hover {
+            background-color: rgba( $color-content-nav-bg, .1 );
+        }
+        
     }
     
 }
@@ -29,7 +44,8 @@
     
     // Current page
     > .label {
-        @include linkstyle-highlight-current-theme;
+        color: $color-content-nav-fg;
+        background-color: $color-content-nav-bg;
     }
     
 }
@@ -38,7 +54,8 @@
 .page-navigation-list {
     
     .current {
-        @include linkstyle-highlight-current-theme;
+        color: $color-content-nav-fg;
+        background-color: $color-content-nav-bg;
     }
     
 }

@@ -68,6 +68,7 @@
 }
 
 
+
 .header-sidebar {
     
     .search--sudo-input-text {
@@ -96,24 +97,10 @@
     }
     
     .search-form {
-        position: relative;
         margin-bottom: auto;
         
         .status-search-active & {
             padding-right: $block-l;
-        }
-        
-        &:after {
-            @include mq( $tablet ) {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 100%;
-                width: $block-l;
-                height: 100%;
-                @include background-image(linear-gradient(left,  hsla(200,100%,50%,0) 0%,hsla(200,100%,50%,1) 100%));
-            }
-            
         }
         
     }
