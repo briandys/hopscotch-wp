@@ -35,6 +35,7 @@ $entry-byline-avatar-size: 2rem;
 
 .entry-title {
     display: inline;
+    margin-bottom: 0;
     @include font-size-rem($font-xl);
     font-weight: 600;
     line-height: normal;
@@ -46,19 +47,30 @@ $entry-byline-avatar-size: 2rem;
     
 }
 
-.entry-hr-cr {
+
+.entry-hr {
     margin-bottom: 2rem;
+    
+    .entry-empty > .entry-cr > & {
+        margin-bottom: 0;
+    }
+    
+}
+
+
+.entry-hr-cr {
     padding-left: $gutter;
     padding-right: $gutter;
-    padding-bottom: $gutter;
+    padding-bottom: 2rem;
     @include borderstyle-perforated;
     
+    .entry-empty > .entry-cr > .entry-hr > & {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    
     .entry-meta {
-        margin-bottom: 1rem;
-        
-        @include mq( $tablet ) {
-            margin-top: 1rem;
-        }
+        margin-top: 1rem;
         
         .page & {
             @extend %vhide;
@@ -66,12 +78,59 @@ $entry-byline-avatar-size: 2rem;
         
     }
     
+    // Entry Thumbnail
+    $entry_thumbnail_size: 2.5rem;
+    
+    .entry-thumbnail--active & {
+        position: relative;
+        
+        @include mq( $monitor, $query1: max ) {
+            padding-left: $entry_thumbnail_size + 2rem;
+        }
+        
+    }
+    
     .entry-thumbnail {
-        margin-top: 1rem;
+        
+        .entry-thumbnail--active & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            @include mq( $monitor, $query1: max ) {
+                margin-left: $gutter;
+            }
+            
+            @include mq( $monitor ) {
+                left: auto;
+                right: 100%;
+                margin-top: -1.5rem;
+            }
+            
+        }
+        
+    }
+    
+    .entry-thumbnail-link {
+        
+        .entry-thumbnail--active & {
+            
+            @include size( $entry_thumbnail_size );
+        
+            @include mq( $monitor ) {
+                @include size( 5rem );
+            }
+            
+        }
+        
     }
     
     .entry-user-action {
-        margin-top: .5rem;
+        margin-top: 1rem;
+    }
+    
+    .entry-user-action--action-item {
+        margin-bottom: 0;
     }
 
 }
@@ -293,7 +352,7 @@ $entry-byline-avatar-size: 2rem;
 }
 
 .entry-fr-cr {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     padding-left: $gutter;
     padding-right: $gutter;
 }
@@ -312,12 +371,6 @@ $entry-byline-avatar-size: 2rem;
     @include font-size-rem($font-s);
     @include buttonizer;
     
-    
-    
-    
-    
-    
-    
     .label-verb-subject {
         @extend %vhide;
     }
@@ -326,7 +379,12 @@ $entry-byline-avatar-size: 2rem;
 
 
 .entry-subtitle {
+    margin-top: .5rem;
     @include font-size-rem($font-m-l);
+    
+    p:only-child {
+        margin-bottom: 0;
+    }
     
     .label {
         @extend %vhide;

@@ -17,7 +17,7 @@ div.nav-menu {
     
     li {
 
-        // BG color or hovered main nav
+        // BG color of hovered main nav
         &:hover {
             background-color: $color-masthead-hover-bg;
             
@@ -81,15 +81,6 @@ div.nav-menu {
             .children,
             .sub-menu {
                 
-                li {
-                    
-                    // This color differentiates the drop arrow from the main link
-                    &:hover {
-                        background-color: $color-masthead-hightlight-bg;
-                    }
-                    
-                }
-                
                 // White line on top of sub nav items
                 &:before {
                     
@@ -121,7 +112,7 @@ div.nav-menu {
             
             // BG color of active sub nav
             .children {
-                background-color: $color-masthead-bg;
+                background-color: darken( $color-masthead-bg, 2.5% );
             }
             
         }

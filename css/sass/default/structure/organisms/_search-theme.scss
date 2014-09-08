@@ -25,8 +25,34 @@
     
     .search-form {
         
-        @include mq( $tablet, $query1: max ) {
-            background-color: $white;
+        [data-state-search="active"] & {
+
+            @include mq( $tablet, $query1: max ) {
+                background-color: $white;
+            }
+
+        }
+        
+    }
+    
+    .search-control {
+        
+        // If Mobile Main Nav is active and Search is active
+        .status-mobile-main-nav-active [data-state-search="inactive"] & {
+            
+            .icon {
+                
+                @include mq( $tablet, $query1: max ) {
+                    fill: $white;
+                    
+                    &:hover {
+                        fill: $color-primary;
+                    }
+                    
+                }
+                
+            }
+
         }
         
     }

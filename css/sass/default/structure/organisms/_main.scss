@@ -19,14 +19,6 @@
     
 }
 
-.main-content-cr {
-    
-    @include mq( $tablet ) {
-        padding-top: 1rem;
-    }
-    
-}
-
 
 // Default layout of Primary and Secondary Content
 .primary-content-cr,

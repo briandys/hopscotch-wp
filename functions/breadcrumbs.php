@@ -10,22 +10,20 @@ function hopscotch_breadcrumbs() {
         
     global $post;
     
-    if ( is_page() && $post->post_parent > 0 ) {
+    if ( ( is_page() && $post->post_parent > 0 ) || is_search() ) {
 
         echo '<div class="action-items breadcrumbs">';
         echo '<p class="assistive-text">Breadcrumbs:</p>';
 
-        if (is_page()) {
-            $ancestors = get_post_ancestors($post);
+        $ancestors = get_post_ancestors($post);
 
-            if ($ancestors) {
-                $ancestors = array_reverse($ancestors);
-                echo '<ul class="action-list breadcrumb-list">';
-                foreach ($ancestors as $crumb) {
-                    echo '<li class="action-item breadcrumb-item"><a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a></li>';
-                }
-                echo '</ul>';
+        if ($ancestors) {
+            $ancestors = array_reverse($ancestors);
+            echo '<ul class="action-list breadcrumb-list">';
+            foreach ($ancestors as $crumb) {
+                echo '<li class="action-item breadcrumb-item"><a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a></li>';
             }
+            echo '</ul>';
         }
 
         /*

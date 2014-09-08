@@ -1,22 +1,27 @@
+.breadcrumbs {
+    margin-top: 1rem;
+}
+
+
 .breadcrumb-item {
     position: relative;
     display: inline-block;
-    margin-right: 1.5rem;
+    margin-left: 1.5rem;
     @include font-size-rem($font-s-m);
     
     a {
         @include linkstyle-faint;
     }
     
-    &:last-child {
-        margin-right: auto;
+    &:first-child {
+        margin-left: auto;
     }
     
     &:after {
         $icon-size: .65rem;
         @include sudo-ct;
-        @include position-offset($icon-size, left, 100%);
-        margin-left: .5rem;
+        @include position-offset($icon-size, right, 100%);
+        margin-right: .5rem;
         margin-top: -.25rem; // Override
         @include size($icon-size);
         @include background-image-icon('../img/more.svg');
@@ -24,8 +29,12 @@
         @include transform(rotate(-90deg));
     }
     
-    &:last-child:after {
+    &:first-child:after {
         display: none;
+    }
+    
+    @include mq( $tablet ) {
+        margin-bottom: 0;
     }
     
 }

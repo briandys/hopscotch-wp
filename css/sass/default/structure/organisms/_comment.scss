@@ -79,6 +79,7 @@
 .comment-timestamp-link {
     @include font-size-rem($font-s);
     @include linkstyle-faint;
+    border-bottom: 0;
 }
 
 .comment {
@@ -126,6 +127,11 @@
     
     p {
         margin-bottom: .5rem;
+    }
+    
+    .comments-ct-cr & {
+        margin-left: 0;
+        margin-right:0;
     }
 
 }

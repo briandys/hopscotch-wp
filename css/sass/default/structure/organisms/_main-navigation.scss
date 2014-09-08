@@ -36,17 +36,19 @@ div.nav-menu {
                 }
                 
                 &.status-sub-nav-inactive:after {
+                    
+                    // More icon shown beside the main nav parents
                     @include mq( $tablet ) {
-                        @include background-image-icon('../img/more.svg');
-                        opacity: .25;
+                        @include background-image-icon('../img/more-light.svg');
+                        opacity: .5;
                     }
+                    
                 }
 
                 &.status-sub-nav-inactive:hover:after {
 
-                    // Non-mobile mode
                     @include mq( $tablet ) {
-                        opacity: .5;
+                        opacity: .75;
                     }
 
                 }
@@ -134,9 +136,26 @@ div.nav-menu {
         .page_item,
         .menu-item {
             
+            &:hover:last-child {
+                
+                @include mq( $tablet ) {
+                    border-radius: 0 0 $radius-s $radius-s;
+                    overflow: hidden;
+                }
+                
+                &.status-sub-nav-active {
+                    
+                    @include mq( $tablet ) {
+                        border-radius: 0;
+                        overflow: visible;
+                    }
+                    
+                }
+                
+            }
+            
             &.status-sub-nav-active {
                 
-                // Wide mode
                 @include mq( $tablet ) {
                     border-bottom: none;
                 }
@@ -149,11 +168,12 @@ div.nav-menu {
         
             // Sub nav highlight
             @include mq( $tablet ) {
+                
                 @include pseudo-content(before) {
                     left: 0;
                     top: 0;
                     @include size(.5rem, 100%);
-                    border-radius: .125rem .125rem 0 0;
+                    border-bottom-left-radius: $radius-s;
                 }
                 
             }
@@ -193,8 +213,13 @@ div.nav-menu {
 
     }
 
-    .children, .sub-menu {
+    .children,
+    .sub-menu {
         @include vhide;
+        
+        @include mq( $tablet ) {
+            border-radius: 0 0 $radius-s $radius-s;
+        }
     }
 
     .page_item_has_children, .menu-item-has-children {
@@ -230,14 +255,13 @@ div.nav-menu {
             $icon-size: .75rem;
             @include sudo-ct;
             @include position-offset( $icon-size );
-            @include size( $icon-size );                
-            @include transition( opacity );
+            @include size( $icon-size );
             margin-right: 1.25rem;
             @include background-image-icon('../img/more-light.svg');
-            opacity: .5;
+            @include transition( opacity );
+            opacity: 1;
             z-index: 90;
 
-            // Mobile mode
             @include mq($tablet, $query1: max) {
                 top: 1.65rem;
                 @include size(1rem);
@@ -245,9 +269,10 @@ div.nav-menu {
 
         }
 
-        // Light more icon
+        // More icon during an active sub menu
         &.status-sub-nav-active:after {
             @include transform(rotate(180deg));
+            opacity: .5;
         }
 
         &.status-sub-nav-active:hover:after {
@@ -279,7 +304,7 @@ div.nav-menu {
             .sub-menu {
                 $fold-size: .75rem;
                 text-align: left;
-                z-index: 90;
+                z-index: 91;
 
                 // Non-mobile mode
                 @include mq( $tablet ) {

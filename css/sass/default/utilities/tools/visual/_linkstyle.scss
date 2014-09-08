@@ -98,6 +98,11 @@
     @include transition( background-color );
     vertical-align: middle;
     line-height: normal;
+    
+    &:active {
+        transform: translateY( 1px );
+    }
+    
 }
 
 
@@ -114,7 +119,8 @@
     @include transition( background-color );
     
     &:hover {
-        @include linkstyle-reset;
+        text-decoration: none;
+        border-color: transparent;
     }
     
     &:active {
