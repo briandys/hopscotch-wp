@@ -34,11 +34,20 @@ div.nav-menu {
         
         // Second-level nav link
         > a {
-
-            @include mq( $tablet ) {
                 
-                &:after {
+            &:after {
+                
+                @include mq( $tablet ) {
+                    @include transition( border-right-color );
                     border-right-color: rgba( $color-masthead-fg, .35 );
+                }
+                
+            }
+            
+            &:hover:after {
+                
+                @include mq( $tablet ) {
+                    border-right-color: transparent;
                 }
                 
             }

@@ -58,10 +58,11 @@ require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumbs
 require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-edit.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-comment.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-date.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-byline.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/more-content.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/show-more-content.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/show-more-content-link-skip.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
 
 
@@ -103,8 +104,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/post-count-
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
-
-// require_once( trailingslashit(get_template_directory()) . 'functions/more-content-link-skip.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
 

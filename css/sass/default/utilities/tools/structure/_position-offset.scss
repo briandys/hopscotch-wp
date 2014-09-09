@@ -1,6 +1,7 @@
 //------------------------- Position Offset
 // For positioned elements, negative margin is used to offset the 50% positioning
-// Usage: @include($icon-size)
+// Usage: @include position-offset( 3rem, right, 0, top, 50%)
+// Result: right: 0; top: 50%; margin-top: -1.5rem;
 
 @mixin position-offset(
     $offset-value,

@@ -4,6 +4,7 @@ $entry-byline-avatar-size: 2rem;
     @extend %cf;
     
     .show-more-content {
+        margin-top: 2rem;
 
         .more-link {
             display: inline-block;
@@ -297,6 +298,8 @@ $entry-byline-avatar-size: 2rem;
 
     }
     
+    @include shrink-heading;
+    
     h3 {
         font-weight: 600;
     }
@@ -312,8 +315,6 @@ $entry-byline-avatar-size: 2rem;
         padding-left: 0;
         padding-right: 0;
     }
-    
-    @include shrink-heading;
     
     // Format: Status
     .format-status & {

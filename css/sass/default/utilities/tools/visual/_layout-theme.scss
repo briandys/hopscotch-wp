@@ -24,6 +24,10 @@
         background-color: $color-masthead-bg;
     }
     
+    [data-state-search="active"] .header-sidebar .search-form {
+        background-color: darken( $color-masthead-bg, 5% );
+    }
+    
     .header-sidebar .search-input {
         background-color: transparent;
         color: $color-masthead-fg;

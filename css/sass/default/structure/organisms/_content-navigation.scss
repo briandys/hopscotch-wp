@@ -75,10 +75,28 @@
         }
         
         a {
+            position: relative;
             @include linkstyle-cube;
             display: block;
+            padding-left: $block-l;
+            padding-right: $block-l;
             @include transition( background-color );
             @include linkstyle-nudge;
+            
+            &:after {
+                $icon-size: $block / 2;
+                @include sudo-ct;
+                @include position-offset( $icon-size );
+                @include size( $icon-size );
+                @include background-image-icon('../img/more.svg');
+                opacity: .125;
+                @include transition( opacity );
+            }
+            
+            &:hover:after {
+                opacity: .25;
+            }
+            
         }
         
         .label {
@@ -90,6 +108,37 @@
             @include textstyle-label-primary;
         }
         
+    }
+    
+
+    // Previous
+    .entry-navigation--previous--action-item {
+
+        a {
+
+            &:after {
+                right: auto;
+                left: 0;
+                margin-left: $gutter;
+                @include transform( rotate( 90deg ) );
+            }
+
+        }
+
+    }
+
+    // Next
+    .entry-navigation--next--action-item {
+
+        a {
+
+            &:after {
+                margin-right: $gutter;
+                @include transform( rotate( -90deg ) );
+            }
+
+        }
+
     }
     
 }

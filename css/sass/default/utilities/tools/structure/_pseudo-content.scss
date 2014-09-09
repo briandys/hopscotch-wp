@@ -4,7 +4,7 @@
     position: absolute;
 }
 
-@mixin pseudo-content($pos:after) {
+@mixin pseudo-content($pos: after) {
     position: relative;
     
     &:#{$pos} {

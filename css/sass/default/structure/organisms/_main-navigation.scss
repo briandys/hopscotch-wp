@@ -222,7 +222,8 @@ div.nav-menu {
         }
     }
 
-    .page_item_has_children, .menu-item-has-children {
+    .page_item_has_children,
+    .menu-item-has-children {
         position: relative;
 
         > a {
@@ -259,7 +260,7 @@ div.nav-menu {
             margin-right: 1.25rem;
             @include background-image-icon('../img/more-light.svg');
             @include transition( opacity );
-            opacity: 1;
+            opacity: .5;
             z-index: 90;
 
             @include mq($tablet, $query1: max) {
@@ -267,6 +268,10 @@ div.nav-menu {
                 @include size(1rem);
             }
 
+        }
+        
+        &:hover:after {
+            opacity: .75;
         }
 
         // More icon during an active sub menu

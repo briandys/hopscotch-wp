@@ -7,14 +7,14 @@
             <?php // Previous
             if ( get_previous_post_link() ) :
             ?>
-            <li class="action-item action-go-previous post-navigation--previous--action-item">
+            <li class="action-item action-go-previous entry-navigation--previous--action-item post-navigation--previous--action-item">
                 <span class="label label-previous">Previous entry</span> <?php previous_post_link( '%link', _x( '%title', 'Previous Post', 'hopscotch' ) ); ?>
             <?php endif; ?>
 
             <?php // Next
             if ( get_next_post_link() ) :
             ?>
-            <li class="action-item action-go-next post-navigation--next--action-item">
+            <li class="action-item action-go-next entry-navigation--next--action-item post-navigation--next--action-item">
                 <span class="label label-next">Next entry</span> <?php next_post_link( '%link', _x( '%title', 'Next Post', 'hopscotch' ) ); ?>
             <?php endif; ?>
         </ul>

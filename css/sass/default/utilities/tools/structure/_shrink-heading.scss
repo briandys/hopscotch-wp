@@ -16,7 +16,7 @@
     }
 
     h4 {
-        @include font-size-rem($font-m * $font-size-shrink-factor);
+        @include font-size-rem($font-m);
     }
 
     h5 {
