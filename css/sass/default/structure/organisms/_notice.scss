@@ -4,8 +4,17 @@
     @include corner-radius( $radius-s );
 }
 
-.notice p {
-	margin-top: auto;
+.notice {
+    
+    p {
+        margin-top: 0;
+        
+        &:only-child {
+            margin-bottom: 0;
+        }
+        
+    }
+    
 }
 
 // Regular

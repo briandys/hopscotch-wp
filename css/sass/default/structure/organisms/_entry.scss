@@ -52,10 +52,6 @@ $entry-byline-avatar-size: 2rem;
 .entry-hr {
     margin-bottom: 2rem;
     
-    .entry-empty > .entry-cr > & {
-        margin-bottom: 0;
-    }
-    
 }
 
 
@@ -64,11 +60,6 @@ $entry-byline-avatar-size: 2rem;
     padding-right: $gutter;
     padding-bottom: 2rem;
     @include borderstyle-perforated;
-    
-    .entry-empty > .entry-cr > .entry-hr > & {
-        padding-bottom: 0;
-        border-bottom: 0;
-    }
     
     .entry-meta {
         margin-top: 1rem;

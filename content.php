@@ -2,6 +2,10 @@
 hopscotch_content_header();
 ?>
 
+<?php // Hook above .entry
+hopscotch_hook_above_entry();
+?>
+
 <article id="<?php hopscotch_post_id(); ?>" <?php post_class(); ?> <?php if ( is_page_template( 'template-info-card.php' ) ) : echo 'itemscope itemtype="http://schema.org/Organization"'; endif; ?>>
     
     <div class="entry-cr <?php hopscotch_slug_class(); ?>--entry-cr">

@@ -15,28 +15,28 @@ li {
     }
     
     > ol, > ul {
-            margin-top: $bottom-space-s;
-        }
-    
-        #{$heading-tags} {
-            
-            &:last-child {
-                margin-bottom: auto;
-            }
-            
-        }
-        
-        @each $item in $heading-tags {
-        
-            &:first-child {
+        margin-top: $bottom-space-s;
+    }
 
-                // If direct descendant combinator (>) is needed, use @each directive
-                > #{$item} {
-                    margin-top: auto;
-                }
+    #{$heading-tags} {
 
+        &:last-child {
+            margin-bottom: auto;
+        }
+
+    }
+
+    @each $item in $heading-tags {
+
+        &:first-child {
+
+            // If direct descendant combinator (>) is needed, use @each directive
+            > #{$item} {
+                margin-top: auto;
             }
 
         }
+
+    }
     
 }

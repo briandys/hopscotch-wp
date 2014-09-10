@@ -10,7 +10,8 @@ h2 {
 }
 
 h3,
-.text-heading {
+.text-heading,
+.heading {
     @include font-size-rem($font-xl);
 }
 
