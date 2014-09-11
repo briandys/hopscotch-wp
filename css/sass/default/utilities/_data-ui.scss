@@ -1,0 +1,119 @@
+//------------------------- data-form-ui-type
+// input-label
+
+// This is a common layout for radio buttons with a "yes" or "no" option.
+// In the markup, the <label> comes before the <input>.
+// The default layout is undesirable wherein the <input> element is positioned
+// at the right of the <label>.
+// The style in this ui type uses absolute positioning for the fixing of the layout
+
+[data-form-ui-type="input-label"] {
+    
+    .field-cr {
+        position: relative;
+        padding-left: 1.5rem;
+    
+        label {
+            margin-bottom: 0;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+    }
+    
+}
+
+
+//------------------------- data-nav-ui-type
+// folding-blocks
+
+[data-nav-ui-type="folding-blocks"] .main-nav-ct-cr ul {
+    margin-left: 0;
+}
+
+[data-nav-ui-type="folding-blocks"] .nav-item {
+	display: inline-block;
+	vertical-align: top;
+    
+    a {
+        display: block;
+        white-space: nowrap;
+        padding: 1rem;
+    }
+    
+}
+
+[data-nav-ui-type="folding-blocks"] .sub-nav {
+	display: block;
+}
+
+[data-nav-ui-type="folding-blocks"] .sub-nav .nav-item {
+	display: block;
+}
+
+// data-nav-sub-nav-status
+// The status of the sub-navigation.
+// 0 - inactive (default)
+// 1 - active
+[data-nav-sub-nav-status="inactive"] .sub-nav {
+	@include vhide;
+}
+
+.nav-item-head {
+    
+    &[data-nav-sub-nav-status="active"],
+    &:hover {
+        
+        > .sub-nav {
+            @include vhide-rev;
+            margin-right: inherit;
+        }
+        
+    }
+    
+}
+
+// Hover-show behavior
+[data-nav-ui-type="folding-blocks"] .nav-item-head {
+    
+    // Icon hint (affordance that there's a hidden sub-nav)
+    position: relative;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -.125rem;
+        margin-right: .75rem;
+        @include triangle( bottom, hsla( 0, 0%, 50%, .5 ), .325rem );
+    }
+    
+    // Adjustment for the Icon hint
+    > a {
+        padding-right: 2rem;
+    }
+    
+    &[data-nav-sub-nav-status="active"],
+    &:hover {
+        
+        > .sub-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: -.5rem;
+            margin-left: .5rem;
+            
+            // Theme
+            background-color: #fff;
+            border: 1px solid $darken25;
+        }
+        
+    }
+    
+}

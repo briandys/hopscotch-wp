@@ -90,6 +90,10 @@ div.nav-menu {
             .children,
             .sub-menu {
                 
+                @include mq( $tablet ) {
+                    box-shadow: -.25rem .25rem 0 hsla( 0, 0%, 50%, .15);
+                }
+                
                 // White line on top of sub nav items
                 &:before {
                     

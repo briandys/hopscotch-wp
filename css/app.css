@@ -792,6 +792,110 @@ img, .wp-caption {
   vertical-align: middle;
 }
 
+/* line 12, sass/default/utilities/_data-ui.scss */
+[data-form-ui-type="input-label"] .field-cr {
+  position: relative;
+  padding-left: 1.5rem;
+}
+/* line 16, sass/default/utilities/_data-ui.scss */
+[data-form-ui-type="input-label"] .field-cr label {
+  margin-bottom: 0;
+}
+/* line 21, sass/default/utilities/_data-ui.scss */
+[data-form-ui-type="input-label"] .field-cr input[type="checkbox"],
+[data-form-ui-type="input-label"] .field-cr input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 35, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .main-nav-ct-cr ul {
+  margin-left: 0;
+}
+
+/* line 39, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .nav-item {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 43, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .nav-item a {
+  display: block;
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+/* line 51, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .sub-nav {
+  display: block;
+}
+
+/* line 55, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .sub-nav .nav-item {
+  display: block;
+}
+
+/* line 63, sass/default/utilities/_data-ui.scss */
+[data-nav-sub-nav-status="inactive"] .sub-nav {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 72, sass/default/utilities/_data-ui.scss */
+.nav-item-head[data-nav-sub-nav-status="active"] > .sub-nav, .nav-item-head:hover > .sub-nav {
+  clip: auto;
+  height: auto;
+  margin: auto;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  width: auto;
+  margin-right: inherit;
+}
+
+/* line 82, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .nav-item-head {
+  position: relative;
+}
+/* line 87, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .nav-item-head:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.125rem;
+  margin-right: .75rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.325rem;
+  border-width-bottom: 0;
+  border-color: rgba(128, 128, 128, 0.5);
+  border-color: transparent;
+  border-top-color: rgba(128, 128, 128, 0.5);
+}
+/* line 98, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .nav-item-head > a {
+  padding-right: 2rem;
+}
+/* line 105, sass/default/utilities/_data-ui.scss */
+[data-nav-ui-type="folding-blocks"] .nav-item-head[data-nav-sub-nav-status="active"] > .sub-nav, [data-nav-ui-type="folding-blocks"] .nav-item-head:hover > .sub-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -0.5rem;
+  margin-left: .5rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
 /* line 1, sass/default/structure/atoms/_link-theme.scss */
 a {
   color: #00aaff;
@@ -1085,7 +1189,16 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active > a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 @media only screen and (min-width: 48rem) {
-  /* line 94, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 91, sass/default/structure/organisms/_main-navigation-theme.scss */
+  div.nav-menu .page_item_has_children.status-sub-nav-active .children,
+  div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu,
+  div.nav-menu .menu-item-has-children.status-sub-nav-active .children,
+  div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
+    box-shadow: -0.25rem 0.25rem 0 rgba(128, 128, 128, 0.15);
+  }
+}
+@media only screen and (min-width: 48rem) {
+  /* line 98, sass/default/structure/organisms/_main-navigation-theme.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children:before,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu:before,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .children:before,
@@ -1094,7 +1207,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active > a:hover {
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 103, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 107, sass/default/structure/organisms/_main-navigation-theme.scss */
   div.nav-menu .page_item_has_children.status-sub-nav-active .children:after,
   div.nav-menu .page_item_has_children.status-sub-nav-active .sub-menu:after,
   div.nav-menu .menu-item-has-children.status-sub-nav-active .children:after,
@@ -1102,16 +1215,16 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active > a:hover {
     border-color: transparent transparent #0077b3 transparent;
   }
 }
-/* line 123, sass/default/structure/organisms/_main-navigation-theme.scss */
+/* line 127, sass/default/structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .page_item_has_children.status-sub-nav-active .children {
   background-color: #00a1f2;
 }
-/* line 137, sass/default/structure/organisms/_main-navigation-theme.scss */
+/* line 141, sass/default/structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
   background-color: #00aaff;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 148, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 152, sass/default/structure/organisms/_main-navigation-theme.scss */
   div.nav-menu .status-sub-nav-active .current_page_item {
     position: relative;
   }
@@ -1122,7 +1235,7 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
     background-color: rgba(0, 0, 0, 0.15);
   }
 }
-/* line 163, sass/default/structure/organisms/_main-navigation-theme.scss */
+/* line 167, sass/default/structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .current_page_item {
   position: relative;
 }
@@ -1138,18 +1251,18 @@ div.nav-menu .current_page_item:before {
   }
 }
 @media only screen and (max-width: 47.9375rem) {
-  /* line 181, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 185, sass/default/structure/organisms/_main-navigation-theme.scss */
   .status-mobile-main-nav-active div.nav-menu li, .status-mobile-main-nav-active div.nav-menu a {
     color: white;
   }
 }
-/* line 191, sass/default/structure/organisms/_main-navigation-theme.scss */
+/* line 195, sass/default/structure/organisms/_main-navigation-theme.scss */
 div.nav-menu .page_item,
 div.nav-menu .menu-item {
   border-bottom: 0.0625rem dotted rgba(0, 0, 0, 0.25);
 }
 @media only screen and (min-width: 48rem) {
-  /* line 191, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 195, sass/default/structure/organisms/_main-navigation-theme.scss */
   div.nav-menu .page_item,
   div.nav-menu .menu-item {
     border-bottom: 0.0625rem dotted rgba(255, 255, 255, 0.5);
@@ -1157,7 +1270,7 @@ div.nav-menu .menu-item {
 }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 208, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 212, sass/default/structure/organisms/_main-navigation-theme.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon {
     fill: white;
   }
