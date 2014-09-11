@@ -188,9 +188,8 @@
     }
     
     .site-title-link {
-        padding: 1rem;
-        color: $white;
-        @include transition( background-color );
+        padding: 0 1rem;
+        line-height: $block-l;
         
         &:hover {
             text-decoration: none;

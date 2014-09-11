@@ -5,8 +5,14 @@
         background-color: $color-masthead-bg;
     }
     
-    .site-title-link:hover {
-        background-color: $color-masthead-hightlight-bg;
+    .site-title-link {
+        color: $white;
+        @include transition( background-color );
+        
+        &:hover {
+            background-color: $color-masthead-hightlight-bg;
+        }
+        
     }
 
 }

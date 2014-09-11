@@ -191,8 +191,13 @@ div.nav-menu {
                 left: 0;
                 bottom: 0;
                 @include size(100%, .5rem);
+                border-radius: $radius-s $radius-s 0 0;
             }
             
+        }
+        
+        &:hover:before {
+            border-radius: 0;
         }
         
         > a {

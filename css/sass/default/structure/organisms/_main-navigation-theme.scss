@@ -166,7 +166,7 @@ div.nav-menu {
     
     .current_page_item {
         
-        @include pseudo-content(before) {            
+        @include pseudo-content(before) {
             
             // Horitonal highlight - for main nav
             @include mq( $tablet ) {
