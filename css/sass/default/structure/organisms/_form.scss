@@ -4,6 +4,23 @@ label {
 }
 
 
+// <label> that has <input> inside (used to trigger focus on the input by activating the label)
+.label-cr {
+    display: block;
+}
+
+
+// Targetting all input with some exceptions
+input:not( [type="checkbox"] ):not( [type="radio"] ) {
+    width: 100%;
+    
+    .label-cr & {
+        margin-top: .5rem;
+    }
+    
+}
+
+
 #{$form-input-type-text} {
     width: 100%;
     min-height: $block;

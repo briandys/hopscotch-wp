@@ -384,6 +384,12 @@
     } )();
     
     
+    // <label> elements that enclose <input> elements
+	( function() {
+        $( 'label:has( input )' ).addClass( 'label-cr' );
+    } )();
+    
+    
     // Adding 'parent-menu' to nav items with children
     ( function() {
 		$('.menu-item:has(.children, .sub-menu), .page_item:has(.children, .sub-menu)').addClass('parent-menu');

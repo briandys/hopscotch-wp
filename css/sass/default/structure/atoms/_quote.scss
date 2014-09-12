@@ -12,5 +12,6 @@ blockquote {
 }
 
 q {
+    @include font-size-rem( $font-m-l );
     font-family: $font-family-quote;
 }

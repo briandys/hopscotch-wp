@@ -9,7 +9,7 @@
     .children {
         @include unlist;
         
-        @include mq($phablet, ieFixOn) {
+        @include mq( $phablet ) {
             padding-left: $avatar-size;
         }
     
@@ -29,10 +29,6 @@
         padding-left: 0;
         padding-right: 0;
         
-        p {
-            margin-top: 1rem;
-        }
-        
     }
     
 }
@@ -42,17 +38,32 @@
     padding-right: 1rem;
 }
 
-.comment-hr {
     
-    .comment-timestamp {
-        text-align: right;
+.comment-ct-cr {
+
+    p {
+        margin-top: 1rem;
     }
+
+}
+
+
+.comment {
     
-    @include mq($phablet, ieFixOn) {
-        @include avatar-adjust;
+    .comment-hr {
+
+        .comment-timestamp {
+            text-align: right;
+        }
+
+        @include mq( $phablet ) {
+            margin-left: $avatar-size + $gutter;
+        }
+
     }
     
 }
+
 
 .comment-timestamp {
     
@@ -110,14 +121,19 @@
     }
 }
 
-.comment-ct {    
+
+.comment {
     
-    @include mq($phablet, $query1: max) {
-        clear: both;
-    }
-    
-    @include mq( $phablet ) {
-        @include avatar-adjust;
+    .comment-ct {    
+
+        @include mq($phablet, $query1: max) {
+            clear: both;
+        }
+
+        @include mq( $phablet ) {
+            @include avatar-adjust;
+        }
+
     }
     
 }
@@ -176,8 +192,12 @@
         @include valign-mid;
     }
     
-    @include mq($phablet, ieFixOn) {
-        margin-top: -1.25rem;
+    .comment & {
+        
+        @include mq( $phablet ) {
+            margin-top: -1.25rem;
+        }
+        
     }
     
 }
@@ -194,9 +214,13 @@
         }
         
     }
+    
+    .comment & {
         
-    @include mq($phablet, ieFixOn) {
-        @include avatar-adjust;
+        @include mq( $phablet ) {
+            @include avatar-adjust;
+        }
+        
     }
     
 }
@@ -233,6 +257,10 @@
         @extend %vhide;
     }
     
+    .comment & {
+        margin-top: 1rem;
+    }
+    
     .comments-ct & {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -257,9 +285,22 @@
     
 }
 
-.comments-ct-cr > * {
-    padding-left: 0;
-    padding-right: 0;
+.pingback {
+    
+    .comment-cr {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+    
+    .comments-ct-cr {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .comment-timestamp {
+        text-align: right;
+    }
+    
 }
 
 #cancel-comment-reply-link {

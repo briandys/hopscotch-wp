@@ -6,7 +6,7 @@ hopscotch_content_header();
 hopscotch_hook_above_entry();
 ?>
 
-<article id="<?php hopscotch_post_id(); ?>" <?php post_class(); ?> <?php if ( is_page_template( 'template-info-card.php' ) ) : echo 'itemscope itemtype="http://schema.org/Organization"'; endif; ?>>
+<article id="<?php hopscotch_post_id(); ?>" <?php post_class(); ?> <?php if ( is_page_template( 'template-info-card.php' ) ) : echo 'itemscope itemtype="http://schema.org/Organization"'; endif; ?> <?php hopscotch_hook_entry_data_att(); ?>>
     
     <div class="entry-cr <?php hopscotch_slug_class(); ?>--entry-cr">
         <header class="entry-hr <?php hopscotch_slug_class(); ?>--entry-hr">

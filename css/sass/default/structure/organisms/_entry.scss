@@ -27,6 +27,24 @@ $entry-byline-avatar-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     
+    // Extra top space for the topmost .entry with thumbnail
+    // .entry:first-child[data-entry-thumbnail-state="active"] &,
+    .entry:first-child & {
+        
+        @include mq( $tablet ) {
+            margin-top: 3rem;
+        }
+        
+        .child-page & {
+            
+            @include mq( $tablet ) {
+                margin-top: 0;
+            }
+            
+        }
+        
+    }
+    
     @include mq( $tablet ) {
         margin-bottom: 1rem;
     }
@@ -60,6 +78,11 @@ $entry-byline-avatar-size: 2rem;
     padding-right: $gutter;
     padding-bottom: 2rem;
     @include borderstyle-perforated;
+    
+    .data-entry-content-state--empty & {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
     
     .entry-meta {
         margin-top: 1rem;
@@ -184,6 +207,7 @@ $entry-byline-avatar-size: 2rem;
 }
 
 
+// Entry Content Container
 .entry-ct-cr {
     padding-left: $gutter;
     padding-right: $gutter;
@@ -207,7 +231,7 @@ $entry-byline-avatar-size: 2rem;
         
     ol,
     ul {
-        margin-left: $gutter;
+        margin-left: 1.5rem;
     }
     
     // Entry Links
@@ -260,6 +284,20 @@ $entry-byline-avatar-size: 2rem;
         margin-bottom: auto;
     }
     
+    // For paragraphs inside lists
+    li {
+        margin-bottom: 1rem;
+        
+        p:last-child {
+            margin-bottom: 2rem;
+        }
+        
+        &:last-child p:last-child {
+            margin-bottom: 0;
+        }
+        
+    }
+    
     .pull-quote {
 
         @include mq( $tablet ) {
@@ -298,13 +336,6 @@ $entry-byline-avatar-size: 2rem;
     h4 {
         @include font-size-rem( $font-m );
         font-weight: 600;
-    }
-    
-    pre {
-        margin-left: $gutter;
-        margin-right: $gutter;
-        padding-left: 0;
-        padding-right: 0;
     }
     
     // Format: Status

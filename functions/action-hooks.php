@@ -45,6 +45,12 @@ function hopscotch_hook_content_title() {
     do_action('hopscotch_hook_content_title');
 }
 
+// Location: content.php > above .entry
 function hopscotch_hook_above_entry() {
     do_action('hopscotch_hook_above_entry');
+}
+
+// Location: content.php > .entry
+function hopscotch_hook_entry_data_att() {
+    do_action('hopscotch_hook_entry_data_att');
 }

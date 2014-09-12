@@ -79,6 +79,10 @@ require_once( trailingslashit(get_template_directory()) . 'functions/class-slug.
 require_once( trailingslashit(get_template_directory()) . 'functions/class-page-template.php');
 
 
+// Data Attributes
+require_once( trailingslashit(get_template_directory()) . 'functions/data-att-entry.php');
+
+
 // get_the_content Formatted
 require_once( trailingslashit(get_template_directory()) . 'functions/get-the-content-formatted.php');
 

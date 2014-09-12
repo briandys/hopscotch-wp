@@ -13,7 +13,7 @@ function hopscotch_add_entry_class( $classes ) {
     if ( is_page_template( 'template-info-card.php' ) ) $classes[] = 'vcard org';
     
     // Empty Content
-    if( $post->post_content == "" ) $classes[] = 'entry-empty';
+    if( $post->post_content == "" ) $classes[] = 'entry-empty data-entry-content-state--empty';
     
     if ( has_post_thumbnail() || get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) :
         $classes[] = "entry-thumbnail-active entry-thumbnail--active";
