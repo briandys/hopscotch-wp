@@ -32,7 +32,7 @@ $entry-byline-avatar-size: 2rem;
     .entry:first-child & {
         
         @include mq( $tablet ) {
-            margin-top: 3rem;
+            margin-top: 1rem;
         }
         
         .child-page & {
@@ -41,6 +41,22 @@ $entry-byline-avatar-size: 2rem;
                 margin-top: 0;
             }
             
+        }
+        
+        .category & {
+            
+            @include mq( $tablet ) {
+                margin-top: 0;
+            }
+            
+        }
+        
+    }
+    
+    [data-html-page-nav-state="inactive"] .entry:last-child & {
+        
+        @include mq( $tablet ) {
+            margin-bottom: 4rem;
         }
         
     }

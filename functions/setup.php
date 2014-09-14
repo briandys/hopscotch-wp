@@ -14,19 +14,20 @@ function hopscotch_setup() {
     
     add_theme_support( 'post-thumbnails' );
     
+    // Sets the default sizes of images in Admin > Settings
     update_option('thumbnail_size_w', 160);
     update_option('thumbnail_size_h', 160);
     update_option('thumbnail_crop', 1);
-    
     update_option('medium_size_w', 640);
     update_option('medium_size_h', 640);
-    
     update_option('large_size_w', 1200);
     update_option('large_size_h', 1200);
     
+    // Adds extra custom sizes for thumbnails (see functions > entry-thumbnail.php)
     add_image_size( 'hopscotch-small', 320 );
     add_image_size( 'hopscotch-medium', 640 );
     add_image_size( 'hopscotch-regular', 800 );
+    add_image_size( 'thumbnail-size-800', 800 );
 
 }
 add_action( 'after_setup_theme', 'hopscotch_setup' );

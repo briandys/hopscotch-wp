@@ -9,12 +9,8 @@ require_once( trailingslashit(get_template_directory()) . 'functions/custom-head
 require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
 
 
-//------------------------- Components Directory
-function hopscotch_components_directory() {
-    global $comdir;
-    $comdir = 'components';
-    return $comdir;
-}
+// Content
+require_once( trailingslashit(get_template_directory()) . 'functions/single-content.php');
 
 
 // Front-end
@@ -98,8 +94,9 @@ require_once( trailingslashit(get_template_directory()) . 'functions/shortcode-c
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-form.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-list.php');
 
-// Footer
-require_once( trailingslashit(get_template_directory()) . 'functions/site-info.php');
+// Colophon
+require_once( trailingslashit(get_template_directory()) . 'functions/web-designer.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/copyright.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
 
 // Functionalities

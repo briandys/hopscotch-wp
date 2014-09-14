@@ -17,14 +17,19 @@ div.nav-menu {
     
     li {
 
-        // BG color of hovered main nav
+        // BG color of hovered nav
         &:hover {
-            background-color: $color-masthead-hover-bg;
+            background-color: rgba( $color-masthead-hover-bg, .75 );
             
             a {
                 color: $color-masthead-fg;
             }
             
+        }
+        
+        &:active {
+            background-color: darken( $color-masthead-hover-bg, 5% );
+        
         }
 
     }
@@ -37,15 +42,17 @@ div.nav-menu {
                 
             &:after {
                 
+                // Nav link and icon hint divider
                 @include mq( $tablet ) {
                     @include transition( border-right-color );
-                    border-right-color: rgba( $color-masthead-fg, .35 );
+                    border-right-color: rgba( $black, .35 );
                 }
                 
             }
             
             &:hover:after {
                 
+                // Remove nav link and icon hint divider
                 @include mq( $tablet ) {
                     border-right-color: transparent;
                 }
@@ -54,19 +61,25 @@ div.nav-menu {
 
         }
         
+        &:hover {
+            
+            > a:after {
+                
+                @include mq( $tablet ) {
+                    border-right-color: rgba( $color-masthead-fg, .35 );
+                }
+                
+            }
+            
+        }
+        
         &.status-sub-nav-active {
             
             // BG color of parent nav when sub nav is active
             background-color: $color-masthead-hover-bg;
             
-            // BG color of main nav when sub nav is hovered on
-            &:hover {
-                background-color: $color-masthead-hover-bg;
-            }
-            
             a {
                 color: $color-masthead-fg;
-
             }
 
             > {
@@ -77,9 +90,18 @@ div.nav-menu {
                 
                 a {
                     
-                    // BG color of parent
+                    // BG color of parent (excluding the icon hint)
                     &:hover {
                         background-color: $darken10;
+                    }
+                    
+                    // Color or vertical divider must be light
+                    &:after {
+
+                        @include mq( $tablet ) {
+                            border-right-color: rgba( $color-masthead-fg, .35 );
+                        }
+                        
                     }
                     
                 }
@@ -168,9 +190,9 @@ div.nav-menu {
         
         @include pseudo-content(before) {
             
-            // Horitonal highlight - for main nav
+            // Horizonal highlight - for main nav
             @include mq( $tablet ) {
-                background-color: $darken10;
+                background-color: darken( $color-masthead-bg, 5% );
             }
             
         }

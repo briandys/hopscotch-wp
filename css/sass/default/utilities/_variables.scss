@@ -134,6 +134,7 @@ $block-xxl: $block-xl + $block-size-factor;
 //------------------------- Border Radius
 $radius-size-factor: .25;
 
+$radius-xs: .125rem;
 $radius-s: .25rem;
 $radius-m: $radius-s + $radius-size-factor;
 

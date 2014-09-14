@@ -80,6 +80,10 @@ hopscotch_hook_above_entry();
                     <?php // HopScotch Content Title Hook
                     hopscotch_hook_content_title();
                     ?>
+                    
+                    <?php // HopScotch Pre the_content Hook
+                    hopscotch_hook_pre_the_content();
+                    ?>
                 
                     <?php the_content( __( 'More', 'hopscotch' ) ); ?>
                 

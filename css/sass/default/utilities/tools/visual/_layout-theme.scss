@@ -13,7 +13,70 @@
             background-color: $color-masthead-hightlight-bg;
         }
         
+        &:active {
+            color: rgba( $color-masthead-fg, .85 );
+            background-color: darken( $color-masthead-hightlight-bg, 5% );
+        }
+        
     }
+    
+    
+    // Main navigation
+    div.nav-menu {
+        
+        > ul {
+            
+            > {
+                
+                li {
+        
+                    > a {
+                        color: $white;
+                    }
+                    
+                }
+                
+            }
+            
+            .page_item_has_children,
+            .menu-item-has-children {
+                
+                > a {
+                    
+                    &:after {
+                
+                        // Nav link and icon hint divider
+                        @include transition( border-right-color );
+                        border-right-color: rgba( $white, .35 );
+
+                    }
+            
+                    &:hover:after {
+
+                        // Remove nav link and icon hint divider
+                        border-right-color: transparent;
+
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    
+        // Horizontal highlight
+        .current_page_item {
+
+            @include pseudo-content(before) {
+
+                // Horizonal highlight - for main nav
+                background-color: $darken10;
+
+            }
+
+        }
+        
+    } // div.nav-menu
 
 }
 

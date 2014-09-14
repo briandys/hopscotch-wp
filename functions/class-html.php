@@ -15,6 +15,16 @@ function hopscotch_html_default_class() {
 add_action( 'hopscotch_html_class', 'hopscotch_html_default_class');
 
 
+function hopscotch_page_nav_state() {
+    if ( $GLOBALS['wp_query']->max_num_pages < 2 ) :
+        echo 'data-html-page-nav-state="inactive"';
+    else :
+        echo 'data-html-page-nav-state="active"';
+    endif;
+}
+add_action( 'hopscotch_html_data_att', 'hopscotch_page_nav_state');
+
+
 // This is the unique HTML class of site projects
 if ( ! function_exists( 'hopscotch_html_site_parent_class' ) ) :	
     function hopscotch_html_site_parent_class() {

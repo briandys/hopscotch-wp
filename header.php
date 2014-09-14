@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="html" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
+<html id="html" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?> <?php hopscotch_html_data_att(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -22,11 +22,9 @@ div.nav-menu {
             .menu-item-has-children {
 
                 &.status-sub-nav-active {
-                    // Themed
                     
                     @include pseudo-content(before) {
 
-                        // Non-mobile mode
                         @include mq( $tablet ) {
                             display: none;
                         }
@@ -35,12 +33,24 @@ div.nav-menu {
                     
                 }
                 
-                &.status-sub-nav-inactive:after {
+                &.status-sub-nav-inactive {
                     
-                    // More icon shown beside the main nav parents
-                    @include mq( $tablet ) {
-                        @include background-image-icon('../img/more-light.svg');
-                        opacity: .5;
+                    &:after {
+                    
+                        // More icon shown beside the main nav parents
+                        @include mq( $tablet ) {
+                            @include background-image-icon('../img/more.svg');
+                            opacity: .5;
+                        }
+                        
+                    }
+                    
+                    &:hover:after {
+                        
+                        @include mq( $tablet ) {
+                            @include background-image-icon('../img/more-light.svg');
+                        }
+                        
                     }
                     
                 }
@@ -186,12 +196,11 @@ div.nav-menu {
         
         @include pseudo-content(before) {            
             
-            // Non-mobile mode
             @include mq( $tablet ) {
                 left: 0;
                 bottom: 0;
                 @include size(100%, .5rem);
-                border-radius: $radius-s $radius-s 0 0;
+                border-radius: $radius-xs $radius-xs 0 0;
             }
             
         }
@@ -234,7 +243,6 @@ div.nav-menu {
         > a {
             margin-right: $block-l;
 
-            // Non-mobile mode
             @include mq( $tablet ) {
                 @include pseudo-content;
                 margin-right: $block-m;
