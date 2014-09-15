@@ -106,8 +106,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/image-margi
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 
-require_once( trailingslashit(get_template_directory()) . 'functions/text-widget-php.php');
-
 // WordPress Native Functions
 require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');
 
