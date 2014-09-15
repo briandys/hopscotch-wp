@@ -12,6 +12,7 @@ function hopscotch_setup() {
     register_nav_menu( 'primary', __( 'Navigation Menu', 'hopscotch' ) );
     remove_filter('term_description','wpautop');
     
+    add_theme_support( 'custom-background' );
     add_theme_support( 'post-thumbnails' );
     
     // Sets the default sizes of images in Admin > Settings

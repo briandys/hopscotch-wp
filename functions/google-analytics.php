@@ -2,7 +2,7 @@
 
 //------------------------- Google Analytics
 function hopscotch_google_analytics() {
-	$options_main = get_option(hopscotch_customize_main);
+	$options_main = get_option( 'hopscotch_customize_main' );
 	?>
 	<script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -15,5 +15,3 @@ function hopscotch_google_analytics() {
     <?php
 }
 add_action( 'wp_footer', 'hopscotch_google_analytics' );
-
-?>

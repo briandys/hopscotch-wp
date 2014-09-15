@@ -41,7 +41,7 @@ add_action('customize_register', 'hopscotch_customize_register_main');
 
 //------------------------- Structure CSS
 function hopscotch_customize_main_css() {
-    $options_main = get_option(hopscotch_customize_main);
+    $options_main = get_option( 'hopscotch_customize_main' );
 	?>
     <style type="text/css">
         /* Ref: _main.scss */
