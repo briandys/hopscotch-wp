@@ -58,7 +58,7 @@
                                     ?>
 
                                     <!-- Author -->
-                                     <?php elseif ( is_author() ) : ?>									
+                                     <?php elseif ( is_author() ) : ?>
                                        <span class="label">All Posts by</span> <span class="label-value"><?php the_author_meta( 'display_name' ); ?></span>
 
                                     <?php else : ?>
@@ -89,7 +89,21 @@
                             </header>
                             <div class="main-content-ct">
 
-                                <?php hopscotch_hook_index_content(); ?>
+                                <?php
+                                if ( have_posts() ) :
+                                    
+                                    while ( have_posts() ) : the_post();
+                                        get_template_part( 'content', get_post_format() );
+                                    endwhile;
+
+                                    hopscotch_paging_nav();
+
+                                else :
+
+                                    get_template_part( 'content', 'none' );                                                    
+
+                                endif;
+                                ?>
 
                             </div>
                        </div>
