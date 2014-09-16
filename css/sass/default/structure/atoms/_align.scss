@@ -4,8 +4,8 @@
 
     @include mq( $tablet ) {
         float: left;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin-right: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -15,8 +15,8 @@
 
     @include mq( $tablet ) {
         float: right;
-        margin-left: 1rem;
-        margin-bottom: 1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
 }

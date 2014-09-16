@@ -1,3 +1,5 @@
+// Comments
+
 .comment-list {
     @include unlist;
     margin-bottom: 2rem;
@@ -369,7 +371,15 @@
 
 
 .comment-subscription-form {
+    position: absolute;
+    top: 100%;
+    left: 0;
     margin-bottom: auto;
+    
+    &:last-of-type {
+        padding-top: 2rem;
+    }
+    
 }
 
 .comment-date {
@@ -396,7 +406,7 @@
     .field-comment {
         clear: both;
         
-        label {
+        label:not( .subscribe-label ) {
             
             .logged-in & {
                 @extend %vhide;

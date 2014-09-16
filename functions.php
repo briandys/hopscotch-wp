@@ -10,6 +10,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/action-hook
 
 
 // Content
+require_once( trailingslashit(get_template_directory()) . 'functions/index-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/single-content.php');
 
 
@@ -99,8 +100,9 @@ require_once( trailingslashit(get_template_directory()) . 'functions/web-designe
 require_once( trailingslashit(get_template_directory()) . 'functions/copyright.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
 
-// Functionalities
+// Functionalities, Conditionals
 require_once( trailingslashit(get_template_directory()) . 'functions/conditional-is-child.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/category-descendant.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/post-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');

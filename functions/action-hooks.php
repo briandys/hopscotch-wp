@@ -69,3 +69,8 @@ function hopscotch_hook_pre_the_content() {
 function hopscotch_html_data_att() {
     do_action('hopscotch_html_data_att');
 }
+
+// Location: index.php > .main-content-ct
+function hopscotch_hook_index_content() {
+    do_action('hopscotch_hook_index_content');
+}

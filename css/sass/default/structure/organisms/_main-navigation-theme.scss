@@ -171,7 +171,8 @@ div.nav-menu {
     
     .status-sub-nav-active {
         
-        .current_page_item {
+        .current_page_item,
+        .current-menu-item {
         
             // Vertical highlight - for sub nav
             @include mq( $tablet ) {
@@ -186,7 +187,8 @@ div.nav-menu {
     }
     
     
-    .current_page_item {
+    .current_page_item,
+    .current-menu-item {
         
         @include pseudo-content(before) {
             
