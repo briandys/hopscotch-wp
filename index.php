@@ -72,7 +72,7 @@
 
                                     <?php // Category or Tag description
                                     $term_description = term_description();
-                                    if( !empty( term_description() && !is_paged() ) ) :
+                                    if( !empty( $term_description ) && !is_paged() ) :
                                         printf( '<p class="main-content-meta description taxonomy-description">%s</p>', $term_description );
                                     endif;
                                     ?>
