@@ -14,3 +14,15 @@
     #{$position-y}: $position-y-value;
     margin-#{$position-y}: -($offset-value / 2);
 }
+
+
+// 
+@mixin pos-offset-x(
+    $offset-value: 50%, // the width of the element
+    $offset-position: left // left, right
+    )
+{
+    #{$offset-position}: 50%;
+    width: $offset-value;
+    margin-#{$offset-position}: -($offset-value / 2);
+}

@@ -6,7 +6,7 @@ hopscotch_content_header();
 hopscotch_hook_above_entry();
 ?>
 
-<article id="<?php hopscotch_post_id(); ?>" <?php post_class(); ?> <?php if ( is_page_template( 'template-info-card.php' ) ) : echo 'itemscope itemtype="http://schema.org/Organization"'; endif; ?> <?php hopscotch_hook_entry_data_att(); ?>>
+<article id="<?php hopscotch_post_id(); ?>" <?php post_class('entry'); ?> <?php hopscotch_hook_entry_data_att(); ?>>
     
     <div class="entry-cr <?php hopscotch_slug_class(); ?>--entry-cr">
         <header class="entry-hr <?php hopscotch_slug_class(); ?>--entry-hr">
@@ -23,22 +23,28 @@ hopscotch_hook_above_entry();
                     endif;
                     ?>
                 
-                    <?php // Edit Post Action
+                    <?php
+                    // Edit Post Action (Edit Post link)
                     hopscotch_entry_action_edit();
-                    ?>
 
-                    <?php // Custom Field: Subtitle
+                    // Custom Field: entry-subtitle
                     hopscotch_entry_subtitle();
-                    ?>
 
-                    <?php // Breadcrumbs
+                    // Breadcrumbs
                     hopscotch_breadcrumbs();
                     ?>
                     
                     <div class="entry-meta">
                         <div class="entry-meta-cr">
-                        <?php hopscotch_entry_date(); ?>
-                        <?php hopscotch_entry_byline(); ?>
+                            
+                        <?php
+                        // Entry date and time
+                        hopscotch_entry_date();
+
+                        // Entry byline (Author and Category)
+                        hopscotch_entry_byline();
+                        ?>
+                        
                         </div>
                     </div>
                     
@@ -59,7 +65,7 @@ hopscotch_hook_above_entry();
         </header>
         
         
-        <div class="entry-ct <?php hopscotch_slug_class(); ?>--entry-ct <?php if( is_search() ) echo 'entry-summary'; ?>">
+        <div class="<?php hopscotch_hook_entry_content_class(); ?> <?php hopscotch_slug_class(); ?>--entry-ct">
             
             <?php // HopScotch Pre-content Hook
             hopscotch_hook_pre_content();
@@ -135,14 +141,18 @@ hopscotch_hook_above_entry();
         <footer class="entry-fr <?php hopscotch_slug_class(); ?>--entry-fr">
             <div class="entry-fr-cr">
 				
-				<?php if ( has_post_format( 'status' ) ) : ?>
+            <?php if ( has_post_format( 'status' ) ) : ?>
                 <div class="entry-meta">			
-                    <?php hopscotch_entry_date(); ?>
-                    <?php hopscotch_entry_byline(); ?>
-                </div><!-- .entry-meta -->
-                <?php hopscotch_entry_action_edit(); ?>
-                <?php hopscotch_entry_action_comment(); ?>
-				<?php endif; ?>
+                <?php
+                hopscotch_entry_date();
+                hopscotch_entry_byline();
+                ?>
+                </div><!-- entry-meta -->
+                <?php
+                hopscotch_entry_action_edit();
+                hopscotch_entry_action_comment();
+                ?>
+            <?php endif; ?>
                 
                 <?php hopscotch_the_tags(); ?>
             </div>

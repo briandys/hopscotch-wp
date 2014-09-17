@@ -1,10 +1,8 @@
 <?php
 
-//------------------------- Entry Classes
+//------------------------- .entry Classes
 function hopscotch_add_entry_class( $classes ) {
 	global $post;
-    // Defaults
-    $classes[] = 'entry';    
     
     // Slug
     $classes[] = 'hopscotch-' . $post->post_name;
@@ -23,4 +21,18 @@ function hopscotch_add_entry_class( $classes ) {
     
 	return $classes;
 }
-add_filter('post_class', "hopscotch_add_entry_class");
+add_filter('post_class', 'hopscotch_add_entry_class');
+
+
+//------------------------- .entry-ct Classes
+function hopscotch_add_entry_content_class() {
+    
+    // Default
+    echo 'entry-ct ';
+    
+    // Search (show only the excerpt)
+    if ( is_search() ) {
+        echo 'entry-summary ';
+    }
+}
+add_action('hopscotch_hook_entry_content_class', 'hopscotch_add_entry_content_class');

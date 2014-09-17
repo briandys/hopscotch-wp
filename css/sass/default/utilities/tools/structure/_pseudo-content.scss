@@ -4,11 +4,14 @@
     position: absolute;
 }
 
-@mixin pseudo-content($pos: after) {
-    position: relative;
+@mixin pseudo-content( $pos: after ) {
+    & {
+        position: relative;
+    }
     
     &:#{$pos} {
         @include sudo-ct;
         @content;
     }
+    
 }

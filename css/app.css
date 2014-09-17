@@ -1285,12 +1285,12 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
   background-color: #00aaff;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 175, sass/default/structure/organisms/_main-navigation-theme.scss */
+  /* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .status-sub-nav-active .current_page_item,
   div.nav-menu .status-sub-nav-active .current-menu-item {
     position: relative;
   }
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .status-sub-nav-active .current_page_item:before,
   div.nav-menu .status-sub-nav-active .current-menu-item:before {
     content: '';
@@ -1298,19 +1298,19 @@ div.nav-menu .menu-item-has-children.status-sub-nav-active .sub-menu {
     background-color: rgba(0, 0, 0, 0.15);
   }
 }
-/* line 191, sass/default/structure/organisms/_main-navigation-theme.scss */
+/* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu .current_page_item,
 div.nav-menu .current-menu-item {
   position: relative;
 }
-/* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+/* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu .current_page_item:before,
 div.nav-menu .current-menu-item:before {
   content: '';
   position: absolute;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .current_page_item:before,
   div.nav-menu .current-menu-item:before {
     background-color: #0099e6;
@@ -3667,19 +3667,19 @@ div.nav-menu {
     display: inline-block;
   }
 }
-/* line 24, sass/default/structure/organisms/_main-navigation.scss */
+/* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu > ul > .page_item_has_children.status-sub-nav-active,
 div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active {
   position: relative;
 }
-/* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+/* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu > ul > .page_item_has_children.status-sub-nav-active:before,
 div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active:before {
   content: '';
   position: absolute;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu > ul > .page_item_has_children.status-sub-nav-active:before,
   div.nav-menu > ul > .menu-item-has-children.status-sub-nav-active:before {
     display: none;
@@ -3791,11 +3791,11 @@ div.nav-menu .menu-item:last-child {
   }
 }
 @media only screen and (min-width: 48rem) {
-  /* line 177, sass/default/structure/organisms/_main-navigation.scss */
+  /* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .status-sub-nav-active .current_page_item {
     position: relative;
   }
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .status-sub-nav-active .current_page_item:before {
     content: '';
     position: absolute;
@@ -3806,17 +3806,17 @@ div.nav-menu .menu-item:last-child {
     border-bottom-left-radius: 0.25rem;
   }
 }
-/* line 195, sass/default/structure/organisms/_main-navigation.scss */
+/* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu .current_page_item {
   position: relative;
 }
-/* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+/* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
 div.nav-menu .current_page_item:before {
   content: '';
   position: absolute;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .current_page_item:before {
     left: 0;
     bottom: 0;
@@ -3875,10 +3875,14 @@ div.nav-menu .menu-item-has-children > a {
   /* line 243, sass/default/structure/organisms/_main-navigation.scss */
   div.nav-menu .page_item_has_children > a,
   div.nav-menu .menu-item-has-children > a {
-    position: relative;
     margin-right: 3rem;
   }
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  div.nav-menu .page_item_has_children > a,
+  div.nav-menu .menu-item-has-children > a {
+    position: relative;
+  }
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   div.nav-menu .page_item_has_children > a:after,
   div.nav-menu .menu-item-has-children > a:after {
     content: '';
@@ -4457,11 +4461,11 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   .hopscotch--site div.nav-menu > ul .menu-item-has-children > a:hover:after {
     border-right-color: transparent;
   }
-  /* line 68, sass/default/utilities/tools/visual/_layout-theme.scss */
+  /* line 8, sass/default/utilities/tools/structure/_pseudo-content.scss */
   .hopscotch--site div.nav-menu .current_page_item {
     position: relative;
   }
-  /* line 10, sass/default/utilities/tools/structure/_pseudo-content.scss */
+  /* line 12, sass/default/utilities/tools/structure/_pseudo-content.scss */
   .hopscotch--site div.nav-menu .current_page_item:before {
     content: '';
     position: absolute;

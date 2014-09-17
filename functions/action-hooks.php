@@ -74,3 +74,8 @@ function hopscotch_html_data_att() {
 function hopscotch_hook_index_content() {
     do_action('hopscotch_hook_index_content');
 }
+
+// Location: content.php > .entry-ct
+function hopscotch_hook_entry_content_class() {
+    do_action('hopscotch_hook_entry_content_class');
+}

@@ -1,13 +1,14 @@
-<article class="page content-absent entry">
+<article class="entry content-absent">
+    
     <div class="entry-cr">
-        <header class="entry-hr">            
+        <header class="entry-hr">
             <div class="entry-hr-cr">
                 <h1 class="entry-title"><?php _e( 'Nothing Found', 'hopscotch' ); ?></h1>
-            </div>
+            </div>            
         </header>
         
-        <section class="entry-ct">            
-			<div class="entry-ct-cr">
+        <div class="entry-ct">
+            <div class="entry-ct-cr">
                 <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>    
                 <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started</a>.', 'hopscotch' ), admin_url( 'post-new.php' ) ); ?></p>        
 
@@ -19,7 +20,7 @@
 
                 <?php endif; ?>
             </div>
-        </section><!-- .entry-ct -->
+        </div><!-- entry-ct -->
     
-    </div><!-- .post-cr -->
+    </div><!-- entry-cr -->
 </article>

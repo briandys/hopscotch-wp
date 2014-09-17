@@ -9,12 +9,13 @@
                                 <div class="main-content-hr-cr">                            
                                     <h2 class="main-content-heading">
 
-                                    <!-- Home -->
-                                    <?php if ( is_home() ) : ?>									
+                                    <?php // Home
+                                    if ( is_home() ) : ?>									
                                         <span class="label">Primary Content:</span> <span class="label-value">Home</span>
 
-                                    <!-- Search -->
-                                    <?php elseif ( is_search() ) : ?>                                
+                                    <?php // Search
+                                    elseif ( is_search() ) : ?>                                
+                                            
                                         <?php
                                         $entrySearch = new WP_Query( array(
                                             's'         => $s,
@@ -35,15 +36,16 @@
                                         wp_reset_query();
                                     ?>
 
-                                    <!-- Category -->
-                                    <?php elseif ( is_category() ) : ?>
+                                    <?php // Category
+                                    elseif ( is_category() ) : ?>
                                         <?php printf( __( '<span class="label">Category:</span> <span class="label-value">%s</span>', 'hopscotch' ), single_cat_title( '', false ) ); ?>
 
-                                    <?php elseif ( is_tag() ) : ?>
+                                    <?php // Tag
+                                    elseif ( is_tag() ) : ?>
                                         <?php printf( __( '<span class="label">Tag Archives:</span> <span class="label-value">%s</span>', 'hopscotch' ), single_tag_title( '', false ) ); ?>
 
-                                    <!-- Archives -->
-                                    <?php elseif ( is_archive() && ! is_author() ) : ?>
+                                    <?php // Archive
+                                    elseif ( is_archive() && ! is_author() ) : ?>
                                         <?php echo '<span class="label">'; ?>
                                         <?php
                                         if ( is_day() ) :
@@ -56,34 +58,30 @@
                                             _e( 'Archives</span>', 'hopscotch' );
                                         endif;
                                     ?>
+                                        
+                                    <?php // Author
+                                    elseif ( is_author() ) : ?>
+                                        <?php printf( __( '<span class="label">All posts by</span> <span class="label-value">%s</span>', 'hopscotch' ), get_the_author() ); ?>
 
-                                    <!-- Author -->
-                                     <?php elseif ( is_author() ) : ?>
-                                       <span class="label">All Posts by</span> <span class="label-value"><?php the_author_meta( 'display_name' ); ?></span>
-
-                                    <?php else : ?>
-
-                                    <!-- Regular -->
+                                    <?php // Regular
+                                    else : ?>
                                         <span class="label">Content:</span> <span class="label-value">Main</span>
 
                                     <?php endif; ?>
                                     </h2>
 
-                                    <?php if ( category_description() ) : ?>
-                                    <p class="main-content-meta description category-description"><?php echo category_description(); ?></p>
-                                    <?php endif; ?>
-
-                                    <?php if ( is_author() && get_the_author_meta( 'description' ) ) : ?>
-                                    <p class="main-content-meta description author-description"><?php the_author_meta( 'description' ); ?></p>
-                                    <?php endif; ?>
-
-                                    <?php if ( is_tag() ) : ?>                                
-                                    <?php
-                                        $term_description = term_description();
-                                        if ( ! empty( $term_description ) ) :
-                                            printf( '<p class="main-content-meta taxonomy-description">%s</p>', $term_description );
-                                        endif;
+                                    <?php // Category or Tag description
+                                    $term_description = term_description();
+                                    if( !empty( term_description() && !is_paged() ) ) :
+                                        printf( '<p class="main-content-meta description taxonomy-description">%s</p>', $term_description );
+                                    endif;
                                     ?>
+
+                                    <?php // Author description
+                                    if ( is_author() && get_the_author_meta( 'description' ) ) : ?>
+                                        <p class="main-content-meta description author-description">
+                                            <?php the_author_meta( 'description' ); ?>
+                                        </p>
                                     <?php endif; ?>
                                 </div>
                             </header>
@@ -91,17 +89,12 @@
 
                                 <?php
                                 if ( have_posts() ) :
-                                    
                                     while ( have_posts() ) : the_post();
                                         get_template_part( 'content', get_post_format() );
                                     endwhile;
-
                                     hopscotch_paging_nav();
-
                                 else :
-
-                                    get_template_part( 'content', 'none' );                                                    
-
+                                    get_template_part( 'content', 'none' );
                                 endif;
                                 ?>
 
