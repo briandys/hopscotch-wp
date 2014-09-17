@@ -10,6 +10,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/action-hook
 
 
 // Content
+require_once( trailingslashit(get_template_directory()) . 'functions/the-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/single-content.php');
 
 

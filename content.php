@@ -91,7 +91,9 @@ hopscotch_hook_above_entry();
                     hopscotch_hook_pre_the_content();
                     ?>
                 
-                    <?php the_content( __( 'More', 'hopscotch' ) ); ?>
+                    <?php // HopScotch the_content Hook
+                    hopscotch_hook_the_content();
+                    ?>
                 
                 <?php } ?>
                 <?php hopscotch_wp_link_pages(); ?>
