@@ -84,3 +84,8 @@ function hopscotch_hook_entry_content_class() {
 function hopscotch_hook_the_content() {
     do_action('hopscotch_hook_the_content');
 }
+
+// Location: content.php > .entry-meta-cr
+function hopscotch_hook_header_meta() {
+    do_action('hopscotch_hook_header_meta');
+}

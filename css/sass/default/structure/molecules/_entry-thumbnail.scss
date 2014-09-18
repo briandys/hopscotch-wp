@@ -4,6 +4,11 @@
     background-position: center center;
     background-size: cover;
     @include circle;
+    
+    img {
+        display: none;
+    }
+    
 }
 
 .entry-thumbnail {

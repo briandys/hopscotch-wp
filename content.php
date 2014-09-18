@@ -41,6 +41,9 @@ hopscotch_hook_above_entry();
                         // Entry date and time
                         hopscotch_entry_date();
 
+                        // Hopscotch Meta hook
+                        hopscotch_hook_header_meta();
+
                         // Entry byline (Author and Category)
                         hopscotch_entry_byline();
                         ?>

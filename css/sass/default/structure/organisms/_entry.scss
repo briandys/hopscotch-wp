@@ -329,6 +329,16 @@ $entry-byline-avatar-size: 2rem;
 
     }
     
+    .ellipsis {
+        margin-left: .25rem;
+        letter-spacing: .125rem;
+
+        &:after {
+            content: '.';
+        }
+        
+    }
+    
     @each $item in $heading-tags {
 
         > #{$item} {
