@@ -20,7 +20,7 @@ add_filter( 'excerpt_more', 'hopscotch_excerpt_more' );
 if ( ! function_exists( 'hopscotch_more_content_link' ) ) :
     function hopscotch_more_content_link($output) {
         global $post;
-        return $output . '<div class="show-more-content"><a class="more-link" href="'. get_permalink($post->ID) . '"> Continue reading</a></div>';
+        return $output . '<div class="show-more-content"><a class="more-link" href="'. get_permalink($post->ID) . '">Continue reading</a></div>';
     }
     add_filter('the_excerpt', 'hopscotch_more_content_link');
 endif;
