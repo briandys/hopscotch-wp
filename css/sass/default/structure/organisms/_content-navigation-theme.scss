@@ -1,24 +1,33 @@
+// Page to page
 .page-navigation-list {
     
     a {
         color: $color-content-nav-link;
 
         &:hover {
-            background-color: rgba( $color-content-nav-bg, .1 );
+            color: $color-content-nav-rev-hover-fg;
+            background-color: $color-content-nav-rev-hover-bg;
         }
         
+    }
+    
+    .current {
+        color: $color-content-nav-current-rev-fg;
+        background-color: $color-content-nav-current-rev-bg;
     }
     
 }
 
 
+// Entry to entry
 .entry-navigation-list {
     
     .action-item a {
         color: $color-content-nav-link;
 
         &:hover {
-            background-color: rgba( $color-content-nav-bg, .1 );
+            color: $color-content-nav-rev-hover-fg;
+            background-color: $color-content-nav-rev-hover-bg;
         }
         
     }
@@ -26,37 +35,23 @@
 }
 
 
+// Entry page to page
 .entry-page-navigation-list {
     
     a {
         color: $color-content-nav-link;
 
         &:hover {
-            color: $color-font;
-            background-color: rgba( $color-content-nav-bg, .1 );
+            color: $color-content-nav-rev-hover-fg;
+            background-color: $color-content-nav-rev-hover-bg;
         }
         
     }
     
-}
-
-
-.entry-page-navigation-list {
-    
     // Current page
     > .label {
-        color: $color-content-nav-fg;
-        background-color: $color-content-nav-bg;
-    }
-    
-}
-
-
-.page-navigation-list {
-    
-    .current {
-        color: $color-content-nav-fg;
-        background-color: $color-content-nav-bg;
+        color: $color-content-nav-rev-fg;
+        background-color: $color-content-nav-rev-bg;
     }
     
 }

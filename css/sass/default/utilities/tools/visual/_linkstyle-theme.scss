@@ -14,35 +14,35 @@
 }
 
 
+
 @mixin linkstyle-faint-theme {
-    color: $gray35;
-    border-bottom-color: $gray65;
+    color: $color-faint-fg;
+    border-bottom-color: $color-faint-fg;
     
     &:hover {
-        color: $color-link-primary;
+        color: $color-faint-hover-fg;
     }
     
 }
 
-
 @mixin linkstyle-boxed-theme {
-    color: $gray35;
-    background-color: $gray95;
+    color: $color-linkstyle-boxed-rev-fg;
+    background-color: $color-linkstyle-boxed-rev-bg;
 
     &:hover {
-        color: $white;
-        background-color: $color-link-secondary;
+        color: $color-linkstyle-boxed-rev-hover-fg;
+        background-color: $color-linkstyle-boxed-rev-hover-bg;
     }
     
 }
 
 
 @mixin buttonizer-theme {
-    color: $color-link-primary;
+    color: $color-hollow-box-fg;
     
     &:hover {
-        color: $white;
-        background-color: $color-link-primary;
+        color: $color-hollow-box-rev-hover-fg;
+        background-color: $color-hollow-box-rev-hover-bg;
     }
     
 }

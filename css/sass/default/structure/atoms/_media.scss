@@ -36,12 +36,7 @@ iframe[src*="codepen"] {
 
 svg.icon {
     margin: $one; // Corrects cut edges
-    fill: $gray25;    
-    @include transition(fill);
-    
-    &:hover {
-        // Themed
-    }
+    fill: $gray25;
 
     .modernizr-no-inlinesvg & {
         display: none;

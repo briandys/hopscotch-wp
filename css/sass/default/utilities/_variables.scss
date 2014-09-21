@@ -94,6 +94,10 @@ $faint: $gray50;
 
 $cloud: $gray95;
 
+$double-gray: hsla( 0, 0%, 50%, .5 );
+$double-gray-light: hsla( 0, 0%, 50%, 1 );
+$double-gray-dark: hsla( 0, 0%, 50%, .25 );
+
 // Add a dark shade
 // Example usage: color overlays on menu items with existing background colors
 $darken5: hsla(0, 0%, 0%, .05);
@@ -115,6 +119,50 @@ $darken80: hsla(0, 0%, 0%, .80);
 $darken85: hsla(0, 0%, 0%, .85);
 $darken90: hsla(0, 0%, 0%, .90);
 $darken95: hsla(0, 0%, 0%, .95);
+
+
+// Add a light shade
+$lighten5: hsla(0, 0%, 100%, .05);
+$lighten10: hsla(0, 0%, 100%, .10);
+$lighten15: hsla(0, 0%, 100%, .15);
+$lighten20: hsla(0, 0%, 100%, .20);
+$lighten25: hsla(0, 0%, 100%, .25);
+$lighten30: hsla(0, 0%, 100%, .30);
+$lighten35: hsla(0, 0%, 100%, .35);
+$lighten40: hsla(0, 0%, 100%, .40);
+$lighten45: hsla(0, 0%, 100%, .45);
+$lighten50: hsla(0, 0%, 100%, .50);
+$lighten55: hsla(0, 0%, 100%, .55);
+$lighten60: hsla(0, 0%, 100%, .60);
+$lighten65: hsla(0, 0%, 100%, .65);
+$lighten70: hsla(0, 0%, 100%, .70);
+$lighten75: hsla(0, 0%, 100%, .75);
+$lighten80: hsla(0, 0%, 100%, .80);
+$lighten85: hsla(0, 0%, 100%, .85);
+$lighten90: hsla(0, 0%, 100%, .90);
+$lighten95: hsla(0, 0%, 100%, .95);
+
+
+// Double Gray shade
+$double-gray5: hsla(0, 0%, 50%, .05);
+$double-gray10: hsla(0, 0%, 50%, .10);
+$double-gray15: hsla(0, 0%, 50%, .15);
+$double-gray20: hsla(0, 0%, 50%, .20);
+$double-gray25: hsla(0, 0%, 50%, .25);
+$double-gray30: hsla(0, 0%, 50%, .30);
+$double-gray35: hsla(0, 0%, 50%, .35);
+$double-gray40: hsla(0, 0%, 50%, .40);
+$double-gray45: hsla(0, 0%, 50%, .45);
+$double-gray50: hsla(0, 0%, 50%, .50);
+$double-gray55: hsla(0, 0%, 50%, .55);
+$double-gray60: hsla(0, 0%, 50%, .60);
+$double-gray65: hsla(0, 0%, 50%, .65);
+$double-gray70: hsla(0, 0%, 50%, .70);
+$double-gray75: hsla(0, 0%, 50%, .75);
+$double-gray80: hsla(0, 0%, 50%, .80);
+$double-gray85: hsla(0, 0%, 50%, .85);
+$double-gray90: hsla(0, 0%, 50%, .90);
+$double-gray95: hsla(0, 0%, 50%, .95);
 
 
 //------------------------- Block sizes
@@ -146,15 +194,3 @@ $sidebar-width-percentage: 100% - $content-width-percentage;
 $total-width: 78rem;
 $content-width: 48rem;
 $sidebar-width: $total-width - $content-width;
-
-
-//------------------------- Defaults
-
-// Font Color
-$color-font: $gray20;
-
-// Quote
-$font-family-quote: Georgia, serif;
-$color-quote: #404040;
-
-$color-bg-darken: rgba($black, .05);

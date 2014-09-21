@@ -1,10 +1,15 @@
 .search--sudo-button {
     
+    // Focused state and hovered
     &[data-state-form-element="focused"] {
         
         .header-sidebar &,
-        &:hover {
-            background-color: $darken5;
+        &:hover {            
+            
+            .icon {
+                fill: $color-search-fg;
+            }
+            
         }
         
     }
@@ -18,7 +23,11 @@
         background-color: transparent;
         
         &:hover {
-            background-color: $darken5;
+            
+            .icon {
+                fill: $color-search-fg;
+            }
+            
         }
         
     }
@@ -28,7 +37,7 @@
         [data-state-search="active"] & {
 
             @include mq( $tablet, $query1: max ) {
-                background-color: $white;
+                background-color: $color-search-bg;
             }
 
         }
@@ -43,10 +52,10 @@
             .icon {
                 
                 @include mq( $tablet, $query1: max ) {
-                    fill: $white;
+                    fill: $color-search-rev-fg;
                     
                     &:hover {
-                        fill: $color-primary;
+                        fill: $color-search-rev-bg;
                     }
                     
                 }

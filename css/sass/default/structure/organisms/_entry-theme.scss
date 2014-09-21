@@ -7,10 +7,10 @@
         color: $color-link-primary;
     }
     
-    // If the Entry Title in on its page
+    // If the Entry Title is on its page
     .single &,
     .page & {
-        color: $color-font;
+        color: $color-link-main;
     }
     
     // Sticky Posts

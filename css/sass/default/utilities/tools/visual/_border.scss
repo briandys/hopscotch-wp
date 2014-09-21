@@ -39,5 +39,7 @@
 
 // Dotted-style border
 @mixin borderstyle-perforated($pos: bottom, $lightness: 50%, $alpha: .35) {
-    border-#{$pos}: $one dotted hsla( 0, 0%, $lightness, $alpha);
+    border-#{$pos}-width: $one;
+    border-#{$pos}-style: dotted;
+    border-#{$pos}-color: hsla( 0, 0%, $lightness, $alpha);
 }

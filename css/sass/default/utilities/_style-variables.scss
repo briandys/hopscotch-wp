@@ -1,0 +1,102 @@
+//------------------------- Form
+$color-form-fg: $color-form-dark;
+
+$color-form-rev-fg: $color-form-light;
+$color-form-rev-bg: $color-form-dark;
+
+$color-form-rev-hover-fg: $color-form-light;
+$color-form-rev-hover-bg: adjust-hue( $color-form-dark, 5deg );
+
+$color-form-line: rgba( $color-form-dark-tertiary, .35 );
+$color-form-line-hover: $color-form-dark;
+
+$color-button-default: $color-form-dark;
+$color-button-primary: $color-form-dark;
+$color-button-secondary: $color-form-dark-secondary;
+
+
+//------------------------- Masthead
+$color-masthead-fg: $color-masthead-light;
+$color-masthead-bg: $color-masthead-dark;
+
+$color-masthead-hover-bg: darken( $color-masthead-dark, 5% );
+
+$color-masthead-highlight-bg: darken( $color-masthead-dark, 10% );
+
+$color-masthead-active-bg: darken( $color-masthead-dark, 10% );
+
+$color-masthead-icon: $color-masthead-dark;
+$color-masthead-icon-rev: $color-masthead-light;
+
+
+//------------------------- Main Navigation
+// Basic color combination - dark fg over light background (e.g., black over white)
+$color-main-nav-fg: $color-main-nav-dark;
+$color-main-nav-bg: $color-main-nav-light;
+
+// When you hover this basic color combination
+$color-main-nav-hover-fg: $color-main-nav-bg;
+$color-main-nav-hover-bg: $color-main-nav-fg;
+
+// Background color when you activate an element
+$color-main-nav-active-bg: darken( $color-main-nav-dark, 5% );
+
+// Reverse basic color combo (e.g., white over black)
+$color-main-nav-rev-fg: $color-main-nav-light;
+$color-main-nav-rev-bg: $color-main-nav-dark;
+
+// Hover of reverse basic color combo
+$color-main-nav-rev-hover-fg: $color-main-nav-light;
+$color-main-nav-rev-hover-bg: darken( $color-main-nav-dark, 5% );
+
+// For current nav items
+$color-main-nav-highlight-bg: darken( $color-main-nav-dark, 10% );
+$color-main-nav-highlight-hover-bg: darken( $color-main-nav-dark, 15% );
+
+// Color of lines (e.g., borders) that is over a background color
+$color-main-nav-line: $darken25;
+$color-main-nav-line-rev: $lighten25;
+
+// For shadows
+$color-main-nav-shadow: $double-gray15;
+
+// For highlight shine (used on top of sub-nav)
+$color-main-nav-shine: $lighten15;
+
+// For the triangle shadow
+$color-main-nav-fold-shadow: darken( $color-main-nav-dark, 20% );
+
+
+//------------------------- Search
+$color-search-fg: $color-search-dark;
+$color-search-bg: $color-search-light;
+
+$color-search-rev-fg: $color-search-light;
+$color-search-rev-bg: $color-search-dark;
+
+$color-search-focus-bg: darken( $color-search-dark, 5% );
+
+
+//------------------------- Content Navigation
+$color-content-nav-rev-fg: $color-content-nav-light;
+$color-content-nav-rev-bg: $color-content-nav-dark;
+
+$color-content-nav-rev-hover-fg: $color-content-nav-light;
+$color-content-nav-rev-hover-bg: $color-content-nav-dark-secondary;
+
+$color-content-nav-current-rev-fg: $color-content-nav-light;
+$color-content-nav-current-rev-bg: $color-content-nav-dark;
+
+
+//------------------------- Linkstyle Boxed
+$color-linkstyle-boxed-rev-fg: $color-linkstyle-boxed-light;
+$color-linkstyle-boxed-rev-bg: $color-linkstyle-boxed-dark-tertiary;
+
+$color-linkstyle-boxed-rev-hover-fg: $color-linkstyle-boxed-light;
+$color-linkstyle-boxed-rev-hover-bg: $color-linkstyle-boxed-dark-secondary;
+
+
+//------------------------- Hollow Box (Buttonizer)
+$color-hollow-box-fg: $color-hollow-box-dark;
+$color-hollow-box-rev-hover-fg: $color-hollow-box-light;
+$color-hollow-box-rev-hover-bg: $color-hollow-box-dark;

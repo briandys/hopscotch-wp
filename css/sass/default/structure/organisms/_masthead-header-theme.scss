@@ -1,0 +1,7 @@
+@include mq( $tablet ) {
+
+    .site-description {
+        color: $color-faint-fg;
+    }
+    
+}

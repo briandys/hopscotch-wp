@@ -4,15 +4,14 @@
 // As general usage for WordPress and others (like plain HTML), refer to .nav-menu as div.nav-menu
 // and the <ul> as .nav-menu > ul
 
-
 div.nav-menu {
     position: relative;
     @include z($layer1);
     
     > ul {
         
-        // Non-mobile mode
         @include mq( $tablet ) {
+            display: inline-block;
             @include center-list;
         }
 
@@ -103,15 +102,6 @@ div.nav-menu {
         &:last-child {
             margin-right: auto;
         }
-        
-        &:hover {
-            
-            // Mobile mode
-            @include mq($tablet, $query1: max) {
-                // Themed
-            }
-            
-        }
 
     }
     
@@ -123,7 +113,6 @@ div.nav-menu {
 
         &:hover {
 
-            // Mobile mode
             @include mq($tablet, $query1: max) {
                 text-decoration: none;
             }
@@ -134,6 +123,8 @@ div.nav-menu {
     
     .page_item,
     .menu-item {
+        
+        @include borderstyle-perforated;
 
         &:last-child {
             border-bottom: none;
@@ -174,7 +165,10 @@ div.nav-menu {
             
         }
         
-        .current_page_item {
+        .current_page_item,
+        .current-menu-item,
+        .current_page_ancestor,
+        .current-menu-ancestor {
         
             // Sub nav highlight
             @include mq( $tablet ) {
@@ -183,7 +177,7 @@ div.nav-menu {
                     left: 0;
                     top: 0;
                     @include size(.5rem, 100%);
-                    border-bottom-left-radius: $radius-s;
+                    border-radius: 0;
                 }
                 
             }
@@ -192,7 +186,10 @@ div.nav-menu {
         
     }
         
-    .current_page_item {
+    .current_page_item,
+    .current-menu-item,
+    .current_page_ancestor,
+    .current-menu-ancestor {
         
         @include pseudo-content(before) {            
             
@@ -413,14 +410,6 @@ div.nav-menu {
                 @include vhide-rev;
             }
 
-        }
-        
-        .status-mobile-main-nav-active & {
-            
-            @include mq($tablet, $query1: max) {
-                fill: $white;
-            }
-            
         }
         
     }

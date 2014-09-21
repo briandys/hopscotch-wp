@@ -130,10 +130,46 @@
     .header-sidebar .search-control {
         opacity: .75;
         @include transition( opacity );
+        
+        &:hover {
+            opacity: 1;
+        }
+        
     }
     
-    .header-sidebar .search-control:hover {
-        opacity: 1;
+    .header-sidebar {
+        
+        .search-input {
+            background-color: transparent;
+        }
+        
+    }
+    
+    [data-state-search="active"] {
+        
+        .header-sidebar {
+        
+            .search-submit {
+                opacity: .5;
+                @include transition( opacity );
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+            
+            [data-state-form-element="focused"] .search-submit {
+                opacity: 1;
+                
+                &:active {
+                    background-color: transparent;
+                }
+                
+            }
+            
+        }
+        
     }
     
 }

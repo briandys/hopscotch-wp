@@ -1,246 +1,264 @@
 div.nav-menu {
-    
-    // Specific to main nav (top most parent)
-    > ul > {
-    
-        .page_item_has_children,
-        .menu-item-has-children {
 
-            // BG color of active main nav
-            &.status-sub-nav-active {
-                background-color: $color-masthead-hover-bg;
+    // Specific to main nav (top most parent)
+    > ul {
+
+        > li {
+
+            > a {
+                color: $color-main-nav-fg;
             }
 
         }
-        
+
+        > .page_item_has_children,
+        > .menu-item-has-children {
+
+            // In case there is a non-link element as text label
+            color: $color-main-nav-fg;
+
+            > a {
+                color: $color-main-nav-fg;
+
+                &:after {
+
+                    // Nav link and icon hint divider
+                    @include mq( $tablet ) {
+                        border-right-color: $color-main-nav-line;
+                    }
+
+                }
+
+            }
+
+            &:hover {
+                background-color: $color-main-nav-hover-bg;
+
+                > a {
+
+                    color: $color-main-nav-hover-fg;
+
+                    &:after {                
+                        @include mq( $tablet ) {
+                            border-right-color: $color-main-nav-line-rev;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // BG color of the parent nav when its sub-nav is active
+            &.status-sub-nav-active {
+                background-color: $color-main-nav-highlight-bg;
+            }
+
+        }
+
     }
-    
+
+    // Generic <li> elements but mostly for sub-nav since the parent nav is already declared above
     li {
 
-        // BG color of hovered nav
-        &:hover {
-            background-color: rgba( $color-masthead-hover-bg, .75 );
-            
-            a {
-                color: $color-masthead-fg;
-            }
-            
+        color: $color-main-nav-rev-fg;
+
+        a {
+            color: $color-main-nav-rev-fg;
         }
-        
+
+        // Color of hovered nav
+        &:hover {
+
+            background-color: $color-main-nav-rev-hover-bg;
+
+            // Color of hovered link
+            a {
+                color: $color-main-nav-rev-hover-fg;                
+            }
+
+        }
+
+        // Color when link is activated
         &:active {
-            background-color: darken( $color-masthead-hover-bg, 5% );
-        
+            background-color: $color-main-nav-active-bg;
         }
 
     }
-    
+
+    // Sub-menu
+    .children,
+    .sub-menu {
+
+        // Color of sub-nav block
+        background-color: $color-main-nav-rev-bg;
+
+        > li:hover {
+            background-color: $color-main-nav-rev-hover-bg;
+        }
+
+        // Color of sub-nav links
+        a {
+            color: $color-main-nav-rev-fg;            
+        }
+
+        // Visual design elements for wide viewports
+
+        // A bit of shadow
+        @include mq( $tablet ) {
+            box-shadow: -.25rem .25rem 0 $color-main-nav-shadow;
+        }
+
+        // White line on top of sub nav items
+        &:before {
+
+            @include mq( $tablet ) {
+                background-color: $color-main-nav-shine;
+            }
+
+        }
+
+        // Triangle shadow to show fold
+        &:after {
+
+            @include mq( $tablet ) {
+                border-color: transparent transparent $color-main-nav-fold-shadow transparent;
+            }
+
+        }
+
+    }
+
+    // Nav items with another sub-nav (apllies to parent and sub-nav)
     .page_item_has_children,
     .menu-item-has-children {
-        
-        // Second-level nav link
-        > a {
-                
-            &:after {
-                
-                // Nav link and icon hint divider
-                @include mq( $tablet ) {
-                    @include transition( border-right-color );
-                    border-right-color: rgba( $black, .35 );
-                }
-                
-            }
-            
-            &:hover:after {
-                
-                // Remove nav link and icon hint divider
-                @include mq( $tablet ) {
-                    border-right-color: transparent;
-                }
-                
+
+        // Child of the item
+        > a:after {
+
+            // Vertical divider
+            @include mq( $tablet ) {
+                border-right-color: $color-main-nav-line-rev;
+                @include transition( border-right-color );
             }
 
         }
-        
-        &:hover {
-            
-            > a:after {
-                
-                @include mq( $tablet ) {
-                    border-right-color: rgba( $color-masthead-fg, .35 );
-                }
-                
-            }
-            
-        }
-        
+
+        // <li> with active sub-nav
         &.status-sub-nav-active {
-            
+
             // BG color of parent nav when sub nav is active
-            background-color: $color-masthead-hover-bg;
-            
-            a {
-                color: $color-masthead-fg;
-            }
+            background-color: $color-main-nav-highlight-bg;
 
-            > {
+            > a {
 
-                * {
-                    color: $color-masthead-fg;
-                }
-                
-                a {
-                    
-                    // BG color of parent (excluding the icon hint)
-                    &:hover {
-                        background-color: $darken10;
-                    }
-                    
-                    // Color or vertical divider must be light
-                    &:after {
+                color: $color-main-nav-rev-fg;
 
-                        @include mq( $tablet ) {
-                            border-right-color: rgba( $color-masthead-fg, .35 );
-                        }
-                        
-                    }
-                    
+                // BG color of parent (excluding the icon hint)
+                &:hover {
+                    background-color: $color-main-nav-highlight-hover-bg;
                 }
 
-            }
-            
-
-            .children,
-            .sub-menu {
-                
-                @include mq( $tablet ) {
-                    box-shadow: -.25rem .25rem 0 hsla( 0, 0%, 50%, .15);
-                }
-                
-                // White line on top of sub nav items
-                &:before {
-                    
-                    @include mq( $tablet ) {
-                        background-color: rgba($white, .25);
-                    }
-                    
-                }
-                
-                // Triangle shadow to show fold
+                // Color or vertical divider must be light
                 &:after {
-                    
+
                     @include mq( $tablet ) {
-                        border-color: transparent transparent darken( $color-masthead-bg, 15% ) transparent;
+                        border-right-color: $color-main-nav-line-rev;
                     }
-                    
+
                 }
-                
+
             }
-            
+
         }
-        
+
     }
-    
-    // WP: page_item is the default class of menu items
-    .page_item_has_children {
-       
-        &.status-sub-nav-active {
-            
-            // BG color of active sub nav
-            .children {
-                background-color: darken( $color-masthead-bg, 2.5% );
-            }
-            
-        }
-        
-    }
-    
-    // WP: menu-item appears for custom menu
-    .menu-item-has-children {
-       
-        &.status-sub-nav-active {
-            
-            // BG color of active sub nav
-            .sub-menu {
-                background-color: $color-masthead-bg;
-            }
-            
-        }
-        
-    }
-    
-    
+
+
     .status-sub-nav-active {
-        
+
+        // Current nav items
         .current_page_item,
-        .current-menu-item {
-        
+        .current-menu-item,
+        .current_page_ancestor,
+        .current-menu-ancestor {
+
             // Vertical highlight - for sub nav
             @include mq( $tablet ) {
+
                 @include pseudo-content(before) {
-                    background-color: $darken15;
+                    background-color: $color-main-nav-highlight-bg;
                 }
-                
+
             }
-            
+
+            &:last-child {
+
+                &:before {
+                    border-bottom-left-radius: $radius-s;
+                }
+
+            }
+
         }
-        
+
     }
-    
-    
+
+
     .current_page_item,
-    .current-menu-item {
-        
+    .current-menu-item,
+    .current_page_ancestor,
+    .current-menu-ancestor {
+
         @include pseudo-content(before) {
-            
+
             // Horizonal highlight - for main nav
             @include mq( $tablet ) {
-                background-color: darken( $color-masthead-bg, 5% );
+                background-color: $color-main-nav-highlight-bg;
             }
-            
-        }
-        
-    }
-    
 
+        }
+
+    }
+
+
+    // Main navigation for narrow viewports
     .status-mobile-main-nav-active & {
 
-        @include mq($tablet, $query1: max) {
+        @include mq( $tablet, $query1: max ) {
 
-            li, a {
-                color: $color-masthead-fg;
+            li,
+            a {
+                color: $color-main-nav-rev-fg;
             }
 
         }
 
-    }
-    
-    
+    }    
+
     .page_item,
-    .menu-item {
-        
-        @include borderstyle-perforated( $lightness: 0%, $alpha: .25 );
-        
-        @include mq( $tablet ) {
-            @include borderstyle-perforated( $lightness: 100%, $alpha: .50 );
-        }
-        
+    .menu-item {        
+
+        // Horizontal nav item divider
+        border-bottom-color: $color-main-nav-line;        
+    }
+
+} // div.nav-menu
+
+
+// Menu icon (hamburger)
+.main-navigation-heading .icon {
+    
+    &:hover {
+        fill: $color-main-nav-fg;
     }
     
-}
-
-
-.main-navigation-heading {
-    
-    .icon {
-        
-        .status-mobile-main-nav-active & {
+    .status-mobile-main-nav-active & {
             
-            @include mq($tablet, $query1: max) {
-                fill: $color-masthead-fg;
-            }
-            
+        @include mq($tablet, $query1: max) {
+            fill: $color-main-nav-rev-fg;
         }
-        
+
     }
     
 }

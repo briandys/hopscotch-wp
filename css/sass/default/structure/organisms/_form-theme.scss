@@ -1,50 +1,43 @@
 #{$form-input-type-text} {
-    border-color: $darken35;
+    border-color: $color-form-line;
     
     [data-state-form-element="focused"] &,
     &:hover {
-        border-color: adjust-hue( $color-form-fg, 5deg );
+        border-color: $color-form-line-hover;
     }
+    
 }
 
 
 .sudo-input-text {
-    border-color: $darken35;
+    border-color: $color-form-line;
     
     &[data-state-form-element="focused"],
     &:hover {
-        border-color: adjust-hue( $color-form-fg, 5deg );
+        border-color: $color-form-line-hover;
     }
     
 }
 
 
 #{$form-buttons} {
-    background-color: $color-form-bg;
-    color: $white;
+    color: $color-form-rev-fg;
+    background-color: $color-form-rev-bg;
     
     [data-state-form-element="focused"] &,
     &:hover {
-        background-color: adjust-hue( $color-form-bg, 5deg );
-    }
-    
-    &:active {
-        background-color: adjust-hue( $color-form-bg, 10deg );
+        background-color: $color-form-rev-hover-bg;
     }
     
 }
 
 .sudo-button {
-    color: $white;
-    background-color: $color-form-bg;
+    color: $color-form-rev-fg;
+    background-color: $color-form-rev-bg;
     
     &[data-state-form-element="focused"],
     &:hover {
-        background-color: adjust-hue( $color-form-bg, 5deg );
-    }
-
-    &:active {
-        background-color: adjust-hue( $color-form-bg, 10deg );
+        background-color: $color-form-rev-hover-bg;
     }
     
 }

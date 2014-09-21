@@ -1,4 +1,4 @@
-<nav id="main-navigation" class="main-navigation" role="navigation">
+<nav id="main-navigation" class="main-navigation <?php hopscotch_main_nav_class(); ?>" role="navigation">
     <div class="main-navigation-cr">
         <h2 id="main-navigation-heading" class="main-navigation-heading" title="Main Navigation">
             <span class="label"><?php _e( 'Main Navigation', 'hopscotch' ); ?></span>

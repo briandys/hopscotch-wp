@@ -89,7 +89,7 @@
 	} )();
     
    
-    // Sub navigation toggle
+    // Sub navigation toggle for narrow and wide viewport
     ( function() {
 		
         var subNavMenuMain = $( 'div.nav-menu' ),
@@ -125,17 +125,27 @@
         
         // Toggle list item; on second activation, go to link
         subNavMenuParent.on('click.hopscotch', function(e) {
+            
+            // If the element is inactive
             if ( ! $(this).hasClass( subNavActive ) ) {
+                
+                // Make it active
                 $(this).addClass( subNavActive ).removeClass( subNavInactive );
+                
+                // Deactivate the siblings
                 $(this).siblings( '.page_item_has_children, .menu-item-has-children' ).removeClass( subNavActive ).addClass( subNavInactive );
                 e.preventDefault();
+            
+            // Otherwise, if the element is active
             } else {
+                
+                // Make it inactive
                 $(this).addClass( subNavInactive ).removeClass( subNavActive );
             }            
         });
         
         
-        // HTML toggle
+        // Activating anywhere will close the active nav
 		html.on( 'click.hopscotch', function(e) {
 			if ( subNavMenuParent.hasClass( subNavActive )) {
 				subNavToggle();

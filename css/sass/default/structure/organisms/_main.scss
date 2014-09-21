@@ -104,10 +104,6 @@
     line-height: normal;
     text-align: center;
     
-    .label {
-        color: $faint;
-    }
-    
 }
 
 .main-content-hr {
@@ -123,4 +119,5 @@
 
 .main-content-meta  {
     @include font-size-rem($font-m-l);
+    text-align: center;
 }

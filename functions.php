@@ -15,9 +15,12 @@ require_once( trailingslashit(get_template_directory()) . 'functions/single-cont
 
 
 // Front-end
-require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
+
+// require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
+// require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
+
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
 
 // Prepend attachment
@@ -38,7 +41,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/customizer-
 
 // Header
 // require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.php');
+// require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.php');
 
 // Navigation
 require_once( trailingslashit(get_template_directory()) . 'functions/page-navigation.php');
@@ -74,6 +77,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/class-entry
 require_once( trailingslashit(get_template_directory()) . 'functions/class-plain-image.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/class-slug.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/class-page-template.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-main-nav.php');
 
 
 // Data Attributes
@@ -106,7 +110,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/category-de
 require_once( trailingslashit(get_template_directory()) . 'functions/post-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 
 // WordPress Native Functions
 require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');

@@ -89,3 +89,8 @@ function hopscotch_hook_the_content() {
 function hopscotch_hook_header_meta() {
     do_action('hopscotch_hook_header_meta');
 }
+
+// Location: components > main-navigation.php > .main-navigation
+function hopscotch_main_nav_class() {
+    do_action('hopscotch_main_nav_class');
+}

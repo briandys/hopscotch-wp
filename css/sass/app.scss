@@ -2,21 +2,17 @@
 @import 'default/utilities/h5bp/normalize';
 @import 'default/utilities/h5bp/main';
 
-// Variables
+// Variables & Style Guide
 @import 'default/utilities/variables';
-
-// Style Guide
 @import 'default/utilities/style-guide';
+@import 'default/utilities/style-variables';
 
-// Tools
+// Mixins
 @import 'default/utilities/tools';
-
-// Data UI
-@import 'default/utilities/data-ui';
 
 // Theme
 @import 'default/utilities/theme';
 @import 'default/utilities/theme-font';
 
-// Defaults
+// Rule-sets
 @import 'default/structure';

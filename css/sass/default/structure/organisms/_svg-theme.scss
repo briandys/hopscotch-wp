@@ -1,3 +1,4 @@
-svg.icon:hover {
+svg.icon:hover {  
+    @include transition(fill);
     fill: $color-primary;
 }

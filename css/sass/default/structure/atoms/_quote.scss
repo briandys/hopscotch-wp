@@ -2,7 +2,7 @@ blockquote {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     @include font-size-rem($font-m-l);
-    font-family: $font-family-quote;
+    font-family: Georgia, serif;
     
     cite {
         display: block;
@@ -13,5 +13,5 @@ blockquote {
 
 q {
     @include font-size-rem( $font-m-l );
-    font-family: $font-family-quote;
+    font-family: Georgia, serif;
 }

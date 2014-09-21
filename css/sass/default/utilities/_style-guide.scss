@@ -1,38 +1,86 @@
-// Color Palettes
+// Font Family
+$custom-font: Raleway;
+
+
+//------------------------- Color Palettes
 $blue-superhero: #00aaff; // Superhero Blue
 $orange-chikka: #ff7f00; // Chikka Orange
 $red-record: #e53a2e; // Record Red
 $green-go: #12b32d; // Go Green
 
-$custom-font: Raleway;
 
-// Color Scheme
+//------------------------- Default text color
+$color-font: $gray10;
+$color-faint: $gray75;
+$color-bg-darken: rgba($black, .05);
+$color-quote: $gray25;
+
+
+//------------------------- Color Pairs
+$color-light: $white;
+$color-dark: $black;
+
+$color-fg: $color-dark;
+$color-bg: $color-light;
+$color-rev-fg: $color-dark;
+$color-rev-bg: $color-light;
+
+
+//------------------------- Selection
+$color-selection-fg: $color-dark;
+$color-selection-bg: $color-light;
+
+//------------------------- Color Scheme
 $color-primary: $blue-superhero;
 $color-secondary: $green-go;
 
+
+//------------------------- Link
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
-
-// Forms
-$color-button-default: $color-primary;
-
-$color-button-primary: $color-primary;
-$color-button-secondary: $color-secondary;
-
-// Form
-$color-form-bg: $color-primary;
-$color-form-fg: $color-primary;
+$color-link-main: $color-primary;
 
 
-// Masthead
-$color-masthead-bg: $color-primary;
-$color-masthead-fg: $white;
-$color-masthead-hover-bg: darken( $color-masthead-bg, 5% );
-$color-masthead-hightlight-bg: darken( $color-masthead-bg, 10% );
-$color-masthead-icon: $white;
+//------------------------- Faint
+$color-faint-fg: $double-gray-light;
+$color-faint-hover-fg: $color-link-primary;
 
 
-// Content Navigation
-$color-content-nav-fg: $white;
-$color-content-nav-bg: $color-secondary;
-$color-content-nav-link: $color-font;
+//------------------------- Form
+$color-form-light: $white;
+$color-form-dark: $color-primary;
+$color-form-dark-secondary: $color-secondary;
+$color-form-dark-tertiary: $black;
+
+
+//------------------------- Masthead
+$color-masthead-light: $white;
+$color-masthead-dark: $color-primary;
+
+
+//------------------------- Main Navigation
+$color-search-light: $white;
+$color-search-dark: $color-primary;
+
+
+//------------------------- Search
+$color-main-nav-light: $color-masthead-light;
+$color-main-nav-dark: $color-masthead-dark;
+
+
+//------------------------- Content Navigation
+$color-content-nav-light: $white;
+$color-content-nav-dark: $color-primary;
+$color-content-nav-dark-secondary: $color-secondary;
+$color-content-nav-link: $color-content-nav-dark;
+
+
+//------------------------- Hollow Box (Buttonizer)
+$color-hollow-box-light: $white;
+$color-hollow-box-dark: $color-secondary;
+
+//------------------------- Linkstyle Boxed
+$color-linkstyle-boxed-light: $white;
+$color-linkstyle-boxed-dark: $color-primary;
+$color-linkstyle-boxed-dark-secondary: $color-secondary;
+$color-linkstyle-boxed-dark-tertiary: $double-gray;

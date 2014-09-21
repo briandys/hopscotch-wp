@@ -1,21 +1,23 @@
-// Header Theme
+// Header Semi-compact Theme (for wide viewports only)
+// Checkout main-navigation-theme.scss for narrow viewports
 @mixin header-semi-compact-theme {
         
     .masthead {
         background-color: $color-masthead-bg;
     }
     
+    // Site Title
     .site-title-link {
-        color: $white;
+        
+        color: $color-masthead-fg;
         @include transition( background-color );
         
         &:hover {
-            background-color: $color-masthead-hightlight-bg;
+            background-color: $color-masthead-hover-bg;
         }
         
         &:active {
-            color: rgba( $color-masthead-fg, .85 );
-            background-color: darken( $color-masthead-hightlight-bg, 5% );
+            background-color: $color-masthead-active-bg;
         }
         
     }
@@ -26,14 +28,32 @@
         
         > ul {
             
-            > {
-                
-                li {
-        
-                    > a {
-                        color: $white;
+            > li {
+
+                // Default color of parent nav link (using this layout, it should be reverse color)
+                > a {
+                    color: $color-main-nav-rev-fg;
+
+                    &:hover {
+                        color: $color-main-nav-rev-hover-fg;
                     }
-                    
+                }
+                
+                &:hover {                    
+                    background-color: $color-main-nav-rev-hover-bg;                    
+                }
+
+            }
+            
+            > .page_item_has_children,
+            > .menu-item-has-children {
+                
+                > a {                    
+                    color: $color-main-nav-rev-fg;                    
+                }
+                
+                &:hover {                    
+                    background-color: $color-main-nav-rev-hover-bg;                    
                 }
                 
             }
@@ -46,15 +66,7 @@
                     &:after {
                 
                         // Nav link and icon hint divider
-                        @include transition( border-right-color );
-                        border-right-color: rgba( $white, .35 );
-
-                    }
-            
-                    &:hover:after {
-
-                        // Remove nav link and icon hint divider
-                        border-right-color: transparent;
+                        border-right-color: $color-main-nav-line-rev;
 
                     }
                     
@@ -62,18 +74,6 @@
                 
             }
             
-        }
-    
-        // Horizontal highlight
-        .current_page_item {
-
-            @include pseudo-content(before) {
-
-                // Horizonal highlight - for main nav
-                background-color: $darken10;
-
-            }
-
         }
         
     } // div.nav-menu
@@ -84,29 +84,43 @@
 // Search Theme
 @mixin search-header-reverse-theme {
     
-    .header-sidebar .search-control .icon,
-    .header-sidebar .search-submit .icon {
-        fill: $color-masthead-icon;
+    .header-sidebar {
+        
+        .search-control .icon {
+            fill: $color-search-rev-fg;
+        }
+        
+        .search-submit .icon {
+            fill: $color-search-rev-fg;            
+        }
+        
     }
     
     .header-sidebar .search-form {
-        background-color: $color-masthead-bg;
+        background-color: $color-search-rev-bg;
     }
     
-    [data-state-search="active"] .header-sidebar .search-form {
-        background-color: darken( $color-masthead-bg, 5% );
+    [data-state-search="active"] .header-sidebar {
+        
+        .search-form {
+            background-color: $color-masthead-highlight-bg;
+        }
+        
+        .search-submit .icon {
+            fill: $color-search-rev-fg;
+        }
+        
     }
     
     .header-sidebar .search-input {
-        background-color: transparent;
-        color: $color-masthead-fg;
+        color: $color-search-rev-fg;
     }
     
-    @include placeholder( $color-masthead-fg );
+    @include placeholder( $color-search-bg );
     
 }
 
-
+// Searchbar Fader
 @mixin searchbar-side-fade-theme {
     
     .header-sidebar {
