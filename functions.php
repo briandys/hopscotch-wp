@@ -17,9 +17,9 @@ require_once( trailingslashit(get_template_directory()) . 'functions/single-cont
 // Front-end
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
 
-// require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
-// require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
 
@@ -40,7 +40,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/customizer-
 //require_once( trailingslashit(get_template_directory()) . 'functions/customizer-theme.php');
 
 // Header
-// require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
 // require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.php');
 
 // Navigation

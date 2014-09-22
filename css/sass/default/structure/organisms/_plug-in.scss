@@ -1,3 +1,4 @@
+//------------------------- WP Plugin: Jetpack
 .sharedaddy {
     
     .sd-title {
@@ -39,7 +40,14 @@
 }
 
 
-// Codepen.io
+//------------------------- WP Plugin: Codepen.io
 iframe[src*="codepen.io"] {
     border-bottom: $one solid #ccc;
+}
+
+
+//------------------------- WP Plugin: SyntaxHighlighter
+.syntaxhighlighter {
+    padding: 1rem;
+    border-radius: $radius-s;
 }
