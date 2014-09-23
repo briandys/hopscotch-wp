@@ -71,13 +71,12 @@ $entry-byline-avatar-size: 2rem;
 .entry-title {
     display: inline;
     margin-bottom: 0;
-    @include font-size-rem($font-xl);
     font-weight: 600;
     line-height: normal;
     word-wrap: break-word;
     
     @include mq( $tablet, $query1: max ) {
-        @include font-size-rem( $font-l );
+        @include font-size-rem( $font-xl );
     }
     
 }
@@ -135,7 +134,7 @@ $entry-byline-avatar-size: 2rem;
             @include mq( $monitor ) {
                 left: auto;
                 right: 100%;
-                margin-top: -1.5rem;
+                margin-top: -1.25rem;
             }
             
         }
@@ -353,14 +352,11 @@ $entry-byline-avatar-size: 2rem;
 
     }
     
-    @include shrink-heading;
-    
     h3 {
         font-weight: 600;
     }
     
     h4 {
-        @include font-size-rem( $font-m );
         font-weight: 600;
     }
     
@@ -368,7 +364,7 @@ $entry-byline-avatar-size: 2rem;
     .format-status & {
         
         > * {
-            @include font-size-rem($font-l);
+            @include font-size-rem($font-xxl);
         }
         
     }
@@ -429,7 +425,11 @@ $entry-byline-avatar-size: 2rem;
 
 .entry-subtitle {
     margin-top: .5rem;
-    @include font-size-rem($font-m-l);
+    @include font-size-rem($font-xl);    
+    
+    @include mq( $tablet, $query1: max ) {
+        @include font-size-rem( $font-l );
+    }
     
     p:only-child {
         margin-bottom: 0;

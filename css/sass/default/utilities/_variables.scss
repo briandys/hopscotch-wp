@@ -67,6 +67,22 @@ $one: (1 / $font-size-base) + rem;
 $two: .125rem;
 
 
+
+
+
+//------------------------- Font Sizes Revisited
+// Major Third: 1.250
+$font-xxxl: 2.441;
+$font-xxl: 1.953;
+$font-xl: 1.563;
+$font-l: 1.25;
+$font-m: 1;
+$font-s: 0.8;
+
+$font-m-l: 1.125;
+$font-s-m: 0.9;
+
+
 //------------------------- Colors
 $black: hsl(0, 0%, 0%);
 $gray5: hsl(0, 0%, 5%);
@@ -91,9 +107,9 @@ $gray95: hsl(0, 0%, 95%);
 $white: hsl(0, 0%, 100%);
 
 $faint: $gray50;
-
 $cloud: $gray95;
 
+$transparent: hsla( 0, 0%, 0%, 0 );
 $double-gray: hsla( 0, 0%, 50%, .5 );
 $double-gray-light: hsla( 0, 0%, 50%, 1 );
 $double-gray-dark: hsla( 0, 0%, 50%, .25 );

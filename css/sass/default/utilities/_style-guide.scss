@@ -23,7 +23,8 @@ $color-bg: $color-light;
 
 
 //------------------------- Default Colors
-$color-quote-fg: $gray25;
+$color-quote-fg: rgba( $color-fg, .65 );
+$color-cite-fg: rgba( $color-fg, .85 );
 
 
 //------------------------- Selection
@@ -32,10 +33,16 @@ $color-selection-dark: $color-secondary;
 
 
 //------------------------- Link
-$color-link-main: $color-primary;
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
 $color-link-tertiary: $color-fg;
+$color-link-mute: $color-fg;
+
+
+//------------------------- Title Link
+$color-link-title-primary: $color-link-primary;
+$color-link-title-primary-alt: $color-fg;
+$color-link-title-secondary: $color-link-secondary;
 
 
 //------------------------- Faint
@@ -61,20 +68,20 @@ $color-masthead-dark: $color-primary;
 
 
 //------------------------- Main Navigation
-$color-search-light: $white;
-$color-search-dark: $color-primary;
-
-
-//------------------------- Search
 $color-main-nav-light: $color-masthead-light;
 $color-main-nav-dark: $color-masthead-dark;
 
 
+//------------------------- Search
+$color-search-light: $white;
+$color-search-dark: $color-primary;
+
+
 //------------------------- Content Navigation
+$color-content-nav-link: rgba( $color-link-tertiary, .75 );
 $color-content-nav-light: $white;
 $color-content-nav-dark: $color-primary;
 $color-content-nav-dark-secondary: $color-secondary;
-$color-content-nav-link: rgba( $color-link-tertiary, .75 );
 
 
 //------------------------- Hollow Box (Buttonizer)

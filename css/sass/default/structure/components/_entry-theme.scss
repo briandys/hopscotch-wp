@@ -3,19 +3,21 @@
     
     // If the Entry Title is on a listing
     .blog &,
-    .home & {
-        color: $color-link-primary;
+    .home &,
+    .archive &,
+    .search & {
+        color: $color-link-title-primary;
     }
     
     // If the Entry Title is on its page
     .single &,
     .page & {
-        color: $color-link-main;
+        color: $color-link-title-primary-alt;
     }
     
     // Sticky Posts
     .sticky & {
-        color: darken( $color-primary, 10% );
+        color: $color-link-title-secondary;
     }
     
 }
@@ -25,6 +27,7 @@
 .show-more-content .more-link {
     color: $color-link-secondary;
 }
+
 
 .post-edit-link {
     @include buttonizer-theme;

@@ -5,15 +5,15 @@
         color: $color-content-nav-link;
 
         &:hover {
-            color: $color-content-nav-rev-hover-fg;
-            background-color: $color-content-nav-rev-hover-bg;
+            color: $color-content-nav-hover-fg;
+            background-color: $color-content-nav-hover-bg;
         }
         
     }
     
     .current {
-        color: $color-content-nav-current-rev-fg;
-        background-color: $color-content-nav-current-rev-bg;
+        color: $color-content-nav-current-fg;
+        background-color: $color-content-nav-current-bg;
     }
     
 }
@@ -26,8 +26,8 @@
         color: $color-content-nav-link;
 
         &:hover {
-            color: $color-content-nav-rev-hover-fg;
-            background-color: $color-content-nav-rev-hover-bg;
+            color: $color-content-nav-hover-fg;
+            background-color: $color-content-nav-hover-bg;
         }
         
     }
@@ -42,16 +42,16 @@
         color: $color-content-nav-link;
 
         &:hover {
-            color: $color-content-nav-rev-hover-fg;
-            background-color: $color-content-nav-rev-hover-bg;
+            color: $color-content-nav-hover-fg;
+            background-color: $color-content-nav-hover-bg;
         }
         
     }
     
     // Current page
     > .label {
-        color: $color-content-nav-rev-fg;
-        background-color: $color-content-nav-rev-bg;
+        color: $color-content-nav-fg;
+        background-color: $color-content-nav-bg;
     }
     
 }

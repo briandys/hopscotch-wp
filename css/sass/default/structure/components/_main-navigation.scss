@@ -155,6 +155,15 @@ div.nav-menu {
                 
             }
             
+            &:first-child,
+            &:hover:first-child {
+                
+                @include mq( $tablet ) {
+                    border-top-right-radius: $radius-s;
+                }
+                
+            }
+            
             &.status-sub-nav-active {
                 
                 @include mq( $tablet ) {
@@ -229,7 +238,7 @@ div.nav-menu {
         @include vhide;
         
         @include mq( $tablet ) {
-            border-radius: 0 0 $radius-s $radius-s;
+            border-radius: 0 $radius-s $radius-s $radius-s;
         }
     }
 
