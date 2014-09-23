@@ -370,17 +370,23 @@
 }
 
 
+// Toggled in WP Admin > Settings > Discussion
 .comment-subscription-form {
     position: absolute;
     top: 100%;
     left: 0;
-    margin-bottom: auto;
-    
-    &:last-of-type {
-        padding-top: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
+
+    .subscribe-label {
+        margin-bottom: 0;
+        margin-left: .5rem;
+        font-weight: normal;
+        vertical-align: middle;
     }
     
 }
+
 
 .comment-date {
     margin-right: .5rem;
@@ -405,6 +411,7 @@
 
     .field-comment {
         clear: both;
+        margin-bottom: 2.75rem;
         
         label:not( .subscribe-label ) {
             

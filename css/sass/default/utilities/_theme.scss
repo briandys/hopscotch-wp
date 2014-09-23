@@ -3,24 +3,24 @@
 
 @import '../utilities/tools/structure/media-query';
 
-@import '../structure/atoms/link-theme';
-@import '../structure/atoms/selection-theme';
-@import '../structure/atoms/code-theme';
-@import '../structure/atoms/quote-theme';
-@import '../structure/atoms/table-theme';
-@import '../structure/atoms/text-theme';
+@import '../structure/objects/link-theme';
+@import '../structure/objects/selection-theme';
+@import '../structure/objects/code-theme';
+@import '../structure/objects/quote-theme';
+@import '../structure/objects/table-theme';
+@import '../structure/objects/text-theme';
 
-@import '../structure/organisms/form-theme';
-@import '../structure/organisms/comment-theme';
-@import '../structure/organisms/entry-theme';
-@import '../structure/organisms/colophon-theme';
-@import '../structure/organisms/ui-tabs-theme';
-@import '../structure/organisms/scroll-top-theme';
-@import '../structure/organisms/svg-theme';
-@import '../structure/organisms/main-theme';
-@import '../structure/organisms/main-navigation-theme';
-@import '../structure/organisms/masthead-header-theme';
-@import '../structure/organisms/search-theme';
-@import '../structure/organisms/content-navigation-theme';
-@import '../structure/organisms/taxonomy-theme';
-@import '../structure/organisms/breadcrumbs-theme';
+@import '../structure/components/form-theme';
+@import '../structure/components/comment-theme';
+@import '../structure/components/entry-theme';
+@import '../structure/components/colophon-theme';
+@import '../structure/components/ui-theme';
+@import '../structure/components/scroll-top-theme';
+@import '../structure/components/svg-theme';
+@import '../structure/components/main-theme';
+@import '../structure/components/main-navigation-theme';
+@import '../structure/components/masthead-header-theme';
+@import '../structure/components/search-theme';
+@import '../structure/components/content-navigation-theme';
+@import '../structure/components/taxonomy-theme';
+@import '../structure/components/breadcrumbs-theme';

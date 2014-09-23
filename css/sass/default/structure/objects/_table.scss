@@ -1,7 +1,7 @@
 table {
 	width: 100%;
     
-    @include mq($mobile, ieFixOff, max) {
+    @include mq( $mobile, $query1: max ) {
         display: block;
         max-width: 100%;
         overflow-x: auto;

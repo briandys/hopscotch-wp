@@ -14,9 +14,9 @@ function hopscotch_add_entry_class( $classes ) {
     if( $post->post_content == "" ) $classes[] = 'entry-empty data-entry-content-state--empty';
     
     if ( has_post_thumbnail() || get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) :
-        $classes[] = "entry-thumbnail-active entry-thumbnail--active";
+        $classes[] = "entry-thumbnail-active entry-thumbnail--active ui-state__entry-thumbnail--active";
     else :
-        $classes[] = "entry-thumbnail-inactive entry-thumbnail--inactive";
+        $classes[] = "entry-thumbnail-inactive entry-thumbnail--inactive ui-state__entry-thumbnail--inactive";
     endif;
     
 	return $classes;

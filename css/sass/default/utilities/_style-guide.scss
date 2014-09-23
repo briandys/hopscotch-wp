@@ -1,19 +1,17 @@
-// Font Family
-$custom-font: Raleway;
+//------------------------- Font Family
+$font-family-custom: Raleway;
 
 
 //------------------------- Color Palettes
 $blue-superhero: #00aaff; // Superhero Blue
-$orange-chikka: #ff7f00; // Chikka Orange
+$orange-chikka: #ff7f00; // CHK Orange
 $red-record: #e53a2e; // Record Red
 $green-go: #12b32d; // Go Green
 
 
-//------------------------- Default text color
-$color-font: $gray10;
-$color-faint: $gray75;
-$color-bg-darken: rgba($black, .05);
-$color-quote: $gray25;
+//------------------------- Color Scheme
+$color-primary: $blue-superhero;
+$color-secondary: $green-go;
 
 
 //------------------------- Color Pairs
@@ -22,28 +20,32 @@ $color-dark: $black;
 
 $color-fg: $color-dark;
 $color-bg: $color-light;
-$color-rev-fg: $color-dark;
-$color-rev-bg: $color-light;
+
+
+//------------------------- Default Colors
+$color-quote-fg: $gray25;
 
 
 //------------------------- Selection
-$color-selection-fg: $color-dark;
-$color-selection-bg: $color-light;
-
-//------------------------- Color Scheme
-$color-primary: $blue-superhero;
-$color-secondary: $green-go;
+$color-selection-light: $white;
+$color-selection-dark: $color-secondary;
 
 
 //------------------------- Link
+$color-link-main: $color-primary;
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
-$color-link-main: $color-primary;
+$color-link-tertiary: $color-fg;
 
 
 //------------------------- Faint
 $color-faint-fg: $double-gray-light;
 $color-faint-hover-fg: $color-link-primary;
+
+
+//------------------------- Table
+$color-table-light: $white;
+$color-table-dark: $color-primary;
 
 
 //------------------------- Form
@@ -72,7 +74,7 @@ $color-main-nav-dark: $color-masthead-dark;
 $color-content-nav-light: $white;
 $color-content-nav-dark: $color-primary;
 $color-content-nav-dark-secondary: $color-secondary;
-$color-content-nav-link: $color-content-nav-dark;
+$color-content-nav-link: rgba( $color-link-tertiary, .75 );
 
 
 //------------------------- Hollow Box (Buttonizer)

@@ -11,7 +11,9 @@ html {
 .home .main-content-title,
 .blog .main-content-title,
 .accessible-name,
-legend,
+legend {
+    @extend %vhide;
+}
 
 // WP
 #wpstats,

@@ -1,3 +1,13 @@
+//------------------------- Color Pairs
+$color-rev-fg: $color-bg;
+$color-rev-bg: $color-fg;
+
+
+//------------------------- Selection
+$color-selection-fg: $color-selection-light;
+$color-selection-bg: $color-selection-dark;
+
+
 //------------------------- Form
 $color-form-fg: $color-form-dark;
 
@@ -13,6 +23,11 @@ $color-form-line-hover: $color-form-dark;
 $color-button-default: $color-form-dark;
 $color-button-primary: $color-form-dark;
 $color-button-secondary: $color-form-dark-secondary;
+
+
+//------------------------- Table
+$color-table-hover-bg: rgba( $color-table-dark, .1 );
+$color-table-zebra-bg: rgba( $color-table-dark, .025 );
 
 
 //------------------------- Masthead
@@ -67,16 +82,6 @@ $color-main-nav-shine: $lighten15;
 $color-main-nav-fold-shadow: darken( $color-main-nav-dark, 20% );
 
 
-//------------------------- Search
-$color-search-fg: $color-search-dark;
-$color-search-bg: $color-search-light;
-
-$color-search-rev-fg: $color-search-light;
-$color-search-rev-bg: $color-search-dark;
-
-$color-search-focus-bg: darken( $color-search-dark, 5% );
-
-
 //------------------------- Content Navigation
 $color-content-nav-rev-fg: $color-content-nav-light;
 $color-content-nav-rev-bg: $color-content-nav-dark;
@@ -86,6 +91,16 @@ $color-content-nav-rev-hover-bg: $color-content-nav-dark-secondary;
 
 $color-content-nav-current-rev-fg: $color-content-nav-light;
 $color-content-nav-current-rev-bg: $color-content-nav-dark;
+
+
+//------------------------- Search
+$color-search-fg: $color-search-dark;
+$color-search-bg: $color-search-light;
+
+$color-search-rev-fg: $color-search-light;
+$color-search-rev-bg: $color-search-dark;
+
+$color-search-focus-bg: darken( $color-search-dark, 5% );
 
 
 //------------------------- Linkstyle Boxed
