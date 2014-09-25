@@ -105,7 +105,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyri
 // Functionalities, Conditionals
 require_once( trailingslashit(get_template_directory()) . 'functions/conditional-is-child.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/category-descendant.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/post-count-format.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/widget-entry-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
 

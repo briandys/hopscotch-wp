@@ -86,15 +86,15 @@
             &:after {
                 $icon-size: $block / 2;
                 @include sudo-ct;
-                @include position-offset( $icon-size );
+                top: 1rem;
+                right: 0;
                 @include size( $icon-size );
-                @include background-image-icon('../img/more.svg');
                 opacity: .125;
                 @include transition( opacity );
             }
             
             &:hover:after {
-                opacity: .25;
+                opacity: 1;
             }
             
         }

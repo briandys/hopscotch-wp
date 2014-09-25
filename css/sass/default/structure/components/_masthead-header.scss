@@ -1,22 +1,53 @@
-// Default header style if nothing is set for wide viewport
-@include mq( $tablet ) {
+.masthead-cr {
 
-    .masthead-cr {
+    @include mq( $tablet ) {
         text-align: center;
     }
 
-    .site-title-heading {
-        margin-bottom: auto;
+}
+
+
+.site-title-heading {
+    
+    .status-mobile-main-nav-inactive [data-state-search="inactive"] & {
+        
+        @include mq( $tablet, $query1: max ) {
+            opacity: 1;
+            @include transition( opacity );
+        }
+        
+    }
+        
+    .status-mobile-main-nav-inactive [data-state-search="active"] & {
+        
+        @include mq( $tablet, $query1: max ) {
+            opacity: 0;
+        }
+        
+        @include mq( $tablet ) {
+            margin-bottom: auto;
+        }
+
     }
 
-    .site-title-link {
+}
+
+
+.site-title-link {
+
+    @include mq( $tablet ) {
         display: inline-block;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
+
+}
+
+
+@include mq( $tablet ) {
+
     
-    @include corner-search;
-    
+
 }
 
 
@@ -35,5 +66,6 @@
 @include mq( $tablet ) {
     
     @include header-semi-compact;
+    @include corner-search;
     
 }

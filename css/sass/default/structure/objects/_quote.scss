@@ -1,17 +1,15 @@
 blockquote {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    @include font-size-rem($font-m-l);
-    font-family: Georgia, serif;
+    @include font-size-rem($font-l);
     
     cite {
         display: block;
-        margin-top: .5rem;
+        margin-top: 1rem;
     }
     
 }
 
 q {
-    @include font-size-rem( $font-m-l );
-    font-family: Georgia, serif;
+    @include font-size-rem( $font-l );
 }

@@ -65,19 +65,19 @@
     .masthead-cr {
         @include cf;        
         position: relative;
-        
-        // Activate if there needs to be a fixed height
-        height: $block-l;
+        // height: $block-l;
     }
     
     .masthead-header {
-        @include valign-mid;
+        display: table;
+        padding-left: $block-l;
+        padding-right: $block-l;
+        @include size( 100%, $block-l );
         text-align: center;
-        height: $block-l;
-        overflow: hidden;
     }
     
     .site-title-heading {
+        @include table-valign-mid;
         margin-bottom: auto;
         @include font-size-rem($font-m-l);
         font-weight: 700;
@@ -99,11 +99,12 @@
     
     .main-navigation {
         @include valign-mid;
-        float: left;
     }
     
     .main-navigation-heading {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         @include z($layer1+1);
     
         .status-mobile-main-nav-active & {
@@ -221,6 +222,12 @@
         text-align: left;
         height: auto;
         min-height: $block-l;
+    }
+    
+    .masthead-header {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
     }
     
     .site-title-link {

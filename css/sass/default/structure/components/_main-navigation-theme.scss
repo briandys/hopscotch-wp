@@ -15,10 +15,15 @@ div.nav-menu {
         > .menu-item-has-children {
 
             // In case there is a non-link element as text label
-            color: $color-main-nav-fg;
+            @include mq( $tablet ) {
+                color: $color-main-nav-fg;
+            }
 
             > a {
-                color: $color-main-nav-fg;
+                
+                @include mq( $tablet ) {
+                    color: $color-main-nav-fg;
+                }
 
                 &:after {
 
@@ -61,10 +66,14 @@ div.nav-menu {
     // Generic <li> elements but mostly for sub-nav since the parent nav is already declared above
     li {
 
-        color: $color-main-nav-rev-fg;
+        @include mq( $tablet ) {
+            color: $color-main-nav-rev-fg;
+        }
 
         a {
-            color: $color-main-nav-rev-fg;
+            @include mq( $tablet ) {
+                color: $color-main-nav-rev-fg;
+            }
         }
 
         // Color of hovered nav

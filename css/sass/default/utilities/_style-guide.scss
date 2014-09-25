@@ -1,5 +1,6 @@
 //------------------------- Font Family
 $font-family-custom: Raleway;
+$font-family-quote: Gerogia;
 
 
 //------------------------- Color Palettes
@@ -12,84 +13,3 @@ $green-go: #12b32d; // Go Green
 //------------------------- Color Scheme
 $color-primary: $blue-superhero;
 $color-secondary: $green-go;
-
-
-//------------------------- Color Pairs
-$color-light: $white;
-$color-dark: $black;
-
-$color-fg: $color-dark;
-$color-bg: $color-light;
-
-
-//------------------------- Default Colors
-$color-quote-fg: rgba( $color-fg, .65 );
-$color-cite-fg: rgba( $color-fg, .85 );
-
-
-//------------------------- Selection
-$color-selection-light: $white;
-$color-selection-dark: $color-secondary;
-
-
-//------------------------- Link
-$color-link-primary: $color-primary;
-$color-link-secondary: $color-secondary;
-$color-link-tertiary: $color-fg;
-$color-link-mute: $color-fg;
-
-
-//------------------------- Title Link
-$color-link-title-primary: $color-link-primary;
-$color-link-title-primary-alt: $color-fg;
-$color-link-title-secondary: $color-link-secondary;
-
-
-//------------------------- Faint
-$color-faint-fg: $double-gray-light;
-$color-faint-hover-fg: $color-link-primary;
-
-
-//------------------------- Table
-$color-table-light: $white;
-$color-table-dark: $color-primary;
-
-
-//------------------------- Form
-$color-form-light: $white;
-$color-form-dark: $color-primary;
-$color-form-dark-secondary: $color-secondary;
-$color-form-dark-tertiary: $black;
-
-
-//------------------------- Masthead
-$color-masthead-light: $white;
-$color-masthead-dark: $color-primary;
-
-
-//------------------------- Main Navigation
-$color-main-nav-light: $color-masthead-light;
-$color-main-nav-dark: $color-masthead-dark;
-
-
-//------------------------- Search
-$color-search-light: $white;
-$color-search-dark: $color-primary;
-
-
-//------------------------- Content Navigation
-$color-content-nav-link: rgba( $color-link-tertiary, .75 );
-$color-content-nav-light: $white;
-$color-content-nav-dark: $color-primary;
-$color-content-nav-dark-secondary: $color-secondary;
-
-
-//------------------------- Hollow Box (Buttonizer)
-$color-hollow-box-light: $white;
-$color-hollow-box-dark: $color-secondary;
-
-//------------------------- Linkstyle Boxed
-$color-linkstyle-boxed-light: $white;
-$color-linkstyle-boxed-dark: $color-primary;
-$color-linkstyle-boxed-dark-secondary: $color-secondary;
-$color-linkstyle-boxed-dark-tertiary: $double-gray;

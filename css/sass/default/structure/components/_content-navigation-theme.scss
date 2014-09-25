@@ -30,6 +30,14 @@
             background-color: $color-content-nav-hover-bg;
         }
         
+        &:after {
+            @include background-image-icon( '#{$icon-entry-nav}' );
+        }
+        
+        &:hover:after {
+            @include background-image-icon( '#{$icon-entry-nav-hover}' );
+        }
+        
     }
     
 }

@@ -1,6 +1,7 @@
 // Resources:
 // http://type-scale.com
 
+// Standard Headings
 h1 {
     @include font-size-rem($font-xxxl);
     font-weight: normal;
@@ -11,9 +12,7 @@ h2 {
     font-weight: normal;
 }
 
-h3,
-.text-heading,
-.heading {
+h3 {
     @include font-size-rem($font-xl);
     font-weight: normal;
 }
@@ -33,10 +32,11 @@ h6 {
     font-weight: 800;
 }
 
-.text-heading {
-    font-weight: 600;
-}
 
+// Other Headings
+.text-heading,
+.heading,
 .friendly-name {
     @include font-size-rem($font-xl);
+    font-weight: 600;
 }

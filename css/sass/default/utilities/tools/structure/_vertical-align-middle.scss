@@ -18,3 +18,10 @@
 %valign-mid {
     @include valign-mid;
 }
+
+
+// This requires that the parent is display: table
+@mixin table-valign-mid {
+    display: table-cell;
+    vertical-align: middle;
+}

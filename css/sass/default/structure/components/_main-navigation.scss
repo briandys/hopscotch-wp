@@ -65,6 +65,7 @@ div.nav-menu {
             }
                 
             li > {
+                
                 a,
                 *:first-child {
                     white-space: nowrap;
@@ -110,6 +111,11 @@ div.nav-menu {
         display: block;
         padding: 1rem;
         @include transition-bg-color;  
+        
+        @include mq( $tablet ) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
 
         &:hover {
 
@@ -395,24 +401,31 @@ div.nav-menu {
 }
 
 
+// Main Nav - Mobile Toggle
 .main-navigation-heading {
     margin-bottom: auto;
-    
-    @include mq($tablet, $query1: max) {    
-        @include font-size-rem($font-reset);
-        @include size($block-l);
-        @include svg-iconize;        
-    }
     
     @include mq( $tablet ) {
         @include vhide;
     }
     
+    .svg-icon-cr {
+        
+        @include mq( $tablet, $query1: max ) {    
+            
+            @include size( $block-l );
+            @include svg-iconize;
+            display: inline-block !important;
+       
+        }
+        
+    }
+    
     .icon {
         
-        @include mq($tablet, $query1: max) {
+        @include mq( $tablet, $query1: max ) {
 
-            @include size($block-s);
+            @include size( $block-s );
             @include transition(fill);
 
             .modernizr-no-inlinesvg & {
@@ -425,7 +438,7 @@ div.nav-menu {
     
     &:hover {
         
-        @include mq($tablet, $query1: max) {
+        @include mq( $tablet, $query1: max ) {
             cursor: pointer;
         }
         
@@ -433,13 +446,14 @@ div.nav-menu {
     
     .label {
         
-        @include mq($tablet, $query1: max) {
+        @include mq( $tablet, $query1: max ) {
             @include vhide;
         }
         
     }
 
 }
+
 
 .main-navigation-ct {
     

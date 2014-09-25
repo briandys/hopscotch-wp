@@ -43,7 +43,7 @@
         }
         
         @include mq( $moviehouse ) {
-            margin-right: -$sidebar-width;
+            margin-right: -100%;
             width: 100%;
         }
         
@@ -75,8 +75,12 @@
             width: $sidebar-width - 10;
         }
 
+        @include mq( $theater ) {
+            width: 25%;
+        }
+
         @include mq( $minorityreport ) {
-            width: $sidebar-width;
+            width: 25%;
         }
 
     }
