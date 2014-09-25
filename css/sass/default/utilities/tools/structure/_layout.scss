@@ -77,11 +77,12 @@
     }
     
     .site-title-heading {
-        @include table-valign-mid;
+        display: table-cell;
         margin-bottom: auto;
         @include font-size-rem($font-m-l);
         font-weight: 700;
         line-height: normal;
+        vertical-align: middle;
     }
     
     .header-sidebar {
@@ -225,9 +226,15 @@
     }
     
     .masthead-header {
+        display: inline-block;
         padding-left: 0;
         padding-right: 0;
         width: auto;
+    }
+    
+    .site-title-heading {
+        display: inline-block;
+        margin-right: 1rem;
     }
     
     .site-title-link {

@@ -5,9 +5,12 @@
         [data-state-search="active"] & {
             width: 100%;
             
-            // Wide mode
-            @include mq($tablet, ieFixOn) {
+            @include mq( $tablet ) {
                 max-width: 15rem;
+            }
+            
+            @include mq( $minorityreport ) {
+                max-width: 30rem;
             }
             
         }

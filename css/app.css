@@ -1530,22 +1530,22 @@ div.nav-menu .page_item_has_children > .children, div.nav-menu .page_item_has_ch
   /* line 71, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-header { display: table; padding-left: 3.5rem; padding-right: 3.5rem; width: 100%; height: 3.5rem; text-align: center; }
   /* line 79, sass/default/utilities/tools/structure/_layout.scss */
-  .site-title-heading { display: table-cell; vertical-align: middle; margin-bottom: auto; font-size: 18px; font-size: 1.125rem; font-weight: 700; line-height: normal; }
-  /* line 89, sass/default/utilities/tools/structure/_layout.scss */
+  .site-title-heading { display: table-cell; margin-bottom: auto; font-size: 18px; font-size: 1.125rem; font-weight: 700; line-height: normal; vertical-align: middle; }
+  /* line 90, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .widget_search { position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: 900; }
-  /* line 96, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 97, sass/default/utilities/tools/structure/_layout.scss */
   .site-description { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-  /* line 100, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 101, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation { display: inline-block; vertical-align: middle; height: 100%; }
   /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
   .main-navigation:after { content: ''; height: 100%; display: inline-block; vertical-align: middle; }
   /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
   .main-navigation > * { display: inline-block; vertical-align: middle; }
-  /* line 104, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 105, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation-heading { position: absolute; top: 0; left: 0; z-index: 901; }
-  /* line 112, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 113, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon { fill: #fff; opacity: .85; }
-  /* line 116, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 117, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon:hover { opacity: 1; } }
 @media only screen and (min-width: 48rem) { /* line 45, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-cr { position: static; }
@@ -1560,22 +1560,22 @@ div.nav-menu .page_item_has_children > .children, div.nav-menu .page_item_has_ch
   /* line 71, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-header { display: table; padding-left: 3.5rem; padding-right: 3.5rem; width: 100%; height: 3.5rem; text-align: center; }
   /* line 79, sass/default/utilities/tools/structure/_layout.scss */
-  .site-title-heading { display: table-cell; vertical-align: middle; margin-bottom: auto; font-size: 18px; font-size: 1.125rem; font-weight: 700; line-height: normal; }
-  /* line 89, sass/default/utilities/tools/structure/_layout.scss */
+  .site-title-heading { display: table-cell; margin-bottom: auto; font-size: 18px; font-size: 1.125rem; font-weight: 700; line-height: normal; vertical-align: middle; }
+  /* line 90, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .widget_search { position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: 900; }
-  /* line 96, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 97, sass/default/utilities/tools/structure/_layout.scss */
   .site-description { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-  /* line 100, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 101, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation { display: inline-block; vertical-align: middle; height: 100%; }
   /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
   .main-navigation:after { content: ''; height: 100%; display: inline-block; vertical-align: middle; }
   /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
   .main-navigation > * { display: inline-block; vertical-align: middle; }
-  /* line 104, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 105, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation-heading { position: absolute; top: 0; left: 0; z-index: 901; }
-  /* line 112, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 113, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon { fill: #fff; opacity: .85; }
-  /* line 116, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 117, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon:hover { opacity: 1; }
   /* line 5, sass/default/utilities/tools/structure/_layout-theme.scss */
   .masthead { background-color: #00aaff; }
@@ -1597,19 +1597,19 @@ div.nav-menu .page_item_has_children > .children, div.nav-menu .page_item_has_ch
   div.nav-menu > ul > .page_item_has_children:hover, div.nav-menu > ul > .menu-item-has-children:hover { background-color: #0099e6; }
   /* line 66, sass/default/utilities/tools/structure/_layout-theme.scss */
   div.nav-menu > ul .page_item_has_children > a:after, div.nav-menu > ul .menu-item-has-children > a:after { border-right-color: rgba(255, 255, 255, 0.25); }
-  /* line 131, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 132, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .search-control { opacity: .75; -webkit-transition: opacity 0.125s ease; -moz-transition: opacity 0.125s ease; -ms-transition: opacity 0.125s ease; -o-transition: opacity 0.125s ease; transition: opacity 0.125s ease; }
-  /* line 135, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 136, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .search-control:hover { opacity: 1; }
-  /* line 143, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 144, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .search-input { background-color: transparent; }
-  /* line 153, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 154, sass/default/utilities/tools/structure/_layout.scss */
   [data-state-search="active"] .header-sidebar .search-submit { opacity: .5; -webkit-transition: opacity 0.125s ease; -moz-transition: opacity 0.125s ease; -ms-transition: opacity 0.125s ease; -o-transition: opacity 0.125s ease; transition: opacity 0.125s ease; }
-  /* line 157, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 158, sass/default/utilities/tools/structure/_layout.scss */
   [data-state-search="active"] .header-sidebar .search-submit:hover { opacity: 1; }
-  /* line 163, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 164, sass/default/utilities/tools/structure/_layout.scss */
   [data-state-search="active"] .header-sidebar [data-state-form-element="focused"] .search-submit { opacity: 1; }
-  /* line 166, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 167, sass/default/utilities/tools/structure/_layout.scss */
   [data-state-search="active"] .header-sidebar [data-state-form-element="focused"] .search-submit:active { background-color: transparent; }
   /* line 89, sass/default/utilities/tools/structure/_layout-theme.scss */
   .header-sidebar .search-control .icon { fill: white; }
@@ -1629,25 +1629,27 @@ div.nav-menu .page_item_has_children > .children, div.nav-menu .page_item_has_ch
   ::-moz-placeholder { color: white; opacity: 0.5; }
   /* line 13, sass/default/utilities/tools/visual/_placeholder.scss */
   :-ms-input-placeholder { color: white; opacity: 0.5; }
-  /* line 184, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 185, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .search-form { position: relative; }
-  /* line 187, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 188, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .search-form:after { content: ''; position: absolute; top: 0; right: 100%; width: 3.5rem; height: 100%; }
   /* line 130, sass/default/utilities/tools/structure/_layout-theme.scss */
   .header-sidebar .search-form:after { background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 170, 255, 0)), color-stop(100%, #00aaff)); background-image: -webkit-linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%); background-image: -moz-linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%); background-image: -o-linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%); background-image: linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%); }
-  /* line 221, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 222, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-cr { text-align: left; height: auto; min-height: 3.5rem; }
-  /* line 227, sass/default/utilities/tools/structure/_layout.scss */
-  .masthead-header { padding-left: 0; padding-right: 0; width: auto; }
-  /* line 233, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 228, sass/default/utilities/tools/structure/_layout.scss */
+  .masthead-header { display: inline-block; padding-left: 0; padding-right: 0; width: auto; }
+  /* line 235, sass/default/utilities/tools/structure/_layout.scss */
+  .site-title-heading { display: inline-block; margin-right: 1rem; }
+  /* line 240, sass/default/utilities/tools/structure/_layout.scss */
   .site-title-link { padding: 0 1rem; line-height: 3.5rem; }
-  /* line 237, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 244, sass/default/utilities/tools/structure/_layout.scss */
   .site-title-link:hover { text-decoration: none; }
-  /* line 252, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 259, sass/default/utilities/tools/structure/_layout.scss */
   div.nav-menu > ul > li > a:hover { text-decoration: none; }
-  /* line 265, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 272, sass/default/utilities/tools/structure/_layout.scss */
   div.nav-menu > ul > .page_item_has_children.status-sub-nav-inactive:after, div.nav-menu > ul > .menu-item-has-children.status-sub-nav-inactive:after { background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4NCjxnPg0KPC9nPg0KCTxwYXRoIGQ9Ik02Ljc1IDEwLjk1bDE3LjI1IDE3LjcgMTcuMjUtMTcuN2MxLjUtMS42NSA0LjA1MC0xLjY1IDUuNTUgMCAxLjUgMS41IDEuNSA0LjA1MCAwIDUuN2wtMTkuOTUgMjAuNGMwIDAgMCAwIDAgMHMwIDAgMCAwYy0wLjc1IDAuNzUtMS42NSAxLjA1MC0yLjU1IDEuMiAwIDAtMC4xNSAwLTAuMTUgMCAwIDAtMC4xNSAwLTAuMTUgMC0wLjkgMC0xLjk1LTAuNDUtMi41NS0xLjIgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDBsLTIwLjI1LTIwLjRjLTEuNS0xLjY1LTEuNS00LjIgMC01LjcgMS41LTEuNjUgMy45LTEuNjUgNS41NSAweiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPg0KPC9zdmc+DQo=); background-repeat: no-repeat; background-position: center center; background-size: contain; }
-  /* line 285, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 292, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation { float: none; }
   /* line 25, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-cr { position: relative; }
@@ -1716,47 +1718,49 @@ iframe[src*="codepen.io"] { border-bottom: 0.0625rem solid #cccccc; }
 [data-state-search="active"] .header-sidebar .widget_search { width: 100%; }
 @media only screen and (min-width: 48rem) { /* line 5, sass/default/structure/components/_search.scss */
   [data-state-search="active"] .header-sidebar .widget_search { max-width: 15rem; } }
-/* line 19, sass/default/structure/components/_search.scss */
+@media only screen and (min-width: 120rem) { /* line 5, sass/default/structure/components/_search.scss */
+  [data-state-search="active"] .header-sidebar .widget_search { max-width: 30rem; } }
+/* line 22, sass/default/structure/components/_search.scss */
 .widget_search .sudo-input-text .search-input { padding-left: 1rem; padding-right: 0; }
-/* line 36, sass/default/structure/components/_search.scss */
+/* line 39, sass/default/structure/components/_search.scss */
 .secondary-sidebar .widget_search .search--field-input, .tertiary-sidebar .widget_search .search--field-input { float: left; margin-bottom: auto; width: 100%; margin-right: -5rem; }
-/* line 42, sass/default/structure/components/_search.scss */
+/* line 45, sass/default/structure/components/_search.scss */
 .secondary-sidebar .widget_search .search--field-input .field-cr, .tertiary-sidebar .widget_search .search--field-input .field-cr { margin-right: .5rem; padding-right: 5rem; }
-/* line 49, sass/default/structure/components/_search.scss */
+/* line 52, sass/default/structure/components/_search.scss */
 .secondary-sidebar .widget_search .search--field-action, .tertiary-sidebar .widget_search .search--field-action { float: right; width: 5rem; }
-/* line 62, sass/default/structure/components/_search.scss */
+/* line 65, sass/default/structure/components/_search.scss */
 .secondary-sidebar .widget_search .search--sudo-button { margin-top: auto; }
 
-/* line 74, sass/default/structure/components/_search.scss */
+/* line 77, sass/default/structure/components/_search.scss */
 .header-sidebar .search--sudo-input-text { border: none; }
-/* line 81, sass/default/structure/components/_search.scss */
+/* line 84, sass/default/structure/components/_search.scss */
 .status-search-active .header-sidebar .search--sudo-input-text { width: 100%; }
-/* line 87, sass/default/structure/components/_search.scss */
+/* line 90, sass/default/structure/components/_search.scss */
 .header-sidebar .search--sudo-button { margin-top: auto; border: none; border-radius: 0; }
-/* line 99, sass/default/structure/components/_search.scss */
-.header-sidebar .search-form { margin-bottom: auto; }
 /* line 102, sass/default/structure/components/_search.scss */
+.header-sidebar .search-form { margin-bottom: auto; }
+/* line 105, sass/default/structure/components/_search.scss */
 .status-search-active .header-sidebar .search-form { padding-right: 3.5rem; }
-/* line 108, sass/default/structure/components/_search.scss */
+/* line 111, sass/default/structure/components/_search.scss */
 .header-sidebar .search--field-input { margin-bottom: auto; height: 3.5rem; }
-/* line 112, sass/default/structure/components/_search.scss */
+/* line 115, sass/default/structure/components/_search.scss */
 .header-sidebar .search--field-input .field-cr { width: 100%; }
-/* line 119, sass/default/structure/components/_search.scss */
+/* line 122, sass/default/structure/components/_search.scss */
 .header-sidebar .search-control { margin-bottom: auto; width: 3.5rem; height: 3.5rem; }
-/* line 128, sass/default/structure/components/_search.scss */
+/* line 131, sass/default/structure/components/_search.scss */
 .header-sidebar .search-control .icon { width: 1.5rem; height: 1.5rem; }
-/* line 132, sass/default/structure/components/_search.scss */
+/* line 135, sass/default/structure/components/_search.scss */
 .header-sidebar .search-control:hover { cursor: pointer; }
-/* line 142, sass/default/structure/components/_search.scss */
+/* line 145, sass/default/structure/components/_search.scss */
 .header-sidebar .search-submit { width: 3.5rem; height: 3.5rem; }
-/* line 150, sass/default/structure/components/_search.scss */
+/* line 153, sass/default/structure/components/_search.scss */
 .header-sidebar .search-submit .icon { width: 1.5rem; height: 1.5rem; }
-/* line 156, sass/default/structure/components/_search.scss */
+/* line 159, sass/default/structure/components/_search.scss */
 .header-sidebar .search--field-action { position: absolute; top: 0; right: 0; }
 
-@media only screen and (max-width: 47.9375rem) { /* line 166, sass/default/structure/components/_search.scss */
+@media only screen and (max-width: 47.9375rem) { /* line 169, sass/default/structure/components/_search.scss */
   [data-state-search="active"] .search { padding-left: 3.5rem; } }
-@media only screen and (max-width: 47.9375rem) { /* line 176, sass/default/structure/components/_search.scss */
+@media only screen and (max-width: 47.9375rem) { /* line 179, sass/default/structure/components/_search.scss */
   .status-mobile-main-nav-inactive [data-state-search="active"] .header-sidebar .search .search-input { padding-left: 0; } }
 
 /* line 5, sass/default/structure/components/_taxonomy.scss */

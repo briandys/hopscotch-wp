@@ -4,27 +4,32 @@
 // Displays the parent pages of a page 
 
 function hopscotch_breadcrumbs() {
-    ?>
-
-    <?php
-        
     global $post;
     
     if ( ( is_page() && $post->post_parent > 0 ) || is_search() ) {
 
-        echo '<div class="action-items breadcrumbs">';
-        echo '<p class="assistive-text">Breadcrumbs:</p>';
-
         $ancestors = get_post_ancestors($post);
 
-        if ($ancestors) {
+        if ( $ancestors ) {
             $ancestors = array_reverse($ancestors);
-            echo '<ul class="action-list breadcrumb-list">';
+            ?>
+            <div class="action-items breadcrumbs">
+            <p class="assistive-text">Breadcrumbs:</p>
+            <ul class="action-list breadcrumb-list">
+            
+            <?php
             foreach ($ancestors as $crumb) {
                 echo '<li class="action-item breadcrumb-item"><a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a></li>';
             }
-            echo '</ul>';
+            ?>
+            </ul>
+            </div>
+        <?php
         }
+        
+    }
+    
+}
 
         /*
         if (is_single()) {
@@ -38,11 +43,9 @@ function hopscotch_breadcrumbs() {
             echo '<ul class="action-list breadcrumb-list">';
             echo '<li class="action-item breadcrumb-item">'.$category[0]->cat_name.'</li>';
         }
-        */
-        
-        echo '</div>';
 
-    } /* elseif (is_front_page()) {
+
+    } elseif (is_front_page()) {
 
         $ancestors = get_post_ancestors($post);
         echo '<div class="action-items breadcrumbs">';
@@ -58,6 +61,3 @@ function hopscotch_breadcrumbs() {
         echo '</ul>';
         echo '</div>';
     } */
-    ?>
-
-<?php }

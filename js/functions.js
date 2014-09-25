@@ -318,6 +318,21 @@
 	} )();
     
     
+    // Giving height to absolute elements
+    ( function() {
+        
+        var entryMain = $( '.post.ui-type__entry-meta--meta-dashboard' );
+        
+        $( entryMain ).each(function(){
+            
+            var entryMetaHeight = $( this ).find( '.entry-hr .entry-meta' ).outerHeight( true ) + 48;
+            $( this ).find( '.entry-cr' ).css( 'min-height', entryMetaHeight + 'px' );
+        
+        });
+        
+    } )();
+    
+    
     // Sticky footer
     ( function() {
         
