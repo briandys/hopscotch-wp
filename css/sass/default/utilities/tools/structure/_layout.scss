@@ -99,7 +99,9 @@
     }
     
     .main-navigation {
-        @include valign-mid;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     
     .main-navigation-heading {
@@ -244,6 +246,13 @@
         &:hover {
             text-decoration: none;
         }
+    }
+    
+    .main-navigation {
+        @include valign-mid;
+        position: static;
+        top: auto;
+        left: auto;
     }
     
     div.nav-menu {

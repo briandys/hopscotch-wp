@@ -3536,6 +3536,13 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 47.9375rem) {
+  /* line 91, sass/default/elements/components/_main.scss */
+  .main-content-hr-cr {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 @media only screen and (min-width: 48rem) {
   /* line 91, sass/default/elements/components/_main.scss */
   .main-content-hr-cr {
@@ -3544,7 +3551,7 @@ textarea {
   }
 }
 
-/* line 100, sass/default/elements/components/_main.scss */
+/* line 105, sass/default/elements/components/_main.scss */
 .main-content-heading {
   margin-bottom: 0;
   font-size: 20px;
@@ -3553,14 +3560,14 @@ textarea {
   text-align: center;
 }
 @media only screen and (min-width: 48rem) {
-  /* line 100, sass/default/elements/components/_main.scss */
+  /* line 105, sass/default/elements/components/_main.scss */
   .main-content-heading {
     font-size: 25.008px;
     font-size: 1.563rem;
   }
 }
 
-/* line 124, sass/default/elements/components/_main.scss */
+/* line 129, sass/default/elements/components/_main.scss */
 .main-content-meta {
   font-size: 18px;
   font-size: 1.125rem;
@@ -4226,36 +4233,24 @@ div.nav-menu .menu-item-has-children > .sub-menu {
 
   /* line 101, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation {
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-  }
-  /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .main-navigation:after {
-    content: '';
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .main-navigation > * {
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  /* line 105, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 107, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation-heading {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 901;
   }
-  /* line 113, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 115, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon {
     fill: #fff;
     opacity: .85;
   }
-  /* line 117, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 119, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .main-navigation-heading .icon:hover {
     opacity: 1;
   }
@@ -4325,35 +4320,23 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   }
   /* line 101, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation {
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .hopscotch--site .main-navigation:after {
-    content: '';
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
-  .hopscotch--site .main-navigation > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  /* line 105, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 107, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation-heading {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 901;
   }
-  /* line 113, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 115, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .hopscotch--site .main-navigation-heading .icon {
     fill: #fff;
     opacity: .85;
   }
-  /* line 117, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 119, sass/default/utilities/tools/structure/_layout.scss */
   .status-mobile-main-nav-active .hopscotch--site .main-navigation-heading .icon:hover {
     opacity: 1;
   }
@@ -4405,7 +4388,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
   .hopscotch--site div.nav-menu > ul .menu-item-has-children > a:after {
     border-right-color: rgba(255, 255, 255, 0.25);
   }
-  /* line 132, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 134, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-control {
     opacity: .75;
     -webkit-transition: opacity 0.125s ease;
@@ -4414,15 +4397,15 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: opacity 0.125s ease;
     transition: opacity 0.125s ease;
   }
-  /* line 136, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 138, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-control:hover {
     opacity: 1;
   }
-  /* line 144, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 146, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-input {
     background-color: transparent;
   }
-  /* line 154, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 156, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site [data-state-search="active"] .header-sidebar .search-submit {
     opacity: .5;
     -webkit-transition: opacity 0.125s ease;
@@ -4431,15 +4414,15 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     -o-transition: opacity 0.125s ease;
     transition: opacity 0.125s ease;
   }
-  /* line 158, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 160, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site [data-state-search="active"] .header-sidebar .search-submit:hover {
     opacity: 1;
   }
-  /* line 164, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 166, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site [data-state-search="active"] .header-sidebar [data-state-form-element="focused"] .search-submit {
     opacity: 1;
   }
-  /* line 167, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 169, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site [data-state-search="active"] .header-sidebar [data-state-form-element="focused"] .search-submit:active {
     background-color: transparent;
   }
@@ -4482,11 +4465,11 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     color: white;
     opacity: 0.5;
   }
-  /* line 185, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 187, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-form {
     position: relative;
   }
-  /* line 188, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 190, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-form:after {
     content: '';
     position: absolute;
@@ -4503,38 +4486,59 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     background-image: -o-linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%);
     background-image: linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%);
   }
-  /* line 222, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 224, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-cr {
     text-align: left;
     height: auto;
     min-height: 3.5rem;
   }
-  /* line 228, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 230, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-header {
     display: inline-block;
     padding-left: 0;
     padding-right: 0;
     width: auto;
   }
-  /* line 235, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 237, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-title-heading {
     display: inline-block;
     margin-right: 1rem;
   }
-  /* line 240, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 242, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-title-link {
     padding: 0 1rem;
     line-height: 3.5rem;
   }
-  /* line 244, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 246, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-title-link:hover {
     text-decoration: none;
   }
-  /* line 259, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 251, sass/default/utilities/tools/structure/_layout.scss */
+  .hopscotch--site .main-navigation {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+  /* line 6, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
+  .hopscotch--site .main-navigation:after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* line 12, sass/default/utilities/tools/structure/_vertical-align-middle.scss */
+  .hopscotch--site .main-navigation > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* line 268, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site div.nav-menu > ul > li > a:hover {
     text-decoration: none;
   }
-  /* line 272, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 281, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site div.nav-menu > ul > .page_item_has_children.status-sub-nav-inactive:after,
   .hopscotch--site div.nav-menu > ul > .menu-item-has-children.status-sub-nav-inactive:after {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4NCjxnPg0KPC9nPg0KCTxwYXRoIGQ9Ik02Ljc1IDEwLjk1bDE3LjI1IDE3LjcgMTcuMjUtMTcuN2MxLjUtMS42NSA0LjA1MC0xLjY1IDUuNTUgMCAxLjUgMS41IDEuNSA0LjA1MCAwIDUuN2wtMTkuOTUgMjAuNGMwIDAgMCAwIDAgMHMwIDAgMCAwYy0wLjc1IDAuNzUtMS42NSAxLjA1MC0yLjU1IDEuMiAwIDAtMC4xNSAwLTAuMTUgMCAwIDAtMC4xNSAwLTAuMTUgMC0wLjkgMC0xLjk1LTAuNDUtMi41NS0xLjIgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDBsLTIwLjI1LTIwLjRjLTEuNS0xLjY1LTEuNS00LjIgMC01LjcgMS41LTEuNjUgMy45LTEuNjUgNS41NSAweiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPg0KPC9zdmc+DQo=);
@@ -4542,7 +4546,7 @@ div.nav-menu .menu-item-has-children > .sub-menu {
     background-position: center center;
     background-size: contain;
   }
-  /* line 292, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 301, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation {
     float: none;
   }
@@ -4589,6 +4593,11 @@ svg.icon {
 /* line 37, sass/default/elements/components/_media.scss */
 .modernizr-no-inlinesvg svg.icon {
   display: none;
+}
+
+/* line 45, sass/default/elements/components/_media.scss */
+.img-alignment-center {
+  text-align: center;
 }
 
 /* line 1, sass/default/elements/components/_notice.scss */
@@ -4877,12 +4886,6 @@ iframe[src*="codepen.io"] {
   /* line 169, sass/default/elements/components/_search.scss */
   [data-state-search="active"] .search {
     padding-left: 3.5rem;
-  }
-}
-@media only screen and (max-width: 47.9375rem) {
-  /* line 179, sass/default/elements/components/_search.scss */
-  .status-mobile-main-nav-inactive [data-state-search="active"] .header-sidebar .search .search-input {
-    padding-left: 0;
   }
 }
 

@@ -173,18 +173,6 @@
         }
         
     }
-    
-    .status-mobile-main-nav-inactive [data-state-search="active"] .header-sidebar & {
-        
-        .search-input {
-            
-            @include mq( $tablet, $query1: max ) {
-                padding-left: 0;
-            }
-            
-        }
-        
-    }
 
 }
 

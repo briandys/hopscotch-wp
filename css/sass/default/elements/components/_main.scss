@@ -90,6 +90,11 @@
 
 .main-content-hr-cr {
     
+    @include mq( $tablet, $query1: max ) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
     @include mq( $tablet ) {
         margin-bottom: 1rem;
         padding: 2rem $gutter;
