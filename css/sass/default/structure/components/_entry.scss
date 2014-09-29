@@ -227,21 +227,15 @@ $entry-byline-avatar-size: 2rem;
     padding-left: $gutter;
     padding-right: $gutter;
     
-    > {
-        
-        * {
-            word-wrap: break-word;            
+    .img-cr,
+    .wp-caption {
 
-            &:last-child {
-                margin-bottom: auto;
-            }
-            
+        > a {
+            display: inline-block;
+            max-width: 100%;
+            border-bottom: 0;
         }
-        
-        p {
-            line-height: 1.75;
-        }
-        
+
     }
         
     ol,
@@ -380,6 +374,23 @@ $entry-byline-avatar-size: 2rem;
     // WP Caption Text
     .wp-caption-text {
         margin-top: 0;
+    }
+    
+    > {
+        
+        * {
+            word-wrap: break-word;            
+
+            &:last-child {
+                margin-bottom: auto;
+            }
+            
+        }
+        
+        p {
+            line-height: 1.75;
+        }
+        
     }
     
 } // .entry-ct-cr

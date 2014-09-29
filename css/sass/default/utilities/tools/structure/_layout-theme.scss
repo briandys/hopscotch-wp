@@ -103,7 +103,7 @@
     [data-state-search="active"] .header-sidebar {
         
         .search-form {
-            background-color: $color-masthead-highlight-bg;
+            background-color: $color-search-focus-bg;
         }
         
         .search-submit .icon {
@@ -128,7 +128,7 @@
         .search-form {
 
             &:after {
-                @include background-image( linear-gradient( left,  rgba( $color-masthead-bg, 0 ) 0%, $color-masthead-bg 100% ) );
+                @include background-image( linear-gradient( left,  rgba( $color-search-rev-bg, 0 ) 0%, $color-search-rev-bg 100% ) );
 
             }
 
