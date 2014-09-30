@@ -32,11 +32,11 @@
 //------------------------- data-nav-ui-type
 // folding-blocks
 
-[data-nav-ui-type="folding-blocks"] .main-nav-ct-cr ul {
+.ui-type__main-nav--folding-blocks .main-nav-ct-cr ul {
     margin-left: 0;
 }
 
-[data-nav-ui-type="folding-blocks"] .nav-item {
+.ui-type__main-nav--folding-blocks .nav-item {
 	display: inline-block;
 	vertical-align: top;
     
@@ -48,11 +48,11 @@
     
 }
 
-[data-nav-ui-type="folding-blocks"] .sub-nav {
+.ui-type__main-nav--folding-blocks .sub-nav {
 	display: block;
 }
 
-[data-nav-ui-type="folding-blocks"] .sub-nav .nav-item {
+.ui-type__main-nav--folding-blocks .sub-nav .nav-item {
 	display: block;
 }
 
@@ -60,13 +60,13 @@
 // The status of the sub-navigation.
 // 0 - inactive (default)
 // 1 - active
-[data-nav-sub-nav-status="inactive"] .sub-nav {
+.ui-state__sub-nav--inactive .sub-nav {
 	@include vhide;
 }
 
 .nav-item-head {
     
-    &[data-nav-sub-nav-status="active"],
+    &.ui-state__sub-nav--active,
     &:hover {
         
         > .sub-nav {
@@ -79,7 +79,7 @@
 }
 
 // Hover-show behavior
-[data-nav-ui-type="folding-blocks"] .nav-item-head {
+.ui-type__main-nav--folding-blocks .nav-item-head {
     
     // Icon hint (affordance that there's a hidden sub-nav)
     position: relative;
@@ -99,7 +99,7 @@
         padding-right: 2rem;
     }
     
-    &[data-nav-sub-nav-status="active"],
+    &.ui-state__sub-nav--active,
     &:hover {
         
         > .sub-nav {

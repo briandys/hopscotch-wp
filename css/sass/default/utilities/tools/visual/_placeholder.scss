@@ -1,4 +1,4 @@
-@mixin placeholder($color: $color-placeholder-text, $opacity: .5) {
+@mixin placeholder($color: $color-placeholder-text, $opacity: .65) {
 
     ::-webkit-input-placeholder {
         color: $color;

@@ -6,7 +6,7 @@
                 <div class="field search--field-input">
                     <div class="field-cr">
                         <label id="search-control" class="search-label search-control">
-                            <span class="label">Search</span>
+                            <span class="label">Search Keyword</span>
                             <svg class="icon icon-search" width="0" height="0" viewBox="0 0 48 48"><use xlink:href="#icon-search"></use></svg>
                         </label>
                         <div class="sudo-input-text search--sudo-input-text" data-state-form-element="unfocused">
