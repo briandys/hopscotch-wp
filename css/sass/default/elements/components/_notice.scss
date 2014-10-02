@@ -18,13 +18,7 @@
 }
 
 // Regular
-.notice-cr {	
-	background-color: #fff9b8;
-	border: .125rem solid #ffed60;
-}
-
-// Error
-.notice-error .notice-cr {
-	background-color: #ffdcdd;
-	border-color: #ffbec0;
+.notice-cr {
+	border-width: .125rem;
+    border-style:solid;
 }

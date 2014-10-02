@@ -119,6 +119,47 @@
 }
 
 
+//------------------------- Table - Versus
+.ui-type__table--versus {
+    
+    thead th {
+        text-align: center;
+    }
+
+    .result {
+        text-align: center;
+
+        .label {
+            @extend %vhide;
+        }
+        
+        &:after {
+            content: '●';
+            @include font-size-rem( $font-l );
+        }
+
+    }
+
+    .win {
+
+        &:after {
+            color: $green-go;
+        }
+
+    }
+
+    .lose {
+
+        &:after {
+            color: $red-record;
+        }
+
+    }
+    
+}
+
+
+
 //------------------------- UI Tabs
 .ui-tablist {
     @extend %cf;

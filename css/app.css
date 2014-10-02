@@ -262,7 +262,7 @@ textarea { resize: vertical; }
 .entry:after, .entry-byline:after, .comment-hr:after, .comment-respond:after, .ui-tablist:after { clear: both; }
 
 /* line 36, sass/default/utilities/tools/_patch.scss */
-.assistive-text, .search-bar-title, .home .main-content-title, .blog .main-content-title, .accessible-name, legend, #wpstats, .widget_search .widget-title, .widget_nav_menu .widget-title, .form-allowed-tags, .skip-to-content-link, .child-content .entry-user-action, .child-content .entry-meta, .child-content .breadcrumbs, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label:not(.subscribe-label), .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading, .secondary-sidebar-heading, .tertiary-sidebar-heading { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.assistive-text, .search-bar-title, .home .main-content-title, .blog .main-content-title, .accessible-name, legend, #wpstats, .widget_search .widget-title, .widget_nav_menu .widget-title, .form-allowed-tags, .skip-to-content-link, .child-content .entry-user-action, .child-content .entry-meta, .child-content .breadcrumbs, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label:not(.subscribe-label), .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading, .secondary-sidebar-heading, .tertiary-sidebar-heading, .ui-type__table--versus .result .label { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
 /* line 7, sass/default/utilities/tools/structure/_block-inline.scss */
 .toolbar .action-item { display: inline-block; vertical-align: middle; }
@@ -558,6 +558,15 @@ div.nav-menu .page_item, div.nav-menu .menu-item { border-bottom-color: rgba(0, 
 /* line 22, sass/default/utilities/tools/visual/_linkstyle-theme.scss */
 .breadcrumb-item a:hover { color: #00aaff; }
 
+/* line 2, sass/default/elements/components/_notice-theme.scss */
+.notice-cr { background-color: #fff9b8; border-color: #ffee39; }
+
+/* line 8, sass/default/elements/components/_notice-theme.scss */
+.notice-error .notice-cr { background-color: #ffdcdd; border-color: #ff5d61; }
+
+/* line 3, sass/default/elements/objects/_insert-theme.scss */
+ins:before { background-color: #fff9b8; border-color: #ffee39; }
+
 /* line 2, sass/default/utilities/_theme-font.scss */
 html { font-family: Raleway, Helvetica, Arial, sans-serif; }
 
@@ -577,9 +586,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, table, blockquote, legend, dl, dd, form, pre,
 .masthead, .main, .colophon { clear: both; }
 
 /* line 2, sass/default/elements/objects/_code.scss */
-code, kbd { border-radius: 0.25rem; padding: .125rem .35rem; white-space: nowrap; }
+code, kbd { border-radius: 0.25rem; padding: .125rem .35rem; }
 
-/* line 8, sass/default/elements/objects/_code.scss */
+/* line 7, sass/default/elements/objects/_code.scss */
 pre { padding: 1rem; border-width: 0.0625rem; border-style: solid; border-radius: 0.25rem; }
 
 /* line 1, sass/default/elements/objects/_definition.scss */
@@ -622,6 +631,9 @@ h6 { font-size: 12.8px; font-size: 0.8rem; font-weight: 800; }
 
 /* line 39, sass/default/elements/objects/_heading.scss */
 .text-heading, .heading, .friendly-name { font-size: 25.008px; font-size: 1.563rem; font-weight: 600; }
+
+/* line 3, sass/default/elements/objects/_insert.scss */
+ins:before { content: 'Update'; display: inline-block; margin-right: .5rem; padding: .25rem .75rem; font-size: 12.8px; font-size: 0.8rem; text-transform: uppercase; border-width: 0.0625rem; border-style: solid; border-radius: 0.25rem; }
 
 /* line 1, sass/default/elements/objects/_link.scss */
 a { text-decoration: none; }
@@ -1666,10 +1678,7 @@ svg.icon { margin: 0.0625rem; fill: #404040; }
 .notice p:only-child { margin-bottom: 0; }
 
 /* line 21, sass/default/elements/components/_notice.scss */
-.notice-cr { background-color: #fff9b8; border: .125rem solid #ffed60; }
-
-/* line 27, sass/default/elements/components/_notice.scss */
-.notice-error .notice-cr { background-color: #ffdcdd; border-color: #ffbec0; }
+.notice-cr { border-width: .125rem; border-style: solid; }
 
 /* line 8, sass/default/elements/components/_plug-in.scss */
 .sharedaddy ul { list-style: none; margin: auto; padding: 0; margin-bottom: auto; padding-left: 0; }
@@ -1845,27 +1854,38 @@ iframe[src*="codepen.io"] { border-bottom: 0.0625rem solid #cccccc; }
 /* line 105, sass/default/elements/components/_ui.scss */
 .ui-type__main-nav--folding-blocks .nav-item-head.ui-state__sub-nav--active > .sub-nav, .ui-type__main-nav--folding-blocks .nav-item-head:hover > .sub-nav { position: absolute; top: 100%; left: 0; margin-top: -0.5rem; margin-left: .5rem; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.25); }
 
-/* line 123, sass/default/elements/components/_ui.scss */
+/* line 125, sass/default/elements/components/_ui.scss */
+.ui-type__table--versus thead th { text-align: center; }
+/* line 129, sass/default/elements/components/_ui.scss */
+.ui-type__table--versus .result { text-align: center; }
+/* line 136, sass/default/elements/components/_ui.scss */
+.ui-type__table--versus .result:after { content: '●'; font-size: 20px; font-size: 1.25rem; }
+/* line 145, sass/default/elements/components/_ui.scss */
+.ui-type__table--versus .win:after { color: #12b32d; }
+/* line 153, sass/default/elements/components/_ui.scss */
+.ui-type__table--versus .lose:after { color: #e53a2e; }
+
+/* line 164, sass/default/elements/components/_ui.scss */
 .ui-tablist { list-style: none; margin: auto; padding: 0; margin-left: 0; margin-bottom: 0; white-space: nowrap; }
 
-/* line 131, sass/default/elements/components/_ui.scss */
-.ui-tablist-item { display: inline-block; margin-bottom: 0; vertical-align: bottom; }
-/* line 136, sass/default/elements/components/_ui.scss */
-.ui-tablist-item a { display: block; margin-right: -1px; padding: .75rem; min-width: 8rem; border-width: 0.0625rem; border-style: solid; border-bottom: none; white-space: nowrap; text-align: center; }
-/* line 147, sass/default/elements/components/_ui.scss */
-.ui-tablist-item a[aria-selected="true"] { position: relative; top: 1px; margin-left: -1px; }
-/* line 154, sass/default/elements/components/_ui.scss */
-.ui-tablist-item a[aria-selected="false"] { margin-top: .5rem; padding-top: .5rem; padding-bottom: .5rem; }
-/* line 164, sass/default/elements/components/_ui.scss */
-.ui-tablist-item:first-child [aria-selected="true"] { margin-left: auto; }
 /* line 172, sass/default/elements/components/_ui.scss */
+.ui-tablist-item { display: inline-block; margin-bottom: 0; vertical-align: bottom; }
+/* line 177, sass/default/elements/components/_ui.scss */
+.ui-tablist-item a { display: block; margin-right: -1px; padding: .75rem; min-width: 8rem; border-width: 0.0625rem; border-style: solid; border-bottom: none; white-space: nowrap; text-align: center; }
+/* line 188, sass/default/elements/components/_ui.scss */
+.ui-tablist-item a[aria-selected="true"] { position: relative; top: 1px; margin-left: -1px; }
+/* line 195, sass/default/elements/components/_ui.scss */
+.ui-tablist-item a[aria-selected="false"] { margin-top: .5rem; padding-top: .5rem; padding-bottom: .5rem; }
+/* line 205, sass/default/elements/components/_ui.scss */
+.ui-tablist-item:first-child [aria-selected="true"] { margin-left: auto; }
+/* line 213, sass/default/elements/components/_ui.scss */
 .ui-tablist-item:last-child [aria-selected="true"] { margin-right: auto; }
 
-/* line 180, sass/default/elements/components/_ui.scss */
+/* line 221, sass/default/elements/components/_ui.scss */
 [aria-hidden="true"] { display: none; }
 
-/* line 184, sass/default/elements/components/_ui.scss */
+/* line 225, sass/default/elements/components/_ui.scss */
 [aria-hidden="false"] { display: block; }
 
-/* line 188, sass/default/elements/components/_ui.scss */
+/* line 229, sass/default/elements/components/_ui.scss */
 .ui-tabpanel { padding: 1rem; border-width: 0.0625rem; border-style: solid; }

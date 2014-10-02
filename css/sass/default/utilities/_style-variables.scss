@@ -203,3 +203,11 @@ $color-hollow-box-rev-hover-bg: $color-hollow-box-dark;
 $media-assets-path: '../img/';
 $icon-entry-nav: $icon-entry-nav-dark;
 $icon-entry-nav-hover: $icon-entry-nav-light;
+
+
+//------------------------- Notice
+$color-notice-reg-rev-bg: #fff9b8;
+$color-notice-line-reg: darken( $color-notice-reg-rev-bg, 25% );
+
+$color-notice-error-rev-bg: #ffdcdd;
+$color-notice-line-error: darken( $color-notice-error-rev-bg, 25% );
