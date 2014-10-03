@@ -353,7 +353,7 @@ $entry-byline-avatar-size: 2rem;
     // Format: Status
     .format-status & {
         
-        > * {
+        > p {
             @include font-size-rem($font-xxl);
         }
         

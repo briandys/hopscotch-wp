@@ -32,7 +32,7 @@
     } )();
     
     
-    // Main navigation toggle for mobile mode
+    // Main navigation toggle for narrow viewport mode
 	( function() {
 		
 		var mainNav = $( '#main-navigation' ),
@@ -65,6 +65,12 @@
         // Activates the nav
 		mainNavControl.on( 'click.hopscotch', function(e) {
 			navToggle();
+            
+            if ( body.hasClass( searchActive )) {
+				searchToggle();
+                searchDeactivate();
+			}
+            
 			e.stopPropagation();
 		} );
 		
@@ -85,13 +91,9 @@
 				navToggle();
 			}
 		});
+        
 		
-	} )();
-    
-   
-    // Sub navigation toggle for narrow and wide viewport
-    ( function() {
-		
+        // Sub navigation toggle for narrow and wide viewport
         var subNavMenuMain = $( 'div.nav-menu' ),
             subNavMenuParent = subNavMenuMain.find( '.page_item_has_children, .menu-item-has-children' ),
             subNavMenuChildren = subNavMenuParent.find( '.children, .sub-menu' ),
@@ -173,13 +175,9 @@
                 }                
 			}            
         });
-    
-    } )();
-    
-    
-	// Search located on header
-	( function() {
         
+        
+        // Search located on header
         var search = $( '#header-sidebar .search' ),
 			searchControl = $( '#search-control' ),
             searchField = $( '#header-sidebar .search-input' ),
