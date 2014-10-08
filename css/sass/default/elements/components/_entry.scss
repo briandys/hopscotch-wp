@@ -1,3 +1,6 @@
+@import 'entry-theme-font';
+
+
 $entry-byline-avatar-size: 2rem;
 
 .entry {
@@ -310,14 +313,14 @@ $entry-byline-avatar-size: 2rem;
     .pull-quote {
 
         @include mq( $tablet ) {
-
+            
             float: left;
             margin-left: auto;
             margin-right: 1.5rem;
             margin-bottom: 1.5rem;
             padding-right: 0;
             width: 30%;
-            @include font-size-rem( $font-xl );
+        
         }
 
     }
@@ -348,15 +351,6 @@ $entry-byline-avatar-size: 2rem;
     
     h6 {
         text-transform: uppercase;
-    }
-    
-    // Format: Status
-    .format-status & {
-        
-        > p {
-            @include font-size-rem($font-xxl);
-        }
-        
     }
 
     // Fix SVG <img> width and height in Galleries

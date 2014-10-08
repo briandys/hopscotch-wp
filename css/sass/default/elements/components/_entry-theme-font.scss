@@ -1,0 +1,62 @@
+// Entry Content Container
+.entry-ct-cr {
+    
+    
+    // Set default for all content
+    * {
+        @include font-size-rem( $font-m );
+    }
+    
+    
+    // Pull Quotes
+    .pull-quote {
+
+        @include mq( $tablet ) {
+            
+            @include font-size-rem( $font-xl );
+       
+        }
+
+    }
+    
+    
+    // Format: Status
+    .format-status & {
+        
+        > p {
+            @include font-size-rem($font-xxl);
+        }
+        
+    }
+    
+    
+    // Headings
+    h1 {
+    @include font-size-rem($font-xxxl);
+    }
+
+    h2 {
+        @include font-size-rem($font-xxl);
+    }
+
+    h3,
+    .text-heading,
+    .heading,
+    .friendly-name {
+        @include font-size-rem($font-xl);
+    }
+
+    h4 {
+        @include font-size-rem($font-l);
+    }
+
+    h5 {
+        @include font-size-rem($font-m);
+    }
+
+    h6 {
+        @include font-size-rem($font-s);
+    }
+    
+    
+} // .entry-ct-cr
