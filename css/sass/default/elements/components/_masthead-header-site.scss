@@ -1,0 +1,11 @@
+// Parent-specific style of header for wide viewports
+// This must be set on a child theme using a specific site class
+.hopscotch--site {
+
+    @include mq( $tablet ) {
+
+        @include header-semi-compact;
+
+    }
+    
+}

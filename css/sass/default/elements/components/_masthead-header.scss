@@ -44,31 +44,11 @@
 }
 
 
-@include mq( $tablet ) {
-
-    
-
-}
-
-
 
 // Header style for narrow viewports
 // Default for parent and child
 @include mq( $tablet, $query1: max ) {
     
     @include header-compact;
-    
-}
-
-
-// Parent-specific style of header for wide viewports
-// This must be set on a child theme using a specific site class
-.hopscotch--site {
-
-    @include mq( $tablet ) {
-
-        @include header-semi-compact;
-
-    }
     
 }
