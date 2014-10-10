@@ -4,7 +4,7 @@
 function hopscotch_js() {
     if( ! is_admin() ) {
         
-        // Remove scripts from the header - especially those bundles with WP
+        // Remove scripts from the header - especially those bundled with WP
         remove_action('wp_head', 'wp_print_scripts');
         remove_action('wp_head', 'wp_print_head_scripts', 9);
         remove_action('wp_head', 'wp_enqueue_scripts', 1);
@@ -15,6 +15,6 @@ function hopscotch_js() {
     }
 	
 	if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
-	wp_enqueue_script( 'comment-reply' );
+	   wp_enqueue_script( 'comment-reply' );
 }
 add_action( 'wp_enqueue_scripts', 'hopscotch_js' );
