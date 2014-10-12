@@ -1,6 +1,3 @@
-@import 'entry-theme-font';
-
-
 $entry-byline-avatar-size: 2rem;
 
 .entry {
@@ -312,15 +309,14 @@ $entry-byline-avatar-size: 2rem;
     
     .pull-quote {
 
-        @include mq( $tablet ) {
-            
+        @include mq( $tablet ) {            
             float: left;
             margin-left: auto;
             margin-right: 1.5rem;
             margin-bottom: 1.5rem;
             padding-right: 0;
             width: 30%;
-        
+            @include font-size-rem( $font-xl );        
         }
 
     }
@@ -383,6 +379,15 @@ $entry-byline-avatar-size: 2rem;
         
         p {
             line-height: 1.75;
+        }
+        
+    }
+    
+     // Format: Status
+    .format-status & {
+        
+        > p {
+            @include font-size-rem($font-xxl);
         }
         
     }
