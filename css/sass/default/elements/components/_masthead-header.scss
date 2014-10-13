@@ -1,6 +1,7 @@
 .masthead-cr {
-
+    
     @include mq( $tablet ) {
+        position: relative;
         text-align: center;
     }
 
@@ -8,6 +9,10 @@
 
 
 .site-title-heading {
+        
+    @include mq( $tablet ) {
+        margin-bottom: auto;
+    }
     
     .status-mobile-main-nav-inactive [data-state-search="inactive"] & {
         
@@ -22,10 +27,6 @@
         
         @include mq( $tablet, $query1: max ) {
             opacity: 0;
-        }
-        
-        @include mq( $tablet ) {
-            margin-bottom: auto;
         }
 
     }

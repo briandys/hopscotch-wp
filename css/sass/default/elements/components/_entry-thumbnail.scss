@@ -1,3 +1,16 @@
+.entry-thumbnail {
+    
+    .site-default & {
+        text-align: center;
+    }
+    
+    @include mq( $moblet, $query1: max ) {
+        @include vhide;
+    }
+    
+}
+
+
 .entry-thumbnail-link {
     display: block;
     @include size(5rem);
@@ -7,14 +20,6 @@
     
     img {
         display: none;
-    }
-    
-}
-
-.entry-thumbnail {
-    
-    .site-default & {
-        text-align: center;
     }
     
 }

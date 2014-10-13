@@ -47,6 +47,7 @@
 }
 
 
-.entry-ct-cr a {
+.entry-ct-cr a,
+.entry-subtitle a {
     @include linkstyle-faint-theme;
 }

@@ -1,7 +1,7 @@
 blockquote {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    @include font-size-rem($font-l);
+    @include font-size-rem($font-xl);
     
     cite {
         display: block;
@@ -11,5 +11,5 @@ blockquote {
 }
 
 q {
-    @include font-size-rem( $font-l );
+    @include font-size-rem( $font-xl );
 }

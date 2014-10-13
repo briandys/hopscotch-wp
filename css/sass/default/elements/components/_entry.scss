@@ -118,6 +118,10 @@ $entry-byline-avatar-size: 2rem;
             padding-left: $entry_thumbnail_size + 2rem;
         }
         
+        @include mq( $moblet, $query1: max ) {
+            padding-left: $gutter;
+        }
+        
     }
     
     .entry-thumbnail {
@@ -443,6 +447,10 @@ $entry-byline-avatar-size: 2rem;
     
     .label {
         @extend %vhide;
+    }
+    
+    a {
+        @include linkstyle-faint;
     }
     
 }
