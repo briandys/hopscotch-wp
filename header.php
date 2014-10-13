@@ -41,7 +41,7 @@
                 <div class="masthead-cr">
                     
                     <?php get_template_part( 'components/masthead-header'); ?>
-                    <?php get_template_part( 'components/main-navigation' ); ?>                    
+                    <?php get_template_part( 'components/main-navigation' ); ?>
                     <?php get_template_part( 'components/sidebar-header' ); ?>
                 
                 </div>
