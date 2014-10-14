@@ -35,19 +35,12 @@ div.nav-menu {
                 &.status-sub-nav-inactive {
                     
                     &:after {
+                        
+                        @include background-image-icon( '../img/more-light.svg' );
                     
                         // More icon shown beside the main nav parents
                         @include mq( $tablet ) {
-                            @include background-image-icon('../img/more.svg');
                             opacity: .5;
-                        }
-                        
-                    }
-                    
-                    &:hover:after {
-                        
-                        @include mq( $tablet ) {
-                            @include background-image-icon('../img/more-light.svg');
                         }
                         
                     }
@@ -110,6 +103,7 @@ div.nav-menu {
         @include linkstyle-reset;
         display: block;
         padding: 1rem;
+        min-height: $block-l;
         @include transition-bg-color;  
         
         @include mq( $tablet ) {
@@ -283,7 +277,6 @@ div.nav-menu {
             @include position-offset( $icon-size );
             @include size( $icon-size );
             margin-right: 1.25rem;
-            @include background-image-icon('../img/more-light.svg');
             @include transition( opacity );
             opacity: .5;
             z-index: 90;

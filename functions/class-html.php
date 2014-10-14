@@ -25,10 +25,18 @@ function hopscotch_page_nav_state() {
 add_action( 'hopscotch_html_data_att', 'hopscotch_page_nav_state');
 
 
-// This is the unique HTML class of site projects
+//------------------------- This is the unique HTML class of site projects
+// Site class: hopscotch--site
+
+// Masthead class:
+// ui-type__masthead--default
+// ui-type__masthead--semi-compact
+
 if ( ! function_exists( 'hopscotch_html_site_parent_class' ) ) :	
     function hopscotch_html_site_parent_class() {
-		echo 'site-default hopscotch--site ';
+		
+        echo 'site-default hopscotch--site ';
+        
     }
     add_action( 'hopscotch_html_class', 'hopscotch_html_site_parent_class');
 endif;

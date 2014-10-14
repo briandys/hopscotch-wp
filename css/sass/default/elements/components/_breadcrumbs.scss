@@ -24,7 +24,6 @@
         margin-right: .5rem;
         margin-top: -.25rem; // Override
         @include size($icon-size);
-        @include background-image-icon('../img/more.svg');
         opacity: .25;
         @include transform(rotate(-90deg));
     }

@@ -12,11 +12,7 @@
             width: 100%;
             
             @include mq( $tablet ) {
-                max-width: 15rem;
-            }
-            
-            @include mq( $minorityreport ) {
-                max-width: 30rem;
+                max-width: 25rem;
             }
             
         }

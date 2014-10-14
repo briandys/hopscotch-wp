@@ -5,7 +5,7 @@
         wideViewportClass = 'type-wide-viewport';
 
 	
-    // Media query for wide or narrow viewport
+    //------------------------- Media query for wide or narrow viewport
     ( function() {
         
         $(window).on('resize', function(){
@@ -32,7 +32,7 @@
     } )();
     
     
-    // Main navigation toggle for narrow viewport mode
+    //------------------------- Main navigation toggle for narrow viewport mode
 	( function() {
 		
 		var mainNav = $( '#main-navigation' ),
@@ -92,8 +92,12 @@
 			}
 		});
         
+    } )();
+    
+    
+    //------------------------- Sub navigation toggle for narrow and wide viewport
+    ( function() {
 		
-        // Sub navigation toggle for narrow and wide viewport
         var subNavMenuMain = $( 'div.nav-menu' ),
             subNavMenuParent = subNavMenuMain.find( '.page_item_has_children, .menu-item-has-children' ),
             subNavMenuChildren = subNavMenuParent.find( '.children, .sub-menu' ),
@@ -175,9 +179,13 @@
                 }                
 			}            
         });
+		
+	} )();
+    
+    
+    //------------------------- Search located on header
+    ( function() {
         
-        
-        // Search located on header
         var search = $( '#header-sidebar .search' ),
 			searchControl = $( '#search-control' ),
             searchField = $( '#header-sidebar .search-input' ),
@@ -240,11 +248,11 @@
                 searchDeactivate();
 			}
 		});
-		
-	} )();
+        
+    } )();
 
 	
-	// WP: Twenty Fourteen - Makes "skip to content" link work correctly in IE9 and Chrome for better accessibility
+	//-------------------------  WP: Twenty Fourteen - Makes "skip to content" link work correctly in IE9 and Chrome for better accessibility
 	( function() {
         
         _window.on( 'hashchange', function() {
@@ -261,7 +269,7 @@
     } )();
     
     
-    // Smooth scroll
+    //-------------------------  Smooth scroll
     ( function() {
         
         $('a[href*=#]:not([href=#]):not(.ui a)').click(function() {
@@ -287,7 +295,7 @@
     } )();
 	
 	
-	// Scroll Top
+	//-------------------------  Scroll Top
 	( function() {
 		
         $(window).on('scroll', function(){
@@ -316,7 +324,7 @@
 	} )();
     
     
-    // Giving height to absolute elements
+    //-------------------------  Giving height to absolute elements
     ( function() {
         
         var entryMain = $( '.post.ui-type__entry-meta--meta-dashboard' );
@@ -331,7 +339,7 @@
     } )();
     
     
-    // UI Tabs
+    //-------------------------  UI Tabs
 	( function() {
 		
 		$( '.ui-tablist-item a' ).on( 'click', function(e) {
@@ -350,7 +358,7 @@
     } )();
     
     
-    // Focusing on form elements
+    //-------------------------  Focusing on form elements
 	( function() {
 		
 		// Focusing on form UIs
@@ -377,19 +385,19 @@
     } )();
     
     
-    // <label> elements that enclose <input> elements
+    //-------------------------  <label> elements that enclose <input> elements
 	( function() {
         $( 'label:has( input )' ).addClass( 'label-cr' );
     } )();
     
     
-    // Adding 'parent-menu' to nav items with children
+    //-------------------------  Adding 'parent-menu' to nav items with children
     ( function() {
 		$('.menu-item:has(.children, .sub-menu), .page_item:has(.children, .sub-menu)').addClass('parent-menu');
 	} )();
     
     
-    // Define orientation of images
+    //-------------------------  Define orientation of images
     ( function() {	
 		
         $('.entry-ct img').each(function(){			
@@ -405,7 +413,7 @@
     } )();
     
     
-    // WP: remove "novalidate" from Comment Form
+    //-------------------------  WP: remove "novalidate" from Comment Form
     ( function() {
         $("#comment-form").removeAttr("novalidate");	
     } )();
@@ -429,7 +437,7 @@
     } )();
     
     
-    // Sticky footer
+    //-------------------------  Sticky footer
     $( function() {
         
         $(window).on('resize', function(){

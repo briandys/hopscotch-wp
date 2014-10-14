@@ -43,7 +43,7 @@ add_action('customize_register', 'hopscotch_customize_register_main');
 function hopscotch_customize_main_css() {
     $options_main = get_option( 'hopscotch_customize_main' );
 	?>
-    <style type="text/css">
+    <style id="head-style" type="text/css">
         /* Ref: _main.scss */
         .primary-content-cr {
             max-width: <?php echo $options_main['max_content_width']; ?>;

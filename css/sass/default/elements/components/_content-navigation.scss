@@ -66,7 +66,7 @@
     
     .action-item {
         position: relative;
-        padding: .5rem 1rem 2rem;
+        padding: .5rem 1rem;
         width: 100%;
         vertical-align: top;
         
@@ -100,12 +100,13 @@
         }
         
         .label {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin-bottom: .5rem;
-            width: 100%;
-            @include textstyle-label-primary;
+            @extend %vhide;
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            // margin-bottom: .5rem;
+            // width: 100%;
+            // @include textstyle-label-primary;
         }
         
     }

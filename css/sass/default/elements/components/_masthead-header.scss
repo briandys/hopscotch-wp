@@ -1,5 +1,7 @@
 .masthead-cr {
     
+    min-height: $block-l;
+    
     @include mq( $tablet ) {
         position: relative;
         text-align: center;
