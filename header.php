@@ -35,7 +35,7 @@
         <?php get_template_part( 'img/svg' ); ?>
         <?php get_template_part( 'components/browse-happy' ); ?>
 
-        <div id="page">
+        <div id="page" class="view">
         
             <header id="masthead" class="masthead" role="banner">
                 <div class="masthead-cr">
@@ -47,5 +47,5 @@
                 </div>
             </header><!-- masthead -->
             
-                <div id="main" class="main">
-                    <div class="main-cr">
+            <div id="main" class="main">
+                <div class="main-cr">

@@ -6,7 +6,7 @@
                 <section class="main-content">
                     <div class="main-content-cr">
                         <header class="main-content-hr">
-                            <h2 class="assistive-text">Main Content</h2>
+                            <h2 class="heading accessible-name">Main Content</h2>
                         </header>
                         <div class="main-content-ct">
                             
@@ -18,16 +18,16 @@
 								endwhile;
                             ?>
                         
-                        </div><!-- .main-content-ct -->
-                   </div><!-- .main-content-cr -->
-                </section><!-- .main-content -->
+                        </div>
+                   </div>
+                </section><!-- main-content -->
              
             </div>
         </div><!-- primary-content -->
         
         <?php get_sidebar(); ?>
 
-    </div><!-- #main-cr -->
-</div><!-- #main -->
+    </div><!-- main-cr -->
+</div><!-- main -->
 
 <?php get_footer(); ?>

@@ -134,8 +134,8 @@ hopscotch_hook_above_entry();
                             <?php get_template_part( 'content', get_post_format() ); ?>
                         <?php endwhile; ?>
                     </div>
-                    <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
 
             <?php endif; ?>
         </div><!-- entry-ct -->
