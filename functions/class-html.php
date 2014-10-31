@@ -15,6 +15,7 @@ function hopscotch_html_default_class() {
 add_action( 'hopscotch_html_class', 'hopscotch_html_default_class');
 
 
+//------------------------- Page Navigation State
 function hopscotch_page_nav_state() {
     if ( $GLOBALS['wp_query']->max_num_pages < 2 ) :
         echo 'data-html-page-nav-state="inactive"';
