@@ -11,17 +11,7 @@
 if ( ! function_exists( 'hopscotch_entry_thumbnail' ) ) :
     function hopscotch_entry_thumbnail() {
         
-        global $post;
-
-        if ( get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) : ?>
-        
-            <div class="entry-thumbnail">
-                <a class="entry-thumbnail-link" href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>" style="background-image: url(<?php echo get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ?>);">
-                    <img src="<?php echo get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ?>" alt="<?php the_title(); ?>">
-                </a>
-            </div>                    
-
-        <?php elseif ( has_post_thumbnail( $post->ID ) ) : ?>
+        if ( has_post_thumbnail( $post->ID ) ) : ?>
         
             <div class="entry-thumbnail">			
                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>

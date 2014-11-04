@@ -19,7 +19,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.
 
 require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/google-analytics.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
 
@@ -28,9 +27,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/prepend-att
 
 // Text domain
 require_once( trailingslashit(get_template_directory()) . 'functions/text-domain.php');
-
-// Page Excerpt
-require_once( trailingslashit(get_template_directory()) . 'functions/page-excerpt.php');
 
 // Register Sidebars
 require_once( trailingslashit(get_template_directory()) . 'functions/sidebar.php');
@@ -88,13 +84,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/data-att-en
 require_once( trailingslashit(get_template_directory()) . 'functions/get-the-content-formatted.php');
 
 
-// Custom Fields
-require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-subtitle.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/custom-field-entry-class.php');
-
-// Shortcodes
-require_once( trailingslashit(get_template_directory()) . 'functions/shortcode-custom-fields.php');
-
 // Comments
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-form.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-list.php');
@@ -115,5 +104,4 @@ require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via
 require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');
 
 // Admin Dashboard
-require_once( trailingslashit(get_template_directory()) . 'functions/allow-html-attributes.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/svg-enable.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/svg.php');

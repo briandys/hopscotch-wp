@@ -45,7 +45,3 @@ function hopscotch_add_editor_styles() {
     add_editor_style( get_template_directory_uri() ); 
 }
 add_action( 'init', 'hopscotch_add_editor_styles' );
-
-
-//------------------------- Hide Admin Toolbar
-add_filter('show_admin_bar', '__return_false');

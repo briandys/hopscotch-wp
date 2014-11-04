@@ -1,5 +1,6 @@
 <?php
 
+
 //------------------------- Structure Customizer
 function hopscotch_customize_register_main($wp_customize){
     
@@ -10,10 +11,11 @@ function hopscotch_customize_register_main($wp_customize){
 	
 	// Max Content Width
 	$wp_customize->add_setting( 'hopscotch_customize_main[max_content_width]', array(
-		'default'        => '',
-		'type'           => 'option',
-		'capability'     => 'edit_theme_options',
-		'type' => 'option' ,
+		'default'             => '',
+		'type'                => 'option',
+		'capability'          => 'edit_theme_options',
+		'type'                => 'option',
+        'sanitize_callback'   => 'sanitize_max_content',
 	) );
 	
 	$wp_customize->add_control( 'hopscotch_max_content_width', array(
@@ -21,20 +23,21 @@ function hopscotch_customize_register_main($wp_customize){
 		'section'    => 'hopscotch_customize_main',
 		'settings'   => 'hopscotch_customize_main[max_content_width]',
 	) );
-	
-	// Google Analytics
-	$wp_customize->add_setting( 'hopscotch_customize_main[google_analytics]', array(
-		'default'        => 'UA-XXXXX-X',
-		'type'           => 'option',
-		'capability'     => 'edit_theme_options',
-		'type' => 'option' ,
-	) );
-	
-	$wp_customize->add_control( 'hopscotch_google_analytics', array(
-		'label'      => __( 'Google Analytics ID', 'hopscotch' ),
-		'section'    => 'hopscotch_customize_main',
-		'settings'   => 'hopscotch_customize_main[google_analytics]',
-	) );
+    
+    // Google Analytics
+    $wp_customize->add_setting( 'hopscotch_customize_main[google_analytics]', array(
+        'default'        => 'UA-XXXXX-X',
+        'type'           => 'option',
+        'capability'     => 'edit_theme_options',
+        'type' => 'option' ,
+    ) );
+
+    $wp_customize->add_control( 'hopscotch_google_analytics', array(
+        'label'      => __( 'Google Analytics ID', 'hopscotch' ),
+        'section'    => 'hopscotch_customize_main',
+        'settings'   => 'hopscotch_customize_main[google_analytics]',
+    ) );
+    
 }
 add_action('customize_register', 'hopscotch_customize_register_main');
 
@@ -52,3 +55,10 @@ function hopscotch_customize_main_css() {
     <?php
 }
 add_action( 'wp_head', 'hopscotch_customize_main_css');
+
+
+//------------------------- Sanitize Max Content Width
+// http://codex.wordpress.org/Function_Reference/wp_filter_nohtml_kses
+function sanitize_max_content( $data ) {
+    return wp_filter_nohtml_kses( $data );
+}
