@@ -61,10 +61,6 @@ hopscotch_hook_above_entry();
                 <?php endif; ?>
                 
                 <?php // Entry thumbnail
-                hopscotch_entry_thumbnail_custom_field();
-                ?>
-                
-                <?php // Entry thumbnail
                 hopscotch_entry_thumbnail();
                 ?>
                 

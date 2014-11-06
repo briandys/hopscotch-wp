@@ -31,9 +31,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/text-domain
 // Register Sidebars
 require_once( trailingslashit(get_template_directory()) . 'functions/sidebar.php');
 
-// Customizer
-require_once( trailingslashit(get_template_directory()) . 'functions/customizer-structure.php');
-//require_once( trailingslashit(get_template_directory()) . 'functions/customizer-theme.php');
 
 // Header
 require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
@@ -56,7 +53,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-actio
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-comment.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-byline.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/show-more-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/show-more-content-link-skip.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
