@@ -118,7 +118,7 @@ $entry-byline-avatar-size: 2rem;
             padding-left: $entry_thumbnail_size + 2rem;
         }
         
-        @include mq( $moblet, $query1: max ) {
+        @include mq( $tablet, $query1: max ) {
             padding-left: $gutter;
         }
         
@@ -130,6 +130,10 @@ $entry-byline-avatar-size: 2rem;
             position: absolute;
             top: 0;
             left: 0;
+            
+            @include mq( $tablet, $query1: max ) {
+                @include vhide;
+            }
             
             @include mq( $monitor, $query1: max ) {
                 margin-left: $gutter;
@@ -230,6 +234,14 @@ $entry-byline-avatar-size: 2rem;
 .entry-ct-cr {
     padding-left: $gutter;
     padding-right: $gutter;
+    
+    *:not( h1 ):not( h2 ):not( h3 ):not( h4 ):not( h5 ):not( h6 ) {
+
+        @include mq( $tablet, $query1: max ) {
+            font-size: 18px;
+        }
+        
+    }
     
     .img-cr,
     .wp-caption {

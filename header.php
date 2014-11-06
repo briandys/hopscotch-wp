@@ -37,7 +37,7 @@
 
         <div id="page" class="view">
         
-            <header id="masthead" class="masthead" role="banner" style="background-image: url( <?php header_image(); ?> );">
+            <header id="masthead" class="masthead" role="banner">
                 <div class="masthead-cr">
                     
                     <?php get_template_part( 'components/masthead-header'); ?>
