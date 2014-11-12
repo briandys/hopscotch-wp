@@ -254,6 +254,7 @@
         position: static;
         top: auto;
         left: auto;
+        
     }
     
     div.nav-menu {
@@ -276,6 +277,10 @@
                 
             }
             
+        }
+        
+        &:hover {
+            @include z( $layer1 + 1 );
         }
         
     }

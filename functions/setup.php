@@ -38,10 +38,3 @@ add_action( 'after_setup_theme', 'hopscotch_setup' );
 if ( ! isset( $content_width ) ) {
     $content_width = 960;
 }
-
-
-//------------------------- Editor Style
-function hopscotch_add_editor_styles() {
-    add_editor_style( get_template_directory_uri() ); 
-}
-add_action( 'init', 'hopscotch_add_editor_styles' );

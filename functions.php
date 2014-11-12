@@ -3,7 +3,6 @@
 // Setup
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
 
-require_once( trailingslashit(get_template_directory()) . 'functions/custom-header.php');
 
 // Action hooks
 require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
@@ -74,10 +73,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/class-main-
 
 // Data Attributes
 require_once( trailingslashit(get_template_directory()) . 'functions/data-att-entry.php');
-
-
-// get_the_content Formatted
-require_once( trailingslashit(get_template_directory()) . 'functions/get-the-content-formatted.php');
 
 
 // Comments

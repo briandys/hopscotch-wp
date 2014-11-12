@@ -436,35 +436,5 @@
    
     } )();
     
-    
-    //-------------------------  Sticky footer
-    $( function() {
-        
-        $(window).on('resize', function(){
-            
-            var windowHeight = $(window).height(),
-                mastheadHeight = $('#masthead').outerHeight( true ),
-                mainHeight = $('#main').outerHeight( true ),
-                colophonHeight = $('#colophon').outerHeight( true ),
-                contentHeight = mastheadHeight + mainHeight + colophonHeight;            
-            
-            function fixedFooterActivate() {
-                body.addClass('status-vertical-content-overflow');
-                body.removeClass('status-vertical-content-contain');
-                body.attr('data-state-colophon', 'unfixed');
-            };
-
-            function fixedFooterDeactivate() {
-                body.addClass('status-vertical-content-contain');
-                body.removeClass('status-vertical-content-overflow');
-                body.attr('data-state-colophon', 'fixed');
-            };
-            
-            ( contentHeight > windowHeight ) ? fixedFooterActivate() : fixedFooterDeactivate();
-        
-        }).resize();
-    
-    } );
-    
 	
 } )( jQuery );

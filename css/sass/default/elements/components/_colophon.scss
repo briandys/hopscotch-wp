@@ -1,5 +1,6 @@
 .colophon {
     
+    /*
     opacity: 0;
     @include transition( opacity );
     
@@ -14,6 +15,7 @@
     [data-state-colophon="unfixed"] & {
         opacity: 1;
     }
+    */
         
     .widget_nav_menu {
 

@@ -5,6 +5,15 @@
 }
 
 
+.header-sidebar {
+    
+    .widget:not( .widget_search ) {
+        @extend %vhide;
+    }
+    
+}
+
+
 .secondary-sidebar-container {
     margin-top: 2rem;
     
@@ -61,7 +70,8 @@
     
 }
 
-.secondary-sidebar {
+.secondary-sidebar,
+.tertiary-sidebar {
     
     .widget {
         margin-bottom: 1rem;

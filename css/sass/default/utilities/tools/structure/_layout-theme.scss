@@ -76,6 +76,10 @@
             
         }
         
+        &:hover {
+            background-color: $color-masthead-bg;
+        }
+        
     } // div.nav-menu
 
 }
