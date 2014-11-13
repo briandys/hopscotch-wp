@@ -436,5 +436,24 @@
    
     } )();
     
+    
+    //------------------------- Sticky Header
+    $( function() {
+        
+        $(window).on('resize', function(){
+            
+            var mastheadHeight = $('#masthead').outerHeight( true ),
+                main = $( '#main' );          
+            
+            function mainApplyPadding() {
+                main.css( 'padding-top', mastheadHeight + 'px' );
+            };
+            
+            mainApplyPadding();
+        
+        }).resize();
+    
+    } );
+    
 	
 } )( jQuery );

@@ -100,7 +100,7 @@ div.nav-menu {
     .sub-menu {
 
         // Color of sub-nav block
-        background-color: $color-main-nav-rev-bg;
+        background-color: darken( $color-main-nav-rev-bg, 1.5% );
 
         > li:hover {
             background-color: $color-main-nav-rev-hover-bg;

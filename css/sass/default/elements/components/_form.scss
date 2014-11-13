@@ -24,20 +24,15 @@ input:not( [type="checkbox"] ):not( [type="radio"] ) {
 #{$form-input-type-text} {
     width: 100%;
     min-height: $block;
-    border-width: $one;
-    border-style:solid;
+    border: 0;
     border-radius: $radius-s;
     overflow: hidden;
-    
-    [data-state-form-element="focused"] & {
-        border-width: .125rem;
-    }
 }
 
 
 #{$form-buttons} {
     width: 100%;
-    min-height: $block;
+    min-height: $block-l;
     border: none;
     
     border-radius: $radius-s;
@@ -58,8 +53,6 @@ textarea {
 
 //------------------------- Pseudo Form Elements
 .sudo-input-text {
-    border-width: $one;
-    border-style:solid;
     border-radius: $radius-s;
     overflow: hidden;
     
@@ -76,7 +69,6 @@ textarea {
     
     &[data-state-form-element="focused"] {
         margin: 0;
-        border-width: .125rem;
     }
     
 }

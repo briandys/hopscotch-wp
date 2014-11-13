@@ -640,7 +640,7 @@ legend, #wpstats,
 .widget_nav_menu .widget-title,
 .form-allowed-tags,
 .skip-to-content-link, .child-content .entry-user-action,
-.child-content .entry-meta, .child-content .breadcrumbs, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label:not(.subscribe-label), .entry-navigation-list .action-item .label, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading,
+.child-content .entry-meta, .child-content .breadcrumbs, .entry .show-more-content-entry-title, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label:not(.subscribe-label), .entry-navigation-list .action-item .label, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading,
 .secondary-sidebar-heading,
 .tertiary-sidebar-heading, .header-sidebar .widget:not(.widget_search), .ui-type__table--versus .result .label {
   border: 0;
@@ -766,33 +766,54 @@ tr {
 ins {
   text-decoration: none; }
 
+/* line 3, sass/default/elements/objects/_insert-theme.scss */
+ins:before {
+  background-color: #fff9b8;
+  border-color: #ffee39; }
+
 /* line 1, sass/default/elements/components/_form-theme.scss */
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
-  border-color: rgba(0, 0, 0, 0.35); }
+  box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.35);
+  -webkit-transition: box-shadow 0.125s ease;
+  -moz-transition: box-shadow 0.125s ease;
+  -ms-transition: box-shadow 0.125s ease;
+  -o-transition: box-shadow 0.125s ease;
+  transition: box-shadow 0.125s ease; }
   /* line 5, sass/default/elements/components/_form-theme.scss */
-  [data-state-form-element="focused"] input[type='text'], input[type='text']:hover, [data-state-form-element="focused"] input[type='email'], input[type='email']:hover, [data-state-form-element="focused"] input[type='search'], input[type='search']:hover, [data-state-form-element="focused"] input[type='password'], input[type='password']:hover, [data-state-form-element="focused"] input[type='url'], input[type='url']:hover, [data-state-form-element="focused"] textarea, textarea:hover {
-    border-color: #00aaff; }
+  input[type='text']:hover, input[type='email']:hover, input[type='search']:hover, input[type='password']:hover, input[type='url']:hover, textarea:hover {
+    box-shadow: 0 0 0 0.0625rem #00aaff; }
+  /* line 9, sass/default/elements/components/_form-theme.scss */
+  [data-state-form-element="focused"] input[type='text'], [data-state-form-element="focused"] input[type='email'], [data-state-form-element="focused"] input[type='search'], [data-state-form-element="focused"] input[type='password'], [data-state-form-element="focused"] input[type='url'], [data-state-form-element="focused"] textarea {
+    box-shadow: 0 0 0 0.125rem #00aaff; }
 
-/* line 12, sass/default/elements/components/_form-theme.scss */
+/* line 16, sass/default/elements/components/_form-theme.scss */
 .sudo-input-text {
-  border-color: rgba(0, 0, 0, 0.35); }
-  /* line 16, sass/default/elements/components/_form-theme.scss */
-  .sudo-input-text[data-state-form-element="focused"], .sudo-input-text:hover {
-    border-color: #00aaff; }
+  box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.35);
+  -webkit-transition: box-shadow 0.125s ease;
+  -moz-transition: box-shadow 0.125s ease;
+  -ms-transition: box-shadow 0.125s ease;
+  -o-transition: box-shadow 0.125s ease;
+  transition: box-shadow 0.125s ease; }
+  /* line 20, sass/default/elements/components/_form-theme.scss */
+  .sudo-input-text:hover {
+    box-shadow: 0 0 0 0.0625rem #00aaff; }
+  /* line 24, sass/default/elements/components/_form-theme.scss */
+  .sudo-input-text[data-state-form-element="focused"] {
+    box-shadow: 0 0 0 0.125rem #00aaff; }
 
-/* line 23, sass/default/elements/components/_form-theme.scss */
+/* line 31, sass/default/elements/components/_form-theme.scss */
 button, input[type='submit'], input[type='reset'] {
   color: white;
   background-color: #00aaff; }
-  /* line 28, sass/default/elements/components/_form-theme.scss */
+  /* line 36, sass/default/elements/components/_form-theme.scss */
   [data-state-form-element="focused"] button, button:hover, [data-state-form-element="focused"] input[type='submit'], input[type='submit']:hover, [data-state-form-element="focused"] input[type='reset'], input[type='reset']:hover {
     background-color: #0095ff; }
 
-/* line 34, sass/default/elements/components/_form-theme.scss */
+/* line 42, sass/default/elements/components/_form-theme.scss */
 .sudo-button {
   color: white;
   background-color: #00aaff; }
-  /* line 39, sass/default/elements/components/_form-theme.scss */
+  /* line 47, sass/default/elements/components/_form-theme.scss */
   .sudo-button[data-state-form-element="focused"], .sudo-button:hover {
     background-color: #0095ff; }
 
@@ -836,18 +857,18 @@ button, input[type='submit'], input[type='reset'] {
 /* line 8, sass/default/elements/components/_entry-theme.scss */
 .blog .entry-title-link, .home .entry-title-link, .archive .entry-title-link, .search .entry-title-link {
   color: #00aaff; }
-/* line 14, sass/default/elements/components/_entry-theme.scss */
+/* line 15, sass/default/elements/components/_entry-theme.scss */
 .single .entry-title-link, .page .entry-title-link {
   color: black; }
-/* line 19, sass/default/elements/components/_entry-theme.scss */
+/* line 20, sass/default/elements/components/_entry-theme.scss */
 .sticky .entry-title-link {
   color: #12b32d; }
 
-/* line 27, sass/default/elements/components/_entry-theme.scss */
+/* line 28, sass/default/elements/components/_entry-theme.scss */
 .show-more-content .more-link {
   color: #12b32d; }
 
-/* line 32, sass/default/elements/components/_entry-theme.scss */
+/* line 33, sass/default/elements/components/_entry-theme.scss */
 .post-edit-link {
   color: #12b32d; }
   /* line 43, sass/default/utilities/tools/visual/_linkstyle-theme.scss */
@@ -855,7 +876,7 @@ button, input[type='submit'], input[type='reset'] {
     color: white;
     background-color: #12b32d; }
 
-/* line 37, sass/default/elements/components/_entry-theme.scss */
+/* line 38, sass/default/elements/components/_entry-theme.scss */
 .entry-timestamp-link {
   color: rgba(0, 0, 0, 0.6);
   border-bottom-color: rgba(0, 0, 0, 0.6); }
@@ -863,7 +884,7 @@ button, input[type='submit'], input[type='reset'] {
   .entry-timestamp-link:hover {
     color: #00aaff; }
 
-/* line 43, sass/default/elements/components/_entry-theme.scss */
+/* line 44, sass/default/elements/components/_entry-theme.scss */
 .entry-byline .author a {
   color: rgba(0, 0, 0, 0.6);
   border-bottom-color: rgba(0, 0, 0, 0.6); }
@@ -871,7 +892,7 @@ button, input[type='submit'], input[type='reset'] {
   .entry-byline .author a:hover {
     color: #00aaff; }
 
-/* line 51, sass/default/elements/components/_entry-theme.scss */
+/* line 52, sass/default/elements/components/_entry-theme.scss */
 .entry-ct-cr a,
 .entry-subtitle a {
   color: rgba(0, 0, 0, 0.6);
@@ -880,6 +901,10 @@ button, input[type='submit'], input[type='reset'] {
   .entry-ct-cr a:hover,
   .entry-subtitle a:hover {
     color: #00aaff; }
+
+/* line 57, sass/default/elements/components/_entry-theme.scss */
+.entry-subtitle {
+  color: gray; }
 
 /* line 4, sass/default/elements/components/_colophon-theme.scss */
 .site-info .web-designer,
@@ -1001,7 +1026,7 @@ div.nav-menu li:active {
 /* line 100, sass/default/elements/components/_main-navigation-theme.scss */
 div.nav-menu .children,
 div.nav-menu .sub-menu {
-  background-color: #00aaff; }
+  background-color: #00a5f7; }
   /* line 105, sass/default/elements/components/_main-navigation-theme.scss */
   div.nav-menu .children > li:hover,
   div.nav-menu .sub-menu > li:hover {
@@ -1139,32 +1164,47 @@ div.nav-menu .menu-item {
 
 /* line 4, sass/default/elements/components/_content-navigation-theme.scss */
 .page-navigation-list a {
-  color: rgba(0, 0, 0, 0.75); }
-  /* line 7, sass/default/elements/components/_content-navigation-theme.scss */
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease; }
+  /* line 8, sass/default/elements/components/_content-navigation-theme.scss */
   .page-navigation-list a:hover {
     color: white;
     background-color: #12b32d; }
-/* line 14, sass/default/elements/components/_content-navigation-theme.scss */
+/* line 15, sass/default/elements/components/_content-navigation-theme.scss */
 .page-navigation-list .current {
   color: white;
   background-color: #00aaff; }
 
-/* line 25, sass/default/elements/components/_content-navigation-theme.scss */
+/* line 26, sass/default/elements/components/_content-navigation-theme.scss */
 .entry-navigation-list .action-item a {
-  color: rgba(0, 0, 0, 0.75); }
-  /* line 28, sass/default/elements/components/_content-navigation-theme.scss */
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease; }
+  /* line 30, sass/default/elements/components/_content-navigation-theme.scss */
   .entry-navigation-list .action-item a:hover {
     color: white;
     background-color: #12b32d; }
 
-/* line 41, sass/default/elements/components/_content-navigation-theme.scss */
+/* line 43, sass/default/elements/components/_content-navigation-theme.scss */
 .entry-page-navigation-list a {
-  color: rgba(0, 0, 0, 0.75); }
-  /* line 44, sass/default/elements/components/_content-navigation-theme.scss */
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-transition: background-color 0.125s ease;
+  -moz-transition: background-color 0.125s ease;
+  -ms-transition: background-color 0.125s ease;
+  -o-transition: background-color 0.125s ease;
+  transition: background-color 0.125s ease; }
+  /* line 47, sass/default/elements/components/_content-navigation-theme.scss */
   .entry-page-navigation-list a:hover {
     color: white;
     background-color: #12b32d; }
-/* line 52, sass/default/elements/components/_content-navigation-theme.scss */
+/* line 55, sass/default/elements/components/_content-navigation-theme.scss */
 .entry-page-navigation-list > .label {
   color: white;
   background-color: #00aaff; }
@@ -1198,10 +1238,10 @@ div.nav-menu .menu-item {
   background-color: #ffdcdd;
   border-color: #ff5d61; }
 
-/* line 3, sass/default/elements/objects/_insert-theme.scss */
-ins:before {
-  background-color: #fff9b8;
-  border-color: #ffee39; }
+/* line 2, sass/default/elements/components/_caption-theme.scss */
+.wp-caption-text,
+.gallery-caption {
+  color: gray; }
 
 /* line 2, sass/default/utilities/_theme-font.scss */
 html {
@@ -1320,9 +1360,9 @@ h5 {
 
 /* line 30, sass/default/elements/objects/_heading.scss */
 h6 {
-  font-size: 12.8px;
-  font-size: 0.8rem;
-  font-weight: 800; }
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: normal; }
 
 /* line 39, sass/default/elements/objects/_heading.scss */
 .text-heading,
@@ -1524,7 +1564,7 @@ del {
 .wp-caption-text,
 .gallery-caption {
   margin-top: 0;
-  padding: .5rem;
+  padding: .5rem 0 0;
   font-size: 14.4px;
   font-size: 0.9rem; }
 
@@ -1574,7 +1614,7 @@ del {
 .breadcrumb-item {
   position: relative;
   display: inline-block;
-  margin-left: 1.5rem;
+  margin-left: 1.75rem;
   font-size: 14.4px;
   font-size: 0.9rem; }
   /* line 12, sass/default/elements/components/_breadcrumbs.scss */
@@ -1620,22 +1660,29 @@ del {
     .breadcrumb-item {
       margin-bottom: 0; } }
 
-/* line 3, sass/default/elements/components/_child-content.scss */
-.child-content .entry {
-  margin-bottom: 2.5rem; }
-  /* line 6, sass/default/elements/components/_child-content.scss */
-  .child-content .entry:last-child {
-    margin-bottom: auto; }
-/* line 12, sass/default/elements/components/_child-content.scss */
+/* line 5, sass/default/elements/components/_child-content.scss */
+.child-content .entry:last-child {
+  margin-bottom: auto; }
+/* line 11, sass/default/elements/components/_child-content.scss */
+.child-content .entry-cr {
+  margin-bottom: 0; }
+/* line 15, sass/default/elements/components/_child-content.scss */
 .child-content > *:not(.entry) {
   padding-left: 1rem;
   padding-right: 1rem; }
-/* line 26, sass/default/elements/components/_child-content.scss */
+/* line 29, sass/default/elements/components/_child-content.scss */
 .child-content:first-child {
   margin-top: auto; }
-/* line 30, sass/default/elements/components/_child-content.scss */
+/* line 33, sass/default/elements/components/_child-content.scss */
 .child-content .entry-title {
   font-weight: normal; }
+/* line 37, sass/default/elements/components/_child-content.scss */
+.child-content .entry-hr-cr {
+  padding-bottom: 0;
+  border-bottom: 0; }
+/* line 48, sass/default/elements/components/_child-content.scss */
+.child-content .child-content .entry:last-child .entry-cr {
+  padding-bottom: 0; }
 
 /* line 1, sass/default/elements/components/_colophon.scss */
 .colophon {
@@ -1715,43 +1762,50 @@ del {
 
 /* line 6, sass/default/elements/components/_entry.scss */
 .entry .show-more-content {
-  margin-top: 2rem; }
-  /* line 9, sass/default/elements/components/_entry.scss */
+  margin-top: 2rem;
+  text-align: center; }
+  /* line 10, sass/default/elements/components/_entry.scss */
   .entry .show-more-content .more-link {
     display: inline-block;
-    margin-left: -1rem;
     padding: .75rem 1rem;
     border-bottom: none; }
     /* line 15, sass/default/elements/components/_entry.scss */
     .entry .show-more-content .more-link:hover {
       text-decoration: underline; }
+    @media only screen and (min-width: 37.5rem) {
+      /* line 10, sass/default/elements/components/_entry.scss */
+      .entry .show-more-content .more-link {
+        margin-left: -1rem; } }
+  @media only screen and (min-width: 37.5rem) {
+    /* line 6, sass/default/elements/components/_entry.scss */
+    .entry .show-more-content {
+      text-align: left; } }
 
-/* line 26, sass/default/elements/components/_entry.scss */
+/* line 38, sass/default/elements/components/_entry.scss */
 .entry-cr {
   padding-top: 2rem;
   padding-bottom: 2rem; }
   @media only screen and (min-width: 48rem) {
-    /* line 32, sass/default/elements/components/_entry.scss */
+    /* line 44, sass/default/elements/components/_entry.scss */
     .entry:first-child .entry-cr {
       margin-top: 1rem; } }
   @media only screen and (min-width: 48rem) {
-    /* line 38, sass/default/elements/components/_entry.scss */
+    /* line 50, sass/default/elements/components/_entry.scss */
     .child-page .entry:first-child .entry-cr {
       margin-top: 0; } }
   @media only screen and (min-width: 48rem) {
-    /* line 46, sass/default/elements/components/_entry.scss */
+    /* line 58, sass/default/elements/components/_entry.scss */
     .category .entry:first-child .entry-cr {
       margin-top: 0; } }
   @media only screen and (min-width: 48rem) {
-    /* line 56, sass/default/elements/components/_entry.scss */
-    [data-html-page-nav-state="inactive"] .entry:last-child .entry-cr {
-      margin-bottom: 2rem; } }
-  @media only screen and (min-width: 48rem) {
-    /* line 26, sass/default/elements/components/_entry.scss */
+    /* line 38, sass/default/elements/components/_entry.scss */
     .entry-cr {
       margin-bottom: 1rem; } }
+  /* line 72, sass/default/elements/components/_entry.scss */
+  .main-content-ct > .entry:last-of-type .entry-cr {
+    margin-bottom: 0; }
 
-/* line 71, sass/default/elements/components/_entry.scss */
+/* line 79, sass/default/elements/components/_entry.scss */
 .entry-title {
   display: inline;
   margin-bottom: 0;
@@ -1759,16 +1813,16 @@ del {
   line-height: normal;
   word-wrap: break-word; }
   @media only screen and (max-width: 47.9375rem) {
-    /* line 71, sass/default/elements/components/_entry.scss */
+    /* line 79, sass/default/elements/components/_entry.scss */
     .entry-title {
       font-size: 25.008px;
       font-size: 1.563rem; } }
 
-/* line 85, sass/default/elements/components/_entry.scss */
+/* line 93, sass/default/elements/components/_entry.scss */
 .entry-hr {
   margin-bottom: 2rem; }
 
-/* line 91, sass/default/elements/components/_entry.scss */
+/* line 99, sass/default/elements/components/_entry.scss */
 .entry-hr-cr {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1776,27 +1830,27 @@ del {
   border-bottom-width: 0.0625rem;
   border-bottom-style: dotted;
   border-bottom-color: rgba(128, 128, 128, 0.35); }
-  /* line 102, sass/default/elements/components/_entry.scss */
+  /* line 110, sass/default/elements/components/_entry.scss */
   .entry-hr-cr .entry-meta {
     margin-top: 1rem; }
-  /* line 114, sass/default/elements/components/_entry.scss */
+  /* line 122, sass/default/elements/components/_entry.scss */
   .entry-thumbnail--active .entry-hr-cr {
     position: relative; }
     @media only screen and (max-width: 61.1875rem) {
-      /* line 114, sass/default/elements/components/_entry.scss */
+      /* line 122, sass/default/elements/components/_entry.scss */
       .entry-thumbnail--active .entry-hr-cr {
         padding-left: 4.5rem; } }
     @media only screen and (max-width: 47.9375rem) {
-      /* line 114, sass/default/elements/components/_entry.scss */
+      /* line 122, sass/default/elements/components/_entry.scss */
       .entry-thumbnail--active .entry-hr-cr {
         padding-left: 1rem; } }
-  /* line 129, sass/default/elements/components/_entry.scss */
+  /* line 137, sass/default/elements/components/_entry.scss */
   .entry-thumbnail--active .entry-hr-cr .entry-thumbnail {
     position: absolute;
     top: 0;
     left: 0; }
     @media only screen and (max-width: 47.9375rem) {
-      /* line 129, sass/default/elements/components/_entry.scss */
+      /* line 137, sass/default/elements/components/_entry.scss */
       .entry-thumbnail--active .entry-hr-cr .entry-thumbnail {
         border: 0;
         clip: rect(0 0 0 0);
@@ -1807,39 +1861,39 @@ del {
         position: absolute;
         width: 1px; } }
     @media only screen and (max-width: 61.1875rem) {
-      /* line 129, sass/default/elements/components/_entry.scss */
+      /* line 137, sass/default/elements/components/_entry.scss */
       .entry-thumbnail--active .entry-hr-cr .entry-thumbnail {
         margin-left: 1rem; } }
     @media only screen and (min-width: 61.25rem) {
-      /* line 129, sass/default/elements/components/_entry.scss */
+      /* line 137, sass/default/elements/components/_entry.scss */
       .entry-thumbnail--active .entry-hr-cr .entry-thumbnail {
         left: auto;
         right: 100%;
         margin-top: -1.25rem; } }
-  /* line 154, sass/default/elements/components/_entry.scss */
+  /* line 162, sass/default/elements/components/_entry.scss */
   .entry-thumbnail--active .entry-hr-cr .entry-thumbnail-link {
     width: 2.5rem;
     height: 2.5rem; }
     @media only screen and (min-width: 61.25rem) {
-      /* line 154, sass/default/elements/components/_entry.scss */
+      /* line 162, sass/default/elements/components/_entry.scss */
       .entry-thumbnail--active .entry-hr-cr .entry-thumbnail-link {
         width: 5rem;
         height: 5rem; } }
-  /* line 166, sass/default/elements/components/_entry.scss */
+  /* line 174, sass/default/elements/components/_entry.scss */
   .entry-hr-cr .entry-user-action {
     margin-top: 1rem; }
-  /* line 170, sass/default/elements/components/_entry.scss */
+  /* line 178, sass/default/elements/components/_entry.scss */
   .entry-hr-cr .entry-user-action--action-item {
     margin-bottom: 0; }
 
-/* line 178, sass/default/elements/components/_entry.scss */
+/* line 186, sass/default/elements/components/_entry.scss */
 .entry-timestamp {
   display: inline-block; }
-  /* line 182, sass/default/elements/components/_entry.scss */
+  /* line 190, sass/default/elements/components/_entry.scss */
   .entry-hr .entry-timestamp, .entry-fr .entry-timestamp {
     margin-right: 1rem; }
 
-/* line 188, sass/default/elements/components/_entry.scss */
+/* line 196, sass/default/elements/components/_entry.scss */
 .entry-timestamp-link {
   text-decoration: none;
   border: none;
@@ -1855,12 +1909,12 @@ del {
     text-decoration: none;
     border-bottom: none; }
 
-/* line 192, sass/default/elements/components/_entry.scss */
+/* line 200, sass/default/elements/components/_entry.scss */
 .entry-byline {
   display: inline-block;
   margin-top: .25rem;
   line-height: 2rem; }
-  /* line 198, sass/default/elements/components/_entry.scss */
+  /* line 206, sass/default/elements/components/_entry.scss */
   .entry-byline .avatar {
     float: left;
     margin-right: .5rem;
@@ -1868,10 +1922,10 @@ del {
     height: 2rem;
     border-radius: 50%;
     overflow: hidden; }
-  /* line 205, sass/default/elements/components/_entry.scss */
+  /* line 213, sass/default/elements/components/_entry.scss */
   .entry-byline .mid-label {
     margin-right: .5rem; }
-  /* line 209, sass/default/elements/components/_entry.scss */
+  /* line 217, sass/default/elements/components/_entry.scss */
   .entry-byline .author a {
     text-decoration: none;
     border: none;
@@ -1887,36 +1941,36 @@ del {
       text-decoration: none;
       border-bottom: none; }
 
-/* line 215, sass/default/elements/components/_entry.scss */
+/* line 223, sass/default/elements/components/_entry.scss */
 .entry-admin-action {
   display: inline-block; }
 
-/* line 221, sass/default/elements/components/_entry.scss */
+/* line 229, sass/default/elements/components/_entry.scss */
 .entry-ct > * {
   margin-bottom: 2rem; }
-  /* line 224, sass/default/elements/components/_entry.scss */
+  /* line 232, sass/default/elements/components/_entry.scss */
   .entry-ct > *:last-child {
     margin-bottom: auto; }
 
-/* line 234, sass/default/elements/components/_entry.scss */
+/* line 242, sass/default/elements/components/_entry.scss */
 .entry-ct-cr {
   padding-left: 1rem;
   padding-right: 1rem; }
-  @media only screen and (max-width: 47.9375rem) {
-    /* line 238, sass/default/elements/components/_entry.scss */
-    .entry-ct-cr *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-      font-size: 18px; } }
-  /* line 249, sass/default/elements/components/_entry.scss */
+  /* line 246, sass/default/elements/components/_entry.scss */
+  .entry-ct-cr *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: 18px;
+    font-size: 1.125rem; }
+  /* line 253, sass/default/elements/components/_entry.scss */
   .entry-ct-cr .img-cr > a,
   .entry-ct-cr .wp-caption > a {
     display: inline-block;
     max-width: 100%;
     border-bottom: 0; }
-  /* line 258, sass/default/elements/components/_entry.scss */
+  /* line 262, sass/default/elements/components/_entry.scss */
   .entry-ct-cr ol,
   .entry-ct-cr ul {
     margin-left: 1.5rem; }
-  /* line 263, sass/default/elements/components/_entry.scss */
+  /* line 267, sass/default/elements/components/_entry.scss */
   .entry-ct-cr a {
     text-decoration: none;
     border: none;
@@ -1931,11 +1985,11 @@ del {
     .entry-ct-cr a:hover {
       text-decoration: none;
       border-bottom: none; }
-  /* line 267, sass/default/elements/components/_entry.scss */
+  /* line 271, sass/default/elements/components/_entry.scss */
   .entry-ct-cr hr {
     margin-top: 2rem;
     margin-bottom: 2rem; }
-  /* line 280, sass/default/elements/components/_entry.scss */
+  /* line 284, sass/default/elements/components/_entry.scss */
   .entry-ct-cr p,
   .entry-ct-cr pre,
   .entry-ct-cr dd,
@@ -1946,40 +2000,40 @@ del {
   .entry-ct-cr .field,
   .entry-ct-cr .notice {
     margin-bottom: 1.5rem; }
-  /* line 285, sass/default/elements/components/_entry.scss */
+  /* line 289, sass/default/elements/components/_entry.scss */
   .entry-ct-cr blockquote,
   .entry-ct-cr form {
     margin-bottom: 2rem; }
-  /* line 289, sass/default/elements/components/_entry.scss */
+  /* line 293, sass/default/elements/components/_entry.scss */
   .entry-ct-cr blockquote {
     margin-left: 1rem;
     margin-right: 1rem; }
     @media only screen and (min-width: 48rem) {
-      /* line 289, sass/default/elements/components/_entry.scss */
+      /* line 293, sass/default/elements/components/_entry.scss */
       .entry-ct-cr blockquote {
         margin-left: 2rem;
         margin-right: 2rem; } }
-  /* line 300, sass/default/elements/components/_entry.scss */
+  /* line 304, sass/default/elements/components/_entry.scss */
   .entry-ct-cr p {
     margin-top: 1.5rem; }
-  /* line 309, sass/default/elements/components/_entry.scss */
+  /* line 313, sass/default/elements/components/_entry.scss */
   .entry-ct-cr p:last-child,
   .entry-ct-cr li:last-child,
   .entry-ct-cr .field:last-child,
   .entry-ct-cr .field-action,
   .entry-ct-cr table:last-child {
     margin-bottom: auto; }
-  /* line 314, sass/default/elements/components/_entry.scss */
+  /* line 318, sass/default/elements/components/_entry.scss */
   .entry-ct-cr li {
     margin-bottom: 1rem; }
-    /* line 317, sass/default/elements/components/_entry.scss */
+    /* line 321, sass/default/elements/components/_entry.scss */
     .entry-ct-cr li p:last-child {
       margin-bottom: 2rem; }
-    /* line 321, sass/default/elements/components/_entry.scss */
+    /* line 325, sass/default/elements/components/_entry.scss */
     .entry-ct-cr li:last-child p:last-child {
       margin-bottom: 0; }
   @media only screen and (min-width: 48rem) {
-    /* line 327, sass/default/elements/components/_entry.scss */
+    /* line 331, sass/default/elements/components/_entry.scss */
     .entry-ct-cr .pull-quote {
       float: left;
       margin-left: auto;
@@ -1989,95 +2043,95 @@ del {
       width: 30%;
       font-size: 25.008px;
       font-size: 1.563rem; } }
-  /* line 341, sass/default/elements/components/_entry.scss */
+  /* line 345, sass/default/elements/components/_entry.scss */
   .entry-ct-cr .ellipsis {
     margin-left: .25rem;
     letter-spacing: .125rem; }
-    /* line 345, sass/default/elements/components/_entry.scss */
+    /* line 349, sass/default/elements/components/_entry.scss */
     .entry-ct-cr .ellipsis:after {
       content: '.'; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 357, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h1 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 361, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h1:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 357, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h2 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 361, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h2:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 357, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h3 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 361, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h3:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 357, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h4 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 361, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h4:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 357, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h5 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 361, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h5:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 357, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h6 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 361, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h6:first-child {
       margin-top: auto; }
-  /* line 365, sass/default/elements/components/_entry.scss */
+  /* line 369, sass/default/elements/components/_entry.scss */
   .entry-ct-cr h6 {
     text-transform: uppercase; }
-  /* line 371, sass/default/elements/components/_entry.scss */
+  /* line 375, sass/default/elements/components/_entry.scss */
   .entry-ct-cr img[src*=".svg"],
   .entry-ct-cr img[src*=".png"] {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgb3BhY2l0eT0iMC4xNSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiLz48L2c+PC9zdmc+);
     background-size: 1.125rem; }
-  /* line 376, sass/default/elements/components/_entry.scss */
+  /* line 380, sass/default/elements/components/_entry.scss */
   .entry-ct-cr img[src*=".svg"][width="1"] {
     width: 100%;
     height: auto; }
-  /* line 382, sass/default/elements/components/_entry.scss */
+  /* line 386, sass/default/elements/components/_entry.scss */
   .entry-ct-cr .wp-caption-text {
     margin-top: 0; }
-  /* line 388, sass/default/elements/components/_entry.scss */
+  /* line 392, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > * {
     word-wrap: break-word; }
-    /* line 391, sass/default/elements/components/_entry.scss */
+    /* line 395, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > *:last-child {
       margin-bottom: auto; }
-  /* line 397, sass/default/elements/components/_entry.scss */
+  /* line 401, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > p {
     line-height: 1.75; }
-  /* line 406, sass/default/elements/components/_entry.scss */
+  /* line 410, sass/default/elements/components/_entry.scss */
   .format-status .entry-ct-cr > p {
     font-size: 31.248px;
     font-size: 1.953rem; }
 
-/* line 416, sass/default/elements/components/_entry.scss */
+/* line 420, sass/default/elements/components/_entry.scss */
 .entry-fr .entry-meta {
   margin-bottom: 1rem; }
 
-/* line 422, sass/default/elements/components/_entry.scss */
+/* line 426, sass/default/elements/components/_entry.scss */
 .entry-fr-cr {
   margin-top: 3rem;
   padding-left: 1rem;
   padding-right: 1rem; }
 
-/* line 429, sass/default/elements/components/_entry.scss */
+/* line 433, sass/default/elements/components/_entry.scss */
 .entry-admin-action {
   -webkit-transform: translate(0, 0.25rem);
   -moz-transform: translate(0, 0.25rem);
@@ -2085,11 +2139,11 @@ del {
   -o-transform: translate(0, 0.25rem);
   transform: translate(0, 0.25rem); }
 
-/* line 433, sass/default/elements/components/_entry.scss */
+/* line 437, sass/default/elements/components/_entry.scss */
 .action-edit-entry {
   margin-bottom: 0; }
 
-/* line 438, sass/default/elements/components/_entry.scss */
+/* line 442, sass/default/elements/components/_entry.scss */
 .post-edit-link {
   font-size: 12.8px;
   font-size: 0.8rem;
@@ -2115,20 +2169,20 @@ del {
   .post-edit-link:active:active {
     transform: translateY(1px); }
 
-/* line 449, sass/default/elements/components/_entry.scss */
+/* line 453, sass/default/elements/components/_entry.scss */
 .entry-subtitle {
   margin-top: .5rem;
   font-size: 25.008px;
   font-size: 1.563rem; }
   @media only screen and (max-width: 47.9375rem) {
-    /* line 449, sass/default/elements/components/_entry.scss */
+    /* line 453, sass/default/elements/components/_entry.scss */
     .entry-subtitle {
       font-size: 20px;
       font-size: 1.25rem; } }
-  /* line 457, sass/default/elements/components/_entry.scss */
+  /* line 461, sass/default/elements/components/_entry.scss */
   .entry-subtitle p:only-child {
     margin-bottom: 0; }
-  /* line 465, sass/default/elements/components/_entry.scss */
+  /* line 469, sass/default/elements/components/_entry.scss */
   .entry-subtitle a {
     text-decoration: none;
     border: none;
@@ -2144,15 +2198,15 @@ del {
       text-decoration: none;
       border-bottom: none; }
 
-/* line 471, sass/default/elements/components/_entry.scss */
+/* line 475, sass/default/elements/components/_entry.scss */
 .entry-meta {
   font-size: 14.4px;
   font-size: 0.9rem; }
 
-/* line 485, sass/default/elements/components/_entry.scss */
+/* line 489, sass/default/elements/components/_entry.scss */
 .format-status .entry-fr-cr .entry-meta {
   display: inline-block; }
-/* line 489, sass/default/elements/components/_entry.scss */
+/* line 493, sass/default/elements/components/_entry.scss */
 .format-status .entry-fr-cr .entry-admin-action {
   display: inline-block;
   vertical-align: middle; }
@@ -2181,16 +2235,16 @@ del {
 
 /* line 26, sass/default/elements/components/_comment.scss */
 .comment {
-  padding-top: 1rem;
   padding-left: 1rem; }
-  /* line 30, sass/default/elements/components/_comment.scss */
+  /* line 29, sass/default/elements/components/_comment.scss */
   .comment .entry-ct-cr {
     padding-left: 0;
     padding-right: 0; }
 
-/* line 38, sass/default/elements/components/_comment.scss */
+/* line 37, sass/default/elements/components/_comment.scss */
 .comment-cr {
   position: relative;
+  margin-top: 1rem;
   padding-right: 1rem; }
 
 /* line 46, sass/default/elements/components/_comment.scss */
@@ -2747,18 +2801,14 @@ input:not([type="checkbox"]):not([type="radio"]) {
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea {
   width: 100%;
   min-height: 3rem;
-  border-width: 0.0625rem;
-  border-style: solid;
+  border: 0;
   border-radius: 0.25rem;
   overflow: hidden; }
-  /* line 32, sass/default/elements/components/_form.scss */
-  [data-state-form-element="focused"] input[type='text'], [data-state-form-element="focused"] input[type='email'], [data-state-form-element="focused"] input[type='search'], [data-state-form-element="focused"] input[type='password'], [data-state-form-element="focused"] input[type='url'], [data-state-form-element="focused"] textarea {
-    border-width: .125rem; }
 
-/* line 38, sass/default/elements/components/_form.scss */
+/* line 33, sass/default/elements/components/_form.scss */
 button, input[type='submit'], input[type='reset'] {
   width: 100%;
-  min-height: 3rem;
+  min-height: 3.5rem;
   border: none;
   border-radius: 0.25rem;
   -webkit-transition: background-color 0.125s ease;
@@ -2767,7 +2817,7 @@ button, input[type='submit'], input[type='reset'] {
   -o-transition: background-color 0.125s ease;
   transition: background-color 0.125s ease;
   overflow: hidden; }
-  /* line 47, sass/default/elements/components/_form.scss */
+  /* line 42, sass/default/elements/components/_form.scss */
   button:active, input[type='submit']:active, input[type='reset']:active {
     -webkit-transform: translate(0, 0.0625rem);
     -moz-transform: translate(0, 0.0625rem);
@@ -2775,31 +2825,28 @@ button, input[type='submit'], input[type='reset'] {
     -o-transform: translate(0, 0.0625rem);
     transform: translate(0, 0.0625rem); }
 
-/* line 54, sass/default/elements/components/_form.scss */
+/* line 49, sass/default/elements/components/_form.scss */
 textarea {
   height: 4.5rem;
   min-height: 3rem; }
 
-/* line 60, sass/default/elements/components/_form.scss */
+/* line 55, sass/default/elements/components/_form.scss */
 .sudo-input-text {
-  border-width: 0.0625rem;
-  border-style: solid;
   border-radius: 0.25rem;
   overflow: hidden; }
-  /* line 66, sass/default/elements/components/_form.scss */
+  /* line 59, sass/default/elements/components/_form.scss */
   .sudo-input-text input[type='text'], .sudo-input-text input[type='email'], .sudo-input-text input[type='search'], .sudo-input-text input[type='password'], .sudo-input-text input[type='url'], .sudo-input-text textarea {
     border: none;
     border-radius: 0;
     overflow: auto; }
-    /* line 71, sass/default/elements/components/_form.scss */
+    /* line 64, sass/default/elements/components/_form.scss */
     .sudo-input-text input[type='text']:focus, .sudo-input-text input[type='email']:focus, .sudo-input-text input[type='search']:focus, .sudo-input-text input[type='password']:focus, .sudo-input-text input[type='url']:focus, .sudo-input-text textarea:focus {
       outline: 0; }
-  /* line 77, sass/default/elements/components/_form.scss */
+  /* line 70, sass/default/elements/components/_form.scss */
   .sudo-input-text[data-state-form-element="focused"] {
-    margin: 0;
-    border-width: .125rem; }
+    margin: 0; }
 
-/* line 84, sass/default/elements/components/_form.scss */
+/* line 76, sass/default/elements/components/_form.scss */
 .sudo-button {
   margin-top: 1rem;
   border-radius: 0.25rem;
@@ -2809,28 +2856,28 @@ textarea {
   -o-transition: background-color 0.125s ease;
   transition: background-color 0.125s ease;
   overflow: hidden; }
-  /* line 90, sass/default/elements/components/_form.scss */
+  /* line 82, sass/default/elements/components/_form.scss */
   .sudo-button:active {
     -webkit-transform: translate(0, 0.0625rem);
     -moz-transform: translate(0, 0.0625rem);
     -ms-transform: translate(0, 0.0625rem);
     -o-transform: translate(0, 0.0625rem);
     transform: translate(0, 0.0625rem); }
-  /* line 94, sass/default/elements/components/_form.scss */
+  /* line 86, sass/default/elements/components/_form.scss */
   .sudo-button button, .sudo-button input[type='submit'], .sudo-button input[type='reset'] {
     margin-top: 0;
     border-radius: 0;
     background-color: transparent;
     overflow: auto; }
-    /* line 100, sass/default/elements/components/_form.scss */
+    /* line 92, sass/default/elements/components/_form.scss */
     .sudo-button button:hover, .sudo-button input[type='submit']:hover, .sudo-button input[type='reset']:hover {
       background-color: transparent; }
-    /* line 104, sass/default/elements/components/_form.scss */
+    /* line 96, sass/default/elements/components/_form.scss */
     .sudo-button button:active, .sudo-button input[type='submit']:active, .sudo-button input[type='reset']:active {
       background-color: transparent;
       transform: translate(0); }
 
-/* line 115, sass/default/elements/components/_form.scss */
+/* line 107, sass/default/elements/components/_form.scss */
 .sudo-button[data-state-form-element="focused"] button, .sudo-button[data-state-form-element="focused"] input[type='submit'], .sudo-button[data-state-form-element="focused"] input[type='reset']:hover {
   background-color: transparent; }
 
@@ -3506,7 +3553,7 @@ div.nav-menu {
     padding-bottom: 1rem; } }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 65, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 92, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-cr {
     position: relative; }
     /* line 9, sass/default/utilities/tools/_patch.scss */
@@ -3517,7 +3564,7 @@ div.nav-menu {
     .masthead-cr:after {
       clear: both; }
 
-  /* line 71, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 98, sass/default/utilities/tools/structure/_layout.scss */
   .masthead-header {
     display: table;
     padding-left: 3.5rem;
@@ -3526,7 +3573,7 @@ div.nav-menu {
     height: 3.5rem;
     text-align: center; }
 
-  /* line 79, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 106, sass/default/utilities/tools/structure/_layout.scss */
   .site-title-heading {
     display: table-cell;
     margin-bottom: auto;
@@ -3536,7 +3583,7 @@ div.nav-menu {
     line-height: normal;
     vertical-align: middle; }
 
-  /* line 90, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 117, sass/default/utilities/tools/structure/_layout.scss */
   .header-sidebar .widget_search {
     position: absolute;
     top: 0;
@@ -3545,7 +3592,7 @@ div.nav-menu {
     left: auto;
     z-index: 900; }
 
-  /* line 97, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 124, sass/default/utilities/tools/structure/_layout.scss */
   .site-description {
     border: 0;
     clip: rect(0 0 0 0);
@@ -3556,13 +3603,13 @@ div.nav-menu {
     position: absolute;
     width: 1px; }
 
-  /* line 101, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 128, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation {
     position: absolute;
     top: 0;
     left: 0; }
 
-  /* line 107, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 134, sass/default/utilities/tools/structure/_layout.scss */
   .main-navigation-heading {
     position: absolute;
     top: 0;
@@ -3570,23 +3617,23 @@ div.nav-menu {
     font-size: 0;
     line-height: 3.5rem;
     z-index: 901; }
-    /* line 117, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 144, sass/default/utilities/tools/structure/_layout.scss */
     .status-mobile-main-nav-active .main-navigation-heading .icon {
       fill: #fff;
       opacity: .85; }
-      /* line 121, sass/default/utilities/tools/structure/_layout.scss */
+      /* line 148, sass/default/utilities/tools/structure/_layout.scss */
       .status-mobile-main-nav-active .main-navigation-heading .icon:hover {
         opacity: 1; } }
 @media only screen and (min-width: 48rem) {
-  /* line 45, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 72, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-cr {
     position: static; }
-  /* line 51, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 78, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search {
     position: static;
     top: auto;
     right: auto; }
-  /* line 65, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 92, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-cr {
     position: relative; }
     /* line 9, sass/default/utilities/tools/_patch.scss */
@@ -3596,7 +3643,7 @@ div.nav-menu {
     /* line 13, sass/default/utilities/tools/_patch.scss */
     .hopscotch--site .masthead-cr:after {
       clear: both; }
-  /* line 71, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 98, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-header {
     display: table;
     padding-left: 3.5rem;
@@ -3604,7 +3651,7 @@ div.nav-menu {
     width: 100%;
     height: 3.5rem;
     text-align: center; }
-  /* line 79, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 106, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-title-heading {
     display: table-cell;
     margin-bottom: auto;
@@ -3613,7 +3660,7 @@ div.nav-menu {
     font-weight: 700;
     line-height: normal;
     vertical-align: middle; }
-  /* line 90, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 117, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .widget_search {
     position: absolute;
     top: 0;
@@ -3621,7 +3668,7 @@ div.nav-menu {
     bottom: auto;
     left: auto;
     z-index: 900; }
-  /* line 97, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 124, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-description {
     border: 0;
     clip: rect(0 0 0 0);
@@ -3631,12 +3678,12 @@ div.nav-menu {
     padding: 0;
     position: absolute;
     width: 1px; }
-  /* line 101, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 128, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation {
     position: absolute;
     top: 0;
     left: 0; }
-  /* line 107, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 134, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation-heading {
     position: absolute;
     top: 0;
@@ -3644,11 +3691,11 @@ div.nav-menu {
     font-size: 0;
     line-height: 3.5rem;
     z-index: 901; }
-    /* line 117, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 144, sass/default/utilities/tools/structure/_layout.scss */
     .status-mobile-main-nav-active .hopscotch--site .main-navigation-heading .icon {
       fill: #fff;
       opacity: .85; }
-      /* line 121, sass/default/utilities/tools/structure/_layout.scss */
+      /* line 148, sass/default/utilities/tools/structure/_layout.scss */
       .status-mobile-main-nav-active .hopscotch--site .main-navigation-heading .icon:hover {
         opacity: 1; }
   /* line 5, sass/default/utilities/tools/structure/_layout-theme.scss */
@@ -3692,7 +3739,7 @@ div.nav-menu {
   /* line 79, sass/default/utilities/tools/structure/_layout-theme.scss */
   .hopscotch--site div.nav-menu:hover {
     background-color: #00aaff; }
-  /* line 136, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 163, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-control {
     opacity: .75;
     -webkit-transition: opacity 0.125s ease;
@@ -3700,13 +3747,13 @@ div.nav-menu {
     -ms-transition: opacity 0.125s ease;
     -o-transition: opacity 0.125s ease;
     transition: opacity 0.125s ease; }
-    /* line 140, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 167, sass/default/utilities/tools/structure/_layout.scss */
     .hopscotch--site .header-sidebar .search-control:hover {
       opacity: 1; }
-  /* line 148, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 175, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-input {
     background-color: transparent; }
-  /* line 158, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 185, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site [data-state-search="active"] .header-sidebar .search-submit {
     opacity: .5;
     -webkit-transition: opacity 0.125s ease;
@@ -3714,13 +3761,13 @@ div.nav-menu {
     -ms-transition: opacity 0.125s ease;
     -o-transition: opacity 0.125s ease;
     transition: opacity 0.125s ease; }
-    /* line 162, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 189, sass/default/utilities/tools/structure/_layout.scss */
     .hopscotch--site [data-state-search="active"] .header-sidebar .search-submit:hover {
       opacity: 1; }
-  /* line 168, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 195, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site [data-state-search="active"] .header-sidebar [data-state-form-element="focused"] .search-submit {
     opacity: 1; }
-    /* line 171, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 198, sass/default/utilities/tools/structure/_layout.scss */
     .hopscotch--site [data-state-search="active"] .header-sidebar [data-state-form-element="focused"] .search-submit:active {
       background-color: transparent; }
   /* line 93, sass/default/utilities/tools/structure/_layout-theme.scss */
@@ -3753,10 +3800,10 @@ div.nav-menu {
   .hopscotch--site :-ms-input-placeholder {
     color: white;
     opacity: 0.65; }
-  /* line 189, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 216, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .header-sidebar .search-form {
     position: relative; }
-    /* line 192, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 219, sass/default/utilities/tools/structure/_layout.scss */
     .hopscotch--site .header-sidebar .search-form:after {
       content: '';
       position: absolute;
@@ -3771,28 +3818,28 @@ div.nav-menu {
     background-image: -moz-linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%);
     background-image: -o-linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%);
     background-image: linear-gradient(left, rgba(0, 170, 255, 0) 0%, #00aaff 100%); }
-  /* line 226, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 253, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-cr {
     text-align: left;
     height: auto; }
-  /* line 231, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 258, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .masthead-header {
     display: inline-block;
     padding-left: 0;
     padding-right: 0;
     width: auto; }
-  /* line 238, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 265, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-title-heading {
     display: inline-block;
     margin-right: 1rem; }
-  /* line 243, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 270, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .site-title-link {
     padding: 0 1rem;
     line-height: 3.5rem; }
-    /* line 247, sass/default/utilities/tools/structure/_layout.scss */
+    /* line 274, sass/default/utilities/tools/structure/_layout.scss */
     .hopscotch--site .site-title-link:hover {
       text-decoration: none; }
-  /* line 252, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 279, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation {
     display: inline-block;
     vertical-align: middle;
@@ -3810,15 +3857,47 @@ div.nav-menu {
     .hopscotch--site .main-navigation > * {
       display: inline-block;
       vertical-align: middle; }
-  /* line 270, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 297, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site div.nav-menu > ul > li > a:hover {
     text-decoration: none; }
-  /* line 282, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 309, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site div.nav-menu:hover {
     z-index: 901; }
-  /* line 288, sass/default/utilities/tools/structure/_layout.scss */
+  /* line 315, sass/default/utilities/tools/structure/_layout.scss */
   .hopscotch--site .main-navigation {
-    float: none; } }
+    float: none; }
+  /* line 7, sass/default/utilities/tools/structure/_layout.scss */
+  .hopscotch--site .masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900; }
+    /* line 14, sass/default/utilities/tools/structure/_layout.scss */
+    .hopscotch--site .masthead:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: .5rem;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0)));
+      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+      background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+      background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%); }
+  /* line 26, sass/default/utilities/tools/structure/_layout.scss */
+  .hopscotch--site .main {
+    padding-top: 3.5rem; }
+  /* line 36, sass/default/utilities/tools/structure/_layout.scss */
+  .hopscotch--site #comments:before,
+  .hopscotch--site #respond:before,
+  .hopscotch--site .comment:before {
+    content: '';
+    display: block;
+    margin-top: -3.5rem;
+    height: 3.5rem;
+    visibility: hidden; } }
 
 /* line 6, sass/default/elements/components/_media.scss */
 .iframe-cr {
@@ -3906,26 +3985,25 @@ svg.icon {
   margin-top: 1rem; }
 /* line 35, sass/default/elements/components/_plug-in.scss */
 .contact-form textarea {
-  height: 4.5rem !important;
   min-height: 4.5rem; }
 
-/* line 44, sass/default/elements/components/_plug-in.scss */
+/* line 43, sass/default/elements/components/_plug-in.scss */
 iframe[src*="codepen.io"] {
   border-bottom: 0.0625rem solid #cccccc; }
 
-/* line 50, sass/default/elements/components/_plug-in.scss */
+/* line 49, sass/default/elements/components/_plug-in.scss */
 .syntaxhighlighter {
   padding: 1rem;
   border-radius: 0.25rem; }
 
-/* line 58, sass/default/elements/components/_plug-in.scss */
+/* line 57, sass/default/elements/components/_plug-in.scss */
 .video-cr {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 35px;
   height: 0;
   overflow: hidden; }
-  /* line 67, sass/default/elements/components/_plug-in.scss */
+  /* line 66, sass/default/elements/components/_plug-in.scss */
   .video-cr iframe,
   .video-cr embed,
   .video-cr object {
@@ -4035,7 +4113,7 @@ iframe[src*="codepen.io"] {
   @media only screen and (min-width: 48rem) {
     /* line 11, sass/default/elements/components/_search.scss */
     [data-state-search="active"] .header-sidebar .widget_search {
-      max-width: 25rem; } }
+      max-width: 27rem; } }
 /* line 24, sass/default/elements/components/_search.scss */
 .widget_search .sudo-input-text .search-input {
   padding-left: 1rem;
@@ -4057,66 +4135,70 @@ iframe[src*="codepen.io"] {
 /* line 67, sass/default/elements/components/_search.scss */
 .secondary-sidebar .widget_search .search--sudo-button {
   margin-top: auto; }
+/* line 74, sass/default/elements/components/_search.scss */
+.widget_search .search-submit {
+  min-height: 3rem; }
 
-/* line 79, sass/default/elements/components/_search.scss */
+/* line 84, sass/default/elements/components/_search.scss */
 .header-sidebar .search--sudo-input-text {
-  border: none; }
-  /* line 86, sass/default/elements/components/_search.scss */
+  border: none;
+  box-shadow: none; }
+  /* line 92, sass/default/elements/components/_search.scss */
   .status-search-active .header-sidebar .search--sudo-input-text {
     width: 100%; }
-/* line 92, sass/default/elements/components/_search.scss */
+/* line 98, sass/default/elements/components/_search.scss */
 .header-sidebar .search--sudo-button {
   margin-top: auto;
   border: none;
   border-radius: 0; }
-/* line 104, sass/default/elements/components/_search.scss */
+/* line 110, sass/default/elements/components/_search.scss */
 .header-sidebar .search-form {
   margin-bottom: auto; }
-  /* line 107, sass/default/elements/components/_search.scss */
+  /* line 113, sass/default/elements/components/_search.scss */
   .status-search-active .header-sidebar .search-form {
     padding-right: 3.5rem; }
-/* line 113, sass/default/elements/components/_search.scss */
+/* line 119, sass/default/elements/components/_search.scss */
 .header-sidebar .search--field-input {
   margin-bottom: auto;
   height: 3.5rem; }
-  /* line 117, sass/default/elements/components/_search.scss */
+  /* line 123, sass/default/elements/components/_search.scss */
   .header-sidebar .search--field-input .field-cr {
     width: 100%; }
-/* line 124, sass/default/elements/components/_search.scss */
+/* line 130, sass/default/elements/components/_search.scss */
 .header-sidebar .search-control {
   margin-bottom: auto;
   width: 3.5rem;
   height: 3.5rem; }
-  /* line 133, sass/default/elements/components/_search.scss */
+  /* line 139, sass/default/elements/components/_search.scss */
   .header-sidebar .search-control .icon {
     width: 1.5rem;
     height: 1.5rem; }
-  /* line 137, sass/default/elements/components/_search.scss */
+  /* line 143, sass/default/elements/components/_search.scss */
   .header-sidebar .search-control:hover {
     cursor: pointer; }
-/* line 147, sass/default/elements/components/_search.scss */
+/* line 153, sass/default/elements/components/_search.scss */
 .header-sidebar .search-submit {
   width: 3.5rem;
   height: 3.5rem; }
-  /* line 155, sass/default/elements/components/_search.scss */
+  /* line 161, sass/default/elements/components/_search.scss */
   .header-sidebar .search-submit .icon {
     width: 1.5rem;
     height: 1.5rem; }
-/* line 161, sass/default/elements/components/_search.scss */
+/* line 167, sass/default/elements/components/_search.scss */
 .header-sidebar .search--field-action {
   position: absolute;
   top: 0;
   right: 0; }
 
 @media only screen and (max-width: 47.9375rem) {
-  /* line 171, sass/default/elements/components/_search.scss */
+  /* line 177, sass/default/elements/components/_search.scss */
   [data-state-search="active"] .search {
     padding-left: 3.5rem; } }
 
-/* line 195, sass/default/elements/components/_search.scss */
+/* line 201, sass/default/elements/components/_search.scss */
 .tertiary-sidebar .widget_search .sudo-button {
   margin-top: 0; }
-/* line 201, sass/default/elements/components/_search.scss */
+/* line 207, sass/default/elements/components/_search.scss */
 .tertiary-sidebar .search-form {
   margin-bottom: 0; }
 

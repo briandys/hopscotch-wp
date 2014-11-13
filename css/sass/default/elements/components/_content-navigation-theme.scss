@@ -3,6 +3,7 @@
     
     a {
         color: $color-content-nav-link;
+        @include transition( background-color );
 
         &:hover {
             color: $color-content-nav-hover-fg;
@@ -24,6 +25,7 @@
     
     .action-item a {
         color: $color-content-nav-link;
+        @include transition( background-color );
 
         &:hover {
             color: $color-content-nav-hover-fg;
@@ -40,6 +42,7 @@
     
     a {
         color: $color-content-nav-link;
+        @include transition( background-color );
 
         &:hover {
             color: $color-content-nav-hover-fg;

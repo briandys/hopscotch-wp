@@ -10,6 +10,6 @@
 .wp-caption-text,
 .gallery-caption {
     margin-top: 0;
-    padding: .5rem;
+    padding: .5rem 0 0;
     @include font-size-rem($font-s-m);
 }

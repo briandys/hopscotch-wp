@@ -28,8 +28,8 @@ h5 {
 }
 
 h6 {
-    @include font-size-rem($font-s);
-    font-weight: 800;
+    @include font-size-rem($font-m);
+    font-weight: normal;
 }
 
 

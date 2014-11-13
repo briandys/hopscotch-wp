@@ -5,6 +5,7 @@
     @include mq( $tablet ) {
 
         @include header-semi-compact;
+        @include fixed-header;
 
     }
     

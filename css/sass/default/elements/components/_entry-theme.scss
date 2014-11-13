@@ -7,6 +7,7 @@
     .archive &,
     .search & {
         color: $color-link-title-primary;
+        
     }
     
     // If the Entry Title is on its page
@@ -50,4 +51,9 @@
 .entry-ct-cr a,
 .entry-subtitle a {
     @include linkstyle-faint-theme;
+}
+
+
+.entry-subtitle {
+    color: $faint;
 }
