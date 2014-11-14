@@ -22,7 +22,8 @@
 
 // Default layout of Primary and Secondary Content
 .primary-content-cr,
-.secondary-sidebar-cr {
+.secondary-sidebar-cr,
+.tertiary-sidebar-cr {
     width: 100%;
     
     @include mq($monitor, iefixOn) {

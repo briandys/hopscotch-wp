@@ -3,34 +3,30 @@
 
 // Standard Headings
 h1 {
-    @include font-size-rem($font-xxxl);
     font-weight: normal;
 }
 
 h2 {
-    @include font-size-rem($font-xxl);
     font-weight: normal;
 }
 
 h3 {
-    @include font-size-rem($font-xl);
     font-weight: normal;
 }
 
 h4 {
-    @include font-size-rem($font-l);
     font-weight: normal;
 }
 
 h5 {
-    @include font-size-rem($font-m);
     font-weight: 800;
 }
 
 h6 {
-    @include font-size-rem($font-m);
     font-weight: normal;
 }
+
+@include heading;
 
 
 // Other Headings

@@ -243,10 +243,6 @@ $entry-byline-avatar-size: 2rem;
     padding-left: $gutter;
     padding-right: $gutter;
     
-    *:not( h1 ):not( h2 ):not( h3 ):not( h4 ):not( h5 ):not( h6 ) {
-        @include font-size-rem( $font-m-l );
-    }
-    
     .img-cr,
     .wp-caption {
 

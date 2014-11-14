@@ -56,10 +56,11 @@
 		
 		mainNavActive = 'status-mobile-main-nav-active';
 		mainNavInactive = 'status-mobile-main-nav-inactive';
+		mainNavStateInactive = 'ui-state__main-nav--inactive';
         overlayActive = 'status-overlay-active';
 
 		function navToggle() {
-			$( html ).toggleClass( mainNavActive ).toggleClass( mainNavInactive ).toggleClass( overlayActive );
+			$( html ).toggleClass( mainNavActive ).toggleClass( mainNavInactive ).toggleClass( mainNavStateInactive ).toggleClass( overlayActive );
 		};
 		
         // Activates the nav
@@ -440,18 +441,22 @@
     //------------------------- Sticky Header
     $( function() {
         
-        $(window).on('resize', function(){
+        if ( $( body ).hasClass( 'ui-type__masthead--fixed-header' ) ) {
             
-            var mastheadHeight = $('#masthead').outerHeight( true ),
-                main = $( '#main' );          
+            $(window).on('resize', function(){
+
+                var mastheadHeight = $('#masthead').outerHeight( true ),
+                    main = $( '#main' );          
+
+                function mainApplyPadding() {
+                    main.css( 'padding-top', mastheadHeight + 'px' );
+                };
+
+                mainApplyPadding();
+
+            }).resize();
             
-            function mainApplyPadding() {
-                main.css( 'padding-top', mastheadHeight + 'px' );
-            };
-            
-            mainApplyPadding();
-        
-        }).resize();
+        };
     
     } );
     

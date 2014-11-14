@@ -5,7 +5,7 @@ function hopscotch_body_class( $classes ) {
 	global $post, $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
     
     // Defaults
-    $classes[] = 'status-search-inactive status-scroll-top-inactive';
+    $classes[] = 'status-search-inactive status-scroll-top-inactive ui-type__masthead--fixed-header';
     
     // Inner page
     if ( ! is_front_page() ) {

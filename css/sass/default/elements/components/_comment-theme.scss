@@ -38,3 +38,8 @@
 #cancel-comment-reply-link {
     @include linkstyle-faint-theme;
 }
+
+
+.comment-message {
+    color: $color-fg;
+}

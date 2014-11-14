@@ -25,6 +25,7 @@
 
 
 .tertiary-sidebar {
+    margin-bottom: 2rem;
     
     .menu {
         @extend %center-list;
@@ -49,12 +50,15 @@
     
 }
 
-
 .secondary-sidebar,
 .tertiary-sidebar {
-   
+    
     .widget {
-        padding: 0 $gutter;
+        padding: 2rem $gutter;
+        
+        &:first-child {
+            margin-top: 1rem;
+        }
 
         &:last-child {
             margin-bottom: auto;
@@ -65,22 +69,6 @@
             @include font-size-rem( $font-s );
             color: $gray65;
         }
-
-    }
-    
-}
-
-.secondary-sidebar,
-.tertiary-sidebar {
-    
-    .widget {
-        margin-bottom: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        
-        &:first-child {
-            margin-top: 1rem;
-        }
         
     }
     
@@ -88,11 +76,16 @@
 
 .widget-title {
     margin-top: .75rem;
+    margin-bottom: 2rem;
     @include font-size-rem($font-m-l);
     line-height: normal;
 }
 
 .widget_calendar {
+    
+    table {
+        margin-bottom: 0;
+    }
     
     th, td {
         padding: .5rem;

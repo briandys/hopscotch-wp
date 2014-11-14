@@ -19,3 +19,43 @@
     font-size: calculatePx($size);
     font-size: $size + rem;
 }
+
+
+@mixin heading {
+
+    h1 {
+        @include font-size-rem($font-xxxl);
+    }
+
+    h2 {
+        @include font-size-rem($font-xxl);
+    }
+
+    h3 {
+        @include font-size-rem($font-xl);
+    }
+
+    h4 {
+        @include font-size-rem($font-l);
+    }
+
+    h5 {
+        @include font-size-rem($font-m-l);
+    }
+
+    h6 {
+        @include font-size-rem($font-m);
+    }
+    
+}
+
+
+@mixin quote {
+
+    blockquote,
+    blockquote *,
+    q {
+        @include font-size-rem( $font-xl );
+    }
+    
+}

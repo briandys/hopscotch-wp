@@ -4,4 +4,17 @@
         color: $color-faint-fg;
     }
     
+    .masthead {
+        background-color: $white;
+    }
+    
+}
+
+
+@include mq( $tablet, $query1: max ) {
+    
+    .ui-state__main-nav--inactive .masthead {
+        background-color: $white;
+    }
+    
 }

@@ -45,7 +45,7 @@ if ( ! function_exists( 'hopscotch_comments' ) ) :
                     <?php if ($comment->comment_approved == '0') : ?>
                         <p class="comment-pending"><?php _e('Your comment is awaiting moderation.', 'hopscotch') ?></p>
                     <?php endif; ?>
-                    <blockquote class="comment-message"><?php comment_text() ?></blockquote>
+                    <div class="comment-message"><?php comment_text() ?></div>
                 </div>
             </div><!-- comment-ct -->
             

@@ -4,44 +4,7 @@
 
 @mixin fixed-header {
     
-    .masthead {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        @include z( $layer1 );
-        
-        &:after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: .5rem;
-            @include background-image( linear-gradient( top, rgba( 0, 0, 0, 0.15 ) 0%, rgba( 0, 0, 0, 0 ) 100% ) );
-        }
-        
-    }
     
-    .main {
-        padding-top: $block-l;
-    }
-    
-    
-    // Offset for fixed header
-    #comments,
-    #respond,
-    .comment {
-
-        &:before { 
-            content: '';
-            display: block; 
-            margin-top: -$block-l;
-            height: $block-l;
-            visibility: hidden;
-        }
-
-    }
     
 }
 
@@ -286,22 +249,10 @@
     
     div.nav-menu {
         
-        > ul {
+        > ul > li > a {
             
-            > {
-                
-                li {
-        
-                    > a {
-
-                        &:hover {
-                            text-decoration: none;
-                        }
-
-                    }
-                    
-                }
-                
+            &:hover {
+                text-decoration: none;
             }
             
         }

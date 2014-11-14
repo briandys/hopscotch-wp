@@ -5,7 +5,7 @@ function hopscotch_html_default_class() {
     global $post;
     
     // Default
-    echo 'html status-mobile-main-nav-inactive ';
+    echo 'html status-mobile-main-nav-inactive ui-state__main-nav--inactive ';
     
     // Post Slug as Class
     if ( isset( $post ) ) {		

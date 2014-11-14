@@ -83,7 +83,10 @@
     
     .search--sudo-input-text {
         border: none;
-        box-shadow: none;
+        
+        html & {
+            box-shadow: none;
+        }
         
         .status-search-inactive & {
             @extend %vhide;
@@ -186,6 +189,7 @@
 
 
 .search-form {
+    margin-bottom: 0;
     
     legend {
         @extend %vhide;

@@ -2,33 +2,46 @@
     @extend %responsive-media;
 }
 
-// 16:9 ratio by default
-.iframe-cr {
+
+iframe,
+embed {
+    max-width: 100%;
+}
+
+//------------------------- Responsive Video
+// http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/
+.video-cr {
     position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
     height: 0;
     overflow: hidden;
-    margin-bottom: 1rem;
-    padding-bottom: 56.25%;
+    
+    iframe,
+    embed,
+    object {
+        position: absolute;
+        top:0;
+        left: 0;
+        @include size( 100% );
+    }
+    
 }
 
-.iframe-cr iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    @include size(100%);
-}
-
-.iframe-cr-4x3 {
-    padding-bottom: 75%;
-}
-
-.iframe-cr:last-child {
+.video-cr:last-child {
     margin-bottom: auto;
 }
 
+.video-cr-4x3 {
+    padding-bottom: 75%;
+}
+
+
+// CodePen
 iframe[src*="codepen"] {
     margin-bottom: 1rem;
 }
+
 
 svg.icon {
     margin: $one; // Corrects cut edges

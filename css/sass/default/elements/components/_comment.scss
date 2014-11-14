@@ -450,6 +450,7 @@
                 margin-top: 0;
                 padding: 0;
                 @include size( $block );
+                min-height: 0;
                 @include circle;
             }
             
