@@ -55,12 +55,13 @@
 		}
 		
 		mainNavActive = 'status-mobile-main-nav-active';
+		uiStateMainNavActive = 'ui-state__main-nav--active';
 		mainNavInactive = 'status-mobile-main-nav-inactive';
 		mainNavStateInactive = 'ui-state__main-nav--inactive';
         overlayActive = 'status-overlay-active';
 
 		function navToggle() {
-			$( html ).toggleClass( mainNavActive ).toggleClass( mainNavInactive ).toggleClass( mainNavStateInactive ).toggleClass( overlayActive );
+			$( html ).toggleClass( mainNavActive ).toggleClass( uiStateMainNavActive ).toggleClass( mainNavInactive ).toggleClass( mainNavStateInactive ).toggleClass( overlayActive );
 		};
 		
         // Activates the nav
@@ -82,13 +83,13 @@
 		
         // Overlay deactivates the nav
 		mainNavContent.on( 'click.hopscotch', function(e) {
-			if ( html.hasClass( mainNavActive )) {
+			if ( html.hasClass( uiStateMainNavActive )) {
 				navToggle();
 			}
 		});
 		
 		$(document).on( 'keydown.hopscotch', function(e) {
-			if (e.which === 27 && html.hasClass( mainNavActive )  ) {
+			if (e.which === 27 && html.hasClass( uiStateMainNavActive )  ) {
 				navToggle();
 			}
 		});

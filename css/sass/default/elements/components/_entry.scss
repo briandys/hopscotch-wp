@@ -100,12 +100,12 @@ $entry-byline-avatar-size: 2rem;
     padding-left: $gutter;
     padding-right: $gutter;
     padding-bottom: 2rem;
+    text-align: center;
     @include borderstyle-perforated;
     
-    // .data-entry-content-state--empty & {
-        // padding-bottom: 0;
-        // border-bottom: 0;
-    // }
+    @include mq( $phablet ) {
+        text-align: left;
+    }
     
     .entry-meta {
         margin-top: 1rem;

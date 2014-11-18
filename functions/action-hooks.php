@@ -94,3 +94,13 @@ function hopscotch_hook_header_meta() {
 function hopscotch_main_nav_class() {
     do_action('hopscotch_main_nav_class');
 }
+
+// Location: content.php > entry-hr-cr
+function hopscotch_hook_subtitle() {
+    do_action('hopscotch_hook_subtitle');
+}
+
+// Location: content.php > entry-hr-cr
+function hopscotch_hook_entry_thumbnail() {
+    do_action('hopscotch_hook_entry_thumbnail');
+}

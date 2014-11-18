@@ -67,7 +67,8 @@
         width: 100%;
         @include z( $layer1 );
 
-        &:after {
+        // Shadow
+        .status-mobile-main-nav-inactive &:after {
             content: '';
             position: absolute;
             top: 100%;

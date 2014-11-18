@@ -1,14 +1,12 @@
 //------------------------- More Icon - Dark
 
 // Nav Menu
-div.nav-menu > ul > .page_item_has_children.status-sub-nav-inactive:after,
-div.nav-menu > ul > .menu-item-has-children.status-sub-nav-inactive:after,
 .breadcrumb-item:after,
 
 // Content Navigation
 .entry-navigation-list .action-item a:after {
     
-    @include background-image-icon('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KPGc+CjwvZz4KCTxwYXRoIGQ9Ik02Ljc1IDEwLjk1bDE3LjI1IDE3LjcgMTcuMjUtMTcuN2MxLjUtMS42NSA0LjA1MC0xLjY1IDUuNTUgMCAxLjUgMS41IDEuNSA0LjA1MCAwIDUuN2wtMTkuOTUgMjAuNGMwIDAgMCAwIDAgMHMwIDAgMCAwYy0wLjc1IDAuNzUtMS42NSAxLjA1MC0yLjU1IDEuMiAwIDAtMC4xNSAwLTAuMTUgMCAwIDAtMC4xNSAwLTAuMTUgMC0wLjkgMC0xLjk1LTAuNDUtMi41NS0xLjIgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDBsLTIwLjI1LTIwLjRjLTEuNS0xLjY1LTEuNS00LjIgMC01LjcgMS41LTEuNjUgMy45LTEuNjUgNS41NSAweiIgZmlsbD0iIzAwMDAwMCI+PC9wYXRoPgo8L3N2Zz4K');
+    @include background-image-icon( '../img/more.svg' );
     
 }
 
@@ -28,6 +26,6 @@ div.nav-menu .menu-item-has-children:after,
 //------------------------- Content Navigation
 .entry-navigation-list .action-item a:hover:after {
     
-    @include background-image-icon('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KPGc+CjwvZz4KCTxwYXRoIGQ9Ik02Ljc1IDEwLjk1bDE3LjI1IDE3LjcgMTcuMjUtMTcuN2MxLjUtMS42NSA0LjA1MC0xLjY1IDUuNTUgMCAxLjUgMS41IDEuNSA0LjA1MCAwIDUuN2wtMTkuOTUgMjAuNGMwIDAgMCAwIDAgMHMwIDAgMCAwYy0wLjc1IDAuNzUtMS42NSAxLjA1MC0yLjU1IDEuMiAwIDAtMC4xNSAwLTAuMTUgMCAwIDAtMC4xNSAwLTAuMTUgMC0wLjkgMC0xLjk1LTAuNDUtMi41NS0xLjIgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDBsLTIwLjI1LTIwLjRjLTEuNS0xLjY1LTEuNS00LjIgMC01LjcgMS41LTEuNjUgMy45LTEuNjUgNS41NSAweiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPgo8L3N2Zz4K');
+    @include background-image-icon( '../img/more-light.svg' );
     
 }

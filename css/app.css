@@ -1879,9 +1879,14 @@ del {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
+  text-align: center;
   border-bottom-width: 0.0625rem;
   border-bottom-style: dotted;
   border-bottom-color: rgba(128, 128, 128, 0.35); }
+  @media only screen and (min-width: 37.5rem) {
+    /* line 99, sass/default/elements/components/_entry.scss */
+    .entry-hr-cr {
+      text-align: left; } }
   /* line 110, sass/default/elements/components/_entry.scss */
   .entry-hr-cr .entry-meta {
     margin-top: 1rem; }
@@ -3081,18 +3086,27 @@ textarea {
   .secondary-sidebar-active .secondary-sidebar {
     width: 25%; } }
 
+/* line 92, sass/default/elements/components/_main.scss */
+.main-content-hr {
+  padding-top: 2rem; }
+  @media only screen and (min-width: 48rem) {
+    /* line 92, sass/default/elements/components/_main.scss */
+    .main-content-hr {
+      padding-top: 0; } }
+
 @media only screen and (max-width: 47.9375rem) {
-  /* line 92, sass/default/elements/components/_main.scss */
+  /* line 109, sass/default/elements/components/_main.scss */
   .main-content-hr-cr {
     padding-left: 1.5rem;
     padding-right: 1.5rem; } }
 @media only screen and (min-width: 48rem) {
-  /* line 92, sass/default/elements/components/_main.scss */
+  /* line 109, sass/default/elements/components/_main.scss */
   .main-content-hr-cr {
+    margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 2rem 1rem; } }
 
-/* line 106, sass/default/elements/components/_main.scss */
+/* line 124, sass/default/elements/components/_main.scss */
 .main-content-heading {
   margin-bottom: 0;
   font-size: 20px;
@@ -3100,12 +3114,12 @@ textarea {
   line-height: normal;
   text-align: center; }
   @media only screen and (min-width: 48rem) {
-    /* line 106, sass/default/elements/components/_main.scss */
+    /* line 124, sass/default/elements/components/_main.scss */
     .main-content-heading {
       font-size: 25.008px;
       font-size: 1.563rem; } }
 
-/* line 130, sass/default/elements/components/_main.scss */
+/* line 137, sass/default/elements/components/_main.scss */
 .main-content-meta {
   font-size: 18px;
   font-size: 1.125rem;
@@ -3683,8 +3697,8 @@ div.nav-menu {
   left: 0;
   width: 100%;
   z-index: 900; }
-  /* line 70, sass/default/elements/components/_masthead-header.scss */
-  .ui-type__masthead--fixed-header .masthead:after {
+  /* line 71, sass/default/elements/components/_masthead-header.scss */
+  .status-mobile-main-nav-inactive .ui-type__masthead--fixed-header .masthead:after {
     content: '';
     position: absolute;
     top: 100%;
@@ -3696,10 +3710,10 @@ div.nav-menu {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%); }
-/* line 82, sass/default/elements/components/_masthead-header.scss */
+/* line 83, sass/default/elements/components/_masthead-header.scss */
 .ui-type__masthead--fixed-header .main {
   padding-top: 3.5rem; }
-/* line 92, sass/default/elements/components/_masthead-header.scss */
+/* line 93, sass/default/elements/components/_masthead-header.scss */
 .ui-type__masthead--fixed-header #comments:before,
 .ui-type__masthead--fixed-header #respond:before,
 .ui-type__masthead--fixed-header .comment:before {
@@ -4520,17 +4534,15 @@ iframe[src*="codepen.io"] {
   border-width: 0.0625rem;
   border-style: solid; }
 
-/* line 9, sass/default/elements/components/_data-uri.scss */
-div.nav-menu > ul > .page_item_has_children.status-sub-nav-inactive:after,
-div.nav-menu > ul > .menu-item-has-children.status-sub-nav-inactive:after,
+/* line 7, sass/default/elements/components/_data-uri.scss */
 .breadcrumb-item:after,
 .entry-navigation-list .action-item a:after {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KPGc+CjwvZz4KCTxwYXRoIGQ9Ik02Ljc1IDEwLjk1bDE3LjI1IDE3LjcgMTcuMjUtMTcuN2MxLjUtMS42NSA0LjA1MC0xLjY1IDUuNTUgMCAxLjUgMS41IDEuNSA0LjA1MCAwIDUuN2wtMTkuOTUgMjAuNGMwIDAgMCAwIDAgMHMwIDAgMCAwYy0wLjc1IDAuNzUtMS42NSAxLjA1MC0yLjU1IDEuMiAwIDAtMC4xNSAwLTAuMTUgMCAwIDAtMC4xNSAwLTAuMTUgMC0wLjkgMC0xLjk1LTAuNDUtMi41NS0xLjIgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDBsLTIwLjI1LTIwLjRjLTEuNS0xLjY1LTEuNS00LjIgMC01LjcgMS41LTEuNjUgMy45LTEuNjUgNS41NSAweiIgZmlsbD0iIzAwMDAwMCI+PC9wYXRoPgo8L3N2Zz4K");
+  background-image: url("../img/more.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }
 
-/* line 29, sass/default/elements/components/_data-uri.scss */
+/* line 27, sass/default/elements/components/_data-uri.scss */
 div.nav-menu > ul > .page_item_has_children.status-sub-nav-inactive:after,
 div.nav-menu > ul > .menu-item-has-children.status-sub-nav-inactive:after,
 div.nav-menu > ul > .page_item_has_children.status-sub-nav-inactive:hover:after,
@@ -4538,7 +4550,7 @@ div.nav-menu > ul > .menu-item-has-children.status-sub-nav-inactive:hover:after,
 div.nav-menu .page_item_has_children:after,
 div.nav-menu .menu-item-has-children:after,
 .entry-navigation-list .action-item a:hover:after {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KPGc+CjwvZz4KCTxwYXRoIGQ9Ik02Ljc1IDEwLjk1bDE3LjI1IDE3LjcgMTcuMjUtMTcuN2MxLjUtMS42NSA0LjA1MC0xLjY1IDUuNTUgMCAxLjUgMS41IDEuNSA0LjA1MCAwIDUuN2wtMTkuOTUgMjAuNGMwIDAgMCAwIDAgMHMwIDAgMCAwYy0wLjc1IDAuNzUtMS42NSAxLjA1MC0yLjU1IDEuMiAwIDAtMC4xNSAwLTAuMTUgMCAwIDAtMC4xNSAwLTAuMTUgMC0wLjkgMC0xLjk1LTAuNDUtMi41NS0xLjIgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDBsLTIwLjI1LTIwLjRjLTEuNS0xLjY1LTEuNS00LjIgMC01LjcgMS41LTEuNjUgMy45LTEuNjUgNS41NSAweiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPgo8L3N2Zz4K");
+  background-image: url("../img/more-light.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }

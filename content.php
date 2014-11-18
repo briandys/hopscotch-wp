@@ -26,10 +26,14 @@ hopscotch_hook_above_entry();
                     <?php
                     // Edit Post Action (Edit Post link)
                     hopscotch_entry_action_edit();
+                    ?>
 
+                    <?php
                     // Custom Field: entry-subtitle
-                    hopscotch_entry_subtitle();
+                    hopscotch_hook_subtitle();
+                    ?>
 
+                    <?php
                     // Breadcrumbs
                     hopscotch_breadcrumbs();
                     ?>
@@ -61,7 +65,7 @@ hopscotch_hook_above_entry();
                 <?php endif; ?>
                 
                 <?php // Entry thumbnail
-                hopscotch_entry_thumbnail();
+                hopscotch_hook_entry_thumbnail();
                 ?>
                 
             </div>            

@@ -89,6 +89,23 @@
 }
 
 
+.main-content-hr {
+    padding-top: 2rem;
+    
+    @include mq( $tablet ) {
+        padding-top: 0;
+    }
+    
+    .home &,
+    .single &,
+    .page &,
+    .error404 & {
+        @extend %vhide;
+    }
+    
+}
+
+
 .main-content-hr-cr {
     
     @include mq( $tablet, $query1: max ) {
@@ -97,6 +114,7 @@
     }
     
     @include mq( $tablet ) {
+        margin-top: 1rem;
         margin-bottom: 1rem;
         padding: 2rem $gutter;
     }
@@ -113,17 +131,6 @@
     
     line-height: normal;
     text-align: center;
-    
-}
-
-.main-content-hr {
-    
-    .home &,
-    .single &,
-    .page &,
-    .error404 & {
-        @extend %vhide;
-    }
     
 }
 

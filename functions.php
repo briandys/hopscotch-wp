@@ -52,6 +52,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-actio
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-comment.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-byline.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
 
 
