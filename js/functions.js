@@ -442,7 +442,7 @@
     //------------------------- Sticky Header
     $( function() {
         
-        if ( $( body ).hasClass( 'ui-type__masthead--fixed-header' ) ) {
+        if ( $( body ).hasClass( 'ui-type__masthead--fixed-header' ) && ! $( body ).hasClass( 'admin-bar' ) ) {
             
             $(window).on('resize', function(){
 

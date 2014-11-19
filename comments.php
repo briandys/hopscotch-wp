@@ -28,7 +28,7 @@ if ( post_password_required() )
                 <?php endif; ?>
 
                 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>            
-                    <?php get_template_part( ''.hopscotch_components_directory().'/comment-navigation' ); ?>            
+                    <?php get_template_part( 'components/comment-navigation' ); ?>
                 <?php endif; ?>
             
             <?php else : ?>

@@ -80,10 +80,6 @@
 
     }
 
-    .main {
-        padding-top: $block-l;
-    }
-
 
     // Offset for fixed header
     #comments,
@@ -101,3 +97,23 @@
     }
 
 } // ui-type__masthead--fixed-header
+
+
+
+.ui-type__masthead--fixed-header.admin-bar {
+
+    .status-mobile-main-nav-inactive  & .masthead {
+        position: static;
+    
+        &:after {
+            display: none;
+        }
+
+    }
+    
+}
+
+
+.ui-state__main-nav--active .admin-bar #wpadminbar {
+    @extend %vhide;
+}

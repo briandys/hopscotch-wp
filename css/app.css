@@ -640,7 +640,7 @@ legend, #wpstats,
 .widget_nav_menu .widget-title,
 .form-allowed-tags,
 .skip-to-content-link, .child-content .entry-user-action,
-.child-content .entry-meta, .child-content .breadcrumbs, .entry .show-more-content-entry-title, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label:not(.subscribe-label), .entry-navigation-list .action-item .label, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading,
+.child-content .entry-meta, .child-content .breadcrumbs, .entry .show-more-content-entry-title, .page .entry-hr-cr .entry-meta, .post-edit-link .label-verb-subject, .entry-subtitle .label, .format-status .entry-hr, .comment-timestamp .label, .comments-hr, .comment-respond .label-verb-subject, .comments-ct .blank, .logged-in .comment-form .field-comment label:not(.subscribe-label), .entry-navigation-list .action-item .label, .home .main-content-hr, .single .main-content-hr, .page .main-content-hr, .error404 .main-content-hr, .ui-state__main-nav--active .admin-bar #wpadminbar, .sharedaddy .sd-title, .scroll-top-link .label, .secondary-sidebar .widget_search label, .tertiary-sidebar .widget_search label, .secondary-sidebar .widget_search .icon-search, .tertiary-sidebar .widget_search .icon-search, .status-search-inactive .header-sidebar .search--sudo-input-text, .status-search-inactive .header-sidebar .search--sudo-button, .header-sidebar .search-control .label, .status-search-active .header-sidebar .search-control, .header-sidebar .search-submit .label, .search-form legend, .category-list .separator, .tag-list .separator, .header-sidebar-heading,
 .secondary-sidebar-heading,
 .tertiary-sidebar-heading, .header-sidebar .widget:not(.widget_search), .ui-type__table--versus .result .label {
   border: 0;
@@ -2205,7 +2205,7 @@ del {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: currentColor;
-  borer-radius: 0.25rem;
+  border-radius: 0.25rem;
   text-transform: uppercase;
   border-radius: 0.25rem;
   overflow: hidden;
@@ -2442,7 +2442,7 @@ del {
     display: inline-block;
     margin-right: 1rem; }
     /* line 214, sass/default/elements/components/_comment.scss */
-    .comment-action .action-item:lasd-child {
+    .comment-action .action-item:last-child {
       margin-right: auto; }
   @media only screen and (min-width: 37.5rem) {
     /* line 220, sass/default/elements/components/_comment.scss */
@@ -2778,6 +2778,14 @@ del {
         opacity: 1; }
   /* line 120, sass/default/elements/components/_content-navigation.scss */
   .entry-navigation-list .entry-navigation--previous--action-item a:after {
+    margin-right: 1rem;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+  /* line 134, sass/default/elements/components/_content-navigation.scss */
+  .entry-navigation-list .entry-navigation--next--action-item a:after {
     right: auto;
     left: 0;
     margin-left: 1rem;
@@ -2786,14 +2794,6 @@ del {
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg); }
-  /* line 136, sass/default/elements/components/_content-navigation.scss */
-  .entry-navigation-list .entry-navigation--next--action-item a:after {
-    margin-right: 1rem;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg); }
 
 /* line 151, sass/default/elements/components/_content-navigation.scss */
 .entry-page-navigation .content-navigation-cr {
@@ -3710,10 +3710,7 @@ div.nav-menu {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%); }
-/* line 83, sass/default/elements/components/_masthead-header.scss */
-.ui-type__masthead--fixed-header .main {
-  padding-top: 3.5rem; }
-/* line 93, sass/default/elements/components/_masthead-header.scss */
+/* line 89, sass/default/elements/components/_masthead-header.scss */
 .ui-type__masthead--fixed-header #comments:before,
 .ui-type__masthead--fixed-header #respond:before,
 .ui-type__masthead--fixed-header .comment:before {
@@ -3722,6 +3719,13 @@ div.nav-menu {
   margin-top: -3.5rem;
   height: 3.5rem;
   visibility: hidden; }
+
+/* line 105, sass/default/elements/components/_masthead-header.scss */
+.status-mobile-main-nav-inactive .ui-type__masthead--fixed-header.admin-bar .masthead {
+  position: static; }
+  /* line 108, sass/default/elements/components/_masthead-header.scss */
+  .status-mobile-main-nav-inactive .ui-type__masthead--fixed-header.admin-bar .masthead:after {
+    display: none; }
 
 @media only screen and (min-width: 48rem) {
   /* line 35, sass/default/utilities/tools/structure/_layout.scss */
@@ -4443,7 +4447,7 @@ iframe[src*="codepen.io"] {
     height: 0;
     border-style: solid;
     border-width: 0.325rem;
-    border-width-bottom: 0;
+    border-bottom-width: 0;
     border-color: rgba(128, 128, 128, 0.5);
     border-color: transparent;
     border-top-color: rgba(128, 128, 128, 0.5); }

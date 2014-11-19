@@ -92,6 +92,3 @@ require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via
 
 // WordPress Native Functions
 require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');
-
-// Admin Dashboard
-require_once( trailingslashit(get_template_directory()) . 'functions/svg.php');

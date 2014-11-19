@@ -3,7 +3,7 @@
     height: 0;
     border-style: solid;
     border-width: $size;
-    border-width-#{$direction}: 0;
+    border-#{$direction}-width: 0;
     border-color: $color;
     border-color: transparent;
     

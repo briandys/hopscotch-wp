@@ -118,10 +118,8 @@
         a {
 
             &:after {
-                right: auto;
-                left: 0;
-                margin-left: $gutter;
-                @include transform( rotate( 90deg ) );
+                margin-right: $gutter;
+                @include transform( rotate( -90deg ) );
             }
 
         }
@@ -134,8 +132,10 @@
         a {
 
             &:after {
-                margin-right: $gutter;
-                @include transform( rotate( -90deg ) );
+                right: auto;
+                left: 0;
+                margin-left: $gutter;
+                @include transform( rotate( 90deg ) );
             }
 
         }
