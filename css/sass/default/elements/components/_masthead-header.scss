@@ -59,6 +59,10 @@
 
 // Fixed Header
 .ui-type__masthead--fixed-header {
+    
+    .main {
+        padding-top: $block-l;
+    }
 
     .masthead {
         position: fixed;
@@ -101,6 +105,10 @@
 
 
 .ui-type__masthead--fixed-header.admin-bar {
+    
+    .main {
+        padding-top: 0;
+    }
 
     .status-mobile-main-nav-inactive  & .masthead {
         position: static;

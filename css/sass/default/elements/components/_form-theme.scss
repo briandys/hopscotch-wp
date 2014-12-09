@@ -39,6 +39,19 @@
     
 }
 
+
+input[type='reset'],
+button[type='reset'] {
+    background-color: $gray65;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: $gray55;
+    }
+    
+}
+
+
 .sudo-button {
     color: $color-form-rev-fg;
     background-color: $color-form-rev-bg;

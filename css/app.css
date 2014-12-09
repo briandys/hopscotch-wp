@@ -810,11 +810,21 @@ button, input[type='submit'], input[type='reset'] {
   [data-state-form-element="focused"] button, button:hover, [data-state-form-element="focused"] input[type='submit'], input[type='submit']:hover, [data-state-form-element="focused"] input[type='reset'], input[type='reset']:hover {
     background-color: #0095ff; }
 
-/* line 42, sass/default/elements/components/_form-theme.scss */
+/* line 44, sass/default/elements/components/_form-theme.scss */
+input[type='reset'],
+button[type='reset'] {
+  background-color: #a6a6a6; }
+  /* line 48, sass/default/elements/components/_form-theme.scss */
+  [data-state-form-element="focused"] input[type='reset'], input[type='reset']:hover, [data-state-form-element="focused"]
+  button[type='reset'],
+  button[type='reset']:hover {
+    background-color: #8c8c8c; }
+
+/* line 55, sass/default/elements/components/_form-theme.scss */
 .sudo-button {
   color: white;
   background-color: #00aaff; }
-  /* line 47, sass/default/elements/components/_form-theme.scss */
+  /* line 60, sass/default/elements/components/_form-theme.scss */
   .sudo-button[data-state-form-element="focused"], .sudo-button:hover {
     background-color: #0095ff; }
 
@@ -1345,6 +1355,9 @@ pre {
   border-width: 0.0625rem;
   border-style: solid;
   border-radius: 0.25rem; }
+  /* line 13, sass/default/elements/objects/_code.scss */
+  pre p:first-child {
+    margin-top: 0; }
 
 /* line 1, sass/default/elements/objects/_definition.scss */
 dt {
@@ -2069,24 +2082,27 @@ del {
   /* line 300, sass/default/elements/components/_entry.scss */
   .entry-ct-cr p {
     margin-top: 1.5rem; }
-  /* line 309, sass/default/elements/components/_entry.scss */
+    /* line 303, sass/default/elements/components/_entry.scss */
+    .entry-ct-cr p:first-child {
+      margin-top: 0; }
+  /* line 314, sass/default/elements/components/_entry.scss */
   .entry-ct-cr p:last-child,
   .entry-ct-cr li:last-child,
   .entry-ct-cr .field:last-child,
   .entry-ct-cr .field-action,
   .entry-ct-cr table:last-child {
     margin-bottom: auto; }
-  /* line 314, sass/default/elements/components/_entry.scss */
+  /* line 319, sass/default/elements/components/_entry.scss */
   .entry-ct-cr li {
     margin-bottom: 1rem; }
-    /* line 317, sass/default/elements/components/_entry.scss */
+    /* line 322, sass/default/elements/components/_entry.scss */
     .entry-ct-cr li p:last-child {
       margin-bottom: 2rem; }
-    /* line 321, sass/default/elements/components/_entry.scss */
+    /* line 326, sass/default/elements/components/_entry.scss */
     .entry-ct-cr li:last-child p:last-child {
       margin-bottom: 0; }
   @media only screen and (min-width: 48rem) {
-    /* line 327, sass/default/elements/components/_entry.scss */
+    /* line 332, sass/default/elements/components/_entry.scss */
     .entry-ct-cr .pull-quote {
       float: left;
       margin-left: auto;
@@ -2096,95 +2112,98 @@ del {
       width: 30%;
       font-size: 25.008px;
       font-size: 1.563rem; } }
-  /* line 341, sass/default/elements/components/_entry.scss */
+  /* line 346, sass/default/elements/components/_entry.scss */
   .entry-ct-cr .ellipsis {
     margin-left: .25rem;
     letter-spacing: .125rem; }
-    /* line 345, sass/default/elements/components/_entry.scss */
+    /* line 350, sass/default/elements/components/_entry.scss */
     .entry-ct-cr .ellipsis:after {
       content: '.'; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 358, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h1 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 362, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h1:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 358, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h2 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 362, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h2:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 358, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h3 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 362, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h3:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 358, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h4 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 362, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h4:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 358, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h5 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 362, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h5:first-child {
       margin-top: auto; }
-  /* line 353, sass/default/elements/components/_entry.scss */
+  /* line 358, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > h6 {
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-    /* line 357, sass/default/elements/components/_entry.scss */
+    /* line 362, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > h6:first-child {
       margin-top: auto; }
-  /* line 365, sass/default/elements/components/_entry.scss */
+  /* line 370, sass/default/elements/components/_entry.scss */
+  .entry-ct-cr h3 {
+    font-weight: 600; }
+  /* line 374, sass/default/elements/components/_entry.scss */
   .entry-ct-cr h6 {
     text-transform: uppercase; }
-  /* line 371, sass/default/elements/components/_entry.scss */
+  /* line 380, sass/default/elements/components/_entry.scss */
   .entry-ct-cr img[src*=".svg"],
   .entry-ct-cr img[src*=".png"] {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgb3BhY2l0eT0iMC4xNSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiLz48L2c+PC9zdmc+);
     background-size: 1.125rem; }
-  /* line 376, sass/default/elements/components/_entry.scss */
+  /* line 385, sass/default/elements/components/_entry.scss */
   .entry-ct-cr img[src*=".svg"][width="1"] {
     width: 100%;
     height: auto; }
-  /* line 382, sass/default/elements/components/_entry.scss */
+  /* line 391, sass/default/elements/components/_entry.scss */
   .entry-ct-cr .wp-caption-text {
     margin-top: 0; }
-  /* line 388, sass/default/elements/components/_entry.scss */
+  /* line 397, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > * {
     word-wrap: break-word; }
-    /* line 391, sass/default/elements/components/_entry.scss */
+    /* line 400, sass/default/elements/components/_entry.scss */
     .entry-ct-cr > *:last-child {
       margin-bottom: auto; }
-  /* line 397, sass/default/elements/components/_entry.scss */
+  /* line 406, sass/default/elements/components/_entry.scss */
   .entry-ct-cr > p {
     line-height: 1.75; }
-  /* line 406, sass/default/elements/components/_entry.scss */
+  /* line 415, sass/default/elements/components/_entry.scss */
   .format-status .entry-ct-cr > p {
     font-size: 31.248px;
     font-size: 1.953rem; }
 
-/* line 416, sass/default/elements/components/_entry.scss */
+/* line 425, sass/default/elements/components/_entry.scss */
 .entry-fr .entry-meta {
   margin-bottom: 1rem; }
 
-/* line 422, sass/default/elements/components/_entry.scss */
+/* line 431, sass/default/elements/components/_entry.scss */
 .entry-fr-cr {
   margin-top: 3rem;
   padding-left: 1rem;
   padding-right: 1rem; }
 
-/* line 429, sass/default/elements/components/_entry.scss */
+/* line 438, sass/default/elements/components/_entry.scss */
 .entry-admin-action {
   -webkit-transform: translate(0, 0.25rem);
   -moz-transform: translate(0, 0.25rem);
@@ -2192,11 +2211,11 @@ del {
   -o-transform: translate(0, 0.25rem);
   transform: translate(0, 0.25rem); }
 
-/* line 433, sass/default/elements/components/_entry.scss */
+/* line 442, sass/default/elements/components/_entry.scss */
 .action-edit-entry {
   margin-bottom: 0; }
 
-/* line 438, sass/default/elements/components/_entry.scss */
+/* line 447, sass/default/elements/components/_entry.scss */
 .post-edit-link {
   font-size: 12.8px;
   font-size: 0.8rem;
@@ -2222,20 +2241,20 @@ del {
   .post-edit-link:active:active {
     transform: translateY(1px); }
 
-/* line 449, sass/default/elements/components/_entry.scss */
+/* line 458, sass/default/elements/components/_entry.scss */
 .entry-subtitle {
   margin-top: .5rem;
   font-size: 25.008px;
   font-size: 1.563rem; }
   @media only screen and (max-width: 47.9375rem) {
-    /* line 449, sass/default/elements/components/_entry.scss */
+    /* line 458, sass/default/elements/components/_entry.scss */
     .entry-subtitle {
       font-size: 20px;
       font-size: 1.25rem; } }
-  /* line 457, sass/default/elements/components/_entry.scss */
+  /* line 466, sass/default/elements/components/_entry.scss */
   .entry-subtitle p:only-child {
     margin-bottom: 0; }
-  /* line 465, sass/default/elements/components/_entry.scss */
+  /* line 474, sass/default/elements/components/_entry.scss */
   .entry-subtitle a {
     text-decoration: none;
     border: none;
@@ -2251,15 +2270,15 @@ del {
       text-decoration: none;
       border-bottom: none; }
 
-/* line 471, sass/default/elements/components/_entry.scss */
+/* line 480, sass/default/elements/components/_entry.scss */
 .entry-meta {
   font-size: 14.4px;
   font-size: 0.9rem; }
 
-/* line 485, sass/default/elements/components/_entry.scss */
+/* line 494, sass/default/elements/components/_entry.scss */
 .format-status .entry-fr-cr .entry-meta {
   display: inline-block; }
-/* line 489, sass/default/elements/components/_entry.scss */
+/* line 498, sass/default/elements/components/_entry.scss */
 .format-status .entry-fr-cr .entry-admin-action {
   display: inline-block;
   vertical-align: middle; }
@@ -3691,13 +3710,16 @@ div.nav-menu {
       .status-mobile-main-nav-active .main-navigation-heading .icon:hover {
         opacity: 1; } }
 /* line 63, sass/default/elements/components/_masthead-header.scss */
+.ui-type__masthead--fixed-header .main {
+  padding-top: 3.5rem; }
+/* line 67, sass/default/elements/components/_masthead-header.scss */
 .ui-type__masthead--fixed-header .masthead {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 900; }
-  /* line 71, sass/default/elements/components/_masthead-header.scss */
+  /* line 75, sass/default/elements/components/_masthead-header.scss */
   .status-mobile-main-nav-inactive .ui-type__masthead--fixed-header .masthead:after {
     content: '';
     position: absolute;
@@ -3710,7 +3732,7 @@ div.nav-menu {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%); }
-/* line 89, sass/default/elements/components/_masthead-header.scss */
+/* line 93, sass/default/elements/components/_masthead-header.scss */
 .ui-type__masthead--fixed-header #comments:before,
 .ui-type__masthead--fixed-header #respond:before,
 .ui-type__masthead--fixed-header .comment:before {
@@ -3720,10 +3742,13 @@ div.nav-menu {
   height: 3.5rem;
   visibility: hidden; }
 
-/* line 105, sass/default/elements/components/_masthead-header.scss */
+/* line 109, sass/default/elements/components/_masthead-header.scss */
+.ui-type__masthead--fixed-header.admin-bar .main {
+  padding-top: 0; }
+/* line 113, sass/default/elements/components/_masthead-header.scss */
 .status-mobile-main-nav-inactive .ui-type__masthead--fixed-header.admin-bar .masthead {
   position: static; }
-  /* line 108, sass/default/elements/components/_masthead-header.scss */
+  /* line 116, sass/default/elements/components/_masthead-header.scss */
   .status-mobile-main-nav-inactive .ui-type__masthead--fixed-header.admin-bar .masthead:after {
     display: none; }
 

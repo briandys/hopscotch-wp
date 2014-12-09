@@ -9,4 +9,9 @@ pre {
     border-width: $one;
     border-style: solid;
     border-radius: $radius-s;
+    
+    p:first-child {
+        margin-top: 0;
+    }
+    
 }

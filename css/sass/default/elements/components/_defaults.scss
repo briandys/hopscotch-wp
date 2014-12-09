@@ -3,8 +3,7 @@
 .search-bar-title,
 .home .main-content-title,
 .blog .main-content-title,
-.accessible-name,
-legend {
+.accessible-name {
     @extend %vhide;
 }
 

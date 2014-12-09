@@ -299,6 +299,11 @@ $entry-byline-avatar-size: 2rem;
     
     p {
         margin-top: 1.5rem;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+        
     }
 
     // Reset bottom spacing on elements
@@ -360,6 +365,10 @@ $entry-byline-avatar-size: 2rem;
             
         }
 
+    }
+    
+    h3 {
+        font-weight: 600;
     }
     
     h6 {
