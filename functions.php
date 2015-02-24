@@ -16,7 +16,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/single-cont
 // Front-end
 require_once( trailingslashit(get_template_directory()) . 'functions/stylesheet.php');
 
-require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
+// require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascript.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/favicon.php');
@@ -28,7 +28,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/prepend-att
 require_once( trailingslashit(get_template_directory()) . 'functions/text-domain.php');
 
 // Register Sidebars
-require_once( trailingslashit(get_template_directory()) . 'functions/sidebar.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/widgets.php');
 
 
 // Header

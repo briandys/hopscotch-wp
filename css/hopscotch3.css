@@ -1,0 +1,32 @@
+/* Visually Hidden */
+.visuallyhidden,
+
+/* Skip Link */
+.skip-link_axn,
+
+/* If tree navigation is inactive, hide the sub navigation */
+.ui-state__tree-nav--inactive > .children,
+.ui-state__tree-nav--inactive > .sub-menu,
+
+/* If screen is wide, hide pimary nav toggle action */
+.ui-type__screen--wide .pri-nav_toggle-axn,
+
+/* If screen is narrow and narrow nav is inactive, hide primary nav content */
+.ui-type__screen--narrow .ui-state__nav-sidebar-masthead--inactive {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Visually Hidden Reverse */
+.skip-link_axn:focus {
+  clip: auto;
+  width: auto;
+  height: auto;
+  z-index: 100000;
+}

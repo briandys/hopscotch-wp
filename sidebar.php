@@ -1,10 +1,20 @@
-<?php if ( is_active_sidebar( 'sidebar-secondary' ) ) : ?>
-<section id="secondary-sidebar" class="sidebar secondary-sidebar" role="complementary">
-    <div class="secondary-sidebar-cr">
-        <h2 class="secondary-sidebar-heading">Secondary Content</h2>
-        <div class="widget-area">
-            <?php dynamic_sidebar( 'sidebar-secondary' ); ?>
-        </div><!-- widget-area -->    
+<?php
+if ( is_active_sidebar( 'content-sidebar' ) ) : ?>
+
+<aside class="sidebar content-sidebar_sidebar" role="complementary">
+
+    <div class="content-sidebar_cr">
+
+        <h4 class="accessible-name">Content Sidebar</h4>
+
+        <div class="content-sidebar_ct widget-area">
+            <?php dynamic_sidebar( 'content-sidebar' ); ?>
+        </div><!-- content-sidebar_ct -->
+
     </div>
-</section><!-- secondary-sidebar -->
-<?php endif; ?>
+
+</aside><!-- content-sidebar_sidebar -->
+
+<?php
+endif;
+?>
