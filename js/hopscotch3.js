@@ -85,6 +85,59 @@
     }
 
   }
+    
+    
+    // Search Component
+    ( function() {
+
+        var search = $( '.search_comp' ),
+            searchLabel = $( '.search-form_label' ),
+            searchInput = $( '.search-form_input' ),
+            uiStateSearchActive = 'ui-state__search--active',
+            uiStateSearchInactive = 'ui-state__search--inactive';
+
+        if( ! search )
+          return;
+
+        if( ! searchLabel )
+          return;
+
+        if( ! searchInput )
+          return;
+
+        // Deactivates the Search
+        function searchDeactivate() {
+          if ( search.hasClass( uiStateSearchActive ) ) {
+            search.removeClass( uiStateSearchActive ).addClass( uiStateSearchInactive );
+          }
+        }
+
+        // Converts the Search Label into a toggle action
+        searchLabel.on( 'click.hopscotch', function( e ){
+          e.stopPropagation();
+          searchDeactivate();
+          $( this ).closest( search ).toggleClass( uiStateSearchInactive ).toggleClass( uiStateSearchActive );
+        });
+
+        // Exempts the Search Component from the document click
+        search.on( 'click.hopscotch', function( e ){
+          e.stopPropagation();
+        });
+
+        // If Search Component is active, make inactive by clicks anywhere on the document
+        $( document ).on( 'click.hopscotch', function() {
+          searchDeactivate();
+        });
+
+        // If Search Component is active, make inactive by pressing keyboard enter and remove focus from Search Input
+        $( document ).on( 'keydown.hopscotch', function( e ) {
+          if ( e.which === 27 ) {
+            searchDeactivate();
+            searchInput.blur();
+          }
+        });
+
+    } )();
 
   $( document ).ready( function() {
     $body = $( document.body );

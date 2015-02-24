@@ -12,7 +12,12 @@
 .ui-type__screen--wide .pri-nav_toggle-axn,
 
 /* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.ui-type__screen--narrow .ui-state__nav-sidebar-masthead--inactive {
+.ui-type__screen--narrow .ui-state__nav-sidebar-masthead--inactive,
+
+/* Search Component */
+.ui-state__search--active .search-form_label,
+.ui-state__search--inactive .search-form_input,
+.ui-state__search--inactive .search-form_button {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -24,9 +29,18 @@
 }
 
 /* Visually Hidden Reverse */
-.skip-link_axn:focus {
+.skip-link_axn:focus,
+
+/* Search Component */
+.ui-state__search--inactive .search-form_input:focus,
+.ui-state__search--inactive .search-form_button:focus {
   clip: auto;
   width: auto;
   height: auto;
   z-index: 100000;
+}
+
+/* Search Component */
+.search-form_label:hover {
+  cursor: pointer;
 }
