@@ -9,7 +9,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/action-hook
 
 
 // Content
-require_once( trailingslashit(get_template_directory()) . 'functions/the-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/single-content.php');
 
 
@@ -41,18 +40,26 @@ require_once( trailingslashit(get_template_directory()) . 'functions/page-naviga
 // Previous Entry / Next Entry
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
 
-// Pagination in Entry
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-page-navigation.php');
 
-require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumbs.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb.php');
 
 // Entry
 require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-edit.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-action-comment.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-byline.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-thumbnail.php');
+
+
+
+// Updated
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-page-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-admin-actions.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-comments-action.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-published-timestamp.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-modified-timestamp.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-author.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-category.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-banner.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-tag.php');
+
+
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
 
 
@@ -89,6 +96,3 @@ require_once( trailingslashit(get_template_directory()) . 'functions/category-de
 require_once( trailingslashit(get_template_directory()) . 'functions/widget-entry-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
-
-// WordPress Native Functions
-require_once( trailingslashit(get_template_directory()) . 'functions/the-tags.php');

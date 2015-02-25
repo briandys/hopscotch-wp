@@ -1,20 +1,18 @@
 <?php
-
-//------------------------- wp_link_pages
+//  wp_link_pages
 // Displays the pages of a post (done by <!--nextpage-->)
 // http://codex.wordpress.org/Function_Reference/wp_link_pages
 // http://bavotasan.com/2012/a-better-wp_link_pages-for-wordpress
 
-
-function hopscotch_wp_link_pages( $args = '' ) {
+function hopscotch_entry_page_nav( $args = '' ) {
 	$defaults = array(
-		'before' => '<nav><h2 id="post-pagination">' . __( 'Entry Navigation' ) . '</h2><p class="friendly-name">' . __( 'Pages:' ) . '</p><ul>', 
-		'after' => '</ul></nav>',
+		'before' => '<nav class="nav content-nav_nav entry-page-nav_nav"><h2 class="accessible-name">' . __( 'Entry Page Navigation' ) . '</h2><p class="friendly-name">' . __( 'Pages:' ) . '</p><ul class="nav-grp content-nav_nav-grp entry-page-nav_nav-grp">', 
+		'after' => '</ul></nav><!--  entry-page-nav_nav -->',
 		'text_before' => '',
 		'text_after' => '',
 		'next_or_number' => 'number', 
-		'nextpagelink' => __( 'Next page' ),
-		'previouspagelink' => __( 'Previous page' ),
+		'nextpagelink' => __( 'Next Page' ),
+		'previouspagelink' => __( 'Previous Page' ),
 		'pagelink' => '%',
 		'echo' => 1
 	);
@@ -31,11 +29,11 @@ function hopscotch_wp_link_pages( $args = '' ) {
 			$output .= $before;
 			for ( $i = 1; $i < ( $numpages + 1 ); $i = $i + 1 ) {
 				$j = str_replace( '%', $i, $pagelink );
-				$output .= ' ';
+				$output .= '';
 				if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )
-					$output .= '<li>' . _wp_link_page( $i );
+					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item">' . _wp_link_page( $i );
 				else
-					$output .= '<li><span class="current-post-page">';
+					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item ui-state__nav-item--inactive"><span class="label">';
 
 				$output .= $text_before . $j . $text_after;
 				if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )

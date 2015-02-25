@@ -1,8 +1,8 @@
 <?php
 
-//------------------------- Entry Byline
-if ( ! function_exists( 'hopscotch_entry_byline' ) ) :
-    function hopscotch_entry_byline() {
+//------------------------- Entry Author
+if ( ! function_exists( 'hopscotch_entry_author' ) ) :
+    function hopscotch_entry_author() {
         
         // Post author
         if ( 'post' == get_post_type() ) {

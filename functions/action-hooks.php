@@ -100,7 +100,7 @@ function hopscotch_hook_subtitle() {
     do_action('hopscotch_hook_subtitle');
 }
 
-// Location: content.php > entry-hr-cr
-function hopscotch_hook_entry_thumbnail() {
-    do_action('hopscotch_hook_entry_thumbnail');
+// Location: content.php
+function hopscotch_hook_entry_banner() {
+    do_action('hopscotch_hook_entry_banner');
 }

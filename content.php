@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage HopScotch
- * @since HopScotch 3.0
+ * @since HopScotch 1.0
  */
 ?>
 
@@ -38,236 +38,113 @@ hopscotch_hook_above_entry();
                         ?>
                     
                         <?php
-                        // Edit Post Action (Edit Post link)
-                        hopscotch_entry_action_edit();
+                        // Entry Admin Actions
+                        hopscotch_entry_admin_actions();
                         ?>
 
                         <?php
-                        // Custom Field: entry-subtitle
+                        // WP Plugin: HopScotch Enhancer
                         hopscotch_hook_subtitle();
                         ?>
 
                         <?php
-                        // Breadcrumbs
-                        hopscotch_breadcrumbs();
+                        // Breadcrumb Navigation
+                        hopscotch_breadcrumb_nav();
                         ?>
                     
-                    <h1 class="entry-title_name">Title</h1>
-                    <p class="entry-subtitle_name">Subtitle</p>
+                        <div class="entry-meta">
+                            <div class="entry-meta-cr">
+
+                            <?php
+                            // Hopscotch Meta hook
+                            hopscotch_hook_header_meta();
+                            ?>
+
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <h1 class="entry-title_name">Status Message</h1>
+                    <?php endif; ?>
+
+                    
                 </div>
 
                 <div class="entry-hr_ct">
                     <div class="comp entry-byline_comp">
 
-                        <div class="comp entry-author_comp">
-                            <span class="label">By</span>
-                            <a class="entry-author_axn" href="#">
-                                <span class="label">Author Name</span>
-                                <img alt="Author Avatar">
-                            </a>
-                        </div><!-- author_comp -->
-
-                        <div class="comp timestamp_comp entry-published-timestamp_comp">
-                            <span class="label">Published on</span>
-                            <a class="entry-published-timestamp_axn" href="#"><time class="entry-published-timestamp_datetime" datetime="">Date Published</time></a>
-                        </div><!-- entry-published-timestamp_comp -->
+                        <?php // Entry Author
+                        hopscotch_entry_author();
+                        ?>
+                        
+                        <?php
+                        // Entry Published Timestamp
+                        hopscotch_entry_published_timestamp();
+                        ?>
 
                     </div><!-- entry-byline_comp -->
 
-                    <div class="comp tag_comp category-tag_comp">
-                        <span class="label">Category:</span>
-                        <a href="#" rel="category tag">Category 1</a><span class="sep">,</span>
-                        <a href="#" rel="category tag">Category 2</a>
-                    </div><!-- category-tag_comp -->
-
-                    <div class="comp comments_comp">
-                        <span class="label">Show</span>
-                        <a class="show-comments_axn" href="#">
-                            <span class="comment-count_num">22</span>
-                            <span class="label">Comments</span>
-                        </a>
-                    </div><!-- comments_comp -->
-
-                    <div class="comp entry-banner_comp">
-                        <a class="entry-banner_axn" href="#"><img class="attachment-post-thumbnail wp-post-image" alt="Banner Image"></a>
-                    </div><!-- entry-banner_comp -->
+                    <?php // Entry Category
+                    hopscotch_entry_category();
+                    ?>
+                    
+                    <?php // Entry Comments Action
+                    if ( ! is_search() ) :
+                        hopscotch_entry_comments_action();
+                    endif;
+                    ?>
+                    
+                    <?php // Entry Banner
+                    hopscotch_hook_entry_banner();
+                    ?>
                 </div><!-- entry-hr_ct -->
             
             </div>
         </header>
 
-        <div class="entry_ct">
-            <div class="entry-ct_cr">
-                <p>Content</p>
-                
-                <div class="comp show-content_comp">
-                    <a class="show-content_axn" href="#">Show Content Action</a>
-                </div><!-- show-content_comp -->
-                
-                <nav class="nav content-nav_nav entry-nav_nav">
-                    <h2 class="accessible-name">Entry Navigation</h2>
-                    <p class="friendly-name">Pages:</p>
-                    <ul class="nav-grp content-nav_nav-grp entry-nav_nav-grp">
-                        <li class="nav-item content-nav_nav-item entry-nav_nav-item">
-                            <a class="content-nav_axn entry-nav_axn" href="">1</a>
-                        <li class="nav-item content-nav_nav-item entry-nav_nav-item">
-                            <a class="content-nav_axn entry-nav_axn" href="">2</a>
-                        <li class="nav-item content-nav_nav-item entry-nav_nav-item">
-                            <a class="content-nav_axn entry-nav_axn" href="">3</a>
-                    </ul>
-                </nav><!--  entry-nav_nav -->
-            </div>
-        </div><!-- entry_ct -->
-
-        <footer class="entry_fr">
-            <div class="entry-fr_cr">
-            
-                <div class="comp timestamp_comp entry-modified-timestamp_comp">
-                    <span class="label">Modified on</span>
-                    <a class="entry-modified-timestamp_axn" href="#"><time class="entry-modified-timestamp_datetime" datetime="">Date Modified</time></a>
-                </div><!-- entry-modified-timestamp_comp -->
-
-                <div class="comp timestamp_comp entry-originated-timestamp_comp">
-                    <span class="label">Originated on</span>
-                    <a class="entry-originated-timestamp_axn" href="#"><time class="entry-originated-timestamp_datetime" datetime="">Date Originated</time></a>
-                </div><!-- entry-originated-timestamp_comp -->
-
-                <div class="comp tag_comp tag-tag_comp">
-                    <span class="label">Tag:</span>
-                    <a href="#" rel="tag">Tag 1</a><span class="sep">,</span>
-                    <a href="#" rel="tag">Tag 2</a>
-                </div><!-- tag-tag_comp -->
-
-            </div>
-        </footer>
-    
-    </div>
-</article><!-- entry_comp -->
-
-
-
-
-
-
-
-
-
-
-
-<?php // Content Header hook
-hopscotch_content_header();
-?>
-
-<?php // Hook above .entry
-hopscotch_hook_above_entry();
-?>
-
-<article  <?php post_class('entry'); ?> >
-    
-    <div class="entry-cr <?php hopscotch_slug_class(); ?>--entry-cr">
-        <header class="entry-hr <?php hopscotch_slug_class(); ?>--entry-hr">
-            <div class="entry-hr-cr">
-				
-                <?php // Format: Not Status
-                if ( ! has_post_format( 'status' ) ) : ?>
-                
-                    <?php // Entry title
-                    if ( ! is_page_template( 'template-info-card.php' ) ) :
-                        the_title( '<h1 class="entry-title"><a class="entry-title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-                    else :
-                        the_title( '<h1 class="entry-title" itemprop="name"><a class="entry-title-link org" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-                    endif;
-                    ?>
-                
-                    <?php
-                    // Edit Post Action (Edit Post link)
-                    hopscotch_entry_action_edit();
-                    ?>
-
-                    <?php
-                    // Custom Field: entry-subtitle
-                    hopscotch_hook_subtitle();
-                    ?>
-
-                    <?php
-                    // Breadcrumbs
-                    hopscotch_breadcrumbs();
-                    ?>
-                    
-                    <div class="entry-meta">
-                        <div class="entry-meta-cr">
-                            
-                        <?php
-                        // Entry date and time
-                        hopscotch_entry_date();
-
-                        // Hopscotch Meta hook
-                        hopscotch_hook_header_meta();
-
-                        // Entry byline (Author and Category)
-                        hopscotch_entry_byline();
-                        ?>
-                        
-                        </div>
-                    </div>
-                    
-                    <?php // Comment link
-                    if ( ! is_search() ) :
-                        hopscotch_entry_action_comment();
-                    endif;
-                    ?>
-                <?php else : ?>
-                    <h1 class="entry-title">Status Message</h1>
-                <?php endif; ?>
-                
-                <?php // Entry thumbnail
-                hopscotch_hook_entry_thumbnail();
-                ?>
-                
-            </div>            
-        </header>
-        
-        
-        <div class="<?php hopscotch_hook_entry_content_class(); ?> <?php hopscotch_slug_class(); ?>--entry-ct">
+        <div class="entry_ct <?php hopscotch_hook_entry_content_class(); ?> <?php hopscotch_slug_class(); ?>-entry_ct">
             
             <?php // HopScotch Pre-content Hook
             hopscotch_hook_pre_content();
-            ?>
+            ?>            
             
-            <div class="entry-ct-cr">
+            <div class="entry-ct_cr">
                 
-            <?php // Entry content
-            if ( is_search() || is_author() ) : ?>
+                <?php // Entry content
+                if ( is_search() || is_author() ) : ?>
 
-                <?php the_excerpt(); ?>
+                    <?php the_excerpt(); ?>
 
-            <?php else : ?>
+                <?php else : ?>
 
-                <?php // Content
-                if( $post->post_content !== "" ) {?>
-                    
-                    <?php // HopScotch Content Title Hook
-                    hopscotch_hook_content_title();
-                    ?>
-                    
-                    <?php // HopScotch Pre the_content Hook
-                    hopscotch_hook_pre_the_content();
-                    ?>
+                    <?php // Content
+                    if( $post->post_content !== "" ) { ?>
+
+                        <?php // HopScotch Content Title Hook
+                        hopscotch_hook_content_title();
+                        ?>
+
+                        <?php // HopScotch Pre the_content Hook
+                        hopscotch_hook_pre_the_content();
+                        ?>
+
+                        <?php // The Content
+                        the_content(
+                            sprintf(
+                                __( '<div class="comp show-content_comp"><span class="label pred_label">Show More</span> <span class="label sub_label">Content of</span> %s</div><!-- show-content_comp -->', 'hopscotch' ),
+                                '<span class="label entry-title_label">' . get_the_title() . '</span>'
+                            )
+                        );
+                        ?>
+
+                    <?php } ?>
                 
-                    <?php // HopScotch the_content Hook
-                    hopscotch_hook_the_content();
+                    <?php // Entry Page Navigation
+                    hopscotch_entry_page_nav();
                     ?>
-                
-                <?php } ?>
-                <?php hopscotch_wp_link_pages(); ?>
-            
-            <?php endif; ?>
-                
-            <?php // HopScotch Content Hook
-            hopscotch_entry_content();
-            ?>
+
+                <?php endif; ?>
             </div>
-                
+            
             <?php // HopScotch Extra Content Hook
             hopscotch_hook_extra_content();
             ?>
@@ -289,40 +166,33 @@ hopscotch_hook_above_entry();
                 ?>                
 
                 <?php if ( $the_query->have_posts() ) : ?>
-                    <div class="child-page child-content">
+                    <div class="comp sub-entry_comp">
+                        <div class="sub-entry_comp_cr">
                         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <?php get_template_part( 'content', get_post_format() ); ?>
                         <?php endwhile; ?>
-                    </div>
+                        </div>
+                    </div><!-- sub-entry_comp -->
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
 
             <?php endif; ?>
-        </div><!-- entry-ct -->
-        
-        <?php // Post Formats: Status, Tag
-        if ( has_tag() || has_post_format( 'status' ) ) :
-        ?>
-        <footer class="entry-fr <?php hopscotch_slug_class(); ?>--entry-fr">
-            <div class="entry-fr-cr">
-				
-            <?php if ( has_post_format( 'status' ) ) : ?>
-                <div class="entry-meta">			
-                <?php
-                hopscotch_entry_date();
-                hopscotch_entry_byline();
+            
+        </div><!-- entry_ct -->
+
+        <footer class="entry_fr">
+            <div class="entry-fr_cr">
+                        
+                <?php // Entry Modified Timestamp
+                hopscotch_entry_modified_timestamp();
                 ?>
-                </div><!-- entry-meta -->
-                <?php
-                hopscotch_entry_action_edit();
-                hopscotch_entry_action_comment();
-                ?>
-            <?php endif; ?>
                 
-                <?php hopscotch_the_tags(); ?>
+                <?php // Entry Tags
+                hopscotch_entry_tags();
+                ?>
+
             </div>
-        </footer><!-- entry-fr -->
-        <?php endif; ?>
+        </footer>
     
-    </div><!-- entry-cr -->
-</article>
+    </div>
+</article><!-- entry_comp -->
