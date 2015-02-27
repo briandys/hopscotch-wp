@@ -5,7 +5,7 @@ if ( is_active_sidebar( 'masthead-sidebar' ) ) : ?>
 
     <div class="masthead-sidebar_cr">
 
-        <h4 class="accessible-name">Masthead Sidebar</h4>
+        <h3 class="accessible-name">Masthead Sidebar</h3>
 
         <div class="masthead-sidebar_ct widget-area">
             <?php dynamic_sidebar( 'masthead-sidebar' ); ?>

@@ -51,17 +51,6 @@ hopscotch_hook_above_entry();
                         // Breadcrumb Navigation
                         hopscotch_breadcrumb_nav();
                         ?>
-                    
-                        <div class="entry-meta">
-                            <div class="entry-meta-cr">
-
-                            <?php
-                            // Hopscotch Meta hook
-                            hopscotch_hook_header_meta();
-                            ?>
-
-                            </div>
-                        </div>
                     <?php else : ?>
                         <h1 class="entry-title_name">Status Message</h1>
                     <?php endif; ?>
@@ -70,17 +59,16 @@ hopscotch_hook_above_entry();
                 </div>
 
                 <div class="entry-hr_ct">
-                    <div class="comp entry-byline_comp">
-
-                        <?php // Entry Author
-                        hopscotch_entry_author();
-                        ?>
-                        
-                        <?php
-                        // Entry Published Timestamp
-                        hopscotch_entry_published_timestamp();
-                        ?>
-
+                    <div class="comp entry-byline_comp">                        
+                        <div class="comp entry-byline_cr">
+                            <?php // Entry Author
+                            hopscotch_entry_author();
+                            ?>
+                            <?php
+                            // Entry Published Timestamp
+                            hopscotch_entry_published_timestamp();
+                            ?>                        
+                        </div>
                     </div><!-- entry-byline_comp -->
 
                     <?php // Entry Category
@@ -130,8 +118,8 @@ hopscotch_hook_above_entry();
                         <?php // The Content
                         the_content(
                             sprintf(
-                                __( '<div class="comp show-content_comp"><span class="label pred_label">Show More</span> <span class="label sub_label">Content of</span> %s</div><!-- show-content_comp -->', 'hopscotch' ),
-                                '<span class="label entry-title_label">' . get_the_title() . '</span>'
+                                __( '<div class="comp show-content_comp"><span class="label pred_label">Show More</span> <span class="label subj_label">Content of</span> %s</div><!-- show-content_comp -->', 'hopscotch' ),
+                                the_title( '<span class="label entry-title_label">', '</span>', false )
                             )
                         );
                         ?>

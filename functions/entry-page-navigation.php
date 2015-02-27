@@ -6,13 +6,13 @@
 
 function hopscotch_entry_page_nav( $args = '' ) {
 	$defaults = array(
-		'before' => '<nav class="nav content-nav_nav entry-page-nav_nav"><h2 class="accessible-name">' . __( 'Entry Page Navigation' ) . '</h2><p class="friendly-name">' . __( 'Pages:' ) . '</p><ul class="nav-grp content-nav_nav-grp entry-page-nav_nav-grp">', 
+		'before' => '<nav class="nav content-nav_nav entry-page-nav_nav"><h2 class="accessible-name">' . __( 'Entry Page Navigation', 'hopscotch' ) . '</h2><p class="friendly-name">' . __( 'Pages:', 'hopscotch' ) . '</p><ul class="nav-grp content-nav_nav-grp entry-page-nav_nav-grp">', 
 		'after' => '</ul></nav><!--  entry-page-nav_nav -->',
 		'text_before' => '',
 		'text_after' => '',
-		'next_or_number' => 'number', 
-		'nextpagelink' => __( 'Next Page' ),
-		'previouspagelink' => __( 'Previous Page' ),
+		'next_or_number' => 'number',
+		'previouspagelink' => __( '<span class="label pred_label">Previous</span> <span class="label subj_label">Page</span>', 'hopscotch' ),
+		'nextpagelink' => __( '<span class="label pred_label">Next</span> <span class="label subj_label">Page</span>', 'hopscotch' ),
 		'pagelink' => '%',
 		'echo' => 1
 	);
@@ -33,7 +33,7 @@ function hopscotch_entry_page_nav( $args = '' ) {
 				if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )
 					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item">' . _wp_link_page( $i );
 				else
-					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item ui-state__nav-item--inactive"><span class="label">';
+					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item ui-state__nav-item--current"><span class="label">';
 
 				$output .= $text_before . $j . $text_after;
 				if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )
@@ -47,12 +47,12 @@ function hopscotch_entry_page_nav( $args = '' ) {
 				$output .= $before;
 				$i = $page - 1;
 				if ( $i && $more ) {
-					$output .= _wp_link_page( $i );
+					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item prev-entry-page-nav_nav-item" rel="prev">' . _wp_link_page( $i );
 					$output .= $text_before . $previouspagelink . $text_after . '</a>';
 				}
 				$i = $page + 1;
 				if ( $i <= $numpages && $more ) {
-					$output .= _wp_link_page( $i );
+					$output .= '<li class="nav-item content-nav_nav-item entry-page-nav_nav-item next-entry-page-nav_nav-item" rel="next">' . _wp_link_page( $i );
 					$output .= $text_before . $nextpagelink . $text_after . '</a>';
 				}
 				$output .= $after;

@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html id="html" class="no-js">
+<html id="html" class="no-js" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
@@ -42,7 +42,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?>">
         
-        <?php wp_head(); ?>        
+        <?php wp_head(); ?>
     </head>
     
     
@@ -50,11 +50,17 @@
         
         <?php get_template_part( 'img/svg' ); ?>
         
-        <?php get_template_part( 'components/browser-upgrade' ); ?>
+        <!--[if lt IE 8]>
+        <div class="notice browser-upgrade_notice">
+            <div class="notice_cr">
+                <p><?php $url = 'http://browsehappy.com/'; echo sprintf( __( 'You are using an <strong>outdated</strong> browser. Please <a href="%s">upgrade your browser</a> to improve your experience.', 'hopscotch' ), esc_url( $url ) ); ?></p>
+            </div>
+        </div>
+        <![endif]-->
 
-        <?php get_template_part( 'components/skip-link' ); ?>
+        <a class="show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
         
-        <div class="page view">
+        <div class="ui-view--home ui-cr--screen">
         
             
             <!-- Constructor: Masthead -->

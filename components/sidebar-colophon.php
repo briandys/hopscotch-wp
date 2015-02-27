@@ -5,7 +5,7 @@ if ( is_active_sidebar( 'colophon-sidebar' ) ) : ?>
 
     <div class="colophon-sidebar_cr">
 
-        <h4 class="accessible-name">Colophon Sidebar</h4>
+        <h3 class="accessible-name">Colophon Sidebar</h3>
 
         <div class="colophon-sidebar_ct widget-area">
             <?php dynamic_sidebar( 'colophon-sidebar' ); ?>

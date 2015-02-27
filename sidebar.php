@@ -1,19 +1,32 @@
 <?php
 if ( is_active_sidebar( 'content-sidebar' ) ) : ?>
 
-<aside class="sidebar content-sidebar_sidebar" role="complementary">
+    <!-- Sub-Constructor: Secondary Content -->
+    <div class="comp secondary-content_comp">
 
-    <div class="content-sidebar_cr">
+        <section class="secondary-content_cr">
 
-        <h4 class="accessible-name">Content Sidebar</h4>
+            <h3 class="accessible-name">Secondary Content</h3>
 
-        <div class="content-sidebar_ct widget-area">
-            <?php dynamic_sidebar( 'content-sidebar' ); ?>
-        </div><!-- content-sidebar_ct -->
+            <div class="secondary-content_ct">
+                <aside class="sidebar content-sidebar_sidebar" role="complementary">
 
-    </div>
+                    <div class="content-sidebar_cr">
 
-</aside><!-- content-sidebar_sidebar -->
+                        <h4 class="accessible-name">Content Sidebar</h4>
+
+                        <div class="content-sidebar_ct widget-area">
+                            <?php dynamic_sidebar( 'content-sidebar' ); ?>
+                        </div><!-- content-sidebar_ct -->
+
+                    </div>
+
+                </aside><!-- content-sidebar_sidebar -->
+            </div><!-- secondary-content_ct -->
+
+        </section>
+
+    </div><!-- secondary-content_comp -->
 
 <?php
 endif;

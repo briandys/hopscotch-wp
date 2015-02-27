@@ -34,8 +34,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/widgets.php
 require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
 // require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.php');
 
-// Navigation
-require_once( trailingslashit(get_template_directory()) . 'functions/page-navigation.php');
+
 
 // Previous Entry / Next Entry
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
@@ -44,20 +43,29 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-navig
 require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb.php');
 
 // Entry
-require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
+//require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
 
 
 
 // Updated
+require_once( trailingslashit(get_template_directory()) . 'functions/web-product-page-navigation.php');
+
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-page-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-admin-actions.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-comments-action.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-published-timestamp.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-modified-timestamp.php');
+
+// Published and Modified Timestamps
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-author.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-category.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-banner.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-tag.php');
+
+require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
+
+
+
+
 
 
 require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php');
@@ -86,9 +94,8 @@ require_once( trailingslashit(get_template_directory()) . 'functions/comment-for
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-list.php');
 
 // Colophon
-require_once( trailingslashit(get_template_directory()) . 'functions/web-designer.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/copyright.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
+
+
 
 // Functionalities, Conditionals
 require_once( trailingslashit(get_template_directory()) . 'functions/conditional-is-child.php');

@@ -1,7 +1,15 @@
 <?php
 // Tags
-// Displays the tags of an entry.
+// Based on Twenty Fifteen twentyfifteen_entry_meta() function.
 
-function hopscotch_entry_tags() {
-    the_tags( '<div class="comp tag_comp entry-tag-tag_comp"><div class="entry-tag-tag_cr"><span class="accessible-name">Tag:</span> ', '<span class="sep">,</span> ', '</div></div><!-- entry-tag-tag_comp -->' );
-}
+if ( ! function_exists( 'hopscotch_entry_tags' ) ) :
+    function hopscotch_entry_tags() {
+        $tags_list = get_the_tag_list( '', _x( '<span class="sep">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
+        if ( $tags_list ) {
+			printf( '<div class="comp tag_comp entry-tag-tag_comp"><div class="entry-tag-tag_cr"><span class="accessible-name">%1$s</span> %2$s</div></div><!-- entry-tag-tag_comp -->',
+				_x( 'Tags:', 'Used before tag names.', 'hopscotch' ),
+				$tags_list
+			);
+        }
+    }
+endif;

@@ -1,5 +1,6 @@
 <?php
 // Entry Comments Action
+// Displays the Comment Link (with comment count)
 
 if ( ! function_exists( 'hopscotch_entry_comments_action' ) ) :
     function hopscotch_entry_comments_action() {
@@ -11,13 +12,13 @@ if ( ! function_exists( 'hopscotch_entry_comments_action' ) ) :
             $comment_count_class = 'ui-state_entry-comments--zero-comment';
             $number = (int) get_comments_number( get_the_ID() );
 
+            // Defines the class depending on the comment count
             if ( 1 === $number )
                 $comment_count_class = 'ui-state_entry-comments--single-comment';
             elseif ( 1 < $number )
                 $comment_count_class = 'ui-state_entry-comments--multiple-comments';
-
-            echo '<div class="axn entry-comments-axn_axn ' . $comment_count_class . '>';
             ?>
+            <div class="axn entry-comments-axn_axn <?php echo $comment_count_class ?>">
                 <div class="entry-comments-axn_cr">
                     <p class="accessible-name">Entry Comments Actions</p>
                     <ul class="axn_grp entry-comments-axn_axn-grp">

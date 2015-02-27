@@ -7,4 +7,4 @@ function hopscotch_copyright_range($year = 'auto'){
 	elseif (intval($year) < date('Y')){ echo intval($year) . ' &ndash; ' . date('Y'); }
 	elseif (intval($year) > date('Y')){ echo date('Y'); }
 }
-add_action( 'hopscotch_auto_copyright', 'hopscotch_copyright_range');
+add_action( 'hopscotch_auto_copyright_year', 'hopscotch_copyright_range');
