@@ -37,13 +37,17 @@ require_once( trailingslashit(get_template_directory()) . 'functions/home-link.p
 
 
 // Previous Entry / Next Entry
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
 
 
-require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb.php');
+
+
 
 // Entry
 //require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
+
+
+
+
 
 
 
@@ -56,12 +60,17 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-comme
 
 // Published and Modified Timestamps
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
+
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
+
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-author.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-category.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-banner.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-tag.php');
 
 require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
+
+require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-navigation.php');
 
 
 

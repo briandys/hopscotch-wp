@@ -6,13 +6,13 @@
 
 function hopscotch_entry_page_nav( $args = '' ) {
 	$defaults = array(
-		'before' => '<nav class="nav content-nav_nav entry-page-nav_nav"><h2 class="accessible-name">' . __( 'Entry Page Navigation', 'hopscotch' ) . '</h2><p class="friendly-name">' . __( 'Pages:', 'hopscotch' ) . '</p><ul class="nav-grp content-nav_nav-grp entry-page-nav_nav-grp">', 
-		'after' => '</ul></nav><!--  entry-page-nav_nav -->',
+		'before' => '<nav class="nav content-nav_nav entry-page-nav_nav"><div class="entry-page-nav_nav_cr"><h2 class="accessible-name">' . __( 'Entry Page Navigation', 'hopscotch' ) . '</h2><p class="friendly-name">' . __( 'Pages:', 'hopscotch' ) . '</p><ul class="nav-grp content-nav_nav-grp entry-page-nav_nav-grp">', 
+		'after' => '</ul></div></nav><!--  entry-page-nav_nav -->',
 		'text_before' => '',
 		'text_after' => '',
 		'next_or_number' => 'number',
-		'previouspagelink' => __( '<span class="label pred_label">Previous</span> <span class="label subj_label">Page</span>', 'hopscotch' ),
-		'nextpagelink' => __( '<span class="label pred_label">Next</span> <span class="label subj_label">Page</span>', 'hopscotch' ),
+		'previouspagelink' => __( '<span class="label prev-ct_label"><span class="label pred_label">Previous</span> <span class="label subj_label">Page</span></span>', 'hopscotch' ),
+		'nextpagelink' => __( '<span class="label next-ct_label"><span class="label pred_label">Next</span> <span class="label subj_label">Page</span></span>', 'hopscotch' ),
 		'pagelink' => '%',
 		'echo' => 1
 	);

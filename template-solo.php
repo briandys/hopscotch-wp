@@ -5,6 +5,6 @@
  * Description: A Page Template displaying the default WordPress single page.
  */
 
-    get_template_part('single');
+    get_template_part( 'index' );
 
 ?>

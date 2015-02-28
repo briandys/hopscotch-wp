@@ -1,35 +1,41 @@
 <?php
+// Entry Navigation
+// Navigates from Single Entry to Single Entry
+// Displayed as Next Entry, Previous Entry Actions
 
-//------------------------- Post Navigation
-if (!function_exists('hopscotch_post_nav')) :
-	function hopscotch_post_nav() {
-        ?>
-		
-        <?php if ( get_previous_post_link() || get_next_post_link() ) : ?>
-        <nav class="action-items content-navigation entry-navigation post-navigation-action post-navigation" role="navigation">
-            <div class="content-navigation-cr">
-                <h1 class="assistive-text"><?php _e( 'Entry Navigation', 'hopscotch' ); ?></h1>
-                <ul class="acton-list content-navigation-list entry-navigation-list post-navigation-list">
+if ( ! function_exists('hopscotch_entry_nav' ) ) :
+	function hopscotch_entry_nav() {
+        if ( get_previous_post_link() || get_next_post_link() ) : ?>
+        <nav class="nav content-nav_nav entry-nav_nav" role="navigation">
+            <div class="entry-nav_nav">
+                <h2 class="accessible-name"><?php _e( 'Entry Navigation', 'hopscotch' ); ?></h2>
+                <ul class="nav-grp content-nav_nav-grp entry-nav_nav-grp">
 
                     <?php // Next
                     if ( get_next_post_link() ) :
                     ?>
-                    <li class="action-item action-go-next entry-navigation--next--action-item post-navigation--next--action-item">
-                        <span class="label label-next">Newer Entry</span> <?php next_post_link( '%link', _x( '%title', 'Newer Entry', 'hopscotch' ) ); ?>
+                    <li class="nav-item content-nav_nav-item entry-nav_nav-item next-entry-nav_nav-item">
+                        <span class="label next-ct_label">
+                            <span class="label pred_label">Next</span>
+                            <span class="label subj_label">Entry</span>
+                        </span>
+                        <?php next_post_link( '%link', _x( '%title', 'Newer Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
 
                     <?php // Previous
                     if ( get_previous_post_link() ) :
                     ?>
-                    <li class="action-item action-go-previous entry-navigation--previous--action-item post-navigation--previous--action-item">
-                        <span class="label label-previous">Older Entry</span> <?php previous_post_link( '%link', _x( '%title', 'Older Entry', 'hopscotch' ) ); ?>
+                    <li class="nav-item content-nav_nav-item entry-nav_nav-item prev-entry-nav_nav-item">     
+                        <span class="label prev-ct_label">
+                            <span class="label pred_label">Previous</span>
+                            <span class="label subj_label">Entry</span>
+                        </span>
+                        <?php previous_post_link( '%link', _x( '%title', 'Older Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
 
                 </ul>
             </div>
-        </nav><!-- action-items -->
-        <?php endif; ?>
-
-		<?php
-	}
+        </nav><!-- entry-nav_nav -->
+        <?php endif;
+    }
 endif;

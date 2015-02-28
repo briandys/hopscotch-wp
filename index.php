@@ -1,18 +1,13 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package WordPress
- * @subpackage HopScotch
- * @since HopScotch 1.0
- */
+// The main template file
+// This is the most generic template file in a WordPress theme
+// and one of the two required files for a theme (the other being style.css).
+// It is used to display a page when nothing more specific matches a query.
+// e.g., it puts together the home page when no home.php file exists.
+// Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+// @package WordPress
+// @subpackage HopScotch
+// @since HopScotch 1.0
 ?>
 
 <?php get_header(); ?>
@@ -22,9 +17,23 @@
                 <div class="content-hr_cr">
 
                     <h2 class="accessible-name">
+                        
+                    <?php // Singular (is_single, is_page, is_attachment)
+                    // If Front Page is customized
+                    // If Single Content
+                    if ( is_singular() ) : ?>
+                        <span class="label pred_label">Content:</span>
+                        <span class="label subj_label">Main</span>
+
+                    <?php // Front Page
+                    // If Latest Posts are displayed (default)
+                    elseif ( is_front_page() ) : ?>
+                        <span class="label pred_label">Content:</span>
+                        <span class="label subj_label">Front Page</span>
 
                     <?php // Home
-                    if ( is_home() ) : ?>									
+                    // If Posts Page is customized
+                    elseif ( is_home() ) : ?>
                         <span class="label pred_label">Content:</span>
                         <span class="label subj_label">Home</span>
 
@@ -39,9 +48,9 @@
                         echo '<span class="label search-results-count_label">' . $count . '</span> ';
                         echo '<span class="label pred_label">';
                         if ($count == 0 || $count == 1)
-                            echo __( 'Search Result for', 'hopscotch' );
+                            _e( 'Search Result for', 'hopscotch' );
                         else
-                            echo __( 'Search Results for', 'hopscotch' );
+                            _e( 'Search Results for', 'hopscotch' );
                         echo '</span> ';                                     
                         echo '<span class="label subj_label">' . $key . '</span>';
                         wp_reset_postdata();
@@ -74,10 +83,11 @@
                     elseif ( is_author() ) : ?>
                         <?php printf( __( '<span class="label pred_label">All Entries by</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_author() ); ?>
 
-                    <?php // Regular
-                    else : ?>
-                        _e( '<span class="label pred_label">Content:</span>', 'hopscotch' );
-                        _e( '<span class="label subj_label">Main</span>', 'hopscotch' );
+                    <?php // Other
+                    else :
+                        _e( '<span class="label pred_label">Content: </span>', 'hopscotch' );
+                        _e( '<span class="label subj_label">Other</span>', 'hopscotch' );
+                    ?>
                     <?php endif; ?>
                     </h2>
 
@@ -108,16 +118,30 @@
                         
                         <div class="primary-content_ct">
 
-                        <?php
-                        if ( have_posts() ) :
+                        <?php // Singular (is_single, is_page, is_attachment)
+                        if ( is_singular() ) : ?>
+                            
+                            <?php                                
                             while ( have_posts() ) : the_post();
-                                get_template_part( 'content', get_post_format() );
+                                hopscotch_hook_single_content();
                             endwhile;
-                            hopscotch_web_product_page_nav();
-                        else :
-                            get_template_part( 'content', 'none' );
-                        endif;
-                        ?>
+                            ?>
+                            
+                        <?php // Index
+                        else : ?>
+
+                            <?php
+                            if ( have_posts() ) :
+                                while ( have_posts() ) : the_post();
+                                    get_template_part( 'content', get_post_format() );
+                                endwhile;
+                                hopscotch_web_product_page_nav();
+                            else :
+                                get_template_part( 'content', 'none' );
+                            endif;
+                            ?>
+                            
+                        <?php endif; ?>
 
                         </div><!-- primary-content_ct -->
 

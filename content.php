@@ -1,13 +1,9 @@
 <?php
-/**
- * The default template for displaying content
- *
- * Used for both single and index/archive/search.
- *
- * @package WordPress
- * @subpackage HopScotch
- * @since HopScotch 1.0
- */
+// The default template for displaying content
+// Used for both single and index/archive/search.
+// @package WordPress
+// @subpackage HopScotch
+// @since HopScotch 1.0
 ?>
 
 <?php // Content Header hook
@@ -28,7 +24,7 @@ hopscotch_hook_above_entry();
                     
                     <?php // Format: Not Status
                     if ( ! has_post_format( 'status' ) ) : ?>
-                        
+
                         <?php // Entry title
                         if ( ! is_page_template( 'template-info-card.php' ) ) :
                             the_title( sprintf( '<h1 class="entry-title_name"><a class="entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
@@ -36,7 +32,7 @@ hopscotch_hook_above_entry();
                             the_title( sprintf( '<h1 class="entry-title_name" itemprop="name"><a class="entry-title_axn org" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
                         endif;
                         ?>
-                    
+
                         <?php
                         // Entry Admin Actions
                         hopscotch_entry_admin_actions();
@@ -54,7 +50,6 @@ hopscotch_hook_above_entry();
                     <?php else : ?>
                         <h1 class="entry-title_name">Status Message</h1>
                     <?php endif; ?>
-
                     
                 </div>
 
@@ -97,15 +92,14 @@ hopscotch_hook_above_entry();
             
             <div class="entry-ct_cr">
                 
-                <?php // Entry content
+                <?php // If Content is Search or Author
                 if ( is_search() || is_author() ) : ?>
 
                     <?php the_excerpt(); ?>
 
                 <?php else : ?>
 
-                    <?php // Content
-                    if( $post->post_content !== "" ) { ?>
+                    <?php if( $post->post_content !== "" ) : ?>
 
                         <?php // HopScotch Content Title Hook
                         hopscotch_hook_content_title();
@@ -116,21 +110,17 @@ hopscotch_hook_above_entry();
                         ?>
 
                         <?php // The Content
-                        the_content(
-                            sprintf(
-                                __( '<div class="comp show-content_comp"><span class="label pred_label">Show More</span> <span class="label subj_label">Content of</span> %s</div><!-- show-content_comp -->', 'hopscotch' ),
-                                the_title( '<span class="label entry-title_label">', '</span>', false )
-                            )
-                        );
+                        the_content( sprintf( __( '<div class="comp show-content_comp"><span class="label pred_label">Show More</span> <span class="label subj_label">Content of</span> %s</div><!-- show-content_comp -->', 'hopscotch' ), the_title( '<span class="label entry-title_label">', '</span>', false ) ) );
                         ?>
 
-                    <?php } ?>
-                
-                    <?php // Entry Page Navigation
-                    hopscotch_entry_page_nav();
-                    ?>
+                        <?php // Entry Page Navigation
+                        hopscotch_entry_page_nav();
+                        ?>
+
+                    <?php endif; ?>
 
                 <?php endif; ?>
+            
             </div>
             
             <?php // HopScotch Extra Content Hook

@@ -1,5 +1,5 @@
 <?php
-//------------------------- Breadcrumb Navigation
+// Breadcrumb Navigation
 // Displays the parent pages of a page
 
 function hopscotch_breadcrumb_nav() {    
@@ -10,7 +10,8 @@ function hopscotch_breadcrumb_nav() {
             $ancestors = array_reverse($ancestors);
             ?>
             <nav class="nav content-nav_nav breadcrumb-nav_nav">
-                <h2 class="accessible-name">Breadcrumb Navigation</h2>  
+                <div class="breadcrumb-nav_cr">
+                    <h2 class="accessible-name"><?php _e( 'Breadcrumb Navigation', 'hopscotch' ); ?></h2>  
             <?php
             foreach ($ancestors as $crumb) {
                 echo '<ul class="nav-grp content-nav_nav-grp breadcrumb-nav_nav-grp">';
@@ -19,7 +20,8 @@ function hopscotch_breadcrumb_nav() {
                 echo '</li>';
             }
             ?>
-                </ul>
+                    </ul>
+                </div>
             </nav><!--  breadcrumb-nav_nav -->
         <?php
         }        

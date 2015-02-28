@@ -34,8 +34,8 @@ if ( ! function_exists( 'hopscotch_web_product_page_nav' ) ) :
             'current'  => $paged,
             'mid_size' => 7,
             'add_args' => array_map( 'urlencode', $query_args ),
-            'prev_text' => __( '<span class="label" rel="prev"><span class="label pred_label">Previous</span> <span class="label subj_label">Page</span></span>', 'hopscotch' ),
-            'next_text' => __( '<span class="label" rel="next"><span class="label pred_label">Next</span> <span class="label subj_label">Page</span></span>', 'hopscotch' ),
+            'prev_text' => __( '<span class="label prev-ct_label" rel="prev"><span class="label pred_label">Previous</span> <span class="label subj_label">Page</span></span>', 'hopscotch' ),
+            'next_text' => __( '<span class="label next-ct_label" rel="next"><span class="label pred_label">Next</span> <span class="label subj_label">Page</span></span>', 'hopscotch' ),
             'type'      => 'list',
         ) );
 
