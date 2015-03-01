@@ -3,11 +3,11 @@ Component Name: Primary Navigation
 Class Name: pri-nav_nav
 -->
 <nav id="pri-nav_nav" class="nav pri-nav_nav" role="navigation">
-    
+
     <div class="pri-nav_cr">
-        
+
         <h3 class="accessible-name"><?php _e( 'Primary Navigation', 'hopscotch' ); ?></h3>
-        
+
         <?php
         if ( ! has_nav_menu( 'primary-navigation' ) ) {
             wp_page_menu( array(
@@ -32,14 +32,14 @@ Class Name: pri-nav_nav
 Component Name: Social Navigation
 Class Name: social-nav_nav
 -->
-<nav id="social-nav_nav" class="nav social-nav_nav" role="navigation">
-    
-    <div class="social-nav_cr">
-        
-        <h3 class="accessible-name"><?php _e( 'Social Navigation', 'hopscotch' ); ?></h3>
-        
-        <?php
-        if ( has_nav_menu( 'social-navigation' ) ) {
+<?php if ( has_nav_menu( 'social-navigation' ) ) : ?>
+    <nav id="social-nav_nav" class="nav social-nav_nav" role="navigation">
+
+        <div class="social-nav_cr">
+
+            <h3 class="accessible-name"><?php _e( 'Social Navigation', 'hopscotch' ); ?></h3>
+
+            <?php
             wp_nav_menu( array(
                 'theme_location'    => 'social-navigation',
                 'container'         => 'div',
@@ -47,9 +47,9 @@ Class Name: social-nav_nav
                 'menu_class'        => 'nav-grp social-nav_nav-grp',
                 'depth'             => '1'
             ) );
-        }
-        ?>
+            ?>
 
-    </div>
+        </div>
 
-</nav><!-- social-nav_nav -->
+    </nav><!-- social-nav_nav -->
+<?php endif; ?>

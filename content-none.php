@@ -31,8 +31,9 @@
                 <?php elseif ( is_search() ) : ?>        
                 <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with different keywords.', 'hopscotch' ); ?></p>
 
-                <?php else : ?>        
-                <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'hopscotch' ); ?></p>
+                <?php // 404
+                else : ?>        
+                <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'hopscotch' ); ?></p>
 
                 <?php endif; ?>
             

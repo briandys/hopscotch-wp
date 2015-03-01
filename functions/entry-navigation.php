@@ -16,8 +16,8 @@ if ( ! function_exists('hopscotch_entry_nav' ) ) :
                     ?>
                     <li class="nav-item content-nav_nav-item entry-nav_nav-item next-entry-nav_nav-item">
                         <span class="label next-ct_label">
-                            <span class="label pred_label">Next</span>
-                            <span class="label subj_label">Entry</span>
+                            <span class="label pred_label"><?php _e( 'Next', 'hopscotch' ); ?></span>
+                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span>
                         </span>
                         <?php next_post_link( '%link', _x( '%title', 'Newer Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
@@ -27,8 +27,8 @@ if ( ! function_exists('hopscotch_entry_nav' ) ) :
                     ?>
                     <li class="nav-item content-nav_nav-item entry-nav_nav-item prev-entry-nav_nav-item">     
                         <span class="label prev-ct_label">
-                            <span class="label pred_label">Previous</span>
-                            <span class="label subj_label">Entry</span>
+                            <span class="label pred_label"><?php _e( 'Previous', 'hopscotch' ); ?></span>
+                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span>
                         </span>
                         <?php previous_post_link( '%link', _x( '%title', 'Older Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
