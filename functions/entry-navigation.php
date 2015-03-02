@@ -7,7 +7,7 @@ if ( ! function_exists('hopscotch_entry_nav' ) ) :
 	function hopscotch_entry_nav() {
         if ( get_previous_post_link() || get_next_post_link() ) : ?>
         <nav class="nav content-nav_nav entry-nav_nav" role="navigation">
-            <div class="entry-nav_nav">
+            <div class="cr entry-nav_cr">
                 <h2 class="accessible-name"><?php _e( 'Entry Navigation', 'hopscotch' ); ?></h2>
                 <ul class="nav-grp content-nav_nav-grp entry-nav_nav-grp">
 

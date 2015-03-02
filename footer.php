@@ -3,14 +3,14 @@
 
                 <section class="colophon_cr">
 
-                    <h2 class="accessible-name">Colophon</h2>
+                    <h2 class="accessible-name"><?php _e( 'Colophon', 'hopscotch' ); ?></h2>
 
                     <div class="colophon_ct">
                         
                         <div class="comp show-top_comp">    
                             <div class="show-top_cr">
                                 <a class="show-top_axn" href="#html" title="Show Top">
-                                    <span class="label">Show Top</span>
+                                    <span class="label"><?php _e( 'Show Top', 'hopscotch' ); ?></span>
                                 </a>
                             </div>
                         </div><!-- show-top_comp -->

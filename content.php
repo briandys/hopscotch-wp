@@ -14,22 +14,22 @@ hopscotch_content_header();
 hopscotch_hook_above_entry();
 ?>
 
-<article id="<?php hopscotch_post_id(); ?>" <?php post_class( 'comp entry_comp' ); ?> <?php hopscotch_hook_entry_data_att(); ?>>
-    <div class="entry_cr <?php hopscotch_slug_class(); ?>-entry_cr">
+<article id="<?php hopscotch_post_id(); ?>" <?php post_class( 'comp entry_comp article-entry_comp' ); ?> <?php hopscotch_hook_entry_data_att(); ?>>
+    <div class="entry_cr article-entry_cr <?php hopscotch_slug_class(); ?>-entry_cr">
         
-        <header class="entry_hr">
-            <div class="entry-hr_cr">
+        <header class="entry_hr article-entry_hr">
+            <div class="entry-hr_cr article-entry-hr_cr">
             
-                <div class="entry-hr_hr">
+                <div class="entry-hr_hr article-entry-hr_hr">
                     
                     <?php // Format: Not Status
                     if ( ! has_post_format( 'status' ) ) : ?>
 
                         <?php // Entry title
                         if ( ! is_page_template( 'template-info-card.php' ) ) :
-                            the_title( sprintf( '<h1 class="entry-title_name"><a class="entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+                            the_title( sprintf( '<h1 class="article-entry-title_name"><a class="article-entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
                         else :
-                            the_title( sprintf( '<h1 class="entry-title_name" itemprop="name"><a class="entry-title_axn org" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+                            the_title( sprintf( '<h1 class="article-entry-title_name" itemprop="name"><a class="article-entry-title_axn org" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
                         endif;
                         ?>
 
@@ -48,14 +48,14 @@ hopscotch_hook_above_entry();
                         hopscotch_breadcrumb_nav();
                         ?>
                     <?php else : ?>
-                        <h1 class="entry-title_name">Status Message</h1>
+                        <h1 class="article-entry-title_name"><?php _e( 'Status Message', 'hopscotch' ); ?></h1>
                     <?php endif; ?>
                     
                 </div>
 
-                <div class="entry-hr_ct">
-                    <div class="comp entry-byline_comp">                        
-                        <div class="comp entry-byline_cr">
+                <div class="entry-hr_ct article-entry-hr_ct">
+                    <div class="comp entry-byline_comp article-entry-byline_comp">                        
+                        <div class="comp entry-byline_cr article-entry-byline_cr">
                             <?php // Entry Author
                             hopscotch_entry_author();
                             ?>
@@ -64,7 +64,7 @@ hopscotch_hook_above_entry();
                             hopscotch_entry_published_timestamp();
                             ?>                        
                         </div>
-                    </div><!-- entry-byline_comp -->
+                    </div><!-- article-entry-byline_comp -->
 
                     <?php // Entry Category
                     hopscotch_entry_category();
@@ -84,13 +84,13 @@ hopscotch_hook_above_entry();
             </div>
         </header>
 
-        <div class="entry_ct <?php hopscotch_hook_entry_content_class(); ?> <?php hopscotch_slug_class(); ?>-entry_ct">
+        <div class="entry_ct article-entry_ct <?php hopscotch_hook_entry_content_class(); ?> <?php hopscotch_slug_class(); ?>-entry_ct">
             
             <?php // HopScotch Pre-content Hook
             hopscotch_hook_pre_content();
             ?>            
             
-            <div class="entry-ct_cr">
+            <div class="entry-ct_cr article-entry-ct_cr">
                 
                 <?php // If Content is Search or Author
                 if ( is_search() || is_author() ) : ?>
@@ -110,7 +110,7 @@ hopscotch_hook_above_entry();
                         ?>
 
                         <?php // The Content
-                        the_content( sprintf( __( '<div class="comp show-content_comp"><span class="label pred_label">Show More</span> <span class="label subj_label">Content of</span> %s</div><!-- show-content_comp -->', 'hopscotch' ), the_title( '<span class="label entry-title_label">', '</span>', false ) ) );
+                        the_content( sprintf( __( '<span class="axn-comp show-content_axn-comp"><span class="label pred_label"><span class="label verb_label">Show</span> <span class="label noun_label">Content</span> <span class="label prep_label">of</span></span> <span class="label subj_label entry-title_label">%s</span></span><!-- show-content_axn-comp -->', 'hopscotch' ), the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
                         ?>
 
                         <?php // Entry Page Navigation
@@ -158,8 +158,8 @@ hopscotch_hook_above_entry();
             
         </div><!-- entry_ct -->
 
-        <footer class="entry_fr">
-            <div class="entry-fr_cr">
+        <footer class="entry_fr article-entry_fr">
+            <div class="entry-fr_cr article-entry-fr_cr">
                         
                 <?php // Entry Modified Timestamp
                 hopscotch_entry_modified_timestamp();

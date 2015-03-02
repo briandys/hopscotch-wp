@@ -72,7 +72,9 @@ require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyri
 
 require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-navigation.php');
 
-
+// Comments
+require_once( trailingslashit(get_template_directory()) . 'functions/comments-item.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/comments-navigation.php');
 
 
 
@@ -100,7 +102,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/data-att-en
 
 // Comments
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-form.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/comment-list.php');
+
 
 // Colophon
 

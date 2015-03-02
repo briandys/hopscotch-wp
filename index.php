@@ -22,19 +22,19 @@
                     // If Front Page is customized
                     // If Single Content
                     if ( is_singular() ) : ?>
-                        <span class="label pred_label">Content:</span>
+                        <span class="label pred_label">Content</span><span class="label colon_label">:</span>
                         <span class="label subj_label">Main</span>
 
                     <?php // Front Page
                     // If Latest Posts are displayed (default)
                     elseif ( is_front_page() ) : ?>
-                        <span class="label pred_label">Content:</span>
+                        <span class="label pred_label">Content</span><span class="label colon_label">:</span>
                         <span class="label subj_label">Front Page</span>
 
                     <?php // Home
                     // If Posts Page is customized
                     elseif ( is_home() ) : ?>
-                        <span class="label pred_label">Content:</span>
+                        <span class="label pred_label">Content</span><span class="label colon_label">:</span>
                         <span class="label subj_label">Home</span>
 
                     <?php // Search Results
@@ -58,22 +58,22 @@
 
                     <?php // Category
                     elseif ( is_category() ) : ?>
-                        <?php printf( __( '<span class="label pred_label">Category:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), single_cat_title( '', false ) ); ?>
+                        <?php printf( __( '<span class="label pred_label">Category</span><span class="label colon_label">:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), single_cat_title( '', false ) ); ?>
 
                     <?php // Tag
                     elseif ( is_tag() ) : ?>
-                        <?php printf( __( '<span class="label pred_label">Tag:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), single_tag_title( '', false ) ); ?>
+                        <?php printf( __( '<span class="label pred_label">Tag</span><span class="label colon_label">:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), single_tag_title( '', false ) ); ?>
 
                     <?php // Archive
                     elseif ( is_archive() && ! is_author() ) : ?>
                         <?php echo '<span class="label pred_label">'; ?>
                         <?php
                         if ( is_day() ) :
-                            printf( __( 'Daily Archives:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_date() );
+                            printf( __( 'Daily Archives</span><span class="label colon_label">:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_date() );
                         elseif ( is_month() ) :
-                            printf( __( 'Monthly Archives:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'hopscotch' ) ) );
+                            printf( __( 'Monthly Archives</span><span class="label colon_label">:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'hopscotch' ) ) );
                         elseif ( is_year() ) :
-                            printf( __( 'Yearly Archives:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_date( _x( 'Y', 'yearly archives date format', 'hopscotch' ) ) );
+                            printf( __( 'Yearly Archives</span><span class="label colon_label">:</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_date( _x( 'Y', 'yearly archives date format', 'hopscotch' ) ) );
                         else :
                             _e( 'Archives</span>', 'hopscotch' );
                         endif;
@@ -84,10 +84,9 @@
                         <?php printf( __( '<span class="label pred_label">All Entries by</span> <span class="label subj_label">%s</span>', 'hopscotch' ), get_the_author() ); ?>
 
                     <?php // Other
-                    else :
-                        _e( '<span class="label pred_label">Content: </span>', 'hopscotch' );
-                        _e( '<span class="label subj_label">Other</span>', 'hopscotch' );
-                    ?>
+                    else : ?>
+                        <span class="label pred_label"><?php _e( 'Content', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
+                        <span class="label subj_label"><?php _e( 'Other', 'hopscotch' ); ?></span>
                     <?php endif; ?>
                     </h2>
 
@@ -114,7 +113,7 @@
 
                     <section class="primary-content_cr">
 
-                        <h3 class="accessible-name">Primary Content</h3>
+                        <h3 class="accessible-name"><?php _e( 'Primary Content', 'hopscotch' ); ?></h3>
                         
                         <div class="primary-content_ct">
 
