@@ -39,16 +39,9 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                     </div>
                                 </div><!-- entry-author_comp -->
 
-                                <div class="comp timestamp_comp comment-entry-timestamp_comp">
-                                    <div class="cr timestamp_cr comment-entry-timestamp_cr">
-                                        <span class="label pred_label"><?php _e( 'Commented on', 'hopscotch' ); ?></span>
-                                        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>" rel="bookmark" title="">
-                                            
-                                            <?php hopscotch_comment_entry_published_timestamp(); ?>
-                                            
-                                        </a>
-                                    </div>
-                                </div><!-- comment-entry-timestamp_comp -->
+                                <?php // functions > entry-timestamp.php
+                                hopscotch_comment_entry_published_timestamp();
+                                ?>
 
                                 <?php if ( current_user_can('edit_posts') ) : ?>
                                 <div class="axn-comp admin-axn_axn-comp comment-entry-admin-axn_axn-comp">
@@ -88,12 +81,12 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                 <ul class="axn-grp comment-entry-axn_axn-grp">
                                     <li class="axn-item reply_axn-item comment-entry-reply-axn_axn-item">
                                         <?php comment_reply_link( array_merge( $args,
-                                                                              array(
-                                                                                  'add_below'   => $add_below,
-                                                                                  'depth'       => 1,
-                                                                                  'max_depth'   => $args['max_depth'],
-                                                                                  'reply_text'  => '<span class="label pred_label"><span class="label verb_label">Reply</span> <span class="label prep_label">to</span></span> <span class="label subj_label">Comment</span>'
-                                                                              ) ) ); ?>
+                                            array(
+                                                'add_below'   => $add_below,
+                                                'depth'       => 1,
+                                                'max_depth'   => $args['max_depth'],
+                                                'reply_text'  => '<span class="label pred_label"><span class="label verb_label">Reply</span> <span class="label prep_label">to</span></span> <span class="label subj_label">Comment</span>'
+                                            ) ) ); ?>
                                 </ul>
                             </div>
                         </div><!-- comment-entry-axn_axn-comp -->

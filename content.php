@@ -61,7 +61,7 @@ hopscotch_hook_above_entry();
                             ?>
                             <?php
                             // Entry Published Timestamp
-                            hopscotch_entry_published_timestamp();
+                            hopscotch_article_entry_published_timestamp();
                             ?>                        
                         </div>
                     </div><!-- article-entry-byline_comp -->
@@ -162,7 +162,7 @@ hopscotch_hook_above_entry();
             <div class="entry-fr_cr article-entry-fr_cr">
                         
                 <?php // Entry Modified Timestamp
-                hopscotch_entry_modified_timestamp();
+                hopscotch_article_entry_modified_timestamp();
                 ?>
                 
                 <?php // Entry Tags
