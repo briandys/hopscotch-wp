@@ -52,5 +52,5 @@ function hopscotch_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'hopscotch_categories' );
 }
-add_action( 'edit_category', 'twentyfifteen_category_transient_flusher' );
-add_action( 'save_post',     'twentyfifteen_category_transient_flusher' );
+add_action( 'edit_category', 'hopscotch_category_transient_flusher' );
+add_action( 'save_post',     'hopscotch_category_transient_flusher' );

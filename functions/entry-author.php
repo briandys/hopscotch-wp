@@ -20,10 +20,15 @@ if ( ! function_exists( 'hopscotch_entry_author' ) ) :
             $author_comp_string .= '</div><!-- article-entry--author_comp -->';
 
             printf( $author_comp_string,
-                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), // 1: Author URL
+                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), // 1: Author Entries URL
                 esc_attr( sprintf( __( 'View all entries by %s', 'hopscotch' ), get_the_author() ) ), // 2: Title
                 get_the_author(), // 3: Author Name
-                get_avatar( get_the_author_meta( 'user_email' ), $size = '32') // 2: Author Avatar
+                get_avatar(
+                    get_the_author_meta( 'user_email' ),
+                    $size = '32',
+                    $default = '',
+                    $alt = 'Author Avatar of ' . get_the_author_meta( 'display_name' )
+                ) // 2: Author Avatar
             );
         }
     }

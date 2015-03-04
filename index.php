@@ -13,29 +13,27 @@
 <?php get_header(); ?>
 
             <div class="content_hr">
-
                 <div class="content-hr_cr">
-
                     <h2 class="accessible-name">
                         
                     <?php // Singular (is_single, is_page, is_attachment)
                     // If Front Page is customized
                     // If Single Content
                     if ( is_singular() ) : ?>
-                        <span class="label pred_label">Content</span><span class="label colon_label">:</span>
-                        <span class="label subj_label">Main</span>
+                        <span class="label pred_label"><?php _e( 'Content', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
+                        <span class="label subj_label"><?php _e( 'Main', 'hopscotch' ); ?></span>
 
                     <?php // Front Page
                     // If Latest Posts are displayed (default)
                     elseif ( is_front_page() ) : ?>
-                        <span class="label pred_label">Content</span><span class="label colon_label">:</span>
-                        <span class="label subj_label">Front Page</span>
+                        <span class="label pred_label"><?php _e( 'Content', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
+                        <span class="label subj_label"><?php _e( 'Front Page', 'hopscotch' ); ?></span>
 
                     <?php // Home
                     // If Posts Page is customized
                     elseif ( is_home() ) : ?>
-                        <span class="label pred_label">Content</span><span class="label colon_label">:</span>
-                        <span class="label subj_label">Home</span>
+                        <span class="label pred_label"><?php _e( 'Content', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
+                        <span class="label subj_label"><?php _e( 'Home', 'hopscotch' ); ?></span>
 
                     <?php // Search Results
                     elseif ( is_search() ) :
@@ -110,32 +108,37 @@
 
                 <!-- Sub-Constructor: Primary Content -->
                 <div class="comp primary-content_comp">
-
                     <section class="primary-content_cr">
-
                         <h3 class="accessible-name"><?php _e( 'Primary Content', 'hopscotch' ); ?></h3>
-                        
                         <div class="primary-content_ct">
 
-                        <?php // Singular (is_single, is_page, is_attachment)
+                        <?php // Function as single.php (is_single, is_page, is_attachment)
                         if ( is_singular() ) : ?>
                             
                             <?php                                
                             while ( have_posts() ) : the_post();
-                                hopscotch_hook_single_content();
+                                
+                                // Called from functions > single-content.php
+                                hopscotch_single_content();
                             endwhile;
                             ?>
                             
-                        <?php // Index
+                        <?php // Function as index.php
                         else : ?>
 
                             <?php
                             if ( have_posts() ) :
                                 while ( have_posts() ) : the_post();
+                                    
+                                    // Calls content.php
                                     get_template_part( 'content', get_post_format() );
                                 endwhile;
+                                
+                                // Called from functions > web-product-page-navigation.php
                                 hopscotch_web_product_page_nav();
                             else :
+                                
+                                // Calls content-none.php
                                 get_template_part( 'content', 'none' );
                             endif;
                             ?>
@@ -143,17 +146,13 @@
                         <?php endif; ?>
 
                         </div><!-- primary-content_ct -->
-
                     </section>
-
                 </div><!-- primary-content_comp -->
 
                 <?php get_sidebar(); ?>
                 
             </div><!-- content_ct -->
-
         </section>
-    
     </main><!-- content -->
 
 <?php get_footer(); ?>

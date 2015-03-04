@@ -1,6 +1,5 @@
-<?php
+<?php // Auto Copyright Year
 
-//------------------------- Auto Copyright Year
 function hopscotch_copyright_range($year = 'auto'){
 	if (intval($year) == 'auto'){ $year = date('Y'); }
 	elseif (intval($year) == date('Y')){ echo intval($year); }

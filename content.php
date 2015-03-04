@@ -15,7 +15,7 @@ hopscotch_hook_above_entry();
 ?>
 
 <article id="<?php hopscotch_post_id(); ?>" <?php post_class( 'comp entry_comp article-entry_comp' ); ?> <?php hopscotch_hook_entry_data_att(); ?>>
-    <div class="entry_cr article-entry_cr <?php hopscotch_slug_class(); ?>-entry_cr">
+    <div class="cr entry_cr article-entry_cr">
         
         <header class="entry_hr article-entry_hr">
             <div class="entry-hr_cr article-entry-hr_cr">
@@ -28,15 +28,19 @@ hopscotch_hook_above_entry();
                         <?php // Entry title
                         if ( ! is_page_template( 'template-info-card.php' ) ) :
                             the_title( sprintf( '<h1 class="article-entry-title_name"><a class="article-entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+                        
+                        // For Info Card Template - with Microformats
                         else :
                             the_title( sprintf( '<h1 class="article-entry-title_name" itemprop="name"><a class="article-entry-title_axn org" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
                         endif;
                         ?>
 
-                        <?php
-                        // Entry Admin Actions
-                        hopscotch_entry_admin_actions();
-                        ?>
+                        <div class="axn-comp entry-admin_axn-comp">
+                            <p class="accessible-name"><?php _e( 'Entry Admin Actions', 'hopscotch' ); ?></p>
+                            <ul class="axn_grp entry-admin-axn_axn-grp">
+                                <?php edit_post_link( __( '<span class="label pred_label">Edit</span> <span class="label subj_label">Entry</span>', 'hopscotch' ), '<li class="axn_item entry-admin-axn_axn-item">', '</li>' ); ?>
+                            </ul>
+                        </div><!-- entry-admin_axn -->
 
                         <?php
                         // WP Plugin: HopScotch Enhancer
@@ -84,7 +88,7 @@ hopscotch_hook_above_entry();
             </div>
         </header>
 
-        <div class="entry_ct article-entry_ct <?php hopscotch_hook_entry_content_class(); ?> <?php hopscotch_slug_class(); ?>-entry_ct">
+        <div class="ct entry_ct article-entry_ct <?php hopscotch_hook_entry_content_class(); ?>">
             
             <?php // HopScotch Pre-content Hook
             hopscotch_hook_pre_content();

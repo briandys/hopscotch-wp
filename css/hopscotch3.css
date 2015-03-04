@@ -15,9 +15,9 @@
 .ui-type__screen--narrow .ui-state__nav-sidebar-masthead--inactive,
 
 /* Search Component */
-.ui-state__search--active .search-form_label,
-.ui-state__search--inactive .search-form_input,
-.ui-state__search--inactive .search-form_button {
+.masthead-sidebar_sidebar .ui-state__search--active .search-form_label,
+.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_input,
+.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_button {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -32,8 +32,8 @@
 .show-content_axn:focus,
 
 /* Search Component */
-.ui-state__search--inactive .search-form_input:focus,
-.ui-state__search--inactive .search-form_button:focus {
+.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_input:focus,
+.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_button:focus {
   clip: auto;
   width: auto;
   height: auto;

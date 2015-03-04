@@ -61,23 +61,62 @@
         <a class="show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
         
         <div class="ui-view--home ui-cr--screen">
-        
             
-            <!-- Constructor: Masthead -->
             <header id="masthead" class="masthead" role="banner">
   
               <div class="masthead_cr">
                   
-                <?php get_template_part( 'components/web-product-header' ); ?>
+                <div class="comp web-product-header_comp">
+                    <div class="web-product-header_cr">
+                        <h1 class="web-product_name">
+                            <a class="web-product-name_axn" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Home">
+                                <span class="label web-product-name_label"><?php bloginfo( 'name' ); ?></span>
+                            </a>
+                        </h1>
 
-                <?php get_template_part( 'components/masthead-content' ); ?>
+                        <?php $description = get_bloginfo( 'description', 'display' );
+                        if ( $description || is_customize_preview() ) : ?>
+                            <p class="web-product_desc"><?php echo $description; ?></p>
+                        <?php endif; ?>
 
+                    </div> 
+                </div><!-- web-product-header_comp -->
+
+                <div id="masthead_ct" class="masthead_ct">
+    
+                    <button id="pri-nav_toggle-axn" class="axn toggle_axn pri-nav_toggle-axn">
+                        <span class="label"><?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?></span>
+                        <span class="svg-icon-cr"><svg class="icon icon-menu" width="0" height="0" viewBox="0 0 48 48"><use xlink:href="#icon-menu"></use></svg></span>
+                    </button><!-- pri-nav_toggle-axn -->
+
+                    <div id="nav-sidebar-masthead_comp" class="comp nav-sidebar-masthead_comp ui-state__nav-sidebar-masthead--inactive" aria-expanded="false">
+
+                        <section class="nav-sidebar-masthead_cr">
+
+                            <h2 class="accessible-name"><?php _e( 'Masthead Navigation and Sidebar', 'hopscotch' ); ?></h2>    
+                            <div class="nav-sidebar-masthead_ct">
+
+                                <?php // Masthead Navigation
+                                // Located at functions > masthead-navigation.php
+                                hopscotch_masthead_navigation(); ?>
+
+                                <?php if ( is_active_sidebar( 'masthead-sidebar' )  ) : ?>
+                                <aside class="sidebar masthead-sidebar_sidebar" role="complementary">
+                                    <div class="masthead-sidebar_cr">
+                                        <h3 class="accessible-name"><?php _e( 'Masthead Sidebar', 'hopscotch' ); ?></h3>
+                                        <div class="masthead-sidebar_ct widget-area">
+                                            <?php dynamic_sidebar( 'masthead-sidebar' ); ?>
+                                        </div><!-- masthead-sidebar_ct -->
+                                    </div>
+                                </aside><!-- masthead-sidebar_sidebar -->
+                                <?php endif; ?>
+
+                            </div><!-- nav-sidebar-masthead_ct -->
+                        </section>
+                    </div><!-- nav-sidebar-masthead_comp -->
+                </div><!-- masthead_ct -->
               </div>
-
             </header><!-- masthead -->
             
-            
-            <!-- Constructor: Content -->
             <main id="content" class="content" role="main">
-                
                 <section class="content_cr">

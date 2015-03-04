@@ -51,11 +51,6 @@ function hopscotch_hook_entry_data_att() {
     do_action('hopscotch_hook_entry_data_att');
 }
 
-// Location: single.php > .main-content-ct
-function hopscotch_hook_single_content() {
-    do_action('hopscotch_hook_single_content');
-}
-
 // Location: content.php > .entry-ct-cr
 function hopscotch_hook_pre_the_content() {
     do_action('hopscotch_hook_pre_the_content');

@@ -8,8 +8,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/setup.php')
 require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
 
 
-// Content
-require_once( trailingslashit(get_template_directory()) . 'functions/single-content.php');
 
 
 // Front-end
@@ -32,7 +30,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/widgets.php
 
 // Header
 require_once( trailingslashit(get_template_directory()) . 'functions/home-link.php');
-// require_once( trailingslashit(get_template_directory()) . 'functions/admin-nav.php');
 
 
 
@@ -52,17 +49,11 @@ require_once( trailingslashit(get_template_directory()) . 'functions/home-link.p
 
 
 // Updated
-require_once( trailingslashit(get_template_directory()) . 'functions/web-product-page-navigation.php');
-
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-page-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-admin-actions.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-comments-action.php');
 
 // Published and Modified Timestamps
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
-
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
-
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-author.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-category.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-banner.php');
@@ -70,11 +61,27 @@ require_once( trailingslashit(get_template_directory()) . 'functions/entry-tag.p
 
 require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
 
-require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-navigation.php');
-
 // Comments
 require_once( trailingslashit(get_template_directory()) . 'functions/comments-item.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/comments-navigation.php');
+
+// Navigation
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/masthead-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/web-product-page-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/entry-page-navigation.php');
+
+require_once( trailingslashit(get_template_directory()) . 'functions/single-content.php');
+
+// Conditionals
+require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-category-descendant.php');
+
+
+
+
+
+
 
 
 
@@ -110,7 +117,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/comment-for
 
 // Functionalities, Conditionals
 require_once( trailingslashit(get_template_directory()) . 'functions/conditional-is-child.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/category-descendant.php');
+
 require_once( trailingslashit(get_template_directory()) . 'functions/widget-entry-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/page-id-via-slug.php');
