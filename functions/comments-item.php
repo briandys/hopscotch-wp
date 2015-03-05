@@ -39,21 +39,17 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                     </div>
                                 </div><!-- entry-author_comp -->
 
-                                <?php // functions > entry-timestamp.php
+                                <?php
+                                // Comment Entry Published Timestamp
+                                // Location: functions > entry-timestamp.php
                                 hopscotch_comment_entry_published_timestamp();
                                 ?>
 
-                                <?php if ( current_user_can('edit_posts') ) : ?>
-                                <div class="axn-comp admin-axn_axn-comp comment-entry-admin-axn_axn-comp">
-                                    <div class="admin-axn_axn-cr comment-entry-admin-axn_axn-cr">
-                                        <p class="accessible-name"><?php _e( 'Comment Admin Actions', 'hopscotch' ); ?></p>
-                                        <ul class="axn-grp comment-entry-admin-axn_axn-grp">
-                                            <li class="axn-item edit_axn-item comment-entry-edit-axn_axn-item">
-                                                <?php edit_comment_link( __( '<span class="label pred_label">Edit</span> <span class="label subj_label">Comment</span>', 'hopscotch' ),'  ','' ); ?>
-                                        </ul>
-                                    </div>
-                                </div><!-- comment-entry-admin-axn_axn-comp -->
-                                <?php endif; ?>
+                                <?php
+                                // Comment Entry Admin Actions
+                                // Location: functions > entry-admin-actions.php
+                                hopscotch_comment_entry_admin_actions();
+                                ?>
 
                             </div><!-- entry-byline_comp -->
 
@@ -66,13 +62,16 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
 
                         <?php if ( $comment->comment_approved == '0' ) : ?>
                         <div class="notice comment-pending_notice">
-                            <div class="cr notice_cr">
-                                <p><?php _e('Your comment is awaiting moderation.', 'hopscotch') ?></p>
+                            <div class="cr comment-pending-notice_cr">
+                                <p><?php _e('Thanks! Your comment will be reviewed for approval.', 'hopscotch') ?></p>
                             </div>
-                        </div><!-- blank-comments_notice -->
+                        </div><!-- comment-pending_notice -->
                         <?php endif; ?>
 
-                        <?php comment_text() ?>
+                        <?php
+                        // Comment Entry
+                        comment_text()
+                        ?>
 
                         <?php if ( comments_open() ) : ?>
                         <div class="axn-comp comment-entry-axn_axn-comp">
@@ -82,10 +81,11 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                     <li class="axn-item reply_axn-item comment-entry-reply-axn_axn-item">
                                         <?php comment_reply_link( array_merge( $args,
                                             array(
-                                                'add_below'   => $add_below,
-                                                'depth'       => 1,
-                                                'max_depth'   => $args['max_depth'],
-                                                'reply_text'  => '<span class="label pred_label"><span class="label verb_label">Reply</span> <span class="label prep_label">to</span></span> <span class="label subj_label">Comment</span>'
+                                                'add_below'     => $add_below,
+                                                'depth'         => 1,
+                                                'max_depth'     => $args['max_depth'],
+                                                'reply_text'    => '<span class="label pred_label"><span class="label verb_label">Reply</span> <span class="label prep_label">to</span></span> <span class="label subj_label">Comment</span>',
+                                                'login_text'    => '<span class="label pred_label"><span class="label verb_label">Sign</span> <span class="label adv_label">in</span> <span class="label prep_label">to</span></span> <span class="label subj_label">post a reply.</span>'
                                             ) ) ); ?>
                                 </ul>
                             </div>

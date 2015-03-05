@@ -1,16 +1,10 @@
 <?php
+// Action Hooks
 
-//------------------------- Action hooks
-function hopscotch_html_class() {
-    do_action('hopscotch_html_class');
-}
+
 
 function hopscotch_post_id() {
     do_action('hopscotch_post_id');
-}
-
-function hopscotch_slug_class() {
-    do_action('hopscotch_slug_class');
 }
 
 function hopscotch_content_header() {
@@ -56,19 +50,9 @@ function hopscotch_hook_pre_the_content() {
     do_action('hopscotch_hook_pre_the_content');
 }
 
-// Location: header.php > html
-function hopscotch_html_data_att() {
-    do_action('hopscotch_html_data_att');
-}
-
 // Location: index.php > .main-content-ct
 function hopscotch_hook_index_content() {
     do_action('hopscotch_hook_index_content');
-}
-
-// Location: content.php > .entry-ct
-function hopscotch_hook_entry_content_class() {
-    do_action('hopscotch_hook_entry_content_class');
 }
 
 // Location: content.php > the_content
@@ -79,11 +63,6 @@ function hopscotch_hook_the_content() {
 // Location: content.php > .entry-meta-cr
 function hopscotch_hook_header_meta() {
     do_action('hopscotch_hook_header_meta');
-}
-
-// Location: components > main-navigation.php > .main-navigation
-function hopscotch_main_nav_class() {
-    do_action('hopscotch_main_nav_class');
 }
 
 // Location: content.php > entry-hr-cr

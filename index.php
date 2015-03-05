@@ -118,8 +118,19 @@
                             <?php                                
                             while ( have_posts() ) : the_post();
                                 
-                                // Called from functions > single-content.php
+                                // Location: functions > single-content.php
                                 hopscotch_single_content();
+
+                                // Article Entry Navigation
+                                // Location: functions > entry-navigation.php
+                                hopscotch_article_entry_nav();
+
+                                if ( comments_open() || get_comments_number() ) {
+
+                                    // Location: comments.php
+                                    comments_template();
+                                }
+
                             endwhile;
                             ?>
                             

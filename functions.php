@@ -4,8 +4,7 @@
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
 
 
-// Action hooks
-require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
+
 
 
 
@@ -33,14 +32,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/home-link.p
 
 
 
-// Previous Entry / Next Entry
 
-
-
-
-
-// Entry
-//require_once( trailingslashit(get_template_directory()) . 'functions/page-title.php');
 
 
 
@@ -49,8 +41,14 @@ require_once( trailingslashit(get_template_directory()) . 'functions/home-link.p
 
 
 // Updated
+
+// Action Hooks
+require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
+
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-admin-actions.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/entry-comments-action.php');
+
+// Article Entry
+require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-comments-actions.php');
 
 // Published and Modified Timestamps
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-timestamp.php');
@@ -63,7 +61,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyri
 
 // Comments
 require_once( trailingslashit(get_template_directory()) . 'functions/comments-item.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/comments-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/comment-modify-reply-title.php');
 
 // Navigation
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
@@ -76,8 +74,13 @@ require_once( trailingslashit(get_template_directory()) . 'functions/single-cont
 
 // Conditionals
 require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-category-descendant.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-is-child.php');
 
-
+// Add Classes for CSS Selectors
+require_once( trailingslashit(get_template_directory()) . 'functions/class-body.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-entry.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-rename-page-template.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/class-plain-image.php');
 
 
 
@@ -94,13 +97,10 @@ require_once( trailingslashit(get_template_directory()) . 'functions/excerpt.php
 require_once( trailingslashit(get_template_directory()) . 'functions/id-entry.php');
 
 // Classes
-require_once( trailingslashit(get_template_directory()) . 'functions/class-html.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/class-body.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/class-entry.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/class-plain-image.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/class-slug.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/class-page-template.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/class-main-nav.php');
+
+
+
+
 
 
 // Data Attributes
@@ -116,7 +116,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/comment-for
 
 
 // Functionalities, Conditionals
-require_once( trailingslashit(get_template_directory()) . 'functions/conditional-is-child.php');
+
 
 require_once( trailingslashit(get_template_directory()) . 'functions/widget-entry-count-format.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/image-margin-fix.php');

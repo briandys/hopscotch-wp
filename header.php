@@ -60,7 +60,7 @@
 
         <a class="show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
         
-        <div class="ui-view--home ui-cr--screen">
+        <div class="ui-cr__view--screen">
             
             <header id="masthead" class="masthead" role="banner">
   

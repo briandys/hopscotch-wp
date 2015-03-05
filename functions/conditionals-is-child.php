@@ -1,6 +1,5 @@
 <?php
-
-//------------------------- Is Child Conditional
+// Is Child Conditional
 // http://www.kevinleary.net/wordpress-is_child-for-advanced-navigation/
 
 function is_child( $parent = '' ) {

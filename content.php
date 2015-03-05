@@ -17,10 +17,10 @@ hopscotch_hook_above_entry();
 <article id="<?php hopscotch_post_id(); ?>" <?php post_class( 'comp entry_comp article-entry_comp' ); ?> <?php hopscotch_hook_entry_data_att(); ?>>
     <div class="cr entry_cr article-entry_cr">
         
-        <header class="entry_hr article-entry_hr">
-            <div class="entry-hr_cr article-entry-hr_cr">
+        <header class="hr entry_hr article-entry_hr">
+            <div class="cr entry-hr_cr article-entry-hr_cr">
             
-                <div class="entry-hr_hr article-entry-hr_hr">
+                <div class="hr entry-hr_hr article-entry-hr_hr">
                     
                     <?php // Format: Not Status
                     if ( ! has_post_format( 'status' ) ) : ?>
@@ -35,12 +35,11 @@ hopscotch_hook_above_entry();
                         endif;
                         ?>
 
-                        <div class="axn-comp entry-admin_axn-comp">
-                            <p class="accessible-name"><?php _e( 'Entry Admin Actions', 'hopscotch' ); ?></p>
-                            <ul class="axn_grp entry-admin-axn_axn-grp">
-                                <?php edit_post_link( __( '<span class="label pred_label">Edit</span> <span class="label subj_label">Entry</span>', 'hopscotch' ), '<li class="axn_item entry-admin-axn_axn-item">', '</li>' ); ?>
-                            </ul>
-                        </div><!-- entry-admin_axn -->
+                        <?php
+                        // Article Entry Admin Actions
+                        // Location: functions > entry-admin-actions.php
+                        hopscotch_article_entry_admin_actions();
+                        ?>
 
                         <?php
                         // WP Plugin: HopScotch Enhancer
@@ -57,9 +56,9 @@ hopscotch_hook_above_entry();
                     
                 </div>
 
-                <div class="entry-hr_ct article-entry-hr_ct">
+                <div class="ct entry-hr_ct article-entry-hr_ct">
                     <div class="comp entry-byline_comp article-entry-byline_comp">                        
-                        <div class="comp entry-byline_cr article-entry-byline_cr">
+                        <div class="cr entry-byline_cr article-entry-byline_cr">
                             <?php // Entry Author
                             hopscotch_entry_author();
                             ?>
@@ -74,10 +73,10 @@ hopscotch_hook_above_entry();
                     hopscotch_entry_category();
                     ?>
                     
-                    <?php // Entry Comments Action
-                    if ( ! is_search() ) :
-                        hopscotch_entry_comments_action();
-                    endif;
+                    <?php
+                    // Article Entry Comments Action
+                    // Location: functions > article-entry-comments-actions.php
+                    hopscotch_article_entry_comments_actions();
                     ?>
                     
                     <?php // Entry Banner
@@ -88,13 +87,13 @@ hopscotch_hook_above_entry();
             </div>
         </header>
 
-        <div class="ct entry_ct article-entry_ct <?php hopscotch_hook_entry_content_class(); ?>">
+        <div class="ct entry_ct article-entry_ct">
             
             <?php // HopScotch Pre-content Hook
             hopscotch_hook_pre_content();
             ?>            
             
-            <div class="entry-ct_cr article-entry-ct_cr">
+            <div class="cr entry-ct_cr article-entry-ct_cr">
                 
                 <?php // If Content is Search or Author
                 if ( is_search() || is_author() ) : ?>
@@ -148,13 +147,13 @@ hopscotch_hook_above_entry();
                 ?>                
 
                 <?php if ( $the_query->have_posts() ) : ?>
-                    <div class="comp sub-entry_comp">
-                        <div class="sub-entry_comp_cr">
+                    <div class="comp sub-entry_comp article-sub-entry_comp">
+                        <div class="cr sub-entry_cr article-sub-entry_cr">
                         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <?php get_template_part( 'content', get_post_format() ); ?>
                         <?php endwhile; ?>
                         </div>
-                    </div><!-- sub-entry_comp -->
+                    </div><!-- article-sub-entry_comp -->
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
 
@@ -162,8 +161,8 @@ hopscotch_hook_above_entry();
             
         </div><!-- entry_ct -->
 
-        <footer class="entry_fr article-entry_fr">
-            <div class="entry-fr_cr article-entry-fr_cr">
+        <footer class="fr entry_fr article-entry_fr">
+            <div class="cr entry-fr_cr article-entry-fr_cr">
                         
                 <?php // Entry Modified Timestamp
                 hopscotch_article_entry_modified_timestamp();

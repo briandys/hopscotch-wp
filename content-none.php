@@ -6,34 +6,34 @@
 // @since HopScotch 1.0
 ?>
 
-<article class="comp entry_comp">
-    <div class="entry_cr">
+<article class="comp entry_comp article-entry_comp">
+    <div class="cr entry_cr article-entry_cr">
         
-        <header class="entry_hr">
-            <div class="entry-hr_cr">            
-                <div class="entry-hr_hr">                    
+        <header class="hr entry_hr article-entry_hr">
+            <div class="cr entry-hr_cr article-entry-hr_cr">            
+                <div class="hr entry-hr_hr article-entry-hr_hr">                    
                     <h1 class="entry-title_name"><?php _e( 'Nothing Found', 'hopscotch' ); ?></h1>                    
                 </div>            
             </div>
         </header>
 
-        <div class="entry_ct">
+        <div class="ct entry_ct article-entry_ct">
             
             <?php // HopScotch Pre-content Hook
             hopscotch_hook_pre_content();
             ?>            
             
-            <div class="entry-ct_cr">
+            <div class="cr entry-ct_cr article-entry-ct_cr">
                 
                 <?php // Blank Home Page (no entries yet)
                 if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>    
                 <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started</a>.', 'hopscotch' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>        
 
-                <?php // Search Result
+                <?php // No Search Result
                 elseif ( is_search() ) : ?>        
-                <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with different keywords.', 'hopscotch' ); ?></p>
+                <p><?php _e( 'Sorry, nothing matched your search terms. Please try again with different keywords.', 'hopscotch' ); ?></p>
 
-                <?php // 404
+                <?php // 404 (page not found)
                 else : ?>        
                 <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'hopscotch' ); ?></p>
 
