@@ -11,12 +11,17 @@ function hopscotch_hook_article_entry_banner() {
     do_action('hopscotch_hook_article_entry_banner');
 }
 
-
-
+// Location: header.php
+function hopscotch_hook_html_class() {
+    do_action('hopscotch_hook_html_class');
+}
 
 function hopscotch_post_id() {
     do_action('hopscotch_post_id');
 }
+
+
+
 
 function hopscotch_content_header() {
     do_action('hopscotch_content_header');

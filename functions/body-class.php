@@ -10,9 +10,9 @@ function hopscotch_body_class( $classes ) {
 
     // Sets class for inner or front page
     if ( ! is_front_page() )
-        $classes[] = 'ui-type__view--inner';
+        $classes[] = 'ui-view--inner';
     else
-        $classes[] = 'ui-type__view--front';
+        $classes[] = 'ui-view--front';
 
     // Entry Slug as Class
     // Format: <Post Type>--<Slug>
@@ -68,7 +68,7 @@ function hopscotch_body_class( $classes ) {
     // Format: ui-template__view--<template-name>
     // Translates to: The template of "view or page" is "solo" or "info card".
     $page_template = get_page_template();
-    if ( $page_template != null ) {
+    if ( $page_template != null && is_page() ) {
         
         // Remove the WP-generated class name with "-php"
         foreach ( $classes as $k =>  $v ) {

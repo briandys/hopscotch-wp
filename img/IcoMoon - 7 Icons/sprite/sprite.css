@@ -1,0 +1,40 @@
+.icon {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url(sprite.svg);
+}
+.icon-sad {
+	width: 32px;
+	height: 32px;
+	background-position: 0 0;
+}
+.icon-happy {
+	width: 32px;
+	height: 32px;
+	background-position: -36px 0;
+}
+.icon-more {
+	width: 32px;
+	height: 32px;
+	background-position: -72px 0;
+}
+.icon-dismiss {
+	width: 32px;
+	height: 32px;
+	background-position: -108px 0;
+}
+.icon-hamburger {
+	width: 32px;
+	height: 32px;
+	background-position: -144px 0;
+}
+.icon-arrow-left {
+	width: 32px;
+	height: 32px;
+	background-position: -180px 0;
+}
+.icon-search {
+	width: 32px;
+	height: 32px;
+	background-position: -216px 0;
+}

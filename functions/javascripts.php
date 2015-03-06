@@ -16,14 +16,17 @@ function hopscotch_javascripts() {
         // Modernizr
         wp_enqueue_script( 'hopscotch-js-modernizr', get_template_directory_uri() . '/js/vendor/modernizr.custom.min.js', array(), '1.0', false );
         
-        // Functions
-        // wp_enqueue_script( 'hopscotch-js-functions', get_template_directory_uri() . '/js/functions.js', array('jquery', 'hopscotch-js-modernizr'), '1.1', true );
-        
         // Plugins
         wp_enqueue_script( 'hopscotch-js-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true );
         
+        // Functions
+        // wp_enqueue_script( 'hopscotch-js-functions', get_template_directory_uri() . '/js/functions.js', array('jquery', 'hopscotch-js-modernizr'), '1.1', true );
+        
         // HS3
         wp_enqueue_script( 'hopscotch-js-plugins-three', get_template_directory_uri() . '/js/hopscotch3.js', array('jquery'), '1.0', true );
+        
+        // Skip Link Focus Fix from Twenty Fifteen
+        wp_enqueue_script( 'hopscotch-js-skip-link', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20150306', true );
         
         // Threaded Comments
         if ( ( ! is_admin() ) && is_singular() && comments_open() && get_option( 'thread_comments' ) )

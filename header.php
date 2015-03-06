@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js <?php hopscotch_hook_html_class(); ?>" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
@@ -85,8 +85,10 @@
                 <div id="masthead_ct" class="masthead_ct">
     
                     <button id="pri-nav_toggle-axn" class="axn toggle_axn pri-nav_toggle-axn">
-                        <span class="label"><?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?></span>
-                        <span class="svg-icon-cr"><svg class="icon icon-menu" width="0" height="0" viewBox="0 0 48 48"><use xlink:href="#icon-menu"></use></svg></span>
+                        <span class="label">
+                            <?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?>
+                            <svg class="icon icon-hamburger"><use xlink:href="#icon-hamburger"></use></svg>
+                        </span>
                     </button><!-- pri-nav_toggle-axn -->
 
                     <div id="nav-sidebar-masthead_comp" class="comp nav-sidebar-masthead_comp ui-state__nav-sidebar-masthead--inactive" aria-expanded="false">

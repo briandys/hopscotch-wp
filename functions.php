@@ -55,6 +55,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/conditional
 require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-child-page.php');
 
 // Add Classes for CSS Selectors
+require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
 

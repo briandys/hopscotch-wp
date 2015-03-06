@@ -49,3 +49,21 @@
 .entry-banner_axn {
     background-image: none !important;
 }
+
+/* Inline SVG */
+svg {
+    margin: 0.0625rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #333;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.search-form_label {
+    display: table-cell;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    vertical-align: middle;
+}

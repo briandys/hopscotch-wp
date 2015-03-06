@@ -49,7 +49,9 @@
     }
     
     priNavToggleAxn.on( 'click.hopscotch', function() {
-      navSidebarMastheadComp.toggleClass( 'ui-state__nav-sidebar-masthead--inactive ui-state__nav-sidebar-masthead--active' ).attr( 'aria-expanded', navSidebarMastheadComp.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+        var _this = $( this );
+        navSidebarMastheadComp.toggleClass( 'ui-state__nav-sidebar-masthead--inactive ui-state__nav-sidebar-masthead--active' ).attr( 'aria-expanded', navSidebarMastheadComp.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+        $html.toggleClass( 'ui-state__nav-sidebar-masthead--inactive ui-state__nav-sidebar-masthead--active' );
     } )
   } )();
   
