@@ -2,8 +2,8 @@
 // Entry Category
 // Based on Twenty Fifteen twentyfifteen_entry_meta() function.
 
-if ( ! function_exists( 'hopscotch_entry_category' ) ) :
-    function hopscotch_entry_category() {        
+if ( ! function_exists( 'hopscotch_article_entry_category' ) ) :
+    function hopscotch_article_entry_category() {        
         $categories_list = get_the_category_list( _x( '<span class="sep">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
         if ( $categories_list && hopscotch_categorized_blog() ) {
             printf( '<div class="comp tag_comp entry-category-tag_comp"><div class="entry-category-tag_cr"><span class="accessible-name">%1$s</span> %2$s</div></div><!-- entry-category-tag_comp -->',

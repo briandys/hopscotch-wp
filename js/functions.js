@@ -274,7 +274,7 @@
     //-------------------------  Smooth scroll
     ( function() {
         
-        $('a[href*=#]:not([href=#]):not(.ui a)').click(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -334,6 +334,7 @@
         $( entryMain ).each(function(){
             
             var entryMetaHeight = $( this ).find( '.entry-hr .entry-meta' ).outerHeight( true ) + 48;
+            $( this ).find( '.entry-cr' ).css( 'min-height', entryMetaHeight + 'px' );
             $( this ).find( '.entry-cr' ).css( 'min-height', entryMetaHeight + 'px' );
         
         });

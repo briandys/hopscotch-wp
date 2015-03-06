@@ -22,6 +22,10 @@ function hopscotch_entry_add_class( $classes ) {
         $classes[] = "ui-state__entry-banner--inactive";
     endif;
     
+    // Info Card Template Microformats
+    if ( is_page_template( 'hopscotch-info-card.php' ) )
+        $classes[] = "vcard";
+    
 	return $classes;
 }
 add_filter('post_class', 'hopscotch_entry_add_class');

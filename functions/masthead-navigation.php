@@ -1,8 +1,9 @@
-<?php // Called from header.php
+<?php
+// Called from header.php
 
 if ( ! function_exists( 'hopscotch_masthead_navigation' ) ) :
     function hopscotch_masthead_navigation() { ?>
-        
+
         <nav id="pri-nav_nav" class="nav pri-nav_nav" role="navigation">
             <div class="pri-nav_cr">
                 <h3 class="accessible-name"><?php _e( 'Primary Navigation', 'hopscotch' ); ?></h3>
@@ -46,3 +47,11 @@ if ( ! function_exists( 'hopscotch_masthead_navigation' ) ) :
 
     }
 endif;
+
+
+// Show Home Nave Item by Default
+function hopscotch_masthead_navigation_add_home_nav_item( $args ) {
+    $args['show_home'] = true;
+    return $args;
+}
+add_filter( 'wp_page_menu_args', 'hopscotch_masthead_navigation_add_home_nav_item' );

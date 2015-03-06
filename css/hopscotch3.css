@@ -9,10 +9,10 @@
 .ui-state__tree-nav--inactive > .sub-menu,
 
 /* If screen is wide, hide pimary nav toggle action */
-.ui-type__screen--wide .pri-nav_toggle-axn,
+.ui-type__viewport--wide .pri-nav_toggle-axn,
 
 /* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.ui-type__screen--narrow .ui-state__nav-sidebar-masthead--inactive,
+.ui-type__viewport--narrow .ui-state__nav-sidebar-masthead--inactive,
 
 /* Search Component */
 .masthead-sidebar_sidebar .ui-state__search--active .search-form_label,

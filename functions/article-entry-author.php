@@ -1,8 +1,8 @@
 <?php
+// Article Entry Author
 
-//------------------------- Entry Author
-if ( ! function_exists( 'hopscotch_entry_author' ) ) :
-    function hopscotch_entry_author() {        
+if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
+    function hopscotch_article_entry_author() {        
         
         // Post author
         if ( 'post' == get_post_type() ) {            

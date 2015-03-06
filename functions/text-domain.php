@@ -1,6 +1,6 @@
 <?php
+// Text domain
 
-//------------------------- Text domain
 function hopscotch_textdomain() {
 	load_theme_textdomain( 'hopscotch', get_template_directory() . '/languages' );
 }

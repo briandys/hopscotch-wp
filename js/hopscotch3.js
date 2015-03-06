@@ -1,13 +1,8 @@
-/**
- * Based on WordPress Twentyfifteen functions file.
- *
- * Contains handlers for navigation and widget arean.
- */
-
+// Based on WordPress Twentyfifteen functions file.
+// Contains handlers for navigation and widget area.
 
 ( function( $ ) {
-  var $body, $window, windowWidth, resizeTimer;
-  
+  var $body, $html, $window, windowWidth, resizeTimer;
   
   /*
   Nav Tree Toggle
@@ -59,32 +54,32 @@
   } )();
   
   
-  // Viewport resizing
-  function resize() {
-    windowWidth = $window.width();
+    // Viewport resizing
+    function resize() {
+        windowWidth = $window.width();
 
-    /*
-    Screen width detection
-    If Tablet size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
-    */
-    if (769 > windowWidth) {
-      $body.addClass( 'ui-type__screen--narrow' );
-      $body.removeClass( 'ui-type__screen--wide' );
-    } else {
-      $body.addClass( 'ui-type__screen--wide' );
-      $body.removeClass( 'ui-type__screen--narrow' );
+        /*
+        Screen width detection
+        If Tablet size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
+        */
+        if (769 > windowWidth) {
+            $html.addClass( 'ui-type__viewport--narrow' );
+            $html.removeClass( 'ui-type__viewport--wide' );
+        } else {
+            $html.addClass( 'ui-type__viewport--wide' );
+            $html.removeClass( 'ui-type__viewport--narrow' );
+        }
+
+        // If screen is narrow, deactivate primary navigation
+        if ( $html.hasClass( 'ui-type__viewport--narrow' ) ) {
+            $( '#pri-nav_nav' ).removeClass( 'ui-state__pri-nav--active' );
+            $( '#pri-nav_nav' ).addClass( 'ui-state__pri-nav--inactive' );
+        } else {
+            $( '#pri-nav_nav' ).removeClass( 'ui-state__pri-nav--inactive' );
+            $( '#pri-nav_nav' ).addClass( 'ui-state__pri-nav--active' );
+        }
+
     }
-
-    // If screen is narrow, deactivate primary navigation
-    if ( $body.hasClass( 'ui-type__screen--narrow' ) ) {
-      $( '#pri-nav_nav' ).removeClass( 'ui-state__pri-nav--active' );
-      $( '#pri-nav_nav' ).addClass( 'ui-state__pri-nav--inactive' );
-    } else {
-      $( '#pri-nav_nav' ).removeClass( 'ui-state__pri-nav--inactive' );
-      $( '#pri-nav_nav' ).addClass( 'ui-state__pri-nav--active' );
-    }
-
-  }
     
     
     // Search Component
@@ -140,6 +135,7 @@
     } )();
 
   $( document ).ready( function() {
+    $html = $( 'html' );
     $body = $( document.body );
     $window = $( window );
 

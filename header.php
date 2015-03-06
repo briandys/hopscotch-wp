@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html id="html" class="no-js" <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         

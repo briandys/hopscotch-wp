@@ -1,11 +1,11 @@
 <?php
-// Entry Banner
+// Article Entry Banner
 // This is used by setting a Featured Image in WP Admin Dashboard.
-// HopScotch Enhancer overrides this function.
-// By default, HopScotch attaches a CSS background-image to .entry-banner_axn so that the user has the option to control the display of the Featured Image.
+// HopScotch Enhancer Plug-in overrides this function.
+// By default, HopScotch attaches a CSS background-image to .entry-banner_axn so that the user has the option to control the display of the Featured Image because CSS background-image is more flexible than plain <img>.
 
 if ( ! function_exists( 'hopscotch_enhancer_entry_banner' ) ) :
-    function hopscotch_entry_banner() {
+    function hopscotch_article_entry_banner() {
         global $post;
         if ( has_post_thumbnail( $post->ID ) ) : ?>
             <div class="comp entry-banner_comp">			
@@ -17,5 +17,5 @@ if ( ! function_exists( 'hopscotch_enhancer_entry_banner' ) ) :
         <?php
         endif;
     }
-    add_action('hopscotch_hook_entry_banner', 'hopscotch_entry_banner');
+    add_action('hopscotch_hook_article_entry_banner', 'hopscotch_article_entry_banner');
 endif;

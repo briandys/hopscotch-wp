@@ -1,6 +1,8 @@
 <?php
 // Is Child Conditional
-// http://www.kevinleary.net/wordpress-is_child-for-advanced-navigation/
+// Usage: if ( is_child( 'parent-page' ) ) echo 'I am a child of Parent Page';
+// Note: This affects both the page in the condition and its children.
+// Source: http://www.kevinleary.net/wordpress-is_child-for-advanced-navigation/
 
 function is_child( $parent = '' ) {
     global $post;

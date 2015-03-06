@@ -1,10 +1,11 @@
 <?php
-//  wp_link_pages
+// wp_link_pages
 // Displays the pages of a post (done by <!--nextpage-->)
+// Location: 
 // http://codex.wordpress.org/Function_Reference/wp_link_pages
 // http://bavotasan.com/2012/a-better-wp_link_pages-for-wordpress
 
-function hopscotch_entry_page_nav( $args = '' ) {
+function hopscotch_article_entry_page_nav( $args = '' ) {
 	$defaults = array(
 		'before' => '<nav class="nav content-nav_nav entry-page-nav_nav"><div class="entry-page-nav_nav_cr"><h2 class="accessible-name">' . __( 'Entry Page Navigation', 'hopscotch' ) . '</h2><p class="friendly-name">' . __( 'Pages:', 'hopscotch' ) . '</p><ul class="nav-grp content-nav_nav-grp entry-page-nav_nav-grp">', 
 		'after' => '</ul></div></nav><!--  entry-page-nav_nav -->',

@@ -118,8 +118,9 @@
                             <?php                                
                             while ( have_posts() ) : the_post();
                                 
-                                // Location: functions > single-content.php
-                                hopscotch_single_content();
+                                // Article Content
+                                // Location: functions > article-content.php
+                                hopscotch_article_content();
 
                                 // Article Entry Navigation
                                 // Location: functions > entry-navigation.php
@@ -127,6 +128,7 @@
 
                                 if ( comments_open() || get_comments_number() ) {
 
+                                    // Comments Template
                                     // Location: comments.php
                                     comments_template();
                                 }

@@ -1,6 +1,17 @@
 <?php
 // Action Hooks
 
+// Location: content.php
+function hopscotch_hook_article_entry_attribute() {
+    do_action('hopscotch_hook_article_entry_attribute');
+}
+
+// Location: content.php
+function hopscotch_hook_article_entry_banner() {
+    do_action('hopscotch_hook_article_entry_banner');
+}
+
+
 
 
 function hopscotch_post_id() {
@@ -40,10 +51,7 @@ function hopscotch_hook_above_entry() {
     do_action('hopscotch_hook_above_entry');
 }
 
-// Location: content.php > .entry
-function hopscotch_hook_entry_data_att() {
-    do_action('hopscotch_hook_entry_data_att');
-}
+
 
 // Location: content.php > .entry-ct-cr
 function hopscotch_hook_pre_the_content() {
@@ -70,7 +78,3 @@ function hopscotch_hook_subtitle() {
     do_action('hopscotch_hook_subtitle');
 }
 
-// Location: content.php
-function hopscotch_hook_entry_banner() {
-    do_action('hopscotch_hook_entry_banner');
-}

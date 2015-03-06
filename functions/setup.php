@@ -1,6 +1,6 @@
 <?php
+// HopScotch Setup
 
-//------------------------- HopScotch Setup
 function hopscotch_setup() {
 	
     /*
@@ -78,7 +78,7 @@ function hopscotch_setup() {
 add_action( 'after_setup_theme', 'hopscotch_setup' );
 
 
-//------------------------- Content Width
+// Content Width
 if ( ! isset( $content_width ) ) {
     $content_width = 960;
 }

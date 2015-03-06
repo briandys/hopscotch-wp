@@ -18,7 +18,7 @@ if ( ! function_exists( 'hopscotch_article_entry_admin_actions' ) ) :
 endif;
 
 
-// Article Entry Admin Actions
+// Comments Entry Admin Actions
 // Called from functions > comments-item.php
 
 if ( ! function_exists( 'hopscotch_comment_entry_admin_actions' ) ) :
