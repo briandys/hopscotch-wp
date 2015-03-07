@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html class="no-js <?php hopscotch_hook_html_class(); ?>" <?php language_attributes(); ?>>
+<html class="no-js ui-state__nav-sidebar-masthead--inactive" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
@@ -88,6 +88,7 @@
                         <span class="label">
                             <?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?>
                             <svg class="icon icon-hamburger"><use xlink:href="#icon-hamburger"></use></svg>
+                            <svg class="icon icon-dismiss"><use xlink:href="#icon-dismiss"></use></svg>
                         </span>
                     </button><!-- pri-nav_toggle-axn -->
 

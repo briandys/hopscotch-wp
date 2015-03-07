@@ -3,6 +3,9 @@
 // Setup
 require_once( trailingslashit(get_template_directory()) . 'functions/setup.php');
 
+// Action Hooks
+require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
+
 // Front-end
 require_once( trailingslashit(get_template_directory()) . 'functions/style-sheets.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascripts.php');
@@ -13,8 +16,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/text-domain
 // Widgets
 require_once( trailingslashit(get_template_directory()) . 'functions/widgets.php');
 
-// Action Hooks
-require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
+
 
 require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 
@@ -55,7 +57,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/conditional
 require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-child-page.php');
 
 // Add Classes for CSS Selectors
-require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
 

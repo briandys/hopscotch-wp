@@ -14,7 +14,7 @@ hopscotch_content_header();
 hopscotch_hook_above_entry();
 ?>
 
-<article id="<?php hopscotch_post_id(); ?>" <?php post_class( 'comp entry_comp article-entry_comp' ); ?>>
+<article <?php post_class( 'comp entry_comp article-entry_comp' ); ?>>
     <div class="cr entry_cr article-entry_cr">
         
         <header class="hr entry_hr article-entry_hr">
