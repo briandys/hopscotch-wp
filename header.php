@@ -62,9 +62,13 @@
         
         <div class="ui-cr__view--screen">
             
-            <header id="masthead" class="masthead" role="banner">
+            <!--
+            Constructor Name: Masthead
+            Class Name: masthead
+            -->
+            <header id="masthead" class="comp masthead" role="banner">
   
-              <div class="masthead_cr">
+              <div class="cr masthead_cr">
                   
                 <div class="comp web-product-header_comp">
                     <div class="web-product-header_cr">
@@ -82,36 +86,47 @@
                     </div> 
                 </div><!-- web-product-header_comp -->
 
-                <div id="masthead_ct" class="masthead_ct">
+                <div id="masthead_ct" class="ct masthead_ct">
     
-                    <button id="pri-nav_toggle-axn" class="axn toggle_axn pri-nav_toggle-axn">
-                        <span class="label">
-                            <?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?>
-                            <svg class="icon icon-hamburger"><use xlink:href="#icon-hamburger"></use></svg>
-                            <svg class="icon icon-dismiss"><use xlink:href="#icon-dismiss"></use></svg>
-                        </span>
-                    </button><!-- pri-nav_toggle-axn -->
+                    <!--
+                    Action Name: Primary Navigation and Masthead Sidebar Toggle Action
+                    Class Name: toggle_axn pri-nav-masthead-sidebar-toggle_axn
+                    -->
+                    <button id="pri-nav-masthead-sidebar-toggle_axn" class="axn toggle_axn pri-nav-masthead-sidebar-toggle_axn">
+                        <span class="label toggle_label"><?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?></span>
+                        <svg class="icon menu_icon"><use xlink:href="#icon-menu"></use></svg>
+                        <svg class="icon dismiss_icon"><use xlink:href="#icon-dismiss"></use></svg>
+                    </button><!-- pri-nav-masthead-sidebar-toggle_axn -->
 
-                    <div id="nav-sidebar-masthead_comp" class="comp nav-sidebar-masthead_comp ui-state__nav-sidebar-masthead--inactive" aria-expanded="false">
+                    <!--
+                    Component Name: Primary Navigation and Masthead Sidebar Component
+                    Class Name: pri-nav-masthead-sidebar_comp
+                    -->
+                    <div id="pri-nav-masthead-sidebar_comp" class="comp pri-nav-masthead-sidebar_comp" aria-expanded="false">
 
-                        <section class="nav-sidebar-masthead_cr">
+                        <section class="cr pri-nav-masthead-sidebar_cr">
 
-                            <h2 class="accessible-name"><?php _e( 'Masthead Navigation and Sidebar', 'hopscotch' ); ?></h2>    
-                            <div class="nav-sidebar-masthead_ct">
+                            <h2 class="accessible-name"><?php _e( 'Primary Navigation and Masthead Sidebar', 'hopscotch' ); ?></h2>    
+                            <div class="ct pri-nav-masthead-sidebar_ct">
 
-                                <?php // Masthead Navigation
-                                // Located at functions > masthead-navigation.php
-                                hopscotch_masthead_navigation(); ?>
+                                <?php
+                                // Primary and Social Navigation
+                                // Located at functions > primary-social-navigation.php
+                                hopscotch_pri_social_nav(); ?>
 
                                 <?php if ( is_active_sidebar( 'masthead-sidebar' )  ) : ?>
-                                <aside class="sidebar masthead-sidebar_sidebar" role="complementary">
-                                    <div class="masthead-sidebar_cr">
+                                <!--
+                                Component Name: Masthead Sidebar Component
+                                Class Name: masthead-sidebar_comp
+                                -->
+                                <aside class="comp masthead-sidebar_comp" role="complementary">
+                                    <div class="cr masthead-sidebar_cr">
                                         <h3 class="accessible-name"><?php _e( 'Masthead Sidebar', 'hopscotch' ); ?></h3>
-                                        <div class="masthead-sidebar_ct widget-area">
+                                        <div class="ct masthead-sidebar_ct widget-area">
                                             <?php dynamic_sidebar( 'masthead-sidebar' ); ?>
                                         </div><!-- masthead-sidebar_ct -->
                                     </div>
-                                </aside><!-- masthead-sidebar_sidebar -->
+                                </aside><!-- masthead-sidebar_comp -->
                                 <?php endif; ?>
 
                             </div><!-- nav-sidebar-masthead_ct -->

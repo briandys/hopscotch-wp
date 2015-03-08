@@ -34,24 +34,26 @@
   
   
   /*
-  Mobile Primary Navigation Toggle
+  Primary Navigation and Masthead Sidebar Toggle
   */
   
   ( function() {
-    var navSidebarMastheadComp = $( '#nav-sidebar-masthead_comp' ), priNavToggleAxn, menu, widgets, social;
-    if ( ! navSidebarMastheadComp ) {
+    var priNavMastheadSidebarComp = $( '#pri-nav-masthead-sidebar_comp' ), priNavMastheadSidebarToggleAxn;
+    if ( ! priNavMastheadSidebarComp ) {
       return;
     }
     
-    priNavToggleAxn = $( '#pri-nav_toggle-axn' );
-    if ( ! priNavToggleAxn ) {
+    priNavMastheadSidebarToggleAxn = $( '#pri-nav-masthead-sidebar-toggle_axn' );
+    if ( ! priNavMastheadSidebarToggleAxn ) {
       return;
     }
     
-    priNavToggleAxn.on( 'click.hopscotch', function() {
+    priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
         var _this = $( this );
-        navSidebarMastheadComp.toggleClass( 'ui-state__nav-sidebar-masthead--inactive ui-state__nav-sidebar-masthead--active' ).attr( 'aria-expanded', navSidebarMastheadComp.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-        $html.toggleClass( 'ui-state__nav-sidebar-masthead--inactive ui-state__nav-sidebar-masthead--active' );
+        
+        // Inactive state class is set at: functions > body-class.php
+        $body.toggleClass( 'ui-state__pri-nav-masthead-sidebar--inactive ui-state__pri-nav-masthead-sidebar--active' );
+        priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( 'ui-state__pri-nav-masthead-sidebar--active' ) ? 'true' : 'false' );
     } )
   } )();
   
@@ -74,11 +76,11 @@
 
         // If screen is narrow, deactivate primary navigation
         if ( $html.hasClass( 'ui-type__viewport--narrow' ) ) {
-            $( '#pri-nav_nav' ).removeClass( 'ui-state__pri-nav--active' );
-            $( '#pri-nav_nav' ).addClass( 'ui-state__pri-nav--inactive' );
+            $body.removeClass( 'ui-state__pri-nav-masthead-sidebar--active' );
+            $body.addClass( 'ui-state__pri-nav-masthead-sidebar--inactive' );
         } else {
-            $( '#pri-nav_nav' ).removeClass( 'ui-state__pri-nav--inactive' );
-            $( '#pri-nav_nav' ).addClass( 'ui-state__pri-nav--active' );
+            $body.removeClass( 'ui-state__pri-nav-masthead-sidebar--inactive' );
+            $body.addClass( 'ui-state__pri-nav-masthead-sidebar--active' );
         }
 
     }

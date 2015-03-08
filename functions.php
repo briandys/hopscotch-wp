@@ -45,10 +45,8 @@ require_once( trailingslashit(get_template_directory()) . 'functions/comments-it
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-reply-title.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-form.php');
 
-// Masthead
-require_once( trailingslashit(get_template_directory()) . 'functions/masthead-navigation.php');
-
 // Navigation
+require_once( trailingslashit(get_template_directory()) . 'functions/primary-social-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/web-product-page-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-navigation.php');
 

@@ -1,4 +1,4 @@
-/* Visually Hidden */
+/* Visually Hidden Default Class */
 .visuallyhidden,
 
 /* Skip Link */
@@ -9,10 +9,17 @@
 .ui-state__tree-nav--inactive > .sub-menu,
 
 /* If screen is wide, hide pimary nav toggle action */
-.ui-type__viewport--wide .pri-nav_toggle-axn,
+.ui-type__viewport--wide .pri-nav-masthead-sidebar-toggle_axn,
+
+/* If Primary Navigation and Masthead Sidebar is inactive, hide the component */
+.ui-state__pri-nav-masthead-sidebar--inactive .pri-nav-masthead-sidebar_comp,
 
 /* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.ui-type__viewport--narrow .ui-state__nav-sidebar-masthead--inactive,
+.ui-type__viewport--narrow .ui-state__pri-nav-masthead-sidebar--inactive .pri-nav-masthead-sidebar_comp,
+
+/* Show/hide Toggle icons */
+.ui-state__pri-nav-masthead-sidebar--inactive .pri-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+.ui-state__pri-nav-masthead-sidebar--active .pri-nav-masthead-sidebar-toggle_axn .menu_icon,
 
 /* Search Component */
 .masthead-sidebar_sidebar .ui-state__search--active .search-form_label,
