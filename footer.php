@@ -12,14 +12,18 @@
                         </div><!-- show-top_comp -->
                         
                         <?php if ( is_active_sidebar( 'colophon-sidebar' ) ) : ?>
-                        <aside class="sidebar colophon-sidebar_sidebar" role="complementary">
-                            <div class="colophon-sidebar_cr">
+                        <!--
+                        Sub-Constructor: Colophon Sidebar
+                        Class: colophon_sidebar
+                        -->
+                        <aside id="colophon_sidebar" class="sidebar colophon_sidebar" role="complementary">
+                            <div class="cr colophon-sidebar_cr">
                                 <h3 class="accessible-name"><?php _e( 'Colophon Sidebar', 'hopscotch' ); ?></h3>
-                                <div class="colophon-sidebar_ct widget-area">
+                                <div class="ct colophon-sidebar_ct widget-area">
                                     <?php dynamic_sidebar( 'colophon-sidebar' ); ?>
                                 </div><!-- colophon-sidebar_ct -->
                             </div>
-                        </aside><!-- colophon-sidebar_sidebar -->
+                        </aside><!-- colophon_sidebar -->
                         <?php endif; ?>
                         
                         <?php get_template_part( 'components/web-product-info' ); ?>

@@ -5,32 +5,83 @@ A WordPress base template upholding the importance of semantic HTML and content 
 
 Official page: http://briansahagun.com/hopscotch/
 
+Constructors
+- Masthead
+- Content
+- Colophon
+
+Sub-Constructors
+- Nav
+- Sidebar
+
 <!--
-Component Name: Primary Navigation and Masthead Sidebar Component
-Class Name: pri-nav-masthead-sidebar_comp
+Component: Primary Navigation and Masthead Sidebar
+Class: primary-nav-masthead-sidebar_comp
+Location: header.php
 -->
 
 <!--
-Component Name: Masthead Sidebar Component
-Class Name: masthead-sidebar_comp
+Sub-Constructor: Masthead Sidebar
+Class: masthead-sidebar_comp
+Location: header.php
 -->
 
 <!--
-Component Name: Primary Navigation
-Class Name: pri-nav_comp
+Sub-Constructor: Content Sidebar
+Class: content_sidebar
+Location: sidebar.php
 -->
 
 <!--
-Component Name: Social Navigation
-Class Name: social-nav_comp
+Sub-Constructor: Colophon Sidebar
+Class: colophon_sidebar
+Location: footer.php
 -->
 
 <!--
-Action Name: Primary Navigation and Masthead Sidebar Toggle Action
-Class Name: toggle_axn pri-nav-masthead-sidebar-toggle_axn
+Sub-Constructor: Primary Navigation
+Class: pri_nav
+Location: primary-social-navigation.php
 -->
 
 <!--
-Constructor Name: Masthead
-Class Name: masthead
+Sub-Constructor: Social Navigation
+Class: social_nav
+Location: primary-social-navigation.php
+-->
+
+<!--
+Sub-Constructor: Primary Content
+Class: primary-content_comp
+Location: index.php
+-->
+
+<!--
+Action: Primary Navigation and Masthead Sidebar Toggle Action
+Class: primary-nav-masthead-sidebar-toggle_axn
+Location: header.php
+-->
+
+<!--
+Constructor: Masthead
+Class: masthead
+Location: header.php
+-->
+
+<!--
+Constructor: Content
+Class: content
+Location: header.php
+-->
+
+<!--
+Component: Search
+Class: search
+Location: searchform.php
+-->
+
+<!--
+Component: Web Product Header
+Class: web-product-header_comp
+Location: header.php
 -->

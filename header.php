@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html class="no-js ui-state__nav-sidebar-masthead--inactive" <?php language_attributes(); ?>>
+<html id="html" class="no-js" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
@@ -63,78 +63,86 @@
         <div class="ui-cr__view--screen">
             
             <!--
-            Constructor Name: Masthead
-            Class Name: masthead
+            Constructor: Masthead
+            Class: masthead
             -->
             <header id="masthead" class="comp masthead" role="banner">
   
-              <div class="cr masthead_cr">
+                <div class="cr masthead_cr">
                   
-                <div class="comp web-product-header_comp">
-                    <div class="web-product-header_cr">
-                        <h1 class="web-product_name">
-                            <a class="web-product-name_axn" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Home">
-                                <span class="label web-product-name_label"><?php bloginfo( 'name' ); ?></span>
-                            </a>
-                        </h1>
+                    <!--
+                    Component: Web Product Header
+                    Class: web-product-header_comp
+                    -->
+                    <div class="comp web-product-header_comp">
+                        <div class="cr web-product-header_cr">
+                            <h1 class="web-product_name">
+                                <a class="axn web-product-name_axn" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Home">
+                                    <span class="label web-product-name_label"><?php bloginfo( 'name' ); ?></span>
+                                </a>
+                            </h1>
 
-                        <?php $description = get_bloginfo( 'description', 'display' );
-                        if ( $description || is_customize_preview() ) : ?>
+                            <?php $description = get_bloginfo( 'description', 'display' );
+                            if ( $description || is_customize_preview() ) : ?>
                             <p class="web-product_desc"><?php echo $description; ?></p>
-                        <?php endif; ?>
+                            <?php endif; ?>
 
-                    </div> 
-                </div><!-- web-product-header_comp -->
+                        </div>
+                    </div><!-- web-product-header_comp -->
 
-                <div id="masthead_ct" class="ct masthead_ct">
+                    <div id="masthead_ct" class="ct masthead_ct">
     
-                    <!--
-                    Action Name: Primary Navigation and Masthead Sidebar Toggle Action
-                    Class Name: toggle_axn pri-nav-masthead-sidebar-toggle_axn
-                    -->
-                    <button id="pri-nav-masthead-sidebar-toggle_axn" class="axn toggle_axn pri-nav-masthead-sidebar-toggle_axn">
-                        <span class="label toggle_label"><?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?></span>
-                        <svg class="icon menu_icon"><use xlink:href="#icon-menu"></use></svg>
-                        <svg class="icon dismiss_icon"><use xlink:href="#icon-dismiss"></use></svg>
-                    </button><!-- pri-nav-masthead-sidebar-toggle_axn -->
+                        <!--
+                        Action: Primary Navigation and Masthead Sidebar Toggle Action
+                        Class: primary-nav-masthead-sidebar-toggle_axn
+                        -->
+                        <button id="primary-nav-masthead-sidebar-toggle_axn" class="axn toggle_axn primary-nav-masthead-sidebar-toggle_axn">
+                            <span class="label toggle_label"><?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?></span>
+                            <svg class="icon menu_icon"><use xlink:href="#menu_icon"></use></svg>
+                            <svg class="icon dismiss_icon"><use xlink:href="#dismiss_icon"></use></svg>
+                        </button><!-- primary-nav-masthead-sidebar-toggle_axn -->
 
-                    <!--
-                    Component Name: Primary Navigation and Masthead Sidebar Component
-                    Class Name: pri-nav-masthead-sidebar_comp
-                    -->
-                    <div id="pri-nav-masthead-sidebar_comp" class="comp pri-nav-masthead-sidebar_comp" aria-expanded="false">
+                        <!--
+                        Component: Primary Navigation and Masthead Sidebar Component
+                        Class: primary-nav-masthead-sidebar_comp
+                        -->
+                        <div id="primary-nav-masthead-sidebar_comp" class="comp primary-nav-masthead-sidebar_comp" aria-expanded="false">
 
-                        <section class="cr pri-nav-masthead-sidebar_cr">
+                            <section class="cr primary-nav-masthead-sidebar_cr">
 
-                            <h2 class="accessible-name"><?php _e( 'Primary Navigation and Masthead Sidebar', 'hopscotch' ); ?></h2>    
-                            <div class="ct pri-nav-masthead-sidebar_ct">
+                                <h2 class="accessible-name"><?php _e( 'Primary Navigation and Masthead Sidebar', 'hopscotch' ); ?></h2>    
+                                <div class="ct primary-nav-masthead-sidebar_ct">
 
-                                <?php
-                                // Primary and Social Navigation
-                                // Located at functions > primary-social-navigation.php
-                                hopscotch_pri_social_nav(); ?>
+                                    <?php
+                                    // Primary and Social Navigation
+                                    // Located at functions > primary-social-navigation.php
+                                    hopscotch_primary_social_nav(); ?>
 
-                                <?php if ( is_active_sidebar( 'masthead-sidebar' )  ) : ?>
-                                <!--
-                                Component Name: Masthead Sidebar Component
-                                Class Name: masthead-sidebar_comp
-                                -->
-                                <aside class="comp masthead-sidebar_comp" role="complementary">
-                                    <div class="cr masthead-sidebar_cr">
-                                        <h3 class="accessible-name"><?php _e( 'Masthead Sidebar', 'hopscotch' ); ?></h3>
-                                        <div class="ct masthead-sidebar_ct widget-area">
-                                            <?php dynamic_sidebar( 'masthead-sidebar' ); ?>
-                                        </div><!-- masthead-sidebar_ct -->
-                                    </div>
-                                </aside><!-- masthead-sidebar_comp -->
-                                <?php endif; ?>
+                                    <?php if ( is_active_sidebar( 'masthead-sidebar' )  ) : ?>
+                                    <!--
+                                    Sub-Constructor: Masthead Sidebar Component
+                                    Class: masthead_sidebar
+                                    -->
+                                    <aside id="masthead_sidebar" class="sidebar masthead_sidebar" role="complementary">
+                                        <div class="cr masthead-sidebar_cr">
+                                            <h3 class="accessible-name"><?php _e( 'Masthead Sidebar', 'hopscotch' ); ?></h3>
+                                            <div class="ct masthead-sidebar_ct widget-area">
+                                                <?php dynamic_sidebar( 'masthead-sidebar' ); ?>
+                                            </div><!-- masthead-sidebar_ct -->
+                                        </div>
+                                    </aside><!-- masthead_sidebar -->
+                                    <?php endif; ?>
 
-                            </div><!-- nav-sidebar-masthead_ct -->
-                        </section>
-                    </div><!-- nav-sidebar-masthead_comp -->
-                </div><!-- masthead_ct -->
-              </div>
-            </header><!-- masthead -->
-            
-            <main id="content" class="content" role="main">
-                <section class="content_cr">
+                                </div><!-- nav-sidebar-masthead_ct -->
+                            </section>
+                        </div><!-- nav-sidebar-masthead_comp -->
+                    </div><!-- masthead_ct -->
+                  </div>
+                </header><!-- masthead -->
+
+                <!--
+                Constructor: Content
+                Class: content
+                -->
+                <main id="content" class="comp content" role="main">
+                    <section class="cr content_cr">

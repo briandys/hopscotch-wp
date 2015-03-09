@@ -12,8 +12,8 @@
 
 <?php get_header(); ?>
 
-            <div class="content_hr">
-                <div class="content-hr_cr">
+            <div class="hr content_hr">
+                <div class="cr content-hr_cr">
                     <h2 class="accessible-name">
                         
                     <?php // Singular (is_single, is_page, is_attachment)
@@ -104,13 +104,16 @@
 
             </div><!-- content_hr -->
 
-            <div class="content_ct">
+            <div class="ct content_ct">
 
-                <!-- Sub-Constructor: Primary Content -->
+                <!--
+                Sub-Constructor: Primary Content
+                Class: primary-content_comp
+                -->
                 <div class="comp primary-content_comp">
-                    <section class="primary-content_cr">
+                    <section class="cr primary-content_cr">
                         <h3 class="accessible-name"><?php _e( 'Primary Content', 'hopscotch' ); ?></h3>
-                        <div class="primary-content_ct">
+                        <div class="ct primary-content_ct">
 
                         <?php // Function as single.php (is_single, is_page, is_attachment)
                         if ( is_singular() ) : ?>

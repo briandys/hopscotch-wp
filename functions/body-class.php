@@ -6,7 +6,7 @@ function hopscotch_body_class( $classes ) {
     global $post, $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
 
     // Sets default classes
-    $classes[] = 'ui-state__pri-nav-masthead-sidebar--inactive';
+    $classes[] = '';
 
     // Sets class for inner or front page
     if ( ! is_front_page() )

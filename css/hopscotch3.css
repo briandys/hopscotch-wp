@@ -1,3 +1,4 @@
+/*------------------------- Visually Hidden -------------------------*/
 /* Visually Hidden Default Class */
 .visuallyhidden,
 
@@ -9,22 +10,22 @@
 .ui-state__tree-nav--inactive > .sub-menu,
 
 /* If screen is wide, hide pimary nav toggle action */
-.ui-type__viewport--wide .pri-nav-masthead-sidebar-toggle_axn,
+.ui-type__viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
 
 /* If Primary Navigation and Masthead Sidebar is inactive, hide the component */
-.ui-state__pri-nav-masthead-sidebar--inactive .pri-nav-masthead-sidebar_comp,
+.ui-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
 /* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.ui-type__viewport--narrow .ui-state__pri-nav-masthead-sidebar--inactive .pri-nav-masthead-sidebar_comp,
+.ui-type__viewport--narrow .ui-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
-/* Show/hide Toggle icons */
-.ui-state__pri-nav-masthead-sidebar--inactive .pri-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-.ui-state__pri-nav-masthead-sidebar--active .pri-nav-masthead-sidebar-toggle_axn .menu_icon,
+/* Navigation - Show/hide Toggle icons */
+.ui-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+.ui-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 
-/* Search Component */
-.masthead-sidebar_sidebar .ui-state__search--active .search-form_label,
-.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_input,
-.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_button {
+/* Search */
+.masthead_sidebar .ui-state__search--active .search-form_label,
+.masthead_sidebar .ui-state__search--inactive .search-form_input,
+.masthead_sidebar .ui-state__search--inactive .search-form_button {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -35,12 +36,12 @@
   width: 1px;
 }
 
-/* Visually Hidden Reverse */
+/*------------------------- Visually Hidden Reverse -------------------------*/
 .show-content_axn:focus,
 
 /* Search Component */
-.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_input:focus,
-.masthead-sidebar_sidebar .ui-state__search--inactive .search-form_button:focus {
+.ui-state__search--inactive .search-form_input:focus,
+.ui-state__search--inactive .search-form_button:focus {
   clip: auto;
   width: auto;
   height: auto;
@@ -57,7 +58,7 @@
     background-image: none !important;
 }
 
-/* Inline SVG */
+/*------------------------- Inline SVG -------------------------*/
 svg {
     margin: 0.0625rem;
     width: 1.5rem;
