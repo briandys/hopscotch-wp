@@ -13,7 +13,7 @@
             treeNavClass = 'ui-type__nav-item--tree-nav',
             treeNavActiveClass = 'ui-state__tree-nav--active',
             treeNavInactiveClass = 'ui-state__tree-nav--inactive',
-            toggleAction = '<button class="toggle_axn">Toggle Sub-Navigation</button>';        
+            toggleAction = '<button class="axn toggle_axn sub-nav-toggle_axn">Toggle Sub-Navigation</button>';        
 
         if( ! navItem )
           return;    
