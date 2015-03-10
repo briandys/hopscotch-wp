@@ -6,14 +6,10 @@
 // @since HopScotch 1.0
 ?>
 
-<?php // Content Header hook
-hopscotch_content_header();
-?>
-
-<?php // Hook above .entry
-hopscotch_hook_above_entry();
-?>
-
+<!--
+Component: Article Entry
+Class: article-entry_comp
+-->
 <article <?php post_class( 'comp entry_comp article-entry_comp' ); ?>>
     <div class="cr entry_cr article-entry_cr">
         
@@ -27,13 +23,18 @@ hopscotch_hook_above_entry();
 
                         <?php // Entry title
                         if ( ! is_page_template( 'hopscotch-info-card.php' ) ) :
-                            the_title( sprintf( '<h1 class="article-entry-title_name"><a class="article-entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+                            the_title( sprintf( '<h1 class="article-entry-title_name"><a class="axn article-entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
                         
                         // For Info Card Template with Microformats
                         // Location: hopscotch-info-card.php
                         else :
-                            the_title( sprintf( '<h1 class="article-entry-title_name fn"><a class="article-entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+                            the_title( sprintf( '<h1 class="article-entry-title_name fn"><a class="axn article-entry-title_axn" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
                         endif;
+                        ?>
+
+                        <?php
+                        // HopScotch Hook: After the_title()
+                        hopscotch_hook_after_the_title();
                         ?>
 
                         <?php
@@ -58,6 +59,11 @@ hopscotch_hook_above_entry();
                 </div>
 
                 <div class="ct entry-hr_ct article-entry-hr_ct">
+                    
+                    <!--
+                    Component: Article Entry Byline
+                    Class: article-entry-byline_comp
+                    -->
                     <div class="comp entry-byline_comp article-entry-byline_comp">                        
                         <div class="cr entry-byline_cr article-entry-byline_cr">
                             
@@ -100,12 +106,7 @@ hopscotch_hook_above_entry();
             </div>
         </header>
 
-        <div class="ct entry_ct article-entry_ct">
-            
-            <?php // HopScotch Pre-content Hook
-            hopscotch_hook_pre_content();
-            ?>            
-            
+        <div class="ct entry_ct article-entry_ct">            
             <div class="cr entry-ct_cr article-entry-ct_cr">
                 
                 <?php
@@ -122,14 +123,6 @@ hopscotch_hook_above_entry();
                 else :
 
                     if( $post->post_content !== "" ) : ?>
-
-                        <?php // HopScotch Content Title Hook
-                        hopscotch_hook_content_title();
-                        ?>
-
-                        <?php // HopScotch Pre the_content Hook
-                        hopscotch_hook_pre_the_content();
-                        ?>
 
                         <?php
                         
@@ -186,6 +179,11 @@ hopscotch_hook_above_entry();
                 $the_query = new WP_Query( $args ); ?>                
 
                 <?php if ( $the_query->have_posts() ) : ?>
+                    
+                    <!--
+                    Component: Article Sub-Entry
+                    Class: article-sub-entry_comp
+                    -->
                     <div class="comp sub-entry_comp article-sub-entry_comp">
                         <div class="cr sub-entry_cr article-sub-entry_cr">
                         

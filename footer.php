@@ -1,11 +1,19 @@
-            <footer id="colophon" class="colophon" role="contentinfo">
-                <section class="colophon_cr">
+            <!--
+            Constructor: Colophon
+            Class: colophon
+            -->
+            <footer id="colophon" class="comp colophon" role="contentinfo">
+                <section class="cr colophon_cr">
                     <h2 class="accessible-name"><?php _e( 'Colophon', 'hopscotch' ); ?></h2>
-                    <div class="colophon_ct">
+                    <div class="ct colophon_ct">
                         
+                        <!--
+                        Component: Show Top
+                        Class: show-top_comp
+                        -->
                         <div class="comp show-top_comp">    
-                            <div class="show-top_cr">
-                                <a class="show-top_axn" href="#html" title="Show Top">
+                            <div class="cr show-top_cr">
+                                <a class="axn show-top_axn" href="#html" title="Show Top">
                                     <span class="label"><?php _e( 'Show Top', 'hopscotch' ); ?></span>
                                 </a>
                             </div>

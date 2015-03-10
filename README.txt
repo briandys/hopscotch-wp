@@ -15,6 +15,24 @@ Sub-Constructors
 - Sidebar
 
 <!--
+Constructor: Masthead
+Class: masthead
+Location: header.php
+-->
+
+<!--
+Constructor: Content
+Class: content
+Location: header.php
+-->
+
+<!--
+Constructor: Colophon
+Class: colophon
+Location: footer.php
+-->
+
+<!--
 Component: Primary Navigation and Masthead Sidebar
 Class: primary-nav-masthead-sidebar_comp
 Location: header.php
@@ -63,18 +81,6 @@ Location: header.php
 -->
 
 <!--
-Constructor: Masthead
-Class: masthead
-Location: header.php
--->
-
-<!--
-Constructor: Content
-Class: content
-Location: header.php
--->
-
-<!--
 Component: Search
 Class: search
 Location: searchform.php
@@ -84,4 +90,58 @@ Location: searchform.php
 Component: Web Product Header
 Class: web-product-header_comp
 Location: header.php
+-->
+
+<!--
+Component: Show Top
+Class: show-top_comp
+Location: footer.php
+-->
+
+<!--
+Component: Web Product Info
+Class: web-product-info_comp
+Location: footer.php
+-->
+
+<!--
+Component: Web Designer
+Class: web-product-info_comp
+Location: footer.php
+-->
+
+<!--
+Component: Copyright
+Class: copyright_comp
+Location: footer.php
+-->
+
+<!--
+Component: Article Entry
+Class: article-entry_comp
+Location: content.php
+-->
+
+<!--
+Component: Article Sub-Entry
+Class: article-sub-entry_comp
+Location: content.php
+-->
+
+<!--
+Component: Article Entry Byline
+Class: article-entry-byline_comp
+Location: content.php
+-->
+
+<!--
+Component: Article Entry Admin Action
+Class: article-entry-admin_comp
+Location: functions > entry-admin-actions.php
+-->
+
+<!--
+Component: Comment Entry Admin Action
+Class: comment-entry-admin_comp
+Location: functions > entry-admin-actions.php
 -->
