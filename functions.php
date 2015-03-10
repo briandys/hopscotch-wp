@@ -8,17 +8,11 @@ require_once( trailingslashit(get_template_directory()) . 'functions/action-hook
 
 // Front-end
 require_once( trailingslashit(get_template_directory()) . 'functions/style-sheets.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascripts.php');
-
-// Translations
-require_once( trailingslashit(get_template_directory()) . 'functions/text-domain.php');
 
 // Widgets
 require_once( trailingslashit(get_template_directory()) . 'functions/widgets.php');
-
-
-
-require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 
 // Entry (Articles and Comments)
 require_once( trailingslashit(get_template_directory()) . 'functions/entry-navigation.php');
@@ -38,8 +32,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/article-ent
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-image.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-attachment.php');
 
-require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');
-
 // Comments
 require_once( trailingslashit(get_template_directory()) . 'functions/comments-item.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-reply-title.php');
@@ -55,8 +47,10 @@ require_once( trailingslashit(get_template_directory()) . 'functions/conditional
 require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-child-page.php');
 
 // Add Classes for CSS Selectors
+require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
 
 // Others
 require_once( trailingslashit(get_template_directory()) . 'functions/get-page-id.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/auto-copyright-year.php');

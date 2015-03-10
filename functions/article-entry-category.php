@@ -5,8 +5,11 @@
 if ( ! function_exists( 'hopscotch_article_entry_category' ) ) :
     function hopscotch_article_entry_category() {        
         $categories_list = get_the_category_list( _x( '<span class="sep">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
+        
+        // Component: Article Entry Category Tag
+        // Class: article-entry-category_comp
         if ( $categories_list && hopscotch_categorized_blog() ) {
-            printf( '<div class="comp tag_comp entry-category-tag_comp"><div class="entry-category-tag_cr"><span class="accessible-name">%1$s</span> %2$s</div></div><!-- entry-category-tag_comp -->',
+            printf( '<div class="comp tag_comp category-tag_comp article-entry-category_comp"><div class="cr tag_cr category-tag_cr article-entry-category-tag_cr"><span class="accessible-name">%1$s</span> %2$s</div></div><!-- article-entry-category-tag_comp -->',
 				_x( 'Categories:', 'Used before category names.', 'hopscotch' ),
 				$categories_list
 			);

@@ -145,3 +145,45 @@ Component: Comment Entry Admin Action
 Class: comment-entry-admin_comp
 Location: functions > entry-admin-actions.php
 -->
+
+<!--
+Component: Breadcrumb Navigation
+Class: breadcrumb_nav
+Location: functions > breadcrumb-navigation.php
+-->
+
+<!--
+Component: Article Entry Author
+Class: article-entry-author_comp
+Location: functions > article-entry-author.php
+-->
+
+<!--
+Component: Article Published Timestamp
+Class: article-entry-published-timestamp_comp
+Location: functions > article-entry-timestamp.php
+-->
+
+<!--
+Component: Article Modified Timestamp
+Class: article-entry-modified-timestamp_comp
+Location: functions > article-entry-timestamp.php
+-->
+
+<!--
+Component: Article Entry Category Tag
+Class: article-entry-category_comp
+Location: functions > article-entry-category.php
+-->
+
+<!--
+Component: Article Entry Comments Actions
+Class: article-entry-comments-actions_comp
+Location: functions > article-entry-comments-actions.php
+-->
+
+<!--
+Component: Article Entry Banner
+Class: article-article-entry-banner_comp
+Location: functions > article-entry-banner.php
+-->

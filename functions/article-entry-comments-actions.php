@@ -10,27 +10,32 @@ if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
         
         if ( ! post_password_required() && ( comments_open() || get_comments_number() ) && ! $num_comments == 0 ) :
             
-            $comment_count_class = 'ui-cond_article-entry-comments--blank';
+            $comment_count_class = 'ui-state__article-entry-comments--zero';
             $number = (int) get_comments_number( get_the_ID() );
 
             // Defines the class depending on the comment count
             if ( 1 === $number )
-                $comment_count_class = 'ui-cond_article-entry-comments--single';
+                $comment_count_class = 'ui-state__article-entry-comments--single';
             elseif ( 1 < $number )
-                $comment_count_class = 'ui-cond_article-entry-comments--multiple';
+                $comment_count_class = 'ui-state__article-entry-comments--multiple';
             ?>
-            <div class="comp article-entry-comments_comp <?php echo $comment_count_class ?>">
-                <div class="cr article-entry-comments_cr">
+
+            <!--
+            Component: Article Entry Comments Actions
+            Class: article-entry-comments-actions_comp
+            -->
+            <div class="comp article-entry-comments-actions_comp <?php echo $comment_count_class ?>">
+                <div class="cr article-entry-comments-actions_cr">
                     <p class="accessible-name">Entry Comments Actions</p>
-                    <ul class="grp article-entry-comments_grp">
-                        <li class="item article-entry-comments_item">
+                    <ul class="grp article-entry-comments-actions_grp">
+                        <li class="item article-entry-comments-actions_item">
                             <?php comments_popup_link(
                             
                             // Zero comment
                             __( '<span class="label pred_label">Write</span> ' .
                                 '<span class="label subj_label">Comment</span>', 'hopscotch' ),
                             
-                            // One comment
+                            // Single comment
                             __( '<span class="label pred_label">' .
                                 '<span class="label verb_label">Show</span> ' .
                                 '<span class="label comment-count_label">One</span>' .
@@ -55,7 +60,7 @@ if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
                             ?>
                     </ul>
                 </div>
-            </div><!-- article-entry-comments_comp -->
+            </div><!-- article-entry-comments-actions_comp -->
         <?php
         endif;
     }

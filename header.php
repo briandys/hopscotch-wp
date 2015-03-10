@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html id="html" class="no-js" <?php language_attributes(); ?>>
+<html id="html" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
@@ -26,7 +26,6 @@
         <!--[if lt IE 9]>
         <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
         <![endif]-->
-        <script>(function(){document.documentElement.className='js'})();</script>
         
         <!-- H5BP Mobile -->
         <meta name="HandheldFriendly" content="True">
@@ -58,9 +57,8 @@
         </div>
         <![endif]-->
 
-        <a class="show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
-        
         <div class="ui-cr__view--screen">
+            <a class="show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
             
             <!--
             Constructor: Masthead

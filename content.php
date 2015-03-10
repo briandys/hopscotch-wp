@@ -34,6 +34,7 @@ Class: article-entry_comp
 
                         <?php
                         // HopScotch Hook: After the_title()
+                        // Users: hopscotch-enhancer.php (WP Plug-in)
                         hopscotch_hook_after_the_title();
                         ?>
 
@@ -44,12 +45,8 @@ Class: article-entry_comp
                         ?>
 
                         <?php
-                        // WP Plugin: HopScotch Enhancer
-                        hopscotch_hook_subtitle();
-                        ?>
-
-                        <?php
                         // Breadcrumb Navigation
+                        // Location: functions > breadcrumb-navigation.php
                         hopscotch_breadcrumb_nav();
                         ?>
                     <?php else : ?>
@@ -95,7 +92,7 @@ Class: article-entry_comp
                     ?>
                     
                     <?php
-                    // Entry Banner
+                    // Article Entry Banner
                     // Location: functions > article-entry-banner.php
                     // Can be overridden by HopScotch Enhancer Plug-in
                     hopscotch_hook_article_entry_banner();
@@ -157,10 +154,6 @@ Class: article-entry_comp
                 <?php endif; ?>
             
             </div>
-            
-            <?php // HopScotch Extra Content Hook
-            hopscotch_hook_extra_content();
-            ?>
             
             <?php
             // Article Sub-Entry

@@ -4,10 +4,11 @@
 if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
     function hopscotch_article_entry_author() {        
         
-        // Post author
+        // Component: Article Entry Author
+        // Class: article-entry-author_comp
         if ( 'post' == get_post_type() ) {            
-            $author_comp_string = '<div class="comp author_comp article-entry--author_comp">';
-            $author_comp_string .= '<div class="cr author_cr article-entry--author_cr author vcard">';
+            $author_comp_string = '<div class="comp author_comp article-entry-author_comp">';
+            $author_comp_string .= '<div class="cr author_cr article-entry-author_cr author vcard">';
             $author_comp_string .= '<span class="label pred_label">';
             $author_comp_string .= '<span class="label noun_label">Entry</span> ';
             $author_comp_string .= '<span class="label prep_label">by</span> ';
@@ -17,7 +18,7 @@ if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
             $author_comp_string .= '%4$s';
             $author_comp_string .= '</a>';
             $author_comp_string .= '</div>';
-            $author_comp_string .= '</div><!-- article-entry--author_comp -->';
+            $author_comp_string .= '</div><!-- article-entry-author_comp -->';
 
             printf( $author_comp_string,
                 esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), // 1: Author Entries URL
@@ -28,7 +29,7 @@ if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
                     $size = '32',
                     $default = '',
                     $alt = 'Author Avatar of ' . get_the_author_meta( 'display_name' )
-                ) // 2: Author Avatar
+                ) // 4: Author Avatar
             );
         }
     }

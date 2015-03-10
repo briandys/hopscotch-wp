@@ -9,13 +9,16 @@ if ( ! function_exists( 'hopscotch_article_entry_published_timestamp' ) ) :
 		
 		if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
     
+            // Component: Article Entry Published Timestamp
+            // Class: article-entry-published-timestamp_comp
+            
             // Structure
-            $timestamp_comp_string = '<div class="comp timestamp_comp article-entry--published--timestamp_comp">';
-            $timestamp_comp_string .= '<div class="cr timestamp_cr article-entry--published--timestamp_cr">';
+            $timestamp_comp_string = '<div class="comp timestamp_comp article-entry-published-timestamp_comp">';
+            $timestamp_comp_string .= '<div class="cr timestamp_cr article-entry-published-timestamp_cr">';
             $timestamp_comp_string .= '<span class="label pred_label">%1$s</span> ';
             $timestamp_comp_string .= '<a class="timestamp_axn" href="%2$s" title="%4$s" rel="bookmark">%3$s</a>';
             $timestamp_comp_string .= '</div>';
-            $timestamp_comp_string .= '</div><!-- article-entry--published--timestamp_comp -->';
+            $timestamp_comp_string .= '</div><!-- article-entry-published-timestamp_comp -->';
     
             // Published Timestamp
             $time_string = '<time class="timestamp_datetime" datetime="%1$s">';
@@ -54,13 +57,16 @@ if ( ! function_exists( 'hopscotch_article_entry_modified_timestamp' ) ) :
 		
 		if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
             
+            // Component: Article Entry Modified Timestamp
+            // Class: article-entry-modified-timestamp_comp
+            
             // Structure
-            $timestamp_comp_string = '<div class="comp timestamp_comp article-entry--modified--timestamp_comp">';
-            $timestamp_comp_string .= '<div class="cr timestamp_cr article-entry--modified--timestamp_cr">';
+            $timestamp_comp_string = '<div class="comp timestamp_comp article-entry-modified-timestamp_comp">';
+            $timestamp_comp_string .= '<div class="cr timestamp_cr article-entry-modified-timestamp_cr">';
             $timestamp_comp_string .= '<span class="label pred_label">%1$s</span> ';
-            $timestamp_comp_string .= '<a class="timestamp_axn" href="%2$s" title="%4$s" rel="bookmark">%3$s</a>';
+            $timestamp_comp_string .= '<a class="axn timestamp_axn" href="%2$s" title="%4$s" rel="bookmark">%3$s</a>';
             $timestamp_comp_string .= '</div>';
-            $timestamp_comp_string .= '</div><!-- article-entry--modified--timestamp_comp -->';
+            $timestamp_comp_string .= '</div><!-- article-entry-modified-timestamp_comp -->';
     
             // Modified Timestamp
             $time_string = '<time class="timestamp_datetime" datetime="%1$s">';
