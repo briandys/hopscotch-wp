@@ -12,12 +12,20 @@
 }
 ?>
 
+<!--
+Component: Comments
+Class: comments_comp
+-->
 <div id="comments" class="comp comments_comp">
     <section class="cr comments_cr">
         
-        <h4 class="accessible_name"><?php _e( 'Comments' ); ?></h4>
-        <div class="comments_ct">
+        <h4 class="accessible_name"><?php _e( 'Comments', 'hopscotch' ); ?></h4>
+        <div class="ct comments_ct">
             
+            <!--
+            Component: Comments Count
+            Class: comments-count_comp
+            -->
             <div class="comp comments-count_comp">
                 <div class="cr comments-count_cr">
                     <p>
@@ -25,7 +33,7 @@
                             
                             // One comment
                             '<span class="label pred_label">' .
-                            '<span class="label comment-count_label">One</span> ' .
+                            '<span class="label comments-count_label">One</span> ' .
                             '<span class="label noun_label">Comment</span> ' .
                             '<span class="label prep_label">on</span> ' .
                             '</span> ' .
@@ -33,11 +41,11 @@
                             
                             // More than one comment
                             '<span class="label pred_label">' .
-                            '<span class="label comment-count_label">%1$s</span> ' .
+                            '<span class="label comments-count_label">%1$s</span> ' .
                             '<span class="label noun_label">Comments</span> ' .
                             '<span class="label prep_label">on</span> ' .
                             '</span> ' .
-                            '<span class="label subj_label article-entry_label">%2$s</a>',
+                            '<span class="label subj_label article-entry-title_label">%2$s</a>',
                             
                             get_comments_number(),
                             'comments title', 'hopscotch' ),
@@ -64,6 +72,10 @@
 
                 <?php // If there are comments but Comments is closed
                 if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+                    <!--
+                    Component: Closed Comments
+                    Class: closed-comments_notice
+                    -->
                     <div class="notice closed-comments_notice">
                         <div class="cr closed-comments-notice_cr">
                             <p><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
@@ -72,6 +84,7 @@
                 <?php endif; ?>
 
                 <?php
+                // Comments Entry Navigation
                 // Location: functions > entry-navigation.php
                 hopscotch_comments_entry_nav();
                 ?>
@@ -79,6 +92,10 @@
             <?php // If there are no comments
             else : ?>
 
+                <!--
+                Component: Blank Comments
+                Class: blank-comments_notice
+                -->
                 <div class="notice blank-comments_notice">
                     <div class="cr notice_cr">
                         <p>There are no comments yet.</p>
@@ -124,22 +141,22 @@
                 'logged_in_as'              => '<div class="comp comment-admin_comp">' .
                                             '<div class="cr comment-admin_cr">' .
                                             sprintf(
-                                                __( '<div class="comp admin-sign-in-info_comp"> ' .
-                                                   '<div class="cr admin-sign-in-info_cr"> ' .
+                                                __( '<div class="comp comment-admin-sign-in_comp"> ' .
+                                                   '<div class="cr comment-admin-sign-in_cr"> ' .
                                                    '<span class="label pred_label">Signed in as</span> ' .
-                                                   '<a class="admin-sign-in-info_axn" href="%1$s"><span class="label subj_label">%2$s</span></a>' .
+                                                   '<a class="axn comment-admin-sign-in_axn" href="%1$s"><span class="label subj_label">%2$s</span></a>' .
                                                    '</div>' .
-                                                   '</div><!-- admin-sign-in-info_comp -->' .
+                                                   '</div><!-- comment-admin-sign-in_comp -->' .
                                                    '<div class="comp comment-form-admin-actions_comp">' .
                                                    '<div class="cr comment-form-admin-actions_cr">' .
                                                    '<p class="accessible-name">Comment Form Admin Actions</p>' .
                                                    '<ul class="grp comment-form-admin-actions_grp">' .
-                                                   '<li class="item sign-out_item comment-form-admin-actions--sign-out_item">' .
-                                                   '<a class="axn sign-out_axn comment-form-admin-actions_axn" href="%3$s" title="Sign out of this account.">Sign Out</a>' .
+                                                   '<li class="item sign-out_item comment-form-admin-actions-sign-out_item">' .
+                                                   '<a class="axn sign-out_axn comment-form-admin-actions-sign-out_axn" href="%3$s" title="Sign out of this account.">Sign Out</a>' .
                                                    '</li>' .
                                                    '</ul>' .
                                                    '</div>' .
-                                                   '</div><!-- comp -->' ),
+                                                   '</div><!-- comment-admin-sign-in_comp -->' ),
                                                 admin_url( 'profile.php' ),
                                                 $user_identity,
                                                 wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )

@@ -6,26 +6,26 @@
 .show-content_axn,
 
 /* If tree navigation is inactive, hide the sub navigation */
-.ui-state__tree-nav--inactive > .children,
-.ui-state__tree-nav--inactive > .sub-menu,
+.hs-state__tree-nav--inactive > .children,
+.hs-state__tree-nav--inactive > .sub-menu,
 
 /* If screen is wide, hide pimary nav toggle action */
-.ui-type__viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
+.hs-type__viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
 
 /* If Primary Navigation and Masthead Sidebar is inactive, hide the component */
-.ui-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
+.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
 /* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.ui-type__viewport--narrow .ui-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
+.hs-type__viewport--narrow .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
 /* Navigation - Show/hide Toggle icons */
-.ui-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-.ui-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
+.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+.hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 
 /* Search */
-.masthead_sidebar .ui-state__search--active .search-form_label,
-.masthead_sidebar .ui-state__search--inactive .search-form_input,
-.masthead_sidebar .ui-state__search--inactive .search-form_button {
+.masthead_sidebar .hs-state__search--active .search-form_label,
+.masthead_sidebar .hs-state__search--inactive .search-form_input,
+.masthead_sidebar .hs-state__search--inactive .search-form_button {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -40,8 +40,8 @@
 .show-content_axn:focus,
 
 /* Search Component */
-.ui-state__search--inactive .search-form_input:focus,
-.ui-state__search--inactive .search-form_button:focus {
+.hs-state__search--inactive .search-form_input:focus,
+.hs-state__search--inactive .search-form_button:focus {
   clip: auto;
   width: auto;
   height: auto;
@@ -90,11 +90,12 @@ svg {
     margin-right: .5rem;
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url( ../img/more.svg );
+    background-image: url( ../img/arrow-left.svg );
     background-repeat: no-repeat;
     background-size: cover;
+    transform: rotate( -90deg );
 }
 
-.ui-state__tree-nav--active > .sub-nav-toggle_axn:after {
-    transform: rotate( 180deg );
+.hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
+    transform: rotate( 90deg );
 }

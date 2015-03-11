@@ -3,10 +3,12 @@
 // Navigates from Single Entry to Single Entry
 // Displayed as Next Entry, Previous Entry Actions
 
+// Component: Article Entry Navigation
+// Class: article-entry-nav_comp
 if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
 	function hopscotch_article_entry_nav() {
         if ( get_previous_post_link() || get_next_post_link() ) : ?>
-        <nav class="comp content-nav_comp article-entry-nav_comp" role="navigation">
+        <nav class="comp content_nav article-entry_nav" role="navigation">
             <div class="cr content-nav_cr article-entry-nav_cr">
                 <h2 class="accessible-name"><?php _e( 'Entry Navigation', 'hopscotch' ); ?></h2>
                 <ul class="grp content-nav_grp article-entry-nav_grp">
@@ -35,20 +37,20 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
 
                 </ul>
             </div>
-        </nav><!-- article-entry-nav_comp -->
+        </nav><!-- article-entry_nav -->
         <?php endif;
     }
 endif;
 
 
-// Comment Entry Navigation
-// Navigates from Comment to Comment
-
+// Component: Comments Entry Navigation
+// Class: comments-entry-nav_comp
+// Called from: comments.php
 if ( ! function_exists( 'hopscotch_comments_entry_nav' ) ) :
     function hopscotch_comments_entry_nav() {
         if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
-        <nav class="comp content-nav_comp comments-entry-nav_comp" role="navigation">
+        <nav class="comp content_nav comments-entry_nav" role="navigation">
             <div class="cr content-nav_cr comments-entry-nav_cr">
                 <h5 class="accessible-name"><?php _e( 'Comments Navigation', 'hopscotch' ); ?></h5>
                 <ul class="grp content-nav_grp comments-entry-nav_grp">
@@ -73,7 +75,7 @@ if ( ! function_exists( 'hopscotch_comments_entry_nav' ) ) :
 
                 </ul>
             </div>
-        </nav><!-- comments-entry-nav_comp -->
+        </nav><!-- comments-entry_nav -->
         
         <?php
         endif;

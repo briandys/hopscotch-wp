@@ -17,9 +17,9 @@ function hopscotch_entry_add_class( $classes ) {
     
     // Entry Banner (Featured Image)
     if ( has_post_thumbnail() || get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) :
-        $classes[] = "ui-state__entry-banner--active";
+        $classes[] = "hs-state__entry-banner--active";
     else :
-        $classes[] = "ui-state__entry-banner--inactive";
+        $classes[] = "hs-state__entry-banner--inactive";
     endif;
     
     // Info Card Template Microformats

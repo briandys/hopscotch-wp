@@ -98,7 +98,7 @@ Class: article-entry_comp
                     hopscotch_hook_article_entry_banner();
                     ?>
                 
-                </div><!-- entry-hr_ct -->
+                </div><!-- article-entry-hr_ct -->
             
             </div>
         </header>
@@ -107,8 +107,8 @@ Class: article-entry_comp
             <div class="cr entry-ct_cr article-entry-ct_cr">
                 
                 <?php
-
-                // If Search or Author
+                // Article Excerpt
+                // Location: functions > article-excerpt.php
                 if ( is_search() || is_author() ) :
                     the_excerpt();
                 
@@ -126,6 +126,8 @@ Class: article-entry_comp
                         if ( ! has_excerpt() ) {
                             
                             // The Content
+                            // Component: Show More Content
+                            // Class: show-more-content_comp
                             the_content( sprintf( __(
                                 '<span class="comp show-more-content_comp">' .
                                 '<span class="label pred_label">' .
@@ -138,7 +140,7 @@ Class: article-entry_comp
                                     the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
                         } else {
                             
-                            // The Excerpt
+                            // Article Excerpt
                             // Location: functions > article-excerpt.php
                             the_excerpt();
                         }
@@ -146,6 +148,7 @@ Class: article-entry_comp
 
                         <?php
                         // Article Entry Page Navigation
+                        // Location: functions > article-entry-page-navigation.php
                         hopscotch_article_entry_page_nav();
                         ?>
 
@@ -160,7 +163,6 @@ Class: article-entry_comp
             // Use Template Solo to display only the main content of that page
             // By default, HopScotch displays all the child pages if the user is on a parent page
             // Location: hopscotch-solo.php
-            
             if ( ! is_page_template( 'hopscotch-solo.php' ) && ! is_search() ) :
                 $parent = $post->ID;
                 $args = array(
@@ -192,17 +194,20 @@ Class: article-entry_comp
 
             <?php endif; ?>
             
-        </div><!-- entry_ct -->
+        </div><!-- article-entry_ct -->
 
         <footer class="fr entry_fr article-entry_fr">
             <div class="cr entry-fr_cr article-entry-fr_cr">
                         
-                <?php // Entry Modified Timestamp
+                <?php
+                // Article Entry Modified Timestamp
+                // Location: functions > article-entry-timestamp.php
                 hopscotch_article_entry_modified_timestamp();
                 ?>
                 
                 <?php
                 // Article Entry Tags
+                // Location: functions > article-entry-tag.php
                 hopscotch_article_entry_tags();
                 ?>
 
@@ -210,4 +215,4 @@ Class: article-entry_comp
         </footer>
     
     </div>
-</article><!-- entry_comp -->
+</article><!-- article-entry_comp -->

@@ -10,14 +10,14 @@ if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
         
         if ( ! post_password_required() && ( comments_open() || get_comments_number() ) && ! $num_comments == 0 ) :
             
-            $comment_count_class = 'ui-state__article-entry-comments--zero';
+            $comment_count_class = 'hs-state__article-entry-comments--zero';
             $number = (int) get_comments_number( get_the_ID() );
 
             // Defines the class depending on the comment count
             if ( 1 === $number )
-                $comment_count_class = 'ui-state__article-entry-comments--single';
+                $comment_count_class = 'hs-state__article-entry-comments--single';
             elseif ( 1 < $number )
-                $comment_count_class = 'ui-state__article-entry-comments--multiple';
+                $comment_count_class = 'hs-state__article-entry-comments--multiple';
             ?>
 
             <!--

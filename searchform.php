@@ -17,7 +17,7 @@ Class: search
                     </div>
                 </div><!-- field -->
                 <div class="field_axn">
-                    <div class="field_cr">
+                    <div class="field-axn_cr">
                         <button class="search-form_button" type="submit"><?php _e( 'Search', 'hopscotch'); ?></button>
                     </div>
                 </div><!-- field_axn -->

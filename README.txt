@@ -153,6 +153,12 @@ Location: functions > breadcrumb-navigation.php
 -->
 
 <!--
+Component: Article Entry Navigation
+Class: article-entry_nav
+Location: functions > breadcrumb-navigation.php
+-->
+
+<!--
 Component: Article Entry Author
 Class: article-entry-author_comp
 Location: functions > article-entry-author.php
@@ -177,6 +183,12 @@ Location: functions > article-entry-category.php
 -->
 
 <!--
+Component: Article Entry Tag
+Class: article-entry-tag_comp
+Location: functions > article-entry-tag.php
+-->
+
+<!--
 Component: Article Entry Comments Actions
 Class: article-entry-comments-actions_comp
 Location: functions > article-entry-comments-actions.php
@@ -186,4 +198,64 @@ Location: functions > article-entry-comments-actions.php
 Component: Article Entry Banner
 Class: article-article-entry-banner_comp
 Location: functions > article-entry-banner.php
+-->
+
+<!--
+Component: Article Entry Page Navigation
+Class: article-entry-page_nav
+Location: functions > article-entry-page-navigation.php
+-->
+
+<!--
+Component: Show More Content
+Class: show-more-content_comp
+Location: functions > article-excerpt.php
+-->
+
+<!--
+Component: Comments
+Class: comments_comp
+Location: comments.php
+-->
+
+<!--
+Component: Comments Count
+Class: comments-count_comp
+Location: comments.php
+-->
+
+<!--
+Component: Closed Comments
+Class: closed-comments_notice
+Location: comments.php
+-->
+
+<!--
+Component: Blank Comments
+Class: blank-comments_notice
+Location: comments.php
+-->
+
+<!--
+Component: Comments Entry Navigation
+Class: comments-entry_nav
+Location: functions > entry-navigation.php
+-->
+
+<!--
+Component: Comment Admin
+Class: comment-admin_comp
+Location: comments.php
+-->
+
+<!--
+Component: Comment Admin Sign In
+Class: comment-admin-sign-in_comp
+Location: comments.php
+-->
+
+<!--
+Component: Comment Form Admin Actions
+Class: comment-form-admin-actions_comp
+Location: comments.php
 -->

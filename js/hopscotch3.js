@@ -10,9 +10,9 @@
         var navItem = $( '.nav-item, .page_item, .menu-item' ),
             parentNavItem = $( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
             parentNavItemAction = $( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
-            treeNavClass = 'ui-type__nav-item--tree-nav',
-            treeNavActiveClass = 'ui-state__tree-nav--active',
-            treeNavInactiveClass = 'ui-state__tree-nav--inactive',
+            treeNavClass = 'hs-type__nav-item--tree-nav',
+            treeNavActiveClass = 'hs-state__tree-nav--active',
+            treeNavInactiveClass = 'hs-state__tree-nav--inactive',
             toggleAction = '<button class="axn toggle_axn sub-nav-toggle_axn">Toggle Sub-Navigation</button>';        
 
         if( ! navItem )
@@ -64,8 +64,8 @@
         var _this = $( this );
 
         // Inactive state class is set at: functions > body-class.php
-        $body.toggleClass( 'ui-state__primary-nav-masthead-sidebar--inactive ui-state__primary-nav-masthead-sidebar--active' );
-        priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( 'ui-state__primary-nav-masthead-sidebar--active' ) ? 'true' : 'false' );
+        $body.toggleClass( 'hs-state__primary-nav-masthead-sidebar--inactive hs-state__primary-nav-masthead-sidebar--active' );
+        priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( 'hs-state__primary-nav-masthead-sidebar--active' ) ? 'true' : 'false' );
         } )
     } )();
 
@@ -79,20 +79,20 @@
         If Tablet size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
         */
         if (769 > windowWidth) {
-            $html.addClass( 'ui-type__viewport--narrow' );
-            $html.removeClass( 'ui-type__viewport--wide' );
+            $html.addClass( 'hs-type__viewport--narrow' );
+            $html.removeClass( 'hs-type__viewport--wide' );
         } else {
-            $html.addClass( 'ui-type__viewport--wide' );
-            $html.removeClass( 'ui-type__viewport--narrow' );
+            $html.addClass( 'hs-type__viewport--wide' );
+            $html.removeClass( 'hs-type__viewport--narrow' );
         }
 
         // If screen is narrow, deactivate primary navigation
-        if ( $html.hasClass( 'ui-type__viewport--narrow' ) ) {
-            $body.removeClass( 'ui-state__primary-nav-masthead-sidebar--active' );
-            $body.addClass( 'ui-state__primary-nav-masthead-sidebar--inactive' );
+        if ( $html.hasClass( 'hs-type__viewport--narrow' ) ) {
+            $body.removeClass( 'hs-state__primary-nav-masthead-sidebar--active' );
+            $body.addClass( 'hs-state__primary-nav-masthead-sidebar--inactive' );
         } else {
-            $body.removeClass( 'ui-state__primary-nav-masthead-sidebar--inactive' );
-            $body.addClass( 'ui-state__primary-nav-masthead-sidebar--active' );
+            $body.removeClass( 'hs-state__primary-nav-masthead-sidebar--inactive' );
+            $body.addClass( 'hs-state__primary-nav-masthead-sidebar--active' );
         }
 
     }
@@ -104,8 +104,8 @@
         var search = $( '.search_comp' ),
             searchLabel = $( '.search-form_label' ),
             searchInput = $( '.search-form_input' ),
-            uiStateSearchActive = 'ui-state__search--active',
-            uiStateSearchInactive = 'ui-state__search--inactive',
+            uiStateSearchActive = 'hs-state__search--active',
+            uiStateSearchInactive = 'hs-state__search--inactive',
             mastheadSidebar = $( '#masthead_sidebar' ),
             contentSidebar = $( '#content_sidebar' ),
             contentSidebarSearchFormInput = contentSidebar.find( '.search-form_input' ),
@@ -130,7 +130,7 @@
           return;
         
         // Add default state of search
-        $( '#masthead_sidebar .search_comp' ).addClass( 'ui-state__search--inactive' );
+        $( '#masthead_sidebar .search_comp' ).addClass( 'hs-state__search--inactive' );
         
         // Differentiate the ID of search input
         contentSidebarSearchFormInput.attr( 'id', 'search-form-content-sidebar_input' );

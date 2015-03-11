@@ -20,6 +20,9 @@ add_filter( 'excerpt_more', 'hopscotch_excerpt_more' );
 if ( ! function_exists( 'hopscotch_the_excerpt_show_content' ) ) :
     function hopscotch_the_excerpt_show_content( $excerpt_tag ) {
         global $post;
+        
+        // Component: Show More Content
+        // Class: show-more-content_comp
         $more = '<div class="comp show-more-content_comp">';
         $more .= '<a class="axn show-more-content_axn more-link" href="'. get_permalink( $post->ID ) . '" rel="bookmark">';
         $more .= '<span class="label pred_label">';

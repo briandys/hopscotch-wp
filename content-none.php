@@ -6,6 +6,10 @@
 // @since HopScotch 1.0
 ?>
 
+<!--
+Component: Article Entry
+Class: article-entry_comp
+-->
 <article class="comp entry_comp article-entry_comp">
     <div class="cr entry_cr article-entry_cr">
         
@@ -17,11 +21,7 @@
             </div>
         </header>
 
-        <div class="ct entry_ct article-entry_ct">
-            
-            <?php // HopScotch Pre-content Hook
-            hopscotch_hook_pre_content();
-            ?>            
+        <div class="ct entry_ct article-entry_ct">        
             
             <div class="cr entry-ct_cr article-entry-ct_cr">
                 
@@ -41,7 +41,7 @@
             
             </div>            
             
-        </div><!-- entry_ct -->
+        </div><!-- article-entry_ct -->
     
     </div>
-</article><!-- entry_comp -->
+</article><!-- article-entry_comp -->
