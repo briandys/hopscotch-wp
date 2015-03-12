@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html id="html" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
+<html id="top" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         

@@ -5,12 +5,6 @@
 function hopscotch_body_class( $classes ) {
     global $post;
 
-    // Sets class for inner or front page
-    if ( ! is_front_page() )
-        $classes[] = 'hs-view--inner';
-    else
-        $classes[] = 'hs-view--front';
-
     // Article Entry Slug as Class
     // Format: <Post Type>--<Slug>
     // Example: If type is Post then: post--page-title
