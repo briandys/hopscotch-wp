@@ -10,13 +10,13 @@
 .hs-state__tree-nav--inactive > .sub-menu,
 
 /* If screen is wide, hide pimary nav toggle action */
-.hs-type__viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
+.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
 
 /* If Primary Navigation and Masthead Sidebar is inactive, hide the component */
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
 /* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.hs-type__viewport--narrow .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
+.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
 /* Navigation - Show/hide Toggle icons */
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
@@ -90,12 +90,12 @@ svg {
     margin-right: .5rem;
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url( ../img/arrow-left.svg );
+    background-image: url( ../img/icon-arrow-down.svg );
     background-repeat: no-repeat;
     background-size: cover;
-    transform: rotate( -90deg );
+    transition: transform .2s;
 }
 
 .hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
-    transform: rotate( 90deg );
+    transform: rotate( -180deg );
 }

@@ -28,21 +28,21 @@ function hopscotch_body_class( $classes ) {
 
     // Masthead Sidebar Class
     if ( is_active_sidebar( 'masthead-sidebar' ) )
-        $classes[] = 'hs-state__masthead-sidebar--active';
+        $classes[] = 'hs-state__masthead-sidebar--enabled';
     else
-        $classes[] = 'hs-state__masthead-sidebar--inactive';
+        $classes[] = 'hs-state__masthead-sidebar--disabled';
 
     // Content Sidebar Class
     if ( is_active_sidebar( 'content-sidebar' ) )
-        $classes[] = 'hs-state__content-sidebar--active';
+        $classes[] = 'hs-state__content-sidebar--enabled';
     else
-        $classes[] = 'hs-state__content-sidebar--inactive';
+        $classes[] = 'hs-state__content-sidebar--disabled';
 
     // Colophon Sidebar Class
     if ( is_active_sidebar( 'colophon-sidebar' ) )
-        $classes[] = 'hs-state__colophon-sidebar--active';
+        $classes[] = 'hs-state__colophon-sidebar--enabled';
     else
-        $classes[] = 'hs-state__colophon-sidebar--inactive';
+        $classes[] = 'hs-state__colophon-sidebar--disabled';
 
     return $classes;
 }

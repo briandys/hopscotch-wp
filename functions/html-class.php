@@ -5,7 +5,7 @@ if ( ! function_exists( 'hopscotch_html_default_class' ) ) :
 	function hopscotch_html_default_class() {
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
         
-        echo 'html hs-type__hopscotch--parent ';
+        echo 'html hs-level--parent ';
         
         // Browser Detected as Class
         if ( $is_lynx ) echo 'hs-browser--lynx';

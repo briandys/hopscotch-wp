@@ -72,6 +72,11 @@
   
     // Viewport resizing
     function resize() {
+        var viewportNarrowClass = 'hs-viewport--narrow',
+            viewportWideClass = 'hs-viewport--wide',
+            statePriNavMastheadSidebarActiveClass = 'hs-state__primary-nav-masthead-sidebar--active',
+            statePriNavMastheadSidebarIntiveClass = 'hs-state__primary-nav-masthead-sidebar--inactive';
+            
         windowWidth = $window.width();
 
         /*
@@ -79,20 +84,20 @@
         If Tablet size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
         */
         if (769 > windowWidth) {
-            $html.addClass( 'hs-type__viewport--narrow' );
-            $html.removeClass( 'hs-type__viewport--wide' );
+            $html.addClass( viewportNarrowClass );
+            $html.removeClass( viewportWideClass );
         } else {
-            $html.addClass( 'hs-type__viewport--wide' );
-            $html.removeClass( 'hs-type__viewport--narrow' );
+            $html.addClass( viewportWideClass );
+            $html.removeClass( viewportNarrowClass );
         }
 
         // If screen is narrow, deactivate primary navigation
-        if ( $html.hasClass( 'hs-type__viewport--narrow' ) ) {
-            $body.removeClass( 'hs-state__primary-nav-masthead-sidebar--active' );
-            $body.addClass( 'hs-state__primary-nav-masthead-sidebar--inactive' );
+        if ( $html.hasClass( viewportNarrowClass ) ) {
+            $body.removeClass( statePriNavMastheadSidebarActiveClass );
+            $body.addClass( statePriNavMastheadSidebarIntiveClass );
         } else {
-            $body.removeClass( 'hs-state__primary-nav-masthead-sidebar--inactive' );
-            $body.addClass( 'hs-state__primary-nav-masthead-sidebar--active' );
+            $body.removeClass( statePriNavMastheadSidebarIntiveClass );
+            $body.addClass( statePriNavMastheadSidebarActiveClass );
         }
 
     }

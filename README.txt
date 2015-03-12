@@ -75,6 +75,12 @@ Location: index.php
 -->
 
 <!--
+Action: Show Content
+Class: show-content_axn
+Location: header.php
+-->
+
+<!--
 Action: Primary Navigation and Masthead Sidebar Toggle Action
 Class: primary-nav-masthead-sidebar-toggle_axn
 Location: header.php

@@ -10,7 +10,7 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
         if ( get_previous_post_link() || get_next_post_link() ) : ?>
         <nav class="comp content_nav article-entry_nav" role="navigation">
             <div class="cr content-nav_cr article-entry-nav_cr">
-                <h2 class="accessible-name"><?php _e( 'Entry Navigation', 'hopscotch' ); ?></h2>
+                <h2 class="accessible-name"><?php _e( 'Article Entry Navigation', 'hopscotch' ); ?></h2>
                 <ul class="grp content-nav_grp article-entry-nav_grp">
 
                     <?php // Next
@@ -19,7 +19,7 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
                     <li class="item content-nav_item article-entry-nav_item next-article-entry-nav_item">
                         <span class="label next-ct_label">
                             <span class="label pred_label"><?php _e( 'Next', 'hopscotch' ); ?></span>
-                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span>
+                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
                         </span>
                         <?php next_post_link( '%link', _x( '%title', 'Newer Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
@@ -30,7 +30,7 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
                     <li class="item content-nav_item article-entry-nav_item prev-article-entry-nav_item">     
                         <span class="label prev-ct_label">
                             <span class="label pred_label"><?php _e( 'Previous', 'hopscotch' ); ?></span>
-                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span>
+                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
                         </span>
                         <?php previous_post_link( '%link', _x( '%title', 'Older Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>

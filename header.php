@@ -53,8 +53,13 @@
         </div>
         <![endif]-->
 
-        <div class="ui-cr__view--screen">
-            <a class="show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
+        <div class="hs-cr--screen">
+            
+            <!--
+            Action: Show Content
+            Class: show-content_axn
+            -->
+            <a class="axn show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
             
             <!--
             Constructor: Masthead
