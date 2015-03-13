@@ -7,7 +7,7 @@ function hopscotch_widgets_init() {
 		'id'            => 'masthead-sidebar',
 		'description'   => __( 'Header secondary content', 'hopscotch' ),
 		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="cr widget_cr">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h4 class="accessible-name widget-title">',
 		'after_title'   => '</h4><div class="ct widget_ct">',
 	) );
@@ -15,7 +15,7 @@ function hopscotch_widgets_init() {
 		'name'          => __( 'Content Sidebar', 'hopscotch' ),
 		'id'            => 'content-sidebar',
 		'description'   => __( 'Body secondary content', 'hopscotch' ),
-		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="crwidget_cr">',
+		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="cr widget_cr">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h4 class="accessible-name widget-title">',
 		'after_title'   => '</h4><div class="ct widget_ct">',
@@ -25,7 +25,7 @@ function hopscotch_widgets_init() {
 		'id'            => 'colophon-sidebar',
 		'description'   => __( 'Footer secondary content', 'hopscotch' ),
 		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="cr widget_cr">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h4 class="accessible-name widget-title">',
 		'after_title'   => '</h4><div class="ct widget_ct">',
 	) );

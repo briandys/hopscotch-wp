@@ -11,7 +11,7 @@ Class: search
                     <div class="field_cr">
                         <label class="search-form_label" for="search-form_input">
                             <span class="label"><?php _e( 'Search for', 'hopscotch'); ?></span>
-                            <svg class="icon search_icon"><use xlink:href="#search_icon"></use></svg>
+                            <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
                         </label>
                         <input id="search-form_input" class="search-form_input" type="search" name="s" placeholder="Search" required>
                     </div>

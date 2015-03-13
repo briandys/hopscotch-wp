@@ -1,101 +1,249 @@
-/*------------------------- Visually Hidden -------------------------*/
-/* Visually Hidden Default Class */
-.visuallyhidden,
+/*--------------------------------------------------
+Structural Declaration: Border Box
+- Modifies the Box Model in such a way that when border-box is defined, the declared width of an element will not be affected by its padding, border, or margin
+- https://developer.mozilla.org/en-US/docs/Web/CSS/box_model
+-------------------------*/
+* {
+    -webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
 
-/* Skip Link */
+
+/*--------------------------------------------------
+Structural Declaration: Form Elements Defaults
+-------------------------*/
+
+button {
+    
+    /* Sets a minimum height for buttons; good for active area sizes */
+    min-height: 3rem;
+    
+    /* Adds a nice spacing around the elements inside the button */
+    padding: .5rem;
+}
+
+
+/*--------------------------------------------------
+Patch Declaration: Hidden (hidden from view and from screen readers)
+- Based on HTML5 Boilerplate main.css
+-------------------------*/
+
+/* Default Class */
+.hs-patch--hidden,
+
+/* Tree Nav inactive, hide Sub-Nav */
+.hs-state__tree-nav--inactive > .children,
+.hs-state__tree-nav--inactive > .sub-menu
+
+{
+    display: none !important;
+}
+
+
+/*--------------------------------------------------
+Patch Declaration: Visually Hidden (hidden from view but visible to screen readers)
+- Based on HTML5 Boilerplate main.css
+- https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+-------------------------*/
+
+/* Default Class */
+.hs-patch--visually-hidden,
+
+/* Show Content Action / Skip Link */
 .show-content_axn,
 
-/* If tree navigation is inactive, hide the sub navigation */
-.hs-state__tree-nav--inactive > .children,
-.hs-state__tree-nav--inactive > .sub-menu,
-
-/* If screen is wide, hide pimary nav toggle action */
+/* Viewport wide, hide Primary Nav and Masthead Sidebar Toggle Action */
 .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
 
-/* If Primary Navigation and Masthead Sidebar is inactive, hide the component */
+/* Primary Nav and Masthead Sidebar inactive, hide Primary Nav and Masthead Sidebar Component */
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
 
-/* If screen is narrow and narrow nav is inactive, hide primary nav content */
-.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
-
-/* Navigation - Show/hide Toggle icons */
+/* Primary Nav and Masthead Sidebar inactive, hide Dismiss Icon (x icon) */
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+
+/* Primary Nav and Masthead Sidebar inactive, hide Menu Icon (hamburger icon) */
 .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 
-/* Search */
+/* Search within Masthead Sidebar active, hide Search Form Label */
 .masthead_sidebar .hs-state__search--active .search-form_label,
+
+/* Search within Masthead Sidebar inactive, hide Search Form Input and Button */
 .masthead_sidebar .hs-state__search--inactive .search-form_input,
-.masthead_sidebar .hs-state__search--inactive .search-form_button {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+.masthead_sidebar .hs-state__search--inactive .search-form_button
+
+{
+    border: 0;
+    clip: rect( 0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
-/*------------------------- Visually Hidden Reverse -------------------------*/
+
+/*--------------------------------------------------
+Patch Declaration: Visually Hidden Reverse
+- Based on HTML5 Boilerplate main.css
+- https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+-------------------------*/
+
+/* Default Class */
+.hs-patch--visually-hidden-rev,
+
+/* Show Content Action / Skip Link */
 .show-content_axn:focus,
+.show-content_axn:active,
 
-/* Search Component */
+/* Search Form */
 .hs-state__search--inactive .search-form_input:focus,
-.hs-state__search--inactive .search-form_button:focus {
-  clip: auto;
-  width: auto;
-  height: auto;
-  z-index: 100000;
+.hs-state__search--inactive .search-form_button:focus
+
+{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
-/* Search Component */
+
+/*--------------------------------------------------
+Structural Declaration: Container for Inline Icons such as SVGs
+
+Structure:
+<div class="inline-icon-cr">
+    <svg> or <img>
+<div>
+-------------------------*/
+
+/* Default */
+.hs-structure--inline-icon-cr,
+.search-form_label
+
+{
+    /* Enables the element to be centered vertically */    
+    display: table-cell;
+    
+    /* 48x48 px - very good as active size */
+    width: 3rem; height: 3rem;
+    
+    /* Centers the element in its container, both horizontally and vertically */
+    text-align: center; vertical-align: middle;
+}
+
+
+/*--------------------------------------------------
+Structural Declaration: Inline SVG Icons
+- Intended for inline SVG icons
+- Sprited thru an <svg> markup just below the <body> element
+- You can see these in use in the following:
+-- Primary Navigation and Masthead Sidebar Toggle Action in the form of hamburger icon and x icon
+-- Sub-Navigation Toggle Action in the form of arrow down
+-- Search Component in the form of search icon
+-------------------------*/
+
+/* Default */
+.hs-structure--inline-icon,
+svg.icon {
+    
+    /* Adds a very narrow allowance around the icon */
+    margin: 0.0625rem;
+    
+    /* Sets the default dimensions of the icon - not too small and not too big */
+    width: 1.5rem; height: 1.5rem;
+    
+    /* Just the right amount of black */
+    color: #333;
+    
+    /* currentColor follows the color property */
+    fill: currentColor;
+    
+    /* Sets the icon at the vertical center of its container */
+    vertical-align: middle;
+}
+
+
+/*--------------------------------------------------
+Component: Sub-Navigation Toggle Action
+- Object that appears as a button if a navigation item has sub-navigation items under it
+- <button> is used for accessibility
+-------------------------*/
+
+/* Default */
+.sub-nav-toggle_axn {
+    
+    /* Enables the use of pseudo-element with position: absolute */
+    position: relative;
+    
+    /* Sets the empty space for the icon */
+    padding-right: 2.5rem;
+}
+
+/* Pseudo-Element that creates the icon */
+.sub-nav-toggle_axn:after {
+    
+    /* Creates the pseudo-element */
+    content: '';
+    
+    /* Absolutely-positions the element */
+    position: absolute;
+    
+    /* Sets the element to be centered vertically; partered with an offset using margin-top */
+    top: 50%;
+    
+    /* Position to the right */
+    right: 0;
+    
+    /* Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75) */
+    margin-top: -.75rem;
+    
+    /* Sets a space to the right */
+    margin-right: .75rem;
+    
+    /* Sets the visual size of the actual icon */
+    width: 1.5rem; height: 1.5rem;
+    
+    /* Uses SVG to have hi-res icon */
+    background-image: url( ../img/icon-arrow-down.svg );
+    
+    /* Prevents the tiling of the background-image */
+    background-repeat: no-repeat;
+    
+    /* Occupies the space of the width and height */
+    background-size: cover;
+    
+    /* For animation */
+    transition: transform .2s;
+}
+
+/* Reverses the icon's direction if the Tree nav is active */
+.hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
+    transform: rotate( -180deg );
+}
+
+
+/*--------------------------------------------------
+Structural Declaration: Cursor Pointer on Hover
+-------------------------*/
+button.axn:hover,
 .search-form_label:hover {
   cursor: pointer;
 }
 
+
+/*--------------------------------------------------
+Component: Show Top Action
+-------------------------*/
+.show-top_axn .arrow-left_icon {
+    transform: rotate( 90deg );
+}
+
+
 /* Hides the HopScotch CSS background-image set for Featured Image */
 .entry-banner_axn {
     background-image: none !important;
-}
-
-/*------------------------- Inline SVG -------------------------*/
-svg {
-    margin: 0.0625rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #333;
-    fill: currentColor;
-    vertical-align: middle;
-}
-
-.search-form_label {
-    display: table-cell;
-    width: 3.5rem;
-    height: 3.5rem;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.sub-nav-toggle_axn {
-    position: relative;
-    padding-right: 3rem;
-    min-height: 3rem;
-}
- .sub-nav-toggle_axn:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top: -.75rem;
-    margin-right: .5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-image: url( ../img/icon-arrow-down.svg );
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: transform .2s;
-}
-
-.hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
-    transform: rotate( -180deg );
 }

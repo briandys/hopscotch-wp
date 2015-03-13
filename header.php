@@ -95,17 +95,17 @@
                         Action: Primary Navigation and Masthead Sidebar Toggle Action
                         Class: primary-nav-masthead-sidebar-toggle_axn
                         -->
-                        <button id="primary-nav-masthead-sidebar-toggle_axn" class="axn toggle_axn primary-nav-masthead-sidebar-toggle_axn">
+                        <button id="primary-nav-masthead-sidebar-toggle_axn" class="axn toggle_axn primary-nav-masthead-sidebar-toggle_axn" title="Toggle Navigation and Sidebar">
                             <span class="label toggle_label"><?php _e( 'Toggle Navigation and Sidebar', 'hopscotch' ); ?></span>
-                            <svg class="icon menu_icon"><use xlink:href="#menu_icon"></use></svg>
-                            <svg class="icon dismiss_icon"><use xlink:href="#dismiss_icon"></use></svg>
+                            <svg class="icon menu_icon" width="0" height="0"><use xlink:href="#menu_icon"></use></svg>
+                            <svg class="icon dismiss_icon" width="0" height="0"><use xlink:href="#dismiss_icon"></use></svg>
                         </button><!-- primary-nav-masthead-sidebar-toggle_axn -->
 
                         <!--
                         Component: Primary Navigation and Masthead Sidebar Component
                         Class: primary-nav-masthead-sidebar_comp
                         -->
-                        <div id="primary-nav-masthead-sidebar_comp" class="comp primary-nav-masthead-sidebar_comp" aria-expanded="false">
+                        <div id="primary-nav-masthead-sidebar_comp" class="comp primary-nav-masthead-sidebar_comp" role="tree" aria-expanded="false">
 
                             <section class="cr primary-nav-masthead-sidebar_cr">
 
