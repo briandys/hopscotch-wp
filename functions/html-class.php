@@ -1,13 +1,14 @@
 <?php
 // HTML Class
 
-if ( ! function_exists( 'hopscotch_html_default_class' ) ) :
-	function hopscotch_html_default_class() {
+if ( ! function_exists( 'hopscotch_detection_html_class' ) ) :
+	function hopscotch_detection_html_class() {
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
         
+        // Default
         echo 'html ';
         
-        // Browser Detected as Class
+        // Browser Detection
         if ( $is_lynx ) echo 'hs-browser--lynx ';
         elseif ( $is_gecko ) echo 'hs-browser--gecko ';
         elseif ( $is_opera ) echo 'hs-browser--opera ';
@@ -15,20 +16,32 @@ if ( ! function_exists( 'hopscotch_html_default_class' ) ) :
         elseif ( $is_safari ) echo 'hs-browser--safari ';
         elseif ( $is_chrome ) echo 'hs-browser--chrome ';
         elseif ( $is_IE ) echo 'hs-browser--ie ';
-        else echo 'hs-browser--unknown ';
+        else echo 'hs-browser--unlisted ';
 
-        // If browser's device is iPhone
+        // Device Model Detection
         if ($is_iphone) echo 'hs-device--iphone ';
+        else echo 'hs-device--not-iphone ';
         
-        // HopScotch Parent Template Class
-        echo 'hs-level--parent ';
+        // Mobile Detection
+        if ( wp_is_mobile() ) echo 'hs-device--mobile ';
+        else echo 'hs-device--not-mobile ';
 
-        // Sets class for inner or front page
-        if ( ! is_front_page() )
-            echo 'hs-view--inner ';
-        else
-            echo 'hs-view--front ';
+        // View
+        if ( ! is_front_page() ) echo 'hs-view--inner ';
+        else echo 'hs-view--front ';
     
     }
-    add_action( 'hopscotch_html_class', 'hopscotch_html_default_class');
+    add_action( 'hopscotch_html_class', 'hopscotch_detection_html_class', 11);
+endif;
+
+if ( ! function_exists( 'hopscotch_default_html_class' ) ) :
+	function hopscotch_default_html_class() {
+        
+        // Level
+        // Parent for HopScotch parent theme
+        // Modify this function in a child theme
+        echo 'hs-level--parent ';
+    
+    }
+    add_action( 'hopscotch_html_class', 'hopscotch_default_html_class');
 endif;

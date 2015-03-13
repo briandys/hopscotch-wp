@@ -1,9 +1,9 @@
 hopscotch-wp
 ============
 
-A WordPress base template upholding the importance of semantic HTML and content structure.
+ A WordPress parent theme championing semantics and content structure.
 
-Official page: http://briansahagun.com/hopscotch/
+Official page: http://designdrive.co/hopscotch
 
 Constructors
 - Masthead
