@@ -11,7 +11,7 @@ if ( ! function_exists( 'hopscotch_primary_social_nav' ) ) :
         -->
         <nav id="primary_nav" class="nav primary_nav" role="navigation">
             <div class="cr primary-nav_cr">
-                <h3 class="accessible-name"><?php _e( 'Primary Navigation', 'hopscotch' ); ?></h3>
+                <h3 class="accessible-name primary-nav_accessible-name"><?php _e( 'Primary Navigation', 'hopscotch' ); ?></h3>
 
                 <?php
                 if ( ! has_nav_menu( 'primary-navigation' ) ) {
@@ -38,7 +38,7 @@ if ( ! function_exists( 'hopscotch_primary_social_nav' ) ) :
             Class: social_nav
             -->
             <nav id="social_nav" class="nav social_nav" role="navigation">
-                <div class="cr social-nav_cr">
+                <div class="cr social-nav_cr social-nav_accessible-name">
                     <h3 class="accessible-name"><?php _e( 'Social Navigation', 'hopscotch' ); ?></h3>
 
                     <?php

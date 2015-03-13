@@ -32,6 +32,9 @@ Patch Declaration: Hidden (hidden from view and from screen readers)
 /* Default Class */
 .hs-patch--hidden,
 
+/* Primary Nav and Masthead Sidebar inactive, hide Primary Nav and Masthead Sidebar Component */
+.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
+
 /* Tree Nav inactive, hide Sub-Nav */
 .hs-state__tree-nav--inactive > .children,
 .hs-state__tree-nav--inactive > .sub-menu
@@ -56,21 +59,28 @@ Patch Declaration: Visually Hidden (hidden from view but visible to screen reade
 /* Viewport wide, hide Primary Nav and Masthead Sidebar Toggle Action */
 .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
 
-/* Primary Nav and Masthead Sidebar inactive, hide Primary Nav and Masthead Sidebar Component */
-.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
-
 /* Primary Nav and Masthead Sidebar inactive, hide Dismiss Icon (x icon) */
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
 
 /* Primary Nav and Masthead Sidebar inactive, hide Menu Icon (hamburger icon) */
 .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 
-/* Search within Masthead Sidebar active, hide Search Form Label */
-.masthead_sidebar .hs-state__search--active .search-form_label,
+/* Search */
+.masthead_sidebar .search-form_label .search_icon,
 
-/* Search within Masthead Sidebar inactive, hide Search Form Input and Button */
-.masthead_sidebar .hs-state__search--inactive .search-form_input,
-.masthead_sidebar .hs-state__search--inactive .search-form_button
+/* Accessible Names */
+.primary-nav-masthead-sidebar_accessible-name,
+.primary-nav_accessible-name,
+.social-nav_accessible-name,
+.masthead-sidebar_accessible-name,
+.content-sidebar_accessible-name,
+.colophon-sidebar_accessible-name,
+.widget_search .accessible-name,
+.search_form legend,
+.content-hr_accessible-name,
+.primary-content_accessible-name,
+.colophon_accessible-name,
+.web-product_desc
 
 {
     border: 0;
@@ -99,7 +109,9 @@ Patch Declaration: Visually Hidden Reverse
 
 /* Search Form */
 .hs-state__search--inactive .search-form_input:focus,
-.hs-state__search--inactive .search-form_button:focus
+.hs-state__search--inactive .search-form_button:focus,
+
+.search .content-hr_accessible-name
 
 {
     clip: auto;
@@ -246,4 +258,31 @@ Component: Show Top Action
 /* Hides the HopScotch CSS background-image set for Featured Image */
 .entry-banner_axn {
     background-image: none !important;
+}
+
+
+/*--------------------------------------------------
+Template: Search Minimal
+-------------------------*/
+
+/* Search within Masthead Sidebar active, hide Search Form Label */
+.hs-template__search--minimal
+.masthead_sidebar .hs-state__search--active .search-form_label,
+
+/* Search within Masthead Sidebar inactive, hide Search Form Input and Button */
+.hs-template__search--minimal
+.masthead_sidebar .hs-state__search--inactive .search-form_input,
+
+.hs-template__search--minimal
+.masthead_sidebar .hs-state__search--inactive .search-form_button
+
+{
+    border: 0;
+    clip: rect( 0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

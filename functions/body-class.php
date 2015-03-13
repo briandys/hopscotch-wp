@@ -8,8 +8,11 @@ function hopscotch_body_class( $classes ) {
     // Article Entry Slug as Class
     // Format: <Post Type>--<Slug>
     // Example: If type is Post then: post--page-title
-    if ( isset( $post ) &&  ! is_home() ) {		
-        $classes[] = $post->post_type . '--' . $post->post_name;
+    if ( isset( $post ) &&  ! is_front_page() ) {		
+        $classes[] = 'hs-type__' . $post->post_type . '--' . $post->post_name;
+        $classes[] = 'hs-type__view--' . $post->post_type;
+    } else {        
+        $classes[] = 'hs-type__view--front';
     }
 
     // Article Entry Category as Class

@@ -10,15 +10,18 @@ Class: search
                 <div class="field">
                     <div class="field_cr">
                         <label class="search-form_label" for="search-form_input">
-                            <span class="label"><?php _e( 'Search for', 'hopscotch'); ?></span>
+                            <span class="label subj_label"><?php _e( 'Search Keyword', 'hopscotch'); ?></span>
                             <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
                         </label>
-                        <input id="search-form_input" class="search-form_input" type="search" name="s" placeholder="Search" required>
+                        <input id="search-form_input" class="search-form_input" type="search" name="s" placeholder="Enter Keyword" required>
                     </div>
                 </div><!-- field -->
                 <div class="field_axn">
                     <div class="field-axn_cr">
-                        <button class="search-form_button" type="submit"><?php _e( 'Search', 'hopscotch'); ?></button>
+                        <button class="search-form_button" type="submit">
+                            <span class="label verb_label"><?php _e( 'Search', 'hopscotch'); ?></span>
+                            <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
+                        </button>
                     </div>
                 </div><!-- field_axn -->
             </fieldset>

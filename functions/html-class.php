@@ -1,24 +1,16 @@
 <?php
 // HTML Class
 
-if ( ! function_exists( 'hopscotch_default_html_class' ) ) :
-	function hopscotch_default_html_class() {
-        
-        // Level
-        // Parent for HopScotch parent theme
-        // Modify this function in a child theme
-        echo 'hs-level--parent hs-theme--hopscotch ';
-    
-    }
-    add_action( 'hopscotch_html_class', 'hopscotch_default_html_class');
-endif;
-
 if ( ! function_exists( 'hopscotch_detection_html_class' ) ) :
 	function hopscotch_detection_html_class() {
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
         
         // Default
         echo 'html ';
+        
+        // Level
+        if ( ! is_child_theme() ) echo 'hs-level--parent ';
+        else echo 'hs-level--child ';
         
         // Browser Detection
         if ( $is_lynx ) echo 'hs-browser--lynx ';
@@ -43,5 +35,5 @@ if ( ! function_exists( 'hopscotch_detection_html_class' ) ) :
         else echo 'hs-view--front ';
     
     }
-    add_action( 'hopscotch_html_class', 'hopscotch_detection_html_class', 11);
+    add_action( 'hopscotch_html_class', 'hopscotch_detection_html_class');
 endif;

@@ -109,7 +109,7 @@
 
                             <section class="cr primary-nav-masthead-sidebar_cr">
 
-                                <h2 class="accessible-name"><?php _e( 'Primary Navigation and Masthead Sidebar', 'hopscotch' ); ?></h2>    
+                                <h2 class="accessible-name primary-nav-masthead-sidebar_accessible-name"><?php _e( 'Primary Navigation and Masthead Sidebar', 'hopscotch' ); ?></h2>    
                                 <div class="ct primary-nav-masthead-sidebar_ct">
 
                                     <?php
@@ -124,7 +124,7 @@
                                     -->
                                     <aside id="masthead_sidebar" class="sidebar masthead_sidebar" role="complementary">
                                         <div class="cr masthead-sidebar_cr">
-                                            <h3 class="accessible-name"><?php _e( 'Masthead Sidebar', 'hopscotch' ); ?></h3>
+                                            <h3 class="accessible-name masthead-sidebar_accessible-name"><?php _e( 'Masthead Sidebar', 'hopscotch' ); ?></h3>
                                             <div class="ct masthead-sidebar_ct widget-area">
                                                 <?php dynamic_sidebar( 'masthead-sidebar' ); ?>
                                             </div><!-- masthead-sidebar_ct -->

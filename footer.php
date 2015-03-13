@@ -4,7 +4,7 @@
             -->
             <footer id="colophon" class="comp colophon" role="contentinfo">
                 <section class="cr colophon_cr">
-                    <h2 class="accessible-name"><?php _e( 'Colophon', 'hopscotch' ); ?></h2>
+                    <h2 class="accessible-name colophon_accessible-name"><?php _e( 'Colophon', 'hopscotch' ); ?></h2>
                     <div class="ct colophon_ct">
                         
                         <!--
@@ -27,7 +27,7 @@
                         -->
                         <aside id="colophon_sidebar" class="sidebar colophon_sidebar" role="complementary">
                             <div class="cr colophon-sidebar_cr">
-                                <h3 class="accessible-name"><?php _e( 'Colophon Sidebar', 'hopscotch' ); ?></h3>
+                                <h3 class="accessible-name colophon-sidebar_accessible-name"><?php _e( 'Colophon Sidebar', 'hopscotch' ); ?></h3>
                                 <div class="ct colophon-sidebar_ct widget-area">
                                     <?php dynamic_sidebar( 'colophon-sidebar' ); ?>
                                 </div><!-- colophon-sidebar_ct -->

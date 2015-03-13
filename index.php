@@ -14,7 +14,7 @@
 
             <div class="hr content_hr">
                 <div class="cr content-hr_cr">
-                    <h2 class="accessible-name">
+                    <h2 class="accessible-name content-hr_accessible-name">
                         
                     <?php // Singular (is_single, is_page, is_attachment)
                     // If Front Page is customized
@@ -112,7 +112,7 @@
                 -->
                 <div class="comp primary-content_comp">
                     <section class="cr primary-content_cr">
-                        <h3 class="accessible-name"><?php _e( 'Primary Content', 'hopscotch' ); ?></h3>
+                        <h3 class="accessible-name primary-content_accessible-name"><?php _e( 'Primary Content', 'hopscotch' ); ?></h3>
                         <div class="ct primary-content_ct">
 
                         <?php // Function as single.php (is_single, is_page, is_attachment)
