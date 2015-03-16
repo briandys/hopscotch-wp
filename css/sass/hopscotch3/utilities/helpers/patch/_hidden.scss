@@ -1,0 +1,10 @@
+// Patch Declaration: Hidden (hidden from view and from screen readers)
+// Based on HTML5 Boilerplate main.css
+
+@mixin hs-patch--hidden {
+    display: none !important;
+}
+
+%hs-patch--hidden {
+    @include hs-patch--hidden;
+}

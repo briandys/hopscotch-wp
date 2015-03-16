@@ -1,288 +1,742 @@
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, sass/default/utilities/h5bp/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 19, sass/default/utilities/h5bp/_normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 43, sass/default/utilities/h5bp/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, sass/default/utilities/h5bp/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, sass/default/utilities/h5bp/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, sass/default/utilities/h5bp/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, sass/default/utilities/h5bp/_normalize.scss */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, sass/default/utilities/h5bp/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, sass/default/utilities/h5bp/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, sass/default/utilities/h5bp/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, sass/default/utilities/h5bp/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 133, sass/default/utilities/h5bp/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 142, sass/default/utilities/h5bp/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, sass/default/utilities/h5bp/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 160, sass/default/utilities/h5bp/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 167, sass/default/utilities/h5bp/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 171, sass/default/utilities/h5bp/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 182, sass/default/utilities/h5bp/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 190, sass/default/utilities/h5bp/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 201, sass/default/utilities/h5bp/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 209, sass/default/utilities/h5bp/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 219, sass/default/utilities/h5bp/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, sass/default/utilities/h5bp/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 254, sass/default/utilities/h5bp/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 264, sass/default/utilities/h5bp/_normalize.scss */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 276, sass/default/utilities/h5bp/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, sass/default/utilities/h5bp/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 301, sass/default/utilities/h5bp/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 310, sass/default/utilities/h5bp/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 320, sass/default/utilities/h5bp/_normalize.scss */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 333, sass/default/utilities/h5bp/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 345, sass/default/utilities/h5bp/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 355, sass/default/utilities/h5bp/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 369, sass/default/utilities/h5bp/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 377, sass/default/utilities/h5bp/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 388, sass/default/utilities/h5bp/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 397, sass/default/utilities/h5bp/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 406, sass/default/utilities/h5bp/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 417, sass/default/utilities/h5bp/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 423, sass/default/utilities/h5bp/_normalize.scss */
+td,
+th {
+  padding: 0; }
+
+/* HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 13, sass/default/utilities/h5bp/_main.scss */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 25, sass/default/utilities/h5bp/_main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 30, sass/default/utilities/h5bp/_main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 39, sass/default/utilities/h5bp/_main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 57, sass/default/utilities/h5bp/_main.scss */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 65, sass/default/utilities/h5bp/_main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 75, sass/default/utilities/h5bp/_main.scss */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+/* line 83, sass/default/utilities/h5bp/_main.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+/* line 118, sass/default/utilities/h5bp/_main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+/* line 127, sass/default/utilities/h5bp/_main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 144, sass/default/utilities/h5bp/_main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/* line 157, sass/default/utilities/h5bp/_main.scss */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 174, sass/default/utilities/h5bp/_main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 179, sass/default/utilities/h5bp/_main.scss */
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 206, sass/default/utilities/h5bp/_main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 214, sass/default/utilities/h5bp/_main.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 218, sass/default/utilities/h5bp/_main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 222, sass/default/utilities/h5bp/_main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  /* line 232, sass/default/utilities/h5bp/_main.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  /* line 237, sass/default/utilities/h5bp/_main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /* line 242, sass/default/utilities/h5bp/_main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 247, sass/default/utilities/h5bp/_main.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 251, sass/default/utilities/h5bp/_main.scss */
+  img {
+    max-width: 100% !important; }
+
+  /* line 257, sass/default/utilities/h5bp/_main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 263, sass/default/utilities/h5bp/_main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/* line 8, sass/hopscotch3/utilities/helpers/patch/_hidden.scss */
+.primary-nav-masthead-sidebar_accessible-name,
+.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp, .hs-state__tree-nav--inactive > .children,
+.hs-state__tree-nav--inactive > .sub-menu {
+  display: none !important; }
+
+/* line 16, sass/hopscotch3/utilities/helpers/patch/_visually-hidden.scss */
+.content-hr_accessible-name,
+.primary-content_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
+.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+.hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
+.widget_search .accessible-name,
+.masthead_sidebar .search-form_label .search_icon, .show-content_axn, .web-product_desc {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 34, sass/hopscotch3/utilities/helpers/patch/_visually-hidden.scss */
+.hs-state__search--inactive .search-form_input:focus,
+.hs-state__search--inactive .search-form_button:focus,
+.search .content-hr_accessible-name, .show-content_axn:focus,
+.show-content_axn:active {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
 /*--------------------------------------------------
 Structural Declaration: Border Box
 - Modifies the Box Model in such a way that when border-box is defined, the declared width of an element will not be affected by its padding, border, or margin
 - https://developer.mozilla.org/en-US/docs/Web/CSS/box_model
 -------------------------*/
-* {
-    -webkit-box-sizing: border-box !important;
-	-moz-box-sizing: border-box !important;
-	box-sizing: border-box !important;
-}
+/* line 7, sass/hopscotch3/utilities/helpers/nature/_cursor-pointer.scss */
+button.axn:hover, .search-form_label:hover {
+  cursor: pointer; }
 
-
-/*--------------------------------------------------
-Structural Declaration: Form Elements Defaults
--------------------------*/
-
-button {
-    
-    /* Sets a minimum height for buttons; good for active area sizes */
-    min-height: 3rem;
-    
-    /* Adds a nice spacing around the elements inside the button */
-    padding: .5rem;
-}
-
-
-/*--------------------------------------------------
-Patch Declaration: Hidden (hidden from view and from screen readers)
-- Based on HTML5 Boilerplate main.css
--------------------------*/
-
-/* Default Class */
-.hs-patch--hidden,
-
-/* Primary Nav and Masthead Sidebar inactive, hide Primary Nav and Masthead Sidebar Component */
-.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp,
-
-/* Tree Nav inactive, hide Sub-Nav */
-.hs-state__tree-nav--inactive > .children,
-.hs-state__tree-nav--inactive > .sub-menu
-
-{
-    display: none !important;
-}
-
-
-/*--------------------------------------------------
-Patch Declaration: Visually Hidden (hidden from view but visible to screen readers)
-- Based on HTML5 Boilerplate main.css
-- https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
--------------------------*/
-
-/* Default Class */
-.hs-patch--visually-hidden,
-
-/* Show Content Action / Skip Link */
-.show-content_axn,
-
-/* Viewport wide, hide Primary Nav and Masthead Sidebar Toggle Action */
-.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
-
-/* Primary Nav and Masthead Sidebar inactive, hide Dismiss Icon (x icon) */
-.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-
-/* Primary Nav and Masthead Sidebar inactive, hide Menu Icon (hamburger icon) */
-.hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
-
-/* Search */
-.masthead_sidebar .search-form_label .search_icon,
-
-/* Accessible Names */
-.primary-nav-masthead-sidebar_accessible-name,
-.primary-nav_accessible-name,
-.social-nav_accessible-name,
-.masthead-sidebar_accessible-name,
-.content-sidebar_accessible-name,
-.colophon-sidebar_accessible-name,
-.widget_search .accessible-name,
-.search_form legend,
-.content-hr_accessible-name,
-.primary-content_accessible-name,
-.colophon_accessible-name,
-.web-product_desc
-
-{
-    border: 0;
-    clip: rect( 0 0 0 0 );
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-
-/*--------------------------------------------------
-Patch Declaration: Visually Hidden Reverse
-- Based on HTML5 Boilerplate main.css
-- https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
--------------------------*/
-
-/* Default Class */
-.hs-patch--visually-hidden-rev,
-
-/* Show Content Action / Skip Link */
-.show-content_axn:focus,
-.show-content_axn:active,
-
-/* Search Form */
-.hs-state__search--inactive .search-form_input:focus,
-.hs-state__search--inactive .search-form_button:focus,
-
-.search .content-hr_accessible-name
-
-{
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-
-/*--------------------------------------------------
-Structural Declaration: Container for Inline Icons such as SVGs
-
-Structure:
-<div class="inline-icon-cr">
-    <svg> or <img>
-<div>
--------------------------*/
-
-/* Default */
-.hs-structure--inline-icon-cr,
-.search-form_label
-
-{
-    /* Enables the element to be centered vertically */    
-    display: table-cell;
-    
-    /* 48x48 px - very good as active size */
-    width: 3rem; height: 3rem;
-    
-    /* Centers the element in its container, both horizontally and vertically */
-    text-align: center; vertical-align: middle;
-}
-
-
-/*--------------------------------------------------
-Structural Declaration: Inline SVG Icons
-- Intended for inline SVG icons
-- Sprited thru an <svg> markup just below the <body> element
-- You can see these in use in the following:
--- Primary Navigation and Masthead Sidebar Toggle Action in the form of hamburger icon and x icon
--- Sub-Navigation Toggle Action in the form of arrow down
--- Search Component in the form of search icon
--------------------------*/
-
-/* Default */
-.hs-structure--inline-icon,
-svg.icon {
-    
-    /* Adds a very narrow allowance around the icon */
-    margin: 0.0625rem;
-    
-    /* Sets the default dimensions of the icon - not too small and not too big */
-    width: 1.5rem; height: 1.5rem;
-    
-    /* Just the right amount of black */
-    color: #333;
-    
-    /* currentColor follows the color property */
-    fill: currentColor;
-    
-    /* Sets the icon at the vertical center of its container */
-    vertical-align: middle;
-}
-
-
-/*--------------------------------------------------
-Component: Sub-Navigation Toggle Action
-- Object that appears as a button if a navigation item has sub-navigation items under it
-- <button> is used for accessibility
--------------------------*/
-
-/* Default */
-.sub-nav-toggle_axn {
-    
-    /* Enables the use of pseudo-element with position: absolute */
-    position: relative;
-    
-    /* Sets the empty space for the icon */
-    padding-right: 2.5rem;
-}
-
-/* Pseudo-Element that creates the icon */
-.sub-nav-toggle_axn:after {
-    
-    /* Creates the pseudo-element */
-    content: '';
-    
-    /* Absolutely-positions the element */
-    position: absolute;
-    
-    /* Sets the element to be centered vertically; partered with an offset using margin-top */
-    top: 50%;
-    
-    /* Position to the right */
-    right: 0;
-    
-    /* Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75) */
-    margin-top: -.75rem;
-    
-    /* Sets a space to the right */
-    margin-right: .75rem;
-    
-    /* Sets the visual size of the actual icon */
-    width: 1.5rem; height: 1.5rem;
-    
-    /* Uses SVG to have hi-res icon */
-    background-image: url( ../img/icon-arrow-down.svg );
-    
-    /* Prevents the tiling of the background-image */
-    background-repeat: no-repeat;
-    
-    /* Occupies the space of the width and height */
-    background-size: cover;
-    
-    /* For animation */
-    transition: transform .2s;
-}
-
-/* Reverses the icon's direction if the Tree nav is active */
-.hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
-    transform: rotate( -180deg );
-}
-
-
-/*--------------------------------------------------
-Structural Declaration: Cursor Pointer on Hover
--------------------------*/
-button.axn:hover,
+/* line 20, sass/hopscotch3/utilities/helpers/nature/_inline-icon.scss */
 .search-form_label:hover {
-  cursor: pointer;
-}
+  display: table-cell;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  vertical-align: middle; }
 
+/* line 51, sass/hopscotch3/utilities/helpers/nature/_inline-icon.scss */
+svg.icon {
+  margin: 0.0625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #333;
+  fill: currentColor;
+  vertical-align: middle; }
 
-/*--------------------------------------------------
-Component: Show Top Action
--------------------------*/
-.show-top_axn .arrow-left_icon {
-    transform: rotate( 90deg );
-}
+/* line 3, sass/hopscotch3/elements/objects/_all.scss */
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
 
+/* line 3, sass/hopscotch3/elements/objects/_button.scss */
+button {
+  -moz-appearance: none;
+  min-height: 3rem;
+  padding: .5rem; }
 
-/* Hides the HopScotch CSS background-image set for Featured Image */
+/* line 3, sass/hopscotch3/elements/components/_entry-banner.scss */
 .entry-banner_axn {
-    background-image: none !important;
-}
+  background-image: none !important; }
 
+/* line 3, sass/hopscotch3/elements/components/_show-top.scss */
+.show-top_axn .arrow-left_icon {
+  transform: rotate(90deg); }
 
-/*--------------------------------------------------
-Template: Search Minimal
--------------------------*/
+/* line 6, sass/hopscotch3/elements/components/_sub-nav-toggle.scss */
+.sub-nav-toggle_axn {
+  position: relative;
+  padding-right: 2.5rem; }
 
-/* Search within Masthead Sidebar active, hide Search Form Label */
+/* line 16, sass/hopscotch3/elements/components/_sub-nav-toggle.scss */
+.sub-nav-toggle_axn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.75rem;
+  margin-right: .75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../img/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform .2s; }
+
+/* line 53, sass/hopscotch3/elements/components/_sub-nav-toggle.scss */
+.hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
+  transform: rotate(-180deg); }
+
+/* line 14, sass/hopscotch3/elements/templates/_search-minimal.scss */
 .hs-template__search--minimal
 .masthead_sidebar .hs-state__search--active .search-form_label,
-
-/* Search within Masthead Sidebar inactive, hide Search Form Input and Button */
 .hs-template__search--minimal
 .masthead_sidebar .hs-state__search--inactive .search-form_input,
-
 .hs-template__search--minimal
-.masthead_sidebar .hs-state__search--inactive .search-form_button
-
-{
-    border: 0;
-    clip: rect( 0 0 0 0 );
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
+.masthead_sidebar .hs-state__search--inactive .search-form_button {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }

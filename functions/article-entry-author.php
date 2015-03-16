@@ -26,7 +26,7 @@ if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
                 get_the_author(), // 3: Author Name
                 get_avatar(
                     get_the_author_meta( 'user_email' ),
-                    $size = '32',
+                    $size = '48',
                     $default = '',
                     $alt = 'Author Avatar of ' . get_the_author_meta( 'display_name' )
                 ) // 4: Author Avatar

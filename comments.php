@@ -64,7 +64,7 @@ Class: comments_comp
                 wp_list_comments( array(
                     'style'      => 'ol',
                     'short_ping' => true,
-                    'avatar_size'=> 72,
+                    'avatar_size'=> 48,
                     'callback' => 'hopscotch_comments_item'
                 ) );
                 ?>

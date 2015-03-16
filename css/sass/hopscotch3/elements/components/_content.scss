@@ -1,0 +1,5 @@
+.content-hr_accessible-name,
+.primary-content_accessible-name
+{
+    @extend %hs-patch--visually-hidden;
+}

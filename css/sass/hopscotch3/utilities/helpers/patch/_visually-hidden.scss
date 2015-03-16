@@ -1,0 +1,36 @@
+// Patch Declaration: Visually Hidden (hidden from view but visible to screen readers)
+// Based on HTML5 Boilerplate main.css
+// https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+
+@mixin hs-patch--visually-hidden {
+    border: 0;
+    clip: rect( 0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+%hs-patch--visually-hidden {
+    @include hs-patch--visually-hidden;
+}
+
+
+// Patch Declaration: Visually Hidden Reverse
+// Based on HTML5 Boilerplate main.css
+// https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+
+@mixin hs-patch--visually-hidden-reverse {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+%hs-patch--visually-hidden-reverse {
+    @include hs-patch--visually-hidden-reverse;
+}

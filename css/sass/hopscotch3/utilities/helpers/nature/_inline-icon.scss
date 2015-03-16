@@ -1,0 +1,53 @@
+// Structural Declaration: Container for Inline Icons such as SVGs
+
+// Structure:
+// <div class="inline-icon-cr">
+//     <svg> or <img>
+// <div>
+
+@mixin hs-nature--inline-icon-cr {
+    
+    // Enables the element to be centered vertically    
+    display: table-cell;
+    
+    // 48x48 px - very good as active size
+    width: 3rem; height: 3rem;
+    
+    // Centers the element in its container, both horizontally and vertically
+    text-align: center; vertical-align: middle;
+}
+
+%hs-nature--inline-icon-cr {
+    @include hs-nature--inline-icon-cr;
+}
+
+
+// Structural Declaration: Inline SVG Icons
+// - Intended for inline SVG icons
+// - Sprited thru an <svg> markup just below the <body> element
+// - You can see these in use in the following:
+// -- Primary Navigation and Masthead Sidebar Toggle Action in the form of hamburger icon and x icon
+// -- Sub-Navigation Toggle Action in the form of arrow down
+// -- Search Component in the form of search icon
+
+@mixin hs-nature--inline-icon {
+    
+    // Adds a very narrow allowance around the icon
+    margin: 0.0625rem;
+    
+    // Sets the default dimensions of the icon - not too small and not too big
+    width: 1.5rem; height: 1.5rem;
+    
+    // Just the right amount of black
+    color: #333;
+    
+    // currentColor follows the color property
+    fill: currentColor;
+    
+    // Sets the icon at the vertical center of its container
+    vertical-align: middle;
+}
+
+%hs-nature--inline-icon {
+    @include hs-nature--inline-icon;
+}

@@ -1,0 +1,21 @@
+button
+
+{
+    
+    // To enable padding
+    -moz-appearance: none;
+    
+    // Sets a minimum height for buttons; good for active area sizes
+    min-height: 3rem;
+    
+    // Adds a nice spacing around the elements inside the button
+    padding: .5rem;
+
+}
+
+
+button.axn:hover
+
+{
+  @extend %hs-nature--cursor-pointer;
+}

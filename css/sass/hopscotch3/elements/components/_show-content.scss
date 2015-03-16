@@ -1,0 +1,11 @@
+.show-content_axn
+{
+    @extend %hs-patch--visually-hidden;
+}
+
+
+.show-content_axn:focus,
+.show-content_axn:active
+{
+    @extend %hs-patch--visually-hidden-reverse;
+}

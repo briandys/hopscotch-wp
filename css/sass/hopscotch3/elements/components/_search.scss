@@ -1,0 +1,24 @@
+// Search Form
+.hs-state__search--inactive .search-form_input:focus,
+.hs-state__search--inactive .search-form_button:focus,
+
+.search .content-hr_accessible-name
+{
+    @extend %hs-patch--visually-hidden-reverse;
+}
+
+
+.search-form_label:hover
+{
+    @extend %hs-nature--inline-icon-cr;
+    @extend %hs-nature--cursor-pointer;
+}
+
+
+// Search
+.search_form legend,
+.widget_search .accessible-name,
+.masthead_sidebar .search-form_label .search_icon
+{
+    @extend %hs-patch--visually-hidden;
+}

@@ -15,7 +15,10 @@ endif;
 // Template
 if ( ! function_exists( 'hopscotch_ui_settings_body_class' ) ) :
     function hopscotch_ui_settings_body_class( $classes ) {
-        //$classes[] = 'hs-template__search--minimal ';
+        
+        // Search Template
+        $classes[] = 'hs-template__search--minimal ';
+        
         return $classes;
     }
     add_filter('body_class','hopscotch_ui_settings_body_class');
