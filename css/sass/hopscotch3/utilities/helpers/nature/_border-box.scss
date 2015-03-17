@@ -1,8 +1,6 @@
-/*--------------------------------------------------
-Structural Declaration: Border Box
-- Modifies the Box Model in such a way that when border-box is defined, the declared width of an element will not be affected by its padding, border, or margin
-- https://developer.mozilla.org/en-US/docs/Web/CSS/box_model
--------------------------*/
+// Structural Declaration: Border Box
+// - Modifies the Box Model in such a way that when border-box is defined, the declared width of an element will not be affected by its padding, border, or margin
+// - https://developer.mozilla.org/en-US/docs/Web/CSS/box_model
 
 @mixin hs--border-box {
     -webkit-box-sizing: border-box !important;

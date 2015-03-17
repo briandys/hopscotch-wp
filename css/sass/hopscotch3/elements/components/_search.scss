@@ -4,14 +4,14 @@
 
 .search .content-hr_accessible-name
 {
-    @extend %hs-patch--visually-hidden-reverse;
+    @extend %hs-patch--visually-hidden-reverse !optional;
 }
 
 
 .search-form_label:hover
 {
-    @extend %hs-nature--inline-icon-cr;
-    @extend %hs-nature--cursor-pointer;
+    @extend %hs-nature--inline-icon-cr !optional;
+    @extend %hs-nature--cursor-pointer !optional;
 }
 
 
@@ -20,5 +20,5 @@
 .widget_search .accessible-name,
 .masthead_sidebar .search-form_label .search_icon
 {
-    @extend %hs-patch--visually-hidden;
+    @extend %hs-patch--visually-hidden !optional;
 }

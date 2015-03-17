@@ -1,12 +1,12 @@
 .primary-nav_accessible-name,
 .social-nav_accessible-name
 {
-    @extend %hs--patch-visually-hidden;
+    @extend %hs-patch--visually-hidden !optional;
 }
 
 
 .hs-state__tree-nav--inactive > .children,
 .hs-state__tree-nav--inactive > .sub-menu
 {
-    @extend %hs-patch--hidden;
+    @extend %hs-patch--hidden !optional;
 }

@@ -3,7 +3,7 @@
 // Primary Nav and Masthead Sidebar inactive, hide Primary Nav and Masthead Sidebar Component
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp
 {
-    @extend %hs-patch--hidden;
+    @extend %hs-patch--hidden !optional;
 }
 
 
@@ -16,5 +16,5 @@
 // Primary Nav and Masthead Sidebar inactive, hide Menu Icon (hamburger icon)
 .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
 {
-    @extend %hs-patch--visually-hidden;
+    @extend %hs-patch--visually-hidden !optional;
 }
