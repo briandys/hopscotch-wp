@@ -1,6 +1,12 @@
 // Search Form
-.hs-state__search--inactive .search-form_input:focus,
-.hs-state__search--inactive .search-form_button:focus,
+.hs-state__search--inactive
+{
+    .search-form_input:focus,
+    .search-form_button:focus
+    {
+        @extend %hs-patch--visually-hidden-reverse !optional;
+    }
+}
 
 .search .content-hr_accessible-name
 {
@@ -8,17 +14,21 @@
 }
 
 
-.search-form_label:hover
-{
-    @extend %hs-nature--inline-icon-cr !optional;
-    @extend %hs-nature--cursor-pointer !optional;
+.search-form_label
+{    
+    :hover
+    {
+        @extend %hs-nature--cursor-pointer !optional;
+    }
 }
+
+
 
 
 // Search
 .search_form legend,
 .widget_search .accessible-name,
-.masthead_sidebar .search-form_label .search_icon
+.masthead_sidebar .search_icon
 {
     @extend %hs-patch--visually-hidden !optional;
 }

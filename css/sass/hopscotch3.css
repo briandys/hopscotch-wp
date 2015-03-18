@@ -565,7 +565,7 @@ textarea {
   display: none !important; }
 
 /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/patch/_visually-hidden.scss */
-.breadcrumb-nav_accessible-name, .content-hr_accessible-name, .primary-content_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .masthead_sidebar .search-form_label .search_icon, .show-content_axn, .web-product_desc {
+.breadcrumb-nav_accessible-name, .content-hr_accessible-name, .primary-content_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .masthead_sidebar .search_icon, .show-content_axn, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--inactive .search-form_label .subj_label, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--inactive .search-form_input, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--inactive .search-form_button, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_button .verb_label, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -576,7 +576,7 @@ textarea {
   width: 1px; }
 
 /* line 14, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/patch/_visually-hidden-reverse.scss */
-.hs-state__search--inactive .search-form_input:focus, .hs-state__search--inactive .search-form_button:focus, .search .content-hr_accessible-name, .show-content_axn:focus, .show-content_axn:active {
+.hs-state__search--inactive .search-form_input:focus, .hs-state__search--inactive .search-form_button:focus, .search .content-hr_accessible-name, .show-content_axn:focus, .show-content_axn:active, .hs-template__search--lightsaber .masthead_sidebar .search_icon {
   clip: auto;
   height: auto;
   margin: 0;
@@ -585,11 +585,11 @@ textarea {
   width: auto; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/nature/_cursor-pointer.scss */
-button.axn:hover, .search-form_label:hover {
+button.axn:hover, .search-form_label :hover {
   cursor: pointer; }
 
 /* line 20, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/nature/_inline-icon.scss */
-.search-form_label:hover {
+.hs-template__search--lightsaber .masthead_sidebar .search-form_label {
   display: table-cell;
   width: 3rem;
   height: 3rem;
@@ -597,7 +597,7 @@ button.axn:hover, .search-form_label:hover {
   vertical-align: middle; }
 
 /* line 51, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/nature/_inline-icon.scss */
-svg.icon {
+svg.icon, .hs-template__search--lightsaber .masthead_sidebar .search_icon {
   margin: 0.0625rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -657,15 +657,5 @@ button {
   max-width: 100%;
   height: auto; }
 
-/* line 12, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/templates/_search-minimal.scss */
-.hs-template__search--minimal .masthead_sidebar .hs-state__search--active .search-form_label, .hs-template__search--minimal .masthead_sidebar .hs-state__search--inactive .search-form_input, .hs-template__search--minimal .masthead_sidebar .hs-state__search--inactive .search-form_button {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
 
 /*# sourceMappingURL=hopscotch3.css.map */
