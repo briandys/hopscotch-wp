@@ -2,6 +2,11 @@
 @import 'components/breadcrumb-navigation';
 @import 'components/content';
 @import 'components/article-entry-navigation';
+@import 'components/article-entry-page-navigation';
+@import 'components/article-entry-comments-actions';
+@import 'components/comment-entry-admin-actions';
+@import 'components/comment-form-admin-actions';
+@import 'components/article-entry-admin-actions';
 @import 'components/comments-entry-navigation';
 @import 'components/colophon';
 @import 'components/primary-nav-masthead-sidebar';
@@ -14,3 +19,4 @@
 @import 'components/show-top';
 @import 'components/sub-nav-toggle';
 @import 'components/web-product';
+@import 'components/article-entry-img';

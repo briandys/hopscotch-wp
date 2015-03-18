@@ -1,0 +1,17 @@
+.article-entry-img_comp
+{
+    
+    // Media Query
+    @include hs-nature--media-query( $desktop, max )
+    {
+        width: auto !important;
+    }
+    
+    // Responsive Image
+    img    
+    {
+        max-width: 100%;
+        height: auto;
+    }
+    
+}

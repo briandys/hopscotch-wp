@@ -149,7 +149,7 @@ Class: comments_comp
                                                    '</div><!-- comment-admin-sign-in_comp -->' .
                                                    '<div class="comp comment-form-admin-actions_comp">' .
                                                    '<div class="cr comment-form-admin-actions_cr">' .
-                                                   '<p class="accessible-name">Comment Form Admin Actions</p>' .
+                                                   '<p class="accessible-name comment-form-admin-actions_accessible-name">Comment Form Admin Actions</p>' .
                                                    '<ul class="grp comment-form-admin-actions_grp">' .
                                                    '<li class="item sign-out_item comment-form-admin-actions-sign-out_item">' .
                                                    '<a class="axn sign-out_axn comment-form-admin-actions-sign-out_axn" href="%3$s" title="Sign out of this account.">Sign Out</a>' .

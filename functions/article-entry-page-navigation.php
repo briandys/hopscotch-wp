@@ -10,7 +10,7 @@ function hopscotch_article_entry_page_nav( $args = '' ) {
         
         // Component: Article Entry Page Navigation
         // Class: article-entry-page_nav
-        'before' => '<nav class="nav content_nav article-entry-page_nav"><div class="cr content-nav_cr article-entry-page-nav_cr"><h2 class="accessible-name">' . __( 'Article Entry Page Navigation', 'hopscotch' ) . '</h2><p class="friendly-name">' . __( 'Pages:', 'hopscotch' ) . '</p><ul class="grp content-nav_grp article-entry-page-nav_grp">', 
+        'before' => '<nav class="nav content_nav article-entry-page_nav"><div class="cr content-nav_cr article-entry-page-nav_cr"><h2 class="accessible-name article-entry-page-nav_accessible-name">' . __( 'Article Entry Page Navigation', 'hopscotch' ) . '</h2><p class="friendly-name">' . __( 'Pages:', 'hopscotch' ) . '</p><ul class="grp content-nav_grp article-entry-page-nav_grp">', 
         'after' => '</ul></div></nav><!--  article-entry-page_nav -->',
         'text_before' => '',
         'text_after' => '',

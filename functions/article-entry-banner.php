@@ -13,11 +13,13 @@ if ( ! function_exists( 'hopscotch_enhancer_article_entry_banner' ) ) :
             Component: Article Entry Banner
             Class: article-article-entry-banner_comp
             -->
-            <div class="comp article-entry-banner_comp">			
-                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
-                <a class="article-entry-banner_axn" href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>" style="background-image: url(<?php echo $image[0]; ?>);">
-                    <?php the_post_thumbnail(); ?>
-                </a>
+            <div class="comp article-entry-banner_comp">
+                <div class="cr article-entry-banner_cr">
+                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
+                    <a class="axn article-entry-banner_axn" href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>" style="background-image: url(<?php echo $image[0]; ?>);">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                </div>
             </div><!-- article-entry-banner_comp -->
         <?php
         endif;

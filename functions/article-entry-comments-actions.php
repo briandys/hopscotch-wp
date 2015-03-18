@@ -26,7 +26,7 @@ if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
             -->
             <div class="comp article-entry-comments-actions_comp <?php echo $comment_count_class ?>">
                 <div class="cr article-entry-comments-actions_cr">
-                    <p class="accessible-name">Entry Comments Actions</p>
+                    <p class="accessible-name article-entry-comments-actions_accessible-name">Entry Comments Actions</p>
                     <ul class="grp article-entry-comments-actions_grp">
                         <li class="item article-entry-comments-actions_item">
                             <?php comments_popup_link(
