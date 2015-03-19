@@ -9,7 +9,7 @@ Class: search
                 <legend><?php _e( 'Search Form', 'hopscotch'); ?></legend>
                 <div class="field">
                     <div class="field_cr">
-                        <label class="search-form_label" for="search-form_input">
+                        <label class="search-form_label" for="search-form_input" title="Search">
                             <span class="label subj_label"><?php _e( 'Search Keyword', 'hopscotch'); ?></span>
                             <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
                         </label>

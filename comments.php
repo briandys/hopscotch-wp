@@ -119,6 +119,7 @@ Class: comments_comp
                 'title_reply_to'            => __( 'Leave a Reply to %s', 'hopscotch' ),
                 'label_submit'              => __( 'Post', 'hopscotch' ),
                 'comment_notes_before'      => '',
+                'comment_notes_after'      => '',
                 'comment_field'             => '<div class="field comment_field">' .
                                             '<div class="field_cr comment-field_cr">' .
                                             '<label for="comment">' .

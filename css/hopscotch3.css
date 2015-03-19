@@ -629,7 +629,7 @@ textarea {
 
 /* line 16, sass/hopscotch3/utilities/helpers/patch/_visually-hidden.scss */
 .breadcrumb-nav_accessible-name, .content-hr_accessible-name,
-.primary-content_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
+.primary-content_accessible-name, .comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
 .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .primary-nav_accessible-name,

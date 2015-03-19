@@ -13,7 +13,7 @@
             treeNavClass = 'hs-type__nav-item--tree-nav',
             treeNavActiveClass = 'hs-state__tree-nav--active',
             treeNavInactiveClass = 'hs-state__tree-nav--inactive',
-            toggleAction = '<button class="axn toggle_axn sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';        
+            subNavToggleAction = '<button class="axn toggle_axn sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';
 
         if( ! navItem )
           return;    
@@ -37,7 +37,7 @@
         
 
         // Add <button> element to Toggle Sub Nav
-        parentNavItemAction.after( toggleAction );
+        parentNavItemAction.after( subNavToggleAction );
         
         $( '.toggle_axn' ).on( 'click.hopscotch', function( e ){
             var _this = $( this );
@@ -70,8 +70,6 @@
         
     } )();
     
-    
-
   
     //-------------------------  Viewport resizing
     function resize() {
@@ -171,8 +169,6 @@
             searchDeactivate();
             $( this ).closest( search ).removeClass( stateSearchInactive ).addClass( stateSearchActive );
         });
-        
-        
 
         // Exempts the Search Component from the document click
         search.on( 'click.hopscotch', function( e ){

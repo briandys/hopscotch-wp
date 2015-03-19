@@ -107,11 +107,11 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                         ?>
 
                         <?php if ( comments_open() && get_option( 'thread_comments' ) ) : ?>
-                        <div class="axn-comp comment-entry-axn_axn-comp">
-                            <div class="comment-entry-axn_axn-cr">
-                                <p class="accessible-name"><?php _e( 'Comment Actions', 'hopscotch' ); ?></p>
-                                <ul class="axn-grp comment-entry-axn_axn-grp">
-                                    <li class="axn-item reply_axn-item comment-entry-reply-axn_axn-item">
+                        <div class="comp comment-entry-axn_comp">
+                            <div class="cr comment-entry-axn_cr">
+                                <p class="accessible-name comment-entry-axn_accessible-name"><?php _e( 'Comment Actions', 'hopscotch' ); ?></p>
+                                <ul class="grp comment-entry-axn_grp">
+                                    <li class="item reply_axn-item comment-entry-reply-axn_axn-item">
                                         <?php comment_reply_link( array_merge( $args,
                                             array(
                                                 'add_below'     => $add_below,
@@ -122,7 +122,7 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                             ) ) ); ?>
                                 </ul>
                             </div>
-                        </div><!-- comment-entry-axn_axn-comp -->
+                        </div><!-- comment-entry-axn_comp -->
                         <?php endif; ?>
 
                     </div>
