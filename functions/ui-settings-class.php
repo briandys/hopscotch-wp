@@ -17,7 +17,7 @@ if ( ! function_exists( 'hopscotch_ui_settings_body_class' ) ) :
     function hopscotch_ui_settings_body_class( $classes ) {
         
         // Search Template
-        // $classes[] = 'hs-template__search--lightsaber ';
+        $classes[] = 'hs-template__search--lightsaber ';
         
         return $classes;
     }

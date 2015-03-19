@@ -1,18 +1,10 @@
-// Search Form
-.hs-state__search--inactive
+// Default State
+.search_form legend,
+.widget_search .accessible-name,
+.search_icon
 {
-    .search-form_input:focus,
-    .search-form_button:focus
-    {
-        @extend %hs-patch--visually-hidden-reverse !optional;
-    }
+    @extend %hs-patch--visually-hidden !optional;
 }
-
-.search .content-hr_accessible-name
-{
-    @extend %hs-patch--visually-hidden-reverse !optional;
-}
-
 
 .search-form_label
 {    
@@ -22,13 +14,17 @@
     }
 }
 
-
-
-
-// Search
-.search_form legend,
-.widget_search .accessible-name,
-.masthead_sidebar .search_icon
+// Show ContStruct Heading when in Search View
+.search .content-hr_accessible-name
 {
-    @extend %hs-patch--visually-hidden !optional;
+    @extend %hs-patch--visually-hidden-reverse !optional;
+}
+
+
+
+
+.search-form_input:focus,
+.search-form_button:focus
+{
+    @extend %hs-patch--visually-hidden-reverse !optional;
 }

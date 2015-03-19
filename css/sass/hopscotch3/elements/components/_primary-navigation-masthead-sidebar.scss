@@ -14,7 +14,9 @@
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
 
 // Primary Nav and Masthead Sidebar inactive, hide Menu Icon (hamburger icon)
-.hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+.hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
+
+.primary-nav-masthead-sidebar-toggle_axn .toggle_label
 {
     @extend %hs-patch--visually-hidden !optional;
 }

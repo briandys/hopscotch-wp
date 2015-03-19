@@ -89,7 +89,7 @@
                         </div>
                     </div><!-- web-product-header_comp -->
 
-                    <div id="masthead_ct" class="ct masthead_ct">
+                    <div id="masthead_ct" class="ct masthead_ct hs-state__tree-nav--inactive" aria-expanded="false">
     
                         <!--
                         Action: Primary Navigation and Masthead Sidebar Toggle Action

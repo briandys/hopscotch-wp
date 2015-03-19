@@ -565,7 +565,7 @@ textarea {
   display: none !important; }
 
 /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/patch/_visually-hidden.scss */
-.breadcrumb-nav_accessible-name, .content-hr_accessible-name, .primary-content_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .masthead_sidebar .search_icon, .show-content_axn, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--inactive .search-form_label .subj_label, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--inactive .search-form_input, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--inactive .search-form_button, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_button .verb_label, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_label {
+.breadcrumb-nav_accessible-name, .content-hr_accessible-name, .primary-content_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .primary-nav_accessible-name, .social-nav_accessible-name, .sub-nav-toggle_axn .toggle_label, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .search_icon, .show-content_axn, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .search-form_label .subj_label, .hs-template__search--lightsaber .masthead_sidebar .search-form_input, .hs-template__search--lightsaber .masthead_sidebar .search-form_button, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_button .verb_label, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -576,7 +576,7 @@ textarea {
   width: 1px; }
 
 /* line 14, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/utilities/helpers/patch/_visually-hidden-reverse.scss */
-.hs-state__search--inactive .search-form_input:focus, .hs-state__search--inactive .search-form_button:focus, .search .content-hr_accessible-name, .show-content_axn:focus, .show-content_axn:active, .hs-template__search--lightsaber .masthead_sidebar .search_icon {
+.search .content-hr_accessible-name, .search-form_input:focus, .search-form_button:focus, .show-content_axn:focus, .show-content_axn:active, .hs-template__search--lightsaber .masthead_sidebar .search_icon {
   clip: auto;
   height: auto;
   margin: 0;
@@ -625,12 +625,12 @@ button {
 .show-top_axn .arrow-left_icon {
   transform: rotate(90deg); }
 
-/* line 6, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/components/_sub-nav-toggle.scss */
+/* line 6, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
 .sub-nav-toggle_axn {
   position: relative;
   padding-right: 2.5rem; }
 
-/* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/components/_sub-nav-toggle.scss */
+/* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
 .sub-nav-toggle_axn:after {
   content: '';
   position: absolute;
@@ -645,7 +645,7 @@ button {
   background-size: cover;
   transition: transform .2s; }
 
-/* line 53, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/components/_sub-nav-toggle.scss */
+/* line 53, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
 .hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
 
