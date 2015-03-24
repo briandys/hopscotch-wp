@@ -7,9 +7,6 @@
     
     // Enables the use of pseudo-element with position: absolute
     position: relative;
-    
-    // Sets the empty space for the icon
-    padding-right: 2.5rem;
 }
 
 // Pseudo-Element that creates the icon
@@ -25,13 +22,13 @@
     top: 50%;
     
     // Position to the right
-    right: 0;
+    right: 50%;
     
     // Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75)
     margin-top: -.75rem;
     
     // Sets a space to the right
-    margin-right: .75rem;
+    margin-right: -.75rem;
     
     // Sets the visual size of the actual icon
     width: 1.5rem; height: 1.5rem;

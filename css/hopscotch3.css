@@ -621,6 +621,13 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
+/* line 10, sass/hopscotch3/utilities/helpers/patch/_deflate.scss */
+button.axn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0; }
+
 /* line 8, sass/hopscotch3/utilities/helpers/patch/_hidden.scss */
 .primary-nav-masthead-sidebar_accessible-name,
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp, .hs-state__tree-nav--inactive > .children,
@@ -687,11 +694,15 @@ svg.icon, .hs-template__search--lightsaber .masthead_sidebar .search_icon {
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important; }
 
-/* line 2, sass/hopscotch3/elements/objects/_button.scss */
-button {
+/* line 2, sass/hopscotch3/elements/objects/_button-axn.scss */
+button.axn {
+  -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
+  min-width: 3rem;
   min-height: 3rem;
-  padding: .5rem; }
+  padding: .5rem;
+  vertical-align: middle; }
 
 /* line 3, sass/hopscotch3/elements/components/_entry-banner.scss */
 .entry-banner_axn {
@@ -703,17 +714,16 @@ button {
 
 /* line 6, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
 .sub-nav-toggle_axn {
-  position: relative;
-  padding-right: 2.5rem; }
+  position: relative; }
 
-/* line 16, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
+/* line 13, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
 .sub-nav-toggle_axn:after {
   content: '';
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 50%;
   margin-top: -0.75rem;
-  margin-right: .75rem;
+  margin-right: -0.75rem;
   width: 1.5rem;
   height: 1.5rem;
   background-image: url(../img/icon-arrow-down.svg);
@@ -721,7 +731,7 @@ button {
   background-size: cover;
   transition: transform .2s; }
 
-/* line 53, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
+/* line 50, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
 .hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
 
