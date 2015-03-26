@@ -1,0 +1,15 @@
+input
+{
+    @extend %hs-patch--deflate !optional;
+    
+    padding: .5rem;
+    
+    width: 100%;
+    min-height: 3rem;
+    
+    // Theme
+    
+    border: 1px solid #808080;
+    border-radius: .125rem;
+    
+}

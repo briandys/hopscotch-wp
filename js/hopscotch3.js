@@ -2,7 +2,9 @@
 // Contains handlers for navigation and widget area.
 
 ( function( $ ) {
-    var $body, $html, $window, windowWidth, resizeTimer;
+    var $body = $( document.body ),        
+        $html = $( 'html' ),
+        $window, windowWidth, resizeTimer;
     
     //------------------------- Primary Navigation
     ( function() {
@@ -121,6 +123,10 @@
             stateSearchActive = 'hs-state__search--active',
             stateSearchInactive = 'hs-state__search--inactive',
             
+            mastheadSidebarSearch = mastheadSidebar.find( '.search_comp' ),
+            mastheadSidebarSearchFormInput = mastheadSidebar.find( '.search-form_input' ),
+            mastheadSidebarSearchFormLabel = mastheadSidebar.find( '.search-form_label' ),
+            
             contentSidebarSearchFormInput = contentSidebar.find( '.search-form_input' ),
             contentSidebarSearchFormLabel = contentSidebar.find( '.search-form_label' ),
             
@@ -142,58 +148,60 @@
         if( ! colophonSidebar )
           return;
         
-        // Differentiate the ID of search input
+        // Search Lightsaber
+        if ( $html.hasClass( 'hs-template__search--lightsaber' ) ) {
+            
+            // Deactivates the Search
+            function searchLightsaberDeactivate() {
+                if ( $body.hasClass( 'hs-state__search_lightsaber--active' ) ) {
+                    $body.removeClass( 'hs-state__search_lightsaber--active' ).addClass( 'hs-state__search_lightsaber--inactive' );
+                }
+            }
+            
+            $body.addClass( 'hs-state__search_lightsaber--inactive' );
+            
+            mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
+                $body.removeClass( 'hs-state__search_lightsaber--inactive' ).addClass( 'hs-state__search_lightsaber--active' );
+            } );
+            
+            mastheadSidebarSearchFormLabel.on( 'click.hopscotch', function( e ){        
+                e.stopPropagation();
+
+                // Deactivate other Search
+                searchLightsaberDeactivate();
+                $body.removeClass( 'hs-state__search_lightsaber--inactive' ).addClass( 'hs-state__search_lightsaber--active' );
+            } );
+            
+            // If Search Component is active, make inactive by clicks anywhere on the document
+            $( document ).on( 'click.hopscotch', function() {
+                searchLightsaberDeactivate();
+            });
+
+            // Exempts the Search Component from the document click
+            mastheadSidebarSearch.on( 'click.hopscotch', function( e ){
+                e.stopPropagation();
+            });
+
+            // ESC
+            $( document ).on( 'keyup.hopscotch', function( e ) {
+                if ( e.which === 27 ) {
+                    searchLightsaberDeactivate();
+                    searchInput.blur();
+                }
+            });
+        }
+        
+        // Differentiate the ID of Search Inputs
         contentSidebarSearchFormInput.attr( 'id', 'search-form-content-sidebar_input' );
         contentSidebarSearchFormLabel.attr( 'for', 'search-form-content-sidebar_input' );
         
         colophonSidebarSearchFormInput.attr( 'id', 'search-form-colophon-sidebar_input' );
-        colophonSidebarSearchFormLabel.attr( 'for', 'search-form-colophon-sidebar_input' );        
-        
-        
-        // Deactivates the Search
-        function searchDeactivate() {
-            if ( search.hasClass( stateSearchActive ) ) {
-                search.removeClass( stateSearchActive ).addClass( stateSearchInactive );
-            }
-        }
-        
-        searchInput.on( 'focus.hopscotch', function() {
-			$( this ).closest( search ).removeClass( stateSearchInactive ).addClass( stateSearchActive );
-        } );
-        
-        // Converts the Search Label into a toggle action
-        searchLabel.on( 'click.hopscotch', function( e ){        
-            e.stopPropagation();
-            
-            // Deactivate other Search
-            searchDeactivate();
-            $( this ).closest( search ).removeClass( stateSearchInactive ).addClass( stateSearchActive );
-        });
-
-        // Exempts the Search Component from the document click
-        search.on( 'click.hopscotch', function( e ){
-            e.stopPropagation();
-        });
-
-        // If Search Component is active, make inactive by clicks anywhere on the document
-        $( document ).on( 'click.hopscotch', function() {
-            searchDeactivate();
-        });
-
-        // ESC
-        $( document ).on( 'keyup.hopscotch', function( e ) {
-            if ( e.which === 27 ) {
-                search.removeClass( stateSearchActive ).addClass( stateSearchInactive );
-                searchInput.blur();
-            }
-        });
+        colophonSidebarSearchFormLabel.attr( 'for', 'search-form-colophon-sidebar_input' );
 
     } )();
     
 
     $( document ).ready( function() {
-        $html = $( 'html' );
-        $body = $( document.body );
         $window = $( window );
 
         $window.on( 'resize.hopscotch', function() {

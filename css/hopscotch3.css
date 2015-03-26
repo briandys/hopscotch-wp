@@ -622,7 +622,7 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 10, sass/hopscotch3/utilities/helpers/patch/_deflate.scss */
-button.axn {
+button.axn, input {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -641,11 +641,11 @@ button.axn {
 .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .primary-nav_accessible-name,
 .social-nav_accessible-name, .sub-nav-toggle_axn .toggle_label, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
-.widget_search .accessible-name,
-.search_icon, .show-content_axn, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .search-form_label .subj_label,
-.hs-template__search--lightsaber .masthead_sidebar .search-form_button .verb_label,
-.hs-template__search--lightsaber .masthead_sidebar .search-form_input,
-.hs-template__search--lightsaber .masthead_sidebar .search-form_button, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_label {
+.widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .content_sidebar .search_icon, .colophon_sidebar .search_icon, .show-content_axn, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .search-form_label .subj_label,
+.hs-template__search--lightsaber .masthead_sidebar .search-form_button .verb_label, .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_label .subj_label,
+.hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_button .verb_label,
+.hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_input,
+.hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_button, .hs-state__search_lightsaber--active .masthead_sidebar .search-form_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -656,10 +656,8 @@ button.axn {
   width: 1px; }
 
 /* line 14, sass/hopscotch3/utilities/helpers/patch/_visually-hidden-reverse.scss */
-.search .content-hr_accessible-name, .search-form_input:focus,
-.search-form_button:focus, .show-content_axn:focus,
-.show-content_axn:active, .hs-template__search--lightsaber .masthead_sidebar .search_icon, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_input,
-.hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_button {
+.search .content-hr_accessible-name, .show-content_axn:focus,
+.show-content_axn:active {
   clip: auto;
   height: auto;
   margin: 0;
@@ -672,7 +670,8 @@ button.axn:hover, .search-form_label :hover {
   cursor: pointer; }
 
 /* line 20, sass/hopscotch3/utilities/helpers/nature/_inline-icon.scss */
-.hs-template__search--lightsaber .masthead_sidebar .search-form_label, .hs-template__search--lightsaber .masthead_sidebar .hs-state__search--active .search-form_button {
+.hs-template__search--lightsaber .masthead_sidebar .search-form_label,
+.hs-template__search--lightsaber .masthead_sidebar .search-form_button {
   display: table-cell;
   width: 3rem;
   height: 3rem;
@@ -703,6 +702,32 @@ button.axn {
   min-height: 3rem;
   padding: .5rem;
   vertical-align: middle; }
+
+/* line 2, sass/hopscotch3/elements/objects/_input.scss */
+input {
+  padding: .5rem;
+  width: 100%;
+  min-height: 3rem;
+  border: 1px solid #808080;
+  border-radius: .125rem; }
+
+/* line 6, sass/hopscotch3/utilities/helpers/theme/_placeholder.scss */
+::-webkit-input-placeholder {
+  color: gray; }
+
+/* line 10, sass/hopscotch3/utilities/helpers/theme/_placeholder.scss */
+:-moz-placeholder {
+  color: gray;
+  opacity: 1; }
+
+/* line 15, sass/hopscotch3/utilities/helpers/theme/_placeholder.scss */
+::-moz-placeholder {
+  color: gray;
+  opacity: 1; }
+
+/* line 20, sass/hopscotch3/utilities/helpers/theme/_placeholder.scss */
+:-ms-input-placeholder {
+  color: gray; }
 
 /* line 3, sass/hopscotch3/elements/components/_entry-banner.scss */
 .entry-banner_axn {

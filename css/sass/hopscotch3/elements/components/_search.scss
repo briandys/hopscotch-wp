@@ -1,11 +1,21 @@
-// Default State
+// Hidden Objects
 .search_form legend,
-.widget_search .accessible-name,
-.search_icon
+.widget_search .accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
 }
 
+// Search Icon
+.search_icon {
+    .hs-template__search--default .masthead_sidebar &,
+    .content_sidebar &,
+    .colophon_sidebar &
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+}
+
+// Search Form Label
 .search-form_label
 {    
     :hover
@@ -16,15 +26,6 @@
 
 // Show ContStruct Heading when in Search View
 .search .content-hr_accessible-name
-{
-    @extend %hs-patch--visually-hidden-reverse !optional;
-}
-
-
-
-
-.search-form_input:focus,
-.search-form_button:focus
 {
     @extend %hs-patch--visually-hidden-reverse !optional;
 }
