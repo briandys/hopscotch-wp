@@ -6,7 +6,7 @@ if ( ! function_exists( 'hopscotch_detection_html_class' ) ) :
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
         
         // Default
-        echo 'html ';
+        echo 'html hs-viewport--narrow';
         
         // Level
         if ( ! is_child_theme() ) echo 'hs-level--parent ';

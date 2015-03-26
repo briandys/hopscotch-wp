@@ -4,7 +4,6 @@
     // Default State
     .masthead_sidebar
     {
-        .search-form_label .subj_label,
         .search-form_button .verb_label
         {
             @extend %hs-patch--visually-hidden !optional;
@@ -30,7 +29,6 @@
     .masthead_sidebar
     {
         .search-form_label .subj_label,
-        .search-form_button .verb_label,        
         .search-form_input,
         .search-form_button
         {
