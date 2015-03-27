@@ -1,7 +1,8 @@
 // Show Top
-
 .show-top_axn
 {
+    @extend %hs-nature--inline-icon-cr !optional;
+    
     .arrow-left_icon {
         transform: rotate( 90deg );
     }

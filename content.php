@@ -136,6 +136,7 @@ Class: article-entry_comp
                                 '<span class="label prep_label">of</span> ' .
                                 '</span>' .
                                 '<span class="label subj_label article-entry-title_label">%s</span>' .
+                                '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>' .
                                 '</span><!-- show-more-content_comp -->', 'hopscotch' ),
                                     the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
                         } else {

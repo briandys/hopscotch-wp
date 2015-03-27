@@ -1,7 +1,7 @@
 #{$text-input-objects},
 .text_input
 {
-    @extend %hs-patch--deflate !optional;
+    @extend %hs-reset--deflate !optional;
     
     padding: .5rem;
     

@@ -4,9 +4,11 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
-
-.hs-state__tree-nav--inactive > .children,
-.hs-state__tree-nav--inactive > .sub-menu
+.hs-state__primary-nav-item_tree--inactive
 {
-    @extend %hs-patch--hidden !optional;
+    & > .children,
+    & > .sub-menu
+    {
+        @extend %hs-patch--hidden !optional;
+    }
 }

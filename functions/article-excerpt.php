@@ -30,7 +30,8 @@ if ( ! function_exists( 'hopscotch_the_excerpt_show_content' ) ) :
         $more .= '<span class="label noun_label">' . __( 'Content', 'hopscotch' ) . '</span> ';
         $more .= '<span class="label prep_label">' . __( 'of', 'hopscotch' ) . '</span> ';
         $more .= '</span>';
-        $more .= '<span class="label subj_label article-entry-title_label">' . get_the_title( $post->ID ) . '</span>';
+        $more .= '<span class="label subj_label article-entry-title_label">' . get_the_title( $post->ID ) . '</span> ';
+        $more .= '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>';
         $more .= '</a>';
         $more .= '</div><!-- show-more-content_comp -->';
         return $excerpt_tag . $more;

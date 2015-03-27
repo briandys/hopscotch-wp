@@ -12,10 +12,10 @@
         var navItem = $( '.nav-item, .page_item, .menu-item' ),
             parentNavItem = $( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
             parentNavItemAction = $( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
-            treeNavClass = 'hs-type__nav-item--tree-nav',
-            treeNavActiveClass = 'hs-state__tree-nav--active',
-            treeNavInactiveClass = 'hs-state__tree-nav--inactive',
-            subNavToggleAction = '<button class="axn toggle_axn sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';
+            priNavItemTreeClass = 'hs-type__primary-nav-item--tree',
+            priNavItemTreeActiveClass = 'hs-state__primary-nav-item_tree--active',
+            priNavItemTreeInactiveClass = 'hs-state__primary-nav-item_tree--inactive',
+            priSubNavToggleAction = '<button class="axn toggle_axn primary-sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';
 
         if( ! navItem )
           return;    
@@ -26,25 +26,16 @@
         if( ! parentNavItemAction )
           return;
         
-        // Deactivates the Tree Nav
-        function setTreeNavInactive() {
-            parentNavItem.addClass( treeNavClass + " " + treeNavInactiveClass ).attr( 'aria-expanded', 'false' );
-        }
-        
-        /*
-        Nav Tree Toggle
-        Upon activation of Toggle button, toggle active and inactive classes on nav-item.
-        */
-        setTreeNavInactive();
-        
+        // Sets default classes
+        parentNavItem.addClass( priNavItemTreeClass + " " + priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
 
         // Add <button> element to Toggle Sub Nav
-        parentNavItemAction.after( subNavToggleAction );
+        parentNavItemAction.after( priSubNavToggleAction );
         
-        $( '.toggle_axn' ).on( 'click.hopscotch', function( e ){
+        $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ){
             var _this = $( this );
             e.preventDefault();
-            _this.parent( navItem ).toggleClass( treeNavInactiveClass + " " + treeNavActiveClass ).attr( 'aria-expanded', _this.parent( navItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+            _this.parent( navItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( navItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
         });
         
     } )();

@@ -23,8 +23,14 @@
 
 .primary-nav-masthead-sidebar-toggle_axn
 {
-    // Counter
+    // Counter-effect
     padding-left: .5rem;
     padding-right: .5rem;
     width: auto;
+}
+
+// Toggle Button
+.primary-nav-masthead-sidebar-toggle_axn
+{
+    @extend %hs-reset--deflate !optional;
 }

@@ -42,11 +42,13 @@ if ( ! function_exists( 'hopscotch_web_product_page_nav' ) ) :
         if ( $links ) :
 
         ?>
-            <nav class="nav content-nav_nav product-page-nav_nav">
-                <h2 class="accessible-name"><?php _e( 'Web Product Page Navigation', 'hopscotch' ); ?></h2>
-                <p class="friendly-name"><?php _e( 'Pages:', 'hopscotch' ); ?></p>
-                <?php echo $links; ?>
-            </nav><!--  product-page-nav_nav -->
+            <nav class="nav content_nav web-product-page_nav">
+                <div class="cr content-nav_cr web-product-page-nav_cr">
+                    <h2 class="accessible-name web-product-page_accessible-name"><?php _e( 'Web Product Page Navigation', 'hopscotch' ); ?></h2>
+                    <p class="friendly-name"><?php _e( 'Pages:', 'hopscotch' ); ?></p>
+                    <?php echo $links; ?>
+                </div>
+            </nav><!-- web-product-page_nav -->
         <?php
         endif;
     }

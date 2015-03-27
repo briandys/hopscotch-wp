@@ -621,18 +621,9 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-/* line 10, sass/hopscotch3/utilities/helpers/patch/_deflate.scss */
-button.theme, input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
-.text_input {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: 0; }
-
 /* line 8, sass/hopscotch3/utilities/helpers/patch/_hidden.scss */
 .primary-nav-masthead-sidebar_accessible-name,
-.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp, .hs-state__tree-nav--inactive > .children,
-.hs-state__tree-nav--inactive > .sub-menu {
+.hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar_comp, .hs-state__primary-nav-item_tree--inactive > .children, .hs-state__primary-nav-item_tree--inactive > .sub-menu {
   display: none !important; }
 
 /* line 16, sass/hopscotch3/utilities/helpers/patch/_visually-hidden.scss */
@@ -641,8 +632,9 @@ button.theme, input[type='text'], input[type='email'], input[type='search'], inp
 .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
 .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .primary-nav_accessible-name,
-.social-nav_accessible-name, .sub-nav-toggle_axn .toggle_label, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
-.widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .content_sidebar .search_icon, .colophon_sidebar .search_icon, .show-content_axn, .show-top_axn .label, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .search-form_button .verb_label, .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_label .subj_label,
+.social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
+.widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .content_sidebar .search_icon, .colophon_sidebar .search_icon, .show-content_axn, .show-more-content_comp .pred_label,
+.show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top_axn .label, .primary-sub-nav-toggle_axn .toggle_label, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .search-form_button .verb_label, .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_label .subj_label,
 .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_input,
 .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_button, .hs-state__search_lightsaber--active .masthead_sidebar .search-form_label {
   border: 0;
@@ -664,12 +656,26 @@ button.theme, input[type='text'], input[type='email'], input[type='search'], inp
   position: static;
   width: auto; }
 
+/* line 10, sass/hopscotch3/utilities/helpers/reset/_deflate.scss */
+button.theme, input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
+.text_input, .primary-nav-masthead-sidebar-toggle_axn, .primary-sub-nav-toggle_axn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0; }
+
+/* line 7, sass/hopscotch3/utilities/helpers/reset/_unlist.scss */
+.article-entry-page-nav_grp {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 /* line 7, sass/hopscotch3/utilities/helpers/nature/_cursor-pointer.scss */
 button:hover, input[type='submit']:hover, input[type='password']:hover, input[type='reset']:hover, .search-form_label :hover {
   cursor: pointer; }
 
 /* line 20, sass/hopscotch3/utilities/helpers/nature/_inline-icon.scss */
-.hs-template__search--lightsaber .masthead_sidebar .search-form_label,
+.show-top_axn, .hs-template__search--lightsaber .masthead_sidebar .search-form_label,
 .hs-template__search--lightsaber .masthead_sidebar .search-form_button {
   display: table-cell;
   width: 3rem;
@@ -747,9 +753,25 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 :-ms-input-placeholder {
   color: gray; }
 
-/* line 3, sass/hopscotch3/elements/components/_entry-banner.scss */
-.entry-banner_axn {
+/* line 3, sass/hopscotch3/elements/components/_article-entry-banner.scss */
+.article-entry-banner_axn {
   background-image: none !important; }
+
+/* line 14, sass/hopscotch3/elements/components/_article-entry-page-navigation.scss */
+.article-entry-page-nav_friendly-name,
+.article-entry-page-nav_grp,
+.article-entry-page-nav_item {
+  display: inline-block; }
+
+/* line 19, sass/hopscotch3/elements/components/_article-entry-page-navigation.scss */
+.article-entry-page-nav_item {
+  text-align: center; }
+  /* line 23, sass/hopscotch3/elements/components/_article-entry-page-navigation.scss */
+  .article-entry-page-nav_item a {
+    display: inline-block;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem; }
 
 /* line 25, sass/hopscotch3/elements/components/_primary-navigation-masthead-sidebar.scss */
 .primary-nav-masthead-sidebar-toggle_axn {
@@ -757,41 +779,45 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   padding-right: .5rem;
   width: auto; }
 
-/* line 5, sass/hopscotch3/elements/components/_show-top.scss */
+/* line 6, sass/hopscotch3/elements/components/_show-top.scss */
 .show-top_axn .arrow-left_icon {
   transform: rotate(90deg); }
 
-/* line 6, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
-.sub-nav-toggle_axn {
+/* line 6, sass/hopscotch3/elements/components/_primary-sub-navigation-toggle.scss */
+.primary-sub-nav-toggle_axn {
   position: relative;
   padding-left: .5rem;
   padding-right: .5rem;
   width: auto; }
+  /* line 25, sass/hopscotch3/elements/components/_primary-sub-navigation-toggle.scss */
+  .primary-sub-nav-toggle_axn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -0.75rem;
+    margin-right: -0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../img/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .2s; }
 
-/* line 18, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
-.sub-nav-toggle_axn:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  margin-top: -0.75rem;
-  margin-right: -0.75rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(../img/icon-arrow-down.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: transform .2s; }
-
-/* line 55, sass/hopscotch3/elements/components/_sub-navigation-toggle.scss */
-.hs-state__tree-nav--active > .sub-nav-toggle_axn:after {
+/* line 62, sass/hopscotch3/elements/components/_primary-sub-navigation-toggle.scss */
+.hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
+
+/* line 10, sass/hopscotch3/elements/components/_web-product.scss */
+.hs-viewport--narrow .web-product-header_cr,
+.hs-viewport--narrow .web-product-info_cr {
+  text-align: center; }
 
 @media only screen and (max-width: 63.9375rem) {
   /* line 2, sass/hopscotch3/elements/components/_article-entry-img.scss */
   .article-entry-img_comp {
     width: auto !important; } }
-/* line 12, sass/hopscotch3/elements/components/_article-entry-img.scss */
+/* line 11, sass/hopscotch3/elements/components/_article-entry-img.scss */
 .article-entry-img_comp img {
   max-width: 100%;
   height: auto; }

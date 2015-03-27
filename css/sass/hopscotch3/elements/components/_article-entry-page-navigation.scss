@@ -2,3 +2,28 @@
 {
     @extend %hs-patch--visually-hidden !optional;
 }
+
+.article-entry-page-nav_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.article-entry-page-nav_friendly-name,
+.article-entry-page-nav_grp,
+.article-entry-page-nav_item
+{
+    display: inline-block;
+}
+
+.article-entry-page-nav_item
+{
+    text-align: center;
+    
+    a
+    {
+        display: inline-block;
+        padding: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+}

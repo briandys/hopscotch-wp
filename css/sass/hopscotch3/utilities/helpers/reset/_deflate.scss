@@ -1,4 +1,4 @@
-@mixin hs-patch--deflate
+@mixin hs-reset--deflate
 {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     border: 0;
 }
 
-%hs-patch--deflate
+%hs-reset--deflate
 {
-    @include hs-patch--deflate; 
+    @include hs-reset--deflate; 
 }

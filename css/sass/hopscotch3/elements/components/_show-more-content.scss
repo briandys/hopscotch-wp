@@ -1,0 +1,15 @@
+// Read More
+
+.show-more-content_comp
+{
+    .pred_label,
+    .slash_label
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+    
+    .article-entry-title_label
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+}

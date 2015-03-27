@@ -1,6 +1,5 @@
 .article-entry-img_comp
 {
-    
     // Media Query
     @include hs-nature--media-query( $desktop, max )
     {
@@ -13,5 +12,4 @@
         max-width: 100%;
         height: auto;
     }
-    
 }
