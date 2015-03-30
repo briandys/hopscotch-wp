@@ -1,0 +1,86 @@
+.hs-template__primary-nav-masthead-sidebar--hamburger
+{
+    // Toggle Action on Wide Viewport
+    &.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
+    
+    // Dismiss Icon
+    .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+    
+    // Component
+    .hs-state__primary-nav-masthead-sidebar--inactive .primary_nav,
+    
+    // Menu Icon
+    .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+    {
+        @extend %hs-patch--hidden !optional;
+    }
+    
+    // Toggle Label
+    .primary-nav-masthead-sidebar-toggle_axn .toggle_label
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+    
+    // Toggle Action
+    .primary-nav-masthead-sidebar-toggle_axn
+    {
+        @extend %hs-reset--deflate !optional;
+
+        // Counter-effect
+        padding-left: .5rem;
+        padding-right: .5rem;
+        width: auto;
+    }
+    
+    // Positioning of Toggle Action on Narrow Viewport
+    &.hs-viewport--narrow
+    {
+        .primary-nav-masthead-sidebar-toggle_axn {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    
+    
+    &.hs-viewport--narrow
+    {
+        // Search Default
+        &.hs-template__search--default
+        {
+            .hs-state__primary-nav-masthead-sidebar--inactive
+            {
+                .masthead_sidebar
+                {
+                    .search_comp
+                    {
+                        @extend %hs-patch--hidden !optional;
+                    }
+                }
+            }
+        }
+        
+        // Web Product Name
+        .web-product_name
+        {
+            text-align: center;
+        }
+    }
+    
+    // Positioning of Search Lightsaber on Wide and Narrow Viewport
+    &.hs-template__search--lightsaber
+    {
+        .masthead_sidebar
+        {
+            .search_comp
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+                
+                // Counter-effect caused by position: absolute
+                width: 100%;
+            }
+        }
+    }
+}

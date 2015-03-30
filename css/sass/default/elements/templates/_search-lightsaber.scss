@@ -1,0 +1,102 @@
+// Search Lightsaber
+.hs-template__search--lightsaber {
+    
+    // Default State
+    .masthead_sidebar
+    {
+        .search-form_axn .verb_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+        
+        // Make container for the inline icon
+        .search-form_label,
+        .search-form_axn
+        {    
+            @extend %hs-nature--inline-icon-cr !optional;
+        }
+        
+        .search_icon
+        {
+            @extend %hs-nature--inline-icon !optional;
+        }
+        
+        .search-form_input
+        {
+            @extend %hs-reset--deflate !optional;
+            
+            // Counter-effect
+            padding: .5rem;
+        }
+    }    
+}
+
+// Inactive State
+.hs-state__search_lightsaber--inactive
+{
+    .masthead_sidebar
+    {
+        .search-form_label .subj_label,
+        .search-form_input,
+        .search-form_axn
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+        
+        .search-form-input_field {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+// Active State
+.hs-state__search_lightsaber--active
+{            
+    .masthead_sidebar
+    {
+        .search-form_axn
+        {
+            @extend %hs-reset--deflate !optional;
+        }
+        
+        .search-form_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    
+        // Make way for the button icon
+        .search-form-input-field_cr  {
+            padding-left: $block;
+            padding-right: $block;
+        }
+        
+        // Position the button icon
+        .search-form-axn_field
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    // Other elements affected
+    .web-product-header_comp
+    {
+        // Preserve the layout
+        visibility: hidden;
+    }
+}
+
+
+
+.hs-state__search_lightsaber--active
+{
+    z-index: 990;
+    
+    .primary-nav-masthead-sidebar-toggle_axn
+    {
+        z-index: 1000;
+    }
+}

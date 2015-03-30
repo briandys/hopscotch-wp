@@ -48,18 +48,39 @@
         
         if ( ! priNavMastheadSidebarComp ) {
             return;
+        }
             
         if ( ! priNavMastheadSidebarToggleAxn ) {
             return;
         }
-    }
-
-        priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
         
-            // Inactive state class is set at: functions > body-class.php
-            $body.toggleClass( 'hs-state__primary-nav-masthead-sidebar--inactive hs-state__primary-nav-masthead-sidebar--active' );
-            priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( 'hs-state__primary-nav-masthead-sidebar--active' ) ? 'true' : 'false' );
-        } );
+        if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' && 'hs-viewport--narrow' ) ) {
+
+            // Set Default Class
+            $body.addClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive' );
+            
+            priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
+
+                $body.toggleClass( 'hs-state__primary-nav-masthead-sidebar--inactive hs-state__primary-nav-masthead-sidebar--active' );
+                $body.removeClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive' ).addClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--active' );
+                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( 'hs-state__primary-nav-masthead-sidebar--active' ) ? 'true' : 'false' );
+                
+                // Deactivate Search
+                $body.removeClass( 'hs-state__search_lightsaber--active' ).addClass( 'hs-state__search_lightsaber--inactive' );
+            } );
+            
+            // Deactivate Primary Navigation on clicks on the document body
+            $( document ).on( 'click.hopscotch', function() {
+                $body.removeClass( 'hs-state__primary-nav-masthead-sidebar--active' ).addClass( 'hs-state__primary-nav-masthead-sidebar--inactive' );
+                $body.removeClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--active' ).addClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive' );
+            });
+            
+            // Exclude clicks on the Primary Navigation itself
+            $( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).on( 'click.hopscotch', function( e ){
+                e.stopPropagation();
+            });
+            
+        }
         
     } )();
     
@@ -85,13 +106,17 @@
             $html.removeClass( viewportNarrowClass );
         }
 
-        // If screen is narrow, deactivate primary navigation
-        if ( $html.hasClass( viewportNarrowClass ) ) {
-            $body.removeClass( statePriNavMastheadSidebarActiveClass );
-            $body.addClass( statePriNavMastheadSidebarInactiveClass );
-        } else {
-            $body.removeClass( statePriNavMastheadSidebarInactiveClass );
-            $body.addClass( statePriNavMastheadSidebarActiveClass );
+        if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' ) ) {
+        
+            // If screen is narrow, deactivate primary navigation
+            if ( $html.hasClass( viewportNarrowClass ) ) {
+                $body.removeClass( statePriNavMastheadSidebarActiveClass );
+                $body.addClass( statePriNavMastheadSidebarInactiveClass );
+            } else {
+                $body.removeClass( statePriNavMastheadSidebarInactiveClass );
+                $body.addClass( statePriNavMastheadSidebarActiveClass );
+            }
+            
         }
 
     }
@@ -140,7 +165,7 @@
           return;
         
         // Search Lightsaber
-        if ( $html.hasClass( 'hs-template__search--lightsaber' ) ) {
+        if ( $html.hasClass( 'hs-template__search--lightsaber' && 'hs-viewport--narrow' ) ) {
             
             // Deactivates the Search
             function searchLightsaberDeactivate() {
@@ -149,13 +174,14 @@
                 }
             }
             
+            // Set Default Class
             $body.addClass( 'hs-state__search_lightsaber--inactive' );
             
             mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
                 $body.removeClass( 'hs-state__search_lightsaber--inactive' ).addClass( 'hs-state__search_lightsaber--active' );
             } );
             
-            mastheadSidebarSearchFormLabel.on( 'click.hopscotch', function( e ){        
+            mastheadSidebarSearchFormLabel.on( 'click.hopscotch', function( e ){
                 e.stopPropagation();
 
                 // Deactivate other Search
@@ -180,6 +206,7 @@
                     searchInput.blur();
                 }
             });
+            
         }
         
         // Differentiate the ID of Search Inputs

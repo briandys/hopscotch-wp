@@ -1,35 +1,26 @@
-@import 'components/action';
-@import 'components/alignment';
-@import 'components/blank';
-@import 'components/caption';
-@import 'components/entry-thumbnail';
-@import 'components/overlay';
-@import 'components/toolbar';
-
-@import 'components/breadcrumbs';
-@import 'components/child-content';
+@import 'components/article-entry-banner';
+@import 'components/breadcrumb-navigation';
+@import 'components/content';
+@import 'components/comments';
+@import 'components/article-entry-navigation';
+@import 'components/article-entry-page-navigation';
+@import 'components/article-entry-comments-actions';
+@import 'components/comment-entry-admin-actions';
+@import 'components/comment-form-admin-actions';
+@import 'components/article-entry-admin-actions';
+@import 'components/comments-entry-navigation';
 @import 'components/colophon';
+@import 'components/primary-navigation-masthead-sidebar';
+@import 'components/primary-social-navigation';
 
-// Comment uses .entry-ct-cr so it must refer to Entry
-@import 'components/entry';
-@import 'components/comment';
-@import 'components/content-navigation';
+@import 'components/masthead-sidebar';
 
-@import 'components/form';
-
-@import 'components/gallery';
-@import 'components/main';
-@import 'components/main-navigation';
-@import 'components/masthead-header';
-@import 'components/masthead-header-site';
-@import 'components/media';
-@import 'components/notice';
-@import 'components/plug-in';
-@import 'components/scroll-top';
+@import 'components/content-sidebar';
+@import 'components/colophon-sidebar';
 @import 'components/search';
-@import 'components/taxonomy';
-@import 'components/widget';
-
-
-@import 'components/ui';
-@import 'components/data-uri';
+@import 'components/show-content';
+@import 'components/show-more-content';
+@import 'components/show-top';
+@import 'components/primary-sub-navigation-toggle';
+@import 'components/web-product';
+@import 'components/article-entry-img';
