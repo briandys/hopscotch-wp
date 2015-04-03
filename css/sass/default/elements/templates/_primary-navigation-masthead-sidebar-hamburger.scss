@@ -4,13 +4,13 @@
     &.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
     
     // Dismiss Icon
-    .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+    .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
     
     // Component
-    .hs-state__primary-nav-masthead-sidebar--inactive .primary_nav,
+    .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
     
     // Menu Icon
-    .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+    .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
     {
         @extend %hs-patch--hidden !optional;
     }
@@ -48,7 +48,7 @@
         // Search Default
         &.hs-template__search--default
         {
-            .hs-state__primary-nav-masthead-sidebar--inactive
+            .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
             {
                 .masthead_sidebar
                 {
@@ -64,23 +64,6 @@
         .web-product_name
         {
             text-align: center;
-        }
-    }
-    
-    // Positioning of Search Lightsaber on Wide and Narrow Viewport
-    &.hs-template__search--lightsaber
-    {
-        .masthead_sidebar
-        {
-            .search_comp
-            {
-                position: absolute;
-                top: 0;
-                right: 0;
-                
-                // Counter-effect caused by position: absolute
-                width: 100%;
-            }
         }
     }
 }

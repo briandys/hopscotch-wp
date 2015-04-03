@@ -39,58 +39,14 @@
         });
         
     } )();
-
     
-    //------------------------- Primary Navigation and Masthead Sidebar Toggle
-    ( function() {
-        var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
-            priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' );
-        
-        if ( ! priNavMastheadSidebarComp ) {
-            return;
-        }
-            
-        if ( ! priNavMastheadSidebarToggleAxn ) {
-            return;
-        }
-        
-        if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' && 'hs-viewport--narrow' ) ) {
-
-            // Set Default Class
-            $body.addClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive' );
-            
-            priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
-
-                $body.toggleClass( 'hs-state__primary-nav-masthead-sidebar--inactive hs-state__primary-nav-masthead-sidebar--active' );
-                $body.removeClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive' ).addClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--active' );
-                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( 'hs-state__primary-nav-masthead-sidebar--active' ) ? 'true' : 'false' );
-                
-                // Deactivate Search
-                $body.removeClass( 'hs-state__search_lightsaber--active' ).addClass( 'hs-state__search_lightsaber--inactive' );
-            } );
-            
-            // Deactivate Primary Navigation on clicks on the document body
-            $( document ).on( 'click.hopscotch', function() {
-                $body.removeClass( 'hs-state__primary-nav-masthead-sidebar--active' ).addClass( 'hs-state__primary-nav-masthead-sidebar--inactive' );
-                $body.removeClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--active' ).addClass( 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive' );
-            });
-            
-            // Exclude clicks on the Primary Navigation itself
-            $( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).on( 'click.hopscotch', function( e ){
-                e.stopPropagation();
-            });
-            
-        }
-        
-    } )();
     
-  
     //-------------------------  Viewport resizing
     function resize() {
         var viewportNarrowClass = 'hs-viewport--narrow',
             viewportWideClass = 'hs-viewport--wide',
-            statePriNavMastheadSidebarActiveClass = 'hs-state__primary-nav-masthead-sidebar--active',
-            statePriNavMastheadSidebarInactiveClass = 'hs-state__primary-nav-masthead-sidebar--inactive';
+            statePriNavMastheadSidebarActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
+            statePriNavMastheadSidebarInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive';
             
         windowWidth = $window.width();
 
@@ -120,6 +76,44 @@
         }
 
     }
+
+    
+    //------------------------- Primary Navigation and Masthead Sidebar Toggle
+    ( function() {
+        var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
+            priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' ),
+            statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
+            statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active';
+        
+        if ( ! priNavMastheadSidebarComp ) {
+            return;
+        }
+            
+        if ( ! priNavMastheadSidebarToggleAxn ) {
+            return;
+        }
+        
+        // Two main criteria: If using Hamburger Template and if Viewport is Narrow
+        if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' && 'hs-viewport--narrow' ) ) {
+
+            // Set Default Class
+            $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+            
+            priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
+                $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
+                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
+            } );
+        }
+            
+        // Deactivate Primary Navigation on clicks on the document body
+        // https://css-tricks.com/dangers-stopping-event-propagation/
+        $( document ).on( 'click.hopscotch', function( e ) {
+            if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' && 'hs-viewport--narrow' ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).length ) {
+                $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+            }                
+        });
+        
+    } )();
     
     
     //-------------------------  Search Component
@@ -136,8 +130,8 @@
             stateSearchFocused = 'hs-state__search--focused',
             stateSearchUnfocused = 'hs-state__search--unfocused',
             
-            stateSearchActive = 'hs-state__search--active',
-            stateSearchInactive = 'hs-state__search--inactive',
+            stateSearchLightsaberActiveClass = 'hs-state__search_lightsaber--active',
+            stateSearchLightsaberInactiveClass = 'hs-state__search_lightsaber--inactive',
             
             mastheadSidebarSearch = mastheadSidebar.find( '.search_comp' ),
             mastheadSidebarSearchFormInput = mastheadSidebar.find( '.search-form_input' ),
@@ -169,16 +163,16 @@
             
             // Deactivates the Search
             function searchLightsaberDeactivate() {
-                if ( $body.hasClass( 'hs-state__search_lightsaber--active' ) ) {
-                    $body.removeClass( 'hs-state__search_lightsaber--active' ).addClass( 'hs-state__search_lightsaber--inactive' );
+                if ( $body.hasClass( stateSearchLightsaberActiveClass ) ) {
+                    $body.removeClass( stateSearchLightsaberActiveClass ).addClass( stateSearchLightsaberInactiveClass );
                 }
             }
             
             // Set Default Class
-            $body.addClass( 'hs-state__search_lightsaber--inactive' );
+            $body.addClass( stateSearchLightsaberInactiveClass );
             
             mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
-                $body.removeClass( 'hs-state__search_lightsaber--inactive' ).addClass( 'hs-state__search_lightsaber--active' );
+                $body.removeClass( stateSearchLightsaberInactiveClass ).addClass( stateSearchLightsaberActiveClass );
             } );
             
             mastheadSidebarSearchFormLabel.on( 'click.hopscotch', function( e ){
@@ -186,28 +180,24 @@
 
                 // Deactivate other Search
                 searchLightsaberDeactivate();
-                $body.removeClass( 'hs-state__search_lightsaber--inactive' ).addClass( 'hs-state__search_lightsaber--active' );
-            } );
-            
-            // If Search Component is active, make inactive by clicks anywhere on the document
-            $( document ).on( 'click.hopscotch', function() {
-                searchLightsaberDeactivate();
-            });
-
-            // Exempts the Search Component from the document click
-            mastheadSidebarSearch.on( 'click.hopscotch', function( e ){
-                e.stopPropagation();
-            });
-
-            // ESC
-            $( document ).on( 'keyup.hopscotch', function( e ) {
-                if ( e.which === 27 ) {
-                    searchLightsaberDeactivate();
-                    searchInput.blur();
-                }
-            });
-            
+                $body.removeClass( stateSearchLightsaberInactiveClass ).addClass( stateSearchLightsaberActiveClass );
+            } );            
         }
+        
+        // Deactivate Primary Navigation on clicks on the document body
+        $( document ).on( 'click.hopscotch', function( e ) {
+            if ( $html.hasClass( 'hs-template__search--lightsaber' ) && !$( event.target ).closest( mastheadSidebarSearch ).length ) {
+                searchLightsaberDeactivate();
+            }                
+        });
+
+        // ESC closes Deactivates the Search
+        $( document ).on( 'keyup.hopscotch', function( e ) {
+            if ( $html.hasClass( 'hs-template__search--lightsaber' ) && e.which === 27 ) {
+                searchLightsaberDeactivate();
+                searchInput.blur();
+            }
+        });
         
         // Differentiate the ID of Search Inputs
         contentSidebarSearchFormInput.attr( 'id', 'search-form-content-sidebar_input' );

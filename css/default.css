@@ -639,9 +639,9 @@ textarea {
     page-break-after: avoid; } }
 /* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
 .hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-item_tree--inactive > .children, .hs-state__primary-nav-item_tree--inactive > .sub-menu, .hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
-.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar--inactive .primary_nav,
-.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar--inactive .masthead_sidebar .search_comp {
+.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
+.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp {
   display: none !important; }
 
 /* line 16, sass/default/utilities/helpers/patch/_visually-hidden.scss */
@@ -826,33 +826,44 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   max-width: 100%;
   height: auto; }
 
-/* line 25, sass/default/elements/templates/_search-lightsaber.scss */
+/* line 8, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber .masthead_sidebar .search_comp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; }
+/* line 33, sass/default/elements/templates/_search-lightsaber.scss */
 .hs-template__search--lightsaber .masthead_sidebar .search-form_input {
-  padding: .5rem; }
+  padding: .5rem 1rem; }
+/* line 49, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber.hs-viewport--wide .masthead_sidebar .search_comp {
+  width: 20rem; }
+/* line 61, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form-input-field_cr {
+  padding-left: 3rem; }
 
-/* line 46, sass/default/elements/templates/_search-lightsaber.scss */
+/* line 80, sass/default/elements/templates/_search-lightsaber.scss */
 .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form-input_field {
   position: absolute;
   top: 0;
   right: 0; }
 
-/* line 70, sass/default/elements/templates/_search-lightsaber.scss */
+/* line 105, sass/default/elements/templates/_search-lightsaber.scss */
 .hs-state__search_lightsaber--active .masthead_sidebar .search-form-input-field_cr {
-  padding-left: 3rem;
   padding-right: 3rem; }
-/* line 77, sass/default/elements/templates/_search-lightsaber.scss */
+/* line 111, sass/default/elements/templates/_search-lightsaber.scss */
 .hs-state__search_lightsaber--active .masthead_sidebar .search-form-axn_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 86, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-state__search_lightsaber--active .web-product-header_comp {
+/* line 124, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-viewport--narrow .hs-state__search_lightsaber--active .web-product-header_comp {
   visibility: hidden; }
 
-/* line 95, sass/default/elements/templates/_search-lightsaber.scss */
+/* line 134, sass/default/elements/templates/_search-lightsaber.scss */
 .hs-state__search_lightsaber--active {
   z-index: 990; }
-  /* line 99, sass/default/elements/templates/_search-lightsaber.scss */
+  /* line 138, sass/default/elements/templates/_search-lightsaber.scss */
   .hs-state__search_lightsaber--active .primary-nav-masthead-sidebar-toggle_axn {
     z-index: 1000; }
 
@@ -869,9 +880,3 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 /* line 65, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .web-product_name {
   text-align: center; }
-/* line 76, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-template__primary-nav-masthead-sidebar--hamburger.hs-template__search--lightsaber .masthead_sidebar .search_comp {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%; }

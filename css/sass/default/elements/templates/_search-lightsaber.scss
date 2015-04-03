@@ -4,6 +4,14 @@
     // Default State
     .masthead_sidebar
     {
+        .search_comp
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+        }
+        
         .search-form_axn .verb_label
         {
             @extend %hs-patch--visually-hidden !optional;
@@ -26,9 +34,35 @@
             @extend %hs-reset--deflate !optional;
             
             // Counter-effect
-            padding: .5rem;
+            padding: .5rem 1rem;
         }
-    }    
+    }
+    
+    // Conditional
+    
+    // Wide Viewport
+    &.hs-viewport--wide
+    {
+        .masthead_sidebar
+        {
+            .search_comp
+            {
+                width: 20rem;
+            }
+        }
+    }
+    
+    // If Hamburger Template and Narrow Viewport
+    &.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow
+    {
+        .masthead_sidebar
+        {
+            .search-form-input-field_cr
+            {
+                padding-left: $block;
+            }
+        }
+    }
 }
 
 // Inactive State
@@ -67,8 +101,8 @@
         }
     
         // Make way for the button icon
-        .search-form-input-field_cr  {
-            padding-left: $block;
+        .search-form-input-field_cr 
+        {
             padding-right: $block;
         }
         
@@ -81,11 +115,16 @@
         }
     }
     
-    // Other elements affected
-    .web-product-header_comp
+    // Conditional
+    // Hide other elements in Narrow Viewport
+    .hs-viewport--narrow &
     {
-        // Preserve the layout
-        visibility: hidden;
+        // Hide Web Product Header
+        .web-product-header_comp
+        {
+            // Preserve the layout
+            visibility: hidden;
+        }
     }
 }
 
