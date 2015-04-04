@@ -1,13 +1,26 @@
 // Show Top
+
 .show-top_axn
 {
-    @extend %hs-nature--inline-icon-cr !optional;
+    // Conditionals
+    .no-js &,
+    .modernizr--js.hs-viewport--narrow &
+    {
+        display: table;
+        width: 100%;
+    }
+}
+
+.show-top_label
+{
+    @extend %hs-nature--inline-icon-cr !optional;    
     
     .arrow-left_icon {
         transform: rotate( 90deg );
     }
-    
-    .label {
-        @extend %hs-patch--visually-hidden !optional;
-    }
+}
+
+.show-top-label_text
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

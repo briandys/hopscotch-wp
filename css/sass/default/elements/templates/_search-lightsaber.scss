@@ -93,11 +93,13 @@
             }
         }
     }
+    
+    transition: all 1s ease;
 }
 
 // Active State
 .hs-state__search_lightsaber--active
-{    
+{
     // Conditional: JS Enabled
     .modernizr--js &
     {

@@ -14,8 +14,10 @@
                         <div class="comp show-top_comp">    
                             <div class="cr show-top_cr">
                                 <a class="axn show-top_axn" href="#top" title="Show Top">
-                                    <span class="label"><?php _e( 'Show Top', 'hopscotch' ); ?></span>
-                                    <svg class="icon arrow-left_icon" width="0" height="0"><use xlink:href="#arrow-left_icon"></use></svg>
+                                    <span class="label show-top_label">
+                                        <span class="text show-top-label_text"><?php _e( 'Show Top', 'hopscotch' ); ?></span>
+                                        <svg class="icon arrow-left_icon" width="0" height="0"><use xlink:href="#arrow-left_icon"></use></svg>
+                                    </span>
                                 </a>
                             </div>
                         </div><!-- show-top_comp -->

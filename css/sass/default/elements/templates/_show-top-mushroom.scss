@@ -1,0 +1,26 @@
+// Component
+.hs-template__show-top--mushroom
+{    
+    &.modernizr--js
+    {
+        // Default / Inactive
+        .show-top_comp
+        {
+            position: fixed;
+            right: 0;
+            bottom: -$block;
+            transition: bottom .5s ease-in-out;
+        }
+        
+        // Active
+        .hs-state__show-top--active
+        {
+            .show-top_comp
+            {
+                display: block;
+                bottom: 0;
+                z-index: 1000;
+            }
+        }
+    }
+}
