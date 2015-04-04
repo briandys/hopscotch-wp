@@ -1,69 +1,95 @@
 .hs-template__primary-nav-masthead-sidebar--hamburger
 {
-    // Toggle Action on Wide Viewport
-    &.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
-    
-    // Dismiss Icon
-    .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-    
-    // Component
-    .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
-    
-    // Menu Icon
-    .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+    // Conditional: JS Enabled
+    &.modernizr--js
     {
-        @extend %hs-patch--hidden !optional;
-    }
-    
-    // Toggle Label
-    .primary-nav-masthead-sidebar-toggle_axn .toggle_label
-    {
-        @extend %hs-patch--visually-hidden !optional;
-    }
-    
-    // Toggle Action
-    .primary-nav-masthead-sidebar-toggle_axn
-    {
-        @extend %hs-reset--deflate !optional;
+        // Dismiss Icon
+        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
 
-        // Counter-effect
-        padding-left: .5rem;
-        padding-right: .5rem;
-        width: auto;
-    }
-    
-    // Positioning of Toggle Action on Narrow Viewport
-    &.hs-viewport--narrow
-    {
-        .primary-nav-masthead-sidebar-toggle_axn {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
-    
-    
-    &.hs-viewport--narrow
-    {
-        // Search Default
-        &.hs-template__search--default
+        // Component
+        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
+
+        // Menu Icon
+        .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
         {
-            .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
+            @extend %hs-patch--hidden !optional;
+        }
+
+        // Toggle Label
+        .primary-nav-masthead-sidebar-toggle_axn .toggle_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+
+        // Toggle Action
+        .primary-nav-masthead-sidebar-toggle_axn
+        {
+            @extend %hs-reset--deflate !optional;
+
+            // Counter-effect
+            padding-left: .5rem;
+            padding-right: .5rem;
+            width: auto;
+        }
+
+        // Conditional: Narrow Viewport
+        &.hs-viewport--narrow
+        {
+            .primary-nav-masthead-sidebar-toggle_axn {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            // Search Default
+            &.hs-template__search--default
             {
-                .masthead_sidebar
+                .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
                 {
-                    .search_comp
+                    .masthead_sidebar
                     {
-                        @extend %hs-patch--hidden !optional;
+                        .search_comp
+                        {
+                            @extend %hs-patch--hidden !optional;
+                        }
                     }
                 }
             }
+
+            // Web Product Name
+            .web-product_name
+            {
+                text-align: center;
+            }
         }
         
-        // Web Product Name
-        .web-product_name
+        // Conditional: Wide Viewport
+        &.hs-viewport--wide
         {
-            text-align: center;
+            // Toggle Action on Wide Viewport
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                @extend %hs-patch--hidden !optional;
+            }
+        }
+    }
+    
+    &.no-js
+    {
+        .primary-nav-masthead-sidebar-toggle_axn
+        {
+            @extend %hs-patch--hidden !optional;
+        }
+        
+        .masthead_sidebar
+        {
+            .search_comp
+            {
+                .search_icon
+                {
+                    @extend %hs-patch--hidden !optional;
+                }
+            }
         }
     }
 }

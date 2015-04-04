@@ -4,6 +4,11 @@
 ( function( $ ) {
     var $body = $( document.body ),        
         $html = $( 'html' ),
+        viewportNarrowClass = 'hs-viewport--narrow',
+        viewportWideClass = 'hs-viewport--wide',
+        priNavMastheadSidebarHamburgerClass = 'hs-template__primary-nav-masthead-sidebar--hamburger',
+        statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
+        statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
         $window, windowWidth, resizeTimer;
     
     //------------------------- Primary Navigation
@@ -41,18 +46,13 @@
     } )();
     
     
-    //-------------------------  Viewport resizing
-    function resize() {
-        var viewportNarrowClass = 'hs-viewport--narrow',
-            viewportWideClass = 'hs-viewport--wide',
-            statePriNavMastheadSidebarActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
-            statePriNavMastheadSidebarInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive';
-            
+    //-------------------------  Viewport Resizing
+    function resize() {            
         windowWidth = $window.width();
 
         /*
         Screen width detection
-        If Tablet size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
+        If Tablet Size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
         */
         if (769 > windowWidth) {
             $html.addClass( viewportNarrowClass );
@@ -62,15 +62,15 @@
             $html.removeClass( viewportNarrowClass );
         }
 
-        if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' ) ) {
+        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) ) {
         
             // If screen is narrow, deactivate primary navigation
             if ( $html.hasClass( viewportNarrowClass ) ) {
-                $body.removeClass( statePriNavMastheadSidebarActiveClass );
-                $body.addClass( statePriNavMastheadSidebarInactiveClass );
+                $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass );
+                $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
             } else {
-                $body.removeClass( statePriNavMastheadSidebarInactiveClass );
-                $body.addClass( statePriNavMastheadSidebarActiveClass );
+                $body.removeClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+                $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass );
             }
             
         }
@@ -81,9 +81,7 @@
     //------------------------- Primary Navigation and Masthead Sidebar Toggle
     ( function() {
         var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
-            priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' ),
-            statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
-            statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active';
+            priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' );
         
         if ( ! priNavMastheadSidebarComp ) {
             return;
@@ -94,7 +92,7 @@
         }
         
         // Two main criteria: If using Hamburger Template and if Viewport is Narrow
-        if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' && 'hs-viewport--narrow' ) ) {
+        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass && viewportNarrowClass ) ) {
 
             // Set Default Class
             $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
@@ -108,7 +106,7 @@
         // Deactivate Primary Navigation on clicks on the document body
         // https://css-tricks.com/dangers-stopping-event-propagation/
         $( document ).on( 'click.hopscotch', function( e ) {
-            if ( $html.hasClass( 'hs-template__primary-nav-masthead-sidebar--hamburger' && 'hs-viewport--narrow' ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).length ) {
+            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass && viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).length ) {
                 $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
             }                
         });

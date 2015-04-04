@@ -638,10 +638,9 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
-.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-item_tree--inactive > .children, .hs-state__primary-nav-item_tree--inactive > .sub-menu, .hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn,
-.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
-.hs-template__primary-nav-masthead-sidebar--hamburger .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp {
+.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-state__primary-nav-item_tree--inactive > .children, .hs-state__primary-nav-item_tree--inactive > .sub-menu, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon {
   display: none !important; }
 
 /* line 16, sass/default/utilities/helpers/patch/_visually-hidden.scss */
@@ -649,9 +648,9 @@ textarea {
 .primary-content_accessible-name, .comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
 .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
 .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .content_sidebar .search_icon, .colophon_sidebar .search_icon, .show-content_axn, .show-more-content_comp .pred_label,
-.show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top_axn .label, .primary-sub-nav-toggle_axn .toggle_label, .web-product_desc, .hs-template__search--lightsaber .masthead_sidebar .search-form_axn .verb_label, .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_label .subj_label,
-.hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_input,
-.hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_axn, .hs-state__search_lightsaber--active .masthead_sidebar .search-form_label, .hs-template__primary-nav-masthead-sidebar--hamburger .primary-nav-masthead-sidebar-toggle_axn .toggle_label {
+.show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top_axn .label, .primary-sub-nav-toggle_axn .toggle_label, .web-product_desc, .hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search-form_axn .verb_label, .modernizr--js .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_label .subj_label,
+.modernizr--js .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_input,
+.modernizr--js .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form_axn, .modernizr--js .hs-state__search_lightsaber--active .masthead_sidebar .search-form_label, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -673,7 +672,7 @@ textarea {
 
 /* line 10, sass/default/utilities/helpers/reset/_deflate.scss */
 button.theme, input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
-.text_input, .primary-sub-nav-toggle_axn, .hs-template__search--lightsaber .masthead_sidebar .search-form_input, .hs-state__search_lightsaber--active .masthead_sidebar .search-form_axn, .hs-template__primary-nav-masthead-sidebar--hamburger .primary-nav-masthead-sidebar-toggle_axn {
+.text_input, .primary-sub-nav-toggle_axn, .hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search-form_input, .modernizr--js .hs-state__search_lightsaber--active .masthead_sidebar .search-form_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -690,8 +689,8 @@ button:hover, input[type='submit']:hover, input[type='password']:hover, input[ty
   cursor: pointer; }
 
 /* line 20, sass/default/utilities/helpers/nature/_inline-icon.scss */
-.show-top_axn, .hs-template__search--lightsaber .masthead_sidebar .search-form_label,
-.hs-template__search--lightsaber .masthead_sidebar .search-form_axn {
+.show-top_axn, .hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search-form_label,
+.hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search-form_axn {
   display: table-cell;
   width: 3rem;
   height: 3rem;
@@ -699,7 +698,7 @@ button:hover, input[type='submit']:hover, input[type='password']:hover, input[ty
   vertical-align: middle; }
 
 /* line 51, sass/default/utilities/helpers/nature/_inline-icon.scss */
-svg.icon, .hs-template__search--lightsaber .masthead_sidebar .search_icon {
+svg.icon, .hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search_icon {
   margin: 0.0625rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -826,57 +825,56 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   max-width: 100%;
   height: auto; }
 
-/* line 8, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-template__search--lightsaber .masthead_sidebar .search_comp {
+/* line 13, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search_comp {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%; }
-/* line 33, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-template__search--lightsaber .masthead_sidebar .search-form_input {
+/* line 38, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search-form_input {
   padding: .5rem 1rem; }
-/* line 49, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-template__search--lightsaber.hs-viewport--wide .masthead_sidebar .search_comp {
+/* line 54, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber.modernizr--js.hs-viewport--wide .masthead_sidebar .search_comp {
   width: 20rem; }
-/* line 61, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-template__search--lightsaber.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form-input-field_cr {
+/* line 66, sass/default/elements/templates/_search-lightsaber.scss */
+.hs-template__search--lightsaber.modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form-input-field_cr {
   padding-left: 3rem; }
 
-/* line 80, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-state__search_lightsaber--inactive .masthead_sidebar .search-form-input_field {
+/* line 89, sass/default/elements/templates/_search-lightsaber.scss */
+.modernizr--js .hs-state__search_lightsaber--inactive .masthead_sidebar .search-form-input_field {
   position: absolute;
   top: 0;
   right: 0; }
 
-/* line 105, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-state__search_lightsaber--active .masthead_sidebar .search-form-input-field_cr {
+/* line 118, sass/default/elements/templates/_search-lightsaber.scss */
+.modernizr--js .hs-state__search_lightsaber--active .masthead_sidebar .search-form-input-field_cr {
   padding-right: 3rem; }
-/* line 111, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-state__search_lightsaber--active .masthead_sidebar .search-form-axn_field {
+/* line 124, sass/default/elements/templates/_search-lightsaber.scss */
+.modernizr--js .hs-state__search_lightsaber--active .masthead_sidebar .search-form-axn_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 124, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-viewport--narrow .hs-state__search_lightsaber--active .web-product-header_comp {
+/* line 137, sass/default/elements/templates/_search-lightsaber.scss */
+.modernizr--js.hs-viewport--narrow .hs-state__search_lightsaber--active .web-product-header_comp {
   visibility: hidden; }
-
-/* line 134, sass/default/elements/templates/_search-lightsaber.scss */
-.hs-state__search_lightsaber--active {
+/* line 147, sass/default/elements/templates/_search-lightsaber.scss */
+.modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_lightsaber--active .search_comp {
   z-index: 990; }
-  /* line 138, sass/default/elements/templates/_search-lightsaber.scss */
-  .hs-state__search_lightsaber--active .primary-nav-masthead-sidebar-toggle_axn {
-    z-index: 1000; }
+/* line 152, sass/default/elements/templates/_search-lightsaber.scss */
+.modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_lightsaber--active .primary-nav-masthead-sidebar-toggle_axn {
+  z-index: 1000; }
 
 /* line 26, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-template__primary-nav-masthead-sidebar--hamburger .primary-nav-masthead-sidebar-toggle_axn {
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: auto; }
 /* line 38, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0; }
-/* line 65, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .web-product_name {
+/* line 61, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .web-product_name {
   text-align: center; }
