@@ -1,0 +1,25 @@
+.hs-theme--hopscotch
+{    
+
+    // Reset: Unlist
+    .article-entry-comments-actions_grp,
+    .article-entry-nav_grp,
+    .comment-entry-axn_grp
+    {
+        @extend %hs-reset--unlist !optional;
+    }
+    
+    // Center Text
+    &.hs-viewport--narrow
+    {
+        .article-entry-title_name,
+        .article-entry-hr_ct,
+        .article-entry-fr_cr,
+        .article-entry-nav_grp,
+        .web-product-info_cr
+        {
+            text-align: center;
+        }
+    }
+    
+}

@@ -120,12 +120,12 @@ Class: comments_comp
                 'label_submit'              => __( 'Post', 'hopscotch' ),
                 'comment_notes_before'      => '',
                 'comment_notes_after'      => '',
-                'comment_field'             => '<div class="field comment_field">' .
-                                            '<div class="field_cr comment-field_cr">' .
-                                            '<label for="comment">' .
+                'comment_field'             => '<div class="field comment-author-comment_field">' .
+                                            '<div class="field_cr comment-author-comment-field_cr">' .
+                                            '<label for="comment-author-comment_input">' .
                                             __( 'Comment', 'hopscotch' ) .
                                             '</label>' .
-                                            '<textarea id="comment_textarea" class="text_input" name="comment" title="Comment" placeholder="Please leave a comment." required aria-required="true">' .
+                                            '<textarea id="comment-author-comment_input" class="input text_input comment-author-comment_input" name="comment" title="Comment" placeholder="Please leave a comment." required aria-required="true">' .
                                             '</textarea>' .
                                             '</div>' .
                                             '</div><!-- field -->',

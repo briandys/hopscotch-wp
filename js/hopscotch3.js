@@ -7,6 +7,7 @@
         viewportNarrowClass = 'hs-viewport--narrow',
         viewportWideClass = 'hs-viewport--wide',
         priNavMastheadSidebarHamburgerClass = 'hs-template__primary-nav-masthead-sidebar--hamburger',
+        searchLightsaberClass = 'hs-template__search--lightsaber',
         statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
         statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
         $window, windowWidth, resizeTimer;
@@ -47,13 +48,11 @@
     
     
     //-------------------------  Viewport Resizing
-    function resize() {            
+    function resize() {
         windowWidth = $window.width();
 
-        /*
-        Screen width detection
-        If Tablet Size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
-        */
+        // Screen width detection
+        // If Tablet Size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
         if (769 > windowWidth) {
             $html.addClass( viewportNarrowClass );
             $html.removeClass( viewportWideClass );
@@ -62,19 +61,13 @@
             $html.removeClass( viewportNarrowClass );
         }
 
-        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) ) {
-        
-            // If screen is narrow, deactivate primary navigation
-            if ( $html.hasClass( viewportNarrowClass ) ) {
-                $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass );
-                $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
-            } else {
-                $body.removeClass( statePriNavMastheadSidebarHamburgerInactiveClass );
-                $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass );
-            }
-            
+        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
+            $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass );
+            $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+        } else {
+            $body.removeClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+            $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass );
         }
-
     }
 
     
@@ -92,7 +85,7 @@
         }
         
         // Two main criteria: If using Hamburger Template and if Viewport is Narrow
-        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass && viewportNarrowClass ) ) {
+        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
 
             // Set Default Class
             $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
@@ -106,7 +99,7 @@
         // Deactivate Primary Navigation on clicks on the document body
         // https://css-tricks.com/dangers-stopping-event-propagation/
         $( document ).on( 'click.hopscotch', function( e ) {
-            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass && viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).length ) {
+            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).length ) {
                 $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
             }                
         });
@@ -125,12 +118,6 @@
             contentSidebar = $( '#content_sidebar' ),
             colophonSidebar = $( '#colophon_sidebar' ),
             
-            stateSearchFocused = 'hs-state__search--focused',
-            stateSearchUnfocused = 'hs-state__search--unfocused',
-            
-            stateSearchLightsaberActiveClass = 'hs-state__search_lightsaber--active',
-            stateSearchLightsaberInactiveClass = 'hs-state__search_lightsaber--inactive',
-            
             mastheadSidebarSearch = mastheadSidebar.find( '.search_comp' ),
             mastheadSidebarSearchFormInput = mastheadSidebar.find( '.search-form_input' ),
             mastheadSidebarSearchFormLabel = mastheadSidebar.find( '.search-form_label' ),
@@ -139,12 +126,21 @@
             contentSidebarSearchFormLabel = contentSidebar.find( '.search-form_label' ),
             
             colophonSidebarSearchFormInput = colophonSidebar.find( '.search-form_input' ),
-            colophonSidebarSearchFormLabel = colophonSidebar.find( '.search-form_label' );
+            colophonSidebarSearchFormLabel = colophonSidebar.find( '.search-form_label' ),
+            
+            stateSearchFocused = 'hs-state__search--focused',
+            stateSearchUnfocused = 'hs-state__search--unfocused',
+            
+            stateSearchLightsaberActiveClass = 'hs-state__search_lightsaber--active',
+            stateSearchLightsaberInactiveClass = 'hs-state__search_lightsaber--inactive';
 
         if( ! search )
           return;
 
         if( ! searchLabel )
+          return;
+
+        if( ! searchInput )
           return;
 
         if( ! mastheadSidebar )
@@ -155,9 +151,33 @@
 
         if( ! colophonSidebar )
           return;
+
+        if( ! mastheadSidebarSearch )
+          return;
+
+        if( ! mastheadSidebarSearchFormInput )
+          return;
+
+        if( ! mastheadSidebarSearchFormLabel )
+          return;
+
+        if( ! contentSidebarSearchFormInput )
+          return;
+
+        if( ! contentSidebarSearchFormLabel )
+          return;
+
+        if( ! colophonSidebarSearchFormInput )
+          return;
+
+        if( ! colophonSidebarSearchFormLabel )
+          return;
         
-        // Search Lightsaber
-        if ( $html.hasClass( 'hs-template__search--lightsaber' && 'hs-viewport--narrow' ) ) {
+        // Search Lightsaber        
+        if ( $html.hasClass( searchLightsaberClass ) && $html.hasClass( viewportNarrowClass ) ) {
+            
+            // Set Default Class
+            $body.addClass( stateSearchLightsaberInactiveClass );
             
             // Deactivates the Search
             function searchLightsaberDeactivate() {
@@ -166,32 +186,22 @@
                 }
             }
             
-            // Set Default Class
-            $body.addClass( stateSearchLightsaberInactiveClass );
-            
+            // Activate on Focus
             mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
                 $body.removeClass( stateSearchLightsaberInactiveClass ).addClass( stateSearchLightsaberActiveClass );
-            } );
-            
-            mastheadSidebarSearchFormLabel.on( 'click.hopscotch', function( e ){
-                e.stopPropagation();
-
-                // Deactivate other Search
-                searchLightsaberDeactivate();
-                $body.removeClass( stateSearchLightsaberInactiveClass ).addClass( stateSearchLightsaberActiveClass );
-            } );            
+            } );          
         }
         
         // Deactivate Primary Navigation on clicks on the document body
         $( document ).on( 'click.hopscotch', function( e ) {
-            if ( $html.hasClass( 'hs-template__search--lightsaber' ) && !$( event.target ).closest( mastheadSidebarSearch ).length ) {
+            if ( $html.hasClass( searchLightsaberClass ) && !$( event.target ).closest( mastheadSidebarSearch ).length ) {
                 searchLightsaberDeactivate();
             }                
         });
 
         // ESC closes Deactivates the Search
         $( document ).on( 'keyup.hopscotch', function( e ) {
-            if ( $html.hasClass( 'hs-template__search--lightsaber' ) && e.which === 27 ) {
+            if ( $html.hasClass( searchLightsaberClass ) && e.which === 27 ) {
                 searchLightsaberDeactivate();
                 searchInput.blur();
             }
@@ -205,6 +215,60 @@
         colophonSidebarSearchFormLabel.attr( 'for', 'search-form-colophon-sidebar_input' );
 
     } )();
+    
+    
+    //-------------------------  Smooth Scroll
+    // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+    ( function() {        
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                        $body.animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    } else {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            }
+        });
+    } )();
+    
+    
+    //-------------------------  Show Top
+	( function() {		
+        $( window ).on( 'scroll.hopscotch', function(){			
+            var showTopActiveClass = 'hs-state__show-top--active',
+                showTopInactiveClass = 'hs-state__show-top--inactive';
+			
+            // Activate
+            function showTopActivate() {
+                $body.addClass( showTopActiveClass );
+                $body.removeClass ( showTopInactiveClass );
+            };
+			
+            // Deactivate
+            function showTopDeactivate() {
+                $body.addClass( showTopInactiveClass );
+                $body.removeClass ( showTopActiveClass );
+            };
+            
+            // Activation if near bottom
+            if ( $( window ).scrollTop() > ( $( window ).height() / 2) ) {
+				showTopActivate();
+			} else {
+                showTopDeactivate();
+            }
+            
+		}).scroll();		
+	} )();
     
 
     $( document ).ready( function() {

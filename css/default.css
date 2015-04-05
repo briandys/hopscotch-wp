@@ -679,13 +679,15 @@ button.theme, input[type='text'], input[type='email'], input[type='search'], inp
   border: 0; }
 
 /* line 7, sass/default/utilities/helpers/reset/_unlist.scss */
-.article-entry-page-nav_grp {
+.article-entry-page-nav_grp, .hs-theme--hopscotch .article-entry-comments-actions_grp,
+.hs-theme--hopscotch .article-entry-nav_grp,
+.hs-theme--hopscotch .comment-entry-axn_grp {
   list-style: none;
   margin: 0;
   padding: 0; }
 
 /* line 7, sass/default/utilities/helpers/nature/_cursor-pointer.scss */
-button:hover, input[type='submit']:hover, input[type='password']:hover, input[type='reset']:hover, .search-form_label :hover {
+button:hover, input[type='submit']:hover, input[type='password']:hover, input[type='reset']:hover, .comment-form label:hover, .search-form_label :hover {
   cursor: pointer; }
 
 /* line 20, sass/default/utilities/helpers/nature/_inline-icon.scss */
@@ -787,6 +789,10 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
     width: 3rem;
     height: 3rem; }
 
+/* line 2, sass/default/elements/components/_article-entry-tag.scss */
+.article-entry-tag_cr {
+  margin-top: 1rem; }
+
 /* line 8, sass/default/elements/components/_show-top.scss */
 .no-js .show-top_axn, .modernizr--js.hs-viewport--narrow .show-top_axn {
   display: table;
@@ -820,6 +826,10 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 /* line 62, sass/default/elements/components/_primary-sub-navigation-toggle.scss */
 .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
+
+/* line 7, sass/default/elements/components/_web-product.scss */
+.web-product-info_cr {
+  margin-top: 2rem; }
 
 @media only screen and (max-width: 63.9375rem) {
   /* line 2, sass/default/elements/components/_article-entry-img.scss */
@@ -897,4 +907,12 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   left: 0; }
 /* line 61, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .web-product_name {
+  text-align: center; }
+
+/* line 20, sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name,
+.hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct,
+.hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr,
+.hs-theme--hopscotch.hs-viewport--narrow .article-entry-nav_grp,
+.hs-theme--hopscotch.hs-viewport--narrow .web-product-info_cr {
   text-align: center; }

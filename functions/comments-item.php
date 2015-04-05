@@ -30,12 +30,12 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                 <div class="comp author_comp comment-entry-author_comp">
                                     <div class="author vcard cr author_cr comment-entry-author_cr">
                                         <span class="label pred_label"><?php _e( 'Comment by', 'hopscotch' ); ?></span>
-                                        <a class="axn author_axn comment-entry-author_axn url fn n" rel="author" title="" href="">
-                                            <span class="label subj_label author_label comment-entry-author_label"><?php comment_author_link(); ?></span>
-                                            <div class="author-avatar">
-                                                <a href="<?php if ( get_comment_author_url( $comment->comment_ID ) ) { echo get_comment_author_url( $comment->comment_ID ); } else echo '#'; ?>"><?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?></a>
-                                            </div><!-- author-avatar -->
-                                        </a>
+                                        <span class="label subj_label author-name_label comment-entry-author-name_label"><?php comment_author_link(); ?></span>
+                                        <span class="comp author-avatar_comp comment-entry-author-avatar_comp">
+                                            <a class="axn author-avatar_axn comment-entry-author-avatar_axn url" href=<?php if ( get_comment_author_url( $comment->comment_ID ) ) echo esc_url( get_comment_author_url( $comment->comment_ID ) ); else echo '#' ?>>
+                                                <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+                                            </a>
+                                        </span>
                                     </div>
                                 </div><!-- entry-author_comp -->
 

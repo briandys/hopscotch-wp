@@ -13,10 +13,12 @@ if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
             $author_comp_string .= '<span class="label noun_label">Entry</span> ';
             $author_comp_string .= '<span class="label prep_label">by</span> ';
             $author_comp_string .= '</span>';
-            $author_comp_string .= '<a class="axn author_axn article-entry-author_axn url fn n" href="%1$s" title="%2$s" rel="author">';
-            $author_comp_string .= '<span class="label subj_label author-name_label">%3$s</span>';
-            $author_comp_string .= '%4$s';
-            $author_comp_string .= '</a>';
+            $author_comp_string .= '<span class="label subj_label author-name_label article-entry-author-name_label">';
+            $author_comp_string .= '<a class="axn author-entries_axn article-entry-author-entries_axn url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a>';
+            $author_comp_string .= '</span>';
+            $author_comp_string .= ' <span class="comp author-avatar_comp article-entry-author-avatar_comp">';
+            $author_comp_string .= '<a class="axn author-avatar_axn article-entry-author-avatar_axn" href="%1$s" title="%2$s" rel="author">%4$s</a>';
+            $author_comp_string .= '</span>';
             $author_comp_string .= '</div>';
             $author_comp_string .= '</div><!-- article-entry-author_comp -->';
 
