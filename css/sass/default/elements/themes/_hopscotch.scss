@@ -4,7 +4,8 @@
     // Reset: Unlist
     .article-entry-comments-actions_grp,
     .article-entry-nav_grp,
-    .comment-entry-axn_grp
+    .comment-entry-axn_grp,
+    .article-entry-admin_grp
     {
         @extend %hs-reset--unlist !optional;
     }
@@ -16,7 +17,10 @@
         .article-entry-hr_ct,
         .article-entry-fr_cr,
         .article-entry-nav_grp,
-        .web-product-info_cr
+        .web-product-info_cr,
+        .article-entry-admin_cr,
+        .web-product-page-nav_cr,
+        .article-entry-page-nav_cr
         {
             text-align: center;
         }

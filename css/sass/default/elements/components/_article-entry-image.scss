@@ -1,4 +1,4 @@
-.article-entry-img_comp
+.article-entry-image_comp
 {
     // Media Query
     @include hs-nature--media-query( $desktop, max )
@@ -8,6 +8,15 @@
     
     // Responsive Image
     img    
+    {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.article-entry-banner_comp
+{
+    img
     {
         max-width: 100%;
         height: auto;

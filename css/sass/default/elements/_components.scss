@@ -3,10 +3,12 @@
 @import 'components/content';
 @import 'components/comments';
 
+@import 'components/article-entry';
 @import 'components/article-entry-navigation';
 @import 'components/article-entry-page-navigation';
 @import 'components/article-entry-comments-actions';
 @import 'components/article-entry-tag';
+@import 'components/article-entry-image';
 
 @import 'components/comment-entry-admin-actions';
 
@@ -27,4 +29,5 @@
 @import 'components/show-top';
 @import 'components/primary-sub-navigation-toggle';
 @import 'components/web-product';
-@import 'components/article-entry-img';
+@import 'components/web-product-page-navigation';
+@import 'components/masthead';

@@ -26,18 +26,26 @@ class hopscotch_fix_img_width{
 
         if ( $id ) $id = 'id="' . $id . '" ';
         
-        $html_markup = '<div ' . $id . 'class="comp article-entry-img_comp wp-caption ' . $align . '" style="width: ' . ( ( int ) $width + $this->xs ) . 'px">';
-        $html_markup .= '<div class="cr article-entry-img_cr">';
+        $html_markup = '<div ' . $id . 'class="comp article-entry-image_comp wp-caption ' . $align . '" style="width: ' . ( ( int ) $width + $this->xs ) . 'px">';
+        $html_markup .= '<div class="cr article-entry-image_cr">';
         $html_markup .= $content;
-        $html_markup .= '<div class="comp article-entry-img-caption_comp wp-caption-text">';
-        $html_markup .= '<div class="cr article-entry-img-caption_cr">';
+        $html_markup .= '<div class="comp article-entry-image-caption_comp wp-caption-text">';
+        $html_markup .= '<div class="cr article-entry-image-caption_cr">';
         $html_markup .= '<p>' . $caption . '</p>';
         $html_markup .= '</div>';
         $html_markup .= '</div>';
         $html_markup .= '</div>';
-        $html_markup .= '</div><!-- article-entry-img_comp -->';
+        $html_markup .= '</div><!-- article-entry-image_comp -->';
         
         return $html_markup;
     }
 }
 $hopscotch_fix_img_width = new hopscotch_fix_img_width();
+
+
+// Add class to plain images (the ones without caption)
+
+function hopscotch_plain_image_add_class( $content ) {
+    return preg_replace('/<p[^>]*>\\s*?(<a.*?><img.*?><\\/a>|<img.*?>)?\\s*<\/p>/', '<div class="comp article-entry-image_comp"><div class="cr article-entry-image_cr">$1</div></div>', $content);
+}
+add_filter('the_content', 'hopscotch_plain_image_add_class');

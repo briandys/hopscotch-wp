@@ -7,9 +7,15 @@ $button-objects: "button, input[type='submit'], input[type='password'], input[ty
 
 $px-size-base: 16;
 
-$block: calculateRem( 48 );
+$px-size-block-xxs: $px-size-base * 1;
+$px-size-block-xs: $px-size-base * 1.5;
+$px-size-block-s: $px-size-base * 2;
+$px-size-block: $px-size-base * 3;
 
-
+$block-xxs: convertRem( $px-size-block-xxs );
+$block-xs: convertRem( $px-size-block-xs );
+$block-s: convertRem( $px-size-block-s );
+$block: convertRem( $px-size-block );
 
 
 // Media Query

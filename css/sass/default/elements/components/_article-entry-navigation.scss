@@ -1,3 +1,8 @@
+.article-entry-nav_cr
+{
+    padding: $block-xs;
+}
+
 .article-entry-nav_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;

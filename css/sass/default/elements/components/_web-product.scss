@@ -1,9 +1,15 @@
+.web-product_name
+{
+    // Reset
+    margin: 0;
+}
+
 .web-product_desc
 {
     @extend %hs-patch--visually-hidden !optional;
 }
 
-.web-product-info_cr
+.web-product-page_accessible-name
 {
-    margin-top: 2rem;
+    @extend %hs-patch--visually-hidden !optional;
 }

@@ -50,7 +50,6 @@ require_once( trailingslashit(get_template_directory()) . 'functions/conditional
 require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/ui-settings-class.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/plain-image-class.php');
 
 // Others
 require_once( trailingslashit(get_template_directory()) . 'functions/get-page-id.php');
