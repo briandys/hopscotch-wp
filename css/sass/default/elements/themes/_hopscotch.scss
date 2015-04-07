@@ -5,14 +5,17 @@
     .article-entry-comments-actions_grp,
     .article-entry-nav_grp,
     .comment-entry-axn_grp,
-    .article-entry-admin_grp
+    .article-entry-admin_grp,
+    .comment-entry-admin_grp,
+    .comment-form-admin-actions_grp
     {
         @extend %hs-reset--unlist !optional;
     }
     
-    // Center Text
+    // Narrow Viewport
     &.hs-viewport--narrow
     {
+        // Center Text
         .article-entry-title_name,
         .article-entry-hr_ct,
         .article-entry-fr_cr,
@@ -20,10 +23,34 @@
         .web-product-info_cr,
         .article-entry-admin_cr,
         .web-product-page-nav_cr,
-        .article-entry-page-nav_cr
+        .article-entry-page-nav_cr,
+        .more-link
         {
             text-align: center;
         }
+        
+        // Read More Link
+        .more-link
+        {
+            display: block;
+            padding: $block-xxs;
+        }
+    }
+
+    // Featured Image
+    .article-entry-banner_comp
+    {
+        // Offset (must be equal to the padding size)
+        margin-left: -$gutter;
+        margin-right: -$gutter;
     }
     
+    // Author Avatar
+    .author-avatar_cr
+    {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        vertical-align: middle;
+    }
 }

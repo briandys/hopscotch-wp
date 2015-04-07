@@ -3,6 +3,11 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
+.comments_cr
+{
+    padding: $gutter;
+}
+
 .comment-form
 {
     label

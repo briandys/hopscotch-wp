@@ -17,9 +17,9 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
                     if ( get_next_post_link() ) :
                     ?>
                     <li class="item content-nav_item article-entry-nav_item next-article-entry-nav_item">
-                        <span class="label next-ct_label">
+                        <span class="label next-entry_label">
                             <span class="label pred_label"><?php _e( 'Next', 'hopscotch' ); ?></span>
-                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
+                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span>
                         </span>
                         <?php next_post_link( '%link', _x( '%title', 'Newer Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
@@ -27,10 +27,10 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
                     <?php // Previous
                     if ( get_previous_post_link() ) :
                     ?>
-                    <li class="item content-nav_item article-entry-nav_item prev-article-entry-nav_item">     
-                        <span class="label prev-ct_label">
+                    <li class="item content-nav_item article-entry-nav_item previous-article-entry-nav_item">     
+                        <span class="label previous-entry_label">
                             <span class="label pred_label"><?php _e( 'Previous', 'hopscotch' ); ?></span>
-                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span><span class="label colon_label">:</span>
+                            <span class="label subj_label"><?php _e( 'Entry', 'hopscotch' ); ?></span>
                         </span>
                         <?php previous_post_link( '%link', _x( '%title', 'Older Entry', 'hopscotch' ) ); ?>
                     <?php endif; ?>
@@ -59,7 +59,7 @@ if ( ! function_exists( 'hopscotch_comments_entry_nav' ) ) :
                     if ( get_next_comments_link() ) :
                     ?>
                     <li class="item content-nav_item comments-entry-nav_item next-comments-entry-nav_item">
-                        <span class="label next-ct_label">
+                        <span class="label next-entry_label">
                             <?php next_comments_link( __( '<span class="label pred_label">Newer</span> <span class="label subj_label">Comments</span>', 'hopscotch' ) ); ?>
                         </span>
                     <?php endif; ?>
@@ -67,8 +67,8 @@ if ( ! function_exists( 'hopscotch_comments_entry_nav' ) ) :
                     <?php // Previous
                     if ( get_previous_comments_link() ) :
                     ?>
-                    <li class="item content-nav_item comments-entry-nav_item prev-comments-entry-nav_item">
-                        <span class="label prev-ct_label">
+                    <li class="item content-nav_item comments-entry-nav_item previous-comments-entry-nav_item">
+                        <span class="label previous-entry_label">
                             <?php previous_comments_link( __( '<span class="label pred_label">Older</span> <span class="label subj_label">Comments</span>', 'hopscotch' ) ); ?>
                         </span>
                     <?php endif; ?>

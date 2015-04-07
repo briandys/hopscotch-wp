@@ -7,3 +7,12 @@
 {
     @extend %hs-patch--visually-hidden !optional;
 }
+
+.next-entry_label,
+.previous-entry_label
+{
+    .subj_label:after
+    {
+        content: ':';
+    }
+}

@@ -682,7 +682,9 @@ button.theme, input[type='text'], input[type='email'], input[type='search'], inp
 .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-theme--hopscotch .article-entry-comments-actions_grp,
 .hs-theme--hopscotch .article-entry-nav_grp,
 .hs-theme--hopscotch .comment-entry-axn_grp,
-.hs-theme--hopscotch .article-entry-admin_grp {
+.hs-theme--hopscotch .article-entry-admin_grp,
+.hs-theme--hopscotch .comment-entry-admin_grp,
+.hs-theme--hopscotch .comment-form-admin-actions_grp {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -752,6 +754,11 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   border: 1px solid #808080;
   border-radius: .125rem; }
 
+/* line 2, sass/default/elements/objects/_select.scss */
+select {
+  width: 100%;
+  min-height: 3rem; }
+
 /* line 6, sass/default/utilities/helpers/theme/_placeholder.scss */
 ::-webkit-input-placeholder {
   color: gray; }
@@ -778,13 +785,34 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 .article-entry-banner_comp {
   margin-top: 1.5rem; }
 
-/* line 2, sass/default/elements/components/_article-entry.scss */
-.article-entry_cr {
+/* line 7, sass/default/elements/components/_comments.scss */
+.comments_cr {
   padding: 1.5rem; }
+
+/* line 4, sass/default/elements/components/_article-entry.scss */
+.article-entry-hr_cr,
+.article-entry-ct_cr,
+.article-entry-fr_cr {
+  padding: 1.5rem; }
+
+/* line 13, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > p:only-of-type {
+  margin: 0; }
+/* line 19, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > *:first-child {
+  margin-top: 0; }
+/* line 24, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > *:last-child {
+  margin-bottom: 0; }
 
 /* line 2, sass/default/elements/components/_article-entry-navigation.scss */
 .article-entry-nav_cr {
   padding: 1.5rem; }
+
+/* line 15, sass/default/elements/components/_article-entry-navigation.scss */
+.next-entry_label .subj_label:after,
+.previous-entry_label .subj_label:after {
+  content: ':'; }
 
 /* line 14, sass/default/elements/components/_article-entry-page-navigation.scss */
 .article-entry-page-nav_friendly-name,
@@ -807,19 +835,71 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 .article-entry-tag_cr {
   margin-top: 1rem; }
 
-@media only screen and (max-width: 63.9375rem) {
-  /* line 2, sass/default/elements/components/_article-entry-image.scss */
-  .article-entry-image_comp {
-    width: auto !important; } }
-/* line 11, sass/default/elements/components/_article-entry-image.scss */
-.article-entry-image_comp img {
-  max-width: 100%;
-  height: auto; }
+/* line 2, sass/default/elements/components/_article-entry-image.scss */
+.article-entry-image_comp {
+  /*
+  // Media Query
+  @include hs-nature--media-query( $viewport-narrow, max )
+  {
+      width: auto !important;
+  }
+  */ }
+  /* line 13, sass/default/elements/components/_article-entry-image.scss */
+  .article-entry-image_comp img {
+    max-width: 100%;
+    height: auto; }
 
-/* line 20, sass/default/elements/components/_article-entry-image.scss */
+/* line 22, sass/default/elements/components/_article-entry-image.scss */
 .article-entry-banner_comp img {
   max-width: 100%;
   height: auto; }
+
+/* line 31, sass/default/elements/components/_article-entry-image.scss */
+.alignleft {
+  float: left;
+  margin-right: 1rem; }
+
+/* line 37, sass/default/elements/components/_article-entry-image.scss */
+.alignright {
+  float: right;
+  margin-left: 1rem; }
+
+/* line 44, sass/default/elements/components/_article-entry-image.scss */
+.alignleft,
+.alignright {
+  margin-bottom: 1rem; }
+
+/* line 48, sass/default/elements/components/_article-entry-image.scss */
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 56, sass/default/elements/components/_article-entry-image.scss */
+.alignleft,
+.alignright,
+.aligncenter {
+  display: block; }
+
+/* line 61, sass/default/elements/components/_article-entry-image.scss */
+.article-entry-image-caption_cr {
+  padding: 0.75rem; }
+  /* line 65, sass/default/elements/components/_article-entry-image.scss */
+  .article-entry-image-caption_cr > *:first-child {
+    margin-top: 0; }
+  /* line 70, sass/default/elements/components/_article-entry-image.scss */
+  .article-entry-image-caption_cr > *:last-child {
+    margin-bottom: 0; }
+
+/* line 76, sass/default/elements/components/_article-entry-image.scss */
+.wp-caption {
+  max-width: 100%; }
+
+/* line 2, sass/default/elements/components/_article-entry-avatar.scss */
+.article-entry-author-avatar_axn {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle; }
 
 /* line 2, sass/default/elements/components/_colophon.scss */
 .colophon_cr {
@@ -863,6 +943,15 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 .web-product_name {
   margin: 0; }
 
+/* line 18, sass/default/elements/components/_web-product.scss */
+.copyright-info_cr {
+  margin-top: 1rem; }
+
+/* line 24, sass/default/elements/components/_web-product.scss */
+.web-designer-info_label,
+.copyright-info_label {
+  margin: 0; }
+
 /* line 2, sass/default/elements/components/_web-product-page-navigation.scss */
 .web-product-page-nav_cr {
   padding: 1.5rem; }
@@ -874,9 +963,10 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   /* line 15, sass/default/elements/components/_web-product-page-navigation.scss */
   .web-product-page_nav .page-numbers li {
     display: inline-block; }
-    /* line 20, sass/default/elements/components/_web-product-page-navigation.scss */
+    /* line 21, sass/default/elements/components/_web-product-page-navigation.scss */
     .web-product-page_nav .page-numbers li a,
-    .web-product-page_nav .page-numbers li .current {
+    .web-product-page_nav .page-numbers li .current,
+    .web-product-page_nav .page-numbers li .dots {
       display: inline-block;
       padding: 1rem;
       min-width: 3rem;
@@ -885,6 +975,10 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 /* line 2, sass/default/elements/components/_masthead.scss */
 .masthead_cr {
   min-height: 3rem; }
+
+/* line 2, sass/default/elements/components/_widget.scss */
+.widget_cr {
+  padding: 1.5rem; }
 
 /* line 13, sass/default/elements/templates/_search-lightsaber.scss */
 .hs-template__search--lightsaber.modernizr--js .masthead_sidebar .search_comp {
@@ -955,7 +1049,7 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .web-product_name {
   text-align: center; }
 
-/* line 24, sass/default/elements/themes/_hopscotch.scss */
+/* line 28, sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name,
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct,
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr,
@@ -963,5 +1057,20 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
 .hs-theme--hopscotch.hs-viewport--narrow .web-product-info_cr,
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-admin_cr,
 .hs-theme--hopscotch.hs-viewport--narrow .web-product-page-nav_cr,
-.hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr {
+.hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr,
+.hs-theme--hopscotch.hs-viewport--narrow .more-link {
   text-align: center; }
+/* line 34, sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-viewport--narrow .more-link {
+  display: block;
+  padding: 1rem; }
+/* line 42, sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .article-entry-banner_comp {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+/* line 50, sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .author-avatar_cr {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle; }

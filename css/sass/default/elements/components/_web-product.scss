@@ -13,3 +13,14 @@
 {
     @extend %hs-patch--visually-hidden !optional;
 }
+
+.copyright-info_cr
+{
+    margin-top: $block-xxs;
+}
+
+.web-designer-info_label,
+.copyright-info_label
+{
+    margin: 0;
+}

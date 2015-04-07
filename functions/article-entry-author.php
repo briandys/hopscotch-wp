@@ -17,7 +17,9 @@ if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
             $author_comp_string .= '<a class="axn author-entries_axn article-entry-author-entries_axn url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a>';
             $author_comp_string .= '</span>';
             $author_comp_string .= ' <span class="comp author-avatar_comp article-entry-author-avatar_comp">';
+            $author_comp_string .= ' <span class="cr author-avatar_cr article-entry-author-avatar_cr">';
             $author_comp_string .= '<a class="axn author-avatar_axn article-entry-author-avatar_axn" href="%1$s" title="%2$s" rel="author">%4$s</a>';
+            $author_comp_string .= '</span>';
             $author_comp_string .= '</span>';
             $author_comp_string .= '</div>';
             $author_comp_string .= '</div><!-- article-entry-author_comp -->';

@@ -32,9 +32,11 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                         <span class="label pred_label"><?php _e( 'Comment by', 'hopscotch' ); ?></span>
                                         <span class="label subj_label author-name_label comment-entry-author-name_label"><?php comment_author_link(); ?></span>
                                         <span class="comp author-avatar_comp comment-entry-author-avatar_comp">
-                                            <a class="axn author-avatar_axn comment-entry-author-avatar_axn url" href=<?php if ( get_comment_author_url( $comment->comment_ID ) ) echo esc_url( get_comment_author_url( $comment->comment_ID ) ); else echo '#' ?>>
-                                                <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-                                            </a>
+                                            <span class="cr author-avatar_cr comment-entry-author-avatar_cr">
+                                                <a class="axn author-avatar_axn comment-entry-author-avatar_axn url" href=<?php if ( get_comment_author_url( $comment->comment_ID ) ) echo esc_url( get_comment_author_url( $comment->comment_ID ) ); else echo '#' ?>>
+                                                    <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+                                                </a>
+                                            </span>
                                         </span>
                                     </div>
                                 </div><!-- entry-author_comp -->

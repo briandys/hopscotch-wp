@@ -1,10 +1,12 @@
 .article-entry-image_comp
 {
+    /*
     // Media Query
-    @include hs-nature--media-query( $desktop, max )
+    @include hs-nature--media-query( $viewport-narrow, max )
     {
         width: auto !important;
     }
+    */
     
     // Responsive Image
     img    
@@ -21,4 +23,56 @@
         max-width: 100%;
         height: auto;
     }
+}
+
+// Image Alignment
+// These are WordPress-generated class names
+.alignleft
+{
+    float: left;
+    margin-right: $block-xxs;
+}
+
+.alignright
+{
+    float: right;
+    margin-left: $block-xxs;
+}
+
+.alignleft,
+.alignright
+{
+    margin-bottom: $block-xxs;
+}
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft,
+.alignright,
+.aligncenter
+{
+    display: block;
+}
+
+.article-entry-image-caption_cr
+{
+    padding: $block-xxxs;
+    
+    > *:first-child
+    {
+        margin-top: 0;
+    }
+    
+    > *:last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+.wp-caption
+{
+    max-width: 100%;
 }
