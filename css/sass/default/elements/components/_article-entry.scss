@@ -1,0 +1,27 @@
+.article-entry-hr_cr,
+.article-entry-ct_cr,
+.article-entry-fr_cr
+{
+    padding: $gutter;
+}
+
+.article-entry-ct_cr
+{
+    > p
+    {
+        &:only-of-type
+        {
+            margin: 0;
+        }
+    }
+        
+    > *:first-child
+    {
+        margin-top: 0;
+    }
+        
+    > *:last-child
+    {
+        margin-bottom: 0;
+    }
+}
