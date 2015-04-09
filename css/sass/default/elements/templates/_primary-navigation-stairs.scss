@@ -1,0 +1,156 @@
+// Default
+.hs-template__primary-nav--stairs
+{
+    // Default
+    .primary-nav_ct
+    {
+        ul
+        {
+            @extend %hs-reset--unlist !optional;
+        }
+
+        li
+        {
+            display: table;
+            height: 100%;
+            word-break: break-all;
+        }
+        
+        .page_item_has_children,
+        .menu-item-has-children
+        {
+            position: relative;
+            
+            > a
+            {
+                padding-right: $block;
+            }
+        }
+
+        a
+        {
+            display: table-cell;
+            padding: $block-xxs $gutter;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+        .children,
+        .sub-menu
+        {
+            @extend %hs-patch--hidden !optional;
+
+            li
+            {
+                // padding-left: $gutter;
+                // padding-right: $gutter;
+            }
+        }
+    }
+
+    // Component: Primary Sub-Navigation Toggle Action
+    // - Object that appears as a button if a navigation item has sub-navigation items under it
+    // - <button> is used for accessibility
+
+    // Default
+    .primary-sub-nav-toggle_axn {
+
+        @extend %hs-reset--deflate !optional;
+
+        // Enables the use of pseudo-element with position: absolute
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        // Counter-effect
+        padding-left: .5rem;
+        padding-right: .5rem;
+        width: auto;
+
+        .toggle_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+
+        // Icon
+        &:after
+        {
+            // Creates the pseudo-element
+            content: '';
+
+            // Absolutely-positions the element
+            position: absolute;
+
+            // Sets the element to be centered vertically; partered with an offset using margin-top
+            top: 50%;
+
+            // Position to the right
+            right: 50%;
+
+            // Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75)
+            margin-top: -.75rem;
+
+            // Sets a space to the right
+            margin-right: -.75rem;
+
+            // Sets the visual size of the actual icon
+            width: 1.5rem; height: 1.5rem;
+
+            // Uses SVG to have hi-res icon
+            background-image: url( ../img/icon-arrow-down.svg );
+
+            // Prevents the tiling of the background-image
+            background-repeat: no-repeat;
+
+            // Occupies the space of the width and height
+            background-size: cover;
+
+            // For animation
+            transition: transform .2s;
+        }
+    }
+
+    // Reverses the icon's direction if the Tree nav is active
+    .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
+        transform: rotate( -180deg );
+    }
+
+    // Narrow Viewport
+    &.hs-viewport--narrow
+    {
+        .primary-nav_ct
+        {
+            a
+            {
+                width: 100%;
+            }
+
+            li
+            {
+                width: 100%;
+            }
+        }
+    }
+
+    // JS Disabled
+    &.no-js
+    {
+        .page_item_has_children > .children,
+        .menu-item-has-children > .sub-menu
+        {
+            // Counter-Effect
+            display: block;
+        }
+    }
+
+    // Active
+    .hs-state__primary-nav-item_tree--active
+    {
+        &.page_item_has_children > .children,
+        &.menu-item-has-children > .sub-menu
+        {
+            // Counter-Effect
+            display: table-row;
+        }
+    }
+}

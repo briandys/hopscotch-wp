@@ -197,23 +197,27 @@ Class: article-entry_comp
             
         </div><!-- article-entry_ct -->
 
-        <footer class="fr entry_fr article-entry_fr">
-            <div class="cr entry-fr_cr article-entry-fr_cr">
-                        
-                <?php
-                // Article Entry Modified Timestamp
-                // Location: functions > article-entry-timestamp.php
-                hopscotch_article_entry_modified_timestamp();
-                ?>
-                
-                <?php
-                // Article Entry Tags
-                // Location: functions > article-entry-tag.php
-                hopscotch_article_entry_tags();
-                ?>
+        <?php if ( ! is_page() ) : ?>
+            
+            <footer class="fr entry_fr article-entry_fr">
+                <div class="cr entry-fr_cr article-entry-fr_cr">
 
-            </div>
-        </footer>
+                    <?php
+                    // Article Entry Modified Timestamp
+                    // Location: functions > article-entry-timestamp.php
+                    hopscotch_article_entry_modified_timestamp();
+                    ?>
+
+                    <?php
+                    // Article Entry Tags
+                    // Location: functions > article-entry-tag.php
+                    hopscotch_article_entry_tags();
+                    ?>
+
+                </div>
+            </footer>
+        
+        <?php endif; ?>
     
     </div>
 </article><!-- article-entry_comp -->

@@ -1,14 +1,20 @@
+// Browser Default
 .primary-nav_accessible-name,
 .social-nav_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
 }
 
-.hs-state__primary-nav-item_tree--inactive
+// Custom Default
+.hs-template__primary-nav--default
 {
-    & > .children,
-    & > .sub-menu
+    .children,
+    .sub-menu
     {
-        @extend %hs-patch--hidden !optional;
+        li
+        {
+            padding-left: $gutter;
+            padding-right: $gutter;
+        }
     }
 }

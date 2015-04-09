@@ -1,0 +1,18 @@
+// Patch Declaration: Clearfix
+// For parents with floated children
+// Based on HTML5 Boilerplate main.css
+
+@mixin hs-patch--clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }    
+}
+
+%hs-patch--clearfix {
+    @include hs-patch--clearfix;
+}

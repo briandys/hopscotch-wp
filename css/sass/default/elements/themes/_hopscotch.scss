@@ -7,7 +7,8 @@
     .comment-entry-axn_grp,
     .article-entry-admin_grp,
     .comment-entry-admin_grp,
-    .comment-form-admin-actions_grp
+    .comment-form-admin-actions_grp,
+    .primary-nav_ct ul
     {
         @extend %hs-reset--unlist !optional;
     }

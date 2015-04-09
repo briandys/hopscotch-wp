@@ -3,6 +3,8 @@
 @import 'components/content';
 @import 'components/comments';
 
+@import 'components/container';
+
 @import 'components/article-entry';
 @import 'components/article-entry-navigation';
 @import 'components/article-entry-page-navigation';
@@ -28,9 +30,11 @@
 @import 'components/show-content';
 @import 'components/show-more-content';
 @import 'components/show-top';
-@import 'components/primary-sub-navigation-toggle';
+
 @import 'components/web-product';
 @import 'components/web-product-page-navigation';
+@import 'components/web-product-header';
+
 @import 'components/masthead';
 
 @import 'components/widget';

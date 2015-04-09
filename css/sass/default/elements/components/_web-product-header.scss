@@ -1,0 +1,58 @@
+// Custom Default
+.hs-template__web-product-header--default
+{       
+    // Web Product Header            
+    .web-product-header_comp
+    {        
+        height: $utility-block;
+        overflow: hidden;
+
+        // Temp
+        a{color: white;}
+        background-color: blue;
+    }
+    
+    .web-product-header_cr
+    {
+        display: table;
+        width: 100%;
+        height: 100%;
+        
+        word-break: break-all;
+
+        .web-product_name
+        {
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+            
+            // Temp
+            font-size: 1.25rem;
+            
+            line-height: normal;
+        }
+        
+        .web-product-name_axn
+        {
+            padding: $gutter;
+            text-decoration: none;
+        }
+    }
+    
+    // Narrow Viewport
+    &.hs-viewport--narrow
+    {  
+        // Web Product Header            
+        .web-product-header_cr
+        {
+            text-align: center;
+        }
+        
+        .web-product-name_axn
+        {   
+            // Counter-Effect
+            margin-left: -$gutter;
+            margin-right: -$gutter;
+        }
+    }
+}

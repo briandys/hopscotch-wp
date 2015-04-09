@@ -27,6 +27,12 @@
             .search-form_axn
             {    
                 @extend %hs-nature--inline-icon-cr !optional;
+                
+                // Counter-Effect
+                @include dimensions( $utility-block );
+                
+                // Temp
+                // background-color: yellow;
             }
 
             .search_icon
@@ -40,10 +46,30 @@
 
                 // Counter-effect
                 padding: .5rem 1rem;
+                
+                height: $utility-block;
+            }
+            
+            .widget_search
+            {
+                .widget_cr
+                {
+                    // Counter-Effect
+                    padding: 0;
+                }
             }
         }
-
-        // Conditional
+        
+        // Narrow Viewport
+        &.hs-viewport--narrow
+        {   
+            // Web Product Header            
+            .web-product-header_cr
+            {
+                padding-left: $utility-block;
+                padding-right: $utility-block;
+            }
+        }
 
         // Wide Viewport
         &.hs-viewport--wide
@@ -60,11 +86,26 @@
         // If Hamburger Template and Narrow Viewport
         &.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow
         {
+            .hs-state__search_lightsaber--active
+            {
+                .masthead_sidebar
+                {
+                    .search-form-input-field_cr
+                    {
+                        padding-left: $utility-block;
+                    }
+                }
+            }
+        }
+        
+        &.hs-template__primary-nav-masthead-sidebar--hamburger
+        {
             .masthead_sidebar
             {
-                .search-form-input-field_cr
+                .widget_search
                 {
-                    padding-left: $block;
+                    // Counter-Effect
+                    display: block;
                 }
             }
         }
@@ -118,7 +159,7 @@
             // Make way for the button icon
             .search-form-input-field_cr 
             {
-                padding-right: $block;
+                padding-right: $utility-block;
             }
 
             // Position the button icon

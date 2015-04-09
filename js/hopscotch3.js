@@ -4,46 +4,53 @@
 ( function( $ ) {
     var $body = $( document.body ),        
         $html = $( 'html' ),
-        viewportNarrowClass = 'hs-viewport--narrow',
+        $window, windowWidth, resizeTimer;
+    
+    var viewportNarrowClass = 'hs-viewport--narrow',
         viewportWideClass = 'hs-viewport--wide',
         priNavMastheadSidebarHamburgerClass = 'hs-template__primary-nav-masthead-sidebar--hamburger',
         searchLightsaberClass = 'hs-template__search--lightsaber',
+        priNavStairsClass = 'hs-template__primary-nav--stairs',
+        showTopMushroomClass = 'hs-template__show-top--mushroom',
         statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
-        statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
-        $window, windowWidth, resizeTimer;
+        statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active';
     
     //------------------------- Primary Navigation
+        
+    var navItem = $( '.nav-item, .page_item, .menu-item' ),
+        parentNavItem = $( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
+        parentNavItemAction = $( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
+        priNavItemTreeClass = 'hs-type__primary-nav-item--tree',
+        priNavItemTreeActiveClass = 'hs-state__primary-nav-item_tree--active',
+        priNavItemTreeInactiveClass = 'hs-state__primary-nav-item_tree--inactive',
+        priSubNavToggleAction = '<button class="axn toggle_axn primary-sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';
+
+    if( ! navItem )
+      return;    
+
+    if( ! parentNavItem )
+      return;
+
+    if( ! parentNavItemAction )
+      return;
+
+    // Add tree class to parent items
+    parentNavItem.addClass( priNavItemTreeClass );
+    
     ( function() {
-        
-        var navItem = $( '.nav-item, .page_item, .menu-item' ),
-            parentNavItem = $( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
-            parentNavItemAction = $( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
-            priNavItemTreeClass = 'hs-type__primary-nav-item--tree',
-            priNavItemTreeActiveClass = 'hs-state__primary-nav-item_tree--active',
-            priNavItemTreeInactiveClass = 'hs-state__primary-nav-item_tree--inactive',
-            priSubNavToggleAction = '<button class="axn toggle_axn primary-sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';
+        if ( $html.hasClass( priNavStairsClass ) ) {
+            
+            // Add <button> element to Toggle Sub Nav
+            parentNavItemAction.after( priSubNavToggleAction );
+            
+            parentNavItem.addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
 
-        if( ! navItem )
-          return;    
-
-        if( ! parentNavItem )
-          return;
-       
-        if( ! parentNavItemAction )
-          return;
-        
-        // Sets default classes
-        parentNavItem.addClass( priNavItemTreeClass + " " + priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
-
-        // Add <button> element to Toggle Sub Nav
-        parentNavItemAction.after( priSubNavToggleAction );
-        
-        $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ){
-            var _this = $( this );
-            e.preventDefault();
-            _this.parent( navItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( navItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-        });
-        
+            $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ){
+                var _this = $( this );
+                e.preventDefault();
+                _this.parent( navItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( navItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+            });
+        }
     } )();
     
     
@@ -99,7 +106,7 @@
         // Deactivate Primary Navigation on clicks on the document body
         // https://css-tricks.com/dangers-stopping-event-propagation/
         $( document ).on( 'click.hopscotch', function( e ) {
-            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary_nav' ).length ) {
+            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary-nav-masthead-sidebar_comp' ).length ) {
                 $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
             }                
         });
@@ -244,30 +251,31 @@
     
     //-------------------------  Show Top
 	( function() {		
-        $( window ).on( 'scroll.hopscotch', function(){			
-            var showTopActiveClass = 'hs-state__show-top--active',
-                showTopInactiveClass = 'hs-state__show-top--inactive';
-			
-            // Activate
-            function showTopActivate() {
-                $body.addClass( showTopActiveClass );
-                $body.removeClass ( showTopInactiveClass );
-            };
-			
-            // Deactivate
-            function showTopDeactivate() {
-                $body.addClass( showTopInactiveClass );
-                $body.removeClass ( showTopActiveClass );
-            };
-            
-            // Activation if near bottom
-            if ( $( window ).scrollTop() > ( $( window ).height() / 2) ) {
-				showTopActivate();
-			} else {
-                showTopDeactivate();
-            }
-            
-		}).scroll();		
+        if ( $html.hasClass( showTopMushroomClass ) ) {
+            $( window ).on( 'scroll.hopscotch', function(){			
+                var showTopActiveClass = 'hs-state__show-top--active',
+                    showTopInactiveClass = 'hs-state__show-top--inactive';
+
+                // Activate
+                function showTopActivate() {
+                    $body.addClass( showTopActiveClass );
+                    $body.removeClass ( showTopInactiveClass );
+                };
+
+                // Deactivate
+                function showTopDeactivate() {
+                    $body.addClass( showTopInactiveClass );
+                    $body.removeClass ( showTopActiveClass );
+                };
+
+                // Activation if near bottom
+                if ( $( window ).scrollTop() > ( $( window ).height() / 2) ) {
+                    showTopActivate();
+                } else {
+                    showTopDeactivate();
+                }
+            }).scroll();
+        }
 	} )();
     
 

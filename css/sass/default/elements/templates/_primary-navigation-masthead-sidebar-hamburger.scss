@@ -3,16 +3,25 @@
     // Conditional: JS Enabled
     &.modernizr--js
     {
-        // Dismiss Icon
-        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon,
-
-        // Component
-        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
-
-        // Menu Icon
-        .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+        
+        // Inactive
+        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
         {
-            @extend %hs-patch--hidden !optional;
+            .primary_nav,
+            .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
+            {
+                @extend %hs-patch--hidden !optional;
+            }
+        }
+
+        // Active
+        .hs-state__primary-nav-masthead-sidebar_hamburger--active
+        {
+            // Menu Icon
+            .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+            {
+                @extend %hs-patch--hidden !optional;
+            }
         }
 
         // Toggle Label
@@ -29,7 +38,12 @@
             // Counter-effect
             padding-left: .5rem;
             padding-right: .5rem;
-            width: auto;
+            
+            width: $utility-block;
+            height: $utility-block;
+            
+            // Temp
+            // background-color: red;
         }
 
         // Conditional: Narrow Viewport
@@ -55,11 +69,37 @@
                     }
                 }
             }
-
-            // Web Product Name
-            .web-product_name
+            
+            // Widgets by Default
+            .masthead_sidebar
             {
-                text-align: center;
+                .widget_comp
+                {
+                    @extend %hs-patch--hidden !optional;
+                }
+            }
+            
+            // Active
+            .hs-state__primary-nav-masthead-sidebar_hamburger--active
+            {
+                .masthead_sidebar
+                {
+                    .widget_comp
+                    {
+                        // Counter-Effect
+                        display: block;
+                    }
+                }
+            }
+            
+            &.hs-template__web-product-header--default
+            {
+                // Web Product Header            
+                .web-product-header_cr
+                {
+                    padding-left: $utility-block;
+                    padding-right: $utility-block;
+                }
             }
         }
         
