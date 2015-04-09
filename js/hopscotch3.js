@@ -18,8 +18,9 @@
     //------------------------- Primary Navigation
         
     var navItem = $( '.nav-item, .page_item, .menu-item' ),
-        parentNavItem = $( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
-        parentNavItemAction = $( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
+        priNav = $( '#primary_nav' ),
+        parentNavItem = priNav.find( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
+        parentNavItemAction = priNav.find( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
         priNavItemTreeClass = 'hs-type__primary-nav-item--tree',
         priNavItemTreeActiveClass = 'hs-state__primary-nav-item_tree--active',
         priNavItemTreeInactiveClass = 'hs-state__primary-nav-item_tree--inactive',

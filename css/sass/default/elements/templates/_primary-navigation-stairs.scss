@@ -46,6 +46,17 @@
                 // padding-right: $gutter;
             }
         }
+        
+        // Active
+        .hs-state__primary-nav-item_tree--active
+        {
+            &.page_item_has_children > .children,
+            &.menu-item-has-children > .sub-menu
+            {
+                // Counter-Effect
+                display: table-row;
+            }
+        }
     }
 
     // Component: Primary Sub-Navigation Toggle Action
@@ -140,17 +151,6 @@
         {
             // Counter-Effect
             display: block;
-        }
-    }
-
-    // Active
-    .hs-state__primary-nav-item_tree--active
-    {
-        &.page_item_has_children > .children,
-        &.menu-item-has-children > .sub-menu
-        {
-            // Counter-Effect
-            display: table-row;
         }
     }
 }

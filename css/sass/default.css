@@ -1018,7 +1018,10 @@ select {
   padding: 1rem 1.5rem;
   vertical-align: middle;
   line-height: normal; }
-/* line 56, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 54, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+.hs-template__primary-nav--stairs .primary-nav_ct .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--stairs .primary-nav_ct .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
+  display: table-row; }
+/* line 67, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
@@ -1026,7 +1029,7 @@ select {
   padding-left: .5rem;
   padding-right: .5rem;
   width: auto; }
-  /* line 76, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+  /* line 87, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
   .hs-template__primary-nav--stairs .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
@@ -1040,21 +1043,18 @@ select {
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform .2s; }
-/* line 114, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 125, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
-/* line 123, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 134, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.hs-viewport--narrow .primary-nav_ct a {
   width: 100%; }
-/* line 128, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 139, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.hs-viewport--narrow .primary-nav_ct li {
   width: 100%; }
-/* line 139, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 150, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.no-js .page_item_has_children > .children, .hs-template__primary-nav--stairs.no-js .menu-item-has-children > .sub-menu {
   display: block; }
-/* line 150, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
-.hs-template__primary-nav--stairs .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--stairs .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
-  display: table-row; }
 
 /* line 28, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-nav_grp, .hs-theme--hopscotch.hs-viewport--narrow .web-product-info_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-admin_cr, .hs-theme--hopscotch.hs-viewport--narrow .web-product-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .more-link {
