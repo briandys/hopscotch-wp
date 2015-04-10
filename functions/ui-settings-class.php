@@ -16,12 +16,12 @@ if ( ! function_exists( 'hopscotch_ui_settings_html_class' ) ) :
         echo ' hs-template__primary-nav--stairs';
         
         // Primary Navigation and Masthead Sidebar
-        echo ' hs-template__primary-nav-masthead-sidebar--default';
-        // echo ' hs-template__primary-nav-masthead-sidebar--hamburger';
+        // echo ' hs-template__primary-nav-masthead-sidebar--default';
+        echo ' hs-template__primary-nav-masthead-sidebar--hamburger';
         
         // Search
-        echo ' hs-template__search--default';
-        // echo ' hs-template__search--lightsaber';
+        // echo ' hs-template__search--default';
+        echo ' hs-template__search--lightsaber';
         
         // Show Top
         echo ' hs-template__show-top--default';

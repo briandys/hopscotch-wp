@@ -1052,9 +1052,19 @@ select {
 /* line 139, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.hs-viewport--narrow .primary-nav_ct li {
   width: 100%; }
-/* line 150, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 154, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+.hs-template__primary-nav--stairs.hs-viewport--wide .primary-nav_ct > ul > li {
+  display: inline-block;
+  vertical-align: top; }
+/* line 163, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
+.hs-template__primary-nav--stairs.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children > .children, .hs-template__primary-nav--stairs.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children > .sub-menu {
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  background: red; }
+/* line 178, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.no-js .page_item_has_children > .children, .hs-template__primary-nav--stairs.no-js .menu-item-has-children > .sub-menu {
-  display: block; }
+  display: table-row; }
 
 /* line 28, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-nav_grp, .hs-theme--hopscotch.hs-viewport--narrow .web-product-info_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-admin_cr, .hs-theme--hopscotch.hs-viewport--narrow .web-product-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .more-link {

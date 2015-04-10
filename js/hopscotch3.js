@@ -17,39 +17,47 @@
     
     //------------------------- Primary Navigation
         
-    var navItem = $( '.nav-item, .page_item, .menu-item' ),
-        priNav = $( '#primary_nav' ),
-        parentNavItem = priNav.find( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
-        parentNavItemAction = priNav.find( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
+    var priNav = $( '#primary_nav' ),
+        priNavItem = priNav.find( '.nav-item, .page_item, .menu-item' ),
+        parentPriNavItem = priNav.find( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
+        parentPriNavItemAction = priNav.find( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
         priNavItemTreeClass = 'hs-type__primary-nav-item--tree',
         priNavItemTreeActiveClass = 'hs-state__primary-nav-item_tree--active',
         priNavItemTreeInactiveClass = 'hs-state__primary-nav-item_tree--inactive',
         priSubNavToggleAction = '<button class="axn toggle_axn primary-sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>';
 
-    if( ! navItem )
-      return;    
-
-    if( ! parentNavItem )
+    if( ! priNav )
       return;
 
-    if( ! parentNavItemAction )
+    if( ! priNavItem )
+      return;
+
+    if( ! parentPriNavItem )
+      return;
+
+    if( ! parentPriNavItemAction )
       return;
 
     // Add tree class to parent items
-    parentNavItem.addClass( priNavItemTreeClass );
+    parentPriNavItem.addClass( priNavItemTreeClass );
     
     ( function() {
         if ( $html.hasClass( priNavStairsClass ) ) {
             
             // Add <button> element to Toggle Sub Nav
-            parentNavItemAction.after( priSubNavToggleAction );
+            parentPriNavItemAction.after( priSubNavToggleAction );
             
-            parentNavItem.addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
+            parentPriNavItem.addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
 
             $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ){
                 var _this = $( this );
                 e.preventDefault();
-                _this.parent( navItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( navItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+                
+                // Deactivate Siblings
+                _this.parent( parentPriNavItem ).siblings( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ).removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
+                
+                // Activate Tree
+                _this.parent( parentPriNavItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( parentPriNavItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
             });
         }
     } )();
@@ -61,20 +69,46 @@
 
         // Screen width detection
         // If Tablet Size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
-        if (769 > windowWidth) {
+        if ( 769 > windowWidth ) {
             $html.addClass( viewportNarrowClass );
             $html.removeClass( viewportWideClass );
         } else {
             $html.addClass( viewportWideClass );
             $html.removeClass( viewportNarrowClass );
         }
+        
+                
 
+        // Hamburger
         if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
             $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass );
             $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
         } else {
             $body.removeClass( statePriNavMastheadSidebarHamburgerInactiveClass );
             $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass );
+        }
+        
+        // Deactivate Primary Navigation on clicks on the document body
+        // https://css-tricks.com/dangers-stopping-event-propagation/
+        ( function() {
+            $( document ).on( 'click.hopscotch', function( e ) {
+                if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary-nav-masthead-sidebar_comp' ).length ) {
+                    $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+                }                
+            }); 
+        } )();
+        
+        ( function() {
+            $( document ).on( 'click.hopscotch', function( e ) {
+                if ( $html.hasClass( priNavStairsClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
+                     parentPriNavItem.removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
+                }                
+            }); 
+        } )();
+        
+        // Stairs            
+        if ( $html.hasClass( priNavStairsClass ) && $html.hasClass( viewportWideClass ) ) {
+            console.log( 'Wide' );
         }
     }
 
@@ -103,14 +137,6 @@
                 priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
             } );
         }
-            
-        // Deactivate Primary Navigation on clicks on the document body
-        // https://css-tricks.com/dangers-stopping-event-propagation/
-        $( document ).on( 'click.hopscotch', function( e ) {
-            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary-nav-masthead-sidebar_comp' ).length ) {
-                $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
-            }                
-        });
         
     } )();
     
@@ -292,7 +318,7 @@
 
         for ( var i = 1; i < 6; i++ ) {
             setTimeout( resize, 100 * i );
-        }
+        }       
     });
   
   

@@ -1156,10 +1156,21 @@ select {
 /* line 140, sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.hs-viewport--narrow .primary-nav_ct li {
   width: 100%; }
-/* line 151, sass/default/elements/templates/_primary-navigation-stairs.scss */
+/* line 155, sass/default/elements/templates/_primary-navigation-stairs.scss */
+.hs-template__primary-nav--stairs.hs-viewport--wide .primary-nav_ct > ul > li {
+  display: inline-block;
+  vertical-align: top; }
+/* line 164, sass/default/elements/templates/_primary-navigation-stairs.scss */
+.hs-template__primary-nav--stairs.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children > .children,
+.hs-template__primary-nav--stairs.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children > .sub-menu {
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  background: red; }
+/* line 179, sass/default/elements/templates/_primary-navigation-stairs.scss */
 .hs-template__primary-nav--stairs.no-js .page_item_has_children > .children,
 .hs-template__primary-nav--stairs.no-js .menu-item-has-children > .sub-menu {
-  display: block; }
+  display: table-row; }
 
 /* line 29, sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name,

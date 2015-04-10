@@ -22,7 +22,7 @@ if ( ! function_exists( 'hopscotch_primary_social_nav' ) ) :
                     wp_nav_menu( array(
                         'theme_location'    => 'primary-navigation',
                         'container'         => 'div',
-                        'container_class'   => 'cr primary-nav_cr', // Used as <div> class when there is a Custom Menu
+                        'container_class'   => 'ct primary-nav_ct', // Used as <div> class when there is a Custom Menu
                         'menu_class'        => 'grp primary-nav_grp' // Used as <ul> class when there is a Custom Menu
                     ) );
                 }

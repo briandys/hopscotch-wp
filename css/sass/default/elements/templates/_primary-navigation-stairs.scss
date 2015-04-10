@@ -143,6 +143,34 @@
         }
     }
 
+    // Wide Viewport
+    &.hs-viewport--wide
+    {
+        .primary-nav_ct
+        {
+            > ul
+            {
+                // First Level Item
+                > li
+                {
+                    // Juxtapose
+                    display: inline-block;
+                    vertical-align: top;
+                    
+                }
+                
+                > .page_item_has_children > .children,
+                > .menu-item-has-children > .sub-menu                
+                {
+                    position: absolute;
+                    width: auto;
+                    white-space: nowrap;
+                    background: red;
+                }
+            }
+        }
+    }
+
     // JS Disabled
     &.no-js
     {
@@ -150,7 +178,7 @@
         .menu-item-has-children > .sub-menu
         {
             // Counter-Effect
-            display: block;
+            display: table-row;
         }
     }
 }
