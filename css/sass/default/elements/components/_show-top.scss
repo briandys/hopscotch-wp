@@ -1,14 +1,9 @@
 // Show Top
 
-.show-top_axn
+.show-top_cr
 {
-    // Conditionals
-    .no-js &,
-    .modernizr--js.hs-viewport--narrow &
-    {
-        display: table;
-        width: 100%;
-    }
+    padding-left: $gutter;
+    padding-right: $gutter;
 }
 
 .show-top_label
@@ -25,4 +20,9 @@
 .show-top-label_text
 {
     @extend %hs-patch--visually-hidden !optional;
+}
+
+.show-top_axn
+{
+    display: inline-block;
 }

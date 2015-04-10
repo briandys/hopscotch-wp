@@ -6,10 +6,6 @@
     {        
         height: $utility-block;
         overflow: hidden;
-
-        // Temp
-        a{color: white;}
-        background-color: blue;
     }
     
     .web-product-header_cr
@@ -29,7 +25,7 @@
             // Temp
             font-size: 1.25rem;
             
-            line-height: normal;
+            line-height: 1;
         }
         
         .web-product-name_axn

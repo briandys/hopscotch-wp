@@ -19,9 +19,16 @@ $block-xs: convertRem( $px-size-block-xs );
 $block-s: convertRem( $px-size-block-s );
 $block: convertRem( $px-size-block );
 
+$gutter-xxs: $block-xxxs;
+$gutter-xs: $block-xxs;
+$gutter-s: $block-xs;
 $gutter: $block-xs;
 
 $utility-block: $block;
+
+// Unitless
+$gutter-unitless: $px-size-block-xs;
+$utility-block-unitless: $px-size-block;
 
 
 // Media Query

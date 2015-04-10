@@ -13,7 +13,7 @@ if ( ! function_exists( 'hopscotch_ui_settings_html_class' ) ) :
         
         // Primary Navigation
         // echo ' hs-template__primary-nav--default';
-        echo ' hs-template__primary-nav--stairs';
+        echo ' hs-template__primary-nav--vines';
         
         // Primary Navigation and Masthead Sidebar
         // echo ' hs-template__primary-nav-masthead-sidebar--default';
@@ -21,7 +21,7 @@ if ( ! function_exists( 'hopscotch_ui_settings_html_class' ) ) :
         
         // Search
         // echo ' hs-template__search--default';
-        echo ' hs-template__search--lightsaber';
+        echo ' hs-template__search--poppy-seed';
         
         // Show Top
         echo ' hs-template__show-top--default';

@@ -9,8 +9,8 @@
     var viewportNarrowClass = 'hs-viewport--narrow',
         viewportWideClass = 'hs-viewport--wide',
         priNavMastheadSidebarHamburgerClass = 'hs-template__primary-nav-masthead-sidebar--hamburger',
-        searchLightsaberClass = 'hs-template__search--lightsaber',
-        priNavStairsClass = 'hs-template__primary-nav--stairs',
+        SearchPoppySeedsClass = 'hs-template__search--poppy-seed',
+        priNavVinesClass = 'hs-template__primary-nav--vines',
         showTopMushroomClass = 'hs-template__show-top--mushroom',
         statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
         statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active';
@@ -42,7 +42,7 @@
     parentPriNavItem.addClass( priNavItemTreeClass );
     
     ( function() {
-        if ( $html.hasClass( priNavStairsClass ) ) {
+        if ( $html.hasClass( priNavVinesClass ) ) {
             
             // Add <button> element to Toggle Sub Nav
             parentPriNavItemAction.after( priSubNavToggleAction );
@@ -88,7 +88,7 @@
             $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass );
         }
         
-        // Deactivate Primary Navigation on clicks on the document body
+        // Deactivate Primary Navigation on clicks on external interaction
         // https://css-tricks.com/dangers-stopping-event-propagation/
         ( function() {
             $( document ).on( 'click.hopscotch', function( e ) {
@@ -98,16 +98,17 @@
             }); 
         } )();
         
+        // Deactivate Search: Vines on external interaction
         ( function() {
             $( document ).on( 'click.hopscotch', function( e ) {
-                if ( $html.hasClass( priNavStairsClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
+                if ( $html.hasClass( priNavVinesClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
                      parentPriNavItem.removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
                 }                
             }); 
         } )();
         
-        // Stairs            
-        if ( $html.hasClass( priNavStairsClass ) && $html.hasClass( viewportWideClass ) ) {
+        // Primary Nav: Vines            
+        if ( $html.hasClass( priNavVinesClass ) && $html.hasClass( viewportWideClass ) ) {
             console.log( 'Wide' );
         }
     }
@@ -155,6 +156,7 @@
             mastheadSidebarSearch = mastheadSidebar.find( '.search_comp' ),
             mastheadSidebarSearchFormInput = mastheadSidebar.find( '.search-form_input' ),
             mastheadSidebarSearchFormLabel = mastheadSidebar.find( '.search-form_label' ),
+            mastheadSidebarSearchFormResetAction = mastheadSidebar.find( '.search-form_label' ),
             
             contentSidebarSearchFormInput = contentSidebar.find( '.search-form_input' ),
             contentSidebarSearchFormLabel = contentSidebar.find( '.search-form_label' ),
@@ -165,8 +167,8 @@
             stateSearchFocused = 'hs-state__search--focused',
             stateSearchUnfocused = 'hs-state__search--unfocused',
             
-            stateSearchLightsaberActiveClass = 'hs-state__search_lightsaber--active',
-            stateSearchLightsaberInactiveClass = 'hs-state__search_lightsaber--inactive';
+            stateSearchPoppySeedsActiveClass = 'hs-state__search_poppy-seeds--active',
+            stateSearchPoppySeedsInactiveClass = 'hs-state__search_poppy-seeds--inactive';
 
         if( ! search )
           return;
@@ -208,35 +210,41 @@
           return;
         
         // Search Lightsaber        
-        if ( $html.hasClass( searchLightsaberClass ) && $html.hasClass( viewportNarrowClass ) ) {
+        if ( $html.hasClass( SearchPoppySeedsClass ) ) {
             
             // Set Default Class
-            $body.addClass( stateSearchLightsaberInactiveClass );
+            $body.addClass( stateSearchPoppySeedsInactiveClass );
             
             // Deactivates the Search
-            function searchLightsaberDeactivate() {
-                if ( $body.hasClass( stateSearchLightsaberActiveClass ) ) {
-                    $body.removeClass( stateSearchLightsaberActiveClass ).addClass( stateSearchLightsaberInactiveClass );
+            function SearchPoppySeedsDeactivate() {
+                if ( $body.hasClass( stateSearchPoppySeedsActiveClass ) ) {
+                    $body.removeClass( stateSearchPoppySeedsActiveClass ).addClass( stateSearchPoppySeedsInactiveClass );
                 }
             }
             
             // Activate on Focus
             mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
-                $body.removeClass( stateSearchLightsaberInactiveClass ).addClass( stateSearchLightsaberActiveClass );
-            } );          
+                $body.removeClass( stateSearchPoppySeedsInactiveClass ).addClass( stateSearchPoppySeedsActiveClass );
+            } );
+            
+            $( '#search-form-reset_axn' ).on( 'click.hopscotch', function() {
+                if ( $( '#search-form_input' ).val() == '' ) {
+                    SearchPoppySeedsDeactivate();
+                }                
+            } );
         }
         
         // Deactivate Primary Navigation on clicks on the document body
         $( document ).on( 'click.hopscotch', function( e ) {
-            if ( $html.hasClass( searchLightsaberClass ) && !$( event.target ).closest( mastheadSidebarSearch ).length ) {
-                searchLightsaberDeactivate();
+            if ( $html.hasClass( SearchPoppySeedsClass ) && !$( event.target ).closest( mastheadSidebarSearch ).length ) {
+                SearchPoppySeedsDeactivate();
             }                
         });
 
         // ESC closes Deactivates the Search
         $( document ).on( 'keyup.hopscotch', function( e ) {
-            if ( $html.hasClass( searchLightsaberClass ) && e.which === 27 ) {
-                searchLightsaberDeactivate();
+            if ( $html.hasClass( SearchPoppySeedsClass ) && e.which === 27 ) {
+                SearchPoppySeedsDeactivate();
                 searchInput.blur();
             }
         });

@@ -1,5 +1,10 @@
-.content-hr_accessible-name,
+.content_hr,
 .primary-content_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
+}
+
+.content-hr_cr
+{
+    padding: $gutter-xs $gutter;
 }

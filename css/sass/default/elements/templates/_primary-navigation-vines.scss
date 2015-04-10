@@ -1,5 +1,5 @@
 // Default
-.hs-template__primary-nav--stairs
+.hs-template__primary-nav--vines
 {
     // Default
     .primary-nav_ct
@@ -23,7 +23,7 @@
             
             > a
             {
-                padding-right: $block;
+                padding-right: $utility-block;
             }
         }
 
@@ -32,7 +32,7 @@
             display: table-cell;
             padding: $block-xxs $gutter;
             vertical-align: middle;
-            line-height: normal;
+            line-height: 1;
         }
 
         .children,
@@ -73,9 +73,7 @@
         top: 0;
         right: 0;
 
-        // Counter-effect
-        padding-left: .5rem;
-        padding-right: .5rem;
+        // Counter-Effect
         width: auto;
 
         .toggle_label
@@ -86,6 +84,8 @@
         // Icon
         &:after
         {
+            $icon-size: 1rem;
+            
             // Creates the pseudo-element
             content: '';
 
@@ -99,13 +99,13 @@
             right: 50%;
 
             // Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75)
-            margin-top: -.75rem;
+            margin-top: -$icon-size / 2;
 
             // Sets a space to the right
-            margin-right: -.75rem;
+            margin-right: -$icon-size / 2;
 
             // Sets the visual size of the actual icon
-            width: 1.5rem; height: 1.5rem;
+            @include dimensions( $icon-size );
 
             // Uses SVG to have hi-res icon
             background-image: url( ../img/icon-arrow-down.svg );
@@ -165,7 +165,6 @@
                     position: absolute;
                     width: auto;
                     white-space: nowrap;
-                    background: red;
                 }
             }
         }

@@ -18,9 +18,13 @@ Class: search
                 </div><!-- field -->
                 <div class="axn_field search-form-axn_field">
                     <div class="cr axn-field_cr search-form-axn-field_cr">
-                        <button class="axn search_axn search-form_axn" type="submit">
+                        <button class="axn submit_axn search_axn search-form-submit_axn" type="submit" title="Search">
                             <span class="label verb_label"><?php _e( 'Search', 'hopscotch'); ?></span>
                             <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
+                        </button>
+                        <button id="search-form-reset_axn" class="axn reset_axn search_axn search-form-reset_axn"  type="reset" title="Reset">
+                            <span class="label verb_label"><?php _e( 'Reset', 'hopscotch'); ?></span>
+                            <svg class="icon dismiss_icon" width="0" height="0"><use xlink:href="#dismiss_icon"></use></svg>
                         </button>
                     </div>
                 </div><!-- axn_field -->

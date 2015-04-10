@@ -3,6 +3,12 @@
     // Conditional: JS Enabled
     &.modernizr--js
     {
+        // Default            
+        .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
+        {
+            @include dimensions( 1.25rem );
+        }
+        
         
         // Inactive
         .hs-state__primary-nav-masthead-sidebar_hamburger--inactive

@@ -1,7 +1,7 @@
 // Search Lightsaber
 
 // Default State
-.hs-template__search--lightsaber {
+.hs-template__search--poppy-seed {
     
     // Conditional: JS Enabled
     &.modernizr--js
@@ -17,14 +17,22 @@
                 width: 100%;
             }
 
-            .search-form_axn .verb_label
+            .search-form-submit_axn .verb_label,
+            .search-form-reset_axn .verb_label
             {
                 @extend %hs-patch--visually-hidden !optional;
+            }
+            
+            .search-form-submit_axn,
+            .search-form-reset_axn
+            {
+                @extend %hs-reset--deflate !optional;
             }
 
             // Make container for the inline icon
             .search-form_label,
-            .search-form_axn
+            .search-form-submit_axn,
+            .search-form-reset_axn
             {    
                 @extend %hs-nature--inline-icon-cr !optional;
                 
@@ -39,16 +47,6 @@
             {
                 @extend %hs-nature--inline-icon !optional;
             }
-
-            .search-form_input
-            {
-                @extend %hs-reset--deflate !optional;
-
-                // Counter-effect
-                padding: .5rem 1rem;
-                
-                height: $utility-block;
-            }
             
             .widget_search
             {
@@ -57,6 +55,11 @@
                     // Counter-Effect
                     padding: 0;
                 }
+            }
+            
+            .dismiss_icon
+            {
+                @include dimensions( 1.25rem );
             }
         }
         
@@ -86,7 +89,7 @@
         // If Hamburger Template and Narrow Viewport
         &.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow
         {
-            .hs-state__search_lightsaber--active
+            .hs-state__search_poppy-seeds--active
             {
                 .masthead_sidebar
                 {
@@ -113,7 +116,7 @@
 }
 
 // Inactive State
-.hs-state__search_lightsaber--inactive
+.hs-state__search_poppy-seeds--inactive
 {
     // Conditional: JS Enabled
     .modernizr--js &
@@ -122,7 +125,7 @@
         {
             .search-form_label .subj_label,
             .search-form_input,
-            .search-form_axn
+            .search-form-submit_axn
             {
                 @extend %hs-patch--visually-hidden !optional;
             }
@@ -132,6 +135,12 @@
                 top: 0;
                 right: 0;
             }
+            
+            // Reset Action
+            .search-form-reset_axn
+            {                
+                @extend %hs-patch--visually-hidden !optional;
+            }
         }
     }
     
@@ -139,17 +148,13 @@
 }
 
 // Active State
-.hs-state__search_lightsaber--active
+.hs-state__search_poppy-seeds--active
 {
     // Conditional: JS Enabled
     .modernizr--js &
     {
         .masthead_sidebar
         {
-            .search-form_axn
-            {
-                @extend %hs-reset--deflate !optional;
-            }
 
             .search-form_label
             {
@@ -168,6 +173,29 @@
                 position: absolute;
                 top: 0;
                 right: 0;
+            }
+
+            .search-form_input
+            {
+                @extend %hs-reset--deflate !optional;
+
+                // Counter-effect
+                padding: .5rem 1rem;
+                
+                // Make space for the Reset Action
+                padding-right: $utility-block;
+                
+                height: $utility-block;
+            }
+            
+            // Reset Action
+            .search-form-reset_axn
+            {                
+                @extend %hs-patch--visually-hidden-reverse !optional;
+                
+                position: absolute;
+                top: 0;
+                right: 100%;
             }
         }
     }

@@ -5,11 +5,24 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
+.hs-template__search--default
+{
+    .masthead_sidebar
+    {
+        .search_icon,
+        .dismiss_icon
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+}
+
 // Search Icon
-.search_icon {
-    .hs-template__search--default .masthead_sidebar &,
-    .content_sidebar &,
-    .colophon_sidebar &
+.content_sidebar,
+.colophon_sidebar
+{
+    .search_icon,
+    .dismiss_icon
     {
         @extend %hs-patch--visually-hidden !optional;
     }
@@ -25,7 +38,7 @@
 }
 
 // Show ContStruct Heading when in Search View
-.search .content-hr_accessible-name
+.search .content_hr
 {
     @extend %hs-patch--visually-hidden-reverse !optional;
 }

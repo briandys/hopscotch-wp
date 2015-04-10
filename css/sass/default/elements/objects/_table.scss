@@ -1,0 +1,16 @@
+table
+{
+    width: 100%;
+}
+
+th,
+td
+{
+    padding: $gutter-xxs;
+    height: $block;
+}
+
+th
+{
+    text-align: left;
+}
