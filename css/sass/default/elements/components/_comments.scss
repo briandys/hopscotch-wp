@@ -1,11 +1,7 @@
+.comments_accessible-name,
 .comment-entry-axn_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
-}
-
-.comments_cr
-{
-    padding: $gutter;
 }
 
 .comment-form
@@ -17,4 +13,39 @@
             @extend %hs-nature--cursor-pointer !optional;
         }
     }
+}
+
+.comments-count_cr,
+.comment-entry-hr_cr,
+.comment-entry-ct_cr,
+.comment-admin_cr,
+.comment-form .field_cr,
+.form-submit,
+.comment-reply-title
+{
+    padding: $gutter-xs $gutter;
+}
+
+.comments_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.comment-respond
+{
+    > *:first-child
+    {
+        margin-top: 0;
+    }
+    
+    > *:last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+.form-submit,
+.comment-reply-title
+{
+    margin: 0;
 }

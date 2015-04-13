@@ -653,7 +653,8 @@ textarea {
 
 /* line 16, sass/default/utilities/helpers/patch/_visually-hidden.scss */
 .breadcrumb-nav_accessible-name, .content_hr,
-.primary-content_accessible-name, .comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
+.primary-content_accessible-name, .comments_accessible-name,
+.comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
 .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
 .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon,
 .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon,
@@ -693,7 +694,7 @@ button.theme, input[type='text'], input[type='email'], input[type='search'], inp
   border: 0; }
 
 /* line 7, sass/default/utilities/helpers/reset/_unlist.scss */
-.article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp,
+.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp,
 .hs-theme--hopscotch .article-entry-nav_grp,
 .hs-theme--hopscotch .comment-entry-axn_grp,
 .hs-theme--hopscotch .article-entry-admin_grp,
@@ -835,9 +836,27 @@ tbody tr {
 .content-hr_cr {
   padding: 1rem 1.5rem; }
 
-/* line 7, sass/default/elements/components/_comments.scss */
-.comments_cr {
-  padding: 1.5rem; }
+/* line 25, sass/default/elements/components/_comments.scss */
+.comments-count_cr,
+.comment-entry-hr_cr,
+.comment-entry-ct_cr,
+.comment-admin_cr,
+.comment-form .field_cr,
+.form-submit,
+.comment-reply-title {
+  padding: 1rem 1.5rem; }
+
+/* line 37, sass/default/elements/components/_comments.scss */
+.comment-respond > *:first-child {
+  margin-top: 0; }
+/* line 42, sass/default/elements/components/_comments.scss */
+.comment-respond > *:last-child {
+  margin-bottom: 0; }
+
+/* line 49, sass/default/elements/components/_comments.scss */
+.form-submit,
+.comment-reply-title {
+  margin: 0; }
 
 /* line 6, sass/default/elements/components/_container.scss */
 .ct > *:first-child,
@@ -856,14 +875,14 @@ tbody tr {
 .article-entry-fr_cr {
   padding: 1rem 1.5rem; }
 
-/* line 2, sass/default/elements/components/_article-entry-navigation.scss */
-.article-entry-nav_cr {
-  padding: 1.5rem; }
-
-/* line 15, sass/default/elements/components/_article-entry-navigation.scss */
+/* line 10, sass/default/elements/components/_article-entry-navigation.scss */
 .next-entry_label .subj_label:after,
 .previous-entry_label .subj_label:after {
   content: ':'; }
+
+/* line 21, sass/default/elements/components/_article-entry-navigation.scss */
+.article-entry-nav_cr {
+  padding: 1rem 1.5rem; }
 
 /* line 14, sass/default/elements/components/_article-entry-page-navigation.scss */
 .article-entry-page-nav_friendly-name,
@@ -1048,6 +1067,10 @@ tbody tr {
 /* line 2, sass/default/elements/components/_widget.scss */
 .widget_cr {
   padding: 1.5rem; }
+
+/* line 2, sass/default/elements/components/_notice.scss */
+.notice_cr {
+  padding: 1rem 1.5rem; }
 
 /* line 13, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seed.modernizr--js .masthead_sidebar .search_comp {

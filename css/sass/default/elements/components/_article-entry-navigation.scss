@@ -1,8 +1,3 @@
-.article-entry-nav_cr
-{
-    padding: $block-xs;
-}
-
 .article-entry-nav_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
@@ -15,4 +10,14 @@
     {
         content: ':';
     }
+}
+
+.article-entry-nav_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.article-entry-nav_cr
+{
+    padding: $gutter-xs $gutter;
 }

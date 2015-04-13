@@ -19,7 +19,7 @@ Class: comments_comp
 <div id="comments" class="comp comments_comp">
     <section class="cr comments_cr">
         
-        <h4 class="accessible_name"><?php _e( 'Comments', 'hopscotch' ); ?></h4>
+        <h4 class="accessible-name comments_accessible-name"><?php _e( 'Comments', 'hopscotch' ); ?></h4>
         <div class="ct comments_ct">
             
             <!--
