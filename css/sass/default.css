@@ -573,7 +573,7 @@ textarea {
     page-break-after: avoid; } }
 
 /* line 8, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/helpers/patch/_hidden.scss */
-.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children, .hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
+.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children, .hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
   display: none; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/helpers/patch/_clearfix.scss */
@@ -585,7 +585,7 @@ textarea {
   clear: both; }
 
 /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/helpers/patch/_visually-hidden.scss */
-.breadcrumb-nav_accessible-name, .content_hr, .primary-content_accessible-name, .comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon, .content_sidebar .dismiss_icon, .colophon_sidebar .search_icon, .colophon_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label, .show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top-label_text, .web-product_desc, .web-product-page_accessible-name, .web-product-page-nav_friendly-name, .hs-template__search--poppy-seed.modernizr--js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-template__search--poppy-seed.modernizr--js .masthead_sidebar .search-form-reset_axn .verb_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-submit_axn, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn .toggle_label {
+.breadcrumb-nav_accessible-name, .content_hr, .primary-content_accessible-name, .comments_accessible-name, .comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon, .content_sidebar .dismiss_icon, .colophon_sidebar .search_icon, .colophon_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label, .show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top-label_text, .web-product_desc, .web-product-page_accessible-name, .web-product-page-nav_friendly-name, .hs-template__search--poppy-seed.modernizr--js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-template__search--poppy-seed.modernizr--js .masthead_sidebar .search-form-reset_axn .verb_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-submit_axn, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn .toggle_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -612,7 +612,7 @@ button.theme, input[type='text'], input[type='email'], input[type='search'], inp
   border: 0; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/utilities/helpers/reset/_unlist.scss */
-.article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp, .hs-theme--hopscotch .article-entry-nav_grp, .hs-theme--hopscotch .comment-entry-axn_grp, .hs-theme--hopscotch .article-entry-admin_grp, .hs-theme--hopscotch .comment-entry-admin_grp, .hs-theme--hopscotch .comment-form-admin-actions_grp, .hs-theme--hopscotch .primary-nav_ct ul {
+.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp, .hs-theme--hopscotch .article-entry-nav_grp, .hs-theme--hopscotch .comment-entry-axn_grp, .hs-theme--hopscotch .article-entry-admin_grp, .hs-theme--hopscotch .comment-entry-admin_grp, .hs-theme--hopscotch .comment-form-admin-actions_grp, .hs-theme--hopscotch .primary-nav_ct ul {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -743,9 +743,20 @@ tbody tr {
 .content-hr_cr {
   padding: 1rem 1.5rem; }
 
-/* line 6, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_comments.scss */
-.comments_cr {
-  padding: 1.5rem; }
+/* line 24, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_comments.scss */
+.comments-count_cr, .comment-entry-hr_cr, .comment-entry-ct_cr, .comment-admin_cr, .comment-form .field_cr, .form-submit, .comment-reply-title {
+  padding: 1rem 1.5rem; }
+
+/* line 36, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_comments.scss */
+.comment-respond > *:first-child {
+  margin-top: 0; }
+/* line 41, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_comments.scss */
+.comment-respond > *:last-child {
+  margin-bottom: 0; }
+
+/* line 48, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_comments.scss */
+.form-submit, .comment-reply-title {
+  margin: 0; }
 
 /* line 5, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_container.scss */
 .ct > *:first-child, .cr > *:first-child, .hr > *:first-child {
@@ -758,13 +769,13 @@ tbody tr {
 .article-entry-hr_cr, .article-entry-ct_cr, .article-entry-fr_cr {
   padding: 1rem 1.5rem; }
 
-/* line 1, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_article-entry-navigation.scss */
-.article-entry-nav_cr {
-  padding: 1.5rem; }
-
-/* line 14, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_article-entry-navigation.scss */
+/* line 9, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_article-entry-navigation.scss */
 .next-entry_label .subj_label:after, .previous-entry_label .subj_label:after {
   content: ':'; }
+
+/* line 20, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_article-entry-navigation.scss */
+.article-entry-nav_cr {
+  padding: 1rem 1.5rem; }
 
 /* line 13, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_article-entry-page-navigation.scss */
 .article-entry-page-nav_friendly-name, .article-entry-page-nav_grp, .article-entry-page-nav_item {
@@ -940,6 +951,10 @@ tbody tr {
 .widget_cr {
   padding: 1.5rem; }
 
+/* line 1, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/components/_notice.scss */
+.notice_cr {
+  padding: 1rem 1.5rem; }
+
 /* line 12, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seed.modernizr--js .masthead_sidebar .search_comp {
   position: absolute;
@@ -1024,21 +1039,24 @@ tbody tr {
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 40, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 37, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav {
+  display: block; }
+/* line 50, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
-/* line 58, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 68, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0; }
-/* line 93, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 103, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar_hamburger--active .masthead_sidebar .widget_comp {
   display: block; }
-/* line 104, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 114, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__web-product-header--default .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }

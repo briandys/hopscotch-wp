@@ -638,7 +638,7 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
-.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
+.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children,
 .hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
   display: none; }
@@ -1158,21 +1158,24 @@ tbody tr {
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 41, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 38, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav {
+  display: block; }
+/* line 51, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
-/* line 58, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 68, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0; }
-/* line 94, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 104, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar_hamburger--active .masthead_sidebar .widget_comp {
   display: block; }
-/* line 105, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 115, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__web-product-header--default .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }

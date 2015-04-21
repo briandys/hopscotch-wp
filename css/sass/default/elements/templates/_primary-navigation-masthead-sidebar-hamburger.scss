@@ -3,10 +3,15 @@
     // Conditional: JS Enabled
     &.modernizr--js
     {
-        // Default            
+        // Default
         .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
         {
             @include dimensions( 1.25rem );
+        }
+        
+        .primary_nav
+        {
+            @extend %hs-patch--hidden !optional;
         }
         
         
@@ -27,6 +32,11 @@
             .primary-nav-masthead-sidebar-toggle_axn .menu_icon
             {
                 @extend %hs-patch--hidden !optional;
+            }
+        
+            .primary_nav
+            {
+                display: block;
             }
         }
 
