@@ -59,20 +59,5 @@
 
 .article-entry-image-caption_cr
 {
-    padding: $block-xxxs;
-    
-    > *:first-child
-    {
-        margin-top: 0;
-    }
-    
-    > *:last-child
-    {
-        margin-bottom: 0;
-    }
-}
-
-.wp-caption
-{
-    max-width: 100%;
+    @extend %hs-nature--caption !optional;
 }

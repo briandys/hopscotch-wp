@@ -41,6 +41,18 @@
       return;
     
     
+    var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
+        priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' );
+
+    if ( ! priNavMastheadSidebarComp ) {
+        return;
+    }
+
+    if ( ! priNavMastheadSidebarToggleAxn ) {
+        return;
+    }
+    
+    
     //-------------------------  Viewport Resizing
     function resize() {
         windowWidth = $window.width();
@@ -83,9 +95,18 @@
             }); 
         } )();
         
-        // Primary Nav: Vines            
-        if ( $html.hasClass( priNavVinesClass ) && $html.hasClass( viewportWideClass ) ) {
-            console.log( 'Wide' );
+        // Two main criteria: If using Hamburger Template and if Viewport is Narrow
+        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
+            
+            console.log('hamburger and narrow');
+
+            // Set Default Class
+            $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+
+            priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
+                $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
+                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
+            } );
         }
     }
     
@@ -130,34 +151,6 @@
                     _this.parent( parentPriNavItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( parentPriNavItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
                 });
             }
-        } )();
-
-
-        //------------------------- Primary Navigation and Masthead Sidebar Toggle
-        ( function() {
-            var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
-                priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' );
-
-            if ( ! priNavMastheadSidebarComp ) {
-                return;
-            }
-
-            if ( ! priNavMastheadSidebarToggleAxn ) {
-                return;
-            }
-
-            // Two main criteria: If using Hamburger Template and if Viewport is Narrow
-            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
-
-                // Set Default Class
-                $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
-
-                priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
-                    $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
-                    priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
-                } );
-            }
-
         } )();
 
 
