@@ -59,7 +59,11 @@
             Action: Show Content
             Class: show-content_axn
             -->
-            <a class="axn show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
+            <div class="comp show-content_comp">    
+                <div class="cr show-content_cr">
+                    <a class="axn show-content_axn" href="#content"><?php _e( 'Skip to content', 'hopscotch' ); ?></a>
+                </div>
+            </div><!-- show-content_comp -->
             
             <!--
             Constructor: Masthead

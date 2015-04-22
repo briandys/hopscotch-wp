@@ -100,6 +100,18 @@
                 }                
             }); 
         } )();
+        
+        
+        
+        //-------------------------  Hamburger
+        ( function() {
+            // Two main criteria: If using Hamburger Template and if Viewport is Narrow
+            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
+
+                // Set Default Class
+                $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+            }            
+        } )();
     }
     
 
@@ -111,7 +123,7 @@
             resizeTimer = setTimeout( resize, 500 );
         } );
         
-        $html.addClass('loaded');
+        
 
         resize();
 
@@ -150,22 +162,12 @@
                     }
                 } );
             }
-        } )();
-        
-        //-------------------------  Hamburger
-        ( function() {
-            // Two main criteria: If using Hamburger Template and if Viewport is Narrow
-            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
-
-                // Set Default Class
-                $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
-
-                priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
-                    $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
-                    priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
-                } );
-            }
             
+            //-------------------------  Hamburger
+            priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
+                $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
+                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
+            } );
         } )();
 
         //-------------------------  Search Component
@@ -249,7 +251,7 @@
                 mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
                     $body.removeClass( stateSearchPoppySeedsInactiveClass ).addClass( stateSearchPoppySeedsActiveClass );
                     // Deactivate Hamburger on Search Focus
-                    if ( $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ) {
+                    if ( $html.hasClass( viewportNarrowClass ) && $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ) {
                         $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
                     }
                 } );

@@ -638,7 +638,7 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
-.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
+.hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children,
 .hs-template__primary-nav--vines .primary-nav_ct .sub-menu, .hs-template__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--sibling,
 .hs-template__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--sibling {
@@ -974,6 +974,11 @@ tbody tr {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
+/* line 4, sass/default/elements/components/_show-content.scss */
+.show-content_comp {
+  top: 0;
+  width: 100%; }
+
 /* line 6, sass/default/elements/components/_show-top.scss */
 .hs-template__show-top--default .show-top_cr {
   padding-left: 1.5rem;
@@ -1119,31 +1124,34 @@ tbody tr {
 .wp-caption {
   max-width: 100%; }
 
-/* line 8, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 14, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 38, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 40, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav {
   display: block; }
-/* line 51, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 53, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
-/* line 68, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 70, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0; }
-/* line 104, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 106, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar_hamburger--active .masthead_sidebar .widget_comp {
   display: block; }
-/* line 115, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 117, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__web-product-header--default .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }
+/* line 139, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary_nav {
+  display: block; }
 
 /* line 13, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct li {
@@ -1164,6 +1172,10 @@ tbody tr {
   padding: 1rem 1.5rem;
   vertical-align: middle;
   line-height: 1; }
+/* line 44, sass/default/elements/templates/_primary-navigation-vines.scss */
+.hs-template__primary-nav--vines .primary-nav_ct .children li,
+.hs-template__primary-nav--vines .primary-nav_ct .sub-menu li {
+  padding-left: 1.5rem; }
 /* line 61, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
@@ -1293,8 +1305,9 @@ tbody tr {
   bottom: 0;
   z-index: 1000; }
 
-/* line 2, sass/default/elements/templates/themes/_primary-navigation-vines.scss */
-.children {
+/* line 7, sass/default/elements/templates/themes/_primary-navigation-vines.scss */
+.hs-template__primary-nav--vines .primary-nav_ct .children,
+.hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 

@@ -1,5 +1,11 @@
 // Skip Link
 
+.show-content_comp
+{
+    top: 0;
+    width: 100%;
+}
+
 .show-content_axn
 {
     @extend %hs-patch--visually-hidden !optional;

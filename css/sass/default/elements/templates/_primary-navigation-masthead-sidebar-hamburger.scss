@@ -1,5 +1,11 @@
 .hs-template__primary-nav-masthead-sidebar--hamburger
 {
+    // Default
+    .primary_nav
+    {
+        @extend %hs-patch--hidden !optional;
+    }
+    
     // Conditional: JS Enabled
     &.modernizr--js
     {
@@ -7,11 +13,6 @@
         .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
         {
             @include dimensions( 1.25rem );
-        }
-        
-        .primary_nav
-        {
-            @extend %hs-patch--hidden !optional;
         }
         
         
@@ -34,6 +35,7 @@
                 @extend %hs-patch--hidden !optional;
             }
         
+            // Counter-Effect
             .primary_nav
             {
                 display: block;
@@ -132,6 +134,12 @@
     
     &.no-js
     {
+        // Counter-Effect
+        .primary_nav
+        {
+            display: block;
+        }
+        
         .primary-nav-masthead-sidebar-toggle_axn
         {
             @extend %hs-patch--hidden !optional;
