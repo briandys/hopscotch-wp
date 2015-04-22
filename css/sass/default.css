@@ -1038,7 +1038,6 @@ tbody tr {
 /* line 12, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct li {
   display: table;
-  height: 100%;
   word-break: break-all; }
 /* line 20, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/css/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children, .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children {

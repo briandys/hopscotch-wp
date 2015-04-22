@@ -1156,7 +1156,6 @@ tbody tr {
 /* line 13, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct li {
   display: table;
-  height: 100%;
   word-break: break-all; }
 /* line 21, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children,
