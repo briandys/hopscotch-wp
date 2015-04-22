@@ -2,23 +2,29 @@
 // Contains handlers for navigation and widget area.
 
 ( function( $ ) {
+    //------------------------- Generic Variables
     var $body = $( document.body ),        
         $html = $( 'html' ),
         $window, windowWidth, resizeTimer;
     
+    //------------------------- Viewport Variables
     var viewportNarrowClass = 'hs-viewport--narrow',
         viewportWideClass = 'hs-viewport--wide',
+        
+        //------------------------- Template Variables
         priNavMastheadSidebarHamburgerClass = 'hs-template__primary-nav-masthead-sidebar--hamburger',
-        searchPoppySeedsClass = 'hs-template__search--poppy-seed',            
+        statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
+        statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
+        
+        searchPoppySeedsClass = 'hs-template__search--poppy-seeds',            
         stateSearchPoppySeedsActiveClass = 'hs-state__search_poppy-seeds--active',
         stateSearchPoppySeedsInactiveClass = 'hs-state__search_poppy-seeds--inactive',
-        priNavVinesClass = 'hs-template__primary-nav--vines',
-        showTopMushroomClass = 'hs-template__show-top--mushroom',
-        statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
-        statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active';
-    
-    //------------------------- Primary Navigation
         
+        priNavVinesClass = 'hs-template__primary-nav--vines',
+        
+        showTopMushroomClass = 'hs-template__show-top--mushroom';
+    
+    //------------------------- Primary Navigation Variables
     var priNav = $( '#primary_nav' ),
         priNavItem = priNav.find( '.nav-item, .page_item, .menu-item' ),
         parentPriNavItem = priNav.find( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
@@ -40,7 +46,7 @@
     if( ! parentPriNavItemAction )
       return;
     
-    
+    //------------------------- Primary Navigation & Masthead Sidebar Variables
     var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
         priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' );
 
@@ -57,7 +63,7 @@
     function resize() {
         windowWidth = $window.width();
 
-        // Screen width detection
+        //-------------------------  Screen width detection
         // If Tablet Size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
         if ( 769 > windowWidth ) {
             $html.addClass( viewportNarrowClass );
@@ -67,7 +73,7 @@
             $html.removeClass( viewportNarrowClass );
         }    
 
-        // Hamburger
+        //-------------------------  Hamburger
         if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
             $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass );
             $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
@@ -76,7 +82,7 @@
             $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass );
         }
         
-        // Deactivate Primary Navigation on clicks on external interaction
+        //-------------------------  Deactivate Primary Navigation on clicks on external interaction
         // https://css-tricks.com/dangers-stopping-event-propagation/
         ( function() {
             $( document ).on( 'click.hopscotch', function( e ) {
@@ -86,7 +92,7 @@
             }); 
         } )();
         
-        // Deactivate Search: Vines on external interaction
+        //-------------------------  Deactivate Search: Vines on external interaction
         ( function() {
             $( document ).on( 'click.hopscotch', function( e ) {
                 if ( $html.hasClass( priNavVinesClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
@@ -94,20 +100,6 @@
                 }                
             }); 
         } )();
-        
-        // Two main criteria: If using Hamburger Template and if Viewport is Narrow
-        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
-            
-            console.log('hamburger and narrow');
-
-            // Set Default Class
-            $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
-
-            priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
-                $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
-                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
-            } );
-        }
     }
     
 
@@ -126,12 +118,11 @@
         for ( var i = 1; i < 6; i++ ) {
             setTimeout( resize, 100 * i );
         }
-        
-        
 
-        // Add tree class to parent items
+        //-------------------------  Add tree class to parent items
         parentPriNavItem.addClass( priNavItemTreeClass );
 
+        //-------------------------  Vines
         ( function() {
             if ( $html.hasClass( priNavVinesClass ) ) {
 
@@ -152,7 +143,22 @@
                 });
             }
         } )();
+        
+        //-------------------------  Hamburger
+        ( function() {
+            // Two main criteria: If using Hamburger Template and if Viewport is Narrow
+            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
 
+                // Set Default Class
+                $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+
+                priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
+                    $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
+                    priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
+                } );
+            }
+            
+        } )();
 
         //-------------------------  Search Component
         ( function() {
@@ -218,7 +224,7 @@
             if( ! colophonSidebarSearchFormLabel )
               return;
 
-            // Search Lightsaber        
+            //-------------------------  Search Poppy Seeds        
             if ( $html.hasClass( searchPoppySeedsClass ) ) {
 
                 // Set Default Class
@@ -234,6 +240,10 @@
                 // Activate on Focus
                 mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
                     $body.removeClass( stateSearchPoppySeedsInactiveClass ).addClass( stateSearchPoppySeedsActiveClass );
+                    // Deactivate Hamburger on Search Focus
+                    if ( $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ) {
+                        $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+                    }
                 } );
 
                 $( '#search-form-reset_axn' ).on( 'click.hopscotch', function() {
@@ -243,7 +253,7 @@
                 } );
             }
 
-            // Deactivate Primary Navigation on clicks on the document body
+            //-------------------------  Deactivate Search on click on the document body
             $( document ).on( 'click.hopscotch', function( e ) {
                 if ( $html.hasClass( searchPoppySeedsClass ) && !$( event.target ).closest( mastheadSidebarSearch ).length ) {
                     SearchPoppySeedsDeactivate();
@@ -258,7 +268,7 @@
                 }
             });
 
-            // Differentiate the ID of Search Inputs
+            //-------------------------  Differentiate the ID of Search Inputs
             contentSidebarSearchFormInput.attr( 'id', 'search-form-content-sidebar_input' );
             contentSidebarSearchFormLabel.attr( 'for', 'search-form-content-sidebar_input' );
 
@@ -266,7 +276,6 @@
             colophonSidebarSearchFormLabel.attr( 'for', 'search-form-colophon-sidebar_input' );
 
         } )();
-
 
         //-------------------------  Smooth Scroll
         // https://css-tricks.com/snippets/jquery/smooth-scrolling/
@@ -292,9 +301,8 @@
             });
         } )();
 
-
         //-------------------------  Show Top
-        ( function() {		
+        ( function() {
             if ( $html.hasClass( showTopMushroomClass ) ) {
                 $( window ).on( 'scroll.hopscotch', function(){			
                     var showTopActiveClass = 'hs-state__show-top--active',
@@ -321,8 +329,5 @@
                 }).scroll();
             }
         } )();
-        
     });
-  
-  
 } )( jQuery );

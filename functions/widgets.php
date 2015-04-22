@@ -9,7 +9,7 @@ function hopscotch_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="cr widget_cr">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h4 class="accessible-name widget-title">',
-		'after_title'   => '</h4><div class="ct widget_ct">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Content Sidebar', 'hopscotch' ),
@@ -18,7 +18,7 @@ function hopscotch_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="cr widget_cr">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h4 class="accessible-name widget-title">',
-		'after_title'   => '</h4><div class="ct widget_ct">',
+		'after_title'   => '</h4>',
 	) );
     register_sidebar( array(
 		'name'          => __( 'Colophon Sidebar', 'hopscotch' ),
@@ -27,7 +27,7 @@ function hopscotch_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="comp widget_comp %2$s"><div class="cr widget_cr">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h4 class="accessible-name widget-title">',
-		'after_title'   => '</h4><div class="ct widget_ct">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'hopscotch_widgets_init' );

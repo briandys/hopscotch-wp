@@ -1,9 +1,12 @@
 // Show Top
 
-.show-top_cr
+.hs-template__show-top--default
 {
-    padding-left: $gutter;
-    padding-right: $gutter;
+    .show-top_cr
+    {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
 }
 
 .show-top_label
