@@ -45,6 +45,12 @@
                 // padding-left: $gutter;
                 // padding-right: $gutter;
             }
+            
+            // Do not show sibling of active nav item
+            > .hs-type__primary-nav-item_tree--sibling
+            {
+                @extend %hs-patch--hidden !optional;
+            }
         }
         
         // Active

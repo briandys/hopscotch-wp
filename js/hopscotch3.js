@@ -92,7 +92,7 @@
             }); 
         } )();
         
-        //-------------------------  Deactivate Search: Vines on external interaction
+        //-------------------------  Deactivate Vines on external interaction
         ( function() {
             $( document ).on( 'click.hopscotch', function( e ) {
                 if ( $html.hasClass( priNavVinesClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
@@ -131,16 +131,24 @@
 
                 parentPriNavItem.addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
 
-                $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ){
+                // Vines Toggle Action
+                $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ) {
                     var _this = $( this );
                     e.preventDefault();
 
                     // Deactivate Siblings
                     _this.parent( parentPriNavItem ).siblings( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ).removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', 'false' );
-
+                    
                     // Activate Tree
                     _this.parent( parentPriNavItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( parentPriNavItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-                });
+                    
+                    
+                    if (_this.parent( parentPriNavItem ).hasClass( priNavItemTreeActiveClass ) ) {
+                        _this.parent( parentPriNavItem ).siblings().addClass( 'hs-type__primary-nav-item_tree--sibling' );
+                    } else {
+                        _this.parent( parentPriNavItem ).siblings().removeClass( 'hs-type__primary-nav-item_tree--sibling' );
+                    }
+                } );
             }
         } )();
         

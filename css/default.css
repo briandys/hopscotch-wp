@@ -640,7 +640,8 @@ textarea {
 /* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
 .hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children,
-.hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
+.hs-template__primary-nav--vines .primary-nav_ct .sub-menu, .hs-template__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--sibling,
+.hs-template__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--sibling {
   display: none; }
 
 /* line 7, sass/default/utilities/helpers/patch/_clearfix.scss */
@@ -1163,16 +1164,16 @@ tbody tr {
   padding: 1rem 1.5rem;
   vertical-align: middle;
   line-height: 1; }
-/* line 55, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 61, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
-/* line 67, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 73, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
   right: 0;
   width: auto; }
-  /* line 86, sass/default/elements/templates/_primary-navigation-vines.scss */
+  /* line 92, sass/default/elements/templates/_primary-navigation-vines.scss */
   .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
@@ -1186,26 +1187,26 @@ tbody tr {
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform .2s; }
-/* line 125, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 131, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
-/* line 135, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 141, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct a {
   width: 100%; }
-/* line 140, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 146, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li {
   width: 100%; }
-/* line 155, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 161, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
-/* line 164, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 170, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children > .children,
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children > .sub-menu {
   position: absolute;
   width: auto;
   white-space: nowrap; }
-/* line 178, sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 184, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.no-js .page_item_has_children > .children,
 .hs-template__primary-nav--vines.no-js .menu-item-has-children > .sub-menu {
   display: table-row; }
@@ -1291,6 +1292,11 @@ tbody tr {
   display: block;
   bottom: 0;
   z-index: 1000; }
+
+/* line 2, sass/default/elements/templates/themes/_primary-navigation-vines.scss */
+.children {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95); }
 
 /* line 29, sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name,
