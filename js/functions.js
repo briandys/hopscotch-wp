@@ -145,6 +145,7 @@
         $( document ).on( 'click.hopscotch', function( e ) {
             if ( $html.hasClass( priNavVinesClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
                 parentPriNavItem.removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', parentPriNavItem.hasClass( priNavItemTreeInactiveClass ) ? 'false' :  'true' );
+                parentPriNavItem.siblings().removeClass( priNavItemTreeInactiveSiblingClass );
             }                
         });
     } )();
