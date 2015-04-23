@@ -10,6 +10,7 @@
     padding: $gutter-xs $gutter;
 }
 
+// Clear all Heading Objects
 .article-entry-ct_cr {
     @each $item in $heading-objects {
         > #{$item} {

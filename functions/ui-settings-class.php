@@ -2,12 +2,9 @@
 // UI Settings Class
 // Contains Theme Class and Template Class
 
-// Theme
-if ( ! function_exists( 'hopscotch_ui_settings_html_class' ) ) :
-	function hopscotch_ui_settings_html_class() {
-        
-        // Theme
-        // echo ' hs-theme--hopscotch';
+// Templates
+if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
+	function hopscotch_ui_settings_templates_html_class() {
         
         echo ' hs-template__web-product-header--default';
         
@@ -28,5 +25,15 @@ if ( ! function_exists( 'hopscotch_ui_settings_html_class' ) ) :
         echo ' hs-template__show-top--mushroom';
     
     }
-    add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_html_class');
+    add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_templates_html_class');
+endif;
+
+// Theme
+if ( ! function_exists( 'hopscotch_ui_settings_theme_html_class' ) ) :
+	function hopscotch_ui_settings_theme_html_class() {
+        
+        echo ' hs-theme--hopscotch';
+    
+    }
+    add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_theme_html_class');
 endif;

@@ -6,7 +6,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/setup.php')
 // Action Hooks
 require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
 
-// Front-end
+// Front-End
 require_once( trailingslashit(get_template_directory()) . 'functions/style-sheets.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/javascripts.php');
@@ -46,7 +46,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-
 require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-category-descendant.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/conditionals-child-page.php');
 
-// Add Classes for CSS Selectors
+// CSS Classes
 require_once( trailingslashit(get_template_directory()) . 'functions/html-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/body-class.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/ui-settings-class.php');

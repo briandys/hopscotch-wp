@@ -57,6 +57,12 @@
     display: block;
 }
 
+// Counter-Effect
+.article-entry-image-caption_comp
+{
+    padding: 0;
+}
+
 .article-entry-image-caption_cr
 {
     @extend %hs-nature--caption !optional;

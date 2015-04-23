@@ -6,7 +6,7 @@
 // @since HopScotch 3.0
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html id="top" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">

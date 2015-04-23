@@ -13,7 +13,7 @@ if ( ! function_exists( 'hopscotch_fonts_url' ) ) :
         }
             
         /* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
-        $subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'twentyfifteen' );
+        $subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'hopscotch' );
 
         if ( 'cyrillic' == $subset ) {
             $subsets .= ',cyrillic,cyrillic-ext';
