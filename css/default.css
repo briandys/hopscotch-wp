@@ -640,8 +640,8 @@ textarea {
 /* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
 .hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children,
-.hs-template__primary-nav--vines .primary-nav_ct .sub-menu, .hs-template__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--sibling,
-.hs-template__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--sibling {
+.hs-template__primary-nav--vines .primary-nav_ct .sub-menu, .hs-template__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
+.hs-template__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling {
   display: none; }
 
 /* line 7, sass/default/utilities/helpers/patch/_clearfix.scss */
@@ -773,6 +773,20 @@ button.theme {
 button.animation:active {
   transform: translateY(1px); }
 
+/* line 4, sass/default/elements/objects/_html.scss */
+.html.hs-state__js--enabled:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; }
+
+/* line 16, sass/default/elements/objects/_html.scss */
+.html.hs-state__document--ready:after {
+  display: none; }
+
 /* line 3, sass/default/elements/objects/_list.scss */
 ul,
 ol {
@@ -885,6 +899,25 @@ tbody tr {
 .article-entry-ct_cr,
 .article-entry-fr_cr {
   padding: 1rem 1.5rem; }
+
+/* line 15, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > h1 {
+  clear: both; }
+/* line 15, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > h2 {
+  clear: both; }
+/* line 15, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > h3 {
+  clear: both; }
+/* line 15, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > h4 {
+  clear: both; }
+/* line 15, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > h5 {
+  clear: both; }
+/* line 15, sass/default/elements/components/_article-entry.scss */
+.article-entry-ct_cr > h6 {
+  clear: both; }
 
 /* line 10, sass/default/elements/components/_article-entry-navigation.scss */
 .next-entry_label .subj_label:after,

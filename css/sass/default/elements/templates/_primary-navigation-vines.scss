@@ -47,7 +47,7 @@
             }
             
             // Do not show sibling of active nav item
-            > .hs-type__primary-nav-item_tree--sibling
+            > .hs-type__primary-nav-item_tree--inactive-sibling
             {
                 @extend %hs-patch--hidden !optional;
             }

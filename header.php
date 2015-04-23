@@ -12,7 +12,7 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
         <!-- H5BP -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         
         <meta name="description" content="<?php bloginfo( 'description' ); ?>">
         
@@ -36,6 +36,8 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?>">
+        
+        <script>( function(){ document.documentElement.className += ' hs-state__js--enabled' } )();</script>
         
         <?php wp_head(); ?>
     </head>
