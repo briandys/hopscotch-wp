@@ -1,5 +1,7 @@
 #{$button-objects}
 {
+    @extend %hs-reset--deflate !optional;
+    
     // To enable padding
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -20,39 +22,5 @@
     &:hover
     {
         @extend %hs-nature--cursor-pointer !optional;
-    }
-}
-
-button.theme
-{
-    @extend %hs-reset--deflate !optional;
-    
-    // Theme
-    color: #fff;
-    background-color: #222;
-    border: 1px solid #404040;
-    border-radius: .125rem;
-    
-    // Hover
-    &:hover
-    {        
-        background-color: #111;
-    }
-    
-    // Active
-    &:active
-    {  
-        // Theme
-        background-color: #000;
-    }
-}
-
-button.animation
-{
-    // Active
-    &:active
-    {  
-        // Animation
-        transform: translateY( 1px );
     }
 }

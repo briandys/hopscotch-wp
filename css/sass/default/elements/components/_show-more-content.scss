@@ -2,6 +2,9 @@
 
 .show-more-content_comp
 {
+    //Reset
+    padding:  0;
+    
     .pred_label,
     .slash_label
     {
@@ -12,4 +15,28 @@
     {
         @extend %hs-patch--visually-hidden !optional;
     }
+}
+
+.show-more-content_comp
+{
+    display: table;
+    height: $utility-block;
+    line-height: normal;
+}
+
+.show-more-content_axn
+{
+    display: table-cell;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    vertical-align: middle;
+}
+    
+.hs-type__article-entry--regular .more-link
+{
+    display: inline-block;
+    
+    // Counter-Effect
+    margin-left: -$gutter;
+    margin-right: -$gutter;
 }

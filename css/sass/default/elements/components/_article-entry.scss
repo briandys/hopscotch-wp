@@ -4,17 +4,25 @@
 }
 
 .article-entry-hr_cr,
-.article-entry-ct_cr,
 .article-entry-fr_cr
 {
     padding: $gutter-xs $gutter;
 }
 
-// Clear all Heading Objects
+// Article Entry
 .article-entry-ct_cr {
+    
+    // Clear all Heading Objects
     @each $item in $heading-objects {
         > #{$item} {
             clear: both;
         }
+    }
+    
+    // Gutter of immediate elements
+    > *
+    {
+        padding-left: $gutter;
+        padding-right: $gutter;
     }
 }

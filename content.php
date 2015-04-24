@@ -102,34 +102,26 @@ Class: article-entry_comp
             
             </div>
         </header>
+        
+
+        
 
         <div class="ct entry_ct article-entry_ct">            
             <div class="cr entry-ct_cr article-entry-ct_cr">
                 
                 <?php
-                // Article Excerpt
-                // Location: functions > article-excerpt.php
-                if ( is_search() || is_author() ) :
-                    the_excerpt();
                 
-                // If Attachment
-                elseif ( is_attachment() ) :
-                    the_content();
-                
-                // Else
-                else :
-
-                    if( $post->post_content !== "" ) : ?>
-
-                        <?php
+                // Home
+                if ( is_home() ):
+                    
+                    // With Post
+                    if ( $post->post_content !== "" ) :
                         
-                        if ( ! has_excerpt() ) {
-                            
-                            // The Content
-                            // Component: Show More Content
-                            // Class: show-more-content_comp
+                        // Without Excerpt
+                        if ( ! has_excerpt() ) :
                             the_content( sprintf( __(
                                 '<span class="comp show-more-content_comp">' .
+                                '<span class="axn show-more-content_axn">' .
                                 '<span class="label pred_label">' .
                                 '<span class="label verb_label">Show</span> ' .
                                 '<span class="label noun_label">Content</span> ' .
@@ -137,25 +129,33 @@ Class: article-entry_comp
                                 '</span>' .
                                 '<span class="label subj_label article-entry-title_label">%s</span>' .
                                 '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>' .
+                                '</span>' .
                                 '</span><!-- show-more-content_comp -->', 'hopscotch' ),
                                     the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
-                        } else {
-                            
-                            // Article Excerpt
-                            // Location: functions > article-excerpt.php
+                        
+                        // With Excerpt
+                        else :
                             the_excerpt();
-                        }
-                        ?>
-
-                        <?php
-                        // Article Entry Page Navigation
-                        // Location: functions > article-entry-page-navigation.php
-                        hopscotch_article_entry_page_nav();
-                        ?>
-
-                    <?php endif; ?>
-
-                <?php endif; ?>
+                        endif;
+                    
+                    // Without Post
+                    else :
+                        
+                        // With Excerpt
+                        if ( has_excerpt() ) :
+                            the_excerpt();
+                        endif;
+                    endif;
+                
+                // Search and Author
+                elseif ( is_archive() || is_search() || is_author() ) :
+                    the_excerpt();
+                
+                // Everywhere Else (Mostly for Single)
+                else :
+                    the_content();
+                endif;
+                ?>
             
             </div>
             

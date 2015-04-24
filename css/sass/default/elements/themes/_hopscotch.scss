@@ -14,6 +14,7 @@
     }
     
     // Narrow Viewport
+    // Choose if Media Query or Class-based
     &.hs-viewport--narrow
     {
         // Center Text
@@ -24,21 +25,13 @@
         .web-product-info_cr,
         .article-entry-admin_cr,
         .web-product-page-nav_cr,
-        .article-entry-page-nav_cr,
-        .more-link
+        .article-entry-page-nav_cr
         {
             text-align: center;
         }
-        
-        // Read More Link
-        .more-link
-        {
-            display: block;
-            padding: $block-xxs;
-        }
     }
 
-    // Featured Image
+    // Bleeding Featured Images
     .article-entry-banner_comp
     {
         // Offset (must be equal to the padding size)
@@ -46,7 +39,7 @@
         margin-right: -$gutter;
     }
     
-    // Author Avatar
+    // Rounded Avatars
     .author-avatar_cr
     {
         display: inline-block;

@@ -26,6 +26,13 @@ function hopscotch_entry_add_class( $classes ) {
     if ( is_page_template( 'hopscotch-info-card.php' ) )
         $classes[] = "vcard";
     
+    // Excerpt
+    if ( ! has_excerpt() ) :
+        $classes[] = "hs-type__article-entry--regular";
+    else :
+        $classes[] = "hs-type__article-entry--excerpt";
+    endif;
+    
 	return $classes;
 }
 add_filter('post_class', 'hopscotch_entry_add_class');

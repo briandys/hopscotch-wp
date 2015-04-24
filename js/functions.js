@@ -335,7 +335,7 @@
         // Set a delay for loading of elements
         setTimeout( function() {
             $html.addClass( 'hs-state__document--ready' );
-        }, 1000);
+        }, 500);
 
         $window.on( 'resize.hopscotch', function() {
             clearTimeout( resizeTimer );
