@@ -1,0 +1,15 @@
+.article-entry_comp
+{
+    @extend %hs-patch--clearfix !optional;
+}
+
+.article-entry-hr_cr,
+.article-entry-fr_cr
+{
+    padding: $gutter-xs $gutter;
+}
+
+.article-entry-title_name
+{
+    word-wrap: break-word;
+}

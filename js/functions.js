@@ -58,8 +58,7 @@
 
     if ( ! priNavMastheadSidebarToggleAxn ) {
         return;
-    }
-    
+    }    
     
     //-------------------------  Viewport Resizing
     function resize() {
@@ -162,6 +161,7 @@
             }
         } );
     } )();
+    
 
     //-------------------------  Search Component
     ( function() {
@@ -276,6 +276,7 @@
         colophonSidebarSearchFormLabel.attr( 'for', 'search-form-colophon-sidebar_input' );
 
     } )();
+    
 
     //-------------------------  Smooth Scroll
     // https://css-tricks.com/snippets/jquery/smooth-scrolling/
@@ -300,6 +301,7 @@
             }
         });
     } )();
+    
 
     //-------------------------  Show Top
     ( function() {
@@ -327,6 +329,16 @@
             }).scroll();
         }
     } )();
+    
+
+    //-------------------------  WordPress Inadequacies
+    
+    // Remove <p>&nbsp;</p>
+    $( '.post p' ).each( function() {
+        var $this = $( this );
+        if( $this.html().replace( /\s|&nbsp;/g, '' ).length == 0 )
+            $this.remove();
+    } );
     
 
     $( document ).ready( function() {

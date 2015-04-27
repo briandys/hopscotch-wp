@@ -1,0 +1,31 @@
+.web-product_name
+{
+    // Reset
+    margin: 0;
+}
+
+.web-product_desc
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
+.web-product-page_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
+.copyright-info_cr
+{
+    margin-top: $block-xxs;
+}
+
+.web-product-theme-info_label,
+.copyright-info_label
+{
+    margin: 0;
+}
+
+.web-product-info_cr
+{
+    padding: $gutter;
+}

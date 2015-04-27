@@ -1,0 +1,159 @@
+.hs-template__primary-nav-masthead-sidebar--hamburger
+{
+    // Default
+    .primary_nav
+    {
+        @extend %hs-patch--hidden !optional;
+    }
+    
+    // Conditional: JS Enabled
+    &.modernizr--js
+    {
+        // Default
+        .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
+        {
+            @include dimensions( 1.25rem );
+        }
+        
+        
+        // Inactive
+        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
+        {
+            .primary_nav,
+            .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
+            {
+                @extend %hs-patch--hidden !optional;
+            }
+        }
+
+        // Active
+        .hs-state__primary-nav-masthead-sidebar_hamburger--active
+        {
+            // Menu Icon
+            .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+            {
+                @extend %hs-patch--hidden !optional;
+            }
+        
+            // Counter-Effect
+            .primary_nav
+            {
+                display: block;
+            }
+        }
+
+        // Toggle Label
+        .primary-nav-masthead-sidebar-toggle_axn .toggle_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+
+        // Toggle Action
+        .primary-nav-masthead-sidebar-toggle_axn
+        {
+            @extend %hs-reset--deflate !optional;
+
+            // Counter-effect
+            padding-left: .5rem;
+            padding-right: .5rem;
+            
+            width: $utility-block;
+            height: $utility-block;
+            
+            // Temp
+            // background-color: red;
+        }
+
+        // Conditional: Narrow Viewport
+        &.hs-viewport--narrow
+        {
+            .primary-nav-masthead-sidebar-toggle_axn {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            // Search Default
+            &.hs-template__search--default
+            {
+                .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
+                {
+                    .masthead_sidebar
+                    {
+                        .search_comp
+                        {
+                            @extend %hs-patch--hidden !optional;
+                        }
+                    }
+                }
+            }
+            
+            // Widgets by Default
+            .masthead_sidebar
+            {
+                .widget_comp
+                {
+                    @extend %hs-patch--hidden !optional;
+                }
+            }
+            
+            // Active
+            .hs-state__primary-nav-masthead-sidebar_hamburger--active
+            {
+                .masthead_sidebar
+                {
+                    .widget_comp
+                    {
+                        // Counter-Effect
+                        display: block;
+                    }
+                }
+            }
+            
+            &.hs-template__masthead--default
+            {
+                // Web Product Header            
+                .web-product-header_cr
+                {
+                    padding-left: $utility-block;
+                    padding-right: $utility-block;
+                }
+            }
+        }
+        
+        // Conditional: Wide Viewport
+        &.hs-viewport--wide
+        {
+            // Toggle Action on Wide Viewport
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                @extend %hs-patch--hidden !optional;
+            }
+        }
+    }
+    
+    &.no-js
+    {
+        // Counter-Effect
+        .primary_nav
+        {
+            display: block;
+        }
+        
+        .primary-nav-masthead-sidebar-toggle_axn
+        {
+            @extend %hs-patch--hidden !optional;
+        }
+        
+        .masthead_sidebar
+        {
+            .search_comp
+            {
+                .search_icon
+                {
+                    @extend %hs-patch--hidden !optional;
+                }
+            }
+        }
+    }
+}

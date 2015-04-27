@@ -1,0 +1,64 @@
+// Entry (Article and Comment)
+
+.entry-hr_cr
+{
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+}
+
+.entry-ct_cr {
+    
+    // Clear all Heading Objects
+    @each $item in $heading-objects {
+        > #{$item} {
+            clear: both;
+        }
+    }
+    
+    // Clear margin of first and last child
+    *
+    {
+        &:first-child
+        {
+            margin-top: 0;
+        }
+        
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+    
+    // Immediate Elements
+    >
+    {
+        // All
+        *:not(table)
+        {
+            padding-left: $gutter;
+            padding-right: $gutter;
+        }
+
+        // List
+        ul,
+        ol
+        {
+            padding-left: convertRem( $gutter-unitless * 2 );
+        }
+
+        // Table
+        table
+        {
+            th:first-child,
+            td:first-child
+            {
+                padding-left: $gutter;
+            }        
+            th:last-child,
+            td:last-child
+            {
+                padding-right: $gutter;            
+            }
+        }
+    }
+}

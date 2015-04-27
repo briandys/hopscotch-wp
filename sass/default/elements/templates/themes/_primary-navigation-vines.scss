@@ -1,0 +1,16 @@
+.hs-template__primary-nav--vines
+{
+    // Wide Viewport
+    .hs-viewport--wide
+    {
+        .primary-nav_ct
+        {
+            .children,
+            .sub-menu
+            {
+                background-color: white;
+                background-color: hsla( 0, 100%, 100%, .95 );
+            }
+        }
+    }
+}

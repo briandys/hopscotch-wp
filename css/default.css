@@ -1,10 +1,9 @@
-/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-/* line 9, sass/default/utilities/h5bp/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -16,7 +15,6 @@ html {
 /**
  * Remove default margin.
  */
-/* line 19, sass/default/utilities/h5bp/_normalize.scss */
 body {
   margin: 0; }
 
@@ -28,7 +26,6 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 45, sass/default/utilities/h5bp/_normalize.scss */
 article,
 aside,
 details,
@@ -48,7 +45,6 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 57, sass/default/utilities/h5bp/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -62,7 +58,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 67, sass/default/utilities/h5bp/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -71,7 +66,6 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
-/* line 78, sass/default/utilities/h5bp/_normalize.scss */
 [hidden],
 template {
   display: none; }
@@ -81,7 +75,6 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 89, sass/default/utilities/h5bp/_normalize.scss */
 a {
   background-color: transparent; }
 
@@ -89,7 +82,6 @@ a {
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
-/* line 99, sass/default/utilities/h5bp/_normalize.scss */
 a:active,
 a:hover {
   outline: 0; }
@@ -99,14 +91,12 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 110, sass/default/utilities/h5bp/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 119, sass/default/utilities/h5bp/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
@@ -114,7 +104,6 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 127, sass/default/utilities/h5bp/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -122,7 +111,6 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 136, sass/default/utilities/h5bp/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -130,7 +118,6 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 145, sass/default/utilities/h5bp/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -138,14 +125,12 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 154, sass/default/utilities/h5bp/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 163, sass/default/utilities/h5bp/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -153,11 +138,9 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 170, sass/default/utilities/h5bp/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 174, sass/default/utilities/h5bp/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -166,14 +149,12 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 185, sass/default/utilities/h5bp/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 193, sass/default/utilities/h5bp/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -182,14 +163,12 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 204, sass/default/utilities/h5bp/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 212, sass/default/utilities/h5bp/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0; }
@@ -197,14 +176,12 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 221, sass/default/utilities/h5bp/_normalize.scss */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 232, sass/default/utilities/h5bp/_normalize.scss */
 code,
 kbd,
 pre,
@@ -224,7 +201,6 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 256, sass/default/utilities/h5bp/_normalize.scss */
 button,
 input,
 optgroup,
@@ -240,7 +216,6 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 266, sass/default/utilities/h5bp/_normalize.scss */
 button {
   overflow: visible; }
 
@@ -250,7 +225,6 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 278, sass/default/utilities/h5bp/_normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -262,7 +236,6 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 293, sass/default/utilities/h5bp/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -275,7 +248,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 303, sass/default/utilities/h5bp/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -283,7 +255,6 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 312, sass/default/utilities/h5bp/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -293,7 +264,6 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 322, sass/default/utilities/h5bp/_normalize.scss */
 input {
   line-height: normal; }
 
@@ -304,7 +274,6 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 335, sass/default/utilities/h5bp/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -317,7 +286,6 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 347, sass/default/utilities/h5bp/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -326,7 +294,6 @@ input[type="number"]::-webkit-outer-spin-button {
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
-/* line 356, sass/default/utilities/h5bp/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -338,7 +305,6 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 368, sass/default/utilities/h5bp/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -346,7 +312,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 376, sass/default/utilities/h5bp/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -356,7 +321,6 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 387, sass/default/utilities/h5bp/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -366,7 +330,6 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 396, sass/default/utilities/h5bp/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -374,7 +337,6 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 405, sass/default/utilities/h5bp/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -383,17 +345,15 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 416, sass/default/utilities/h5bp/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 422, sass/default/utilities/h5bp/_normalize.scss */
 td,
 th {
   padding: 0; }
 
-/* HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -402,7 +362,6 @@ th {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-/* line 13, sass/default/utilities/h5bp/_main.scss */
 html {
   color: #222;
   font-size: 1em;
@@ -415,12 +374,10 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-/* line 27, sass/default/utilities/h5bp/_main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
 
-/* line 32, sass/default/utilities/h5bp/_main.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -428,7 +385,6 @@ html {
 /*
  * A better looking default horizontal rule
  */
-/* line 41, sass/default/utilities/h5bp/_main.scss */
 hr {
   display: block;
   height: 1px;
@@ -442,7 +398,6 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-/* line 61, sass/default/utilities/h5bp/_main.scss */
 audio,
 canvas,
 iframe,
@@ -454,7 +409,6 @@ video {
 /*
  * Remove default fieldset styles.
  */
-/* line 69, sass/default/utilities/h5bp/_main.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -463,14 +417,12 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 79, sass/default/utilities/h5bp/_main.scss */
 textarea {
   resize: vertical; }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-/* line 87, sass/default/utilities/h5bp/_main.scss */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -487,7 +439,6 @@ textarea {
  * Hide visually and from screen readers:
  * http://juicystudio.com/article/screen-readers-display-none.php
  */
-/* line 123, sass/default/utilities/h5bp/_main.scss */
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -496,7 +447,6 @@ textarea {
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-/* line 133, sass/default/utilities/h5bp/_main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -512,7 +462,6 @@ textarea {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-/* line 151, sass/default/utilities/h5bp/_main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -525,7 +474,6 @@ textarea {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 164, sass/default/utilities/h5bp/_main.scss */
 .invisible {
   visibility: hidden; }
 
@@ -540,7 +488,6 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 181, sass/default/utilities/h5bp/_main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -548,7 +495,6 @@ textarea {
   display: table;
   /* 2 */ }
 
-/* line 186, sass/default/utilities/h5bp/_main.scss */
 .clearfix:after {
   clear: both; }
 
@@ -567,7 +513,6 @@ textarea {
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-  /* line 216, sass/default/utilities/h5bp/_main.scss */
   *,
   *:before,
   *:after {
@@ -578,16 +523,13 @@ textarea {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 225, sass/default/utilities/h5bp/_main.scss */
   a,
   a:visited {
     text-decoration: underline; }
 
-  /* line 229, sass/default/utilities/h5bp/_main.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 233, sass/default/utilities/h5bp/_main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
@@ -595,12 +537,10 @@ textarea {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  /* line 243, sass/default/utilities/h5bp/_main.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
 
-  /* line 248, sass/default/utilities/h5bp/_main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -610,48 +550,39 @@ textarea {
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  /* line 258, sass/default/utilities/h5bp/_main.scss */
   thead {
     display: table-header-group; }
 
-  /* line 263, sass/default/utilities/h5bp/_main.scss */
   tr,
   img {
     page-break-inside: avoid; }
 
-  /* line 267, sass/default/utilities/h5bp/_main.scss */
   img {
     max-width: 100% !important; }
 
-  /* line 273, sass/default/utilities/h5bp/_main.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 279, sass/default/utilities/h5bp/_main.scss */
   h2,
   h3 {
     page-break-after: avoid; } }
-/* line 8, sass/default/utilities/helpers/patch/_hidden.scss */
 .hs-template__primary-nav-masthead-sidebar--default .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger .primary_nav, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .masthead_sidebar .search_comp .search_icon, .hs-template__primary-nav--vines .primary-nav_ct .children,
 .hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
   display: none; }
 
-/* line 7, sass/default/utilities/helpers/patch/_clearfix.scss */
 .article-entry_comp:before, .article-entry_comp:after {
   content: " ";
   display: table; }
-/* line 11, sass/default/utilities/helpers/patch/_clearfix.scss */
 .article-entry_comp:after {
   clear: both; }
 
-/* line 16, sass/default/utilities/helpers/patch/_visually-hidden.scss */
-.breadcrumb-nav_accessible-name, .content_hr,
-.primary-content_accessible-name, .comments_accessible-name,
-.comment-entry-axn_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
+.breadcrumb-nav_accessible-name, .comments_accessible-name,
+.comment-entry-axn_accessible-name, .content_hr,
+.primary-content_accessible-name, .article-entry-nav_accessible-name, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
 .social-nav_accessible-name, .masthead-sidebar_accessible-name, .content-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
 .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon,
 .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon,
@@ -672,7 +603,6 @@ textarea {
   position: absolute;
   width: 1px; }
 
-/* line 14, sass/default/utilities/helpers/patch/_visually-hidden-reverse.scss */
 .search .content_hr, .show-content_axn:focus,
 .show-content_axn:active, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
   clip: auto;
@@ -682,7 +612,6 @@ textarea {
   position: static;
   width: auto; }
 
-/* line 9, sass/default/utilities/helpers/reset/_deflate.scss */
 button, input[type='submit'], input[type='password'], input[type='reset'], input[type='text'], input[type='email'], input[type='search'], input[type='url'], textarea,
 .text_input, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn, .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn,
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
@@ -690,7 +619,6 @@ button, input[type='submit'], input[type='password'], input[type='reset'], input
   padding: 0;
   border: 0; }
 
-/* line 7, sass/default/utilities/helpers/reset/_unlist.scss */
 .comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp,
 .hs-theme--hopscotch .article-entry-nav_grp,
 .hs-theme--hopscotch .comment-entry-axn_grp,
@@ -702,11 +630,9 @@ button, input[type='submit'], input[type='password'], input[type='reset'], input
   margin: 0;
   padding: 0; }
 
-/* line 7, sass/default/utilities/helpers/nature/_cursor-pointer.scss */
 button:hover, input[type='submit']:hover, input[type='password']:hover, input[type='reset']:hover, .comment-form label:hover, .search-form_label :hover {
   cursor: pointer; }
 
-/* line 20, sass/default/utilities/helpers/nature/_inline-icon.scss */
 .show-top_label, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_label,
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn,
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn {
@@ -716,7 +642,6 @@ button:hover, input[type='submit']:hover, input[type='password']:hover, input[ty
   text-align: center;
   vertical-align: middle; }
 
-/* line 51, sass/default/utilities/helpers/nature/_inline-icon.scss */
 svg.icon, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon {
   margin: 0.0625rem;
   width: 1.5rem;
@@ -725,23 +650,18 @@ svg.icon, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .sea
   fill: currentColor;
   vertical-align: middle; }
 
-/* line 16, sass/default/utilities/helpers/nature/_caption.scss */
 .article-entry-image-caption_cr, .wp-caption-text {
   padding: 0.75rem; }
-  /* line 6, sass/default/utilities/helpers/nature/_caption.scss */
   .article-entry-image-caption_cr > *:first-child, .wp-caption-text > *:first-child {
     margin-top: 0; }
-  /* line 11, sass/default/utilities/helpers/nature/_caption.scss */
   .article-entry-image-caption_cr > *:last-child, .wp-caption-text > *:last-child {
     margin-bottom: 0; }
 
-/* line 3, sass/default/elements/objects/_all.scss */
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important; }
 
-/* line 2, sass/default/elements/objects/_button.scss */
 button, input[type='submit'], input[type='password'], input[type='reset'] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -752,7 +672,6 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   padding: .5rem 1rem;
   vertical-align: middle; }
 
-/* line 4, sass/default/elements/objects/_html.scss */
 .html.hs-state__js--enabled:after {
   content: '';
   position: fixed;
@@ -762,96 +681,77 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   height: 100%;
   background-color: white; }
 
-/* line 16, sass/default/elements/objects/_html.scss */
 .html.hs-state__document--ready:after {
   display: none; }
 
-/* line 3, sass/default/elements/objects/_list.scss */
+/* 300px */
 ul,
 ol {
   padding-left: 1.5rem; }
 
-/* line 3, sass/default/elements/objects/_input.scss */
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
 .text_input {
   padding: .5rem;
   width: 100%;
   min-height: 3rem; }
 
-/* line 2, sass/default/elements/objects/_select.scss */
 select {
   width: 100%;
   min-height: 3rem; }
 
-/* line 6, sass/default/utilities/helpers/theme/_placeholder.scss */
 ::-webkit-input-placeholder {
-  color: gray; }
+  color: #808080; }
 
-/* line 10, sass/default/utilities/helpers/theme/_placeholder.scss */
 :-moz-placeholder {
-  color: gray;
+  color: #808080;
   opacity: 1; }
 
-/* line 15, sass/default/utilities/helpers/theme/_placeholder.scss */
 ::-moz-placeholder {
-  color: gray;
+  color: #808080;
   opacity: 1; }
 
-/* line 20, sass/default/utilities/helpers/theme/_placeholder.scss */
 :-ms-input-placeholder {
-  color: gray; }
+  color: #808080; }
 
-/* line 2, sass/default/elements/objects/_table.scss */
 table {
   width: 100%; }
 
-/* line 8, sass/default/elements/objects/_table.scss */
 th,
 td {
   padding: 0.75rem;
   height: 3rem; }
 
-/* line 14, sass/default/elements/objects/_table.scss */
 th {
   text-align: left; }
 
-/* line 3, sass/default/elements/objects/themes/_input.scss */
+iframe {
+  max-width: 100%; }
+
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
 .text_input {
   background-color: white;
   border: 1px solid #808080;
   border-radius: .125rem; }
 
-/* line 2, sass/default/elements/objects/themes/_button.scss */
 button, input[type='submit'], input[type='password'], input[type='reset'] {
   background-color: transparent;
   border: 1px solid #808080;
   border-radius: .125rem; }
 
-/* line 4, sass/default/elements/objects/themes/_table.scss */
 thead tr {
   border-bottom: 2px solid black; }
 
-/* line 12, sass/default/elements/objects/themes/_table.scss */
 tbody tr {
   border-top: 1px solid black; }
-  /* line 16, sass/default/elements/objects/themes/_table.scss */
   tbody tr:last-child {
     border-bottom: 1px solid black; }
 
-/* line 2, sass/default/elements/components/_article-entry-banner.scss */
 .article-entry-banner_axn {
   background-image: none !important; }
 
-/* line 7, sass/default/elements/components/_article-entry-banner.scss */
 .article-entry-banner_comp {
   margin-top: 1.5rem; }
 
-/* line 8, sass/default/elements/components/_content.scss */
-.content-hr_cr {
-  padding: 1rem 1.5rem; }
-
-/* line 25, sass/default/elements/components/_comments.scss */
 .comments-count_cr,
 .comment-entry-hr_cr,
 .comment-entry-ct_cr,
@@ -861,76 +761,81 @@ tbody tr {
 .comment-reply-title {
   padding: 1rem 1.5rem; }
 
-/* line 37, sass/default/elements/components/_comments.scss */
 .comment-respond > *:first-child {
   margin-top: 0; }
-/* line 42, sass/default/elements/components/_comments.scss */
 .comment-respond > *:last-child {
   margin-bottom: 0; }
 
-/* line 49, sass/default/elements/components/_comments.scss */
 .form-submit,
 .comment-reply-title {
   margin: 0; }
 
-/* line 6, sass/default/elements/components/_container.scss */
 .ct > *:first-child,
 .cr > *:first-child,
 .hr > *:first-child {
   margin-top: 0; }
-/* line 11, sass/default/elements/components/_container.scss */
 .ct > *:last-child,
 .cr > *:last-child,
 .hr > *:last-child {
   margin-bottom: 0; }
 
-/* line 8, sass/default/elements/components/_article-entry.scss */
+.content-hr_cr {
+  padding: 1rem 1.5rem; }
+
+.entry-hr_cr {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.entry-ct_cr > h1 {
+  clear: both; }
+.entry-ct_cr > h2 {
+  clear: both; }
+.entry-ct_cr > h3 {
+  clear: both; }
+.entry-ct_cr > h4 {
+  clear: both; }
+.entry-ct_cr > h5 {
+  clear: both; }
+.entry-ct_cr > h6 {
+  clear: both; }
+.entry-ct_cr *:first-child {
+  margin-top: 0; }
+.entry-ct_cr *:last-child {
+  margin-bottom: 0; }
+.entry-ct_cr > *:not(table) {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+.entry-ct_cr > ul,
+.entry-ct_cr > ol {
+  padding-left: 3rem; }
+.entry-ct_cr > table th:first-child,
+.entry-ct_cr > table td:first-child {
+  padding-left: 1.5rem; }
+.entry-ct_cr > table th:last-child,
+.entry-ct_cr > table td:last-child {
+  padding-right: 1.5rem; }
+
 .article-entry-hr_cr,
 .article-entry-fr_cr {
   padding: 1rem 1.5rem; }
 
-/* line 17, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > h1 {
-  clear: both; }
-/* line 17, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > h2 {
-  clear: both; }
-/* line 17, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > h3 {
-  clear: both; }
-/* line 17, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > h4 {
-  clear: both; }
-/* line 17, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > h5 {
-  clear: both; }
-/* line 17, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > h6 {
-  clear: both; }
-/* line 24, sass/default/elements/components/_article-entry.scss */
-.article-entry-ct_cr > * {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+.article-entry-title_name {
+  word-wrap: break-word; }
 
-/* line 10, sass/default/elements/components/_article-entry-navigation.scss */
 .next-entry_label .subj_label:after,
 .previous-entry_label .subj_label:after {
   content: ':'; }
 
-/* line 21, sass/default/elements/components/_article-entry-navigation.scss */
 .article-entry-nav_cr {
   padding: 1rem 1.5rem; }
 
-/* line 14, sass/default/elements/components/_article-entry-page-navigation.scss */
 .article-entry-page-nav_friendly-name,
 .article-entry-page-nav_grp,
 .article-entry-page-nav_item {
   display: inline-block; }
 
-/* line 19, sass/default/elements/components/_article-entry-page-navigation.scss */
 .article-entry-page-nav_item {
   text-align: center; }
-  /* line 24, sass/default/elements/components/_article-entry-page-navigation.scss */
   .article-entry-page-nav_item a,
   .article-entry-page-nav_item .label {
     display: inline-block;
@@ -938,11 +843,9 @@ tbody tr {
     width: 3rem;
     height: 3rem; }
 
-/* line 2, sass/default/elements/components/_article-entry-tag.scss */
 .article-entry-tag_cr {
   margin-top: 1rem; }
 
-/* line 2, sass/default/elements/components/_article-entry-image.scss */
 .article-entry-image_comp {
   /*
   // Media Query
@@ -951,291 +854,201 @@ tbody tr {
       width: auto !important;
   }
   */ }
-  /* line 13, sass/default/elements/components/_article-entry-image.scss */
   .article-entry-image_comp img {
     max-width: 100%;
     height: auto; }
 
-/* line 22, sass/default/elements/components/_article-entry-image.scss */
 .article-entry-banner_comp img {
   max-width: 100%;
   height: auto; }
 
-/* line 31, sass/default/elements/components/_article-entry-image.scss */
 .alignleft {
   float: left;
   margin-right: 1rem; }
 
-/* line 37, sass/default/elements/components/_article-entry-image.scss */
 .alignright {
   float: right;
   margin-left: 1rem; }
 
-/* line 44, sass/default/elements/components/_article-entry-image.scss */
 .alignleft,
 .alignright {
   margin-bottom: 1rem; }
 
-/* line 48, sass/default/elements/components/_article-entry-image.scss */
 .aligncenter {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 56, sass/default/elements/components/_article-entry-image.scss */
 .alignleft,
 .alignright,
 .aligncenter {
   display: block; }
 
-/* line 62, sass/default/elements/components/_article-entry-image.scss */
 .article-entry-image-caption_comp {
   padding: 0; }
 
-/* line 2, sass/default/elements/components/_article-entry-avatar.scss */
 .article-entry-author-avatar_axn {
   display: inline-block;
   vertical-align: middle; }
 
-/* line 15, sass/default/elements/components/_primary-social-navigation.scss */
 .hs-template__primary-nav--default .children li,
 .hs-template__primary-nav--default .sub-menu li {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
-/* line 4, sass/default/elements/components/_show-content.scss */
 .show-content_comp {
   top: 0;
   width: 100%; }
 
-/* line 4, sass/default/elements/components/_show-more-content.scss */
 .show-more-content_comp {
   padding: 0; }
 
-/* line 21, sass/default/elements/components/_show-more-content.scss */
 .show-more-content_comp {
   display: table;
   height: 3rem;
   line-height: normal; }
 
-/* line 28, sass/default/elements/components/_show-more-content.scss */
 .show-more-content_axn {
   display: table-cell;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   vertical-align: middle; }
 
-/* line 36, sass/default/elements/components/_show-more-content.scss */
 .hs-type__article-entry--regular .more-link {
   display: inline-block;
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
 
-/* line 6, sass/default/elements/components/_show-top.scss */
 .hs-template__show-top--default .show-top_cr {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
-/* line 13, sass/default/elements/components/_show-top.scss */
 .show-top_label {
   width: 3rem;
   height: 3rem; }
-  /* line 18, sass/default/elements/components/_show-top.scss */
   .show-top_label .arrow-left_icon {
     transform: rotate(90deg); }
 
-/* line 29, sass/default/elements/components/_show-top.scss */
 .show-top_axn {
   display: inline-block; }
 
-/* line 2, sass/default/elements/components/_web-product.scss */
 .web-product_name {
   margin: 0; }
 
-/* line 18, sass/default/elements/components/_web-product.scss */
 .copyright-info_cr {
   margin-top: 1rem; }
 
-/* line 24, sass/default/elements/components/_web-product.scss */
-.web-designer-info_label,
+.web-product-theme-info_label,
 .copyright-info_label {
   margin: 0; }
 
-/* line 29, sass/default/elements/components/_web-product.scss */
 .web-product-info_cr {
   padding: 1.5rem; }
 
-/* line 2, sass/default/elements/components/_web-product-page-navigation.scss */
 .web-product-page-nav_cr {
   padding: 1.5rem; }
 
-/* line 9, sass/default/elements/components/_web-product-page-navigation.scss */
 .web-product-page_nav .page-numbers {
   display: inline-block;
   text-align: center; }
-  /* line 15, sass/default/elements/components/_web-product-page-navigation.scss */
   .web-product-page_nav .page-numbers li {
     display: inline-block; }
-    /* line 21, sass/default/elements/components/_web-product-page-navigation.scss */
     .web-product-page_nav .page-numbers li a,
     .web-product-page_nav .page-numbers li .current,
     .web-product-page_nav .page-numbers li .dots {
-      display: inline-block;
+      display: table-cell;
       padding: 1rem;
       min-width: 3rem;
-      min-height: 3rem; }
+      height: 3rem;
+      vertical-align: middle; }
 
-/* line 6, sass/default/elements/components/_web-product-header.scss */
-.hs-template__web-product-header--default .web-product-header_comp {
-  height: 3rem;
-  overflow: hidden; }
-/* line 12, sass/default/elements/components/_web-product-header.scss */
-.hs-template__web-product-header--default .web-product-header_cr {
-  display: table;
-  width: 100%;
-  height: 100%;
-  word-break: break-all; }
-  /* line 20, sass/default/elements/components/_web-product-header.scss */
-  .hs-template__web-product-header--default .web-product-header_cr .web-product_name {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
-    font-size: 1.25rem;
-    line-height: 1; }
-  /* line 32, sass/default/elements/components/_web-product-header.scss */
-  .hs-template__web-product-header--default .web-product-header_cr .web-product-name_axn {
-    padding: 1.5rem;
-    text-decoration: none; }
-/* line 43, sass/default/elements/components/_web-product-header.scss */
-.hs-template__web-product-header--default.hs-viewport--narrow .web-product-header_cr {
-  text-align: center; }
-/* line 48, sass/default/elements/components/_web-product-header.scss */
-.hs-template__web-product-header--default.hs-viewport--narrow .web-product-name_axn {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
-
-/* line 2, sass/default/elements/components/_masthead.scss */
-.masthead_cr {
-  min-height: 3rem; }
-
-/* line 2, sass/default/elements/components/_widget.scss */
 .widget_cr {
   padding: 1.5rem; }
-  /* line 9, sass/default/elements/components/_widget.scss */
   .widget_cr > div > *:first-child {
     margin-top: 0; }
-  /* line 13, sass/default/elements/components/_widget.scss */
   .widget_cr > div > *:last-child {
     margin-bottom: 0; }
 
-/* line 2, sass/default/elements/components/_notice.scss */
 .notice_cr {
   padding: 1rem 1.5rem; }
 
-/* line 4, sass/default/elements/components/wordpress/_gallery.scss */
 .format-gallery .gallery {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
 
-/* line 12, sass/default/elements/components/wordpress/_gallery.scss */
 .gallery-item {
   margin: 0;
   display: inline-block;
   padding: 1.5rem;
   width: 100%;
   vertical-align: top; }
-  /* line 23, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-1 .gallery-item {
     max-width: 100%; }
-  /* line 28, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-2 .gallery-item {
     max-width: 50%; }
-  /* line 33, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-3 .gallery-item {
     max-width: 33.33%; }
-  /* line 38, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-4 .gallery-item {
     max-width: 25%; }
-  /* line 43, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-5 .gallery-item {
     max-width: 20%; }
-  /* line 48, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-6 .gallery-item {
     max-width: 16.66%; }
-  /* line 53, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-7 .gallery-item {
     max-width: 14.28%; }
-  /* line 58, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-8 .gallery-item {
     max-width: 12.5%; }
-  /* line 63, sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-9 .gallery-item {
     max-width: 11.11%; }
 
-/* line 2, sass/default/elements/components/wordpress/_wp-caption.scss */
 .wp-caption {
   max-width: 100%; }
 
-/* line 14, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 40, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav {
   display: block; }
-/* line 53, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
-/* line 70, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0; }
-/* line 106, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar_hamburger--active .masthead_sidebar .widget_comp {
   display: block; }
-/* line 117, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__web-product-header--default .web-product-header_cr {
+.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__masthead--default .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }
-/* line 139, sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.no-js .primary_nav {
   display: block; }
 
-/* line 13, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct li {
   display: table;
   word-break: break-all; }
-/* line 21, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children,
 .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children {
   position: relative; }
-  /* line 25, sass/default/elements/templates/_primary-navigation-vines.scss */
   .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children > a,
   .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3rem; }
-/* line 31, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct a {
   display: table-cell;
   padding: 1rem 1.5rem;
   vertical-align: middle;
   line-height: 1; }
-/* line 44, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .children li,
 .hs-template__primary-nav--vines .primary-nav_ct .sub-menu li {
   padding-left: 1.5rem; }
-/* line 61, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
-/* line 73, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
   right: 0;
   width: auto; }
-  /* line 92, sass/default/elements/templates/_primary-navigation-vines.scss */
   .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
@@ -1249,119 +1062,119 @@ tbody tr {
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform .2s; }
-/* line 131, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
-/* line 141, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct a {
   width: 100%; }
-/* line 146, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li {
   width: 100%; }
-/* line 161, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
-/* line 170, sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children > .children,
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children > .sub-menu {
   position: absolute;
   width: auto;
   white-space: nowrap; }
-/* line 184, sass/default/elements/templates/_primary-navigation-vines.scss */
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-sub-nav-toggle_axn {
+  top: 50%;
+  margin-top: -1.5rem; }
 .hs-template__primary-nav--vines.no-js .page_item_has_children > .children,
 .hs-template__primary-nav--vines.no-js .menu-item-has-children > .sub-menu {
   display: table-row; }
 
-/* line 13, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search_comp {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%; }
-/* line 36, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_label,
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn,
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn {
   width: 3rem;
   height: 3rem; }
-/* line 54, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .widget_search .widget_cr {
   padding: 0; }
-/* line 61, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 71, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js.hs-viewport--narrow .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }
-/* line 83, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js.hs-viewport--wide .masthead_sidebar .search_comp {
   width: 20rem; }
-/* line 97, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
   padding-left: 3rem; }
-/* line 109, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-template__search--poppy-seeds.modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .widget_search {
   display: block; }
 
-/* line 120, sass/default/elements/templates/_search-poppy-seeds.scss */
 .hs-state__search_poppy-seeds--inactive {
   transition: all 1s ease; }
-  /* line 133, sass/default/elements/templates/_search-poppy-seeds.scss */
   .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-input_field {
     position: absolute;
     top: 0;
     right: 0; }
 
-/* line 166, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
   padding-right: 3rem; }
-/* line 172, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-axn_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 179, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
   padding: .5rem 1rem;
   padding-right: 3rem;
   height: 3rem; }
-/* line 193, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
   position: absolute;
   top: 0;
   right: 100%; }
-/* line 208, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js.hs-viewport--narrow .hs-state__search_poppy-seeds--active .web-product-header_comp {
   visibility: hidden; }
-/* line 218, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .search_comp {
   z-index: 990; }
-/* line 223, sass/default/elements/templates/_search-poppy-seeds.scss */
 .modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .primary-nav-masthead-sidebar-toggle_axn {
   z-index: 1000; }
 
-/* line 8, sass/default/elements/templates/_show-top-mushroom.scss */
 .hs-template__show-top--mushroom.modernizr--js .show-top_comp {
   position: fixed;
   right: 0;
   bottom: -3rem;
   transition: bottom .5s ease-in-out; }
-/* line 19, sass/default/elements/templates/_show-top-mushroom.scss */
 .hs-template__show-top--mushroom.modernizr--js .hs-state__show-top--active .show-top_comp {
   display: block;
   bottom: 0;
   z-index: 1000; }
 
-/* line 7, sass/default/elements/templates/themes/_primary-navigation-vines.scss */
-.hs-template__primary-nav--vines .primary-nav_ct .children,
-.hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
+.hs-template__masthead--default .masthead_cr {
+  min-height: 3rem; }
+.hs-template__masthead--default .web-product-header_cr {
+  display: table;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+  word-wrap: break-word; }
+  .hs-template__masthead--default .web-product-header_cr .web-product_name {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1; }
+  .hs-template__masthead--default .web-product-header_cr .web-product-name_axn {
+    padding: 1.5rem;
+    text-decoration: none; }
+.hs-template__masthead--default.hs-viewport--narrow .web-product-header_cr {
+  text-align: center; }
+.hs-template__masthead--default.hs-viewport--narrow .web-product-name_axn {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+
+.hs-template__primary-nav--vines .hs-viewport--wide .primary-nav_ct .children,
+.hs-template__primary-nav--vines .hs-viewport--wide .primary-nav_ct .sub-menu {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 
-/* line 29, sass/default/elements/themes/_hopscotch.scss */
+.hs-template__masthead--default .web-product-header_name {
+  font-size: 1.5rem; }
+
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name,
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct,
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr,
@@ -1371,13 +1184,13 @@ tbody tr {
 .hs-theme--hopscotch.hs-viewport--narrow .web-product-page-nav_cr,
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr {
   text-align: center; }
-/* line 36, sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-banner_comp {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
-/* line 44, sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .author-avatar_cr {
   display: inline-block;
   border-radius: 50%;
   overflow: hidden;
   vertical-align: middle; }
+
+/*# sourceMappingURL=default.css.map */

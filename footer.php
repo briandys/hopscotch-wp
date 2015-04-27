@@ -37,7 +37,39 @@
                             </div>
                         </div><!-- show-top_comp -->
                         
-                        <?php get_template_part( 'components/web-product-info' ); ?>
+                        <!--
+                        Component: Web Product Info
+                        Class: web-product-info_comp
+                        -->
+                        <div class="comp web-product-info_comp">
+                            <div class="cr web-product-info_cr">
+
+                                <!--
+                                Component: Web Product Theme Info
+                                Class: web-product-theme-info_comp
+                                -->
+                                <div class="comp web-product-theme-info_comp">
+                                    <div class="cr web-product-theme-info_cr">
+                                        <p class="label web-product-theme-info_label">
+                                            <?php get_template_part( 'components/web-product-theme-info' ); ?>                                            
+                                        </p>
+                                    </div>
+                                </div><!-- web-product-theme-info_comp -->
+
+                                <!--
+                                Component: Copyright
+                                Class: copyright_comp
+                                -->
+                                <div class="comp copyright-info_comp">
+                                    <div class="cr copyright-info_cr">
+                                        <p class="label copyright-info_label">
+                                            <?php get_template_part( 'components/copyright-info' ); ?>
+                                        </p>
+                                    </div>
+                                </div><!-- copyright_comp -->
+
+                            </div>
+                        </div><!-- web-product-info_comp -->
                         
                     </div><!-- colophon_ct -->
                 </section>

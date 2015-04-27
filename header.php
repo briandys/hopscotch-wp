@@ -49,7 +49,7 @@
         
         <!--[if lt IE 8]>
         <div class="notice browser-upgrade_notice">
-            <div class="notice_cr">
+            <div class="cr notice_cr">
                 <p><?php $url = 'http://browsehappy.com/'; echo sprintf( __( 'You are using an <strong>outdated</strong> browser. Please <a href="%s">upgrade your browser</a> to improve your experience.', 'hopscotch' ), esc_url( $url ) ); ?></p>
             </div>
         </div>
@@ -81,8 +81,8 @@
                     -->
                     <div class="comp web-product-header_comp">
                         <div class="cr web-product-header_cr">
-                            <h1 class="web-product_name">
-                                <a class="axn web-product-name_axn" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Home">
+                            <h1 class="web-product_name web-product-header_name">
+                                <a class="axn web-product-name_axn web-product-header-name_axn" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Home">
                                     <span class="label web-product-name_label"><?php bloginfo( 'name' ); ?></span>
                                 </a>
                             </h1>

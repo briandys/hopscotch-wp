@@ -6,7 +6,8 @@
 if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
 	function hopscotch_ui_settings_templates_html_class() {
         
-        echo ' hs-template__web-product-header--default';
+        // Masthead
+        echo ' hs-template__masthead--default';
         
         // Primary Navigation
         // echo ' hs-template__primary-nav--default';
@@ -22,18 +23,17 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         
         // Show Top
         // echo ' hs-template__show-top--default';
-        echo ' hs-template__show-top--mushroom';
-    
+        echo ' hs-template__show-top--mushroom';    
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_templates_html_class');
 endif;
 
 // Theme
-if ( ! function_exists( 'hopscotch_ui_settings_theme_html_class' ) ) :
-	function hopscotch_ui_settings_theme_html_class() {
+if ( ! function_exists( 'hopscotch_ui_settings_themes_html_class' ) ) :
+	function hopscotch_ui_settings_themes_html_class() {
         
+        // Main Theme Class
         echo ' hs-theme--hopscotch';
-    
     }
-    add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_theme_html_class');
+    add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_themes_html_class');
 endif;

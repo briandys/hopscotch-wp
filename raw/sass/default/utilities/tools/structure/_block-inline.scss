@@ -1,9 +1,0 @@
-//------------------------- Inline Blocker
-@mixin block-inline {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-%block-inline {
-    @include block-inline;
-}

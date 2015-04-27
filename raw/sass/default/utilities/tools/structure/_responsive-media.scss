@@ -1,9 +1,0 @@
-//------------------------- Responsive Media
-@mixin responsive-media {
-    max-width: 100%;
-    height: auto;
-}
-
-%responsive-media {
-    @include responsive-media;
-}

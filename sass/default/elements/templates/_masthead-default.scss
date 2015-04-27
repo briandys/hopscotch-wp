@@ -1,0 +1,58 @@
+// Custom Default
+.hs-template__masthead--default
+{
+    // Masthead
+    .masthead_cr
+    {
+        min-height: $utility-block;
+    }
+    
+    // Web Product Header            
+    .web-product-header_comp
+    {        
+        // height: $utility-block;
+        // overflow: hidden;
+    }
+    
+    .web-product-header_cr
+    {
+        display: table;
+        width: 100%;
+        height: $utility-block;
+        overflow: hidden;
+        
+        word-wrap: break-word;
+
+        .web-product_name
+        {
+            display: table-cell;
+            vertical-align: middle;
+            
+            // Reset
+            line-height: 1;
+        }
+        
+        .web-product-name_axn
+        {
+            padding: $gutter;
+            text-decoration: none;
+        }
+    }
+    
+    // Narrow Viewport
+    &.hs-viewport--narrow
+    {  
+        // Web Product Header            
+        .web-product-header_cr
+        {
+            text-align: center;
+        }
+        
+        .web-product-name_axn
+        {   
+            // Counter-Effect
+            margin-left: -$gutter;
+            margin-right: -$gutter;
+        }
+    }
+}

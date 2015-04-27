@@ -139,13 +139,17 @@ Class: article-entry_comp
                         endif;
                     
                     // Without Post
-                    else :
+                    elseif ( has_excerpt() ) :
                         
-                        // With Excerpt
-                        if ( has_excerpt() ) :
-                            the_excerpt();
-                        endif;
-                    endif;
+                        // With Excerpt                        
+                        the_excerpt();
+                    else : ?>
+                        <div class="notice blank_notice article-entry-blank_notice">
+                            <div class="cr notice_cr">
+                                <p><?php _e( 'Blank', 'hopscotch' ); ?></p>
+                            </div>
+                        </div>
+                    <?php endif;
                 
                 // Search and Author
                 elseif ( is_archive() || is_search() || is_author() ) :
