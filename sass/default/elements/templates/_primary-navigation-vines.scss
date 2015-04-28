@@ -11,8 +11,6 @@
 
         li
         {
-            display: table;
-            // height: 100%;
             word-break: break-all;
         }
         
@@ -30,7 +28,13 @@
         a
         {
             display: table-cell;
-            padding: $block-xxs $gutter;
+            
+            // Ensure that top and bottom padding are zero because there is height declared
+            padding: 0 $gutter;
+            
+            // Either use height + table-cell or top and bottom padding + display: inline/block to increase the active area of an element
+            height: $utility-block;
+            
             vertical-align: middle;
             line-height: 1;
         }
@@ -142,8 +146,10 @@
                 width: 100%;
             }
 
+            // All nav items
             li
             {
+                display: table;
                 width: 100%;
             }
         }
@@ -165,8 +171,8 @@
                     
                 }
                 
-                > .page_item_has_children > .children,
-                > .menu-item-has-children > .sub-menu                
+                > .page_item_has_children .children,
+                > .menu-item-has-children .sub-menu                
                 {
                     position: absolute;
                     width: auto;

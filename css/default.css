@@ -1026,7 +1026,6 @@ tbody tr {
   display: block; }
 
 .hs-template__primary-nav--vines .primary-nav_ct li {
-  display: table;
   word-break: break-all; }
 .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children,
 .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children {
@@ -1036,7 +1035,8 @@ tbody tr {
     padding-right: 3rem; }
 .hs-template__primary-nav--vines .primary-nav_ct a {
   display: table-cell;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
+  height: 3rem;
   vertical-align: middle;
   line-height: 1; }
 .hs-template__primary-nav--vines .primary-nav_ct .children li,
@@ -1067,12 +1067,13 @@ tbody tr {
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct a {
   width: 100%; }
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li {
+  display: table;
   width: 100%; }
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
-.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children > .children,
-.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children > .sub-menu {
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children .children,
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children .sub-menu {
   position: absolute;
   width: auto;
   white-space: nowrap; }
@@ -1151,9 +1152,7 @@ tbody tr {
 .hs-template__masthead--default .web-product-header_cr {
   display: table;
   width: 100%;
-  height: 3rem;
-  overflow: hidden;
-  word-wrap: break-word; }
+  word-break: break-all; }
   .hs-template__masthead--default .web-product-header_cr .web-product_name {
     display: table-cell;
     vertical-align: middle;
@@ -1162,13 +1161,14 @@ tbody tr {
     padding: 1.5rem;
     text-decoration: none; }
 .hs-template__masthead--default.hs-viewport--narrow .web-product-header_cr {
+  height: 3rem;
   text-align: center; }
 .hs-template__masthead--default.hs-viewport--narrow .web-product-name_axn {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
 
-.hs-template__primary-nav--vines .hs-viewport--wide .primary-nav_ct .children,
-.hs-template__primary-nav--vines .hs-viewport--wide .primary-nav_ct .sub-menu {
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children,
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 

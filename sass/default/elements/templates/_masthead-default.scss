@@ -18,10 +18,7 @@
     {
         display: table;
         width: 100%;
-        height: $utility-block;
-        overflow: hidden;
-        
-        word-wrap: break-word;
+        word-break: break-all;
 
         .web-product_name
         {
@@ -45,6 +42,7 @@
         // Web Product Header            
         .web-product-header_cr
         {
+            height: $utility-block;
             text-align: center;
         }
         
