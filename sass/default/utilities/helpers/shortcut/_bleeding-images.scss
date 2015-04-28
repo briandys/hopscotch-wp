@@ -1,0 +1,12 @@
+// Bleeding Images
+// Images that touch the horizontal edge of the container
+
+@mixin hs-template--bleeding-images
+{
+    .article-entry-banner_comp
+    {
+        // Offset (must be equal to the padding size)
+        margin-left: -$gutter;
+        margin-right: -$gutter;
+    }
+}

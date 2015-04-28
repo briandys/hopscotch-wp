@@ -1,49 +1,13 @@
 .hs-theme--hopscotch
 {
-    // Reset: Unlist
-    .article-entry-comments-actions_grp,
-    .article-entry-nav_grp,
-    .comment-entry-axn_grp,
-    .article-entry-admin_grp,
-    .comment-entry-admin_grp,
-    .comment-form-admin-actions_grp,
-    .primary-nav_ct ul
-    {
-        @extend %hs-reset--unlist !optional;
-    }
+    @include hs-template--unlist;
     
-    // Narrow Viewport
-    // Choose if Media Query or Class-based
     &.hs-viewport--narrow
     {
-        // Center Text
-        .article-entry-title_name,
-        .article-entry-hr_ct,
-        .article-entry-fr_cr,
-        .article-entry-nav_grp,
-        .web-product-info_cr,
-        .article-entry-admin_cr,
-        .web-product-page-nav_cr,
-        .article-entry-page-nav_cr
-        {
-            text-align: center;
-        }
+        @include hs-template--center-text;
     }
 
-    // Bleeding Featured Images
-    .article-entry-banner_comp
-    {
-        // Offset (must be equal to the padding size)
-        margin-left: -$gutter;
-        margin-right: -$gutter;
-    }
+    @include hs-template--bleeding-images;
     
-    // Rounded Avatars
-    .author-avatar_cr
-    {
-        display: inline-block;
-        border-radius: 50%;
-        overflow: hidden;
-        vertical-align: middle;
-    }
+    @include hs-template--rounded-images;
 }

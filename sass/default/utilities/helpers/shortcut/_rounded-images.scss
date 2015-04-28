@@ -1,0 +1,12 @@
+// Rounded Images
+
+@mixin hs-template--rounded-images
+{
+    .author-avatar_cr
+    {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+}

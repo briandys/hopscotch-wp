@@ -1148,10 +1148,12 @@ tbody tr {
   z-index: 1000; }
 
 .hs-template__masthead--default .masthead_cr {
-  min-height: 3rem; }
+  min-height: 3rem;
+  overflow-y: hidden; }
 .hs-template__masthead--default .web-product-header_cr {
   display: table;
   width: 100%;
+  min-height: 3rem;
   word-break: break-all; }
   .hs-template__masthead--default .web-product-header_cr .web-product_name {
     display: table-cell;
@@ -1161,7 +1163,6 @@ tbody tr {
     padding: 1.5rem;
     text-decoration: none; }
 .hs-template__masthead--default.hs-viewport--narrow .web-product-header_cr {
-  height: 3rem;
   text-align: center; }
 .hs-template__masthead--default.hs-viewport--narrow .web-product-name_axn {
   margin-left: -1.5rem;
@@ -1172,6 +1173,8 @@ tbody tr {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 
+.hs-template__masthead--default .web-product-header_cr {
+  background-color: red; }
 .hs-template__masthead--default .web-product-header_name {
   font-size: 1.5rem; }
 

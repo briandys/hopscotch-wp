@@ -1,0 +1,17 @@
+// Center Text
+// Places the text of a content at the center of the container
+
+@mixin hs-template--center-text
+{
+    .article-entry-title_name,
+    .article-entry-hr_ct,
+    .article-entry-fr_cr,
+    .article-entry-nav_grp,
+    .web-product-info_cr,
+    .article-entry-admin_cr,
+    .web-product-page-nav_cr,
+    .article-entry-page-nav_cr
+    {
+        text-align: center;
+    }
+}

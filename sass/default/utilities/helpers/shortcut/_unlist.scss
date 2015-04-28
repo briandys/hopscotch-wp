@@ -1,0 +1,16 @@
+// Reset: Unlist
+// Removes the bullet points or numbers of lists, along with its spaces
+
+@mixin hs-template--unlist
+{
+    .article-entry-comments-actions_grp,
+    .article-entry-nav_grp,
+    .comment-entry-axn_grp,
+    .article-entry-admin_grp,
+    .comment-entry-admin_grp,
+    .comment-form-admin-actions_grp,
+    .primary-nav_ct ul
+    {
+        @extend %hs-reset--unlist !optional;
+    }
+}
