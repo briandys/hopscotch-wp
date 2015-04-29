@@ -32,8 +32,8 @@
     // Immediate Elements
     >
     {
-        // All
-        *:not(table)
+        // All and Exceptions
+        *:not( table ):not( .gallery )
         {
             padding-left: $gutter;
             padding-right: $gutter;

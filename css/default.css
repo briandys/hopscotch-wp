@@ -619,13 +619,12 @@ button, input[type='submit'], input[type='password'], input[type='reset'], input
   padding: 0;
   border: 0; }
 
-.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp,
-.hs-theme--hopscotch .article-entry-nav_grp,
-.hs-theme--hopscotch .comment-entry-axn_grp,
-.hs-theme--hopscotch .article-entry-admin_grp,
-.hs-theme--hopscotch .comment-entry-admin_grp,
-.hs-theme--hopscotch .comment-form-admin-actions_grp,
-.hs-theme--hopscotch .primary-nav_ct ul {
+.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .article-entry-comments-actions_grp,
+.comment-entry-axn_grp,
+.article-entry-admin_grp,
+.comment-entry-admin_grp,
+.comment-form-admin-actions_grp,
+.primary-nav_ct ul {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -802,7 +801,7 @@ tbody tr {
   margin-top: 0; }
 .entry-ct_cr *:last-child {
   margin-bottom: 0; }
-.entry-ct_cr > *:not(table) {
+.entry-ct_cr > *:not(table):not(.gallery) {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 .entry-ct_cr > ul,
@@ -971,10 +970,6 @@ tbody tr {
 .notice_cr {
   padding: 1rem 1.5rem; }
 
-.format-gallery .gallery {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
-
 .gallery-item {
   margin: 0;
   display: inline-block;
@@ -1027,21 +1022,18 @@ tbody tr {
 
 .hs-template__primary-nav--vines .primary-nav_ct li {
   word-break: break-all; }
+  .hs-template__primary-nav--vines .primary-nav_ct li a {
+    display: table-cell;
+    padding: 0 1.5rem;
+    height: 3rem;
+    vertical-align: middle;
+    line-height: 1; }
 .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children,
 .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children {
   position: relative; }
   .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children > a,
   .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3rem; }
-.hs-template__primary-nav--vines .primary-nav_ct a {
-  display: table-cell;
-  padding: 0 1.5rem;
-  height: 3rem;
-  vertical-align: middle;
-  line-height: 1; }
-.hs-template__primary-nav--vines .primary-nav_ct .children li,
-.hs-template__primary-nav--vines .primary-nav_ct .sub-menu li {
-  padding-left: 1.5rem; }
 .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
 .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn {
@@ -1064,11 +1056,11 @@ tbody tr {
     transition: transform .2s; }
 .hs-template__primary-nav--vines .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
-.hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct a {
-  width: 100%; }
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li {
   display: table;
   width: 100%; }
+  .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li a {
+    width: 100%; }
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
@@ -1148,8 +1140,7 @@ tbody tr {
   z-index: 1000; }
 
 .hs-template__masthead--default .masthead_cr {
-  min-height: 3rem;
-  overflow-y: hidden; }
+  min-height: 3rem; }
 .hs-template__masthead--default .web-product-header_cr {
   display: table;
   width: 100%;
@@ -1173,8 +1164,6 @@ tbody tr {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 
-.hs-template__masthead--default .web-product-header_cr {
-  background-color: red; }
 .hs-template__masthead--default .web-product-header_name {
   font-size: 1.5rem; }
 

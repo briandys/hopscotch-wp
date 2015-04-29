@@ -12,6 +12,20 @@
         li
         {
             word-break: break-all;
+            
+            a
+            {
+                display: table-cell;
+
+                // Ensure that top and bottom padding are zero because there is height declared
+                padding: 0 $gutter;
+
+                // Either use height + table-cell or top and bottom padding + display: inline/block to increase the active area of an element
+                height: $utility-block;
+
+                vertical-align: middle;
+                line-height: 1;
+            }
         }
         
         .page_item_has_children,
@@ -25,30 +39,10 @@
             }
         }
 
-        a
-        {
-            display: table-cell;
-            
-            // Ensure that top and bottom padding are zero because there is height declared
-            padding: 0 $gutter;
-            
-            // Either use height + table-cell or top and bottom padding + display: inline/block to increase the active area of an element
-            height: $utility-block;
-            
-            vertical-align: middle;
-            line-height: 1;
-        }
-
         .children,
         .sub-menu
         {
             @extend %hs-patch--hidden !optional;
-
-            li
-            {
-                // Indentation for sub-menu items
-                padding-left: $gutter;
-            }
             
             // Do not show sibling of active nav item
             > .hs-type__primary-nav-item_tree--inactive-sibling
@@ -141,16 +135,15 @@
     {
         .primary-nav_ct
         {
-            a
-            {
-                width: 100%;
-            }
-
-            // All nav items
             li
             {
                 display: table;
                 width: 100%;
+                
+                a
+                {
+                    width: 100%;
+                }
             }
         }
     }
@@ -167,8 +160,7 @@
                 {
                     // Juxtapose
                     display: inline-block;
-                    vertical-align: top;
-                    
+                    vertical-align: top;                    
                 }
                 
                 > .page_item_has_children .children,

@@ -608,7 +608,7 @@ button, input[type='submit'], input[type='password'], input[type='reset'], input
   border: 0; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/reset/_unlist.scss */
-.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-theme--hopscotch .article-entry-comments-actions_grp, .hs-theme--hopscotch .article-entry-nav_grp, .hs-theme--hopscotch .comment-entry-axn_grp, .hs-theme--hopscotch .article-entry-admin_grp, .hs-theme--hopscotch .comment-entry-admin_grp, .hs-theme--hopscotch .comment-form-admin-actions_grp, .hs-theme--hopscotch .primary-nav_ct ul {
+.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .article-entry-comments-actions_grp, .comment-entry-axn_grp, .article-entry-admin_grp, .comment-entry-admin_grp, .comment-form-admin-actions_grp, .primary-nav_ct ul {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -644,7 +644,7 @@ svg.icon, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .sea
   .article-entry-image-caption_cr > *:last-child, .wp-caption-text > *:last-child {
     margin-bottom: 0; }
 
-/* line 3, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/objects/_all.scss */
+/* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/objects/_all.scss */
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
@@ -813,7 +813,7 @@ tbody tr {
 .entry-ct_cr *:last-child {
   margin-bottom: 0; }
 /* line 36, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_entry.scss */
-.entry-ct_cr > *:not(table) {
+.entry-ct_cr > *:not(table):not(.gallery) {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 /* line 44, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_entry.scss */
@@ -1010,43 +1010,38 @@ tbody tr {
 .notice_cr {
   padding: 1rem 1.5rem; }
 
-/* line 3, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
-.format-gallery .gallery {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
-
-/* line 11, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+/* line 1, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
 .gallery-item {
   margin: 0;
   display: inline-block;
   padding: 1.5rem;
   width: 100%;
   vertical-align: top; }
-  /* line 23, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 13, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-1 .gallery-item {
     max-width: 100%; }
-  /* line 28, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 18, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-2 .gallery-item {
     max-width: 50%; }
-  /* line 33, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 23, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-3 .gallery-item {
     max-width: 33.33%; }
-  /* line 38, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 28, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-4 .gallery-item {
     max-width: 25%; }
-  /* line 43, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 33, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-5 .gallery-item {
     max-width: 20%; }
-  /* line 48, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 38, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-6 .gallery-item {
     max-width: 16.66%; }
-  /* line 53, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 43, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-7 .gallery-item {
     max-width: 14.28%; }
-  /* line 58, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 48, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-8 .gallery-item {
     max-width: 12.5%; }
-  /* line 63, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
+  /* line 53, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/wordpress/_gallery.scss */
   .gallery-columns-9 .gallery-item {
     max-width: 11.11%; }
 
@@ -1085,33 +1080,30 @@ tbody tr {
 
 /* line 12, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct li {
-  display: table;
   word-break: break-all; }
-/* line 20, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+  /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+  .hs-template__primary-nav--vines .primary-nav_ct li a {
+    display: table-cell;
+    padding: 0 1.5rem;
+    height: 3rem;
+    vertical-align: middle;
+    line-height: 1; }
+/* line 32, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children, .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children {
   position: relative; }
-  /* line 24, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+  /* line 36, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
   .hs-template__primary-nav--vines .primary-nav_ct .page_item_has_children > a, .hs-template__primary-nav--vines .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3rem; }
-/* line 30, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
-.hs-template__primary-nav--vines .primary-nav_ct a {
-  display: table-cell;
-  padding: 1rem 1.5rem;
-  vertical-align: middle;
-  line-height: 1; }
-/* line 43, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
-.hs-template__primary-nav--vines .primary-nav_ct .children li, .hs-template__primary-nav--vines .primary-nav_ct .sub-menu li {
-  padding-left: 1.5rem; }
-/* line 60, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 58, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-template__primary-nav--vines .primary-nav_ct .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
-/* line 73, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 71, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
   right: 0;
   width: auto; }
-  /* line 91, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+  /* line 89, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
   .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
@@ -1125,29 +1117,30 @@ tbody tr {
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform .2s; }
-/* line 131, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 129, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   transform: rotate(-180deg); }
-/* line 140, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
-.hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct a {
-  width: 100%; }
-/* line 145, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 138, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li {
+  display: table;
   width: 100%; }
-/* line 160, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+  /* line 143, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+  .hs-template__primary-nav--vines.hs-viewport--narrow .primary-nav_ct li a {
+    width: 100%; }
+/* line 159, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
-/* line 169, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
-.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children > .children, .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children > .sub-menu {
+/* line 167, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children .children, .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children .sub-menu {
   position: absolute;
   width: auto;
   white-space: nowrap; }
-/* line 178, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 176, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-sub-nav-toggle_axn {
   top: 50%;
   margin-top: -1.5rem; }
-/* line 189, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 187, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.no-js .page_item_has_children > .children, .hs-template__primary-nav--vines.no-js .menu-item-has-children > .sub-menu {
   display: table-row; }
 
@@ -1234,32 +1227,31 @@ tbody tr {
 /* line 5, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
 .hs-template__masthead--default .masthead_cr {
   min-height: 3rem; }
-/* line 17, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
+/* line 10, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
 .hs-template__masthead--default .web-product-header_cr {
   display: table;
   width: 100%;
-  height: 3rem;
-  overflow: hidden;
-  word-wrap: break-word; }
-  /* line 26, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
+  min-height: 3rem;
+  word-break: break-all; }
+  /* line 17, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
   .hs-template__masthead--default .web-product-header_cr .web-product_name {
     display: table-cell;
     vertical-align: middle;
     line-height: 1; }
-  /* line 35, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
+  /* line 26, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
   .hs-template__masthead--default .web-product-header_cr .web-product-name_axn {
     padding: 1.5rem;
     text-decoration: none; }
-/* line 46, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
+/* line 37, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
 .hs-template__masthead--default.hs-viewport--narrow .web-product-header_cr {
   text-align: center; }
-/* line 51, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
+/* line 42, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
 .hs-template__masthead--default.hs-viewport--narrow .web-product-name_axn {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
 
 /* line 9, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/themes/_primary-navigation-vines.scss */
-.hs-template__primary-nav--vines .hs-viewport--wide .primary-nav_ct .children, .hs-template__primary-nav--vines .hs-viewport--wide .primary-nav_ct .sub-menu {
+.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children, .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 
@@ -1267,14 +1259,14 @@ tbody tr {
 .hs-template__masthead--default .web-product-header_name {
   font-size: 1.5rem; }
 
-/* line 27, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/themes/_hopscotch.scss */
+/* line 13, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_center-text.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-nav_grp, .hs-theme--hopscotch.hs-viewport--narrow .web-product-info_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-admin_cr, .hs-theme--hopscotch.hs-viewport--narrow .web-product-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr {
   text-align: center; }
-/* line 34, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/themes/_hopscotch.scss */
+/* line 6, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_bleeding-images.scss */
 .hs-theme--hopscotch .article-entry-banner_comp {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
-/* line 42, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/themes/_hopscotch.scss */
+/* line 5, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_rounded-images.scss */
 .hs-theme--hopscotch .author-avatar_cr {
   display: inline-block;
   border-radius: 50%;

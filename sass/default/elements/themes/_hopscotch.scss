@@ -1,13 +1,11 @@
 .hs-theme--hopscotch
 {
-    @include hs-template--unlist;
-    
     &.hs-viewport--narrow
     {
-        @include hs-template--center-text;
+        @include hs-rule--center-text;
     }
 
-    @include hs-template--bleeding-images;
+    @include hs-rule--bleeding-images;
     
-    @include hs-template--rounded-images;
+    @include hs-rule--rounded-images;
 }
