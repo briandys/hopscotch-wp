@@ -1,0 +1,61 @@
+// Variables
+$primary-content-comp_width: 62.5%;
+$content-sidebar_width: 100% - $primary-content-comp_width;
+
+$primary-content-cr_width: 100% / 2;
+$content-sidebar_width: ( 100% - $primary-content-cr_width ) / 2;
+$content-sidebar_left-margin: $primary-content-cr_width + $content-sidebar_width;
+
+.content-sidebar_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
+@include media-query( $desktop )
+{
+    .content_ct
+    {
+        @include hs-patch--clearfix;
+        
+        margin: auto;
+        max-width: convertRem( $widescreen );
+    }
+    
+    .primary-content_comp
+    {
+        float: left;
+        width: $primary-content-comp_width;
+    }
+    
+    .content_sidebar
+    {
+        float: left;
+        width: $content-sidebar_width;
+    }
+}
+
+@include media-query( $theater )
+{
+    .content_ct
+    {
+        max-width: convertRem( $theater );
+    }
+    
+    .primary-content_comp
+    {
+        margin-right: -100%;
+        width: 100%;
+    }
+    
+    .primary-content_cr
+    {
+        margin: auto;
+        width: $primary-content-cr_width;
+    }
+    
+    .content_sidebar
+    {
+        margin-left: $content-sidebar_left-margin;
+        width: $content-sidebar_width;
+    }
+}

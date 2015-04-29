@@ -32,11 +32,20 @@
     // Immediate Elements
     >
     {
-        // All and Exceptions
-        *:not( table ):not( .gallery )
+        // All
+        *
         {
             padding-left: $gutter;
             padding-right: $gutter;
+        }
+        
+        // Exceptions
+        table,
+        .gallery
+        {
+            // Reset
+            padding-left: 0;
+            padding-right: 0;
         }
 
         // List

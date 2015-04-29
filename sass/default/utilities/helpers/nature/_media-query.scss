@@ -1,7 +1,7 @@
 // Media Query
 // http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
 
-@mixin hs-nature--media-query( $viewport-width, $limit: min, $dimension: width, $ie9-fix: off ) {
+@mixin media-query( $viewport-width, $limit: min, $dimension: width, $ie9-fix: off ) {
     
     @if $limit == 'max' {
 
