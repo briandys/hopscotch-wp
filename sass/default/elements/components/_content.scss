@@ -1,5 +1,5 @@
 // Variables
-$primary-content-comp_width: 62.5%;
+$primary-content-comp_width: ( 640 / 1024 ) * 100%;
 $content-sidebar_width: 100% - $primary-content-comp_width;
 
 $primary-content-cr_width: 100% / 2;
@@ -11,51 +11,65 @@ $content-sidebar_left-margin: $primary-content-cr_width + $content-sidebar_width
     @extend %hs-patch--visually-hidden !optional;
 }
 
+// Default Max-Width
+.content_cr,
+.web-product-info_cr
+{   
+    margin: auto;
+    max-width: convertRem( $desktop );
+}
+
 @include media-query( $desktop )
 {
-    .content_ct
+    .hs-state__content-sidebar--enabled
     {
-        @include hs-patch--clearfix;
-        
-        margin: auto;
-        max-width: convertRem( $widescreen );
-    }
-    
-    .primary-content_comp
-    {
-        float: left;
-        width: $primary-content-comp_width;
-    }
-    
-    .content_sidebar
-    {
-        float: left;
-        width: $content-sidebar_width;
+        .content_cr,
+        .web-product-info_cr
+        {
+            max-width: convertRem( $widescreen );
+            @include hs-patch--clearfix;
+        }
+
+        .primary-content_comp
+        {
+            float: left;
+            width: $primary-content-comp_width;
+        }
+
+        .content_sidebar
+        {
+            float: left;
+            width: $content-sidebar_width;
+        }
     }
 }
 
 @include media-query( $theater )
 {
-    .content_ct
+    .hs-state__content-sidebar--enabled
     {
-        max-width: convertRem( $theater );
-    }
-    
-    .primary-content_comp
-    {
-        margin-right: -100%;
-        width: 100%;
-    }
-    
-    .primary-content_cr
-    {
-        margin: auto;
-        width: $primary-content-cr_width;
-    }
-    
-    .content_sidebar
-    {
-        margin-left: $content-sidebar_left-margin;
-        width: $content-sidebar_width;
+        .content_cr,
+        .web-product-info_cr
+        {
+            max-width: convertRem( $theater );
+        }
+
+        .primary-content_comp
+        {
+            margin-right: -100%;
+            width: 100%;
+        }
+
+        .primary-content_cr
+        {
+            margin: auto;
+            width: $primary-content-cr_width;
+        }
+
+        .content_sidebar
+        {
+            margin-left: $content-sidebar_left-margin;
+            width: $content-sidebar_width;
+        }
     }
 }
