@@ -804,19 +804,6 @@ tbody tr {
   .hs-state__content-sidebar--enabled .content_sidebar {
     float: left;
     width: 25%; } }
-@media only screen and (min-width: 100rem) {
-  .hs-state__content-sidebar--enabled .content_cr,
-  .hs-state__content-sidebar--enabled .web-product-info_cr {
-    max-width: 100rem; }
-  .hs-state__content-sidebar--enabled .primary-content_comp {
-    margin-right: -100%;
-    width: 100%; }
-  .hs-state__content-sidebar--enabled .primary-content_cr {
-    margin: auto;
-    width: 50%; }
-  .hs-state__content-sidebar--enabled .content_sidebar {
-    margin-left: 75%;
-    width: 25%; } }
 .entry-hr_cr {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
@@ -938,24 +925,10 @@ tbody tr {
   top: 0;
   width: 100%; }
 
-.show-more-content_comp {
-  padding: 0; }
-
-.show-more-content_comp {
-  display: table;
-  height: 3rem;
-  line-height: normal; }
-
 .show-more-content_axn {
   display: table-cell;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  height: 3rem;
   vertical-align: middle; }
-
-.hs-type__article-entry--regular .more-link {
-  display: inline-block;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
 
 .hs-template__show-top--default .show-top_cr {
   padding-left: 1.5rem;
@@ -1107,6 +1080,8 @@ tbody tr {
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children .children,
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children .sub-menu {
   position: absolute;
+  right: 0;
+  min-width: 100%;
   width: auto;
   white-space: nowrap; }
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-sub-nav-toggle_axn {
@@ -1198,6 +1173,20 @@ tbody tr {
 .hs-template__masthead--default.hs-viewport--narrow .web-product-name_axn {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
+
+@media only screen and (min-width: 100rem) {
+  .hs-template__content--hero .hs-state__content-sidebar--enabled .content_cr,
+  .hs-template__content--hero .hs-state__content-sidebar--enabled .web-product-info_cr {
+    max-width: 100rem; }
+  .hs-template__content--hero .hs-state__content-sidebar--enabled .primary-content_comp {
+    margin-right: -100%;
+    width: 100%; }
+  .hs-template__content--hero .hs-state__content-sidebar--enabled .primary-content_cr {
+    margin: auto;
+    width: 50%; }
+  .hs-template__content--hero .hs-state__content-sidebar--enabled .content_sidebar {
+    margin-left: 75%;
+    width: 25%; } }
 
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children,
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu {

@@ -43,33 +43,3 @@ $content-sidebar_left-margin: $primary-content-cr_width + $content-sidebar_width
         }
     }
 }
-
-@include media-query( $theater )
-{
-    .hs-state__content-sidebar--enabled
-    {
-        .content_cr,
-        .web-product-info_cr
-        {
-            max-width: convertRem( $theater );
-        }
-
-        .primary-content_comp
-        {
-            margin-right: -100%;
-            width: 100%;
-        }
-
-        .primary-content_cr
-        {
-            margin: auto;
-            width: $primary-content-cr_width;
-        }
-
-        .content_sidebar
-        {
-            margin-left: $content-sidebar_left-margin;
-            width: $content-sidebar_width;
-        }
-    }
-}

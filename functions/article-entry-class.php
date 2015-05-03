@@ -28,7 +28,7 @@ function hopscotch_entry_add_class( $classes ) {
     
     // Excerpt
     if ( ! has_excerpt() ) :
-        $classes[] = "hs-type__article-entry--regular";
+        $classes[] = "hs-type__article-entry--non-excerpt";
     else :
         $classes[] = "hs-type__article-entry--excerpt";
     endif;

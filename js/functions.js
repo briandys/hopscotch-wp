@@ -340,6 +340,9 @@
             $this.remove();
     } );
     
+    // Name the more-link container
+    $( '.more-link' ).parent( 'p' ).addClass( 'more-link_cr' );
+    
 
     $( document ).ready( function() {
         $window = $( window );

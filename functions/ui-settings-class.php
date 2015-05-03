@@ -23,7 +23,11 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         
         // Show Top
         // echo ' hs-template__show-top--default';
-        echo ' hs-template__show-top--mushroom';    
+        echo ' hs-template__show-top--mushroom';
+        
+        // Content Layout
+        // echo ' hs-template__content--default';
+        echo ' hs-template__content--hero';
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_templates_html_class');
 endif;

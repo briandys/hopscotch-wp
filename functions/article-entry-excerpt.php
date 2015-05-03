@@ -28,6 +28,7 @@ if ( ! function_exists( 'hopscotch_the_excerpt_show_content' ) ) :
             // Component: Show More Content
             // Class: show-more-content_comp
             $more = '<div class="comp show-more-content_comp">';
+            $more .= '<div class="cr show-more-content_cr">';
             $more .= '<a class="axn show-more-content_axn more-link" href="'. get_permalink( $post->ID ) . '" rel="bookmark">';
             $more .= '<span class="label pred_label">';
             $more .= '<span class="label verb_label">' . __( 'Show', 'hopscotch' ) . '</span> ';
@@ -37,6 +38,7 @@ if ( ! function_exists( 'hopscotch_the_excerpt_show_content' ) ) :
             $more .= '<span class="label subj_label article-entry-title_label">' . get_the_title( $post->ID ) . '</span> ';
             $more .= '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>';
             $more .= '</a>';
+            $more .= '</div>';
             $more .= '</div><!-- show-more-content_comp -->';
             return $excerpt_tag . $more;
         endif;

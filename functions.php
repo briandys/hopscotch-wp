@@ -26,7 +26,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/article-ent
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-category.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-tag.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-page-navigation.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/article-excerpt.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-excerpt.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/article-content.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-timestamp.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/article-entry-image.php');

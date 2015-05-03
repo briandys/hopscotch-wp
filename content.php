@@ -121,6 +121,7 @@ Class: article-entry_comp
                     if ( ! has_excerpt() ) :
                         the_content( sprintf( __(
                         '<span class="comp show-more-content_comp">' .
+                        '<span class="cr show-more-content_cr">' .
                         '<span class="axn show-more-content_axn">' .
                         '<span class="label pred_label">' .
                         '<span class="label verb_label">Show</span> ' .
@@ -129,6 +130,7 @@ Class: article-entry_comp
                         '</span>' .
                         '<span class="label subj_label article-entry-title_label">%s</span>' .
                         '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>' .
+                        '</span>' .
                         '</span>' .
                         '</span><!-- show-more-content_comp -->', 'hopscotch' ),
                             the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
