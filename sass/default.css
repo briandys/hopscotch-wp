@@ -967,9 +967,13 @@ tbody tr {
   height: 3rem; }
   /* line 18, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_show-top.scss */
   .show-top_label .arrow-left_icon {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
     transform: rotate(90deg); }
 
-/* line 28, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_show-top.scss */
+/* line 32, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_show-top.scss */
 .show-top_axn {
   display: inline-block; }
 

@@ -938,6 +938,10 @@ tbody tr {
   width: 3rem;
   height: 3rem; }
   .show-top_label .arrow-left_icon {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
     transform: rotate(90deg); }
 
 .show-top_axn {
