@@ -4,7 +4,7 @@
 
 if ( ! function_exists( 'hopscotch_article_entry_tags' ) ) :
     function hopscotch_article_entry_tags() {
-        $tags_list = get_the_tag_list( '', _x( '<span class="sep">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
+        $tags_list = get_the_tag_list( '', _x( '<span class="separator comma_separator">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
         if ( $tags_list ) {
 			
             // Component: Article Entry Tag

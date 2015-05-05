@@ -574,15 +574,15 @@ textarea {
 .hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
   display: none; }
 
-.article-entry_comp:before, .article-entry_comp:after {
+.article-entry_comp:before, .tag_cr:before, .article-entry_comp:after, .tag_cr:after {
   content: " ";
   display: table; }
-.article-entry_comp:after {
+.article-entry_comp:after, .tag_cr:after {
   clear: both; }
 
 legend, .breadcrumb-nav_accessible-name, .comments_accessible-name,
 .comment-entry-axn_accessible-name, .content_hr,
-.primary-content_accessible-name, .content-sidebar_accessible-name, .accessible-name, .article-entry-blank_notice, .article-entry-nav_accessible-name, .page .article-entry_nav, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
+.primary-content_accessible-name, .content-sidebar_accessible-name, .article-entry-blank_notice, .tag_comp .comma_separator, .article-entry-nav_accessible-name, .page .article-entry_nav, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
 .social-nav_accessible-name, .masthead-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
 .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon,
 .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon,
@@ -807,10 +807,6 @@ tbody tr {
 .field {
   margin-top: 1.5rem; }
 
-.entry-hr_cr {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-
 .entry-ct_cr > h1 {
   clear: both; }
 .entry-ct_cr > h2 {
@@ -844,12 +840,43 @@ tbody tr {
 .entry-ct_cr > table td:last-child {
   padding-right: 1.5rem; }
 
-.article-entry-hr_cr,
-.article-entry-fr_cr {
-  padding: 1rem 1.5rem; }
-
 .article-entry-title_name {
   word-wrap: break-word; }
+
+.article-entry-title_name {
+  margin-bottom: 0;
+  padding: 1.5rem; }
+
+.entry-admin_cr,
+.article-entry-author_cr,
+.article-entry-published-timestamp_cr,
+.article-entry-modified-timestamp_cr {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+.tag_cr {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.entry-admin_item a {
+  display: table-cell;
+  height: 3rem;
+  vertical-align: middle; }
+
+.tag_comp a,
+.tag_comp .accessible-name {
+  display: inline-block;
+  margin: .25rem;
+  padding: 0.875rem 1.5rem; }
+.tag_comp .accessible-name {
+  padding-right: 0; }
+
+.tag_cr {
+  margin: -.25rem; }
+
+.article-entry-fr_cr {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
 
 .next-entry_label .subj_label:after,
 .previous-entry_label .subj_label:after {
@@ -871,9 +898,6 @@ tbody tr {
     padding: 1rem;
     width: 3rem;
     height: 3rem; }
-
-.article-entry-tag_cr {
-  margin-top: 1rem; }
 
 .article-entry-image_comp {
   /*
@@ -914,6 +938,9 @@ tbody tr {
 
 .article-entry-image-caption_comp {
   padding: 0; }
+
+.author-avatar_comp {
+  margin-left: .5rem; }
 
 .article-entry-author-avatar_axn {
   display: inline-block;
@@ -1018,6 +1045,10 @@ tbody tr {
 .wp-caption {
   max-width: 100%; }
 
+.notice_cr {
+  border: 1px dotted #808080;
+  border-radius: .125rem; }
+
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
@@ -1113,6 +1144,8 @@ tbody tr {
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
+.hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-input_field {
+  margin-top: 0; }
 .hs-template__search--poppy-seeds.modernizr--js.hs-viewport--narrow .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }

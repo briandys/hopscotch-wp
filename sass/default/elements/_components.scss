@@ -12,9 +12,8 @@
 @import 'components/article-entry-navigation';
 @import 'components/article-entry-page-navigation';
 @import 'components/article-entry-comments-actions';
-@import 'components/article-entry-tag';
 @import 'components/article-entry-image';
-@import 'components/article-entry-avatar';
+@import 'components/author-avatar';
 
 @import 'components/comment-entry-admin-actions';
 
@@ -43,3 +42,7 @@
 // WordPress Components
 @import 'components/wordpress/gallery';
 @import 'components/wordpress/wp-caption';
+
+
+// Theme
+@import 'components/theme/notice';

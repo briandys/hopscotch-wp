@@ -3,12 +3,6 @@
     @extend %hs-patch--clearfix !optional;
 }
 
-.article-entry-hr_cr,
-.article-entry-fr_cr
-{
-    padding: $gutter-xs $gutter;
-}
-
 .article-entry-title_name
 {
     word-wrap: break-word;
@@ -17,4 +11,75 @@
 .article-entry-blank_notice
 {
     @extend %hs-patch--visually-hidden !optional;
+}
+
+.article-entry-title_name
+{
+    // Reset
+    margin-bottom: 0;
+    
+    padding: $gutter;
+}
+
+// Entry Admin
+
+.entry-admin_cr,
+.article-entry-author_cr,
+.article-entry-published-timestamp_cr,
+.article-entry-modified-timestamp_cr
+{
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+.tag_cr
+{
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+}
+
+.entry-admin_item
+{
+    a
+    {
+        display: table-cell;
+        height: $utility-block;
+        vertical-align: middle;
+    }
+}
+
+.tag_comp
+{
+    a,
+    .accessible-name
+    {
+        display: inline-block;
+        margin: .25rem;
+        padding: .875rem $gutter;
+    }
+    
+    .accessible-name
+    {
+        // Reset
+        padding-right: 0;
+    }
+    
+    .comma_separator
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+}
+
+.tag_cr
+{
+    @extend %hs-patch--clearfix !optional;
+    
+    // Counter-Effect
+    margin: -.25rem;
+}
+
+.article-entry-fr_cr
+{
+    padding-top: $gutter;
+    padding-bottom: $gutter;
 }

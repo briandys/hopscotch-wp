@@ -4,7 +4,7 @@
 
 if ( ! function_exists( 'hopscotch_article_entry_category' ) ) :
     function hopscotch_article_entry_category() {        
-        $categories_list = get_the_category_list( _x( '<span class="sep">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
+        $categories_list = get_the_category_list( _x( '<span class="separator comma_separator">,</span> ', 'Used between list items, there is a space after the comma.', 'hopscotch' ) );
         
         // Component: Article Entry Category Tag
         // Class: article-entry-category_comp

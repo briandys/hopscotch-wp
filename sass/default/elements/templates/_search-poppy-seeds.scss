@@ -61,6 +61,12 @@
             {
                 @include dimensions( 1.25rem );
             }
+            
+            .search-form-input_field
+            {
+                // Reset
+                margin-top: 0;
+            }
         }
         
         // Narrow Viewport
