@@ -1,5 +1,6 @@
 .hs-theme--hopscotch
 {
+    // Initial Settings
     &.hs-viewport--narrow
     {
         @include hs-rule--center-text;
@@ -8,4 +9,10 @@
     @include hs-rule--bleeding-images;
     
     @include hs-rule--rounded-images;
+    
+    // Custom Settings
+    &.html
+    {
+        font-family: Lato, sans-serif;
+    }
 }

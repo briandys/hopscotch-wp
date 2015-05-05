@@ -8,8 +8,8 @@ if ( ! function_exists( 'hopscotch_fonts_url' ) ) :
         $fonts     = array();
         $subsets   = 'latin,latin-ext';
         /* translators: If there are characters in your language that are not supported by Noto Sans, translate this to 'off'. Do not translate into your own language. */
-        if ( 'off' !== _x( 'on', 'Raleway font: on or off', 'hopscotch' ) ) {
-            $fonts[] = 'Raleway:400,600,700';
+        if ( 'off' !== _x( 'on', 'On or Off', 'hopscotch' ) ) {
+            $fonts[] = 'Lato:300,400,700,400italic';
         }
             
         /* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */

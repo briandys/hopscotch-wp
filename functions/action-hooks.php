@@ -15,3 +15,8 @@ function hopscotch_hook_article_entry_banner() {
 function hopscotch_hook_after_the_title() {
     do_action('hopscotch_hook_after_the_title');
 }
+
+// Location: content.php
+function hopscotch_hook_after_the_content() {
+    do_action('hopscotch_hook_after_the_content');
+}

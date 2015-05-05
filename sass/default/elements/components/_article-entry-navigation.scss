@@ -3,6 +3,15 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
+.article-entry_nav
+{
+    // Hide the Entry Navigation on Pages
+    .page &
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+}
+
 .next-entry_label,
 .previous-entry_label
 {

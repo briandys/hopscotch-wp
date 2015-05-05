@@ -13,3 +13,8 @@
 {
     word-wrap: break-word;
 }
+
+.article-entry-blank_notice
+{
+    @extend %hs-patch--visually-hidden !optional;
+}

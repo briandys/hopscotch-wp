@@ -22,7 +22,7 @@ Class: search
                             <span class="label verb_label"><?php _e( 'Search', 'hopscotch'); ?></span>
                             <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
                         </button>
-                        <button id="search-form-reset_axn" class="axn reset_axn search_axn search-form-reset_axn"  type="reset" title="Reset">
+                        <button id="search-form-reset_axn" class="axn reset_axn search-form-reset_axn"  type="reset" title="Reset">
                             <span class="label verb_label"><?php _e( 'Reset', 'hopscotch'); ?></span>
                             <svg class="icon dismiss_icon" width="0" height="0"><use xlink:href="#dismiss_icon"></use></svg>
                         </button>

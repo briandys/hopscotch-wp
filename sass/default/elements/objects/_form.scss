@@ -1,3 +1,15 @@
+#{$text-input-objects},
+.text_input
+{
+    @extend %hs-reset--deflate !optional;
+    
+    padding: .5rem;
+    
+    width: 100%;
+    min-height: 3rem;
+}
+
+
 #{$button-objects}
 {
     @extend %hs-reset--deflate !optional;
@@ -23,4 +35,17 @@
     {
         @extend %hs-nature--cursor-pointer !optional;
     }
+}
+
+
+select
+{
+    width: 100%;
+    min-height: 3rem;
+}
+
+
+legend
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

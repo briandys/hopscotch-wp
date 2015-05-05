@@ -106,10 +106,10 @@ Class: article-entry_comp
 
         
 
-        <div class="ct entry_ct article-entry_ct">            
+        <div class="ct entry_ct article-entry_ct">
             <div class="cr entry-ct_cr article-entry-ct_cr">
-            <?php
             
+            <?php            
             if ( is_category() || is_archive() || is_author() ):
                 the_excerpt();
                 
@@ -157,6 +157,9 @@ Class: article-entry_comp
                     endif;
                 endif;
             endif;
+            
+            // HopScotch Hook: After the_content()
+            hopscotch_hook_after_the_content();
             ?>
             </div>
             

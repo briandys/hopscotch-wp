@@ -3,6 +3,11 @@
 
 .hs-template__content--hero
 {
+    // Variables
+    $primary-content-cr_width: 100% / 2;
+    $content-sidebar_width: ( 100% - $primary-content-cr_width ) / 2;
+    $content-sidebar_left-margin: $primary-content-cr_width + $content-sidebar_width;
+    
     @include media-query( $theater )
     {
         .hs-state__content-sidebar--enabled
