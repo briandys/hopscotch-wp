@@ -6,11 +6,16 @@ table
 th,
 td
 {
-    padding: $gutter-xxs;
+    padding: $gutter-xs;
     height: $block;
 }
 
 th
 {
     text-align: left;
+    
+    thead &
+    {
+        vertical-align: bottom;
+    }
 }

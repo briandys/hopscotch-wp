@@ -1,4 +1,21 @@
+.notice
+{
+    margin-bottom: $gutter-l;
+    
+    &:last-child
+    {
+        // Counter-Effect
+        margin-bottom: 0;
+    }
+    
+    p:last-of-type
+    {
+        // Counter-Effect
+        margin-bottom: 0;
+    }
+}
+
 .notice_cr
 {
-    padding: $gutter-xs $gutter;
+    padding: $gutter-xs $gutter-s;
 }

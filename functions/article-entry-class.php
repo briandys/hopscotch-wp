@@ -5,7 +5,7 @@ function hopscotch_entry_add_class( $classes ) {
 	global $post;
     
     // Slug
-    $classes[] = 'hopscotch--' . $post->post_name;
+    $classes[] = 'hs-name__entry--' . $post->post_name;
     
     // Info Card Template
     if ( is_page_template( 'template-info-card.php' ) )

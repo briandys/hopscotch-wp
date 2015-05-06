@@ -1,4 +1,10 @@
 .field
 {
     margin-top: $gutter;
+    
+    &:first-of-type
+    {
+        // Reset
+        margin-top: 0;
+    }
 }

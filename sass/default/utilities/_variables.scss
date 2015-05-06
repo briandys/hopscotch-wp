@@ -19,10 +19,10 @@ $block-xs: convertRem( $px-size-block-xs );
 $block-s: convertRem( $px-size-block-s );
 $block: convertRem( $px-size-block );
 
-$gutter-xxs: $block-xxxs;
-$gutter-xs: $block-xxs;
-$gutter-s: $block-xs;
+$gutter-xs: $block-xxxs;
+$gutter-s: $block-xxs;
 $gutter: $block-xs;
+$gutter-l: $block-s;
 
 $utility-block: $block;
 $text-block: $block-xxs;
