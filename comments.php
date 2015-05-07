@@ -28,7 +28,7 @@ Class: comments_comp
             -->
             <div class="comp comments-count_comp">
                 <div class="cr comments-count_cr">
-                    <p>
+                    <p class="note comments-count_note">
                         <?php printf( _nx(
                             
                             // One comment

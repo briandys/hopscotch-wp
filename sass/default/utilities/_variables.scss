@@ -7,18 +7,21 @@ $button-objects: "button, input[type='submit'], input[type='password'], input[ty
 
 $px-size-base: 16;
 
+$px-size-block-ms: $px-size-base * .5;
 $px-size-block-xxxs: $px-size-base * .75;
 $px-size-block-xxs: $px-size-base * 1;
 $px-size-block-xs: $px-size-base * 1.5;
 $px-size-block-s: $px-size-base * 2;
 $px-size-block: $px-size-base * 3;
 
+$block-ms: convertRem( $px-size-block-ms );
 $block-xxxs: convertRem( $px-size-block-xxxs );
 $block-xxs: convertRem( $px-size-block-xxs );
 $block-xs: convertRem( $px-size-block-xs );
 $block-s: convertRem( $px-size-block-s );
 $block: convertRem( $px-size-block );
 
+$gutter-xxs: $block-ms;
 $gutter-xs: $block-xxxs;
 $gutter-s: $block-xxs;
 $gutter: $block-xs;

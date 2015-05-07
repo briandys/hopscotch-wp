@@ -28,6 +28,14 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         // Content Layout
         // echo ' hs-template__content--default';
         echo ' hs-template__content--hero';
+        
+        // Tags (Categories and Tags)
+        // echo ' hs-template__tag--default';
+        // echo ' hs-template__tag--string-beans';
+        
+        // Breadcrumb Navigation
+        // echo ' hs-template__breadcrumb-navigation--default';
+        echo ' hs-template__breadcrumb-navigation--breadings';
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_templates_html_class');
 endif;

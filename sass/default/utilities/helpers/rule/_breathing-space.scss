@@ -1,0 +1,43 @@
+@mixin hs-rule--breathing-space
+{
+    .article-entry-comments-actions_cr,
+    .entry-author_cr,
+    .entry-timestamp_cr,
+    .comment-admin-sign-in_cr,
+    .tag_cr,
+    .article-entry-nav_item,
+    .comment-form .field_cr,
+    .comment-form .form-submit,
+    {
+        padding: $gutter-xxs $gutter;
+    }
+    
+    .entry-admin_cr,
+    .breadcrumb-nav_cr,
+    .comment-form-admin-actions_cr
+    {
+        padding-left: $gutter-xxs;
+        padding-right: $gutter-xxs;
+    }
+    
+    .article-entry-title_axn
+    {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+    
+    .article-entry-fr_cr,
+    .article-entry-nav_cr,
+    .entry-ct_cr,
+    .comment-entry_cr
+    {
+        padding-top: $gutter-xs;
+        padding-bottom: $gutter-xs;
+    }
+    
+    .article-entry_cr
+    {
+        padding-top: $gutter;
+        padding-bottom: $gutter;
+    }
+}

@@ -1,0 +1,39 @@
+// Tag: String Beans
+// Modifies Categories and Tags to have a bigger active area and sit along in a line
+
+.hs-template__tag--string-beans
+{
+    .tag_comp
+    {
+        a,
+        .accessible-name
+        {
+            display: inline-block;
+            margin: .25rem;
+            padding: $gutter-xxs $gutter-xs;
+        }
+
+        .accessible-name
+        {
+            // Counter-Effect
+            margin-left: $gutter-s;
+            padding-left: 0;
+            
+            // Reset
+            padding-right: 0;
+        }
+
+        .comma_separator
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+
+    .tag_cr
+    {
+        @extend %hs-patch--clearfix !optional;
+
+        // Counter-Effect
+        margin: -.25rem;
+    }
+}

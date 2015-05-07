@@ -7,8 +7,8 @@ if ( ! function_exists( 'hopscotch_article_entry_author' ) ) :
         // Component: Article Entry Author
         // Class: article-entry-author_comp
         if ( 'post' == get_post_type() ) {            
-            $author_comp_string = '<div class="comp author_comp article-entry-author_comp">';
-            $author_comp_string .= '<div class="cr author_cr article-entry-author_cr author vcard">';
+            $author_comp_string = '<div class="comp entry-author_comp article-entry-author_comp">';
+            $author_comp_string .= '<div class="cr entry-author_cr article-entry-author_cr author vcard">';
             $author_comp_string .= '<span class="label pred_label">';
             $author_comp_string .= '<span class="label noun_label">Entry</span> ';
             $author_comp_string .= '<span class="label prep_label">by</span> ';

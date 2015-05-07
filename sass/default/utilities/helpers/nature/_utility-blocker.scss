@@ -1,0 +1,12 @@
+@mixin hs-nature--utility-blocker
+{
+    display: table-cell;
+    padding: $gutter-xxs $gutter-s;
+    height: $utility-block;
+    vertical-align: middle;
+}
+
+%hs-nature--utility-blocker
+{
+    @include hs-nature--utility-blocker;
+}

@@ -27,8 +27,8 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                         <div class="comp byline_comp comment-entry-byline_comp">
                             <div class="cr byline_cr comment-entry-byline_cr">
 
-                                <div class="comp author_comp comment-entry-author_comp">
-                                    <div class="author vcard cr author_cr comment-entry-author_cr">
+                                <div class="comp entry-author_comp comment-entry-author_comp">
+                                    <div class="author vcard cr entry-author_cr comment-entry-author_cr">
                                         <span class="label pred_label"><?php _e( 'Comment by', 'hopscotch' ); ?></span>
                                         <span class="label subj_label author-name_label comment-entry-author-name_label"><?php comment_author_link(); ?></span>
                                         <span class="comp author-avatar_comp comment-entry-author-avatar_comp">
@@ -46,8 +46,8 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                 // The date and time the comment was published.
                                 
                                 // Structure
-                                $timestamp_comp_string = '<div class="comp timestamp_comp comment-entry--published--timestamp_comp">';
-                                $timestamp_comp_string .= '<div class="cr timestamp_cr comment-entry--published--timestamp_cr">';
+                                $timestamp_comp_string = '<div class="comp entry-timestamp_comp comment-entry--published--timestamp_comp">';
+                                $timestamp_comp_string .= '<div class="cr entry-timestamp_cr comment-entry--published--timestamp_cr">';
                                 $timestamp_comp_string .= '<span class="label pred_label">%1$s</span> ';
                                 $timestamp_comp_string .= '<a class="timestamp_axn" href="%2$s" title="Comment Permalink on %4$s" rel="bookmark">%3$s</a>';
                                 $timestamp_comp_string .= '</div>';
@@ -97,7 +97,7 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
 
                         <?php if ( $comment->comment_approved == '0' ) : ?>
                         <div class="notice comment-pending_notice">
-                            <div class="cr comment-pending-notice_cr">
+                            <div class="cr notice_cr comment-pending-notice_cr">
                                 <p><?php _e('Thanks! Your comment will be reviewed for approval.', 'hopscotch') ?></p>
                             </div>
                         </div><!-- comment-pending_notice -->

@@ -13,8 +13,8 @@ if ( ! function_exists( 'hopscotch_article_entry_published_timestamp' ) ) :
             // Class: article-entry-published-timestamp_comp
             
             // Structure
-            $timestamp_comp_string = '<div class="comp timestamp_comp article-entry-published-timestamp_comp">';
-            $timestamp_comp_string .= '<div class="cr timestamp_cr article-entry-published-timestamp_cr">';
+            $timestamp_comp_string = '<div class="comp entry-timestamp_comp article-entry-published-timestamp_comp">';
+            $timestamp_comp_string .= '<div class="cr entry-timestamp_cr article-entry-published-timestamp_cr">';
             $timestamp_comp_string .= '<span class="label pred_label">%1$s</span> ';
             $timestamp_comp_string .= '<a class="timestamp_axn" href="%2$s" title="%4$s" rel="bookmark">%3$s</a>';
             $timestamp_comp_string .= '</div>';
@@ -61,8 +61,8 @@ if ( ! function_exists( 'hopscotch_article_entry_modified_timestamp' ) ) :
             // Class: article-entry-modified-timestamp_comp
             
             // Structure
-            $timestamp_comp_string = '<div class="comp timestamp_comp article-entry-modified-timestamp_comp">';
-            $timestamp_comp_string .= '<div class="cr timestamp_cr article-entry-modified-timestamp_cr">';
+            $timestamp_comp_string = '<div class="comp entry-timestamp_comp article-entry-modified-timestamp_comp">';
+            $timestamp_comp_string .= '<div class="cr entry-timestamp_cr article-entry-modified-timestamp_cr">';
             $timestamp_comp_string .= '<span class="label pred_label">%1$s</span> ';
             $timestamp_comp_string .= '<a class="axn timestamp_axn" href="%2$s" title="%4$s" rel="bookmark">%3$s</a>';
             $timestamp_comp_string .= '</div>';

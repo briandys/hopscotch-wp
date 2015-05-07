@@ -1,0 +1,9 @@
+@mixin hs-rule--utility-blocked-actions
+{
+    // Edit Entry Action
+    .entry-admin_item a,
+    .comment-form-admin-actions-sign-out_item a 
+    {
+        @extend %hs-nature--utility-blocker !optional;
+    }
+}
