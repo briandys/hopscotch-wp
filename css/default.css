@@ -1071,7 +1071,7 @@ tbody tr {
   display: block; }
 
 .hs-template__primary-nav--vines .primary-nav_ct li {
-  word-break: break-all; }
+  word-break: break-word; }
   .hs-template__primary-nav--vines .primary-nav_ct li a {
     display: table-cell;
     padding: 0 1.5rem;
@@ -1198,7 +1198,7 @@ tbody tr {
   display: table;
   width: 100%;
   min-height: 3rem;
-  word-break: break-all; }
+  word-break: break-word; }
   .hs-template__masthead--default .web-product-header_cr .web-product_name {
     display: table-cell;
     vertical-align: middle;
@@ -1320,6 +1320,7 @@ tbody tr {
 .hs-theme--hopscotch .comment-entry_cr {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem; }
+.hs-theme--hopscotch .content_cr,
 .hs-theme--hopscotch .article-entry_cr {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }

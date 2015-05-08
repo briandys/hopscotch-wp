@@ -574,15 +574,15 @@ textarea {
   display: none; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/patch/_clearfix.scss */
-.article-entry_comp:before, .tag_cr:before, .article-entry_comp:after, .tag_cr:after {
+.article-entry_comp:before, .hs-template__tag--string-beans .tag_cr:before, .article-entry_comp:after, .hs-template__tag--string-beans .tag_cr:after {
   content: " ";
   display: table; }
 /* line 11, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/patch/_clearfix.scss */
-.article-entry_comp:after, .tag_cr:after {
+.article-entry_comp:after, .hs-template__tag--string-beans .tag_cr:after {
   clear: both; }
 
 /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/patch/_visually-hidden.scss */
-legend, .breadcrumb-nav_accessible-name, .comments_accessible-name, .comment-entry-axn_accessible-name, .content_hr, .primary-content_accessible-name, .content-sidebar_accessible-name, .article-entry-blank_notice, .tag_comp .comma_separator, .article-entry-nav_accessible-name, .page .article-entry_nav, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon, .content_sidebar .dismiss_icon, .colophon_sidebar .search_icon, .colophon_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label, .show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top-label_text, .web-product_desc, .web-product-page_accessible-name, .web-product-page-nav_friendly-name, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-template__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-template__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn .toggle_label, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn .verb_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-submit_axn, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label {
+legend, .breadcrumb-nav_accessible-name, .comments_accessible-name, .comment-entry-axn_accessible-name, .content_hr, .primary-content_accessible-name, .content-sidebar_accessible-name, .article-entry-blank_notice, .article-entry-nav_accessible-name, .page .article-entry_nav, .article-entry-page-nav_accessible-name, .article-entry-comments-actions_accessible-name, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .article-entry-admin_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name, .social-nav_accessible-name, .masthead-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend, .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon, .hs-template__search--default .masthead_sidebar .dismiss_icon, .content_sidebar .search_icon, .content_sidebar .dismiss_icon, .colophon_sidebar .search_icon, .colophon_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label, .show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top-label_text, .web-product_desc, .web-product-page_accessible-name, .web-product-page-nav_friendly-name, .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-template__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-template__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-template__primary-nav--vines .primary-sub-nav-toggle_axn .toggle_label, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn .verb_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-submit_axn, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-template__tag--string-beans .tag_comp .comma_separator {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -608,7 +608,7 @@ input[type='text'], input[type='email'], input[type='search'], input[type='passw
   border: 0; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/reset/_unlist.scss */
-.comments_grp, .article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .article-entry-comments-actions_grp, .comment-entry-axn_grp, .article-entry-admin_grp, .comment-entry-admin_grp, .comment-form-admin-actions_grp, .primary-nav_ct ul {
+.article-entry-nav_grp, .article-entry-page-nav_grp, .web-product-page_nav .page-numbers, .hs-template__primary-nav--vines .primary-nav_ct ul, .hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_grp, .article-entry-comments-actions_grp, .comment-entry-axn_grp, .article-entry-admin_grp, .comment-entry-admin_grp, .comment-form-admin-actions_grp, .primary-nav_ct ul, .comments_grp, .comments_grp .comment .children {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -643,6 +643,13 @@ svg.icon, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .sea
   /* line 10, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/nature/_caption.scss */
   .article-entry-image-caption_cr > *:last-child, .wp-caption-text > *:last-child {
     margin-bottom: 0; }
+
+/* line 9, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/nature/_utility-blocker.scss */
+.hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-theme--hopscotch .entry-admin_item a, .hs-theme--hopscotch .comment-form-admin-actions-sign-out_item a {
+  display: table-cell;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  vertical-align: middle; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/objects/_all.scss */
 * {
@@ -760,20 +767,33 @@ tbody tr {
 .article-entry-banner_comp {
   margin-top: 1.5rem; }
 
-/* line 24, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
-.comments-count_cr, .comment-entry-hr_cr, .comment-entry-ct_cr, .comment-admin_cr, .comment-form .field_cr, .form-submit, .comment-reply-title {
+/* line 3, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+.comments_ct .blank-comments_notice {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+/* line 28, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+.comments-count_cr, .comment-reply-title {
   padding: 0.75rem 1.5rem; }
 
-/* line 36, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+/* line 35, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
 .comment-respond > *:first-child {
   margin-top: 0; }
-/* line 41, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+/* line 40, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
 .comment-respond > *:last-child {
   margin-bottom: 0; }
 
-/* line 48, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+/* line 47, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
 .form-submit, .comment-reply-title {
   margin: 0; }
+
+/* line 52, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+.comment-pending_notice {
+  margin-top: 2rem; }
+
+/* line 59, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_comments.scss */
+.hs-viewport--wide .comments_grp .comment .children {
+  margin-left: 1.5rem; }
 
 /* line 9, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_container.scss */
 .ct > *:first-child, .cr > *:first-child, .hr > *:first-child {
@@ -811,12 +831,9 @@ tbody tr {
     float: left;
     width: 37.5%; } }
 
-/* line 1, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_field.scss */
-.field {
-  margin-top: 1.5rem; }
-  /* line 5, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_field.scss */
-  .field:first-of-type {
-    margin-top: 0; }
+/* line 3, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_field.scss */
+.field:first-of-type {
+  margin-top: 0; }
 
 /* line 7, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_entry.scss */
 .entry-ct_cr > h1 {
@@ -870,50 +887,11 @@ tbody tr {
 
 /* line 22, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
 .article-entry-title_axn {
-  display: inline-block;
-  padding: 1.5rem; }
-
-/* line 33, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.entry-admin_cr, .article-entry-author_cr, .article-entry-published-timestamp_cr, .article-entry-modified-timestamp_cr {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
-
-/* line 39, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.tag_cr {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-
-/* line 47, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.entry-admin_item a {
-  display: table-cell;
-  height: 3rem;
-  vertical-align: middle; }
-
-/* line 58, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.tag_comp a, .tag_comp .accessible-name {
-  display: inline-block;
-  margin: .25rem;
-  padding: .875rem 1.5rem; }
-/* line 65, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.tag_comp .accessible-name {
-  padding-right: 0; }
-
-/* line 77, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.tag_cr {
-  margin: -.25rem; }
-
-/* line 85, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry.scss */
-.article-entry-fr_cr {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
+  display: inline-block; }
 
 /* line 18, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry-navigation.scss */
 .next-entry_label .subj_label:after, .previous-entry_label .subj_label:after {
   content: ':'; }
-
-/* line 29, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry-navigation.scss */
-.article-entry-nav_cr {
-  padding: 0.75rem 1.5rem; }
 
 /* line 13, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_article-entry-page-navigation.scss */
 .article-entry-page-nav_friendly-name, .article-entry-page-nav_grp, .article-entry-page-nav_item {
@@ -1072,7 +1050,7 @@ tbody tr {
 
 /* line 1, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_notice.scss */
 .notice {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
   /* line 5, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/_notice.scss */
   .notice:last-child {
     margin-bottom: 0; }
@@ -1128,6 +1106,11 @@ tbody tr {
   border: 1px dotted #808080;
   border-radius: .125rem; }
 
+/* line 2, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/components/theme/_colophon.scss */
+.web-product-theme-info_label, .copyright-info_label {
+  font-size: .875rem;
+  color: #808080; }
+
 /* line 13, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
@@ -1159,7 +1142,7 @@ tbody tr {
 
 /* line 12, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines .primary-nav_ct li {
-  word-break: break-all; }
+  word-break: break-word; }
   /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
   .hs-template__primary-nav--vines .primary-nav_ct li a {
     display: table-cell;
@@ -1213,15 +1196,14 @@ tbody tr {
 /* line 167, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children .children, .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children .sub-menu {
   position: absolute;
-  right: 0;
   min-width: 100%;
   width: auto;
   white-space: nowrap; }
-/* line 178, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 177, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-sub-nav-toggle_axn {
   top: 50%;
   margin-top: -1.5rem; }
-/* line 189, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
+/* line 188, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.no-js .page_item_has_children > .children, .hs-template__primary-nav--vines.no-js .menu-item-has-children > .sub-menu {
   display: table-row; }
 
@@ -1316,7 +1298,7 @@ tbody tr {
   display: table;
   width: 100%;
   min-height: 3rem;
-  word-break: break-all; }
+  word-break: break-word; }
   /* line 17, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_masthead-default.scss */
   .hs-template__masthead--default .web-product-header_cr .web-product_name {
     display: table-cell;
@@ -1351,6 +1333,53 @@ tbody tr {
     margin-left: 75%;
     width: 25%; } }
 
+/* line 9, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_tag-string-beans.scss */
+.hs-template__tag--string-beans .tag_comp a, .hs-template__tag--string-beans .tag_comp .accessible-name {
+  display: inline-block;
+  margin: .25rem;
+  padding: 0.5rem 0.75rem; }
+/* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_tag-string-beans.scss */
+.hs-template__tag--string-beans .tag_comp .accessible-name {
+  margin-left: 1rem;
+  padding-left: 0;
+  padding-right: 0; }
+/* line 32, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_tag-string-beans.scss */
+.hs-template__tag--string-beans .tag_cr {
+  margin: -.25rem; }
+
+/* line 3, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_breadcrumb-navigation-breadings.scss */
+.hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_grp {
+  display: inline-block; }
+/* line 10, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_breadcrumb-navigation-breadings.scss */
+.hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_item {
+  display: inline-block;
+  margin-left: 1.5rem; }
+/* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_breadcrumb-navigation-breadings.scss */
+.hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_axn {
+  position: relative; }
+  /* line 22, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_breadcrumb-navigation-breadings.scss */
+  .hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_axn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: -1rem;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon-arrow-down.svg );
+    background-size: cover;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+/* line 41, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_breadcrumb-navigation-breadings.scss */
+.hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_cr > .breadcrumb-nav_grp > .breadcrumb-nav_item {
+  margin-left: 0; }
+  /* line 46, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/_breadcrumb-navigation-breadings.scss */
+  .hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_cr > .breadcrumb-nav_grp > .breadcrumb-nav_item > .breadcrumb-nav_axn:after {
+    display: none; }
+
 /* line 9, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/themes/_primary-navigation-vines.scss */
 .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children, .hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu {
   background-color: white;
@@ -1363,6 +1392,11 @@ tbody tr {
 /* line 16, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_center-text.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .article-entry-title_name, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-hr_ct, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-fr_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-nav_grp, .hs-theme--hopscotch.hs-viewport--narrow .web-product-info_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-admin_cr, .hs-theme--hopscotch.hs-viewport--narrow .web-product-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .article-entry-page-nav_cr, .hs-theme--hopscotch.hs-viewport--narrow .web-product-theme-info_label, .hs-theme--hopscotch.hs-viewport--narrow .copyright-info_label, .hs-theme--hopscotch.hs-viewport--narrow .content-hr_accessible-name {
   text-align: center; }
+/* line 8, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-viewport--narrow .article-entry-admin_item {
+  display: table;
+  width: 100%;
+  text-align: center; }
 /* line 6, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_bleeding-images.scss */
 .hs-theme--hopscotch .article-entry-banner_comp {
   margin-left: -1.5rem;
@@ -1373,7 +1407,26 @@ tbody tr {
   border-radius: 50%;
   overflow: hidden;
   vertical-align: middle; }
-/* line 14, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/themes/_hopscotch.scss */
+/* line 10, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_breathing-space.scss */
+.hs-theme--hopscotch .article-entry-comments-actions_cr, .hs-theme--hopscotch .entry-author_cr, .hs-theme--hopscotch .entry-timestamp_cr, .hs-theme--hopscotch .comment-admin-sign-in_cr, .hs-theme--hopscotch .tag_cr, .hs-theme--hopscotch .article-entry-nav_item, .hs-theme--hopscotch .comment-form .field_cr, .hs-theme--hopscotch .comment-form .form-submit {
+  padding: 0.5rem 1.5rem; }
+/* line 17, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_breathing-space.scss */
+.hs-theme--hopscotch .entry-admin_cr, .hs-theme--hopscotch .breadcrumb-nav_cr, .hs-theme--hopscotch .comment-form-admin-actions_cr {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+/* line 23, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_breathing-space.scss */
+.hs-theme--hopscotch .article-entry-title_axn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+/* line 32, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_breathing-space.scss */
+.hs-theme--hopscotch .article-entry-fr_cr, .hs-theme--hopscotch .article-entry-nav_cr, .hs-theme--hopscotch .entry-ct_cr, .hs-theme--hopscotch .comment-entry_cr {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem; }
+/* line 39, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/utilities/helpers/rule/_breathing-space.scss */
+.hs-theme--hopscotch .content_cr, .hs-theme--hopscotch .article-entry_cr {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+/* line 25, C:/xampp/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.html {
   font-family: Lato, sans-serif; }
 
