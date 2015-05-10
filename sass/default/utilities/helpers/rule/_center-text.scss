@@ -3,18 +3,28 @@
 
 @mixin hs-rule--center-text
 {
-    .article-entry-title_name,
-    .article-entry-hr_ct,
-    .article-entry-fr_cr,
-    .article-entry-nav_grp,
-    .web-product-info_cr,
-    .article-entry-admin_cr,
-    .web-product-page-nav_cr,
-    .article-entry-page-nav_cr,
-    .web-product-theme-info_label,
-    .copyright-info_label,
-    .content-hr_accessible-name
+    &.hs-viewport--narrow
     {
-        text-align: center;
+        .article-entry-title_name,
+        .article-entry-hr_ct,
+        .article-entry-fr_cr,
+        .article-entry-nav_grp,
+        .web-product-info_cr,
+        .article-entry-admin_cr,
+        .web-product-page-nav_cr,
+        .article-entry-page-nav_cr,
+        .web-product-theme-info_label,
+        .copyright-info_label,
+        .content-hr_accessible-name
+        {
+            text-align: center;
+        }
+
+        .article-entry-admin_item
+        {
+            display: table;
+            width: 100%;
+            text-align: center;
+        }
     }
 }

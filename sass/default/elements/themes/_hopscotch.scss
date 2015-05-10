@@ -1,24 +1,10 @@
 .hs-theme--hopscotch
 {
-    // Initial Settings
-    &.hs-viewport--narrow
-    {
-        @include hs-rule--center-text;
-        
-        .article-entry-admin_item
-        {
-            display: table;
-            width: 100%;
-            text-align: center;
-        }
-    }
-
+    @include hs-rule--center-text;
+    @include hs-rule--unlist;
     @include hs-rule--bleeding-images;
-    
     @include hs-rule--rounded-images;
-    
     @include hs-rule--breathing-space;
-    
     @include hs-rule--utility-blocked-actions;
     
     // Custom Settings

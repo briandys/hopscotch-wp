@@ -4,17 +4,3 @@
 {
     @extend %hs-patch--visually-hidden !optional;
 }
-
-// Custom Default
-.hs-template__primary-nav--default
-{
-    .children,
-    .sub-menu
-    {
-        li
-        {
-            padding-left: $gutter;
-            padding-right: $gutter;
-        }
-    }
-}

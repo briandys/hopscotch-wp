@@ -1,6 +1,8 @@
 .hs-template__primary-nav-masthead-sidebar--hamburger
 {
     // Default
+    // Hide by default thru CSS
+    // If you hide this under .modernizr--js there might be a FOUC if we don't employ the delayed loading of View
     .primary_nav
     {
         @extend %hs-patch--hidden !optional;
@@ -10,11 +12,13 @@
     &.modernizr--js
     {
         // Default
-        .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
+        .primary-nav-masthead-sidebar-toggle_axn
         {
-            @include dimensions( 1.25rem );
-        }
-        
+            .dismiss_icon
+            {
+                @include dimensions( 1.25rem );
+            }
+        }        
         
         // Inactive
         .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
@@ -132,6 +136,7 @@
         }
     }
     
+    // JS Disabled
     &.no-js
     {
         // Counter-Effect
@@ -143,17 +148,6 @@
         .primary-nav-masthead-sidebar-toggle_axn
         {
             @extend %hs-patch--hidden !optional;
-        }
-        
-        .masthead_sidebar
-        {
-            .search_comp
-            {
-                .search_icon
-                {
-                    @extend %hs-patch--hidden !optional;
-                }
-            }
         }
     }
 }

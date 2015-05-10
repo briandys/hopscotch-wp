@@ -1,14 +1,12 @@
-@import 'templates/primary-navigation-masthead-sidebar-hamburger';
-@import 'templates/primary-navigation-vines';
-@import 'templates/search-poppy-seeds';
-@import 'templates/show-top-mushroom';
-@import 'templates/masthead-default';
-@import 'templates/content-hero';
-@import 'templates/tag-string-beans';
-@import 'templates/breadcrumb-navigation-breadings';
-
-@import 'templates/rules';
+@import 'templates/hamburger-primary-navigation-masthead-sidebar';
+@import 'templates/vines-primary-navigation';
+@import 'templates/poppy-seeds-search';
+@import 'templates/mushroom-show-top';
+@import 'templates/celery-masthead';
+@import 'templates/hero-content';
+@import 'templates/string-beans-tag';
+@import 'templates/breadings-breadcrumb-navigation';
 
 // Themes
-@import 'templates/themes/primary-navigation-vines';
-@import 'templates/themes/masthead-default';
+@import 'templates/theme/vines-primary-navigation';
+@import 'templates/theme/celery-masthead';
