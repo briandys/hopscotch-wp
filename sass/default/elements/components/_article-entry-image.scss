@@ -1,22 +1,16 @@
+/*
 .article-entry-image_comp
 {
-    /*
     // Media Query
     @include media-query( $viewport-narrow, max )
     {
         width: auto !important;
     }
-    */
-    
-    // Responsive Image
-    img    
-    {
-        max-width: 100%;
-        height: auto;
-    }
 }
+*/
 
-.article-entry-banner_comp
+.article-entry-banner_comp,
+.article-entry_ct
 {
     img
     {

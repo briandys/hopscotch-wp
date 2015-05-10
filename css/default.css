@@ -883,19 +883,18 @@ tbody tr {
     width: 3rem;
     height: 3rem; }
 
-.article-entry-image_comp {
-  /*
-  // Media Query
-  @include media-query( $viewport-narrow, max )
-  {
-      width: auto !important;
-  }
-  */ }
-  .article-entry-image_comp img {
-    max-width: 100%;
-    height: auto; }
-
-.article-entry-banner_comp img {
+/*
+.article-entry-image_comp
+{
+    // Media Query
+    @include media-query( $viewport-narrow, max )
+    {
+        width: auto !important;
+    }
+}
+*/
+.article-entry-banner_comp img,
+.article-entry_ct img {
   max-width: 100%;
   height: auto; }
 
