@@ -20,3 +20,8 @@ function hopscotch_hook_after_the_title() {
 function hopscotch_hook_after_the_content() {
     do_action('hopscotch_hook_after_the_content');
 }
+
+// Location: content.php
+function hopscotch_hook_after_modified_timestamp() {
+    do_action('hopscotch_hook_after_modified_timestamp');
+}

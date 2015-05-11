@@ -103,9 +103,6 @@ Class: article-entry_comp
             </div>
         </header>
         
-
-        
-
         <div class="ct entry_ct article-entry_ct">
             <div class="cr entry-ct_cr article-entry-ct_cr">
             
@@ -210,6 +207,11 @@ Class: article-entry_comp
                     // Article Entry Modified Timestamp
                     // Location: functions > article-entry-timestamp.php
                     hopscotch_article_entry_modified_timestamp();
+                    ?>
+                    
+                    <?php
+                    // HopScotch Hook: After Modified Timestamp
+                    hopscotch_hook_after_modified_timestamp();
                     ?>
 
                     <?php

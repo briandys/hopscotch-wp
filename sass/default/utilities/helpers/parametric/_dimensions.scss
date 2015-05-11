@@ -5,12 +5,6 @@
     height: $height;
 }
 
-// Ratios
-// Returns the ratio for specified dimensions
-@function ratio($width, $height) {
-  @return percentage( $height / $width);
-}
-
 @mixin generateRatios($width, $height, $prefix: "ratio-") {
   $class-name: $prefix + $width + "x" + $height;
  

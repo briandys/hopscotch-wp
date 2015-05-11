@@ -1,15 +1,8 @@
 .hs-theme--hopscotch
 {
-    @include hs-rule--center-text;
     @include hs-rule--unlist;
-    @include hs-rule--bleeding-images;
-    @include hs-rule--rounded-images;
-    @include hs-rule--breathing-space;
     @include hs-rule--utility-blocked-actions;
-    
-    // Custom Settings
-    &.html
-    {
-        font-family: Lato, sans-serif;
-    }
+    @include hs-rule--breathing-space;
+    @include hs-rule--center-text;
+    @include hs-rule--rounded-images;
 }

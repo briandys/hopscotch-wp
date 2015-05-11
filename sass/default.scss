@@ -2,11 +2,14 @@
 @import 'default/utilities/h5bp/normalize';
 @import 'default/utilities/h5bp/main';
 
-// Mixins
+// Utilities
 @import 'default/utilities/functions';
 @import 'default/utilities/variables';
 @import 'default/utilities/helpers';
 
+// Visuals
+@import 'default/utilities/visuals/style-variables';
+@import 'default/utilities/visuals/theme';
 
 // Rules
 @import 'default/elements/objects';

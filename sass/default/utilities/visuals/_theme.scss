@@ -1,0 +1,14 @@
+html
+{
+    font-family: $font-family-custom;
+}
+
+a
+{
+    color: $color-link-primary;
+    
+    &:hover
+    {
+        text-decoration: none;
+    }
+}

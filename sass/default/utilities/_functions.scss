@@ -1,7 +1,2 @@
-// Functions
-
-// http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
-@function convertRem( $size ) {
-    $remSize: $size / $px-size-base;
-    @return #{$remSize}rem;
-}
+@import 'functions/convert-rem';
+@import 'functions/ratio';
