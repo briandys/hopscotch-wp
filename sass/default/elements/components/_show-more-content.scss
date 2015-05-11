@@ -13,10 +13,3 @@
         @extend %hs-patch--visually-hidden !optional;
     }
 }
-
-.show-more-content_axn
-{
-    display: table-cell;
-    height: $utility-block;
-    vertical-align: middle;
-}

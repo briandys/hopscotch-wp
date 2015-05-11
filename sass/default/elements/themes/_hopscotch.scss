@@ -1,8 +1,12 @@
 .hs-theme--hopscotch
 {
+    &.hs-viewport--narrow
+    {
+        @include hs-rule--center-text;
+    }
+    
     @include hs-rule--unlist;
     @include hs-rule--utility-blocked-actions;
-    @include hs-rule--breathing-space;
-    @include hs-rule--center-text;
+    @include hs-rule--breathing-space;    
     @include hs-rule--rounded-images;
 }

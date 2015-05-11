@@ -2,7 +2,8 @@
 {
     // Edit Entry Action
     .entry-admin_item a,
-    .comment-form-admin-actions-sign-out_item a 
+    .comment-form-admin-actions-sign-out_item a,
+    .show-more-content_axn
     {
         @extend %hs-nature--utility-blocker !optional;
     }
