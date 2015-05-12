@@ -27,6 +27,10 @@ $gutter-s: $block-xxs;
 $gutter: $block-xs;
 $gutter-l: $block-s;
 
+// 
+$axn-padding: $gutter-xxs $gutter-s;
+$axn-padding-counter: -$gutter-s;
+
 $utility-block: $block;
 $text-block: $block-xxs;
 

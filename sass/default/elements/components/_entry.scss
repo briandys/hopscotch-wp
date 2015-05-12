@@ -9,20 +9,6 @@
         }
     }
     
-    // Clear margin of first and last child
-    *
-    {
-        &:first-child
-        {
-            margin-top: 0;
-        }
-        
-        &:last-child
-        {
-            margin-bottom: 0;
-        }
-    }
-    
     // Immediate Elements
     >
     {
@@ -64,4 +50,36 @@
             }
         }
     }
+}
+
+// Visibility
+.article-entry-comments-actions_accessible-name,
+.article-entry-admin_accessible-name,
+.hs-state__article-entry--blank.hs-type__article-entry--excerpt .article-entry-blank_notice,
+.hs-state__article-entry--blank.hs-type__article-entry--non-excerpt .article-entry_ct,
+.article-entry-page-nav_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
+.article-entry_comp
+{
+    @extend %hs-patch--clearfix !optional;
+}
+
+.article-entry-title_axn
+{
+    .single &,
+    .page &
+    {
+        text-decoration: none;
+    }
+}
+
+.article-entry-title_name
+{
+    word-wrap: break-word;
+
+    // Reset
+    margin-bottom: 0;
 }

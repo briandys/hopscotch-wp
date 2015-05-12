@@ -36,9 +36,3 @@
         @extend %hs-nature--cursor-pointer !optional;
     }
 }
-
-// Show ContStruct Heading when in Search View
-.search .content_hr
-{
-    @extend %hs-patch--visually-hidden-reverse !optional;
-}

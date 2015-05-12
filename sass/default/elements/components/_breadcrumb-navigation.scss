@@ -2,3 +2,11 @@
 {
     @extend %hs-patch--visually-hidden !optional;
 }
+
+.breadcrumb_nav
+{
+    .article-sub-entry_comp &
+    {
+        @extend %hs-patch--hidden !optional;
+    }
+}

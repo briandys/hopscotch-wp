@@ -1,10 +1,40 @@
 @mixin hs-rule--utility-blocked-actions
 {
-    // Edit Entry Action
     .entry-admin_item a,
     .comment-form-admin-actions-sign-out_item a,
-    .show-more-content_axn
+    .show-more-content_axn,
+    .comment-entry-reply-axn_axn-item a,
+    .article-entry-comments-actions_item a
     {
         @extend %hs-nature--utility-blocker !optional;
+    }
+    
+    // Counter-Effect for Utility Blocked Actions
+    .hs-type__article-entry--non-excerpt
+    {
+        .more-link
+        {
+            display: inline-block;
+        }
+        
+        .show-more-content_cr
+        {
+            display: block;
+        }
+    }
+    
+    .hs-type__article-entry--excerpt .show-more-content_cr
+    {
+        display: inline-block;
+    }
+    
+    .entry-admin_grp,
+    .comment-form-admin-actions_grp,
+    .show-more-content_cr,
+    .comment-entry-axn_grp,
+    .article-entry-comments-actions_grp
+    {
+        margin-left: $axn-padding-counter;
+        margin-right: $axn-padding-counter;
     }
 }

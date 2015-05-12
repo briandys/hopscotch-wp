@@ -1,0 +1,11 @@
+@mixin margin-x( $left: 0, $right: $left )
+{
+    margin-left: $left;
+    margin-right: $right;
+}
+
+@mixin margin-y( $top: 0, $bottom: $top )
+{
+    margin-top: $top;
+    margin-bottom: $bottom;
+}

@@ -17,16 +17,9 @@
 
                 a
                 {
-                    display: table-cell;
-
-                    // Ensure that top and bottom padding are zero because there is height declared
-                    padding: 0 $gutter;
-
-                    // Either use height + table-cell or top and bottom padding + display: inline/block to increase the active area of an element
-                    height: $utility-block;
-
-                    vertical-align: middle;
-                    line-height: 1;
+                    @extend %hs-nature--utility-blocker !optional;
+                    
+                    @include padding-x( $gutter );
                 }
             }
 
@@ -51,6 +44,13 @@
                 {
                     @extend %hs-patch--visually-hidden !optional;
                 }
+            }
+        
+            // Current Item Indicator
+            .current_page_item > a
+            {
+                font-weight: bold;
+                text-decoration: none;
             }
 
             // Active

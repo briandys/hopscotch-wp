@@ -13,7 +13,7 @@ function hopscotch_entry_add_class( $classes ) {
     
     // Empty Content
     if( $post->post_content == "" )
-        $classes[] = 'ui-cond__entry--blank';
+        $classes[] = 'hs-state__article-entry--blank';
     
     // Entry Banner (Featured Image)
     if ( has_post_thumbnail() || get_post_meta( get_the_ID(), 'entry-thumbnail', true ) ) :

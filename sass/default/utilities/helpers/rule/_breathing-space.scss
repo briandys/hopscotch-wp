@@ -12,34 +12,32 @@
         padding: $gutter-xxs $gutter;
     }
     
+    .article-entry-title_name,
+    .comment-subscription-form,
     .entry-admin_cr,
+    .comment-form-admin-actions_cr,
     .breadcrumb-nav_cr,
-    .comment-form-admin-actions_cr
+    .web-product-page-nav_cr
     {
-        padding-left: $gutter-xxs;
-        padding-right: $gutter-xxs;
+        @include padding-x( $gutter );
     }
     
-    .article-entry-title_axn,
-    .comment-subscription-form
-    {
-        padding-left: $gutter;
-        padding-right: $gutter;
-    }
-    
-    .article-entry-fr_cr,
-    .article-entry-nav_cr,
     .entry-ct_cr,
+    .content_cr,
+    .article-entry_cr,
+    .web-product-page-nav_cr
+    {
+        @include padding-y( $gutter );
+    }
+    
+    .article-entry-nav_cr,
     .comment-entry_cr
     {
-        padding-top: $gutter-xs;
-        padding-bottom: $gutter-xs;
+        @include padding-y( $gutter-xs );
     }
     
-    .content_cr,
-    .article-entry_cr
+    .content-hr_cr
     {
-        padding-top: $gutter;
-        padding-bottom: $gutter;
+        padding: $gutter;
     }
 }

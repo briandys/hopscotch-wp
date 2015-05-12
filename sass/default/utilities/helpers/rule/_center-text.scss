@@ -13,15 +13,19 @@
     .article-entry-page-nav_cr,
     .web-product-theme-info_label,
     .copyright-info_label,
-    .content-hr_accessible-name
+    .content-hr_accessible-name,
+    .breadcrumb-nav_cr,
+    .comments-count_cr,
+    .comment-admin_cr,
+    .comment-reply-title
     {
         text-align: center;
     }
-
-    .article-entry-admin_item
+    
+    .article-entry-admin_item,
+    .article-entry-comments-actions_item,
+    .comment-form-admin-actions-sign-out_item
     {
-        display: table;
-        width: 100%;
-        text-align: center;
+        display: inline-block;
     }
 }

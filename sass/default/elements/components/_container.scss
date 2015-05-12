@@ -24,7 +24,12 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
-.content-hr_cr
+// Counter-Effect Hidden Headers
+.content_hr
 {
-    padding: $gutter-xs $gutter;
+    .search &,
+    .archive &
+    {
+        @extend %hs-patch--visually-hidden-reverse !optional;
+    }
 }

@@ -91,13 +91,13 @@
                     <?php // Category or Tag Description
                     $term_description = term_description();
                     if( ! empty( $term_description ) ) :
-                        printf( __( '<p class="primary-content_desc">%s</p>', 'hopscotch' ), $term_description );
+                        printf( __( '<p class="desc primary-content_desc">%s</p>', 'hopscotch' ), $term_description );
                     endif;
                     ?>
 
                     <?php // Author Description
                     if ( is_author() && get_the_author_meta( 'description' ) ) :
-                        printf( __( '<p class="primary-content_desc">%s</p>', 'hopscotch' ), get_the_author_meta( 'description' ) );    
+                        printf( __( '<p class="desc primary-content_desc">%s</p>', 'hopscotch' ), get_the_author_meta( 'description' ) );    
                     endif; ?>
 
                 </div>

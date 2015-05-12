@@ -1,4 +1,3 @@
-@import 'components/article-entry-banner';
 @import 'components/breadcrumb-navigation';
 @import 'components/comments';
 
@@ -8,17 +7,16 @@
 @import 'components/field';
 
 @import 'components/entry';
-@import 'components/article-entry';
 @import 'components/article-entry-navigation';
-@import 'components/article-entry-page-navigation';
-@import 'components/article-entry-comments-actions';
+
 @import 'components/article-entry-image';
+@import 'components/article-entry-banner';
+
 @import 'components/author-avatar';
 
 @import 'components/comment-entry-admin-actions';
 
 @import 'components/comment-form-admin-actions';
-@import 'components/article-entry-admin-actions';
 @import 'components/comments-entry-navigation';
 @import 'components/colophon';
 @import 'components/primary-navigation-masthead-sidebar';
@@ -33,17 +31,16 @@
 @import 'components/show-top';
 
 @import 'components/web-product';
-@import 'components/web-product-page-navigation';
 
 @import 'components/widget';
 @import 'components/notice';
 
-
-// WordPress Components
-@import 'components/wordpress/gallery';
-@import 'components/wordpress/wp-caption';
+@import 'components/gallery';
+@import 'components/caption';
+@import 'components/align';
 
 
 // Theme
 @import 'components/theme/notice';
 @import 'components/theme/colophon';
+@import 'components/theme/caption';
