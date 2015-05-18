@@ -56,14 +56,14 @@
     }
     
     .web-product-page-nav_cr
-    {
-        @include margin-x( $axn-padding-counter );
-        
+    {        
         >
         {
             .page-numbers
             {
                 @extend %hs-reset--unlist !optional;
+                
+                @include margin-x( $axn-padding-counter );
                 
                 li
                 {

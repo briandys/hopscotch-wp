@@ -55,8 +55,7 @@
 // Visibility
 .article-entry-comments-actions_accessible-name,
 .article-entry-admin_accessible-name,
-.hs-state__article-entry--blank.hs-type__article-entry--excerpt .article-entry-blank_notice,
-.hs-state__article-entry--blank.hs-type__article-entry--non-excerpt .article-entry_ct,
+.article-entry-blank_notice,
 .article-entry-page-nav_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
@@ -82,4 +81,10 @@
 
     // Reset
     margin-bottom: 0;
+}
+
+// Tags
+.tag_accessible-name:after
+{
+    content: ':';
 }

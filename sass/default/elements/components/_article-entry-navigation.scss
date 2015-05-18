@@ -25,3 +25,11 @@
 {
     @extend %hs-reset--unlist !optional;
 }
+
+.article-entry-page-nav_friendly-name
+{
+    &:after
+    {
+        content: ':';
+    }
+}

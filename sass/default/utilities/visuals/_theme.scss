@@ -12,3 +12,13 @@ a
         text-decoration: none;
     }
 }
+
+::-moz-selection {
+    color: $color-selection;
+    background-color: $color-selection-bg;
+}
+
+::selection {
+    color: $color-selection;
+    background-color: $color-selection-bg;
+}

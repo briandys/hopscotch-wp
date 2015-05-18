@@ -6,6 +6,13 @@ $color-dark: $black;
 
 $color-fg: $color-dark;
 $color-bg: $color-light;
+$color-fg-rev: $color-light;
+$color-bg-rev: $color-dark;
 
+// Text Links
 $color-link-primary: $color-primary;
 $color-link-secondary: $color-secondary;
+
+// Element Highlighting
+$color-selection: $color-light;
+$color-selection-bg: $color-dark;

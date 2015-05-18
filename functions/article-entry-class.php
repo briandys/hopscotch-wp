@@ -12,7 +12,7 @@ function hopscotch_entry_add_class( $classes ) {
         $classes[] = 'vcard org';
     
     // Empty Content
-    if( $post->post_content == "" )
+    if( is_single() && $post->post_content == "" && ! has_excerpt() )
         $classes[] = 'hs-state__article-entry--blank';
     
     // Entry Banner (Featured Image)

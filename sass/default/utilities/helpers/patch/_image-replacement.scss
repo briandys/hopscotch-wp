@@ -1,0 +1,22 @@
+// Image Replacement
+// Used in replacing texts with images
+
+@mixin hs-patch--image-replacement
+{
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    overflow: hidden;
+    *text-indent: -9999px;
+    
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+
+%hs-patch--image-replacement {
+    @include hs-patch--image-replacement;
+}

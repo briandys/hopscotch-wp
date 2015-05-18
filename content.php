@@ -131,8 +131,7 @@ Class: article-entry_comp
                         '</span>' .
                         '</span><!-- show-more-content_comp -->', 'hopscotch' ),
                             the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
-
-hopscotch_article_entry_page_nav();
+                        hopscotch_article_entry_page_nav();
 
                     // With Excerpt
                     else :

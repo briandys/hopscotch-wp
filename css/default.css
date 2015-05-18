@@ -585,8 +585,7 @@ legend, .breadcrumb-nav_accessible-name, .comments_accessible-name,
 .comment-entry-axn_accessible-name, .content_hr,
 .primary-content_accessible-name, .content-sidebar_accessible-name, .article-entry-comments-actions_accessible-name,
 .article-entry-admin_accessible-name,
-.hs-state__article-entry--blank.hs-type__article-entry--excerpt .article-entry-blank_notice,
-.hs-state__article-entry--blank.hs-type__article-entry--non-excerpt .article-entry_ct,
+.article-entry-blank_notice,
 .article-entry-page-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .comment-entry-admin_accessible-name, .comment-form-admin-actions_accessible-name, .comments-entry-nav_accessible-name, .colophon_accessible-name, .primary-nav-masthead-sidebar_accessible-name, .primary-nav_accessible-name,
 .social-nav_accessible-name, .masthead-sidebar_accessible-name, .colophon-sidebar_accessible-name, .search_form legend,
 .widget_search .accessible-name, .hs-template__search--default .masthead_sidebar .search_icon,
@@ -684,6 +683,14 @@ a {
   color: #222; }
   a:hover {
     text-decoration: none; }
+
+::-moz-selection {
+  color: #fff;
+  background-color: #222; }
+
+::selection {
+  color: #fff;
+  background-color: #222; }
 
 * {
   -webkit-box-sizing: border-box !important;
@@ -863,8 +870,14 @@ q {
   word-wrap: break-word;
   margin-bottom: 0; }
 
+.tag_accessible-name:after {
+  content: ':'; }
+
 .next-entry_label .subj_label:after,
 .previous-entry_label .subj_label:after {
+  content: ':'; }
+
+.article-entry-page-nav_friendly-name:after {
   content: ':'; }
 
 .article-entry-banner_comp img,
@@ -1274,12 +1287,16 @@ q {
 .hs-theme--hopscotch .web-product-page-nav_cr {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
-.hs-theme--hopscotch .entry-ct_cr,
+.hs-theme--hopscotch .article-entry_cr {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
 .hs-theme--hopscotch .content_cr,
-.hs-theme--hopscotch .article-entry_cr,
 .hs-theme--hopscotch .web-product-page-nav_cr {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
+.hs-theme--hopscotch .entry-ct_cr {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 .hs-theme--hopscotch .article-entry-nav_cr,
 .hs-theme--hopscotch .comment-entry_cr {
   padding-top: 0.75rem;
@@ -1303,7 +1320,7 @@ q {
 .hs-theme--hopscotch .article-entry-page-nav_cr {
   margin-left: -1rem;
   margin-right: -1rem; }
-.hs-theme--hopscotch .web-product-page-nav_cr {
+.hs-theme--hopscotch .web-product-page-nav_cr > .page-numbers {
   margin-left: -1rem;
   margin-right: -1rem; }
 
