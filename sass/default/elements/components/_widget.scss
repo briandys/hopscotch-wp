@@ -1,17 +1,7 @@
-.widget_cr
+.widget_calendar
 {
-    padding: $block-xs;
-    
-    // Substitute for widget_ct
-    > div
+    #next
     {
-        > *:first-child
-        {
-            margin-top:  0;
-        }
-        > *:last-child
-        {
-            margin-bottom:  0;
-        }
+        text-align: right;
     }
 }

@@ -3,28 +3,21 @@
 
 @import 'components/container';
 @import 'components/content';
-@import 'components/name';
 @import 'components/field';
 
 @import 'components/entry';
 @import 'components/article-entry-navigation';
 
 @import 'components/article-entry-image';
-@import 'components/article-entry-banner';
 
 @import 'components/author-avatar';
 
-@import 'components/comment-entry-admin-actions';
-
-@import 'components/comment-form-admin-actions';
-@import 'components/comments-entry-navigation';
 @import 'components/colophon';
 @import 'components/primary-navigation-masthead-sidebar';
-@import 'components/primary-social-navigation';
+@import 'components/primary-navigation';
 
-@import 'components/masthead-sidebar';
 
-@import 'components/colophon-sidebar';
+@import 'components/sidebar';
 @import 'components/search';
 @import 'components/show-content';
 @import 'components/show-more-content';
@@ -44,3 +37,4 @@
 @import 'components/theme/notice';
 @import 'components/theme/colophon';
 @import 'components/theme/caption';
+@import 'components/theme/content';

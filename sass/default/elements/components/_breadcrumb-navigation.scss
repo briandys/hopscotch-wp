@@ -7,6 +7,7 @@
 {
     .article-sub-entry_comp &
     {
+        // Hide Breadcrumb Navigation if Entry is a Sub-Entry
         @extend %hs-patch--hidden !optional;
     }
 }

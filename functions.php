@@ -38,7 +38,7 @@ require_once( trailingslashit(get_template_directory()) . 'functions/comment-rep
 require_once( trailingslashit(get_template_directory()) . 'functions/comment-form.php');
 
 // Navigation
-require_once( trailingslashit(get_template_directory()) . 'functions/primary-social-navigation.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/primary-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/web-product-page-navigation.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/breadcrumb-navigation.php');
 

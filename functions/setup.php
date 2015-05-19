@@ -33,7 +33,6 @@ function hopscotch_setup() {
 	
     // Register Primary Navigation
     register_nav_menu( 'primary-navigation', __( 'Primary Navigation', 'hopscotch' ) );
-    register_nav_menu( 'social-navigation', __( 'Social Navigation', 'hopscotch' ) );
     
     // Removes the <p> tags from category description
     remove_filter('term_description','wpautop');
@@ -68,7 +67,6 @@ function hopscotch_setup() {
     update_option('large_size_w', 1920);
     update_option('large_size_h', 1920);
     
-    // Adds extra custom sizes for thumbnails (see functions > entry-thumbnail.php)
     add_image_size( 'hopscotch-small', 320 );
     add_image_size( 'hopscotch-medium', 640 );
     add_image_size( 'hopscotch-regular', 800 );

@@ -1,8 +1,9 @@
 @mixin hs-nature--utility-blocker
 {
-    display: table-cell;
     padding: $axn-padding;
     height: $utility-block;
+    min-width: $utility-block;
+    min-height: $utility-block;
     vertical-align: middle;
     line-height: 1;
 }

@@ -7,25 +7,17 @@
     .article-entry-comments-actions_item a
     {
         @extend %hs-nature--utility-blocker !optional;
+        display: table-cell;
     }
     
-    // Counter-Effect for Utility Blocked Actions
-    .hs-type__article-entry--non-excerpt
+    #{$button-objects}
     {
-        .more-link
-        {
-            display: inline-block;
-        }
-        
-        .show-more-content_cr
-        {
-            display: block;
-        }
+        @extend %hs-nature--utility-blocker !optional;
     }
     
-    .hs-type__article-entry--excerpt .show-more-content_cr
+    .show-more-content_cr
     {
-        display: inline-block;
+        display: block;
     }
     
     .entry-admin_grp,

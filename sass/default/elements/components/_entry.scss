@@ -1,5 +1,14 @@
 // Entry (Article and Comment)
 
+// Visibility
+.article-entry-comments-actions_accessible-name,
+.article-entry-admin_accessible-name,
+.article-entry-blank_notice,
+.article-entry-page-nav_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
 .entry-ct_cr {
     
     // Clear all Heading Objects
@@ -15,8 +24,7 @@
         // All
         *
         {
-            padding-left: $gutter;
-            padding-right: $gutter;
+            @include padding-x( $gutter );
         }
         
         // Exceptions
@@ -24,8 +32,7 @@
         .gallery
         {
             // Reset
-            padding-left: 0;
-            padding-right: 0;
+            @include padding-x( 0 );
         }
 
         // List
@@ -50,15 +57,6 @@
             }
         }
     }
-}
-
-// Visibility
-.article-entry-comments-actions_accessible-name,
-.article-entry-admin_accessible-name,
-.article-entry-blank_notice,
-.article-entry-page-nav_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
 }
 
 .article-entry_comp
@@ -86,5 +84,5 @@
 // Tags
 .tag_accessible-name:after
 {
-    content: ':';
+    @include hs-nature--colonizer;
 }

@@ -106,53 +106,39 @@ Class: article-entry_comp
         <div class="ct entry_ct article-entry_ct">
             <div class="cr entry-ct_cr article-entry-ct_cr">
             
-            <?php            
-            if ( is_category() || is_archive() || is_author() ):
-                the_excerpt();
-                
+            <?php
+            if ( $post->post_content !== "" ) :
+
+                the_content( sprintf( __(
+                '<span class="comp show-more-content_comp">' .
+                '<span class="cr show-more-content_cr">' .
+                '<span class="axn show-more-content_axn">' .
+                '<span class="label pred_label">' .
+                '<span class="label verb_label">Show</span> ' .
+                '<span class="label noun_label">Content</span> ' .
+                '<span class="label prep_label">of</span> ' .
+                '</span>' .
+                '<span class="label subj_label article-entry-title_label">%s</span>' .
+                '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>' .
+                '</span>' .
+                '</span>' .
+                '</span><!-- show-more-content_comp -->', 'hopscotch' ),
+                    the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
+                hopscotch_article_entry_page_nav();
+
+            // Without Post
             else :
-                // With Post
-                if ( $post->post_content !== "" ) :
-
-                    // Without Excerpt
-                    if ( ! has_excerpt() ) :
-                        the_content( sprintf( __(
-                        '<span class="comp show-more-content_comp">' .
-                        '<span class="cr show-more-content_cr">' .
-                        '<span class="axn show-more-content_axn">' .
-                        '<span class="label pred_label">' .
-                        '<span class="label verb_label">Show</span> ' .
-                        '<span class="label noun_label">Content</span> ' .
-                        '<span class="label prep_label">of</span> ' .
-                        '</span>' .
-                        '<span class="label subj_label article-entry-title_label">%s</span>' .
-                        '<span class="friendly-name show-more-content_friendly-name"><span class="label slash_label">/</span> Read More</span>' .
-                        '</span>' .
-                        '</span>' .
-                        '</span><!-- show-more-content_comp -->', 'hopscotch' ),
-                            the_title( '<span class="label subj_label entry-title_label">', '</span>', false ) ) );
-                        hopscotch_article_entry_page_nav();
-
-                    // With Excerpt
-                    else :
-                        the_excerpt();
-                    endif;
-
-                // Without Post
-                else : ?>
-
-                    <?php // Without Excerpt
-                    if ( ! has_excerpt() ) : ?>
-                        <div class="notice blank_notice article-entry-blank_notice">
-                            <div class="cr notice_cr">
-                                <p><?php _e( 'Blank', 'hopscotch' ); ?></p>
-                            </div>
+                // Without Excerpt
+                if ( ! has_excerpt() ) : ?>
+                    <div class="notice blank_notice article-entry-blank_notice">
+                        <div class="cr notice_cr">
+                            <p><?php _e( 'Blank', 'hopscotch' ); ?></p>
                         </div>
+                    </div>
 
-                    <?php // With Excerpt
-                    else :
-                        the_excerpt();
-                    endif;
+                <?php // With Excerpt
+                else :
+                    the_excerpt();
                 endif;
             endif;
             

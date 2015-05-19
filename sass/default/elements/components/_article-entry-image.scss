@@ -18,3 +18,8 @@
 {
     @extend %hs-nature--caption !optional;
 }
+
+// Hides the HopScotch CSS background-image set for Featured Image
+.article-entry-banner_axn  {
+    background-image: none !important;
+}

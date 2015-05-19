@@ -18,6 +18,7 @@
                 a
                 {
                     @extend %hs-nature--utility-blocker !optional;
+                    display: table-cell;
                     
                     @include padding-x( $gutter );
                 }

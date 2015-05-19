@@ -31,8 +31,5 @@
 // Search Form Label
 .search-form_label
 {    
-    :hover
-    {
-        @extend %hs-nature--cursor-pointer !optional;
-    }
+    @include hs-nature--cursor-pointer;
 }

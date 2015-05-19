@@ -2,20 +2,7 @@
 .cr,
 .hr
 {
-    >
-    {
-        *
-        {
-            &:first-child
-            {
-                margin-top: 0;
-            }
-            &:last-child
-            {
-                margin-bottom: 0;
-            }
-        }
-    }
+    @include hs-nature--child-normalize;
 }
 
 .content_hr,
@@ -24,7 +11,7 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
-// Counter-Effect Hidden Headers
+// Counter-Effect Show Hidden Headers
 .content_hr
 {
     .search &,

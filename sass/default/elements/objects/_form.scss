@@ -1,12 +1,16 @@
 #{$text-input-objects},
+.text_input,
+select
+{
+    width: 100%;
+    min-height: $utility-block;
+}
+
+#{$text-input-objects},
 .text_input
 {
     @extend %hs-reset--deflate !optional;
-    
-    padding: .5rem;
-    
-    width: 100%;
-    min-height: 3rem;
+    padding: $gutter-xxs;
 }
 
 
@@ -15,33 +19,10 @@
     @extend %hs-reset--deflate !optional;
     
     // To enable padding
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    @include appearance( none );
     
-    // Sets the minimum dimensions for buttons; good for active area sizes
     width: 100%;
-    min-width: 3rem;
-    min-height: 3rem;
-    
-    // Adds a nice spacing around the elements inside the button
-    padding: .5rem 1rem;
-    
-    // To properly align with text objects
-    vertical-align: middle;
-    
-    // Hover
-    &:hover
-    {
-        @extend %hs-nature--cursor-pointer !optional;
-    }
-}
-
-
-select
-{
-    width: 100%;
-    min-height: 3rem;
+    @include hs-nature--cursor-pointer;
 }
 
 

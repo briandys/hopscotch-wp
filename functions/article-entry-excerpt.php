@@ -5,7 +5,7 @@
 // This is used when the_excerpt() is in the template but the Excerpt Box is not used
 if ( ! function_exists( 'hopscotch_excerpt_length' ) ) :
     function hopscotch_excerpt_length( $length ) {
-        return 24;
+        return 48;
     }
     add_filter( 'excerpt_length', 'hopscotch_excerpt_length', 999 );
 endif;

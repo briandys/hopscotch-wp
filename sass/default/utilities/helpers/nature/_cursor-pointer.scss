@@ -1,9 +1,8 @@
 // Structural Declaration: Cursor Pointer on Hover
 
 @mixin hs-nature--cursor-pointer {
-    cursor: pointer;
-}
-
-%hs-nature--cursor-pointer {
-    @include hs-nature--cursor-pointer;
+    :hover
+    {
+        cursor: pointer;
+    }
 }

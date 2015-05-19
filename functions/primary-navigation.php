@@ -30,31 +30,7 @@ if ( ! function_exists( 'hopscotch_primary_social_nav' ) ) :
 
             </div>
         </nav><!-- primary_nav -->
-
-        <?php if ( has_nav_menu( 'social-navigation' ) ) : ?>
-            
-            <!--
-            Sub-Constructor: Social Navigation
-            Class: social_nav
-            -->
-            <nav id="social_nav" class="nav social_nav" role="navigation">
-                <div class="cr social-nav_cr social-nav_accessible-name">
-                    <h3 class="accessible-name"><?php _e( 'Social Navigation', 'hopscotch' ); ?></h3>
-
-                    <?php
-                    wp_nav_menu( array(
-                        'theme_location'    => 'social-navigation',
-                        'container'         => 'div',
-                        'container_class'   => 'ct social-nav_ct',
-                        'menu_class'        => 'grp social-nav_grp',
-                        'depth'             => '1'
-                    ) );
-                    ?>
-
-                </div>
-            </nav><!-- social_nav -->
-        <?php endif;
-
+    <?php
     }
 endif;
 

@@ -1,8 +1,9 @@
 html
 {
-    font-family: $font-family-custom;
+    font-family: $font-family-custom, Helvetica, Arial, sans-serif;
 }
 
+// Links
 a
 {
     color: $color-link-primary;
@@ -13,6 +14,8 @@ a
     }
 }
 
+
+// Selections
 ::-moz-selection {
     color: $color-selection;
     background-color: $color-selection-bg;

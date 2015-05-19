@@ -15,21 +15,18 @@
 .next-entry_label,
 .previous-entry_label
 {
-    .subj_label:after
+    .subj_label
     {
-        content: ':';
+        @include hs-nature--colonizer;
     }
+}
+
+.article-entry-page-nav_friendly-name
+{
+    @include hs-nature--colonizer;
 }
 
 .article-entry-nav_grp
 {
     @extend %hs-reset--unlist !optional;
-}
-
-.article-entry-page-nav_friendly-name
-{
-    &:after
-    {
-        content: ':';
-    }
 }

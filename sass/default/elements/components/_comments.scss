@@ -1,16 +1,19 @@
-.comments_ct
-{
-    .blank-comments_notice
-    {
-        padding-left: $gutter;
-        padding-right: $gutter;
-    }
-}
-
+// Visibility
+.comment-entry-admin_accessible-name,
+.comment-form-admin-actions_accessible-name,
+.comments-entry-nav_accessible-name,
 .comments_accessible-name,
 .comment-entry-axn_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
+}
+
+.comments_ct
+{
+    .blank-comments_notice
+    {
+        @include padding-x( $gutter );
+    }
 }
 
 .comment-form
@@ -19,7 +22,7 @@
     {
         &:hover
         {
-            @extend %hs-nature--cursor-pointer !optional;
+            @include hs-nature--cursor-pointer;
         }
     }
 }
@@ -32,15 +35,7 @@
 
 .comment-respond
 {
-    > *:first-child
-    {
-        margin-top: 0;
-    }
-    
-    > *:last-child
-    {
-        margin-bottom: 0;
-    }
+    @include hs-nature--child-normalize;
 }
 
 .form-submit,

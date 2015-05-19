@@ -1,31 +1,27 @@
 // Image Alignment
 // These are WordPress-generated class names
+
 .alignleft
 {
+    display: block;
     float: left;
-    margin-right: $block-xxs;
+    margin-right: $gutter-s;
 }
 
 .alignright
 {
+    display: block;
     float: right;
-    margin-left: $block-xxs;
+    margin-left: $gutter-s;
 }
 
 .alignleft,
 .alignright
 {
-    margin-bottom: $block-xxs;
+    margin-bottom: $gutter-s;
 }
 
 .aligncenter {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.alignleft,
-.alignright,
-.aligncenter
-{
     display: block;
+    @include hs-nature--center-block;
 }

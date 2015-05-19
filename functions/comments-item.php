@@ -21,7 +21,7 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
             <div class="cr entry_cr comment-entry_cr">
         <?php endif; ?>
 
-                <header class="entry_hr comment-entry_hr">
+                <header class="hr entry_hr comment-entry_hr">
                     <div class="cr entry-hr_cr comment-entry-hr_cr">
 
                         <div class="comp byline_comp comment-entry-byline_comp">
@@ -92,7 +92,7 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                     </div>
                 </header>
 
-                <div class="entry_ct comment-entry_ct">
+                <div class="ct entry_ct comment-entry_ct">
                     <div class="cr entry-ct_cr comment-entry-ct_cr">
 
                         <?php if ( $comment->comment_approved == '0' ) : ?>

@@ -31,24 +31,3 @@ function hopscotch_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'hopscotch_widgets_init' );
-
-
-// Modify the format of Category and Archive post counts
-// Only works if displayed as list
-function hopscotch_cat_count($links) {
-    $opening_char = '';
-    $closing_char = '';
-	$links = str_replace('</a> (', ' </a> <span class="label article-entry-count_label" title="Number of Entries">' . $opening_char, $links);
-	$links = str_replace(')', $closing_char . '</span>', $links);
-	return $links;
-}
-add_filter('wp_list_categories', 'hopscotch_cat_count');
-
-function hopscotch_archive_count($links) {
-    $opening_char = '';
-    $closing_char = '';
-    $links = str_replace('</a>&nbsp;(', '</a> <span class="label article-entry-count_label" title="Number of Entries">' . $opening_char, $links);
-    $links = str_replace(')', $closing_char . '</span>', $links);
-    return $links;
-}
-add_filter('get_archives_link', 'hopscotch_archive_count');
