@@ -21,13 +21,13 @@ $block-xs: convertRem( $px-size-block-xs );
 $block-s: convertRem( $px-size-block-s );
 $block: convertRem( $px-size-block );
 
-$gutter-xxs: $block-ms;
-$gutter-xs: $block-xxxs;
-$gutter-s: $block-xxs;
-$gutter: $block-xs;
-$gutter-l: $block-s;
+$gutter-xxs: convertRem( $px-size-base * .5 );
+$gutter-xs: convertRem( $px-size-base * .75 );
+$gutter-s: convertRem( $px-size-base * 1 );
+$gutter: convertRem( $px-size-base * 1.5 );
+$gutter-l: convertRem( $px-size-base * 2 );
 
-// 
+// Action Padding
 $axn-padding: $gutter-xxs $gutter-s;
 $axn-padding-counter: -$gutter-s;
 
@@ -57,6 +57,19 @@ $cinema: 2560;
 $lifebook: 3200;
 
 $viewport-narrow: $tablet;
+
+// Fonts
+$font-xs: convertRem( $px-size-base * .75 );
+$font-s: convertRem( $px-size-base * .875 );
+$font: convertRem( $px-size-base * 1.125 );
+$font-l: convertRem( $px-size-base * 1.375 );
+$font-xl: convertRem( $px-size-base * 1.75 );
+$font-xxl: convertRem( $px-size-base * 2.25 );
+
+// Radius
+$radius-xs: convertRem( $px-size-base * .125 );
+$radius-s: convertRem( $px-size-base * .25 );
+$radius: convertRem( $px-size-base * .5 );
 
 // Color Palette
 $white: #fff;

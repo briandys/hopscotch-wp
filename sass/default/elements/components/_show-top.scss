@@ -4,8 +4,7 @@
 {
     .show-top_cr
     {
-        padding-left: $gutter;
-        padding-right: $gutter;
+        @include padding-x( $gutter );
     }
 }
 

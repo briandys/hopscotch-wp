@@ -1,6 +1,7 @@
 .masthead-sidebar_accessible-name,
 .content-sidebar_accessible-name,
-.colophon-sidebar_accessible-name
+.colophon-sidebar_accessible-name,
+.primary-nav-masthead-sidebar_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
 }
