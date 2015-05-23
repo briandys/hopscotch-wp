@@ -25,3 +25,13 @@ function hopscotch_hook_after_the_content() {
 function hopscotch_hook_after_modified_timestamp() {
     do_action('hopscotch_hook_after_modified_timestamp');
 }
+
+// Location: index.php
+function hopscotch_hook_after_content_ct() {
+    do_action('hopscotch_hook_after_content_ct');
+}
+
+// Location: sidebar.php
+function hopscotch_hook_after_content_sidebar_ct() {
+    do_action('hopscotch_hook_after_content_sidebar_ct');
+}

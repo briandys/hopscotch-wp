@@ -8,7 +8,13 @@
         <div class="cr content-sidebar_cr">
             <h3 class="accessible-name content-sidebar_accessible-name"><?php _e( 'Content Sidebar', 'hopscotch'); ?></h3>
             <div class="ct content-sidebar_ct widget-area">
-                <?php dynamic_sidebar( 'content-sidebar' ); ?>
+                <?php
+                // HopScotch Hook: After class="content-sidebar_ct"
+                hopscotch_hook_after_content_sidebar_ct();
+                
+                // Sidebar
+                dynamic_sidebar( 'content-sidebar' );
+                ?>
             </div><!-- content-sidebar_ct -->
         </div>
     </aside><!-- content_sidebar -->

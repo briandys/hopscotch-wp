@@ -105,6 +105,11 @@
             </div><!-- content_hr -->
 
             <div class="ct content_ct">
+                
+                <?php
+                // HopScotch Hook: After class="content_ct"
+                hopscotch_hook_after_content_ct();
+                ?>
 
                 <!--
                 Sub-Constructor: Primary Content
@@ -117,10 +122,10 @@
 
                         <?php // Function as single.php (is_single, is_page, is_attachment)
                         if ( is_singular() ) : ?>
-                            
+
                             <?php                                
                             while ( have_posts() ) : the_post();
-                                
+
                                 // Article Content
                                 // Location: functions > article-content.php
                                 hopscotch_article_content();
@@ -138,27 +143,29 @@
 
                             endwhile;
                             ?>
-                            
+
                         <?php // Function as index.php
                         else : ?>
 
                             <?php
                             if ( have_posts() ) :
                                 while ( have_posts() ) : the_post();
-                                    
-                                    // Calls content.php
-                                    get_template_part( 'content', get_post_format() );
+
+                                    // Article Content
+                                    // Location: functions > article-content.php
+                                    hopscotch_article_content();
+
                                 endwhile;
-                                
+
                                 // Called from functions > web-product-page-navigation.php
                                 hopscotch_web_product_page_nav();
                             else :
-                                
+
                                 // Calls content-none.php
                                 get_template_part( 'content', 'none' );
                             endif;
                             ?>
-                            
+
                         <?php endif; ?>
 
                         </div><!-- primary-content_ct -->
