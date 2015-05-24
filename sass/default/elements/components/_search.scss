@@ -21,7 +21,7 @@
 .content_sidebar,
 .colophon_sidebar
 {
-    .search_icon,
+    .search-form_label .search_icon,
     .dismiss_icon
     {
         @extend %hs-patch--visually-hidden !optional;
