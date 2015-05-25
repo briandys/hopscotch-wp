@@ -5,5 +5,7 @@
 
 .wp-caption-text
 {
-    @extend %hs-nature--caption !optional;
+    padding-top: $block-xxxs;
+    padding-bottom: $block-xxxs;
+    @include hs-nature--child-normalize;
 }

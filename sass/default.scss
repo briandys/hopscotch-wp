@@ -1,15 +1,12 @@
-// HTML5 Boilerplate
-@import 'default/utilities/h5bp/normalize';
-@import 'default/utilities/h5bp/main';
-
 // Utilities
+@import 'default/utilities/h5bp';
 @import 'default/utilities/functions';
 @import 'default/utilities/variables';
 @import 'default/utilities/helpers';
 
-// Visuals
-@import 'default/utilities/visuals/style-variables';
-@import 'default/utilities/visuals/theme';
+// Perceptuals
+@import 'default/utilities/perceptuals/style-variables';
+@import 'default/utilities/perceptuals/theme';
 
 // Rules
 @import 'default/elements/objects';
