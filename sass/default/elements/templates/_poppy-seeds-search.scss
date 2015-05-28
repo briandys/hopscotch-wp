@@ -34,9 +34,6 @@
             {    
                 @extend %hs-nature--inline-icon-cr !optional;
                 
-                // Counter-Effect
-                @include dimensions( $utility-block );
-                
                 // Temp
                 // background-color: yellow;
             }

@@ -9,6 +9,7 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         echo ' hs-template__primary-nav--vines';
         echo ' hs-template__primary-nav-masthead-sidebar--hamburger';
         echo ' hs-template__search--poppy-seeds';
+        echo ' hs-template__search--blank-fill';
         echo ' hs-template__show-top--mushroom';
         echo ' hs-template__content--hero';
         // echo ' hs-template__tag--string-beans';

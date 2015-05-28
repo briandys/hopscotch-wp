@@ -41,6 +41,7 @@
         .label
         {
             @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
         }
         
         .label
@@ -73,6 +74,7 @@
                     .dots
                     {
                         @extend %hs-nature--utility-blocker !optional;
+                        display: table-cell;
                     }
                     
                     .current

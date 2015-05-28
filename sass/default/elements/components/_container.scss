@@ -4,19 +4,3 @@
 {
     @include hs-nature--child-normalize;
 }
-
-.content_hr,
-.primary-content_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
-// Counter-Effect Show Hidden Headers
-.content_hr
-{
-    .search &,
-    .archive &
-    {
-        @extend %hs-patch--visually-hidden-reverse !optional;
-    }
-}

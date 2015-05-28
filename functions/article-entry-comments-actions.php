@@ -4,31 +4,13 @@
 // Called from content.php
 
 if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
-    function hopscotch_article_entry_comments_actions() {
-        
-        $num_comments = get_comments_number();
-        
-        $comment_count_class = 'hs-type__article-entry-comments--zero';
-        $number = (int) get_comments_number( get_the_ID() );
-
-        // Defines the class depending on the comment count
-        if ( 1 === $number )
-            $comment_count_class = 'hs-type__article-entry-comments--single';
-        elseif ( 1 < $number )
-            $comment_count_class = 'hs-type__article-entry-comments--multiple';
-        
-        // CSS Class for Closed or Open Comments
-        if ( comments_open() )
-            $comment_state_class = 'hs-state__article-entry-comments--open';
-        else
-            $comment_state_class = 'hs-state__article-entry-comments--closed';
-        ?>
+    function hopscotch_article_entry_comments_actions() { ?>
 
         <!--
         Component: Article Entry Comments Actions
         Class: article-entry-comments-actions_comp
         -->
-        <div class="comp article-entry-comments-actions_comp <?php echo $comment_state_class .' '. $comment_count_class ?>">
+        <div class="comp article-entry-comments-actions_comp">
             <div class="cr article-entry-comments-actions_cr">
                 <p class="accessible-name article-entry-comments-actions_accessible-name">Entry Comments Actions</p>
                 <ul class="grp article-entry-comments-actions_grp">
@@ -56,11 +38,11 @@ if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
                         'show-comments_axn',
 
                         // Notice for closed comments
-                        '<div class="notice article-entry-comments_notice">' .
-                        '<div class="cr article-entry-comments-notice_cr">' .
+                        '<span class="notice article-entry-comments_notice">' .
+                        '<span class="cr notice_cr article-entry-comments-notice_cr">' .
                         '<p>Comments are closed.</p>' .
-                        '</div>' .
-                        '</div><!-- article-entry-comments_notice -->' );
+                        '</span>' .
+                        '</span><!-- article-entry-comments_notice -->' );
                         ?>
                 </ul>
             </div>

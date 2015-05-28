@@ -1,0 +1,58 @@
+.hs-template__search--blank-fill
+{
+    .content-hr_sidebar,
+    .content_sidebar,
+    .colophon_sidebar
+    {
+        .search_cr
+        {
+            max-width: 320px;
+            @include hs-nature--center-block;
+        }
+
+        .search_form
+        {
+            position: relative;
+        }
+
+        .search-form_input
+        {
+            // Reset
+            border: 0;
+            border-radius: 0;
+            padding-right: $utility-block;
+            border-bottom: .125rem solid $gray;
+            @include transition--basic;
+            
+            &:hover
+            {
+                border-bottom-color: $black;
+            }
+        }
+
+        .search-form-axn_field
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .search-form-submit_axn
+        {            
+            border: 0;
+            padding: 0;
+            width: auto;
+
+            .verb_label
+            {
+                @extend %hs-patch--visually-hidden !optional;
+            }
+        }
+
+        .search-form_label,
+        .search-form-reset_axn
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+}

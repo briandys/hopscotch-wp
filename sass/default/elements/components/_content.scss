@@ -33,12 +33,38 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     }
 }
 
+.primary-content_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
 .content-hr_accessible-name
 {
+    margin-bottom: 0;
     font-weight: normal;
     
     .subj_label
     {
         font-weight: bold;
+    }
+    
+    .home &,
+    .single &,
+    .page &
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+}
+
+.hs-state__content-header-sidebar--disabled
+{
+    &.home,
+    &.single,
+    &.page
+    {
+        .content_hr
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
     }
 }

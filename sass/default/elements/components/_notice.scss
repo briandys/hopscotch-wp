@@ -2,12 +2,6 @@
 {
     margin-bottom: $gutter;
     
-    &:last-child
-    {
-        // Counter-Effect
-        margin-bottom: 0;
-    }
-    
     p:last-of-type
     {
         // Counter-Effect

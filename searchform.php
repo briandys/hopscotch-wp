@@ -13,7 +13,7 @@ Class: search
                             <span class="label subj_label"><?php _e( 'Search Keyword', 'hopscotch'); ?></span>
                             <svg class="icon search_icon" width="0" height="0"><use xlink:href="#search_icon"></use></svg>
                         </label>
-                        <input id="search-form_input" class="text_input search-form_input" type="search" name="s" placeholder="Enter Keyword" required>
+                        <input id="search-form_input" class="text_input search-form_input" type="search" name="s" placeholder="Search" required>
                     </div>
                 </div><!-- field -->
                 <div class="axn_field search-form-axn_field">

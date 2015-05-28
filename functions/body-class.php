@@ -29,6 +29,12 @@ function hopscotch_body_class( $classes ) {
     else
         $classes[] = 'hs-state__masthead-sidebar--disabled';
 
+    // Content Header Sidebar Class
+    if ( is_active_sidebar( 'content-header-sidebar' ) )
+        $classes[] = 'hs-state__content-header-sidebar--enabled';
+    else
+        $classes[] = 'hs-state__content-header-sidebar--disabled';
+
     // Content Sidebar Class
     if ( is_active_sidebar( 'content-sidebar' ) )
         $classes[] = 'hs-state__content-sidebar--enabled';

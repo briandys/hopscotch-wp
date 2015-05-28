@@ -99,17 +99,30 @@
                     if ( is_author() && get_the_author_meta( 'description' ) ) :
                         printf( __( '<p class="desc primary-content_desc">%s</p>', 'hopscotch' ), get_the_author_meta( 'description' ) );    
                     endif; ?>
+                    
+                    <?php // Content Header Sidebar
+                    if ( is_active_sidebar( 'content-header-sidebar' )  ) : ?>
+                        <!--
+                        Sub-Constructor: Content Header Sidebar Component
+                        Class: content-hr_sidebar
+                        -->
+                        <aside id="content-hr_sidebar" class="sidebar content-hr_sidebar" role="complementary">
+                            <div class="cr content-hr-sidebar_cr">
+                                <h3 class="accessible-name content-hr-sidebar_accessible-name"><?php _e( 'Content Header Sidebar Component', 'hopscotch' ); ?></h3>
+                                <div class="ct content-hr-sidebar_ct widget-area">
+                                    <?php dynamic_sidebar( 'content-header-sidebar' ); ?>
+                                </div><!-- content-hr-sidebar_ct -->
+                            </div>
+                        </aside><!-- content-hr_sidebar -->
+                    <?php
+                    endif;
+                    ?>
 
                 </div>
 
             </div><!-- content_hr -->
 
             <div class="ct content_ct">
-                
-                <?php
-                // HopScotch Hook: After class="content_ct"
-                hopscotch_hook_after_content_ct();
-                ?>
 
                 <!--
                 Sub-Constructor: Primary Content
