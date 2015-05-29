@@ -3,7 +3,12 @@
     
     // Conditional: JS Enabled
     &.modernizr--js
-    {    
+    {
+        .masthead_cr
+        {
+            position: relative;
+        }
+        
         // Default State
         .masthead_sidebar
         {

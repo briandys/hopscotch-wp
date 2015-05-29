@@ -9,5 +9,73 @@
     .primary-nav_ct li a
     {
         color: $white;
+        text-decoration: none;
+    }
+    
+    // Vines
+    &.hs-template__primary-nav--vines
+    {
+        .primary-nav_ct
+        {       
+            // Sub-Menu
+            .children,
+            .sub-menu
+            {
+                background-color: $superhero-blue;
+
+                a
+                {
+                    @include transition--basic;
+
+                    &:hover
+                    {
+                        background-color: hsla( 0, 0%, 0%, .125 );
+                    }
+                }
+            }
+        }
+        
+        &.hs-viewport--wide
+        {
+            .primary-nav_ct
+            {
+                // First Level Nav Items
+                > ul
+                {
+                    > li
+                    {
+                        > a
+                        {
+                            position: relative;
+                            
+                            &:after
+                            {  
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                @include dimensions( 100%, .375rem);
+                                border-top-left-radius: $radius-xs;
+                                border-top-right-radius: $radius-xs; 
+                                @include transition--basic;
+                            }
+
+                            &:hover:after
+                            {
+                                background-color: hsla( 0, 0%, 0%, .125 );
+                            }
+                        }
+
+                        &.current_page_item > a
+                        {
+                            &:after
+                            {
+                                background-color: hsla( 0, 0%, 0%, .25 );
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

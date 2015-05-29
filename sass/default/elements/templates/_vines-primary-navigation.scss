@@ -163,16 +163,16 @@
                     {
                         // Juxtapose
                         display: inline-block;
-                        vertical-align: top;                    
-                    }
-
-                    > .page_item_has_children .children,
-                    > .menu-item-has-children .sub-menu                
-                    {
-                        position: absolute;
-                        min-width: 100%;
-                        width: auto;
-                        white-space: nowrap;
+                        vertical-align: top;
+                        
+                        .children,
+                        .sub-menu                
+                        {
+                            position: absolute;
+                            min-width: 100%;
+                            width: auto;
+                            white-space: nowrap;
+                        }
                     }
                 }
             }

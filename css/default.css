@@ -680,6 +680,12 @@ svg.icon, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .sea
   vertical-align: middle;
   line-height: 1; }
 
+.hs-cr--screen {
+  background-color: #fff; }
+
+.colophon_cr {
+  background-color: rgba(128, 128, 128, 0.5); }
+
 * {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
@@ -949,6 +955,9 @@ a {
 .article-entry-page-nav_friendly-name:after {
   content: ':'; }
 
+.widget-title {
+  margin-bottom: 0; }
+
 .widget_calendar #next {
   text-align: right; }
 
@@ -1110,16 +1119,18 @@ a {
 .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
-.hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .page_item_has_children .children,
-.hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .menu-item-has-children .sub-menu {
-  position: absolute;
-  min-width: 100%;
-  width: auto;
-  white-space: nowrap; }
+  .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li .children,
+  .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li .sub-menu {
+    position: absolute;
+    min-width: 100%;
+    width: auto;
+    white-space: nowrap; }
 .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-sub-nav-toggle_axn {
   top: 50%;
   margin-top: -1.5rem; }
 
+.hs-template__search--poppy-seeds.modernizr--js .masthead_cr {
+  position: relative; }
 .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search_comp {
   position: absolute;
   top: 0;
@@ -1403,6 +1414,40 @@ a {
   background-color: #00aaff; }
 .hs-theme--hopscotch .web-product-header-name_axn,
 .hs-theme--hopscotch .primary-nav_ct li a {
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
+.hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .children,
+.hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
+  background-color: #00aaff; }
+  .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .children a,
+  .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .sub-menu a {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .children a:hover,
+    .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .sub-menu a:hover {
+      background-color: rgba(0, 0, 0, 0.125); }
+.hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li > a {
+  position: relative; }
+  .hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li > a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.375rem;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li > a:hover:after {
+    background-color: rgba(0, 0, 0, 0.125); }
+.hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li.current_page_item > a:after {
+  background-color: rgba(0, 0, 0, 0.25); }
 
 /*# sourceMappingURL=default.css.map */
