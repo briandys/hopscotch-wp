@@ -71,9 +71,6 @@ function hopscotch_setup() {
     add_image_size( 'hopscotch-medium', 640 );
     add_image_size( 'hopscotch-regular', 800 );
     add_image_size( 'thumbnail-size-800', 800 );
-    
-    // Text domain
-    load_theme_textdomain( 'hopscotch', get_template_directory() . '/languages' );
 
 }
 add_action( 'after_setup_theme', 'hopscotch_setup' );

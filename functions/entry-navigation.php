@@ -7,7 +7,7 @@
 // Class: article-entry-nav_comp
 if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
 	function hopscotch_article_entry_nav() {
-        if ( ! is_attachment() ) : ?>
+         if ( ! is_attachment() ) : ?>
             <nav class="comp content_nav article-entry_nav" role="navigation">
                 <div class="cr content-nav_cr article-entry-nav_cr">
                     <h2 class="accessible-name article-entry-nav_accessible-name"><?php _e( 'Article Entry Navigation', 'hopscotch' ); ?></h2>
@@ -35,6 +35,19 @@ if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
                             <?php previous_post_link( '%link', _x( '%title', 'Older Entry', 'hopscotch' ) ); ?>
                         <?php endif; ?>
 
+                    </ul>
+                </div>
+            </nav><!-- article-entry_nav -->
+        <?php
+        elseif ( wp_attachment_is_image( $post_id ) ) : ?>
+            <nav class="comp content_nav article-entry_nav" role="navigation">
+                <div class="cr content-nav_cr article-entry-nav_cr">
+                    <h2 class="accessible-name article-entry-nav_accessible-name"><?php _e( 'Article Entry Navigation', 'hopscotch' ); ?></h2>
+                    <ul class="grp content-nav_grp article-entry-nav_grp">
+                        <li class="item content-nav_item article-entry-nav_item next-article-entry-nav_item">
+                            <?php next_image_link( false, '<span class="label next-entry_label">' . __( 'Next Image', 'wpsites' ) . '</span>' ); ?>                      
+                        <li class="item content-nav_item article-entry-nav_item previous-article-entry-nav_item">
+                            <?php previous_image_link( false, '<span class="label previous-entry_label">' . __( 'Previous Image', 'wpsites' ) . '</span>' ); ?>
                     </ul>
                 </div>
             </nav><!-- article-entry_nav -->
