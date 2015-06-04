@@ -7,7 +7,8 @@
 // Class: article-entry-nav_comp
 if ( ! function_exists('hopscotch_article_entry_nav' ) ) :
 	function hopscotch_article_entry_nav() {
-         if ( ! is_attachment() ) : ?>
+        global $post_id; 
+        if ( ! is_attachment() ) : ?>
             <nav class="comp content_nav article-entry_nav" role="navigation">
                 <div class="cr content-nav_cr article-entry-nav_cr">
                     <h2 class="accessible-name article-entry-nav_accessible-name"><?php _e( 'Article Entry Navigation', 'hopscotch' ); ?></h2>

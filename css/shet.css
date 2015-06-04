@@ -1,0 +1,91 @@
+/*
+Error: Undefined mixin 'hs-nature--center-block'.
+        on line 10 of /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/blank-fill-search.scss, in `hs-nature--center-block'
+        from line 10 of /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/blank-fill-search.scss
+
+5:     .colophon_sidebar
+6:     {
+7:         .search_cr
+8:         {
+9:             max-width: 320px;
+10:             @include hs-nature--center-block;
+11:         }
+12: 
+13:         .search_form
+14:         {
+15:             position: relative;
+
+Backtrace:
+/Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/blank-fill-search.scss:10:in `hs-nature--center-block'
+/Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/blank-fill-search.scss:10
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `load'
+/Users/brsahagun/Desktop/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'hs-nature--center-block'.\A         on line 10 of /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/blank-fill-search.scss, in `hs-nature--center-block'\A         from line 10 of /Applications/XAMPP/xamppfiles/htdocs/projects/hopscotch/wp-content/themes/hopscotch-wp/sass/default/elements/templates/blank-fill-search.scss\A \A 5:     .colophon_sidebar\A 6:     {\A 7:         .search_cr\A 8:         {\A 9:             max-width: 320px;\A 10:             @include hs-nature--center-block;\A 11:         }\A 12: \A 13:         .search_form\A 14:         {\A 15:             position: relative;"; }
