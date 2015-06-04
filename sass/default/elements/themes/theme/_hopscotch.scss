@@ -46,21 +46,9 @@
                     {
                         > a
                         {
-                            position: relative;
+                            @include transition--basic;
                             
-                            &:after
-                            {  
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                @include dimensions( 100%, .375rem);
-                                border-top-left-radius: $radius-xs;
-                                border-top-right-radius: $radius-xs; 
-                                @include transition--basic;
-                            }
-
-                            &:hover:after
+                            &:hover
                             {
                                 background-color: hsla( 0, 0%, 0%, .125 );
                             }
@@ -68,8 +56,17 @@
 
                         &.current_page_item > a
                         {
+                            position: relative;
+                            
                             &:after
                             {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                @include dimensions( 100%, .375rem);
+                                border-top-left-radius: $radius-xs;
+                                border-top-right-radius: $radius-xs; 
                                 background-color: hsla( 0, 0%, 0%, .25 );
                             }
                         }
@@ -77,5 +74,15 @@
                 }
             }
         }
+    }
+    
+    .hs-cr--screen
+    {
+        background-color: $white;
+    }
+
+    .colophon_cr
+    {
+        background-color: hsla( 0, 0%, 0%, .0625 );
     }
 }

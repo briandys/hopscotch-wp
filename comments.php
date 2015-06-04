@@ -72,15 +72,7 @@ Class: comments_comp
 
                 <?php // If there are comments but Comments is closed
                 if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-                    <!--
-                    Component: Closed Comments
-                    Class: closed-comments_notice
-                    -->
-                    <div class="notice closed-comments_notice">
-                        <div class="cr closed-comments-notice_cr">
-                            <p><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
-                        </div>
-                    </div><!-- closed-comments_notice -->
+                    <p class="note closed-comments_note comments-closed-comments_note"><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
                 <?php endif; ?>
 
                 <?php

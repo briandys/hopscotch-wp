@@ -16,33 +16,29 @@ if ( ! function_exists( 'hopscotch_article_entry_comments_actions' ) ) :
                 <ul class="grp article-entry-comments-actions_grp">
                     <li class="item article-entry-comments-actions_item">
                         <?php comments_popup_link(
+                            // Zero comment
+                            __( '<span class="label pred_label">Write</span> ' .
+                                '<span class="label subj_label">Comment</span>', 'hopscotch' ),
 
-                        // Zero comment
-                        __( '<span class="label pred_label">Write</span> ' .
-                            '<span class="label subj_label">Comment</span>', 'hopscotch' ),
+                            // Single comment
+                            __( '<span class="label pred_label">' .
+                                '<span class="label verb_label">Show</span> ' .
+                                '<span class="label comment-count_label">One</span>' .
+                                '</span> ' .
+                                '<span class="label subj_label">Comment</span>', 'hopscotch' ),
 
-                        // Single comment
-                        __( '<span class="label pred_label">' .
-                            '<span class="label verb_label">Show</span> ' .
-                            '<span class="label comment-count_label">One</span>' .
-                            '</span> ' .
-                            '<span class="label subj_label">Comment</span>', 'hopscotch' ),
+                            // Multiple comments
+                            __( '<span class="label pred_label">' .
+                                '<span class="label verb_label">Show</span> ' .
+                                '<span class="label comment-count_label">%</span> ' .
+                                '</span> ' .
+                                '<span class="label subj_label">Comments</span>', 'hopscotch' ),
 
-                        // Multiple comments
-                        __( '<span class="label pred_label">' .
-                            '<span class="label verb_label">Show</span> ' .
-                            '<span class="label comment-count_label">%</span> ' .
-                            '</span> ' .
-                            '<span class="label subj_label">Comments</span>', 'hopscotch' ),
+                            'show-comments_axn',
 
-                        'show-comments_axn',
-
-                        // Notice for closed comments
-                        '<span class="notice article-entry-comments_notice">' .
-                        '<span class="cr notice_cr article-entry-comments-notice_cr">' .
-                        '<p>Comments are closed.</p>' .
-                        '</span>' .
-                        '</span><!-- article-entry-comments_notice -->' );
+                            // Notice for closed comments
+                            __( '<p class="note closed-comments_note article-entry-closed-comments_note">Comments are closed.</p>' )
+                        );
                         ?>
                 </ul>
             </div>

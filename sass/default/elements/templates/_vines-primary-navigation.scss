@@ -124,13 +124,13 @@
                 background-size: cover;
 
                 // For animation
-                transition: transform .2s;
+                @include transition( transform .2s );
             }
         }
 
         // Reverses the icon's direction if the Tree nav is active
         .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
-            transform: rotate( -180deg );
+            @include transform( rotate( -180deg ) );
         }
 
         // Narrow Viewport
