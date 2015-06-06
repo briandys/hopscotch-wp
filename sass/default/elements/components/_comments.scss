@@ -2,18 +2,9 @@
 .comment-entry-admin_accessible-name,
 .comment-form-admin-actions_accessible-name,
 .comments-entry-nav_accessible-name,
-.comments_accessible-name,
 .comment-entry-axn_accessible-name
 {
     @extend %hs-patch--visually-hidden !optional;
-}
-
-.comments_ct
-{
-    .blank-comments_notice
-    {
-        @include padding-x( $gutter );
-    }
 }
 
 .comment-form
@@ -25,12 +16,6 @@
             @include hs-nature--cursor-pointer;
         }
     }
-}
-
-.comments-count_cr,
-.comment-reply-title
-{
-    padding: $gutter-xs $gutter;
 }
 
 .comment-respond
@@ -55,4 +40,12 @@
     {
         margin-left: $gutter;
     }
+}
+
+.comments_accessible-name
+{
+    // Reset
+    margin-bottom: 0;
+    
+    font-size: $font-l;
 }

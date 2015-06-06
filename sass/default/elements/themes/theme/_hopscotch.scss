@@ -1,5 +1,5 @@
 .hs-theme--hopscotch
-{   
+{
     .masthead_cr
     {
         background-color: $superhero-blue;
@@ -84,5 +84,19 @@
     .colophon_cr
     {
         background-color: hsla( 0, 0%, 0%, .0625 );
+    }
+    
+    &.hs-template__search--poppy-seeds
+    {
+        &.modernizr--js
+        {
+            .masthead_sidebar
+            {
+                .search_icon
+                {
+                    color: $white;
+                }
+            }
+        }
     }
 }

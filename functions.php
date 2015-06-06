@@ -7,9 +7,8 @@ require_once( trailingslashit(get_template_directory()) . 'functions/setup.php')
 require_once( trailingslashit(get_template_directory()) . 'functions/action-hooks.php');
 
 // Front-End
-require_once( trailingslashit(get_template_directory()) . 'functions/style-sheets.php');
+require_once( trailingslashit(get_template_directory()) . 'functions/styles-scripts.php');
 require_once( trailingslashit(get_template_directory()) . 'functions/fonts.php');
-require_once( trailingslashit(get_template_directory()) . 'functions/javascripts.php');
 
 // Widgets
 require_once( trailingslashit(get_template_directory()) . 'functions/widgets.php');

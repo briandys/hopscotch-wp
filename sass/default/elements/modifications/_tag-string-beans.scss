@@ -5,6 +5,9 @@
 {
     .tag_comp
     {
+        // Counter-Effect
+        overflow: hidden;
+        
         a,
         .accessible-name
         {
@@ -16,7 +19,6 @@
         .accessible-name
         {
             // Counter-Effect
-            margin-left: $gutter-s;
             padding-left: 0;
             
             // Reset
