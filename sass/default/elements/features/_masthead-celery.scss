@@ -8,15 +8,11 @@
     
     .web-product-header_cr
     {
-        display: table;
-        width: 100%;
-        min-height: 3rem;
-        word-break: break-word;
+        
 
         .web-product_name
         {
-            display: table-cell;
-            vertical-align: middle;
+            word-break: break-word;
             
             // Reset
             line-height: 1;
@@ -24,7 +20,9 @@
         
         .web-product-name_axn
         {
-            padding: $gutter;
+            @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
+            // @include padding-x( 1.5rem );
             text-decoration: none;
         }
     }
@@ -38,16 +36,11 @@
     &.hs-viewport--narrow
     {  
         // Web Product Header            
-        .web-product-header_cr
+        .web-product-header_name
         {
+            display: table;
+            width: 100%;
             text-align: center;
-        }
-        
-        .web-product-name_axn
-        {   
-            // Counter-Effect
-            margin-left: -$gutter;
-            margin-right: -$gutter;
         }
     }
 }

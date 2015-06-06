@@ -5,36 +5,53 @@
         background-color: $superhero-blue;
     }
     
+    .web-product-header-name_axn
+    {
+        &:hover
+        {
+            @include transition--basic;
+            background-color: hsla( 0, 0%, 0%, .125 );
+        }
+    }
+
     .web-product-header-name_axn,
     .primary-nav_ct li a
     {
         color: $white;
-        text-decoration: none;
     }
-    
+
     // Vines
     &.hs-template__primary-nav--vines
     {
-        .primary-nav_ct
-        {       
-            // Sub-Menu
-            .children,
-            .sub-menu
+        &.modernizr--js
+        {
+            .primary-nav_ct
             {
-                background-color: $superhero-blue;
-
-                a
+                li
                 {
-                    @include transition--basic;
+                    a
+                    {                        
+                        @include transition--basic;
+                    }
+                }
+                
+                // Sub-Menu
+                .children,
+                .sub-menu
+                {
+                    background-color: $superhero-blue;
 
-                    &:hover
-                    {
-                        background-color: hsla( 0, 0%, 0%, .125 );
+                    a
+                    {                        
+                        &:hover
+                        {
+                            background-color: hsla( 0, 0%, 0%, .125 );
+                        }
                     }
                 }
             }
         }
-        
+
         &.hs-viewport--wide
         {
             .primary-nav_ct
@@ -46,28 +63,9 @@
                     {
                         > a
                         {
-                            @include transition--basic;
-                            
                             &:hover
                             {
                                 background-color: hsla( 0, 0%, 0%, .125 );
-                            }
-                        }
-
-                        &.current_page_item > a
-                        {
-                            position: relative;
-                            
-                            &:after
-                            {
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                @include dimensions( 100%, .375rem);
-                                border-top-left-radius: $radius-xs;
-                                border-top-right-radius: $radius-xs; 
-                                background-color: hsla( 0, 0%, 0%, .25 );
                             }
                         }
                     }
@@ -75,7 +73,7 @@
             }
         }
     }
-    
+
     .hs-cr--screen
     {
         background-color: $white;
@@ -85,7 +83,7 @@
     {
         background-color: hsla( 0, 0%, 0%, .0625 );
     }
-    
+
     &.hs-template__search--poppy-seeds
     {
         &.modernizr--js
@@ -95,6 +93,24 @@
                 .search_icon
                 {
                     color: $white;
+                }
+            }
+        }
+    }
+    
+    &.hs-template__primary-nav-masthead-sidebar--hamburger
+    {
+        &.modernizr--js
+        {
+            &.hs-viewport--narrow
+            {
+                .primary-nav-masthead-sidebar-toggle_axn
+                {
+                    .menu_icon,
+                    .dismiss_icon
+                    {
+                        color: $white;
+                    }                
                 }
             }
         }

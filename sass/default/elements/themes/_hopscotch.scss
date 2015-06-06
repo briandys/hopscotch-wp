@@ -4,10 +4,19 @@
     {
         @include hs-rule--center-text;
     }
-    
+
     @include hs-rule--unlist;
     @include hs-rule--utility-blocked-actions;
     @include hs-rule--breathing-space;    
     @include hs-rule--rounded-images;
     @include hs-rule--pagination;
+}
+
+.hs-theme--hopscotch
+{
+    .web-product-header-name_axn,
+    .primary-nav_ct li a
+    {
+        text-decoration: none;
+    }
 }

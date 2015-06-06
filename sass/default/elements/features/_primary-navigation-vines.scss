@@ -21,6 +21,11 @@
                     display: table-cell;
                     
                     @include padding-x( $gutter );
+                    
+                    &:hover
+                    {
+                        background-color: hsla( 0, 0%, 0%, .125 );
+                    }
                 }
             }
 
@@ -39,6 +44,7 @@
             .sub-menu
             {
                 @extend %hs-patch--hidden !optional;
+                z-index: 999;
 
                 // Do not show sibling of active nav item
                 > .hs-type__primary-nav-item_tree--inactive-sibling
@@ -156,24 +162,45 @@
         {
             .primary-nav_ct
             {
+                // First-Level Item
                 > ul
                 {
-                    // First Level Item
                     > li
                     {
                         // Juxtapose
                         display: inline-block;
                         vertical-align: top;
                         
-                        .children,
-                        .sub-menu                
+                        &.current_page_item > a
                         {
-                            position: absolute;
-                            min-width: 100%;
-                            width: auto;
-                            white-space: nowrap;
+                            position: relative;
+
+                            &:after
+                            {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                @include dimensions( 100%, .375rem);
+                                border-top-left-radius: $radius-xs;
+                                border-top-right-radius: $radius-xs; 
+                                background-color: hsla( 0, 0%, 0%, .25 );
+                            }
                         }
                     }
+                }
+
+                .children,
+                .sub-menu                
+                {
+                    position: absolute;
+                    min-width: 100%;
+                    width: auto;
+                    white-space: nowrap;
+
+                    // Vis
+                    background-color: white;
+                    background-color: hsla( 0, 100%, 100%, .95 );
                 }
             }
 

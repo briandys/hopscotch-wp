@@ -667,7 +667,7 @@ svg.icon, .hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .sea
   fill: currentColor;
   vertical-align: middle; }
 
-.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct li a, .hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-theme--hopscotch .entry-admin_item a,
+.hs-template__masthead--celery .web-product-header_cr .web-product-name_axn, .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct li a, .hs-template__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-theme--hopscotch .entry-admin_item a,
 .hs-theme--hopscotch .comment-form-admin-actions-sign-out_item a,
 .hs-theme--hopscotch .show-more-content_axn,
 .hs-theme--hopscotch .comment-entry-reply-axn_axn-item a,
@@ -1052,25 +1052,18 @@ a {
 
 .hs-template__masthead--celery .masthead_cr {
   min-height: 3rem; }
-.hs-template__masthead--celery .web-product-header_cr {
-  display: table;
-  width: 100%;
-  min-height: 3rem;
-  word-break: break-word; }
-  .hs-template__masthead--celery .web-product-header_cr .web-product_name {
-    display: table-cell;
-    vertical-align: middle;
-    line-height: 1; }
-  .hs-template__masthead--celery .web-product-header_cr .web-product-name_axn {
-    padding: 1.5rem;
-    text-decoration: none; }
+.hs-template__masthead--celery .web-product-header_cr .web-product_name {
+  word-break: break-word;
+  line-height: 1; }
+.hs-template__masthead--celery .web-product-header_cr .web-product-name_axn {
+  display: table-cell;
+  text-decoration: none; }
 .hs-template__masthead--celery .web-product-header_name {
   font-size: 1.5rem; }
-.hs-template__masthead--celery.hs-viewport--narrow .web-product-header_cr {
+.hs-template__masthead--celery.hs-viewport--narrow .web-product-header_name {
+  display: table;
+  width: 100%;
   text-align: center; }
-.hs-template__masthead--celery.hs-viewport--narrow .web-product-name_axn {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
 
 .hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
@@ -1100,12 +1093,17 @@ a {
     display: table-cell;
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
+    .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct li a:hover {
+      background-color: rgba(0, 0, 0, 0.125); }
 .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .page_item_has_children,
 .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .menu-item-has-children {
   position: relative; }
   .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .page_item_has_children > a,
   .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3rem; }
+.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .children,
+.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu {
+  z-index: 999; }
 .hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .current_page_item > a {
   font-weight: bold;
   text-decoration: none; }
@@ -1147,12 +1145,26 @@ a {
 .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
-  .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li .children,
-  .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li .sub-menu {
-    position: absolute;
-    min-width: 100%;
-    width: auto;
-    white-space: nowrap; }
+  .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li.current_page_item > a {
+    position: relative; }
+    .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li.current_page_item > a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0.375rem;
+      border-top-left-radius: 0.125rem;
+      border-top-right-radius: 0.125rem;
+      background-color: rgba(0, 0, 0, 0.25); }
+.hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .children,
+.hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .sub-menu {
+  position: absolute;
+  min-width: 100%;
+  width: auto;
+  white-space: nowrap;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95); }
 .hs-template__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-sub-nav-toggle_axn {
   top: 50%;
   margin-top: -1.5rem; }
@@ -1238,11 +1250,6 @@ a {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
     cursor: default; }
-
-.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children,
-.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu {
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.95); }
 
 .hs-template__tag--string-beans .tag_comp {
   overflow: hidden; }
@@ -1422,48 +1429,42 @@ a {
   .hs-theme--hopscotch .web-product-page-nav_cr > .page-numbers li .dots {
     display: table-cell; }
 
-.hs-theme--hopscotch .masthead_cr {
-  background-color: #00aaff; }
 .hs-theme--hopscotch .web-product-header-name_axn,
 .hs-theme--hopscotch .primary-nav_ct li a {
-  color: #fff;
   text-decoration: none; }
-.hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .children,
-.hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .sub-menu {
+
+.hs-theme--hopscotch .masthead_cr {
   background-color: #00aaff; }
-  .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .children a,
-  .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .sub-menu a {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .children a:hover,
-    .hs-theme--hopscotch.hs-template__primary-nav--vines .primary-nav_ct .sub-menu a:hover {
-      background-color: rgba(0, 0, 0, 0.125); }
-.hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li > a {
+.hs-theme--hopscotch .web-product-header-name_axn:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.125); }
+.hs-theme--hopscotch .web-product-header-name_axn,
+.hs-theme--hopscotch .primary-nav_ct li a {
+  color: #fff; }
+.hs-theme--hopscotch.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct li a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li > a:hover {
+.hs-theme--hopscotch.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .children,
+.hs-theme--hopscotch.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu {
+  background-color: #00aaff; }
+  .hs-theme--hopscotch.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .children a:hover,
+  .hs-theme--hopscotch.hs-template__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu a:hover {
     background-color: rgba(0, 0, 0, 0.125); }
-.hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li.current_page_item > a {
-  position: relative; }
-  .hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li.current_page_item > a:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0.375rem;
-    border-top-left-radius: 0.125rem;
-    border-top-right-radius: 0.125rem;
-    background-color: rgba(0, 0, 0, 0.25); }
+.hs-theme--hopscotch.hs-template__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.125); }
 .hs-theme--hopscotch .hs-cr--screen {
   background-color: #fff; }
 .hs-theme--hopscotch .colophon_cr {
   background-color: rgba(0, 0, 0, 0.0625); }
 .hs-theme--hopscotch.hs-template__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon {
+  color: #fff; }
+.hs-theme--hopscotch.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
+.hs-theme--hopscotch.hs-template__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   color: #fff; }
