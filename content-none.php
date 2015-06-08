@@ -16,7 +16,7 @@ Class: article-entry_comp
         <header class="hr entry_hr article-entry_hr">
             <div class="cr entry-hr_cr article-entry-hr_cr">            
                 <div class="hr entry-hr_hr article-entry-hr_hr">                    
-                    <h1 class="entry-title_name"><?php _e( 'Nothing Found', 'hopscotch' ); ?></h1>                    
+                    <h1 class="article-entry-title_name"><?php _e( 'Nothing Found', 'hopscotch' ); ?></h1>                    
                 </div>            
             </div>
         </header>

@@ -16,15 +16,6 @@
             padding: $gutter-xxs $gutter-xs;
         }
 
-        .accessible-name
-        {
-            // Counter-Effect
-            padding-left: 0;
-            
-            // Reset
-            padding-right: 0;
-        }
-
         .comma_separator
         {
             @extend %hs-patch--visually-hidden !optional;
@@ -36,6 +27,6 @@
         @extend %hs-patch--clearfix !optional;
 
         // Counter-Effect
-        margin: -.25rem;
+        margin: -.25rem -1rem;
     }
 }

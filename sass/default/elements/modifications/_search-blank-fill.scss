@@ -6,8 +6,8 @@
     {
         .search_cr
         {
-            max-width: 320px;
             @include hs-nature--center-block;
+            max-width: $mobile-size;
         }
 
         .search_form
@@ -21,7 +21,7 @@
             border: 0;
             border-radius: 0;
             padding-right: $utility-block;
-            border-bottom: .125rem solid $gray;
+            border-bottom: .125rem solid $black;
             @include transition--basic;
             
             &:hover

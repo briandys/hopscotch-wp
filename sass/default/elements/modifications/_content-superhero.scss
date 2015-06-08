@@ -1,26 +1,47 @@
-// Content Hero
+// Content Superhero
 // Places the primary content at the middle; the sidebar at the side
 
 .hs-mod__content--superhero
 {
+    .content_cr
+    {
+        max-width: none;
+    }
+    
+    .content-hr_cr
+    {
+        text-align: center;
+    }
+    
     @include media-query( $theater )
     {
         .hs-state__content-sidebar--enabled
         {
-            .content_cr
-            {
-            }
-            
             .primary-content_comp
             {
+                margin-right: -100%;
+                width: 100%;
             }
 
             .primary-content_cr
             {
+                @include hs-nature--center-block;
+                max-width: $tablet-size;
             }
 
             .content_sidebar
             {
+                max-width: $mobile-size;
+            }
+        }
+        
+        .hs-state__colophon-sidebar--enabled
+        {        
+            .colophon-sidebar_cr
+            {
+                @include hs-nature--center-block;
+                @include padding-x( $gutter );
+                max-width: $tablet-size;
             }
         }
     }

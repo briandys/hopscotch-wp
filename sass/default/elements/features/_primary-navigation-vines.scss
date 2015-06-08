@@ -21,11 +21,6 @@
                     display: table-cell;
                     
                     @include padding-x( $gutter );
-                    
-                    &:hover
-                    {
-                        background-color: hsla( 0, 0%, 0%, .125 );
-                    }
                 }
             }
 
@@ -36,7 +31,7 @@
 
                 > a
                 {
-                    padding-right: $utility-block;
+                    padding-right: $block-l;
                 }
             }
 

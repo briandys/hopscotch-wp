@@ -13,6 +13,7 @@ $px-size-block-xxs: $px-size-base * 1;
 $px-size-block-xs: $px-size-base * 1.5;
 $px-size-block-s: $px-size-base * 2;
 $px-size-block: $px-size-base * 3;
+$px-size-block-l: $px-size-base * 3.5;
 
 $block-ms: convertRem( $px-size-block-ms );
 $block-xxxs: convertRem( $px-size-block-xxxs );
@@ -20,6 +21,7 @@ $block-xxs: convertRem( $px-size-block-xxs );
 $block-xs: convertRem( $px-size-block-xs );
 $block-s: convertRem( $px-size-block-s );
 $block: convertRem( $px-size-block );
+$block-l: convertRem( $px-size-block-l );
 
 $gutter-xxs: convertRem( $px-size-base * .5 );
 $gutter-xs: convertRem( $px-size-base * .75 );
@@ -57,6 +59,10 @@ $cinema: 2560;
 $lifebook: 3200;
 
 $viewport-narrow: $tablet;
+
+// Device-Based Size
+$mobile-size: convertRem( $mobile );
+$tablet-size: convertRem( $tablet );
 
 // Fonts
 $font-xs: convertRem( $px-size-base * .75 );

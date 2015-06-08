@@ -27,8 +27,14 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
 
         .content_sidebar
         {
-            float: left;
+            float: right;
             width: $content-sidebar_width;
+        }
+        
+        .colophon-sidebar_cr
+        {
+            @include hs-nature--center-block;
+            max-width: convertRem( $widescreen );
         }
     }
 }
@@ -60,7 +66,8 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
 {
     &.home,
     &.single,
-    &.page
+    &.page,
+    &.error404
     {
         .content_hr
         {

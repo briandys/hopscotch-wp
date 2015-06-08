@@ -37,5 +37,15 @@
                 width: $content-sidebar_width;
             }
         }
+        
+        .hs-state__colophon-sidebar--enabled
+        {        
+            .colophon-sidebar_cr
+            {
+                @include hs-nature--center-block;
+                @include padding-x( $gutter );
+                max-width: $primary-content-cr_width;
+            }
+        }
     }
 }

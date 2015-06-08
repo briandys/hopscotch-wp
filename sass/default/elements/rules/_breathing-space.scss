@@ -8,7 +8,7 @@
 .tag_cr,
 .article-entry-nav_item,
 .comment-form .field_cr,
-.comment-form .form-submit,
+.comment-form .form-submit
 {
     padding: $gutter-xxs $gutter;
 }
@@ -26,13 +26,16 @@
 .comment-form-admin-actions_cr,
 .breadcrumb-nav_cr,
 .web-product-page-nav_cr,
-.comments_ct .blank-comments_notice
+.comments_ct .blank-comments_notice,
+.content-hr_accessible-name,
+.primary-content_desc
 {
     @include padding-x( $gutter );
 }
 
 .article-entry_cr,
-.comments_cr
+.comments_cr,
+.content-hr_cr
 {
     @include padding-y( $gutter-l );
 }
@@ -54,12 +57,13 @@
     @include padding-y( $gutter-xs );
 }
 
-.content-hr_accessible-name
-{
-    padding: $gutter;
-}
-
 .widget_cr
 {
     padding: $gutter-l $gutter;
+}
+
+th,
+td
+{
+    padding: $gutter-xxs;
 }
