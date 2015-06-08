@@ -7,7 +7,7 @@
 ?>
 
 <!doctype html>
-<html id="top" class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
+<html class="no-js <?php hopscotch_html_class(); ?>" <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         
@@ -43,7 +43,7 @@
     </head>
     
     
-    <body <?php body_class(); ?>>
+    <body id="top" <?php body_class(); ?>>
         
         <?php get_template_part( 'img/svg' ); ?>
         

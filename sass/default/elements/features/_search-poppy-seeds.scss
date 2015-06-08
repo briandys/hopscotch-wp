@@ -1,5 +1,5 @@
 // Default State
-.hs-template__search--poppy-seeds {
+.hs-feature__search--poppy-seeds {
     
     // Conditional: JS Enabled
     &.modernizr--js
@@ -93,7 +93,7 @@
         }
 
         // If Hamburger Template and Narrow Viewport
-        &.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow
+        &.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow
         {
             .hs-state__search_poppy-seeds--active
             {
@@ -107,7 +107,7 @@
             }
         }
         
-        &.hs-template__primary-nav-masthead-sidebar--hamburger
+        &.hs-feature__primary-nav-masthead-sidebar--hamburger
         {
             .masthead_sidebar
             {
@@ -218,7 +218,7 @@
     }
 
     // Conditional: Hamburger Template Narrow Viewport
-    .modernizr--js.hs-template__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow &
+    .modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow &
     {
         .search_comp
         {

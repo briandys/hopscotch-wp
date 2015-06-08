@@ -2,3 +2,9 @@
 {
     @extend %hs-patch--visually-hidden !optional;
 }
+
+.web-product-theme-info_cr,
+.copyright-info_cr
+{
+    text-align: center;
+}

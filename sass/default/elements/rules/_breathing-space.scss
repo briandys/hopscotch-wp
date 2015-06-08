@@ -1,0 +1,65 @@
+// Spacing around components
+// Not to be used on elements to increase padding
+
+.article-entry-comments-actions_cr,
+.entry-author_cr,
+.entry-timestamp_cr,
+.comment-admin-sign-in_cr,
+.tag_cr,
+.article-entry-nav_item,
+.comment-form .field_cr,
+.comment-form .form-submit,
+{
+    padding: $gutter-xxs $gutter;
+}
+
+.comments_accessible-name,
+.comments-count_cr,
+.comment-reply-title
+{
+    padding: $gutter-xs $gutter;
+}
+
+.article-entry-title_name,
+.comment-subscription-form,
+.entry-admin_cr,
+.comment-form-admin-actions_cr,
+.breadcrumb-nav_cr,
+.web-product-page-nav_cr,
+.comments_ct .blank-comments_notice
+{
+    @include padding-x( $gutter );
+}
+
+.article-entry_cr,
+.comments_cr
+{
+    @include padding-y( $gutter-l );
+}
+
+.web-product-page-nav_cr
+{
+    @include padding-y( $gutter );
+}
+
+.entry-ct_cr
+{
+    @include padding-y( $gutter-s );
+}
+
+.widget-title,
+.article-entry-nav_cr,
+.comment-entry_cr
+{
+    @include padding-y( $gutter-xs );
+}
+
+.content-hr_accessible-name
+{
+    padding: $gutter;
+}
+
+.widget_cr
+{
+    padding: $gutter-l $gutter;
+}

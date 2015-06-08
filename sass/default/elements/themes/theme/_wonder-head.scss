@@ -1,5 +1,5 @@
-.hs-theme--hopscotch
-{
+.hs-mod__wonder-head
+{   
     .masthead_cr
     {
         background-color: $superhero-blue;
@@ -21,7 +21,7 @@
     }
 
     // Vines
-    &.hs-template__primary-nav--vines
+    &.hs-feature__primary-nav--vines
     {
         &.modernizr--js
         {
@@ -39,8 +39,6 @@
                 .children,
                 .sub-menu
                 {
-                    background-color: $superhero-blue;
-
                     a
                     {                        
                         &:hover
@@ -50,24 +48,31 @@
                     }
                 }
             }
-        }
 
-        &.hs-viewport--wide
-        {
-            .primary-nav_ct
+            &.hs-viewport--wide
             {
-                // First Level Nav Items
-                > ul
+                .primary-nav_ct
                 {
-                    > li
+                    // First Level Nav Items
+                    > ul
                     {
-                        > a
+                        > li
                         {
-                            &:hover
+                            > a
                             {
-                                background-color: hsla( 0, 0%, 0%, .125 );
+                                &:hover
+                                {
+                                    background-color: hsla( 0, 0%, 0%, .125 );
+                                }
                             }
                         }
+                    }
+
+                    // Sub-Menu
+                    .children,
+                    .sub-menu
+                    {
+                        background-color: $superhero-blue;
                     }
                 }
             }
@@ -84,7 +89,7 @@
         background-color: hsla( 0, 0%, 0%, .0625 );
     }
 
-    &.hs-template__search--poppy-seeds
+    &.hs-feature__search--poppy-seeds
     {
         &.modernizr--js
         {
@@ -98,7 +103,7 @@
         }
     }
     
-    &.hs-template__primary-nav-masthead-sidebar--hamburger
+    &.hs-feature__primary-nav-masthead-sidebar--hamburger
     {
         &.modernizr--js
         {

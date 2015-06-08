@@ -13,17 +13,17 @@
         viewportWideClass = 'hs-viewport--wide',
         
         // UI Template Variables
-        priNavMastheadSidebarHamburgerClass = 'hs-template__primary-nav-masthead-sidebar--hamburger',
+        priNavMastheadSidebarHamburgerClass = 'hs-feature__primary-nav-masthead-sidebar--hamburger',
         statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
         statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
         
-        searchPoppySeedsClass = 'hs-template__search--poppy-seeds',            
+        searchPoppySeedsClass = 'hs-feature__search--poppy-seeds',            
         stateSearchPoppySeedsActiveClass = 'hs-state__search_poppy-seeds--active',
         stateSearchPoppySeedsInactiveClass = 'hs-state__search_poppy-seeds--inactive',
         
-        priNavVinesClass = 'hs-template__primary-nav--vines',
+        priNavVinesClass = 'hs-feature__primary-nav--vines',
         
-        showTopMushroomClass = 'hs-template__show-top--mushroom';
+        showTopMushroomClass = 'hs-mod__show-top--mushroom';
     
     //------------------------- Primary Navigation Variables
     var priNav = $( '#primary_nav' ),
