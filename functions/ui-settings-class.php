@@ -15,7 +15,8 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         
         // Modifications (Optional)
         echo ' hs-mod__search--blank-fill';
-        echo ' hs-mod__content--hero';
+        //echo ' hs-mod__content--hero';
+        echo ' hs-mod__content--superhero';
         echo ' hs-mod__tag--string-beans';
         echo ' hs-mod__show-top--mushroom';
         echo ' hs-mod__wonder-head';

@@ -15,6 +15,7 @@
             .content_cr,
             .web-product-info_cr
             {
+                @include hs-nature--center-block;
                 max-width: convertRem( $theater );
             }
 

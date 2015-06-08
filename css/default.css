@@ -1316,6 +1316,8 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
 @media only screen and (min-width: 100rem) {
   .hs-mod__content--hero .hs-state__content-sidebar--enabled .content_cr,
   .hs-mod__content--hero .hs-state__content-sidebar--enabled .web-product-info_cr {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100rem; }
   .hs-mod__content--hero .hs-state__content-sidebar--enabled .primary-content_comp {
     margin-right: -100%;

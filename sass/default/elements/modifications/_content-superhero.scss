@@ -1,0 +1,27 @@
+// Content Hero
+// Places the primary content at the middle; the sidebar at the side
+
+.hs-mod__content--superhero
+{
+    @include media-query( $theater )
+    {
+        .hs-state__content-sidebar--enabled
+        {
+            .content_cr
+            {
+            }
+            
+            .primary-content_comp
+            {
+            }
+
+            .primary-content_cr
+            {
+            }
+
+            .content_sidebar
+            {
+            }
+        }
+    }
+}
