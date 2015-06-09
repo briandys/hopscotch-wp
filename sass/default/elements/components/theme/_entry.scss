@@ -1,0 +1,18 @@
+.article-entry-title_axn
+{
+    .home &
+    {
+        text-decoration: none;
+        color: $color-link-secondary;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+    
+    .sticky &
+    {
+        color: $color-link-tertiary;
+    }
+}

@@ -90,15 +90,18 @@
         }
 
         // If Hamburger Template and Narrow Viewport
-        &.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow
+        &.hs-feature__primary-nav-masthead-sidebar--hamburger
         {
-            .hs-state__search_poppy-seeds--active
+            &.hs-viewport--narrow
             {
-                .masthead_sidebar
+                .hs-state__search_poppy-seeds--active
                 {
-                    .search-form-input-field_cr
+                    .masthead_sidebar
                     {
-                        padding-left: $utility-block;
+                        .search-form-input-field_cr
+                        {
+                            padding-left: $utility-block;
+                        }
                     }
                 }
             }

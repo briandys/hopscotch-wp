@@ -1,6 +1,11 @@
 <?php
 // HopScotch Setup
 
+// HopScotch only works in WordPress 4.1 or later
+if ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) {
+    require get_template_directory() . '/functions/back-compatibility.php';
+}
+
 function hopscotch_setup() {
 	
     /*

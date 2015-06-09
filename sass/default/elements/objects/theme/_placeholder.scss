@@ -1,21 +1,4 @@
-::-webkit-input-placeholder
+@include placeholder
 {
-   color: $color-placeholder;
-}
-
-// Firefox 18-
-:-moz-placeholder
-{
-   color: $color-placeholder;  
-}
-
-// Firefox 19+
-::-moz-placeholder
-{
-   color: $color-placeholder;  
-}
-
-:-ms-input-placeholder
-{  
-   color: $color-placeholder;  
+    color: $color-placeholder;
 }

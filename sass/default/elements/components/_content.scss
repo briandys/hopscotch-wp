@@ -2,13 +2,6 @@
 $primary-content-comp_width: ( 640 / 1024 ) * 100%;
 $content-sidebar_width: 100% - $primary-content-comp_width;
 
-// Default Max-Width
-.content_cr
-{   
-    @include hs-nature--center-block;
-    max-width: convertRem( $desktop );
-}
-
 @include media-query( $desktop )
 {
     .hs-state__content-sidebar--enabled
@@ -39,11 +32,17 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     }
 }
 
-.primary-content_accessible-name
+// With Content Sidebar disabled or no content
+.hs-state__content-sidebar--disabled
 {
-    @extend %hs-patch--visually-hidden !optional;
+    .content_cr
+    {   
+        @include hs-nature--center-block;
+        max-width: convertRem( $tablet );
+    }
 }
 
+// Formatting of Content Header Accessible Names
 .content-hr_accessible-name
 {
     margin-bottom: 0;
@@ -62,6 +61,7 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     }
 }
 
+// Hide Content Header info if Content Header Sidebar has no content
 .hs-state__content-header-sidebar--disabled
 {
     &.home,
@@ -74,4 +74,9 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
             @extend %hs-patch--visually-hidden !optional;
         }
     }
+}
+
+.primary-content_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

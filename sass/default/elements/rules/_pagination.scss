@@ -10,15 +10,13 @@
 }
 
 // Article Entry Page Navigation
-.article-entry-page-nav_grp,
 .web-product-page-nav_cr > .page-numbers
 {
     @extend %hs-reset--unlist !optional;
 }
 
 .article-entry-page-nav_friendly-name,
-.article-entry-page-nav_grp,
-.article-entry-page-nav_item
+.article-entry-page-nav_grp
 {
     @extend %hs-rule--pagination--outer-elements;
 }
@@ -33,16 +31,15 @@
     @include margin-x( $axn-padding-counter );
 }
 
-.article-entry-page-nav_item
+.article-entry-page-nav_grp
 {
-    a,
-    .label
+    > *
     {
         @extend %hs-nature--utility-blocker !optional;
         display: table-cell;
     }
 
-    .label
+    > .item
     {
         @extend %hs-rule--pagination--current-indicator;
     }

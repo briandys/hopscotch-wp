@@ -1,8 +1,124 @@
 .hs-theme--wonderwall
 {
+    // Juxtapose Web Product Header and Nav
+    &.hs-viewport--wide
+    {
+        .masthead_cr
+        {
+            @extend %hs-patch--clearfix !optional;
+        }
+
+        .web-product-header_comp
+        {
+            float: left;
+        }
+        
+        &.hs-feature__search--poppy-seeds
+        {        
+            .primary-nav_cr
+            {
+                padding-right: $utility-block;
+            }
+        }
+    }
+
     .web-product-header-name_axn,
     .primary-nav_ct li a
     {
         text-decoration: none;
+    }
+    
+    .web-product-header-name_axn
+    {
+        &:hover
+        {
+            @include transition--basic;
+        }
+    }
+
+    // Poppy Seeds
+    &.hs-feature__search--poppy-seeds
+    {
+        &.modernizr--js
+        {            
+            .hs-state__search_poppy-seeds--active
+            {
+                .masthead_sidebar
+                {                    
+                    .search-form-input-field_cr
+                    {
+                        position: relative;
+
+                        &:after
+                        {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            right: 100%;
+                            @include dimensions( convertRem( $utility-block-unitless * 2 ), 100% );
+                        }
+                    }
+                    
+                    .search-form_input:focus
+                    {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Vines
+    &.hs-feature__primary-nav--vines
+    {
+        $vines-current-page-indicator-size: .375rem;
+        
+        .primary-nav_ct .current_page_item > a
+        {
+            position: relative;
+
+            &:after
+            {
+                content: '';
+                position: absolute;
+                left: 0;
+            }
+        }
+        
+        %vines--current-page-indicator-side
+        {
+            top: 0;
+            @include dimensions( $vines-current-page-indicator-size, 100% );
+        }
+        
+        &.hs-viewport--narrow
+        {
+            .primary-nav_ct .current_page_item > a:after
+            {   
+                @extend %vines--current-page-indicator-side;
+            }
+        }
+        
+        &.hs-viewport--wide
+        {
+            // First-Level Items only
+            .primary-nav_ct
+            {
+                > ul > .current_page_item > a:after
+                {   
+                    bottom: 0;
+                    @include dimensions( 100%, $vines-current-page-indicator-size );
+                }
+                
+                .children,
+                .sub-menu
+                {
+                    .current_page_item > a:after
+                    {
+                        @extend %vines--current-page-indicator-side;
+                    }
+                }
+            }
+        }
     }
 }

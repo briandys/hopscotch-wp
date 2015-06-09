@@ -3,9 +3,12 @@
 
 .hs-mod__content--superhero
 {
-    .content_cr
+    .hs-state__content-sidebar--enabled
     {
-        max-width: none;
+        .content_cr
+        {
+            max-width: none;
+        }
     }
     
     .content-hr_cr
@@ -34,15 +37,14 @@
                 max-width: $mobile-l-size;
             }
         }
+    }
         
-        .hs-state__colophon-sidebar--enabled
-        {        
-            .colophon-sidebar_cr
-            {
-                @include hs-nature--center-block;
-                @include padding-x( $gutter );
-                max-width: $tablet-size;
-            }
+    .hs-state__colophon-sidebar--enabled
+    {        
+        .colophon-sidebar_cr
+        {
+            @include hs-nature--center-block;
+            max-width: $tablet-size;
         }
     }
 }

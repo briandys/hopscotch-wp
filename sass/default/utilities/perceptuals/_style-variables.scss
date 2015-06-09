@@ -1,8 +1,11 @@
 @import 'default/utilities/perceptuals/style-guide';
 
 //------------------------- Color Pairs
+$color-paper-fg: $black;
+$color-paper-bg: $white;
+
 $color-light: $white;
-$color-dark: $black;
+$color-dark: $color-primary;
 
 $color-fg: $color-dark;
 $color-bg: $color-light;
@@ -10,8 +13,9 @@ $color-fg-rev: $color-light;
 $color-bg-rev: $color-dark;
 
 // Text Links
-$color-link-primary: $color-fg;
+$color-link-primary: $color-paper-fg;
 $color-link-secondary: $color-primary;
+$color-link-tertiary: $color-secondary;
 
 // Element Highlighting
 $color-selection: $color-light;
@@ -20,3 +24,7 @@ $color-selection-bg: $color-dark;
 // Placeholder
 $color-placeholder: $faint;
 $color-placeholder-rev: $ghost;
+
+// Caption
+$color-caption: $gray;
+$color-caption-rev: $white;

@@ -1,16 +1,25 @@
 .hs-theme--wonderwall
 {
-    // Masthead
-    .masthead_cr
+    // Background Colors
+    .masthead
     {
-        background-color: $superhero-blue;
+        background-color: $color-bg-rev;
+    }
+
+    .hs-container--screen
+    {
+        background-color: $white;
+    }
+
+    .colophon
+    {
+        background-color: hsla( 0, 0%, 50%, .0625 );
     }
     
     .web-product-header-name_axn
     {
         &:hover
         {
-            @include transition--basic;
             background-color: hsla( 0, 0%, 0%, .125 );
         }
     }
@@ -51,8 +60,6 @@
                                 &:hover
                                 {
                                     background-color: hsla( 0, 0%, 0%, .125 );
-                                    border-top-left-radius: $radius-xs;
-                                    border-top-right-radius: $radius-xs;
                                 }
                             }
                         }
@@ -62,7 +69,7 @@
                     .children,
                     .sub-menu
                     {
-                        background-color: $superhero-blue;
+                        background-color: $color-bg-rev;
                     }
                 }
             }
@@ -93,16 +100,7 @@
         }
     }
 
-    .hs-cr--screen
-    {
-        background-color: $white;
-    }
-
-    .colophon_cr
-    {
-        background-color: hsla( 0, 0%, 0%, .0625 );
-    }
-
+    // Poppy Seeds
     &.hs-feature__search--poppy-seeds
     {
         &.modernizr--js
@@ -116,19 +114,35 @@
                 }
                 
                 .search-form_input
-                {
+                {                    
                     color: $white;
-                    background-color: transparent;
+                    background-color: $color-bg-rev;
                     
-                    &::-webkit-input-placeholder
+                    @include placeholder
                     {
                        color: $color-placeholder-rev;
+                    }
+                }
+            }
+            
+            .hs-state__search_poppy-seeds--active
+            {
+                .masthead_sidebar
+                {                    
+                    .search-form-input-field_cr
+                    {
+                        &:after
+                        {                            
+                            @include filter-gradient( #ffffff, #00aaff, horizontal );
+                            @include background-image( linear-gradient( left,  hsla( 0,0%,100%,0 ) 0%,hsla( 200,100%,50%,1 ) 100% ) );
+                        }
                     }
                 }
             }
         }
     }
     
+    // Hamburger
     &.hs-feature__primary-nav-masthead-sidebar--hamburger
     {
         &.modernizr--js
@@ -147,6 +161,15 @@
         }
     }
     
+    // Vines
+    &.hs-feature__primary-nav--vines
+    {
+        .primary-nav_ct .current_page_item > a:after
+        {
+            background-color: hsla( 0, 0%, 0%, .125 );
+        }
+    }
+    
     // Articles
     .content-hr_cr,
     .article-entry_cr
@@ -154,22 +177,23 @@
         border-bottom: $one dotted $faint;
     }
     
-    .article-entry_comp:last-child .article-entry_cr
+    .article-entry_comp
     {
-        // Reset
-        border-bottom: 0;
+        &:last-child .article-entry_cr
+        {
+            // Reset
+            border-bottom: 0;
+        }
     }
     
-    .home
-    {    
-        .article-entry-title_axn
+    .page
+    {
+        .article-entry_comp
         {
-            text-decoration: none;
-            color: $color-link-secondary;
-
-            &:hover
+            &:last-of-type .article-entry_cr
             {
-                text-decoration: underline;
+                // Reset
+                border-bottom: 0;
             }
         }
     }

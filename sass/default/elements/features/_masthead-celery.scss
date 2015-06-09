@@ -22,7 +22,7 @@
         {
             @extend %hs-nature--utility-blocker !optional;
             display: table-cell;
-            // @include padding-x( 1.5rem );
+            @include padding-x( 1.5rem );
             text-decoration: none;
         }
     }

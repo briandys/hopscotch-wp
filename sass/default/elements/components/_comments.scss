@@ -46,6 +46,20 @@
 {
     // Reset
     margin-bottom: 0;
-    
-    font-size: $font-l;
+}
+
+.bypostauthor
+{
+    .author-name_label
+    {
+        a
+        {
+            text-decoration: none;
+            
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+    }
 }
