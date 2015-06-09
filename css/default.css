@@ -724,6 +724,18 @@ a {
   color: #fff;
   background-color: #222; }
 
+::-webkit-input-placeholder {
+  color: rgba(128, 128, 128, 0.5); }
+
+:-moz-placeholder {
+  color: rgba(128, 128, 128, 0.5); }
+
+::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.5); }
+
+:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.5); }
+
 .notice_cr {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5);
   border-radius: 0.125rem; }
@@ -780,16 +792,22 @@ a {
 .hs-theme--wonderwall.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .children,
 .hs-theme--wonderwall.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .sub-menu {
   background-color: #00aaff; }
+.hs-theme--wonderwall.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .primary-nav_ct a:hover {
+  background-color: rgba(0, 0, 0, 0.125); }
 .hs-theme--wonderwall.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after {
   background-image: url(../img/icon-arrow-down-rev.svg); }
-.hs-theme--wonderwall.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:hover {
-  background-color: rgba(0, 0, 0, 0.125); }
 .hs-theme--wonderwall .hs-cr--screen {
   background-color: #fff; }
 .hs-theme--wonderwall .colophon_cr {
   background-color: rgba(0, 0, 0, 0.0625); }
-.hs-theme--wonderwall.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon {
+.hs-theme--wonderwall.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon,
+.hs-theme--wonderwall.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .dismiss_icon {
   color: #fff; }
+.hs-theme--wonderwall.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input {
+  color: #fff;
+  background-color: transparent; }
+  .hs-theme--wonderwall.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75); }
 .hs-theme--wonderwall.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 .hs-theme--wonderwall.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   color: #fff; }
@@ -798,6 +816,11 @@ a {
   border-bottom: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
 .hs-theme--wonderwall .article-entry_comp:last-child .article-entry_cr {
   border-bottom: 0; }
+.hs-theme--wonderwall .home .article-entry-title_axn {
+  text-decoration: none;
+  color: #00aaff; }
+  .hs-theme--wonderwall .home .article-entry-title_axn:hover {
+    text-decoration: underline; }
 
 * {
   -webkit-box-sizing: border-box !important;
@@ -863,6 +886,15 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   transform: translateY(0.0625rem); }
   button :hover, input[type='submit'] :hover, input[type='password'] :hover, input[type='reset'] :hover {
     cursor: pointer; }
+
+input[placeholder] {
+  text-overflow: ellipsis; }
+
+::-moz-placeholder {
+  text-overflow: ellipsis; }
+
+input:-moz-placeholder {
+  text-overflow: ellipsis; }
 
 .notice {
   margin-bottom: 1.5rem; }
@@ -1183,7 +1215,15 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   position: absolute;
   top: 0;
   right: 0;
+  opacity: .75;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   width: auto; }
+  .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:hover {
+    opacity: 1; }
   .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
@@ -1366,7 +1406,7 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
     margin-right: auto;
     max-width: 48rem; }
   .hs-mod__content--superhero .hs-state__content-sidebar--enabled .content_sidebar {
-    max-width: 20rem; }
+    max-width: 24rem; }
   .hs-mod__content--superhero .hs-state__colophon-sidebar--enabled .colophon-sidebar_cr {
     margin-left: auto;
     margin-right: auto;
@@ -1388,7 +1428,7 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
 .hs-mod__search--blank-fill .colophon_sidebar .search_cr {
   margin-left: auto;
   margin-right: auto;
-  max-width: 20rem; }
+  max-width: 24rem; }
 .hs-mod__search--blank-fill .content-hr_sidebar .search_form,
 .hs-mod__search--blank-fill .content_sidebar .search_form,
 .hs-mod__search--blank-fill .colophon_sidebar .search_form {

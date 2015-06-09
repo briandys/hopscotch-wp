@@ -46,6 +46,7 @@ $utility-block-unitless: $px-size-block;
 // Media Query
 $legacy: 240;
 $mobile: 320;
+$mobile-l: 384;
 $moblet: 480;
 $phablet: 540;
 $tablet: 768;
@@ -62,6 +63,7 @@ $viewport-narrow: $tablet;
 
 // Device-Based Size
 $mobile-size: convertRem( $mobile );
+$mobile-l-size: convertRem( $mobile-l );
 $tablet-size: convertRem( $tablet );
 
 // Fonts
@@ -92,6 +94,7 @@ $instagram-teal: #3f729b;
 $pinterest-red: #bd081c;
 
 $faint: hsla( 0, 0%, 50%, .5 );
+$ghost: hsla( 0, 0%, 100%, .75 );
 
 // Layers
 $layer1: 900;

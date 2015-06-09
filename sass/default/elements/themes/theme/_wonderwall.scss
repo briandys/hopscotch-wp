@@ -1,5 +1,5 @@
 .hs-theme--wonderwall
-{   
+{
     // Masthead
     .masthead_cr
     {
@@ -66,6 +66,20 @@
                     }
                 }
             }
+
+            &.hs-viewport--narrow
+            {
+                .primary-nav_ct
+                {   
+                    a
+                    {
+                        &:hover
+                        {
+                            background-color: hsla( 0, 0%, 0%, .125 );
+                        }
+                    }
+                }
+            }
             
             .primary-sub-nav-toggle_axn
             {
@@ -74,11 +88,6 @@
                 {
                     // Uses SVG to have hi-res icon
                     background-image: url( ../img/icon-arrow-down-rev.svg );
-                }
-            
-                &:hover
-                {
-                    background-color: hsla( 0, 0%, 0%, .125 );
                 }
             }
         }
@@ -100,9 +109,21 @@
         {
             .masthead_sidebar
             {
-                .search_icon
+                .search_icon,
+                .dismiss_icon
                 {
                     color: $white;
+                }
+                
+                .search-form_input
+                {
+                    color: $white;
+                    background-color: transparent;
+                    
+                    &::-webkit-input-placeholder
+                    {
+                       color: $color-placeholder-rev;
+                    }
                 }
             }
         }
@@ -137,5 +158,19 @@
     {
         // Reset
         border-bottom: 0;
+    }
+    
+    .home
+    {    
+        .article-entry-title_axn
+        {
+            text-decoration: none;
+            color: $color-link-secondary;
+
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
     }
 }

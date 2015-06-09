@@ -33,3 +33,20 @@ legend
 {
     @extend %hs-patch--visually-hidden !optional;
 }
+
+// Add ellipsis to placeholder when the container is narrow
+input[placeholder]
+{
+    text-overflow: ellipsis;
+}
+
+// Firefox 19+
+::-moz-placeholder
+{
+    text-overflow: ellipsis;
+}
+
+input:-moz-placeholder
+{
+    text-overflow: ellipsis;
+}

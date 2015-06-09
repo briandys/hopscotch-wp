@@ -10,9 +10,13 @@ $color-fg-rev: $color-light;
 $color-bg-rev: $color-dark;
 
 // Text Links
-$color-link-primary: $color-primary;
-$color-link-secondary: $color-secondary;
+$color-link-primary: $color-fg;
+$color-link-secondary: $color-primary;
 
 // Element Highlighting
 $color-selection: $color-light;
 $color-selection-bg: $color-dark;
+
+// Placeholder
+$color-placeholder: $faint;
+$color-placeholder-rev: $ghost;

@@ -80,6 +80,9 @@
             position: absolute;
             top: 0;
             right: 0;
+            
+            opacity: .75;
+            @include transition--basic;
 
             // Counter-Effect
             width: auto;
@@ -87,6 +90,11 @@
             .toggle_label
             {
                 @extend %hs-patch--visually-hidden !optional;
+            }
+            
+            &:hover
+            {
+                opacity: 1;
             }
 
             // Icon
