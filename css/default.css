@@ -1124,6 +1124,10 @@ h1, h2, h3, h4, h5, h6 {
 .widget_category a {
   margin-right: .5rem; }
 
+.sidebar img {
+  max-width: 100%;
+  height: auto; }
+
 .gallery-item {
   margin: 0;
   display: inline-block;
