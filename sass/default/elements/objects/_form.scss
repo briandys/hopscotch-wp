@@ -50,3 +50,11 @@ input:-moz-placeholder
 {
     text-overflow: ellipsis;
 }
+
+label[for]
+{
+    &:hover
+    {
+        cursor: pointer;
+    }
+}

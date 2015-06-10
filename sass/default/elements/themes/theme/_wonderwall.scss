@@ -197,4 +197,35 @@
             }
         }
     }
+    
+    // Entry Byline
+    &.hs-mod__tag--string-beans
+    {
+        .tag_comp a
+        {
+            color: $white;
+            background-color: $color-secondary;
+        }
+        
+        .category-tag_comp a
+        {
+            color: $white;
+            background-color: $color-secondary;
+            
+            &:hover
+            {
+                background-color: darken( $color-secondary, 5% );
+            }
+        }
+        
+        .tag-tag_comp a
+        {
+            background-color: $faint;
+            
+            &:hover
+            {
+                background-color: darken( $faint, 15% );
+            }
+        }
+    }
 }

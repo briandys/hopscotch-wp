@@ -120,5 +120,87 @@
                 }
             }
         }
+        
+        &.modernizr--js
+        {
+            .primary-sub-nav-toggle_axn
+            {
+                &:after
+                {
+                    margin-top: -.375rem;
+                    margin-right: -.375rem;
+                    @include dimensions( .75rem );
+                    @include transition--basic;
+                }
+                
+                &:hover:after
+                {
+                    margin-top: -.5rem;
+                    margin-right: -.5rem;
+                    @include dimensions( 1rem );
+                }
+            }
+        }
+    }
+    
+    // Entry Byline
+    &.hs-mod__tag--string-beans
+    {        
+        .tag_cr
+        {
+            @include margin-x( -.25rem );
+        }
+        
+        .tag_comp a
+        {
+            text-decoration: none;
+            border-radius: $radius-xs;
+            @include transition--basic;
+        }
+    }
+    
+    .article-entry-published-timestamp_cr .pred_label,
+    .article-entry-author_cr .pred_label .noun_label,
+    .tag_accessible-name
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+    
+    &.hs-viewport--wide
+    {
+        .article-entry-hr_cr
+        {
+            position: relative;
+        }
+        
+        .article-entry-published-timestamp_comp
+        {
+            position: absolute;
+            top: 0;
+            right: 100%;
+        }
+        
+        .article-entry-published-timestamp_comp
+        {
+            margin-top: .5rem;
+            
+            .timestamp-month_label
+            {
+                text-transform: uppercase;
+            }
+        }
+        
+        .article-entry-published-timestamp_cr
+        {
+            // Reset
+            padding: 0;
+            
+            text-align: center;
+            
+            .timestamp_axn
+            {
+                text-decoration: none;
+            }
+        }
     }
 }

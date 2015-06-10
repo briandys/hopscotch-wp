@@ -28,3 +28,12 @@
         height: auto;
     }
 }
+
+.widget_nav_menu
+{
+    .menu
+    {
+        // Reset
+        @include margin-y( 0 );
+    }
+}

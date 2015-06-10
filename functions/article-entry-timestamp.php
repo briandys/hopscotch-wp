@@ -4,6 +4,8 @@
 // @since HopScotch 1.0
 // Called from content.php
 
+// http://php.net/manual/en/function.date.php
+
 if ( ! function_exists( 'hopscotch_article_entry_published_timestamp' ) ) :
 	function hopscotch_article_entry_published_timestamp() {
 		
@@ -32,7 +34,7 @@ if ( ! function_exists( 'hopscotch_article_entry_published_timestamp' ) ) :
             $time_string = sprintf( $time_string,
                 esc_attr( get_the_date( 'c' ) ), // 1: For Published datetime attribute
                 get_the_date( 'j' ), // 2: For Published Date
-                get_the_date( 'F' ), // 3: For Published Month
+                get_the_date( 'M' ), // 3: For Published Month
 				get_the_date( 'Y' ) // 4: For Published Year
             );
 
