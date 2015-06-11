@@ -4,12 +4,6 @@
     .content_sidebar,
     .colophon_sidebar
     {
-        .search_cr
-        {
-            @include hs-nature--center-block;
-            max-width: $mobile-l-size;
-        }
-
         .search_form
         {
             position: relative;

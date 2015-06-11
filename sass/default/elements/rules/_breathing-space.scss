@@ -2,7 +2,7 @@
 // Not to be used on elements to increase padding
 
 .article-entry-comments-actions_cr,
-.entry-author_cr,
+.entry-author_comp,
 .entry-timestamp_cr,
 .comment-admin-sign-in_cr,
 .tag_cr,
@@ -59,7 +59,7 @@
 
 .widget_cr
 {
-    padding: $gutter-l $gutter;
+    padding: $gutter;
 }
 
 th,

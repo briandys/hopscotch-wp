@@ -11,11 +11,6 @@
         }
     }
     
-    .content-hr_cr
-    {
-        text-align: center;
-    }
-    
     @include media-query( $theater )
     {
         .hs-state__content-sidebar--enabled

@@ -13,12 +13,18 @@
         {
             display: inline-block;
             margin: .25rem;
-            padding: $gutter-xxs $gutter-xs;
+            padding: $gutter-xxxs $gutter-xs;
         }
 
         .comma_separator
         {
             @extend %hs-patch--visually-hidden !optional;
+        }
+
+        .tag-tag_accessible-name
+        {
+            // Counter-Effect
+            @include margin-x( -.5rem );
         }
     }
 

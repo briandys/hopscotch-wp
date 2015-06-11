@@ -19,6 +19,7 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         echo ' hs-mod__content--superhero';
         echo ' hs-mod__tag--string-beans';
         echo ' hs-mod__show-top--mushroom';
+        echo ' hs-mod__timestamp--old-china-shop';
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_templates_html_class');
 endif;
@@ -26,7 +27,7 @@ endif;
 // Theme
 if ( ! function_exists( 'hopscotch_ui_settings_themes_html_class' ) ) :
 	function hopscotch_ui_settings_themes_html_class() {
-        echo ' hs-theme--wonderwall';
+        echo ' hs-theme--hopscotch';
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_themes_html_class');
 endif;

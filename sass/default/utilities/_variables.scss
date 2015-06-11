@@ -23,6 +23,7 @@ $block-s: convertRem( $px-size-block-s );
 $block: convertRem( $px-size-block );
 $block-l: convertRem( $px-size-block-l );
 
+$gutter-xxxs: convertRem( $px-size-base * .25 );
 $gutter-xxs: convertRem( $px-size-base * .5 );
 $gutter-xs: convertRem( $px-size-base * .75 );
 $gutter-s: convertRem( $px-size-base * 1 );
@@ -100,3 +101,7 @@ $ghost: hsla( 0, 0%, 100%, .75 );
 $layer1: 900;
 $layer2: 800;
 $layer3: 700;
+
+// Avatar
+$avatar-size: $block;
+$avatar-size-unitless: $px-size-block;

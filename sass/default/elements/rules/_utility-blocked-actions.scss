@@ -13,9 +13,16 @@
     @extend %hs-nature--utility-blocker !optional;
 }
 
-.show-more-content_cr
+
+
+a.more-link
 {
     display: inline-block;
+}
+
+.show-more-content_cr
+{
+    display: block;
 }
 
 .entry-admin_grp,

@@ -37,3 +37,14 @@
         @include margin-y( 0 );
     }
 }
+
+
+.widget_search,
+.widget_calendar
+{
+    .widget_cr
+    {
+        @include hs-nature--center-block;
+        max-width: $mobile-l-size;
+    }
+}

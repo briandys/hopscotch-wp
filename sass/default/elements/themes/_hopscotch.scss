@@ -1,4 +1,4 @@
-.hs-theme--wonderwall
+.hs-theme--hopscotch
 {
     // Juxtapose Web Product Header and Nav
     &.hs-viewport--wide
@@ -159,47 +159,59 @@
         }
     }
     
+    .article-entry-modified-timestamp_comp,
     .article-entry-published-timestamp_cr .pred_label,
-    .article-entry-author_cr .pred_label .noun_label,
-    .tag_accessible-name
+    .article-entry-author_cr .pred_label,
+    .category-tag_accessible-name
     {
         @extend %hs-patch--visually-hidden !optional;
     }
     
     &.hs-viewport--wide
     {
-        .article-entry-hr_cr
+        .article-entry-author_cr
         {
             position: relative;
         }
-        
-        .article-entry-published-timestamp_comp
+
+        .article-entry-author-name_label
+        {
+            margin-left: 1rem;
+            padding-left: $avatar-size;
+        }
+
+        .article-entry-author-avatar_comp
         {
             position: absolute;
-            top: 0;
-            right: 100%;
+            left: 0;
+            top: 50%;
+            margin-top: convertRem( -$avatar-size-unitless / 2 );
         }
-        
-        .article-entry-published-timestamp_comp
+    }
+    
+    // Timestamp
+    &.hs-mod__timestamp--old-china-shop
+    {
+        &.hs-viewport--wide
         {
-            margin-top: .5rem;
-            
-            .timestamp-month_label
+            .article-entry-hr_cr
             {
-                text-transform: uppercase;
+                position: relative;
             }
-        }
-        
-        .article-entry-published-timestamp_cr
-        {
-            // Reset
-            padding: 0;
-            
-            text-align: center;
-            
-            .timestamp_axn
+
+            // Timestamp
+            .article-entry-published-timestamp_comp
             {
-                text-decoration: none;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                margin-top: -.25rem;
+            }
+
+            .article-entry-published-timestamp_cr
+            {
+                // Reset
+                padding: 0;
             }
         }
     }

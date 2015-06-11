@@ -8,3 +8,23 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.author-avatar_cr
+{
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    @include dimensions( $avatar-size );
+}
+
+.article-entry-author-avatar_axn
+{
+    width: 100%;
+    
+    img
+    {
+        width: 100%;
+        height: auto;
+    }
+}
