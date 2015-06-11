@@ -167,52 +167,83 @@
         @extend %hs-patch--visually-hidden !optional;
     }
     
-    &.hs-viewport--wide
+    .article-entry-author_cr
     {
-        .article-entry-author_cr
-        {
-            position: relative;
-        }
+        position: relative;
+        display: inline-block;
+        padding-left: $avatar-size;
+    }
 
-        .article-entry-author-name_label
-        {
-            margin-left: 1rem;
-            padding-left: $avatar-size;
-        }
+    .article-entry-author-avatar_comp
+    {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: convertRem( -$avatar-size-unitless / 2 );
+    }
 
-        .article-entry-author-avatar_comp
+    .article-entry-author-name_label
+    {
+        // Reset
+        margin-right: 0;
+    }
+
+    .article-entry-author-entries_axn
+    {
+        display: table-cell;
+        @include padding-x( .5rem );
+        height: $avatar-size;
+        vertical-align: middle;
+    }
+    
+    // Comments
+    .article-entry-comments-actions_item
+    {
+        a
         {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            margin-top: convertRem( -$avatar-size-unitless / 2 );
+            text-decoration: none;
+        }
+        
+        .pred_label .verb_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+        
+        .subj_label
+        {
+            vertical-align: middle;
+        }
+        
+        .comment-count_label
+        {
+            display: inline-block;
+            margin-right: .25rem;
+            vertical-align: middle;
+            color: $white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            @include dimensions( 1.5rem );
+            text-align: center;
+            line-height: 1.5rem;
         }
     }
     
-    // Timestamp
-    &.hs-mod__timestamp--old-china-shop
+    // Read More
+    .show-more-content_cr
+    {   
+        // Reset
+        @include margin-x( 0 );
+    }
+    
+    .show-more-content_axn
     {
-        &.hs-viewport--wide
-        {
-            .article-entry-hr_cr
-            {
-                position: relative;
-            }
-
-            // Timestamp
-            .article-entry-published-timestamp_comp
-            {
-                position: absolute;
-                top: 0;
-                right: 100%;
-                margin-top: -.25rem;
-            }
-
-            .article-entry-published-timestamp_cr
-            {
-                // Reset
-                padding: 0;
-            }
-        }
+        background-color: $color-primary;
+        border-radius: $radius-s;
+        color: $white;
+    }
+    
+    .more-link_cr a
+    {
+        text-decoration: none;
     }
 }

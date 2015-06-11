@@ -57,27 +57,17 @@ Class: article-entry_comp
 
                 <div class="ct entry-hr_ct article-entry-hr_ct">
                     
-                    <!--
-                    Component: Article Entry Byline
-                    Class: article-entry-byline_comp
-                    -->
-                    <div class="comp entry-byline_comp article-entry-byline_comp">                        
-                        <div class="cr entry-byline_cr article-entry-byline_cr">
-                            
-                            <?php
-                            // Article Entry Author
-                            // Location: functions > article-entry-author.php
-                            hopscotch_article_entry_author();
-                            ?>
-                            
-                            <?php
-                            // Article Entry Published Timestamp
-                            // Location: functions > article-entry-timestamp.php
-                            hopscotch_article_entry_published_timestamp();
-                            ?>
-                        
-                        </div>
-                    </div><!-- article-entry-byline_comp -->
+                    <?php
+                    // Article Entry Author
+                    // Location: functions > article-entry-author.php
+                    hopscotch_article_entry_author();
+                    ?>
+
+                    <?php
+                    // Article Entry Published Timestamp
+                    // Location: functions > article-entry-timestamp.php
+                    hopscotch_article_entry_published_timestamp();
+                    ?>
 
                     <?php
                     // Article Entry Category

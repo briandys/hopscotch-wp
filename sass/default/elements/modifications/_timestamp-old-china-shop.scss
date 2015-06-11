@@ -1,50 +1,73 @@
 .hs-mod__timestamp--old-china-shop
 {   
     &.hs-viewport--wide
-    {   
-        .article-entry-published-timestamp_comp
+    {
+        @include media-query( $monitor )
         {
-            .timestamp-date_label
+            .article-entry-hr_cr
             {
-                text-align: center;
-                
-                > .label
+                position: relative;
+            }
+
+            // Timestamp
+            .article-entry-published-timestamp_comp
+            {
+                position: absolute;
+                top: 0;
+                right: 100%;
+                margin-top: -.25rem;
+            }
+
+            .article-entry-published-timestamp_cr
+            {
+                // Reset
+                padding: 0;
+            }
+            
+            .article-entry-published-timestamp_comp
+            {
+                .timestamp-date_label
+                {
+                    text-align: center;
+
+                    > .label
+                    {
+                        display: block;
+                    }
+                }
+
+                .timestamp_axn
                 {
                     display: block;
+                    padding: $gutter-xxxs $gutter-xs;
+                    border-width: $one;
+                    border-style: solid;
+                    border-radius: $radius-s;
+                    line-height: 1;
                 }
-            }
-            
-            .timestamp_axn
-            {
-                display: block;
-                padding: $gutter-xxxs $gutter-xs;
-                border-width: $one;
-                border-style: solid;
-                border-radius: $radius-s;
-                line-height: 1;
-            }
-            
-            .timestamp-day_label
-            {
-                font-size: $font-xl;
-            }
-            
-            .timestamp-month_label,
-            .timestamp-year_label
-            {
-                font-size: $font-xs;
-                font-weight: 300;
-            }
-            
-            .timestamp-month_label
-            {
-                text-transform: uppercase;
-            }
-            
-            .timestamp_axn
-            {
-                display: inline-block;
-                text-decoration: none;
+
+                .timestamp-day_label
+                {
+                    font-size: $font-xl;
+                }
+
+                .timestamp-month_label,
+                .timestamp-year_label
+                {
+                    font-size: $font-xs;
+                }
+
+                .timestamp-month_label
+                {
+                    text-transform: uppercase;
+                }
+
+                .timestamp_axn
+                {
+                    display: inline-block;
+                    width: $block-l;
+                    text-decoration: none;
+                }
             }
         }
     }

@@ -33,7 +33,7 @@ Class: comments_comp
                             
                             // One comment
                             '<span class="label pred_label">' .
-                            '<span class="label comments-count_label">One</span> ' .
+                            '<span class="label comments-count_label">1</span> ' .
                             '<span class="label noun_label">Comment</span> ' .
                             '<span class="label prep_label">on</span> ' .
                             '</span> ' .
