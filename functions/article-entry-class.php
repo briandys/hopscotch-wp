@@ -51,6 +51,11 @@ function hopscotch_entry_add_class( $classes ) {
     else
         $classes[] = 'hs-state__article-entry-comments--closed';
     
+    if ( have_comments() )
+        $classes[] = 'hs-state__article-entry-comments--populated';
+    else
+        $classes[] = 'hs-state__article-entry-comments--empty';
+    
 	return $classes;
 }
 add_filter('post_class', 'hopscotch_entry_add_class');
