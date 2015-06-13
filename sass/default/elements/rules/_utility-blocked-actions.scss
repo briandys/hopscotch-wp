@@ -13,21 +13,8 @@
     @extend %hs-nature--utility-blocker !optional;
 }
 
-
-
-a.more-link
-{
-    display: inline-block;
-}
-
-.show-more-content_cr
-{
-    display: block;
-}
-
 .entry-admin_grp,
 .comment-form-admin-actions_grp,
-.show-more-content_cr,
 .comment-entry-axn_grp,
 .hs-state__article-entry-comments--open .article-entry-comments-actions_grp
 {

@@ -46,12 +46,12 @@ function hopscotch_entry_add_class( $classes ) {
         $classes[] = 'hs-type__article-entry-comments--multiple';
 
     // CSS Class for Closed or Open Comments
-    if ( comments_open() )
+    if ( comments_open( get_the_ID() ) )
         $classes[] = 'hs-state__article-entry-comments--open';
     else
         $classes[] = 'hs-state__article-entry-comments--closed';
     
-    if ( have_comments() )
+    if ( get_comments_number( get_the_ID() ) )
         $classes[] = 'hs-state__article-entry-comments--populated';
     else
         $classes[] = 'hs-state__article-entry-comments--empty';

@@ -3,11 +3,7 @@
 .show-more-content_comp
 {
     .pred_label,
-    .slash_label
-    {
-        @extend %hs-patch--visually-hidden !optional;
-    }
-    
+    .slash_label,
     .article-entry-title_label
     {
         @extend %hs-patch--visually-hidden !optional;

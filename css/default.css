@@ -599,7 +599,8 @@ legend, .comment-entry-admin_accessible-name,
 .content_sidebar .dismiss_icon,
 .colophon_sidebar .search-form_label .search_icon,
 .colophon_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label,
-.show-more-content_comp .slash_label, .show-more-content_comp .article-entry-title_label, .show-top-label_text, .web-product_desc,
+.show-more-content_comp .slash_label,
+.show-more-content_comp .article-entry-title_label, .show-top-label_text, .web-product_desc,
 .web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
 .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn .verb_label,
 .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn .verb_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label,
@@ -847,7 +848,6 @@ h6 {
   color: #fff; }
 .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a:after {
   background-color: rgba(0, 0, 0, 0.125); }
-.hs-theme--hopscotch .content-hr_cr,
 .hs-theme--hopscotch .article-entry_cr {
   border-bottom: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
 .hs-theme--hopscotch .article-entry_comp:last-child .article-entry_cr {
@@ -1674,15 +1674,8 @@ td {
 .article-entry-comments-actions_item a {
   display: table-cell; }
 
-a.more-link {
-  display: inline-block; }
-
-.show-more-content_cr {
-  display: block; }
-
 .entry-admin_grp,
 .comment-form-admin-actions_grp,
-.show-more-content_cr,
 .comment-entry-axn_grp,
 .hs-state__article-entry-comments--open .article-entry-comments-actions_grp {
   margin-left: -1rem;
@@ -1770,13 +1763,13 @@ a.more-link {
   padding-right: 0.5rem;
   height: 3rem;
   vertical-align: middle; }
-.hs-theme--hopscotch .article-entry-comments-actions_item a {
+.hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item a {
   text-decoration: none; }
-.hs-theme--hopscotch .article-entry-comments-actions_item .subj_label {
+.hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item .subj_label {
   vertical-align: middle; }
 .hs-theme--hopscotch .article-entry-comments-actions_item .comment-count_label {
   display: inline-block;
-  margin-right: .25rem;
+  margin-right: .125rem;
   vertical-align: middle;
   color: #fff;
   background-color: #00aaff;
@@ -1784,13 +1777,11 @@ a.more-link {
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
-  line-height: 1.5rem; }
-.hs-theme--hopscotch .show-more-content_cr {
-  margin-left: 0;
-  margin-right: 0; }
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: bold; }
 .hs-theme--hopscotch .show-more-content_axn {
   background-color: #00aaff;
   border-radius: 0.25rem;
-  color: #fff; }
-.hs-theme--hopscotch .more-link_cr a {
+  color: #fff;
   text-decoration: none; }

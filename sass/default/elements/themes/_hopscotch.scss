@@ -197,27 +197,36 @@
     }
     
     // Comments
+    .hs-state__article-entry-comments--populated
+    {
+        .article-entry-comments-actions_item
+        {
+            a
+            {
+                text-decoration: none;
+            }
+            
+            .subj_label
+            {
+                vertical-align: middle;
+            }
+        }
+        
+    }
+    
     .article-entry-comments-actions_item
     {
-        a
-        {
-            text-decoration: none;
-        }
+        
         
         .pred_label .verb_label
         {
             @extend %hs-patch--visually-hidden !optional;
         }
         
-        .subj_label
-        {
-            vertical-align: middle;
-        }
-        
         .comment-count_label
         {
             display: inline-block;
-            margin-right: .25rem;
+            margin-right: .125rem;
             vertical-align: middle;
             color: $white;
             background-color: $color-primary;
@@ -225,25 +234,17 @@
             @include dimensions( 1.5rem );
             text-align: center;
             line-height: 1.5rem;
+            font-size: $font-s;
+            font-weight: bold;
         }
     }
     
     // Read More
-    .show-more-content_cr
-    {   
-        // Reset
-        @include margin-x( 0 );
-    }
-    
     .show-more-content_axn
     {
         background-color: $color-primary;
         border-radius: $radius-s;
         color: $white;
-    }
-    
-    .more-link_cr a
-    {
         text-decoration: none;
     }
 }

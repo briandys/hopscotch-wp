@@ -341,7 +341,7 @@
     } );
     
     // Name the more-link container
-    $( '.more-link' ).parent( 'p' ).addClass( 'more-link_cr' );
+    $( '.more-link' ).parents( 'p' ).addClass( 'more-link_cr' );
     
 
     $( document ).ready( function() {
