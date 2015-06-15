@@ -172,17 +172,16 @@
     }
     
     // Articles
-    .hs-state__content-sidebar--disabled
+    .comments_cr
     {
-        .article-entry_comp
-        {
-            border-bottom: $one dotted $faint;
-        }
+        border-top: $one dotted $faint;
     }
     
     .article-entry_comp
     {
-        &:last-child .article-entry_cr
+        border-bottom: $one dotted $faint;
+        
+        &:last-child
         {
             // Reset
             border-bottom: 0;
@@ -193,7 +192,7 @@
     {
         .article-entry_comp
         {
-            &:last-of-type .article-entry_cr
+            &:last-of-type
             {
                 // Reset
                 border-bottom: 0;

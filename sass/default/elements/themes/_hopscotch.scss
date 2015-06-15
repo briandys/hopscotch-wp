@@ -241,15 +241,18 @@
     }
     
     // Read More
-    .show-more-content_comp
+    &.hs-viewport--narrow
     {
-        display: block;
-        text-align: center;
-    }
-    
-    .show-more-content_cr
-    {
-        display: inline-block;
+        .show-more-content_comp
+        {
+            display: block;
+            text-align: center;
+        }
+
+        .show-more-content_cr
+        {
+            display: inline-block;
+        }
     }
     
     .show-more-content_axn
