@@ -263,4 +263,16 @@
         color: $white;
         text-decoration: none;
     }
+    
+    // Comments
+    .comment-entry_comp
+    {
+        margin-bottom: $gutter;
+        @include padding-x( $gutter );
+    }
+    
+    .comment-entry_cr
+    {
+        border: $one dotted $faint;
+    }
 }

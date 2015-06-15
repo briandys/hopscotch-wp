@@ -188,14 +188,17 @@
         }
     }
     
-    .page
+    .hs-state__content-sidebar--disabled
     {
-        .article-entry_comp
+        &.page
         {
-            &:last-of-type
+            .article-entry_comp
             {
-                // Reset
-                border-bottom: 0;
+                &:last-of-type
+                {
+                    // Reset
+                    border-bottom: 0;
+                }
             }
         }
     }

@@ -45,6 +45,14 @@
     @include padding-y( $gutter );
 }
 
+.hs-viewport--wide
+{
+    .content-sidebar_cr
+    {
+        @include padding-y( $gutter );
+    }
+}
+
 .entry-ct_cr
 {
     @include padding-y( $gutter-s );

@@ -39,12 +39,20 @@
 }
 
 
-.widget_search,
-.widget_calendar
+.widget_search
 {
     .widget_cr
     {
         @include hs-nature--center-block;
         max-width: $mobile-l-size;
+    }
+}
+
+.widget_calendar
+{
+    .widget_cr
+    {
+        @include hs-nature--center-block;
+        max-width: $moblet;
     }
 }

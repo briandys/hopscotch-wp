@@ -1,9 +1,13 @@
 #{$text-input-objects},
-.text_input,
-select
+.text_input
 {
     width: 100%;
     min-height: $utility-block;
+}
+
+select
+{
+    width: 100%;
 }
 
 #{$text-input-objects},
@@ -27,7 +31,6 @@ select
     
     @include transform( translateY( $one ) );
 }
-
 
 legend
 {
