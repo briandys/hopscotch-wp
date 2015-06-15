@@ -1,20 +1,17 @@
 .hs-mod__timestamp--old-china-shop
 {   
-    &.hs-viewport--wide
+    .article-entry-published-timestamp_comp
     {   
-        .article-entry-published-timestamp_comp
-        {   
-            .timestamp_axn
-            {
-                border-color: $faint;
-            }
-            
-            .timestamp-day_label,
-            .timestamp-month_label,
-            .timestamp-year_label
-            {
-                color: $gray;
-            }
+        .timestamp_axn
+        {
+            border-color: $faint;
+        }
+
+        .timestamp-day_label,
+        .timestamp-month_label,
+        .timestamp-year_label
+        {
+            color: $gray;
         }
     }
 }

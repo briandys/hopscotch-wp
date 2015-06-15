@@ -194,6 +194,7 @@
         @include padding-x( .5rem );
         height: $avatar-size;
         vertical-align: middle;
+        text-decoration: none;
     }
     
     // Comments
@@ -240,8 +241,20 @@
     }
     
     // Read More
+    .show-more-content_comp
+    {
+        display: block;
+        text-align: center;
+    }
+    
+    .show-more-content_cr
+    {
+        display: inline-block;
+    }
+    
     .show-more-content_axn
     {
+        @include padding-x( $gutter );
         background-color: $color-primary;
         border-radius: $radius-s;
         color: $white;

@@ -11,6 +11,7 @@
         background-color: $white;
     }
 
+    &.html,
     .colophon
     {
         background-color: hsla( 0, 0%, 50%, .0625 );
@@ -171,9 +172,12 @@
     }
     
     // Articles
-    .article-entry_cr
+    .hs-state__content-sidebar--disabled
     {
-        border-bottom: $one dotted $faint;
+        .article-entry_comp
+        {
+            border-bottom: $one dotted $faint;
+        }
     }
     
     .article-entry_comp

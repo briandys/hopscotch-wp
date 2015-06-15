@@ -6,6 +6,9 @@
     display: block;
     float: left;
     margin-right: $gutter-s;
+    
+    // Reset
+    padding-right: 0;
 }
 
 .alignright
@@ -13,6 +16,9 @@
     display: block;
     float: right;
     margin-left: $gutter-s;
+    
+    // Reset
+    padding-left: 0;
 }
 
 .alignleft,

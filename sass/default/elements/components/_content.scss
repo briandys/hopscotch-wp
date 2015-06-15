@@ -32,10 +32,18 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     }
 }
 
+%not-so-wide
+{   
+    @include hs-nature--center-block;
+    max-width: convertRem( $tablet );
+}
+
 // With Content Sidebar disabled or no content
 .hs-state__content-sidebar--disabled
 {
-    .content_cr
+    .article-entry_cr,
+    .comments_cr,
+    .web-product-page-nav_cr
     {   
         @include hs-nature--center-block;
         max-width: convertRem( $tablet );

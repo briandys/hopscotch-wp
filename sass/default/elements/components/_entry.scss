@@ -9,6 +9,11 @@
     @extend %hs-patch--visually-hidden !optional;
 }
 
+.entry_cr
+{
+    @extend %hs-patch--clearfix !optional;
+}
+
 .entry-ct_cr {
     
     // Clear all Heading Objects

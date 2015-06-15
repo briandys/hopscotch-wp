@@ -1,13 +1,5 @@
 // Show Top
 
-.hs-template__show-top--default
-{
-    .show-top_cr
-    {
-        @include padding-x( $gutter );
-    }
-}
-
 .show-top_label
 {
     @extend %hs-nature--inline-icon-cr !optional;    
