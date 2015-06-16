@@ -237,6 +237,17 @@
         }
     }
     
+    .hs-state__article-entry-comments--closed
+    {
+        &.hs-state__article-entry-comments--empty
+        {
+            .article-entry-comments-actions_comp
+            {
+                @extend %hs-patch--visually-hidden !optional;
+            }
+        }
+    }
+    
     // Read More
     &.hs-viewport--narrow
     {

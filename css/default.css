@@ -684,7 +684,7 @@ legend, .comment-entry-admin_accessible-name,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form-reset_axn, .web-product-page-nav_friendly-name, .hs-theme--hopscotch .article-entry-modified-timestamp_comp,
 .hs-theme--hopscotch .article-entry-published-timestamp_cr .pred_label,
 .hs-theme--hopscotch .article-entry-author_cr .pred_label,
-.hs-theme--hopscotch .category-tag_accessible-name, .hs-theme--hopscotch .article-entry-comments-actions_item .pred_label .verb_label {
+.hs-theme--hopscotch .category-tag_accessible-name, .hs-theme--hopscotch .article-entry-comments-actions_item .pred_label .verb_label, .hs-theme--hopscotch .hs-state__article-entry-comments--closed.hs-state__article-entry-comments--empty .article-entry-comments-actions_comp {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -2168,14 +2168,14 @@ td {
   line-height: 1.5rem;
   font-size: 0.875rem;
   font-weight: bold; }
-/* line 243, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 254, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .show-more-content_comp {
   display: block;
   text-align: center; }
-/* line 249, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 260, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .show-more-content_cr {
   display: inline-block; }
-/* line 255, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 266, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_axn {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2183,18 +2183,18 @@ td {
   border-radius: 0.25rem;
   color: #fff;
   text-decoration: none; }
-/* line 265, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 276, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_comp {
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
-/* line 271, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 282, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_cr {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 279, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 290, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries a {
   margin-right: 0.75rem; }
-/* line 284, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 295, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries .post-date {
   display: inline-block;
   background-color: rgba(128, 128, 128, 0.5);
