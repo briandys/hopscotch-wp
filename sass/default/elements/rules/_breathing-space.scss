@@ -28,7 +28,8 @@
 .web-product-page-nav_cr,
 .comments_ct .blank-comments_notice,
 .content-hr_accessible-name,
-.primary-content_desc
+.primary-content_desc,
+.comments-commenting-disabled_note
 {
     @include padding-x( $gutter );
 }
@@ -49,7 +50,7 @@
 {
     .content-sidebar_cr
     {
-        @include padding-y( $gutter );
+        @include padding-y( $gutter-s );
     }
 }
 

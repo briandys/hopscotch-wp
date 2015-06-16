@@ -211,14 +211,11 @@
             {
                 vertical-align: middle;
             }
-        }
-        
+        }        
     }
     
     .article-entry-comments-actions_item
     {
-        
-        
         .pred_label .verb_label
         {
             @extend %hs-patch--visually-hidden !optional;
@@ -274,5 +271,24 @@
     .comment-entry_cr
     {
         border: $one dotted $faint;
+    }
+    
+    // Widgets
+    .widget_recent_entries
+    {
+        a
+        {
+            margin-right: $gutter-xs;
+        }
+        
+        .post-date
+        {
+            display: inline-block;
+            background-color: $faint;
+            @include padding-x( $gutter-xxs );
+            color: white;
+            font-size: $font-xs;
+            border-radius: $radius-xs;
+        }
     }
 }

@@ -147,12 +147,9 @@
                                 // Location: functions > entry-navigation.php
                                 hopscotch_article_entry_nav();
 
-                                if ( comments_open() || get_comments_number() ) {
-
-                                    // Comments Template
-                                    // Location: comments.php
-                                    comments_template();
-                                }
+                                // Comments Template
+                                // Location: comments.php
+                                comments_template();
 
                             endwhile;
                             ?>

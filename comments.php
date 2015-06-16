@@ -22,6 +22,12 @@ Class: comments_comp
         <h4 class="accessible-name comments_accessible-name"><?php _e( 'Comments', 'hopscotch' ); ?></h4>
         <div class="ct comments_ct">
             
+            <?php // If Comments is closed
+            if ( ! comments_open() ) : ?>
+                <p class="note commenting-disabled_note comments-commenting-disabled_note"><?php _e( 'Commenting is disabled.', 'hopscotch' ); ?></p>
+            <?php
+            endif; ?>
+            
             <!--
             Component: Comments Count
             Class: comments-count_comp
@@ -70,11 +76,6 @@ Class: comments_comp
                 ?>
                 </ol><!-- comments_grp -->
 
-                <?php // If there are comments but Comments is closed
-                if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-                    <p class="note closed-comments_note comments-closed-comments_note"><?php _e( 'Comments are closed.', 'hopscotch' ); ?></p>
-                <?php endif; ?>
-
                 <?php
                 // Comments Entry Navigation
                 // Location: functions > entry-navigation.php
@@ -94,7 +95,7 @@ Class: comments_comp
                     </div>
                 </div><!-- blank-comments_notice -->
 
-            <?php endif; ?>            
+            <?php endif; ?>
 
             <?php
             // Comment Form
