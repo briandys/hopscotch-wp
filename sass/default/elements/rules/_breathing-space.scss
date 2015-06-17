@@ -13,13 +13,13 @@
     padding: $gutter-xxs $gutter;
 }
 
-.comments_accessible-name,
 .comments-count_cr,
 .comment-reply-title
 {
     padding: $gutter-xs $gutter;
 }
 
+.comments_accessible-name,
 .article-entry-title_name,
 .comment-subscription-form,
 .entry-admin_cr,
@@ -41,6 +41,15 @@
     @include padding-y( $gutter-l );
 }
 
+.article-sub-entry_comp
+{
+    .article-entry_cr
+    {
+        @include padding-y( 0 );
+    }
+}
+
+.entry-ct_cr,
 .web-product-page-nav_cr
 {
     @include padding-y( $gutter );
@@ -52,11 +61,6 @@
     {
         @include padding-y( $gutter-s );
     }
-}
-
-.entry-ct_cr
-{
-    @include padding-y( $gutter-s );
 }
 
 .widget-title,

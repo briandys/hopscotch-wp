@@ -19,6 +19,23 @@
                 right: 0;
                 width: 100%;
             }
+            
+            .search-form-submit_axn
+            {
+                @extend %hs-patch--visually-hidden !optional;
+                
+                // Reset
+                min-width: 0;
+                min-height: 0;
+                
+                &:focus
+                {
+                    @extend %hs-nature--inline-icon-cr !optional;
+                    @extend %hs-patch--visually-hidden-reverse !optional;
+                    min-width: $utility-block;
+                    min-height: $utility-block;
+                }
+            }
 
             .search-form-submit_axn .verb_label,
             .search-form-reset_axn .verb_label
@@ -34,7 +51,6 @@
 
             // Make container for the inline icon
             .search-form_label,
-            .search-form-submit_axn,
             .search-form-reset_axn
             {    
                 @extend %hs-nature--inline-icon-cr !optional;
@@ -130,8 +146,7 @@
         .masthead_sidebar
         {
             .search-form_label .subj_label,
-            .search-form_input,
-            .search-form-submit_axn
+            .search-form_input
             {
                 @extend %hs-patch--visually-hidden !optional;
             }
@@ -187,10 +202,7 @@
 
                 // Counter-effect
                 padding: .5rem 1rem;
-                
-                // Make space for the Reset Action
-                padding-right: $utility-block;
-                
+                padding-right: 0;
                 height: $utility-block;
             }
             
@@ -202,6 +214,17 @@
                 position: absolute;
                 top: 0;
                 right: 100%;
+            }
+        }
+    }
+    
+    .modernizr--js.hs-viewport--narrow &
+    {
+        .masthead_sidebar
+        {
+            .search-form_input
+            {
+                padding-left: 0;
             }
         }
     }

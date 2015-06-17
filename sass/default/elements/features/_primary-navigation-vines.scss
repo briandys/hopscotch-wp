@@ -92,7 +92,8 @@
                 @extend %hs-patch--visually-hidden !optional;
             }
             
-            &:hover
+            &:hover,
+            &:focus
             {
                 opacity: 1;
             }

@@ -69,7 +69,8 @@
     }
 }
 
-.article-entry_comp
+.article-entry_comp,
+.article-entry-ct_cr
 {
     @extend %hs-patch--clearfix !optional;
 }
@@ -95,4 +96,20 @@
 .tag_accessible-name:after
 {
     @include hs-nature--colonizer;
+}
+
+// Sub Entry
+.article-sub-entry_comp
+{
+    margin-top: $gutter-s;
+    
+    .article-entry_comp
+    {
+        margin-bottom: $gutter-s;
+        
+        &:last-of-type
+        {
+            margin-bottom: 0;
+        }
+    }
 }

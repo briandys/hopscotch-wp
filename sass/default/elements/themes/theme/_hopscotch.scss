@@ -126,16 +126,19 @@
                 }
             }
             
-            .hs-state__search_poppy-seeds--active
+            &.hs-viewport--wide
             {
-                .masthead_sidebar
-                {                    
-                    .search-form-input-field_cr
-                    {
-                        &:after
-                        {                            
-                            @include filter-gradient( #ffffff, #00aaff, horizontal );
-                            @include background-image( linear-gradient( left,  hsla( 0,0%,100%,0 ) 0%,hsla( 200,100%,50%,1 ) 100% ) );
+                .hs-state__search_poppy-seeds--active
+                {
+                    .masthead_sidebar
+                    {                    
+                        .search-form-input-field_cr
+                        {
+                            &:after
+                            {                            
+                                @include filter-gradient( #ffffff, #00aaff, horizontal );
+                                @include background-image( linear-gradient( left,  hsla( 0, 0%, 100%, 0 ) 0%, hsla( 200, 100%, 50%, 1 ) 75% ) );
+                            }
                         }
                     }
                 }
@@ -181,9 +184,17 @@
     {
         border-bottom: $one dotted $faint;
         
-        &:last-child
+        &:last-of-type
         {
             // Reset
+            border-bottom: 0;
+        }
+    }
+    
+    .article-sub-entry_comp
+    {
+        .article-entry_comp
+        {
             border-bottom: 0;
         }
     }

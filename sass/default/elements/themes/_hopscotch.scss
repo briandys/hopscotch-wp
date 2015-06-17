@@ -40,29 +40,35 @@
     &.hs-feature__search--poppy-seeds
     {
         &.modernizr--js
-        {            
-            .hs-state__search_poppy-seeds--active
+        {
+            &.hs-viewport--wide
             {
-                .masthead_sidebar
-                {                    
-                    .search-form-input-field_cr
-                    {
-                        position: relative;
-
-                        &:after
+                .hs-state__search_poppy-seeds--active
+                {
+                    .masthead_sidebar
+                    {                    
+                        .search-form-input-field_cr
                         {
-                            content: '';
-                            position: absolute;
-                            top: 0;
-                            right: 100%;
-                            @include dimensions( convertRem( $utility-block-unitless * 2 ), 100% );
+                            position: relative;
+
+                            &:after
+                            {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                right: 100%;
+                                @include dimensions( convertRem( $utility-block-unitless * 2 ), 100% );
+                            }
                         }
                     }
-                    
-                    .search-form_input:focus
-                    {
-                        outline: none;
-                    }
+                }
+            }
+            
+            .masthead_sidebar
+            {
+                .search-form_input:focus
+                {
+                    outline: none;
                 }
             }
         }
@@ -125,7 +131,8 @@
         {
             .primary-sub-nav-toggle_axn
             {
-                &:after
+                &:after,
+                &:focus:after
                 {
                     margin-top: -.375rem;
                     margin-right: -.375rem;
@@ -133,11 +140,17 @@
                     @include transition--basic;
                 }
                 
-                &:hover:after
+                &:hover:after,
+                &:focus:after
                 {
                     margin-top: -.5rem;
                     margin-right: -.5rem;
                     @include dimensions( 1rem );
+                }
+            
+                &:focus
+                {
+                    outline: 0;
                 }
             }
         }
@@ -249,6 +262,12 @@
     }
     
     // Read More
+    .show-more-content_comp
+    {
+        display: inline-block;
+        margin-top: $gutter-l;
+    }
+    
     &.hs-viewport--narrow
     {
         .show-more-content_comp
