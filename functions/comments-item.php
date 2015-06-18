@@ -46,12 +46,12 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                                 // The date and time the comment was published.
                                 
                                 // Structure
-                                $timestamp_comp_string = '<div class="comp entry-timestamp_comp comment-entry--published--timestamp_comp">';
-                                $timestamp_comp_string .= '<div class="cr entry-timestamp_cr comment-entry--published--timestamp_cr">';
+                                $timestamp_comp_string = '<div class="comp entry-timestamp_comp comment-entry-published-timestamp_comp">';
+                                $timestamp_comp_string .= '<div class="cr entry-timestamp_cr comment-entry-published-timestamp_cr">';
                                 $timestamp_comp_string .= '<span class="label pred_label">%1$s</span> ';
                                 $timestamp_comp_string .= '<a class="timestamp_axn" href="%2$s" title="Comment Permalink on %4$s" rel="bookmark">%3$s</a>';
                                 $timestamp_comp_string .= '</div>';
-                                $timestamp_comp_string .= '</div><!-- comment-entry--published--timestamp_comp -->';
+                                $timestamp_comp_string .= '</div><!-- comment-entry-published-timestamp_comp -->';
 
                                 // Published timestamp
                                 $time_string = '<time class="timestamp_datetime datetime="%1$s">';

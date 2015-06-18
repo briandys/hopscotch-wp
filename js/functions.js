@@ -278,34 +278,32 @@
     } )();
     
 
-    //-------------------------  Smooth Scroll
-    // https://css-tricks.com/snippets/jquery/smooth-scrolling/
-    ( function() {        
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                        $body.animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    } else {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
-                }
-            }
-        });
-    } )();
-    
-
     //-------------------------  Show Top
     ( function() {
         if ( $html.hasClass( showTopMushroomClass ) ) {
+            
+            //-------------------------  Smooth Scroll
+            // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                            $body.animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        } else {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                }
+            } );
+            
             $( window ).on( 'scroll.hopscotch', function(){			
                 var showTopActiveClass = 'hs-state__show-top--active',
                     showTopInactiveClass = 'hs-state__show-top--inactive';

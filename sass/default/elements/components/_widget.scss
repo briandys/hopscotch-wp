@@ -56,3 +56,12 @@
         max-width: $moblet;
     }
 }
+
+.widget_cr
+{
+    > ul,
+    > ol
+    {
+        margin-top: 0;
+    }
+}

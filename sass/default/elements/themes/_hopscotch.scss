@@ -172,10 +172,11 @@
         }
     }
     
-    .article-entry-modified-timestamp_comp,
-    .article-entry-published-timestamp_cr .pred_label,
-    .article-entry-author_cr .pred_label,
-    .category-tag_accessible-name
+    .article-entry-modified-timestamp_comp,    
+    .article-entry-author_cr .pred_label,    
+    .category-tag_accessible-name,
+    .comment-entry-author_cr .pred_label,
+    .comment-entry-published-timestamp_cr .pred_label
     {
         @extend %hs-patch--visually-hidden !optional;
     }
@@ -315,10 +316,36 @@
         {
             display: inline-block;
             background-color: $faint;
-            @include padding-x( $gutter-xxs );
+            @include padding-x( $gutter-xxxs );
             color: white;
             font-size: $font-xs;
             border-radius: $radius-xs;
+        }
+    }
+    
+    // Timestamp
+    &.hs-mod__timestamp--old-china-shop
+    {
+        @include media-query( $monitor )
+        {
+            .article-entry-hr_cr
+            {
+                position: relative;
+            }
+
+            // Timestamp
+            .article-entry-published-timestamp_comp
+            {
+                position: absolute;
+                top: 0;
+                right: 100%;
+            }
+
+            .article-entry-published-timestamp_cr
+            {
+                // Reset
+                padding: 0;
+            }
         }
     }
 }

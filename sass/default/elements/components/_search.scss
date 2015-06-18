@@ -22,11 +22,6 @@
 .content_sidebar,
 .colophon_sidebar
 {
-    .search-form_label .search_icon,
-    .dismiss_icon
-    {
-        @extend %hs-patch--visually-hidden !optional;
-    }
 
     .search-form_input
     {

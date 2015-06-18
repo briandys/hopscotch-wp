@@ -1,0 +1,16 @@
+blockquote,
+q
+{
+    @include margin-x( 0 );
+    
+    @include media-query( $moblet )
+    {
+        @include margin-x( $gutter );
+    }
+    
+    cite
+    {
+        display: block;
+        margin-top: $gutter-xs;
+    }
+}

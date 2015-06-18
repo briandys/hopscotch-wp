@@ -2,14 +2,15 @@
 $primary-content-comp_width: ( 640 / 1024 ) * 100%;
 $content-sidebar_width: 100% - $primary-content-comp_width;
 
-@include media-query( $desktop )
+.hs-viewport--wide
 {
     .hs-state__content-sidebar--enabled
-    {
-        .content_cr
-        {
+    {   
+        .content_ct
+        {   
+            @extend %hs-patch--clearfix !optional;
+            @include hs-nature--center-block;
             max-width: convertRem( $widescreen );
-            @include hs-patch--clearfix;
         }
 
         .primary-content_comp
@@ -23,7 +24,7 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
             float: right;
             width: $content-sidebar_width;
         }
-        
+
         .colophon-sidebar_cr
         {
             @include hs-nature--center-block;
@@ -31,6 +32,7 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
         }
     }
 }
+
 
 %not-so-wide
 {   

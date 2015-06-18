@@ -1,26 +1,5 @@
 .hs-mod__timestamp--old-china-shop
-{   
-    @include media-query( $monitor )
-    {
-        .article-entry-hr_cr
-        {
-            position: relative;
-        }
-
-        // Timestamp
-        .article-entry-published-timestamp_comp
-        {
-            position: absolute;
-            top: 0;
-            right: 100%;
-        }
-
-        .article-entry-published-timestamp_cr
-        {
-            // Reset
-            padding: 0;
-        }
-    }
+{
 
     .article-entry-published-timestamp_comp
     {
@@ -65,6 +44,15 @@
             display: inline-block;
             width: $block-l;
             text-decoration: none;
+        }
+    }
+    
+    // Visibility
+    .article-entry-published-timestamp_cr
+    {
+        .pred_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
         }
     }
 }

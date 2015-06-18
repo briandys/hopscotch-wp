@@ -1,5 +1,13 @@
 .hs-feature__breadcrumb-navigation--breadings
 {
+    &.hs-viewport--narrow
+    {
+        .breadcrumb-nav_cr
+        {
+            text-align: center;
+        }
+    }
+    
     .breadcrumb-nav_grp
     {
         @extend %hs-reset--unlist !optional;

@@ -3,6 +3,23 @@
 {    
     &.modernizr--js
     {
+        // Default
+        .show-top_axn
+        {
+            display: block;
+        }
+        
+        .show-top_label
+        {
+            @extend %hs-nature--inline-icon-cr !optional;    
+            @include dimensions( $utility-block );
+        }
+
+        .show-top-label_text
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+        
         // Default / Inactive
         .show-top_comp
         {

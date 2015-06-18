@@ -6,3 +6,14 @@ ol
 {
     padding-left: $gutter;
 }
+
+dd
+{
+    margin-bottom: $gutter-xs;
+    
+    &:last-of-type
+    {
+        // Reset
+        margin-bottom: 0;
+    }
+}

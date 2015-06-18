@@ -54,17 +54,6 @@
                 font-weight: bold;
                 text-decoration: none;
             }
-
-            // Active
-            .hs-state__primary-nav-item_tree--active
-            {
-                &.page_item_has_children > .children,
-                &.menu-item-has-children > .sub-menu
-                {
-                    // Counter-Effect
-                    display: table-row;
-                }
-            }
         }
 
         // Component: Primary Sub-Navigation Toggle Action
@@ -160,6 +149,17 @@
                     }
                 }
             }
+
+            // Active
+            .hs-state__primary-nav-item_tree--active
+            {
+                &.page_item_has_children > .children,
+                &.menu-item-has-children > .sub-menu
+                {
+                    // Counter-Effect
+                    display: table-row;
+                }
+            }
         }
 
         // Wide Viewport
@@ -191,6 +191,62 @@
                     background-color: hsla( 0, 100%, 100%, .95 );
                 }
             }
+
+            // Active
+            .hs-state__primary-nav-item_tree--active
+            {
+                
+                > .children,
+                > .sub-menu
+                {
+                    // Counter-Effect
+                    display: block;
+                    
+                    > li
+                    {
+                        display: table;
+                        width: 100%;
+                        
+                        a
+                        {
+                            text-align: left;
+                        }
+                    }
+                    
+                    > .hs-state__primary-nav-item_tree--active
+                    {
+                        display: block;
+                    }
+                }
+            }
+            
+            /*
+        
+            // Sub-Nav
+            .hs-state__primary-nav-item_tree--active
+            {
+                > .children
+                {
+                    display: block;
+                    
+                    .page_item
+                    {
+                        display: table-row;
+                    }
+                }
+                
+                > .sub-menu
+                {
+                    display: block;
+                    
+                    .menu-item
+                    {
+                        display: table-row;
+                    }
+                }
+            }
+            
+            */
 
             .primary-sub-nav-toggle_axn
             {

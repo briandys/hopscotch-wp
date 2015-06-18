@@ -1,5 +1,10 @@
 .hs-feature__primary-nav-masthead-sidebar--hamburger
 {
+    .primary-nav-masthead-sidebar-toggle_axn
+    {
+        display: block;
+    }
+    
     // Default
     // Hide by default thru CSS
     // If you hide this under .modernizr--js there might be a FOUC if we don't employ the delayed loading of View

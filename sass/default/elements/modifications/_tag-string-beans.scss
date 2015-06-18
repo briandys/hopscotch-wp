@@ -21,10 +21,10 @@
             @extend %hs-patch--visually-hidden !optional;
         }
 
-        .tag-tag_accessible-name
+        .tag_accessible-name
         {
             // Counter-Effect
-            @include margin-x( -.5rem );
+            margin-right: -$gutter-xs;
         }
     }
 
