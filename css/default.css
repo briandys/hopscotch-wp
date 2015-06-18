@@ -706,7 +706,7 @@ legend, .comment-entry-admin_accessible-name,
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
 .text_input,
 select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn,
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
+.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn {
   margin: 0;
   padding: 0;
   border: 0; }
@@ -915,31 +915,50 @@ h6 {
 .hs-theme--hopscotch .web-product-header-name_axn,
 .hs-theme--hopscotch .primary-nav_ct li a {
   color: #fff; }
-/* line 43, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li a {
+/* line 41, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
+  /* line 45, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct a:hover {
+    background-color: rgba(0, 0, 0, 0.125); }
+/* line 53, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .current_page_ancestor > a:after {
+  background-color: rgba(0, 0, 0, 0.0625); }
 /* line 61, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li > a:hover {
-  background-color: rgba(0, 0, 0, 0.125); }
-/* line 70, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .children,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .sub-menu {
-  background-color: #00aaff; }
-/* line 84, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .primary-nav_ct a:hover {
-  background-color: rgba(0, 0, 0, 0.125); }
-/* line 95, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .current_page_item > a:after {
+  background-color: rgba(0, 0, 0, 0.25); }
+/* line 71, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after {
   background-image: url(../img/icon-arrow-down-rev.svg); }
-/* line 111, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 82, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .primary-nav_ct .hs-state__primary-nav-item_tree--active {
+  background-color: rgba(0, 0, 0, 0.0625); }
+/* line 95, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active {
+  background-color: #00a1f2; }
+  /* line 99, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children,
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu {
+    background-color: #00a1f2; }
+    /* line 104, ../sass/default/elements/themes/theme/_hopscotch.scss */
+    .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
+    .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active {
+      background-color: rgba(0, 0, 0, 0.0325); }
+      /* line 111, ../sass/default/elements/themes/theme/_hopscotch.scss */
+      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children li,
+      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu li,
+      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children li,
+      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu li {
+        background-color: rgba(0, 0, 0, 0.0325); }
+/* line 132, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon,
 .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .dismiss_icon {
   color: #fff; }
-/* line 117, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 138, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input {
   color: #fff;
   background-color: #00aaff; }
@@ -955,7 +974,7 @@ h6 {
   /* line 4, ../sass/default/utilities/helpers/parametric/_placeholder.scss */
   .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.75); }
-/* line 137, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 158, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js.hs-viewport--wide .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr:after {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FF00AAFF');
@@ -965,43 +984,40 @@ h6 {
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #00aaff 75%);
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #00aaff 75%);
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #00aaff 75%); }
-/* line 158, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 179, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
 .hs-theme--hopscotch.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   color: #fff; }
-/* line 171, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a:after {
-  background-color: rgba(0, 0, 0, 0.125); }
-/* line 178, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 190, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .comments_cr {
   border-top: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 183, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 195, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry_comp {
   border-bottom: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-  /* line 187, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 199, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch .article-entry_comp:last-of-type {
     border-bottom: 0; }
-/* line 196, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 208, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .article-sub-entry_comp .article-entry_comp {
   border-bottom: 0; }
-/* line 208, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 220, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__content-sidebar--disabled.page .article-entry_comp:last-of-type {
   border-bottom: 0; }
-/* line 220, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 232, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_comp a {
   color: #fff;
   background-color: #12b32d; }
-/* line 226, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 238, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .category-tag_comp a {
   color: #fff;
   background-color: #12b32d; }
-  /* line 231, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 243, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__tag--string-beans .category-tag_comp a:hover {
     background-color: #109c27; }
-/* line 237, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 249, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag-tag_comp a {
   background-color: rgba(128, 128, 128, 0.5); }
-  /* line 241, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 253, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__tag--string-beans .tag-tag_comp a:hover {
     background-color: rgba(89, 89, 89, 0.5); }
 
@@ -1662,69 +1678,38 @@ q {
 /* line 156, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
-/* line 166, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide {
-    /*
-
-    // Sub-Nav
-    .hs-state__primary-nav-item_tree--active
-    {
-        > .children
-        {
-            display: block;
-            
-            .page_item
-            {
-                display: table-row;
-            }
-        }
-        
-        > .sub-menu
-        {
-            display: block;
-            
-            .menu-item
-            {
-                display: table-row;
-            }
-        }
-    }
-    
-    */ }
-  /* line 173, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li {
-    display: inline-block;
-    vertical-align: top; }
-  /* line 181, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .children,
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .sub-menu {
-    position: absolute;
-    min-width: 100%;
-    width: auto;
-    white-space: nowrap;
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.95); }
-  /* line 199, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children,
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu {
-    display: block; }
-    /* line 205, ../sass/default/elements/features/_primary-navigation-vines.scss */
-    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li,
-    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li {
-      display: table;
-      width: 100%; }
-      /* line 210, ../sass/default/elements/features/_primary-navigation-vines.scss */
-      .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li a,
-      .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
-        text-align: left; }
-    /* line 216, ../sass/default/elements/features/_primary-navigation-vines.scss */
-    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > .hs-state__primary-nav-item_tree--active,
-    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > .hs-state__primary-nav-item_tree--active {
-      display: block; }
-  /* line 251, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-sub-nav-toggle_axn {
-    top: 50%;
-    margin-top: -1.5rem; }
+/* line 173, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li {
+  display: inline-block;
+  vertical-align: top; }
+/* line 181, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .children,
+.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  width: auto;
+  white-space: nowrap;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95); }
+/* line 201, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children,
+.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu {
+  display: block; }
+  /* line 207, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li,
+  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li {
+    display: table;
+    width: 100%; }
+    /* line 212, ../sass/default/elements/features/_primary-navigation-vines.scss */
+    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li a,
+    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
+      text-align: left; }
+/* line 220, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-sub-nav-toggle_axn {
+  top: 50%;
+  margin-top: -1.5rem; }
 
 /* line 7, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.modernizr--js .masthead_cr {
@@ -1784,7 +1769,7 @@ q {
   right: 0; }
 /* line 197, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
-  padding: 1rem 1.5rem;
+  border: 0;
   padding-right: 0;
   height: 3rem; }
 /* line 208, ../sass/default/elements/features/_search-poppy-seeds.scss */
@@ -2150,26 +2135,39 @@ td {
 /* line 69, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input:focus {
   outline: none; }
-/* line 82, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 87, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_ancestor > a,
 .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a {
   position: relative; }
-  /* line 86, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 91, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_ancestor > a:after,
   .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a:after {
     content: '';
     position: absolute;
     left: 0; }
-/* line 94, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--narrow .primary-nav_ct .current_page_item > a:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_item > a:after,
+/* line 101, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--narrow .primary-nav_ct .current_page_ancestor > a:after,
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--narrow .primary-nav_ct .current_page_item > a:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_ancestor > a:after,
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_item > a:after,
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu .current_page_ancestor > a:after,
 .hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu .current_page_item > a:after {
   top: 0;
   width: 0.375rem;
   height: 100%; }
-/* line 113, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 132, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .current_page_ancestor > a:after,
 .hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .current_page_item > a:after {
   bottom: 0;
   width: 100%;
   height: 0.375rem; }
-/* line 134, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 141, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .current_page_ancestor > a:after {
+  height: .25rem; }
+/* line 162, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_ancestor > a:after,
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu .current_page_ancestor > a:after {
+  width: .25rem; }
+/* line 175, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus:after {
   margin-top: -.375rem;
   margin-right: -.375rem;
@@ -2180,20 +2178,20 @@ td {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-/* line 143, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 184, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:hover:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus:after {
   margin-top: -.5rem;
   margin-right: -.5rem;
   width: 1rem;
   height: 1rem; }
-/* line 151, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 192, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus {
   outline: 0; }
-/* line 162, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 203, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_cr {
   margin-left: -0.25rem;
   margin-right: -0.25rem; }
-/* line 167, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 208, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_comp a {
   text-decoration: none;
   border-radius: 0.125rem;
@@ -2202,21 +2200,21 @@ td {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-/* line 184, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 225, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author_cr {
   position: relative;
   display: inline-block;
   padding-left: 3rem; }
-/* line 191, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 232, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author-avatar_comp {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -1.5rem; }
-/* line 199, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 240, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author-name_label {
   margin-right: 0; }
-/* line 205, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 246, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author-entries_axn {
   display: table-cell;
   padding-left: 0.5rem;
@@ -2224,13 +2222,13 @@ td {
   height: 3rem;
   vertical-align: middle;
   text-decoration: none; }
-/* line 219, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 260, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item a {
   text-decoration: none; }
-/* line 224, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 265, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item .subj_label {
   vertical-align: middle; }
-/* line 238, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 279, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-comments-actions_item .comment-count_label {
   display: inline-block;
   margin-right: .125rem;
@@ -2244,18 +2242,18 @@ td {
   line-height: 1.5rem;
   font-size: 0.875rem;
   font-weight: bold; }
-/* line 266, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 307, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_comp {
   display: inline-block;
   margin-top: 2rem; }
-/* line 274, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 315, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .show-more-content_comp {
   display: block;
   text-align: center; }
-/* line 280, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 321, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-viewport--narrow .show-more-content_cr {
   display: inline-block; }
-/* line 286, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 327, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_axn {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2263,18 +2261,18 @@ td {
   border-radius: 0.25rem;
   color: #fff;
   text-decoration: none; }
-/* line 296, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 337, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_comp {
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
-/* line 302, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 343, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_cr {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 310, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 351, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries a {
   margin-right: 0.75rem; }
-/* line 315, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 356, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries .post-date {
   display: inline-block;
   background-color: rgba(128, 128, 128, 0.5);
@@ -2284,14 +2282,14 @@ td {
   font-size: 0.75rem;
   border-radius: 0.125rem; }
 @media only screen and (min-width: 60rem) {
-  /* line 331, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 372, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-hr_cr {
     position: relative; }
-  /* line 337, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 378, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp {
     position: absolute;
     top: 0;
     right: 100%; }
-  /* line 344, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 385, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_cr {
     padding: 0; } }

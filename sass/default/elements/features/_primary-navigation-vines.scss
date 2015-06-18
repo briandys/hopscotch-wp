@@ -182,6 +182,8 @@
                 .sub-menu                
                 {
                     position: absolute;
+                    top: 100%;
+                    left: 0;
                     min-width: 100%;
                     width: auto;
                     white-space: nowrap;
@@ -212,41 +214,8 @@
                             text-align: left;
                         }
                     }
-                    
-                    > .hs-state__primary-nav-item_tree--active
-                    {
-                        display: block;
-                    }
                 }
             }
-            
-            /*
-        
-            // Sub-Nav
-            .hs-state__primary-nav-item_tree--active
-            {
-                > .children
-                {
-                    display: block;
-                    
-                    .page_item
-                    {
-                        display: table-row;
-                    }
-                }
-                
-                > .sub-menu
-                {
-                    display: block;
-                    
-                    .menu-item
-                    {
-                        display: table-row;
-                    }
-                }
-            }
-            
-            */
 
             .primary-sub-nav-toggle_axn
             {

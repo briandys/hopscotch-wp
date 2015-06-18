@@ -196,10 +196,10 @@
 
             .search-form_input
             {
-                @extend %hs-reset--deflate !optional;
+                // Reset
+                border: 0;
 
                 // Counter-effect
-                padding: $gutter-s $gutter;
                 padding-right: 0;
                 height: $utility-block;
             }

@@ -79,15 +79,22 @@
     {
         $vines-current-page-indicator-size: .375rem;
         
-        .primary-nav_ct .current_page_item > a
+        .primary-nav_ct
         {
-            position: relative;
-
-            &:after
+            .current_page_ancestor,
+            .current_page_item
             {
-                content: '';
-                position: absolute;
-                left: 0;
+                > a
+                {
+                    position: relative;
+
+                    &:after
+                    {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                    }
+                }
             }
         }
         
@@ -99,9 +106,16 @@
         
         &.hs-viewport--narrow
         {
-            .primary-nav_ct .current_page_item > a:after
-            {   
-                @extend %vines--current-page-indicator-side;
+            .primary-nav_ct
+            {
+                .current_page_ancestor,
+                .current_page_item
+                {
+                    > a:after
+                    {   
+                        @extend %vines--current-page-indicator-side;
+                    }
+                }
             }
         }
         
@@ -110,18 +124,45 @@
             // First-Level Items only
             .primary-nav_ct
             {
-                > ul > .current_page_item > a:after
-                {   
-                    bottom: 0;
-                    @include dimensions( 100%, $vines-current-page-indicator-size );
+                > ul
+                {
+                    > .current_page_ancestor,
+                    > .current_page_item
+                    {
+                        > a:after
+                        {   
+                            bottom: 0;
+                            @include dimensions( 100%, $vines-current-page-indicator-size );
+                        }
+                    }
+                    
+                    > .current_page_ancestor
+                    {
+                        > a:after
+                        {
+                            height: .25rem;
+                        }
+                    }
                 }
                 
                 .children,
                 .sub-menu
                 {
-                    .current_page_item > a:after
+                    .current_page_ancestor,
+                    .current_page_item
                     {
-                        @extend %vines--current-page-indicator-side;
+                        > a:after
+                        {
+                            @extend %vines--current-page-indicator-side;
+                        }
+                    }
+                    
+                    .current_page_ancestor
+                    {
+                        > a:after
+                        {
+                            width: .25rem;
+                        }
                     }
                 }
             }
