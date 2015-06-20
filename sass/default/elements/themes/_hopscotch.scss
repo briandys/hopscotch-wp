@@ -211,6 +211,11 @@
             border-radius: $radius-xs;
             @include transition--basic;
         }
+        
+        .tag_accessible-name
+        {
+            margin-left: -$gutter-xxs;
+        }
     }
     
     .article-entry-modified-timestamp_comp,    
@@ -308,6 +313,11 @@
     {
         display: inline-block;
         margin-top: $gutter-l;
+    }
+    
+    .show-more-content_cr
+    {
+        @include margin-x( 0 );
     }
     
     &.hs-viewport--narrow

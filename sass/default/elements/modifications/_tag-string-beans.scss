@@ -20,12 +20,12 @@
         {
             @extend %hs-patch--visually-hidden !optional;
         }
+    }
 
-        .tag_accessible-name
-        {
-            // Counter-Effect
-            margin-right: -$gutter-xs;
-        }
+    .tag_accessible-name
+    {
+        // Counter-Effect
+        margin-right: -$gutter-xs;
     }
 
     .tag_cr
