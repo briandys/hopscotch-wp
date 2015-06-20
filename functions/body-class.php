@@ -4,6 +4,9 @@
 
 function hopscotch_body_class( $classes ) {
     global $post;
+    
+    // Default
+    $classes[] = 'body';
 
     // Article Entry Slug as Class
     // Format: <Post Type>--<Slug>

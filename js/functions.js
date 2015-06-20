@@ -23,7 +23,9 @@
         
         priNavVinesClass = 'hs-feature__primary-nav--vines',
         
-        showTopMushroomClass = 'hs-mod__show-top--mushroom';
+        showTopMushroomClass = 'hs-mod__show-top--mushroom',
+        
+        showContentPeelerClass = 'hs-mod__show-content--peeler';
     
     //------------------------- Primary Navigation Variables
     var priNav = $( '#primary_nav' ),
@@ -106,6 +108,23 @@
 
     //-------------------------  Generic: Add Tree Class to Parent Items
     parentPriNavItem.addClass( priNavItemTreeClass );
+    
+
+    //-------------------------  Show Content Action
+    ( function() {        
+        if ( $html.hasClass( showContentPeelerClass ) ) {
+            var showContentAction = $( '#show-content_axn' );
+                showContentActionActiveClass = 'hs-state__show-content-axn--active';
+
+            showContentAction.on( 'focus.hopscotch', function() {
+                $body.addClass( showContentActionActiveClass );
+            } );      
+
+            showContentAction.on( 'blur.hopscotch', function() {
+                $body.removeClass( showContentActionActiveClass );
+            } );
+        }
+    } )();
 
     
     //-------------------------  Vines
@@ -281,28 +300,6 @@
     //-------------------------  Show Top
     ( function() {
         if ( $html.hasClass( showTopMushroomClass ) ) {
-            
-            //-------------------------  Smooth Scroll
-            // https://css-tricks.com/snippets/jquery/smooth-scrolling/
-            $('a[href*=#]:not([href=#])').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                    if (target.length) {
-                        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                            $body.animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
-                        } else {
-                            $('html, body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
-                        }
-                    }
-                }
-            } );
             
             $( window ).on( 'scroll.hopscotch', function(){			
                 var showTopActiveClass = 'hs-state__show-top--active',

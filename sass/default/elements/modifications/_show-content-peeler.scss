@@ -1,0 +1,48 @@
+.hs-mod__show-content--peeler
+{
+    &.modernizr--js
+    {
+        .show-content_comp
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+
+        .show-content_axn
+        {
+            @extend %hs-patch--visually-hidden-reverse !optional;
+            @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
+        }
+    }
+    
+    .hs-state__show-content-axn--active
+    {
+        .container_cr
+        {
+            position: relative;
+            height: 100%;
+
+            &:after
+            {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                @include dimensions( 100% );
+                z-index: $layer2;
+                opacity: .9;
+            }
+        }
+
+        .show-content_comp
+        {
+            @extend %hs-patch--visually-hidden-reverse !optional;
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            @include transform( translateX(-50%) translateY(-50%) );
+            z-index: $layer1;
+        }
+    }
+}

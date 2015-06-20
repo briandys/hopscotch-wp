@@ -25,7 +25,6 @@
 .entry-admin_cr,
 .comment-form-admin-actions_cr,
 .breadcrumb-nav_cr,
-.web-product-page-nav_cr,
 .comments_ct .blank-comments_notice,
 .content-hr_accessible-name,
 .primary-content_desc,
@@ -49,8 +48,7 @@
     }
 }
 
-.entry-ct_cr,
-.web-product-page-nav_cr
+.entry-ct_cr
 {
     @include padding-y( $gutter );
 }
@@ -70,7 +68,8 @@
     @include padding-y( $gutter-xs );
 }
 
-.widget_cr
+.widget_cr,
+.web-product-page-nav_cr
 {
     padding: $gutter;
 }

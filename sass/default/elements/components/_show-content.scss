@@ -1,22 +1,33 @@
 // Skip Link
 
-.show-content_comp
-{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    z-index: $layer1;
-}
-
 .show-content_axn
 {
     @extend %hs-patch--visually-hidden !optional;
 }
 
-
-.show-content_axn:focus,
-.show-content_axn:active
+.show-content_axn
 {
-    @extend %hs-patch--visually-hidden-reverse !optional;
+    &:focus,
+    &:active
+    {
+        @extend %hs-patch--visually-hidden-reverse !optional;
+    }
+}
+
+.modernizr--js
+{
+    .show-content_comp
+    {
+        position: absolute;
+        top: 0;
+        z-index: $layer1;
+    }
+}
+
+.no-js
+{
+    .show-content_axn
+    {
+        @extend %hs-patch--visually-hidden-reverse !optional;
+    }
 }

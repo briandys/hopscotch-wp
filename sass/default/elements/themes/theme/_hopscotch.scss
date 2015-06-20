@@ -103,14 +103,22 @@
                                 
                                 .hs-state__primary-nav-item_tree--active
                                 {
-                                    background-color: hsla( 0, 0%, 0%, .0325 );
+                                    background-color: darken( $color-bg-rev, 5% );
 
                                     .children,
                                     .sub-menu
                                     {
-                                        li
+                                        background-color: darken( $color-bg-rev, 5% );
+                                        
+                                        .hs-state__primary-nav-item_tree--active
                                         {
-                                            background-color: hsla( 0, 0%, 0%, .0325 );
+                                            background-color: darken( $color-bg-rev, 7.5% );
+
+                                            .children,
+                                            .sub-menu
+                                            {
+                                                background-color: darken( $color-bg-rev, 7.5% );
+                                            }
                                         }
                                     }
                                 }
@@ -253,6 +261,31 @@
             &:hover
             {
                 background-color: darken( $faint, 15% );
+            }
+        }
+    }
+    
+    //------------------------- Form
+    form
+    {
+        input[type="submit"]
+        {
+            color: $white;
+            background-color: $color-button;
+            @include transition--basic;
+            
+            // Reset
+            border: 0;
+            
+            &:hover,
+            &:focus
+            {
+                background-color: darken( $color-button, 5% );
+            }
+            
+            &:active
+            {
+                @include transform( translate-y( -1px ) );
             }
         }
     }
