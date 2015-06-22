@@ -1,44 +1,13 @@
 .hs-feature__primary-nav-masthead-sidebar--hamburger
-{   
-    // Conditional: JS Enabled
-    &.modernizr--js
+{
+    // Default
+    .primary_nav
     {
-        // Default
-        .primary-nav-masthead-sidebar-toggle_axn
-        {
-            .dismiss_icon
-            {
-                @include dimensions( 1.25rem );
-            }
-        }        
-        
-        // Inactive
-        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
-        {
-            .primary_nav,
-            .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon
-            {
-                @extend %hs-patch--hidden !optional;
-            }
-        }
-
-        // Active
-        .hs-state__primary-nav-masthead-sidebar_hamburger--active
-        {
-            // Menu Icon
-            .primary-nav-masthead-sidebar-toggle_axn .menu_icon
-            {
-                @extend %hs-patch--hidden !optional;
-            }
-        }
-
-        // Toggle Label
-        .primary-nav-masthead-sidebar-toggle_axn .toggle_label
-        {
-            @extend %hs-patch--visually-hidden !optional;
-        }
-
-        // Toggle Action
+        display: none;
+    }
+    
+    &.js
+    {        
         .primary-nav-masthead-sidebar-toggle_axn
         {
             @extend %hs-reset--deflate !optional;
@@ -50,48 +19,79 @@
             width: $utility-block;
             height: $utility-block;
             
-            // Temp
-            // background-color: red;
-        }
-
-        // Conditional: Narrow Viewport
-        &.hs-viewport--narrow
-        {
-            .primary-nav-masthead-sidebar-toggle_axn {
-                position: absolute;
-                top: 0;
-                left: 0;
+            .dismiss_icon
+            {
+                @include dimensions( 1.25rem );
             }
             
-            &.hs-template__masthead--default
+            .toggle_label
             {
-                // Web Product Header            
-                .web-product-header_cr
-                {
-                    padding-left: $utility-block;
-                    padding-right: $utility-block;
-                }
+                @extend %hs-patch--visually-hidden !optional;
             }
         }
         
-        // Conditional: Wide Viewport
-        &.hs-viewport--wide
+        // Inactive
+        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
         {
-            // Toggle Action on Wide Viewport
             .primary-nav-masthead-sidebar-toggle_axn
             {
-                @extend %hs-patch--hidden !optional;
+                display: block;
+            }
+            
+            .primary_nav,
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                .dismiss_icon
+                {
+                    display: none;
+                }
+            }
+        }
+
+        // Active
+        .hs-state__primary-nav-masthead-sidebar_hamburger--active
+        {            
+            .primary_nav,
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                display: block;
+            }
+            
+            .primary-nav-masthead-sidebar-toggle_axn .menu_icon
+            {
+                display: none;
+            }
+        }
+
+        &.hs-viewport--narrow
+        {
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+                // Correction
+                margin-top: -$one;
+                z-index: $layer1;
+            }
+        }
+        
+        &.hs-viewport--wide
+        {
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                display: none;
             }
         }
     }
     
-    // JS Disabled
     &.no-js
     {
-        
-        .primary-nav-masthead-sidebar-toggle_axn
+        // Default
+        .primary_nav
         {
-            @extend %hs-patch--hidden !optional;
+            display: block;
         }
     }
 }

@@ -1,15 +1,21 @@
-// Default State
-.hs-feature__search--poppy-seeds {
-    
-    // Conditional: JS Enabled
-    &.modernizr--js
+.hs-feature__search--poppy-seeds
+{    
+    // Default
+    .masthead_sidebar
     {
+        .widget_search
+        {
+            display: none;
+        }
+    }
+    
+    &.js
+    {        
         .masthead_cr
         {
             position: relative;
         }
         
-        // Default State
         .masthead_sidebar
         {
             .search_comp
@@ -86,8 +92,7 @@
             // Web Product Header            
             .web-product-header_cr
             {
-                padding-left: $utility-block;
-                padding-right: $utility-block;
+                @include padding-x( $utility-block );
             }
         }
 
@@ -102,141 +107,125 @@
                 }
             }
         }
+        
+        // Inactive
+        .hs-state__search_poppy-seeds--inactive
+        {
+            .masthead_sidebar
+            {
+                .widget_search
+                {
+                    display: block;
+                }
+
+                .search-form_label .subj_label,
+                .search-form_input
+                {
+                    @extend %hs-patch--visually-hidden !optional;
+                }
+
+                .search-form-input_field {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .search-form-reset_axn
+                {                
+                    @extend %hs-patch--visually-hidden !optional;
+                }
+            }
+        }
+        
+        // Active
+        .hs-state__search_poppy-seeds--active
+        {
+            .masthead_sidebar
+            {
+                .widget_search
+                {
+                    display: block;
+                }
+
+                .search-form_label
+                {
+                    @extend %hs-patch--visually-hidden !optional;
+                }
+
+                .search-form-input-field_cr 
+                {
+                    padding-right: $utility-block;
+                }
+
+                // Position the button icon
+                .search-form-axn_field
+                {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .search-form_input
+                {
+                    // Reset
+                    border: 0;
+
+                    // Counter-effect
+                    padding-right: 0;
+                    height: $utility-block;
+                }
+
+                .search-form-reset_axn
+                {                
+                    @extend %hs-patch--visually-hidden-reverse !optional;
+
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                }
+            }
+        }
 
         // If Hamburger Template and Narrow Viewport
         &.hs-feature__primary-nav-masthead-sidebar--hamburger
         {
             &.hs-viewport--narrow
             {
-                .hs-state__search_poppy-seeds--active
+                .masthead_sidebar
                 {
-                    .masthead_sidebar
+                    .search-form_input
                     {
-                        .search-form-input-field_cr
-                        {
-                            padding-left: $utility-block;
-                        }
+                        padding-left: 0;
+                    }
+                    
+                    .search-form-input-field_cr
+                    {
+                        padding-left: $utility-block;
+                    }
+                    
+                    .search_comp
+                    {
+                        z-index: $layer2;
+                    }
+
+                    .primary-nav-masthead-sidebar-toggle_axn
+                    {
+                        z-index: $layer1;
                     }
                 }
             }
         }
     }
-}
-
-// Inactive State
-.hs-state__search_poppy-seeds--inactive
-{
-    // Conditional: JS Enabled
-    .modernizr--js &
+    
+    &.no-js
     {
+        // Default
         .masthead_sidebar
         {
-            .search-form_label .subj_label,
-            .search-form_input
+            .widget_search
             {
-                @extend %hs-patch--visually-hidden !optional;
+                display: block;
             }
-
-            .search-form-input_field {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-            
-            // Reset Action
-            .search-form-reset_axn
-            {                
-                @extend %hs-patch--visually-hidden !optional;
-            }
-        }
-    }
-    
-    transition: all 1s ease;
-}
-
-// Active State
-.hs-state__search_poppy-seeds--active
-{
-    // Conditional: JS Enabled
-    .modernizr--js &
-    {
-        .masthead_sidebar
-        {
-
-            .search-form_label
-            {
-                @extend %hs-patch--visually-hidden !optional;
-            }
-
-            // Make way for the button icon
-            .search-form-input-field_cr 
-            {
-                padding-right: $utility-block;
-            }
-
-            // Position the button icon
-            .search-form-axn_field
-            {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-
-            .search-form_input
-            {
-                // Reset
-                border: 0;
-
-                // Counter-effect
-                padding-right: 0;
-                height: $utility-block;
-            }
-            
-            // Reset Action
-            .search-form-reset_axn
-            {                
-                @extend %hs-patch--visually-hidden-reverse !optional;
-                
-                position: absolute;
-                top: 0;
-                right: 100%;
-            }
-        }
-    }
-    
-    .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow &
-    {
-        .masthead_sidebar
-        {
-            .search-form_input
-            {
-                padding-left: 0;
-            }
-        }
-    }
-    
-    // Conditional: Narrow Viewport
-    .modernizr--js.hs-viewport--narrow &
-    {
-        // Hide Web Product Header
-        .web-product-header_comp
-        {
-            // Preserve the layout
-            visibility: hidden;
-        }
-    }
-
-    // Conditional: Hamburger Template Narrow Viewport
-    .modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow &
-    {
-        .search_comp
-        {
-            z-index: 990;
-        }
-        
-        .primary-nav-masthead-sidebar-toggle_axn
-        {
-            z-index: 1000;
         }
     }
 }

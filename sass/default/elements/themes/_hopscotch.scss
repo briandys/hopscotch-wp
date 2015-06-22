@@ -377,7 +377,7 @@
     // Timestamp
     &.hs-mod__timestamp--old-china-shop
     {
-        @include media-query( $monitor )
+        @include media-query( $moviehouse )
         {
             .article-entry-hr_cr
             {

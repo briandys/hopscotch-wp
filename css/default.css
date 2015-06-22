@@ -635,10 +635,7 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 8, ../sass/default/utilities/helpers/patch/_hidden.scss */
-.article-sub-entry_comp .breadcrumb_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .children,
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu, .hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .search_icon,
-.hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .dismiss_icon {
+.article-sub-entry_comp .breadcrumb_nav {
   display: none; }
 
 /* line 6, ../sass/default/utilities/helpers/patch/_clearfix.scss */
@@ -668,10 +665,10 @@ legend, .comment-entry-admin_accessible-name,
 .hs-template__search--default .masthead_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label,
 .show-more-content_comp .slash_label,
 .show-more-content_comp .article-entry-title_label, .web-product_desc,
-.web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn .verb_label,
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn .verb_label, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label,
-.modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.modernizr--js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
+.web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines.js .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
+.hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn .verb_label,
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn .verb_label, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label,
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.modernizr--js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .content_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form-submit_axn .verb_label, .hs-mod__search--blank-fill .content-hr_sidebar .search-form_label,
 .hs-mod__search--blank-fill .content-hr_sidebar .search-form-reset_axn,
@@ -692,8 +689,8 @@ legend, .comment-entry-admin_accessible-name,
   position: absolute;
   width: 1px; }
 
-/* line 14, ../sass/default/utilities/helpers/patch/_visually-hidden-reverse.scss */
-.show-content_axn:focus, .show-content_axn:active, .no-js .show-content_axn, .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .hs-mod__show-content--peeler .hs-state__show-content-axn--active .show-content_comp {
+/* line 34, ../sass/default/utilities/helpers/patch/_visually-hidden.scss */
+.show-content_axn:focus, .show-content_axn:active, .no-js .show-content_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .hs-mod__show-content--peeler .hs-state__show-content-axn--active .show-content_comp {
   clip: auto;
   height: auto;
   margin: 0;
@@ -704,14 +701,14 @@ legend, .comment-entry-admin_accessible-name,
 /* line 8, ../sass/default/utilities/helpers/reset/_deflate.scss */
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
 .text_input,
-select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn,
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn {
+select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn,
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn {
   margin: 0;
   padding: 0;
   border: 0; }
 
 /* line 7, ../sass/default/utilities/helpers/reset/_unlist.scss */
-.article-entry-nav_grp, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct ul, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_grp, .web-product-page-nav_cr > .page-numbers, .article-entry-comments-actions_grp,
+.article-entry-nav_grp, .hs-feature__primary-nav--vines.js .primary-nav_ct ul, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_grp, .web-product-page-nav_cr > .page-numbers, .article-entry-comments-actions_grp,
 .comment-entry-axn_grp,
 .article-entry-admin_grp,
 .comment-entry-admin_grp,
@@ -723,8 +720,8 @@ select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-
   padding: 0; }
 
 /* line 20, ../sass/default/utilities/helpers/nature/_inline-icon.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_label,
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-reset_axn, .hs-mod__show-top--mushroom.modernizr--js .show-top_label {
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_label,
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-mod__show-top--mushroom.modernizr--js .show-top_label {
   display: table-cell;
   width: 3rem;
   height: 3rem;
@@ -732,7 +729,7 @@ select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-
   vertical-align: middle; }
 
 /* line 51, ../sass/default/utilities/helpers/nature/_inline-icon.scss */
-svg.icon, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon {
+svg.icon, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search_icon {
   margin: 0.0625rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -741,7 +738,7 @@ svg.icon, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .sear
   vertical-align: middle; }
 
 /* line 12, ../sass/default/utilities/helpers/nature/_utility-blocker.scss */
-.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
+.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines.js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
 .web-product-page-nav_cr > .page-numbers li .dots, .entry-admin_item a,
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
@@ -1072,18 +1069,6 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 /* line 1, ../sass/default/elements/objects/_html.scss */
-.primary-nav-masthead-sidebar-toggle_axn,
-.masthead_sidebar .widget_search {
-  display: none;
-  background: red; }
-
-/* line 11, ../sass/default/elements/objects/_html.scss */
-.hs-state__document--ready .primary-nav-masthead-sidebar-toggle_axn,
-.hs-state__document--ready .masthead_sidebar .widget_search {
-  display: block;
-  background: blue; }
-
-/* line 19, ../sass/default/elements/objects/_html.scss */
 .html {
   line-height: 1.6; }
 
@@ -1605,52 +1590,74 @@ q {
   width: 100%;
   text-align: center; }
 
-/* line 9, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
-  width: 1.25rem;
-  height: 1.25rem; }
-/* line 42, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
+/* line 4, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger .primary_nav {
+  display: none; }
+/* line 11, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
+  /* line 22, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+  .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
+    width: 1.25rem;
+    height: 1.25rem; }
+/* line 36, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn {
+  display: block; }
+/* line 44, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav .dismiss_icon,
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
+  display: none; }
+/* line 54, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav,
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn {
+  display: block; }
 /* line 60, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon {
+  display: none; }
+/* line 68, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
-  left: 0; }
-/* line 69, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__masthead--default .web-product-header_cr {
-  padding-left: 3rem;
-  padding-right: 3rem; }
+  left: 0;
+  margin-top: -0.0625rem;
+  z-index: 900; }
+/* line 82, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn {
+  display: none; }
+/* line 92, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary_nav {
+  display: block; }
 
 /* line 14, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li {
+.hs-feature__primary-nav--vines.js .primary-nav_ct li {
   word-break: break-word; }
   /* line 18, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li a {
+  .hs-feature__primary-nav--vines.js .primary-nav_ct li a {
     display: table-cell;
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
 /* line 27, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .page_item_has_children,
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .menu-item-has-children {
+.hs-feature__primary-nav--vines.js .primary-nav_ct .page_item_has_children,
+.hs-feature__primary-nav--vines.js .primary-nav_ct .menu-item-has-children {
   position: relative; }
   /* line 32, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .page_item_has_children > a,
-  .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .menu-item-has-children > a {
+  .hs-feature__primary-nav--vines.js .primary-nav_ct .page_item_has_children > a,
+  .hs-feature__primary-nav--vines.js .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3.5rem; }
 /* line 38, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .children,
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu {
+.hs-feature__primary-nav--vines.js .primary-nav_ct .children,
+.hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu {
+  display: none;
   z-index: 800; }
 /* line 52, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .current_page_item > a {
+.hs-feature__primary-nav--vines.js .primary-nav_ct .current_page_item > a {
   font-weight: bold;
   text-decoration: none; }
 /* line 64, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn {
+.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
   right: 0;
@@ -1662,10 +1669,10 @@ q {
   transition: all 0.2s ease-in-out;
   width: auto; }
   /* line 84, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:hover, .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus {
+  .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:hover, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:focus {
     opacity: 1; }
   /* line 91, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after {
+  .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -1683,30 +1690,30 @@ q {
     -o-transition: transform 0.2s;
     transition: transform 0.2s; }
 /* line 131, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
+.hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 /* line 140, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .primary-nav_ct li {
+.hs-feature__primary-nav--vines.js.hs-viewport--narrow .primary-nav_ct li {
   display: table;
   width: 100%; }
   /* line 145, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .primary-nav_ct li a {
+  .hs-feature__primary-nav--vines.js.hs-viewport--narrow .primary-nav_ct li a {
     width: 100%;
     text-align: left; }
 /* line 156, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
+.hs-feature__primary-nav--vines.js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines.js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
 /* line 173, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > li {
+.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-nav_ct > ul > li {
   display: inline-block;
   vertical-align: top; }
 /* line 181, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .children,
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct .sub-menu {
+.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-nav_ct .children,
+.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-nav_ct .sub-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1716,98 +1723,106 @@ q {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95); }
 /* line 201, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children,
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu {
+.hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children,
+.hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu {
   display: block; }
   /* line 207, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li,
-  .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li {
+  .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li,
+  .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li {
     display: table;
     width: 100%; }
     /* line 212, ../sass/default/elements/features/_primary-navigation-vines.scss */
-    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li a,
-    .hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
+    .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li a,
+    .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
       text-align: left; }
 /* line 220, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-sub-nav-toggle_axn {
+.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-sub-nav-toggle_axn {
   top: 50%;
   margin-top: -1.5rem; }
+/* line 234, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .search_icon,
+.hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .dismiss_icon {
+  display: none; }
 
-/* line 7, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_cr {
+/* line 6, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds .masthead_sidebar .widget_search {
+  display: none; }
+/* line 14, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .masthead_cr {
   position: relative; }
-/* line 15, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search_comp {
+/* line 21, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search_comp {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%; }
-/* line 27, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-submit_axn:not(:focus) {
+/* line 33, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus) {
   width: 0;
   height: 0;
   min-width: 0;
   min-height: 0; }
-/* line 64, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .widget_search .widget_cr {
+/* line 70, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .widget_search .widget_cr {
   padding: 0; }
-/* line 71, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .dismiss_icon {
+/* line 77, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 76, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form-input_field {
+/* line 82, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-input_field {
   margin-top: 0; }
-/* line 87, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js.hs-viewport--narrow .web-product-header_cr {
+/* line 93, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-viewport--narrow .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }
-/* line 99, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js.hs-viewport--wide .masthead_sidebar .search_comp {
+/* line 104, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-viewport--wide .masthead_sidebar .search_comp {
   width: 20rem; }
-/* line 115, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
-  padding-left: 3rem; }
-
+/* line 116, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .widget_search {
+  display: block; }
 /* line 127, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-state__search_poppy-seeds--inactive {
-  transition: all 1s ease; }
-  /* line 140, ../sass/default/elements/features/_search-poppy-seeds.scss */
-  .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-input_field {
-    position: absolute;
-    top: 0;
-    right: 0; }
-
-/* line 172, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
-  padding-right: 3rem; }
-/* line 178, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-axn_field {
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-input_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 185, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
+/* line 145, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .widget_search {
+  display: block; }
+/* line 155, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
+  padding-right: 3rem; }
+/* line 161, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-axn_field {
+  position: absolute;
+  top: 0;
+  right: 0; }
+/* line 168, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
   border: 0;
   padding-right: 0;
   height: 3rem; }
-/* line 196, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
+/* line 178, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
   position: absolute;
   top: 0;
   right: 100%; }
-/* line 211, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
+/* line 196, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form_input {
   padding-left: 0; }
-/* line 222, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js.hs-viewport--narrow .hs-state__search_poppy-seeds--active .web-product-header_comp {
-  visibility: hidden; }
-/* line 232, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .search_comp {
-  z-index: 990; }
-/* line 237, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .primary-nav-masthead-sidebar-toggle_axn {
-  z-index: 1000; }
+/* line 201, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form-input-field_cr {
+  padding-left: 3rem; }
+/* line 206, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search_comp {
+  z-index: 800; }
+/* line 211, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .primary-nav-masthead-sidebar-toggle_axn {
+  z-index: 900; }
+/* line 225, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.no-js .masthead_sidebar .widget_search {
+  display: block; }
 
 /* line 5, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
 .hs-feature__breadcrumb-navigation--breadings.hs-viewport--narrow .breadcrumb-nav_cr {
@@ -2335,7 +2350,7 @@ td {
   color: white;
   font-size: 0.75rem;
   border-radius: 0.125rem; }
-@media only screen and (min-width: 60rem) {
+@media only screen and (min-width: 90rem) {
   /* line 382, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-hr_cr {
     position: relative; }

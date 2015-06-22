@@ -1,21 +1,3 @@
-.primary-nav-masthead-sidebar-toggle_axn,
-.masthead_sidebar .widget_search
-{
-    display: none;
-    background: red;
-}
-
-// Document Ready Counter-Effect
-.hs-state__document--ready
-{   
-    .primary-nav-masthead-sidebar-toggle_axn,
-    .masthead_sidebar .widget_search
-    {
-        display: block;
-        background: blue;
-    }
-}
-
 .html
 {
     line-height: $line-height;

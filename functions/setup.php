@@ -85,3 +85,10 @@ add_action( 'after_setup_theme', 'hopscotch_setup' );
 if ( ! isset( $content_width ) ) {
     $content_width = 960;
 }
+
+
+// JS Detection
+function hopscotch_javascript_detection() {
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+}
+add_action( 'wp_head', 'hopscotch_javascript_detection', 0 );
