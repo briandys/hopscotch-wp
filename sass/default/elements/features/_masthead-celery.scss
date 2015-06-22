@@ -1,15 +1,12 @@
 .hs-feature__masthead--celery
 {
-    // Masthead
     .masthead_cr
     {
         min-height: $utility-block;
     }
     
-    .web-product-header_cr
+    .web-product-header_comp
     {
-        
-
         .web-product_name
         {
             word-break: break-word;
@@ -32,10 +29,8 @@
         font-size: 1.5rem;
     }
     
-    // Narrow Viewport
     &.hs-viewport--narrow
     {  
-        // Web Product Header            
         .web-product-header_name
         {
             display: table;

@@ -1,18 +1,5 @@
 .hs-feature__primary-nav-masthead-sidebar--hamburger
-{
-    .primary-nav-masthead-sidebar-toggle_axn
-    {
-        display: block;
-    }
-    
-    // Default
-    // Hide by default thru CSS
-    // If you hide this under .modernizr--js there might be a FOUC if we don't employ the delayed loading of View
-    .primary_nav
-    {
-        @extend %hs-patch--hidden !optional;
-    }
-    
+{   
     // Conditional: JS Enabled
     &.modernizr--js
     {
@@ -42,12 +29,6 @@
             .primary-nav-masthead-sidebar-toggle_axn .menu_icon
             {
                 @extend %hs-patch--hidden !optional;
-            }
-        
-            // Counter-Effect
-            .primary_nav
-            {
-                display: block;
             }
         }
 
@@ -82,43 +63,6 @@
                 left: 0;
             }
             
-            // Search Default
-            &.hs-template__search--default
-            {
-                .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
-                {
-                    .masthead_sidebar
-                    {
-                        .search_comp
-                        {
-                            @extend %hs-patch--hidden !optional;
-                        }
-                    }
-                }
-            }
-            
-            // Widgets by Default
-            .masthead_sidebar
-            {
-                .widget_comp
-                {
-                    @extend %hs-patch--hidden !optional;
-                }
-            }
-            
-            // Active
-            .hs-state__primary-nav-masthead-sidebar_hamburger--active
-            {
-                .masthead_sidebar
-                {
-                    .widget_comp
-                    {
-                        // Counter-Effect
-                        display: block;
-                    }
-                }
-            }
-            
             &.hs-template__masthead--default
             {
                 // Web Product Header            
@@ -144,11 +88,6 @@
     // JS Disabled
     &.no-js
     {
-        // Counter-Effect
-        .primary_nav
-        {
-            display: block;
-        }
         
         .primary-nav-masthead-sidebar-toggle_axn
         {

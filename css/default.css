@@ -635,8 +635,8 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 8, ../sass/default/utilities/helpers/patch/_hidden.scss */
-.article-sub-entry_comp .breadcrumb_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger .primary_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__search--default .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .masthead_sidebar .search_comp, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .masthead_sidebar .widget_comp, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .children,
+.article-sub-entry_comp .breadcrumb_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav,
+.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon, .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .children,
 .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .sub-menu, .hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .search_icon,
 .hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .dismiss_icon {
   display: none; }
@@ -741,7 +741,7 @@ svg.icon, .hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .sear
   vertical-align: middle; }
 
 /* line 12, ../sass/default/utilities/helpers/nature/_utility-blocker.scss */
-.hs-feature__masthead--celery .web-product-header_cr .web-product-name_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
+.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
 .web-product-page-nav_cr > .page-numbers li .dots, .entry-admin_item a,
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
@@ -1071,22 +1071,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 3, ../sass/default/elements/objects/_html.scss */
-.html.hs-state__js--enabled:after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 999; }
+/* line 1, ../sass/default/elements/objects/_html.scss */
+.primary-nav-masthead-sidebar-toggle_axn,
+.masthead_sidebar .widget_search {
+  display: none;
+  background: red; }
 
-/* line 16, ../sass/default/elements/objects/_html.scss */
-.html.hs-state__document--ready:after {
-  display: none; }
+/* line 11, ../sass/default/elements/objects/_html.scss */
+.hs-state__document--ready .primary-nav-masthead-sidebar-toggle_axn,
+.hs-state__document--ready .masthead_sidebar .widget_search {
+  display: block;
+  background: blue; }
 
-/* line 21, ../sass/default/elements/objects/_html.scss */
+/* line 19, ../sass/default/elements/objects/_html.scss */
 .html {
   line-height: 1.6; }
 
@@ -1586,59 +1583,47 @@ q {
 .primary-nav-masthead-sidebar-toggle_axn {
   display: none; }
 
-/* line 4, ../sass/default/elements/features/_masthead-celery.scss */
+/* line 3, ../sass/default/elements/features/_masthead-celery.scss */
 .hs-feature__masthead--celery .masthead_cr {
   min-height: 3rem; }
-/* line 13, ../sass/default/elements/features/_masthead-celery.scss */
-.hs-feature__masthead--celery .web-product-header_cr .web-product_name {
+/* line 10, ../sass/default/elements/features/_masthead-celery.scss */
+.hs-feature__masthead--celery .web-product-header_comp .web-product_name {
   word-break: break-word;
   line-height: 1; }
-/* line 21, ../sass/default/elements/features/_masthead-celery.scss */
-.hs-feature__masthead--celery .web-product-header_cr .web-product-name_axn {
+/* line 18, ../sass/default/elements/features/_masthead-celery.scss */
+.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn {
   display: table-cell;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   text-decoration: none; }
-/* line 30, ../sass/default/elements/features/_masthead-celery.scss */
+/* line 27, ../sass/default/elements/features/_masthead-celery.scss */
 .hs-feature__masthead--celery .web-product-header_name {
   font-size: 1.5rem; }
-/* line 39, ../sass/default/elements/features/_masthead-celery.scss */
+/* line 34, ../sass/default/elements/features/_masthead-celery.scss */
 .hs-feature__masthead--celery.hs-viewport--narrow .web-product-header_name {
   display: table;
   width: 100%;
   text-align: center; }
 
-/* line 3, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger .primary-nav-masthead-sidebar-toggle_axn {
-  display: block; }
-/* line 22, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 9, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   width: 1.25rem;
   height: 1.25rem; }
-/* line 48, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav {
-  display: block; }
-/* line 61, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 42, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js .primary-nav-masthead-sidebar-toggle_axn {
   padding-left: .5rem;
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
-/* line 79, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 60, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0; }
-/* line 114, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__primary-nav-masthead-sidebar_hamburger--active .masthead_sidebar .widget_comp {
-  display: block; }
-/* line 125, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 69, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow.hs-template__masthead--default .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }
-/* line 148, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary_nav {
-  display: block; }
 
 /* line 14, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct li {
@@ -1783,47 +1768,44 @@ q {
 /* line 115, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
   padding-left: 3rem; }
-/* line 128, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .widget_search {
-  display: block; }
 
-/* line 139, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 127, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-state__search_poppy-seeds--inactive {
   transition: all 1s ease; }
-  /* line 152, ../sass/default/elements/features/_search-poppy-seeds.scss */
+  /* line 140, ../sass/default/elements/features/_search-poppy-seeds.scss */
   .modernizr--js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-input_field {
     position: absolute;
     top: 0;
     right: 0; }
 
-/* line 184, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 172, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
   padding-right: 3rem; }
-/* line 190, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 178, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-axn_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 197, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 185, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
   border: 0;
   padding-right: 0;
   height: 3rem; }
-/* line 208, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 196, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
   position: absolute;
   top: 0;
   right: 100%; }
-/* line 223, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 211, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
   padding-left: 0; }
-/* line 234, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 222, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js.hs-viewport--narrow .hs-state__search_poppy-seeds--active .web-product-header_comp {
   visibility: hidden; }
-/* line 244, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 232, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .search_comp {
   z-index: 990; }
-/* line 249, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 237, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .modernizr--js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .hs-state__search_poppy-seeds--active .primary-nav-masthead-sidebar-toggle_axn {
   z-index: 1000; }
 
