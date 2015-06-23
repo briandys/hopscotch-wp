@@ -26,16 +26,9 @@
     
     .web-product-header_name
     {
+        display: table;
+        width: 100%;
+        text-align: center;
         font-size: 1.5rem;
-    }
-    
-    &.hs-viewport--narrow
-    {  
-        .web-product-header_name
-        {
-            display: table;
-            width: 100%;
-            text-align: center;
-        }
     }
 }

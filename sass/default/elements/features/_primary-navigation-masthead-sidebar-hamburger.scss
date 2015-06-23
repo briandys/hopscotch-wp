@@ -6,11 +6,24 @@
         display: none;
     }
     
+    .primary-nav-masthead-sidebar-toggle_axn
+    {
+        display: none;
+    }
+    
     &.js
     {        
         .primary-nav-masthead-sidebar-toggle_axn
         {
             @extend %hs-reset--deflate !optional;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            // Correction
+            margin-top: -$one;
+            z-index: $layer1;
 
             // Counter-effect
             padding-left: .5rem;
@@ -21,6 +34,7 @@
             
             .dismiss_icon
             {
+                display: none;
                 @include dimensions( 1.25rem );
             }
             
@@ -37,15 +51,6 @@
             {
                 display: block;
             }
-            
-            .primary_nav,
-            .primary-nav-masthead-sidebar-toggle_axn
-            {
-                .dismiss_icon
-                {
-                    display: none;
-                }
-            }
         }
 
         // Active
@@ -57,31 +62,31 @@
                 display: block;
             }
             
-            .primary-nav-masthead-sidebar-toggle_axn .menu_icon
-            {
-                display: none;
-            }
-        }
-
-        &.hs-viewport--narrow
-        {
             .primary-nav-masthead-sidebar-toggle_axn
             {
-                position: absolute;
-                top: 0;
-                left: 0;
-                
-                // Correction
-                margin-top: -$one;
-                z-index: $layer1;
+                .dismiss_icon
+                {
+                    display: inline-block;
+                }
+            }
+            
+            .primary-nav-masthead-sidebar-toggle_axn
+            {
+                .menu_icon
+                {
+                    display: none;
+                }
             }
         }
         
-        &.hs-viewport--wide
+        @include media-query( $viewport-wide )
         {
-            .primary-nav-masthead-sidebar-toggle_axn
+            .hs-state__primary-nav-masthead-sidebar_hamburger--active
             {
-                display: none;
+                .primary-nav-masthead-sidebar-toggle_axn
+                {
+                    display: none;
+                }
             }
         }
     }

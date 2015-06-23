@@ -60,7 +60,8 @@ $minorityreport: 1920;
 $cinema: 2560;
 $lifebook: 3200;
 
-$viewport-narrow: $tablet;
+$viewport-narrow: 0;
+$viewport-wide: $tablet;
 
 // Device-Based Size
 $mobile-size: convertRem( $mobile );

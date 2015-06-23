@@ -1,15 +1,14 @@
 // Based on WordPress Twentyfifteen functions file.
 // Contains handlers for navigation and widget area.
 
-( function( $ ) {
+( function ( $ ) {
     
     //------------------------- Generic Variables
     var $body = $( document.body ),        
         $html = $( 'html' ),
-        $window, windowWidth, resizeTimer;
+        $window, windowWidth, resizeTimer,
     
-    //------------------------- Viewport Variables
-    var viewportNarrowClass = 'hs-viewport--narrow',
+        viewportNarrowClass = 'hs-viewport--narrow',
         viewportWideClass = 'hs-viewport--wide',
         
         // UI Template Variables
@@ -17,7 +16,7 @@
         statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
         statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
         
-        searchPoppySeedsClass = 'hs-feature__search--poppy-seeds',            
+        searchPoppySeedsClass = 'hs-feature__search--poppy-seeds',           
         stateSearchPoppySeedsActiveClass = 'hs-state__search_poppy-seeds--active',
         stateSearchPoppySeedsInactiveClass = 'hs-state__search_poppy-seeds--inactive',
         
@@ -39,16 +38,16 @@
         priNavItemTreeInactiveSiblingClass = 'hs-type__primary-nav-item_tree--inactive-sibling';
 
     if( ! priNav )
-      return;
+        return;
 
     if( ! priNavItem )
-      return;
+        return;
 
     if( ! parentPriNavItem )
-      return;
+        return;
 
     if( ! parentPriNavItemAction )
-      return;
+        return;
     
     //------------------------- Primary Navigation & Masthead Sidebar Variables
     var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
@@ -88,10 +87,8 @@
         //------------------------- Hamburger: Activate or Deactivate based on Viewport Width
         if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) ) {
             if ( $html.hasClass( viewportNarrowClass ) ) {
-                console.log( 'Hamburger and Narrow' );
                 priNavMastheadSidebarHamburgerDeactivate();
             } else {
-                console.log( 'Hamburger and Wide' );
                 priNavMastheadSidebarHamburgerActivate();
             }
         }
@@ -349,7 +346,7 @@
 
         $window.on( 'resize.hopscotch', function() {
             clearTimeout( resizeTimer );
-            resizeTimer = setTimeout( resize, 500 );
+            resizeTimer = setTimeout( resize, 0 );
         } );
 
         resize();

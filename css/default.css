@@ -1564,8 +1564,8 @@ q {
 .tag_accessible-name:after {
   content: ':'; }
 
-/* line 1, ../sass/default/elements/components/_masthead.scss */
-.primary-nav-masthead-sidebar-toggle_axn {
+/* line 3, ../sass/default/elements/components/_masthead.scss */
+.no-js .primary-nav-masthead-sidebar-toggle_axn {
   display: none; }
 
 /* line 3, ../sass/default/elements/features/_masthead-celery.scss */
@@ -1583,51 +1583,51 @@ q {
   text-decoration: none; }
 /* line 27, ../sass/default/elements/features/_masthead-celery.scss */
 .hs-feature__masthead--celery .web-product-header_name {
-  font-size: 1.5rem; }
-/* line 34, ../sass/default/elements/features/_masthead-celery.scss */
-.hs-feature__masthead--celery.hs-viewport--narrow .web-product-header_name {
   display: table;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.5rem; }
 
 /* line 4, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger .primary_nav {
   display: none; }
-/* line 11, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 9, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger .primary-nav-masthead-sidebar-toggle_axn {
+  display: none; }
+/* line 16, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn {
-  padding-left: .5rem;
-  padding-right: .5rem;
-  width: 3rem;
-  height: 3rem; }
-  /* line 22, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-  .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
-    width: 1.25rem;
-    height: 1.25rem; }
-/* line 36, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn {
-  display: block; }
-/* line 44, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary_nav .dismiss_icon,
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
-  display: none; }
-/* line 54, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav,
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn {
-  display: block; }
-/* line 60, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon {
-  display: none; }
-/* line 68, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
   left: 0;
   margin-top: -0.0625rem;
-  z-index: 900; }
-/* line 82, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
-.hs-feature__primary-nav-masthead-sidebar--hamburger.js.hs-viewport--wide .primary-nav-masthead-sidebar-toggle_axn {
+  z-index: 900;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  width: 3rem;
+  height: 3rem; }
+  /* line 35, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+  .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
+    display: none;
+    width: 1.25rem;
+    height: 1.25rem; }
+/* line 50, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn {
+  display: block; }
+/* line 59, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav,
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn {
+  display: block; }
+/* line 67, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
+  display: inline-block; }
+/* line 75, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon {
   display: none; }
-/* line 92, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+@media only screen and (min-width: 48rem) {
+  /* line 86, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+  .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn {
+    display: none; } }
+/* line 97, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary_nav {
   display: block; }
 
@@ -1824,36 +1824,33 @@ q {
 .hs-feature__search--poppy-seeds.no-js .masthead_sidebar .widget_search {
   display: block; }
 
-/* line 5, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
-.hs-feature__breadcrumb-navigation--breadings.hs-viewport--narrow .breadcrumb-nav_cr {
-  text-align: center; }
-/* line 11, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
+/* line 3, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
 .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_grp {
   margin-left: -1rem;
   margin-right: -1rem; }
-/* line 20, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
+/* line 11, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
 .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_item {
   display: inline-block;
   margin-left: 1rem; }
-  /* line 25, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
+  /* line 16, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
   .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_item:first-child {
     margin-left: 0; }
-    /* line 30, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
+    /* line 21, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
     .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_item:first-child .breadcrumb-nav_axn:after {
       display: none; }
-/* line 38, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
+/* line 29, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
 .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn {
   position: relative; }
-  /* line 44, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
+  /* line 38, ../sass/default/elements/features/_breadcrumb-navigation-breadings.scss */
   .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn:after {
     content: '';
     position: absolute;
     top: 50%;
     left: 0;
     margin-left: -.875rem;
-    margin-top: -6px;
-    width: 12px;
-    height: 12px;
+    margin-top: -0.375rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background-image: url(../img/icon-arrow-down.svg);
     background-size: cover;
     -webkit-transform: rotate(-90deg);
@@ -2104,9 +2101,10 @@ td {
 .hs-viewport--narrow .comment-admin_cr,
 .hs-viewport--narrow .comment-reply-title,
 .hs-viewport--narrow .comments_accessible-name,
-.hs-viewport--narrow .comments-commenting-disabled_note {
+.hs-viewport--narrow .comments-commenting-disabled_note,
+.hs-viewport--narrow .breadcrumb-nav_cr {
   text-align: center; }
-/* line 24, ../sass/default/elements/rules/_center-text.scss */
+/* line 25, ../sass/default/elements/rules/_center-text.scss */
 .hs-viewport--narrow .article-entry-admin_item,
 .hs-viewport--narrow .article-entry-comments-actions_item,
 .hs-viewport--narrow .comment-form-admin-actions-sign-out_item {
