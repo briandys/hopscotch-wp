@@ -34,14 +34,6 @@
     margin-top: $gutter-l;
 }
 
-.hs-viewport--wide
-{
-    .comments_grp .comment .children
-    {
-        margin-left: $gutter;
-    }
-}
-
 .comments_accessible-name
 {
     // Reset
@@ -61,5 +53,13 @@
                 text-decoration: underline;
             }
         }
+    }
+}
+
+@include media-query( $viewport-wide )
+{
+    .comments_grp .comment .children
+    {
+        margin-left: $gutter;
     }
 }

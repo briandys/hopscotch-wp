@@ -53,14 +53,6 @@
     @include padding-y( $gutter );
 }
 
-.hs-viewport--wide
-{
-    .content-sidebar_cr
-    {
-        @include padding-y( $gutter-s );
-    }
-}
-
 .widget-title,
 .article-entry-nav_cr,
 .comment-entry_cr
@@ -78,4 +70,12 @@ th,
 td
 {
     padding: $gutter-xxs;
+}
+
+@include media-query( $viewport-wide )
+{
+    .content-sidebar_cr
+    {
+        @include padding-y( $gutter-s );
+    }
 }

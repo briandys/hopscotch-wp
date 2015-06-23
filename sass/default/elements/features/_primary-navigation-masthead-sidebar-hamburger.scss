@@ -11,6 +11,11 @@
         display: none;
     }
     
+    .web-product-header_cr
+    {
+        @include padding-x( $utility-block );
+    }
+    
     &.js
     {        
         .primary-nav-masthead-sidebar-toggle_axn
@@ -87,6 +92,11 @@
                 {
                     display: none;
                 }
+            }
+    
+            .web-product-header_cr
+            {
+                @include padding-x( 0 );
             }
         }
     }

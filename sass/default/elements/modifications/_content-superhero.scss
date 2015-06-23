@@ -2,16 +2,16 @@
 // Places the primary content at the middle; the sidebar at the side
 
 .hs-mod__content--superhero
-{    
-    @include media-query( $theater )
+{
+    .hs-state__content-sidebar--enabled
     {
-        .hs-state__content-sidebar--enabled
+        @include media-query( $theater )
         {
             .content_ct
             {
                 max-width: none;
             }
-            
+
             .primary-content_comp
             {
                 margin-right: -100%;
@@ -30,7 +30,7 @@
             }
         }
     }
-        
+    
     .hs-state__colophon-sidebar--enabled
     {        
         .colophon-sidebar_cr

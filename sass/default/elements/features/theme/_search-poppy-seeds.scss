@@ -1,0 +1,24 @@
+.hs-feature__search--poppy-seeds
+{
+    &.js
+    {
+        // Active
+        .hs-state__search_poppy-seeds--active
+        {
+            @include media-query( $viewport-wide )
+            {
+                .masthead_sidebar
+                {                    
+                    .search-form-input-field_cr
+                    {
+                        &:after
+                        {
+                            @include filter-gradient( #ffffff, #ffffff, horizontal );
+                            @include background-image( linear-gradient( left,  hsla( 0, 0%, 100%, 0 ) 0%, hsla( 0, 0%, 100%, 0 ) 75% ) );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

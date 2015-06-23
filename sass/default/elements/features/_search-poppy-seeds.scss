@@ -86,25 +86,30 @@
             }
         }
         
-        // Narrow Viewport
-        &.hs-viewport--narrow
-        {   
-            // Web Product Header            
-            .web-product-header_cr
-            {
-                @include padding-x( $utility-block );
-            }
+        .web-product-header_cr
+        {
+            @include padding-x( $utility-block );
         }
 
-        // Wide Viewport
-        &.hs-viewport--wide
+        @include media-query( $viewport-wide )
         {
+            .web-product-header_cr
+            {
+                // Counter
+                @include padding-x( 0 );
+            }
+            
             .masthead_sidebar
             {
                 .search_comp
                 {
                     width: 20rem;
                 }
+            }
+            
+            .primary-nav_cr
+            {
+                padding-right: $utility-block;
             }
         }
         
@@ -184,33 +189,61 @@
                     right: 100%;
                 }
             }
+            
+            @include media-query( $viewport-wide )
+            {
+                .masthead_sidebar
+                {                    
+                    .search-form-input-field_cr
+                    {
+                        position: relative;
+
+                        &:after
+                        {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            right: 100%;
+                            @include dimensions( convertRem( $utility-block-unitless * 2 ), 100% );
+                        }
+                    }
+                }
+            }
         }
 
-        // If Hamburger Template and Narrow Viewport
         &.hs-feature__primary-nav-masthead-sidebar--hamburger
         {
-            &.hs-viewport--narrow
+            .masthead_sidebar
+            {
+                .search-form_input
+                {
+                    padding-left: 0;
+                }
+
+                .search-form-input-field_cr
+                {
+                    padding-left: $utility-block;
+                }
+
+                .search_comp
+                {
+                    z-index: $layer2;
+                }
+
+                .primary-nav-masthead-sidebar-toggle_axn
+                {
+                    z-index: $layer1;
+                }
+            }
+            
+            @include media-query( $viewport-wide )
             {
                 .masthead_sidebar
                 {
-                    .search-form_input
-                    {
-                        padding-left: 0;
-                    }
-                    
                     .search-form-input-field_cr
                     {
-                        padding-left: $utility-block;
-                    }
-                    
-                    .search_comp
-                    {
-                        z-index: $layer2;
-                    }
-
-                    .primary-nav-masthead-sidebar-toggle_axn
-                    {
-                        z-index: $layer1;
+                        // Counter
+                        padding-left: 0;
                     }
                 }
             }

@@ -34,7 +34,7 @@
     //------------------------- Vines
     &.hs-feature__primary-nav--vines
     {
-        &.modernizr--js
+        &.js
         {
             .primary-nav_ct
             {
@@ -63,6 +63,11 @@
                         background-color: hsla( 0, 0%, 0%, .25 );
                     }
                 }
+                
+                .hs-state__primary-nav-item_tree--active
+                {
+                    background-color: hsla( 0, 0%, 0%, .0625 );
+                }
             }
             
             .primary-sub-nav-toggle_axn
@@ -75,18 +80,7 @@
                 }
             }
             
-            &.hs-viewport--narrow
-            {
-                .primary-nav_ct
-                {
-                    .hs-state__primary-nav-item_tree--active
-                    {
-                        background-color: hsla( 0, 0%, 0%, .0625 );
-                    }
-                }
-            }
-            
-            &.hs-viewport--wide
+            @include media-query( $viewport-wide )
             {
                 .primary-nav_ct
                 {
@@ -133,7 +127,7 @@
     //------------------------- Poppy Seeds
     &.hs-feature__search--poppy-seeds
     {
-        &.modernizr--js
+        &.js
         {
             .masthead_sidebar
             {
@@ -155,7 +149,7 @@
                 }
             }
             
-            &.hs-viewport--wide
+            @include media-query( $viewport-wide )
             {
                 .hs-state__search_poppy-seeds--active
                 {
@@ -178,18 +172,15 @@
     //------------------------- Hamburger
     &.hs-feature__primary-nav-masthead-sidebar--hamburger
     {
-        &.modernizr--js
+        &.js
         {
-            &.hs-viewport--narrow
+            .primary-nav-masthead-sidebar-toggle_axn
             {
-                .primary-nav-masthead-sidebar-toggle_axn
+                .menu_icon,
+                .dismiss_icon
                 {
-                    .menu_icon,
-                    .dismiss_icon
-                    {
-                        color: $white;
-                    }                
-                }
+                    color: $white;
+                }                
             }
         }
     }

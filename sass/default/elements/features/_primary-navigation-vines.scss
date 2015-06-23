@@ -1,4 +1,3 @@
-// Default
 .hs-feature__primary-nav--vines
 {
     &.js
@@ -13,14 +12,17 @@
 
             li
             {
+                display: table;
+                width: 100%;
                 word-break: break-word;
 
                 a
                 {
                     @extend %hs-nature--utility-blocker !optional;
                     display: table-cell;
-                    
                     @include padding-x( $gutter );
+                    width: 100%;
+                    text-align: left;
                 }
             }
 
@@ -127,43 +129,22 @@
             }
         }
 
-        // Reverses the icon's direction if the Tree nav is active
-        .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
-            @include transform( rotate( -180deg ) );
-        }
-
-        // Narrow Viewport
-        &.hs-viewport--narrow
+        .hs-state__primary-nav-item_tree--active
         {
-            .primary-nav_ct
+            > .primary-sub-nav-toggle_axn:after
             {
-                li
-                {
-                    display: table;
-                    width: 100%;
-
-                    a
-                    {
-                        width: 100%;
-                        text-align: left;
-                    }
-                }
+                @include transform( rotate( -180deg ) );
             }
-
-            // Active
-            .hs-state__primary-nav-item_tree--active
+            
+            &.page_item_has_children > .children,
+            &.menu-item-has-children > .sub-menu
             {
-                &.page_item_has_children > .children,
-                &.menu-item-has-children > .sub-menu
-                {
-                    // Counter-Effect
-                    display: table-row;
-                }
+                // Counter-Effect
+                display: table-row;
             }
         }
 
-        // Wide Viewport
-        &.hs-viewport--wide
+        @include media-query( $viewport-wide )
         {
             .primary-nav_ct
             {
@@ -176,6 +157,12 @@
                         display: inline-block;
                         vertical-align: top;
                     }
+                }
+                
+                li
+                {
+                    // Counter
+                    width: auto;
                 }
 
                 .children,
@@ -197,7 +184,6 @@
             // Active
             .hs-state__primary-nav-item_tree--active
             {
-                
                 > .children,
                 > .sub-menu
                 {

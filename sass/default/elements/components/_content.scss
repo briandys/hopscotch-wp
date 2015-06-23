@@ -1,14 +1,14 @@
 // Variables
-$primary-content-comp_width: ( 640 / 1024 ) * 100%;
+$primary-content-comp_width: ( 640 / $desktop ) * 100%;
 $content-sidebar_width: 100% - $primary-content-comp_width;
 
-.hs-viewport--wide
+.hs-state__content-sidebar--enabled
 {
-    .hs-state__content-sidebar--enabled
-    {   
+    @include media-query( $viewport-wide )
+    {
         .content_ct
         {   
-            @extend %hs-patch--clearfix !optional;
+            @include hs-patch--clearfix;
             @include hs-nature--center-block;
             max-width: convertRem( $widescreen );
         }
@@ -31,13 +31,6 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
             max-width: convertRem( $widescreen );
         }
     }
-}
-
-
-%not-so-wide
-{   
-    @include hs-nature--center-block;
-    max-width: convertRem( $tablet );
 }
 
 // With Content Sidebar disabled or no content

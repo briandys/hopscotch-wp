@@ -639,14 +639,14 @@ textarea {
   display: none; }
 
 /* line 6, ../sass/default/utilities/helpers/patch/_clearfix.scss */
-.hs-viewport--wide .hs-state__content-sidebar--enabled .content_ct:before, .entry_cr:before, .article-entry_comp:before,
-.article-entry-ct_cr:before, .hs-mod__tag--string-beans .tag_cr:before, .hs-theme--hopscotch.hs-viewport--wide .masthead_cr:before, .hs-viewport--wide .hs-state__content-sidebar--enabled .content_ct:after, .entry_cr:after, .article-entry_comp:after,
-.article-entry-ct_cr:after, .hs-mod__tag--string-beans .tag_cr:after, .hs-theme--hopscotch.hs-viewport--wide .masthead_cr:after {
+.entry_cr:before, .article-entry_comp:before,
+.article-entry-ct_cr:before, .hs-mod__tag--string-beans .tag_cr:before, .entry_cr:after, .article-entry_comp:after,
+.article-entry-ct_cr:after, .hs-mod__tag--string-beans .tag_cr:after {
   content: " ";
   display: table; }
 /* line 11, ../sass/default/utilities/helpers/patch/_clearfix.scss */
-.hs-viewport--wide .hs-state__content-sidebar--enabled .content_ct:after, .entry_cr:after, .article-entry_comp:after,
-.article-entry-ct_cr:after, .hs-mod__tag--string-beans .tag_cr:after, .hs-theme--hopscotch.hs-viewport--wide .masthead_cr:after {
+.entry_cr:after, .article-entry_comp:after,
+.article-entry-ct_cr:after, .hs-mod__tag--string-beans .tag_cr:after {
   clear: both; }
 
 /* line 16, ../sass/default/utilities/helpers/patch/_visually-hidden.scss */
@@ -668,14 +668,14 @@ legend, .comment-entry-admin_accessible-name,
 .web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines.js .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
 .hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn .verb_label,
 .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn .verb_label, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_label .subj_label,
-.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.modernizr--js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
+.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .content_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form-submit_axn .verb_label, .hs-mod__search--blank-fill .content-hr_sidebar .search-form_label,
 .hs-mod__search--blank-fill .content-hr_sidebar .search-form-reset_axn,
 .hs-mod__search--blank-fill .content_sidebar .search-form_label,
 .hs-mod__search--blank-fill .content_sidebar .search-form-reset_axn,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form_label,
-.hs-mod__search--blank-fill .colophon_sidebar .search-form-reset_axn, .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_cr .pred_label, .hs-mod__show-content--peeler.modernizr--js .show-content_comp, .web-product-page-nav_friendly-name, .hs-theme--hopscotch .article-entry-modified-timestamp_comp,
+.hs-mod__search--blank-fill .colophon_sidebar .search-form-reset_axn, .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .pred_label, .hs-mod__show-content--peeler.js .show-content_comp, .web-product-page-nav_friendly-name, .hs-theme--hopscotch .article-entry-modified-timestamp_comp,
 .hs-theme--hopscotch .article-entry-author_cr .pred_label,
 .hs-theme--hopscotch .category-tag_accessible-name,
 .hs-theme--hopscotch .comment-entry-author_cr .pred_label,
@@ -690,7 +690,7 @@ legend, .comment-entry-admin_accessible-name,
   width: 1px; }
 
 /* line 34, ../sass/default/utilities/helpers/patch/_visually-hidden.scss */
-.show-content_axn:focus, .show-content_axn:active, .no-js .show-content_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .hs-mod__show-content--peeler .hs-state__show-content-axn--active .show-content_comp {
+.show-content_axn:focus, .show-content_axn:active, .no-js .show-content_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn, .hs-mod__show-content--peeler.js .show-content_axn, .hs-mod__show-content--peeler .hs-state__show-content-axn--active .show-content_comp {
   clip: auto;
   height: auto;
   margin: 0;
@@ -721,7 +721,7 @@ select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-
 
 /* line 20, ../sass/default/utilities/helpers/nature/_inline-icon.scss */
 .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_label,
-.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-mod__show-top--mushroom.modernizr--js .show-top_label {
+.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-mod__show-top--mushroom.js .show-top_label {
   display: table-cell;
   width: 3rem;
   height: 3rem;
@@ -738,7 +738,7 @@ svg.icon, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search_icon {
   vertical-align: middle; }
 
 /* line 12, ../sass/default/utilities/helpers/nature/_utility-blocker.scss */
-.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines.js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.modernizr--js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
+.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines.js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
 .web-product-page-nav_cr > .page-numbers li .dots, .entry-admin_item a,
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
@@ -787,6 +787,7 @@ q {
 /* line 1, ../sass/default/elements/objects/theme/_html.scss */
 html {
   font-family: Lato, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   color: #222; }
 
 /* line 1, ../sass/default/elements/objects/theme/_link.scss */
@@ -885,6 +886,18 @@ h6 {
 .bypostauthor .author-name_label a {
   font-weight: bold; }
 
+@media only screen and (min-width: 48rem) {
+  /* line 14, ../sass/default/elements/features/theme/_search-poppy-seeds.scss */
+  .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr:after {
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(75%, rgba(255, 255, 255, 0)));
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%);
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%); } }
+
 /* line 5, ../sass/default/elements/modifications/theme/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp_axn {
   border-color: rgba(128, 128, 128, 0.5); }
@@ -916,127 +929,129 @@ h6 {
 .hs-theme--hopscotch .primary-nav_ct li a {
   color: #fff; }
 /* line 41, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct a {
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   /* line 45, ../sass/default/elements/themes/theme/_hopscotch.scss */
-  .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct a:hover {
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct a:hover {
     background-color: rgba(0, 0, 0, 0.125); }
 /* line 53, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .current_page_ancestor > a:after {
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct .current_page_ancestor > a:after {
   background-color: rgba(0, 0, 0, 0.0625); }
 /* line 61, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-nav_ct .current_page_item > a:after {
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct .current_page_item > a:after {
   background-color: rgba(0, 0, 0, 0.25); }
-/* line 71, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after {
-  background-image: url(../img/icon-arrow-down-rev.svg); }
-/* line 82, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--narrow .primary-nav_ct .hs-state__primary-nav-item_tree--active {
+/* line 67, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct .hs-state__primary-nav-item_tree--active {
   background-color: rgba(0, 0, 0, 0.0625); }
-/* line 95, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active {
-  background-color: #00a1f2; }
-  /* line 99, ../sass/default/elements/themes/theme/_hopscotch.scss */
-  .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children,
-  .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu {
+/* line 76, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:after {
+  background-image: url(../img/icon-arrow-down-rev.svg); }
+@media only screen and (min-width: 48rem) {
+  /* line 89, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active {
     background-color: #00a1f2; }
-    /* line 104, ../sass/default/elements/themes/theme/_hopscotch.scss */
-    .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
-    .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active {
-      background-color: #0099e6; }
-      /* line 108, ../sass/default/elements/themes/theme/_hopscotch.scss */
-      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children,
-      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu,
-      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children,
-      .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu {
+    /* line 93, ../sass/default/elements/themes/theme/_hopscotch.scss */
+    .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children,
+    .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu {
+      background-color: #00a1f2; }
+      /* line 98, ../sass/default/elements/themes/theme/_hopscotch.scss */
+      .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
+      .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active {
         background-color: #0099e6; }
-        /* line 113, ../sass/default/elements/themes/theme/_hopscotch.scss */
-        .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
-        .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active,
-        .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
-        .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active {
-          background-color: #0090d9; }
-          /* line 117, ../sass/default/elements/themes/theme/_hopscotch.scss */
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children,
-          .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js.hs-viewport--wide .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu {
+        /* line 102, ../sass/default/elements/themes/theme/_hopscotch.scss */
+        .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children,
+        .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu,
+        .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children,
+        .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu {
+          background-color: #0099e6; }
+          /* line 107, ../sass/default/elements/themes/theme/_hopscotch.scss */
+          .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
+          .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active,
+          .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active,
+          .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active {
             background-color: #0090d9; }
-/* line 140, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search_icon,
-.hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .dismiss_icon {
+            /* line 111, ../sass/default/elements/themes/theme/_hopscotch.scss */
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .children,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children .hs-state__primary-nav-item_tree--active .sub-menu,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .children,
+            .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-nav_ct > ul > .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu .hs-state__primary-nav-item_tree--active .sub-menu {
+              background-color: #0090d9; } }
+/* line 134, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .search_icon,
+.hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .dismiss_icon {
   color: #fff; }
-/* line 146, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input {
+/* line 140, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input {
   color: #fff;
   background-color: #00aaff; }
   /* line 4, ../sass/default/utilities/helpers/parametric/_placeholder.scss */
-  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input::-webkit-input-placeholder {
+  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.75); }
   /* line 4, ../sass/default/utilities/helpers/parametric/_placeholder.scss */
-  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input:-moz-placeholder {
+  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input:-moz-placeholder {
     color: rgba(255, 255, 255, 0.75); }
   /* line 4, ../sass/default/utilities/helpers/parametric/_placeholder.scss */
-  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input::-moz-placeholder {
+  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input::-moz-placeholder {
     color: rgba(255, 255, 255, 0.75); }
   /* line 4, ../sass/default/utilities/helpers/parametric/_placeholder.scss */
-  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input:-ms-input-placeholder {
+  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.75); }
-/* line 166, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js.hs-viewport--wide .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr:after {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FF00AAFF');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzAwYWFmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(75%, #00aaff));
-  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #00aaff 75%);
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #00aaff 75%);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #00aaff 75%); }
-/* line 187, ../sass/default/elements/themes/theme/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
-.hs-theme--hopscotch.hs-feature__primary-nav-masthead-sidebar--hamburger.modernizr--js.hs-viewport--narrow .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
+@media only screen and (min-width: 48rem) {
+  /* line 160, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr:after {
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FF00AAFF');
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzAwYWFmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(75%, #00aaff));
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #00aaff 75%);
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #00aaff 75%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #00aaff 75%); } }
+/* line 179, ../sass/default/elements/themes/theme/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .menu_icon,
+.hs-theme--hopscotch.hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   color: #fff; }
-/* line 198, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 189, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .comments_cr {
   border-top: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 203, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 194, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry_comp {
   border-bottom: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-  /* line 207, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 198, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch .article-entry_comp:last-of-type {
     border-bottom: 0; }
-/* line 216, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 207, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .article-sub-entry_comp .article-entry_comp {
   border-bottom: 0; }
-/* line 228, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 219, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__content-sidebar--disabled.page .article-entry_comp:last-of-type {
   border-bottom: 0; }
-/* line 240, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 231, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_comp a {
   color: #fff;
   background-color: #12b32d; }
-/* line 246, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 237, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .category-tag_comp a {
   color: #fff;
   background-color: #12b32d; }
-  /* line 251, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 242, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__tag--string-beans .category-tag_comp a:hover {
     background-color: #109c27; }
-/* line 257, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 248, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag-tag_comp a {
   background-color: rgba(128, 128, 128, 0.5); }
-  /* line 261, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 252, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__tag--string-beans .tag-tag_comp a:hover {
     background-color: rgba(89, 89, 89, 0.5); }
-/* line 271, ../sass/default/elements/themes/theme/_hopscotch.scss */
+/* line 262, ../sass/default/elements/themes/theme/_hopscotch.scss */
 .hs-theme--hopscotch form input[type="submit"] {
   color: #fff;
   background-color: #00aaff;
@@ -1046,10 +1061,10 @@ h6 {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border: 0; }
-  /* line 280, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 271, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch form input[type="submit"]:hover, .hs-theme--hopscotch form input[type="submit"]:focus {
     background-color: #0099e6; }
-  /* line 286, ../sass/default/elements/themes/theme/_hopscotch.scss */
+  /* line 277, ../sass/default/elements/themes/theme/_hopscotch.scss */
   .hs-theme--hopscotch form input[type="submit"]:active {
     -webkit-transform: translate-y(-1px);
     -moz-transform: translate-y(-1px);
@@ -1067,10 +1082,6 @@ h6 {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-/* line 1, ../sass/default/elements/objects/_html.scss */
-.html {
-  line-height: 1.6; }
 
 /* 300px */
 /* line 4, ../sass/default/elements/objects/_list.scss */
@@ -1208,21 +1219,21 @@ q {
 .comment-pending_notice {
   margin-top: 2rem; }
 
-/* line 39, ../sass/default/elements/components/_comments.scss */
-.hs-viewport--wide .comments_grp .comment .children {
-  margin-left: 1.5rem; }
-
-/* line 45, ../sass/default/elements/components/_comments.scss */
+/* line 37, ../sass/default/elements/components/_comments.scss */
 .comments_accessible-name {
   margin-bottom: 0; }
 
-/* line 55, ../sass/default/elements/components/_comments.scss */
+/* line 47, ../sass/default/elements/components/_comments.scss */
 .bypostauthor .author-name_label a {
   text-decoration: none; }
-  /* line 59, ../sass/default/elements/components/_comments.scss */
+  /* line 51, ../sass/default/elements/components/_comments.scss */
   .bypostauthor .author-name_label a:hover {
     text-decoration: underline; }
 
+@media only screen and (min-width: 48rem) {
+  /* line 61, ../sass/default/elements/components/_comments.scss */
+  .comments_grp .comment .children {
+    margin-left: 1.5rem; } }
 /* line 3, ../sass/default/utilities/helpers/nature/_child-normalize.scss */
 .ct > *:first-child,
 .cr > *:first-child,
@@ -1238,26 +1249,34 @@ q {
 .hs-container--screen {
   position: relative; }
 
-/* line 9, ../sass/default/elements/components/_content.scss */
-.hs-viewport--wide .hs-state__content-sidebar--enabled .content_ct {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80rem; }
-/* line 16, ../sass/default/elements/components/_content.scss */
-.hs-viewport--wide .hs-state__content-sidebar--enabled .primary-content_comp {
-  float: left;
-  width: 62.5%; }
-/* line 22, ../sass/default/elements/components/_content.scss */
-.hs-viewport--wide .hs-state__content-sidebar--enabled .content_sidebar {
-  float: right;
-  width: 37.5%; }
-/* line 28, ../sass/default/elements/components/_content.scss */
-.hs-viewport--wide .hs-state__content-sidebar--enabled .colophon-sidebar_cr {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80rem; }
+@media only screen and (min-width: 48rem) {
+  /* line 9, ../sass/default/elements/components/_content.scss */
+  .hs-state__content-sidebar--enabled .content_ct {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem; }
+    /* line 6, ../sass/default/utilities/helpers/patch/_clearfix.scss */
+    .hs-state__content-sidebar--enabled .content_ct:before, .hs-state__content-sidebar--enabled .content_ct:after {
+      content: " ";
+      display: table; }
+    /* line 11, ../sass/default/utilities/helpers/patch/_clearfix.scss */
+    .hs-state__content-sidebar--enabled .content_ct:after {
+      clear: both; }
+  /* line 16, ../sass/default/elements/components/_content.scss */
+  .hs-state__content-sidebar--enabled .primary-content_comp {
+    float: left;
+    width: 62.5%; }
+  /* line 22, ../sass/default/elements/components/_content.scss */
+  .hs-state__content-sidebar--enabled .content_sidebar {
+    float: right;
+    width: 37.5%; }
+  /* line 28, ../sass/default/elements/components/_content.scss */
+  .hs-state__content-sidebar--enabled .colophon-sidebar_cr {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem; } }
 
-/* line 46, ../sass/default/elements/components/_content.scss */
+/* line 39, ../sass/default/elements/components/_content.scss */
 .hs-state__content-sidebar--disabled .article-entry_cr,
 .hs-state__content-sidebar--disabled .comments_cr,
 .hs-state__content-sidebar--disabled .web-product-page-nav_cr,
@@ -1266,11 +1285,11 @@ q {
   margin-right: auto;
   max-width: 48rem; }
 
-/* line 57, ../sass/default/elements/components/_content.scss */
+/* line 50, ../sass/default/elements/components/_content.scss */
 .content-hr_accessible-name {
   margin-bottom: 0;
   font-weight: normal; }
-  /* line 62, ../sass/default/elements/components/_content.scss */
+  /* line 55, ../sass/default/elements/components/_content.scss */
   .content-hr_accessible-name .subj_label {
     font-weight: bold; }
 
@@ -1397,7 +1416,7 @@ q {
   cursor: pointer; }
 
 /* line 19, ../sass/default/elements/components/_show-content.scss */
-.modernizr--js .show-content_comp {
+.js .show-content_comp {
   position: absolute;
   top: 0;
   z-index: 900; }
@@ -1594,7 +1613,11 @@ q {
 /* line 9, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger .primary-nav-masthead-sidebar-toggle_axn {
   display: none; }
-/* line 16, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 14, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+.hs-feature__primary-nav-masthead-sidebar--hamburger .web-product-header_cr {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+/* line 21, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn {
   position: absolute;
   top: 0;
@@ -1605,58 +1628,66 @@ q {
   padding-right: .5rem;
   width: 3rem;
   height: 3rem; }
-  /* line 35, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+  /* line 40, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
   .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
     display: none;
     width: 1.25rem;
     height: 1.25rem; }
-/* line 50, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 55, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--inactive .primary-nav-masthead-sidebar-toggle_axn {
   display: block; }
-/* line 59, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 64, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary_nav,
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn {
   display: block; }
-/* line 67, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 72, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .dismiss_icon {
   display: inline-block; }
-/* line 75, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+/* line 80, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn .menu_icon {
   display: none; }
 @media only screen and (min-width: 48rem) {
-  /* line 86, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+  /* line 91, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
   .hs-feature__primary-nav-masthead-sidebar--hamburger.js .hs-state__primary-nav-masthead-sidebar_hamburger--active .primary-nav-masthead-sidebar-toggle_axn {
-    display: none; } }
-/* line 97, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+    display: none; }
+  /* line 97, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
+  .hs-feature__primary-nav-masthead-sidebar--hamburger.js .web-product-header_cr {
+    padding-left: 0;
+    padding-right: 0; } }
+/* line 107, ../sass/default/elements/features/_primary-navigation-masthead-sidebar-hamburger.scss */
 .hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary_nav {
   display: block; }
 
-/* line 14, ../sass/default/elements/features/_primary-navigation-vines.scss */
+/* line 13, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.js .primary-nav_ct li {
+  display: table;
+  width: 100%;
   word-break: break-word; }
-  /* line 18, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  /* line 19, ../sass/default/elements/features/_primary-navigation-vines.scss */
   .hs-feature__primary-nav--vines.js .primary-nav_ct li a {
     display: table-cell;
     padding-left: 1.5rem;
-    padding-right: 1.5rem; }
-/* line 27, ../sass/default/elements/features/_primary-navigation-vines.scss */
+    padding-right: 1.5rem;
+    width: 100%;
+    text-align: left; }
+/* line 29, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.js .primary-nav_ct .page_item_has_children,
 .hs-feature__primary-nav--vines.js .primary-nav_ct .menu-item-has-children {
   position: relative; }
-  /* line 32, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  /* line 34, ../sass/default/elements/features/_primary-navigation-vines.scss */
   .hs-feature__primary-nav--vines.js .primary-nav_ct .page_item_has_children > a,
   .hs-feature__primary-nav--vines.js .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3.5rem; }
-/* line 38, ../sass/default/elements/features/_primary-navigation-vines.scss */
+/* line 40, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.js .primary-nav_ct .children,
 .hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu {
   display: none;
   z-index: 800; }
-/* line 52, ../sass/default/elements/features/_primary-navigation-vines.scss */
+/* line 54, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.js .primary-nav_ct .current_page_item > a {
   font-weight: bold;
   text-decoration: none; }
-/* line 64, ../sass/default/elements/features/_primary-navigation-vines.scss */
+/* line 66, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
@@ -1668,10 +1699,10 @@ q {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: auto; }
-  /* line 84, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  /* line 86, ../sass/default/elements/features/_primary-navigation-vines.scss */
   .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:hover, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:focus {
     opacity: 1; }
-  /* line 91, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  /* line 93, ../sass/default/elements/features/_primary-navigation-vines.scss */
   .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
@@ -1689,57 +1720,53 @@ q {
     -ms-transition: transform 0.2s;
     -o-transition: transform 0.2s;
     transition: transform 0.2s; }
-/* line 131, ../sass/default/elements/features/_primary-navigation-vines.scss */
+/* line 134, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
-/* line 140, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js.hs-viewport--narrow .primary-nav_ct li {
-  display: table;
-  width: 100%; }
-  /* line 145, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js.hs-viewport--narrow .primary-nav_ct li a {
-    width: 100%;
-    text-align: left; }
-/* line 156, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines.js.hs-viewport--narrow .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
+/* line 139, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
-/* line 173, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-nav_ct > ul > li {
-  display: inline-block;
-  vertical-align: top; }
-/* line 181, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-nav_ct .children,
-.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-nav_ct .sub-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 100%;
-  width: auto;
-  white-space: nowrap;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.95); }
-/* line 201, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children,
-.hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu {
-  display: block; }
-  /* line 207, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li,
-  .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li {
-    display: table;
-    width: 100%; }
-    /* line 212, ../sass/default/elements/features/_primary-navigation-vines.scss */
-    .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .children > li a,
-    .hs-feature__primary-nav--vines.js.hs-viewport--wide .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
-      text-align: left; }
+@media only screen and (min-width: 48rem) {
+  /* line 154, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines.js .primary-nav_ct > ul > li {
+    display: inline-block;
+    vertical-align: top; }
+  /* line 162, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines.js .primary-nav_ct li {
+    width: auto; }
+  /* line 168, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines.js .primary-nav_ct .children,
+  .hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    width: auto;
+    white-space: nowrap;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95); }
+  /* line 187, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .children,
+  .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .sub-menu {
+    display: block; }
+    /* line 193, ../sass/default/elements/features/_primary-navigation-vines.scss */
+    .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .children > li,
+    .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .sub-menu > li {
+      display: table;
+      width: 100%; }
+      /* line 198, ../sass/default/elements/features/_primary-navigation-vines.scss */
+      .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .children > li a,
+      .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
+        text-align: left; }
+  /* line 206, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn {
+    top: 50%;
+    margin-top: -1.5rem; } }
 /* line 220, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js.hs-viewport--wide .primary-sub-nav-toggle_axn {
-  top: 50%;
-  margin-top: -1.5rem; }
-/* line 234, ../sass/default/elements/features/_primary-navigation-vines.scss */
 .hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .search_icon,
 .hs-feature__primary-nav--vines.no-js .masthead_sidebar .search_comp .dismiss_icon {
   display: none; }
@@ -1772,55 +1799,79 @@ q {
 /* line 82, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-input_field {
   margin-top: 0; }
-/* line 93, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.js.hs-viewport--narrow .web-product-header_cr {
+/* line 89, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js .web-product-header_cr {
   padding-left: 3rem;
   padding-right: 3rem; }
-/* line 104, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.js.hs-viewport--wide .masthead_sidebar .search_comp {
-  width: 20rem; }
-/* line 116, ../sass/default/elements/features/_search-poppy-seeds.scss */
+@media only screen and (min-width: 48rem) {
+  /* line 96, ../sass/default/elements/features/_search-poppy-seeds.scss */
+  .hs-feature__search--poppy-seeds.js .web-product-header_cr {
+    padding-left: 0;
+    padding-right: 0; }
+  /* line 104, ../sass/default/elements/features/_search-poppy-seeds.scss */
+  .hs-feature__search--poppy-seeds.js .masthead_sidebar .search_comp {
+    width: 20rem; }
+  /* line 110, ../sass/default/elements/features/_search-poppy-seeds.scss */
+  .hs-feature__search--poppy-seeds.js .primary-nav_cr {
+    padding-right: 3rem; } }
+/* line 121, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .widget_search {
   display: block; }
-/* line 127, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 132, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--inactive .masthead_sidebar .search-form-input_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 145, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 150, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .widget_search {
   display: block; }
-/* line 155, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 160, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
   padding-right: 3rem; }
-/* line 161, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 166, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-axn_field {
   position: absolute;
   top: 0;
   right: 0; }
-/* line 168, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 173, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_input {
   border: 0;
   padding-right: 0;
   height: 3rem; }
-/* line 178, ../sass/default/elements/features/_search-poppy-seeds.scss */
+/* line 183, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
   position: absolute;
   top: 0;
   right: 100%; }
-/* line 196, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form_input {
+@media only screen and (min-width: 48rem) {
+  /* line 197, ../sass/default/elements/features/_search-poppy-seeds.scss */
+  .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
+    position: relative; }
+    /* line 201, ../sass/default/elements/features/_search-poppy-seeds.scss */
+    .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: 6rem;
+      height: 100%; } }
+/* line 218, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .search-form_input {
   padding-left: 0; }
-/* line 201, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search-form-input-field_cr {
+/* line 223, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .search-form-input-field_cr {
   padding-left: 3rem; }
-/* line 206, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .search_comp {
+/* line 228, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .search_comp {
   z-index: 800; }
-/* line 211, ../sass/default/elements/features/_search-poppy-seeds.scss */
-.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger.hs-viewport--narrow .masthead_sidebar .primary-nav-masthead-sidebar-toggle_axn {
+/* line 233, ../sass/default/elements/features/_search-poppy-seeds.scss */
+.hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .primary-nav-masthead-sidebar-toggle_axn {
   z-index: 900; }
-/* line 225, ../sass/default/elements/features/_search-poppy-seeds.scss */
+@media only screen and (min-width: 48rem) {
+  /* line 243, ../sass/default/elements/features/_search-poppy-seeds.scss */
+  .hs-feature__search--poppy-seeds.js.hs-feature__primary-nav-masthead-sidebar--hamburger .masthead_sidebar .search-form-input-field_cr {
+    padding-left: 0; } }
+/* line 258, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds.no-js .masthead_sidebar .widget_search {
   display: block; }
 
@@ -1903,20 +1954,20 @@ q {
   text-align: center; }
 
 /* line 7, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.modernizr--js .show-top_axn {
+.hs-mod__show-top--mushroom.js .show-top_axn {
   display: block; }
 /* line 12, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.modernizr--js .show-top_label {
+.hs-mod__show-top--mushroom.js .show-top_label {
   width: 3rem;
   height: 3rem; }
 /* line 24, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.modernizr--js .show-top_comp {
+.hs-mod__show-top--mushroom.js .show-top_comp {
   position: fixed;
   right: 0;
   bottom: -3rem;
   transition: bottom .5s ease-in-out; }
 /* line 35, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.modernizr--js .hs-state__show-top--active .show-top_comp {
+.hs-mod__show-top--mushroom.js .hs-state__show-top--active .show-top_comp {
   bottom: 0;
   z-index: 1000; }
 
@@ -1958,13 +2009,13 @@ q {
   padding: 0;
   width: auto; }
 
-/* line 6, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+/* line 5, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp-date_label {
   text-align: center; }
-  /* line 10, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+  /* line 9, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
   .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp-date_label > .label {
     display: block; }
-/* line 16, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+/* line 15, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp_axn {
   display: block;
   padding: 0.25rem 0.75rem;
@@ -1972,24 +2023,24 @@ q {
   border-style: solid;
   border-radius: 0.25rem;
   line-height: 1; }
-/* line 26, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+/* line 25, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp-day_label {
   font-size: 1.75rem; }
-/* line 31, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+/* line 30, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp-month_label,
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp-year_label {
   font-size: 0.75rem; }
-/* line 37, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+/* line 36, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp-month_label {
   text-transform: uppercase; }
-/* line 42, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
+/* line 41, ../sass/default/elements/modifications/_timestamp-old-china-shop.scss */
 .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .timestamp_axn {
   display: inline-block;
   width: 3.5rem;
   text-decoration: none; }
 
 /* line 10, ../sass/default/elements/modifications/_show-content-peeler.scss */
-.hs-mod__show-content--peeler.modernizr--js .show-content_axn {
+.hs-mod__show-content--peeler.js .show-content_axn {
   display: table-cell; }
 /* line 20, ../sass/default/elements/modifications/_show-content-peeler.scss */
 .hs-mod__show-content--peeler .hs-state__show-content-axn--active .container_cr {
@@ -2064,52 +2115,53 @@ q {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
-/* line 58, ../sass/default/elements/rules/_breathing-space.scss */
-.hs-viewport--wide .content-sidebar_cr {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-
-/* line 64, ../sass/default/elements/rules/_breathing-space.scss */
+/* line 56, ../sass/default/elements/rules/_breathing-space.scss */
 .widget-title,
 .article-entry-nav_cr,
 .comment-entry_cr {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem; }
 
-/* line 71, ../sass/default/elements/rules/_breathing-space.scss */
+/* line 63, ../sass/default/elements/rules/_breathing-space.scss */
 .widget_cr,
 .web-product-page-nav_cr {
   padding: 1.5rem; }
 
-/* line 77, ../sass/default/elements/rules/_breathing-space.scss */
+/* line 69, ../sass/default/elements/rules/_breathing-space.scss */
 th,
 td {
   padding: 0.5rem; }
 
-/* line 5, ../sass/default/elements/rules/_center-text.scss */
-.hs-viewport--narrow .article-entry-title_name,
-.hs-viewport--narrow .article-entry-hr_ct,
-.hs-viewport--narrow .article-entry-nav_grp,
-.hs-viewport--narrow .web-product-info_cr,
-.hs-viewport--narrow .article-entry-page-nav_cr,
-.hs-viewport--narrow .web-product-theme-info_label,
-.hs-viewport--narrow .article-entry-admin_cr,
-.hs-viewport--narrow .copyright-info_label,
-.hs-viewport--narrow .content-hr_accessible-name,
-.hs-viewport--narrow .primary-content_desc,
-.hs-viewport--narrow .comments-count_cr,
-.hs-viewport--narrow .comment-admin_cr,
-.hs-viewport--narrow .comment-reply-title,
-.hs-viewport--narrow .comments_accessible-name,
-.hs-viewport--narrow .comments-commenting-disabled_note,
-.hs-viewport--narrow .breadcrumb-nav_cr {
-  text-align: center; }
-/* line 25, ../sass/default/elements/rules/_center-text.scss */
-.hs-viewport--narrow .article-entry-admin_item,
-.hs-viewport--narrow .article-entry-comments-actions_item,
-.hs-viewport--narrow .comment-form-admin-actions-sign-out_item {
-  display: inline-block; }
+@media only screen and (min-width: 48rem) {
+  /* line 77, ../sass/default/elements/rules/_breathing-space.scss */
+  .content-sidebar_cr {
+    padding-top: 1rem;
+    padding-bottom: 1rem; } }
+@media only screen and (max-width: 47.9375rem) {
+  /* line 5, ../sass/default/elements/rules/_center-text.scss */
+  .article-entry-title_name,
+  .article-entry-hr_ct,
+  .article-entry-nav_grp,
+  .web-product-info_cr,
+  .article-entry-page-nav_cr,
+  .web-product-theme-info_label,
+  .article-entry-admin_cr,
+  .copyright-info_label,
+  .content-hr_accessible-name,
+  .primary-content_desc,
+  .comments-count_cr,
+  .comment-admin_cr,
+  .comment-reply-title,
+  .comments_accessible-name,
+  .comments-commenting-disabled_note,
+  .breadcrumb-nav_cr {
+    text-align: center; }
 
+  /* line 25, ../sass/default/elements/rules/_center-text.scss */
+  .article-entry-admin_item,
+  .article-entry-comments-actions_item,
+  .comment-form-admin-actions-sign-out_item {
+    display: inline-block; } }
 /* line 2, ../sass/default/elements/rules/_pagination.scss */
 .article-entry-page-nav_friendly-name,
 .article-entry-page-nav_grp, .web-product-page-nav_cr > .page-numbers li {
@@ -2133,11 +2185,11 @@ td {
 .article-entry-page-nav_grp > * {
   display: table-cell; }
 
-/* line 58, ../sass/default/elements/rules/_pagination.scss */
+/* line 56, ../sass/default/elements/rules/_pagination.scss */
 .web-product-page-nav_cr > .page-numbers {
   margin-left: -1rem;
   margin-right: -1rem; }
-  /* line 68, ../sass/default/elements/rules/_pagination.scss */
+  /* line 66, ../sass/default/elements/rules/_pagination.scss */
   .web-product-page-nav_cr > .page-numbers li .page-numbers,
   .web-product-page-nav_cr > .page-numbers li .dots {
     display: table-cell; }
@@ -2164,71 +2216,54 @@ td {
 .show-more-content_cr {
   display: inline-block; }
 
-/* line 11, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-viewport--wide .web-product-header_comp {
-  float: left; }
-/* line 18, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-viewport--wide.hs-feature__search--poppy-seeds .primary-nav_cr {
-  padding-right: 3rem; }
-/* line 25, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 3, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .web-product-header-name_axn,
 .hs-theme--hopscotch .primary-nav_ct li a {
   text-decoration: none; }
-/* line 33, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 11, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .web-product-header-name_axn:hover {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-/* line 50, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js.hs-viewport--wide .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr {
-  position: relative; }
-  /* line 54, ../sass/default/elements/themes/_hopscotch.scss */
-  .hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js.hs-viewport--wide .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-input-field_cr:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 6rem;
-    height: 100%; }
-/* line 69, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__search--poppy-seeds.modernizr--js .masthead_sidebar .search-form_input:focus {
+/* line 19, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .masthead_sidebar .search-form_input:focus {
   outline: none; }
-/* line 87, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_ancestor > a,
+@media only screen and (min-width: 48rem) {
+  /* line 6, ../sass/default/utilities/helpers/patch/_clearfix.scss */
+  .hs-theme--hopscotch .masthead_cr:before, .hs-theme--hopscotch .masthead_cr:after {
+    content: " ";
+    display: table; }
+  /* line 11, ../sass/default/utilities/helpers/patch/_clearfix.scss */
+  .hs-theme--hopscotch .masthead_cr:after {
+    clear: both; }
+  /* line 32, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch .web-product-header_comp {
+    float: left; } }
+/* line 48, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a {
   position: relative; }
-  /* line 91, ../sass/default/elements/themes/_hopscotch.scss */
-  .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_ancestor > a:after,
+  /* line 52, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a:after {
     content: '';
     position: absolute;
-    left: 0; }
-/* line 101, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--narrow .primary-nav_ct .current_page_ancestor > a:after,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--narrow .primary-nav_ct .current_page_item > a:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_ancestor > a:after,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_item > a:after,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu .current_page_ancestor > a:after,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu .current_page_item > a:after {
-  top: 0;
-  width: 0.375rem;
-  height: 100%; }
-/* line 132, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .current_page_ancestor > a:after,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .current_page_item > a:after {
-  bottom: 0;
-  width: 100%;
-  height: 0.375rem; }
-/* line 141, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct > ul > .current_page_ancestor > a:after {
-  height: .25rem; }
-/* line 162, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .children .current_page_ancestor > a:after,
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.hs-viewport--wide .primary-nav_ct .sub-menu .current_page_ancestor > a:after {
-  width: .25rem; }
-/* line 175, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus:after {
+    top: 0;
+    left: 0;
+    width: 0.375rem;
+    height: 100%; }
+/* line 65, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct .current_page_ancestor > a {
+  font-weight: bold; }
+@media only screen and (min-width: 48rem) {
+  /* line 81, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch.hs-feature__primary-nav--vines .primary-nav_ct > ul > .current_page_item > a:after {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 0.375rem; } }
+/* line 98, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:focus:after {
   margin-top: -.375rem;
   margin-right: -.375rem;
   width: 0.75rem;
@@ -2238,20 +2273,20 @@ td {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-/* line 184, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:hover:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus:after {
+/* line 107, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:hover:after, .hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:focus:after {
   margin-top: -.5rem;
   margin-right: -.5rem;
   width: 1rem;
   height: 1rem; }
-/* line 192, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-feature__primary-nav--vines.modernizr--js .primary-sub-nav-toggle_axn:focus {
+/* line 115, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:focus {
   outline: 0; }
-/* line 203, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 126, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_cr {
   margin-left: -0.25rem;
   margin-right: -0.25rem; }
-/* line 208, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 131, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_comp a {
   text-decoration: none;
   border-radius: 0.125rem;
@@ -2260,24 +2295,24 @@ td {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-/* line 215, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 138, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_accessible-name {
   margin-left: -0.5rem; }
-/* line 230, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 153, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author_cr {
   position: relative;
   display: inline-block;
   padding-left: 3rem; }
-/* line 237, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 160, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author-avatar_comp {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -1.5rem; }
-/* line 245, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 168, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author-name_label {
   margin-right: 0; }
-/* line 251, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 174, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-author-entries_axn {
   display: table-cell;
   padding-left: 0.5rem;
@@ -2285,13 +2320,13 @@ td {
   height: 3rem;
   vertical-align: middle;
   text-decoration: none; }
-/* line 265, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 188, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item a {
   text-decoration: none; }
-/* line 270, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 193, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item .subj_label {
   vertical-align: middle; }
-/* line 284, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 207, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-comments-actions_item .comment-count_label {
   display: inline-block;
   margin-right: .125rem;
@@ -2305,22 +2340,16 @@ td {
   line-height: 1.5rem;
   font-size: 0.875rem;
   font-weight: bold; }
-/* line 312, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 235, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_comp {
-  display: inline-block;
-  margin-top: 2rem; }
-/* line 318, ../sass/default/elements/themes/_hopscotch.scss */
+  display: block;
+  margin-top: 2rem;
+  text-align: center; }
+/* line 242, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_cr {
   margin-left: 0;
   margin-right: 0; }
-/* line 325, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-viewport--narrow .show-more-content_comp {
-  display: block;
-  text-align: center; }
-/* line 331, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch.hs-viewport--narrow .show-more-content_cr {
-  display: inline-block; }
-/* line 337, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 247, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_axn {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2328,18 +2357,22 @@ td {
   border-radius: 0.25rem;
   color: #fff;
   text-decoration: none; }
-/* line 347, ../sass/default/elements/themes/_hopscotch.scss */
+@media only screen and (min-width: 48rem) {
+  /* line 258, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch .show-more-content_comp {
+    display: inline-block; } }
+/* line 265, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_comp {
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
-/* line 353, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 271, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_cr {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 361, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 279, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries a {
   margin-right: 0.75rem; }
-/* line 366, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 284, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries .post-date {
   display: inline-block;
   background-color: rgba(128, 128, 128, 0.5);
@@ -2349,14 +2382,14 @@ td {
   font-size: 0.75rem;
   border-radius: 0.125rem; }
 @media only screen and (min-width: 90rem) {
-  /* line 382, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 300, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-hr_cr {
     position: relative; }
-  /* line 388, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 306, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp {
     position: absolute;
     top: 0;
     right: 100%; }
-  /* line 395, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 313, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_cr {
     padding: 0; } }

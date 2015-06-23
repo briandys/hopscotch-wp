@@ -53,29 +53,26 @@
 
 .web-product-page-nav_cr
 {        
-    >
+    > .page-numbers
     {
-        .page-numbers
+        @extend %hs-reset--unlist !optional;
+
+        @include margin-x( $axn-padding-counter );
+
+        li
         {
-            @extend %hs-reset--unlist !optional;
+            @extend %hs-rule--pagination--outer-elements;
 
-            @include margin-x( $axn-padding-counter );
-
-            li
+            .page-numbers,
+            .dots
             {
-                @extend %hs-rule--pagination--outer-elements;
+                @extend %hs-nature--utility-blocker !optional;
+                display: table-cell;
+            }
 
-                .page-numbers,
-                .dots
-                {
-                    @extend %hs-nature--utility-blocker !optional;
-                    display: table-cell;
-                }
-
-                .current
-                {
-                    @extend %hs-rule--pagination--current-indicator;
-                }
+            .current
+            {
+                @extend %hs-rule--pagination--current-indicator;
             }
         }
     }
