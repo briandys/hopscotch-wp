@@ -38,13 +38,17 @@
     }
 }
 
-
-.widget_search
+.content-hr_sidebar,
+.content_sidebar,
+.colophon_sidebar
 {
-    .widget_cr
+    .widget_search
     {
-        @include hs-nature--center-block;
-        max-width: $mobile-l-size;
+        .widget_cr
+        {
+            @include hs-nature--center-block;
+            max-width: $mobile-l-size;
+        }
     }
 }
 

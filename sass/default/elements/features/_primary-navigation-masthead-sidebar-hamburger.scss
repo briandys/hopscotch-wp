@@ -4,16 +4,31 @@
     .primary_nav
     {
         display: none;
+        
+        @include media-query( $viewport-wide )
+        {
+            display: block;
+        }
     }
     
     .primary-nav-masthead-sidebar-toggle_axn
     {
-        display: none;
+        display: block;
+        
+        @include media-query( $viewport-wide )
+        {
+            display: none;
+        }
     }
     
     .web-product-header_cr
     {
         @include padding-x( $utility-block );
+        
+        @include media-query( $viewport-wide )
+        {
+            @include padding-x( 0 );
+        }
     }
     
     &.js
@@ -48,21 +63,11 @@
                 @extend %hs-patch--visually-hidden !optional;
             }
         }
-        
-        // Inactive
-        .hs-state__primary-nav-masthead-sidebar_hamburger--inactive
-        {
-            .primary-nav-masthead-sidebar-toggle_axn
-            {
-                display: block;
-            }
-        }
 
         // Active
         .hs-state__primary-nav-masthead-sidebar_hamburger--active
         {            
-            .primary_nav,
-            .primary-nav-masthead-sidebar-toggle_axn
+            .primary_nav
             {
                 display: block;
             }
@@ -72,6 +77,11 @@
                 .dismiss_icon
                 {
                     display: inline-block;
+                }
+                
+                @include media-query( $viewport-wide )
+                {
+                    display: none;
                 }
             }
             
@@ -83,22 +93,6 @@
                 }
             }
         }
-        
-        @include media-query( $viewport-wide )
-        {
-            .hs-state__primary-nav-masthead-sidebar_hamburger--active
-            {
-                .primary-nav-masthead-sidebar-toggle_axn
-                {
-                    display: none;
-                }
-            }
-    
-            .web-product-header_cr
-            {
-                @include padding-x( 0 );
-            }
-        }
     }
     
     &.no-js
@@ -107,6 +101,11 @@
         .primary_nav
         {
             display: block;
+        }
+        
+        .primary-nav-masthead-sidebar-toggle_axn
+        {
+            display: none;
         }
     }
 }
