@@ -665,8 +665,8 @@ legend, .comment-entry-admin_accessible-name,
 .hs-template__search--default .masthead_sidebar .dismiss_icon, .show-content_axn, .show-more-content_comp .pred_label,
 .show-more-content_comp .slash_label,
 .show-more-content_comp .article-entry-title_label, .web-product_desc,
-.web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines.js .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
-.hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_label .subj_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn .verb_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
+.web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
+.hs-feature__primary-nav--vines .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_label .subj_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn .verb_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .content_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form-submit_axn .verb_label, .hs-mod__search--blank-fill .content-hr_sidebar .search-form_label,
 .hs-mod__search--blank-fill .content-hr_sidebar .search-form-reset_axn,
@@ -699,13 +699,13 @@ legend, .comment-entry-admin_accessible-name,
 /* line 8, ../sass/default/utilities/helpers/reset/_deflate.scss */
 input[type='text'], input[type='email'], input[type='search'], input[type='password'], input[type='url'], textarea,
 .text_input,
-select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn, .hs-feature__search--poppy-seeds .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
+select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn, .hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn, .hs-feature__search--poppy-seeds .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn {
   margin: 0;
   padding: 0;
   border: 0; }
 
 /* line 7, ../sass/default/utilities/helpers/reset/_unlist.scss */
-.article-entry-nav_grp, .hs-feature__primary-nav--vines.js .primary-nav_ct ul, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_grp, .web-product-page-nav_cr > .page-numbers, .article-entry-comments-actions_grp,
+.article-entry-nav_grp, .hs-feature__primary-nav--vines .primary-nav_ct ul, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_grp, .web-product-page-nav_cr > .page-numbers, .article-entry-comments-actions_grp,
 .comment-entry-axn_grp,
 .article-entry-admin_grp,
 .comment-entry-admin_grp,
@@ -734,7 +734,7 @@ svg.icon, .hs-feature__search--poppy-seeds .masthead_sidebar .search_icon {
   vertical-align: middle; }
 
 /* line 12, ../sass/default/utilities/helpers/nature/_utility-blocker.scss */
-.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines.js .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
+.hs-feature__masthead--celery .web-product-header_comp .web-product-name_axn, .hs-feature__primary-nav--vines .primary-nav_ct li a, .hs-feature__breadcrumb-navigation--breadings .breadcrumb-nav_axn, .hs-mod__show-content--peeler.js .show-content_axn, .article-entry-page-nav_grp > *, .web-product-page-nav_cr > .page-numbers li .page-numbers,
 .web-product-page-nav_cr > .page-numbers li .dots, .entry-admin_item a,
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
@@ -1664,37 +1664,58 @@ q {
 .hs-feature__primary-nav-masthead-sidebar--hamburger.no-js .primary-nav-masthead-sidebar-toggle_axn {
   display: none; }
 
-/* line 13, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .primary-nav_ct li {
+/* line 11, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .primary-nav_ct li {
   display: table;
   width: 100%;
   word-break: break-word; }
-  /* line 19, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-nav_ct li a {
+  @media only screen and (min-width: 48rem) {
+    /* line 11, ../sass/default/elements/features/_primary-navigation-vines.scss */
+    .hs-feature__primary-nav--vines .primary-nav_ct li {
+      width: auto; } }
+  /* line 23, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .primary-nav_ct li a {
     display: table-cell;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     width: 100%;
     text-align: left; }
-/* line 29, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .primary-nav_ct .page_item_has_children,
-.hs-feature__primary-nav--vines.js .primary-nav_ct .menu-item-has-children {
+@media only screen and (min-width: 48rem) {
+  /* line 35, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .primary-nav_ct > ul > li {
+    display: inline-block;
+    vertical-align: top; } }
+/* line 46, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .primary-nav_ct .page_item_has_children,
+.hs-feature__primary-nav--vines .primary-nav_ct .menu-item-has-children {
   position: relative; }
-  /* line 34, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-nav_ct .page_item_has_children > a,
-  .hs-feature__primary-nav--vines.js .primary-nav_ct .menu-item-has-children > a {
+  /* line 51, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .primary-nav_ct .page_item_has_children > a,
+  .hs-feature__primary-nav--vines .primary-nav_ct .menu-item-has-children > a {
     padding-right: 3.5rem; }
-/* line 40, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .primary-nav_ct .children,
-.hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu {
+/* line 57, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .primary-nav_ct .children,
+.hs-feature__primary-nav--vines .primary-nav_ct .sub-menu {
   display: none;
   z-index: 800; }
-/* line 54, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .primary-nav_ct .current_page_item > a {
+  @media only screen and (min-width: 48rem) {
+    /* line 57, ../sass/default/elements/features/_primary-navigation-vines.scss */
+    .hs-feature__primary-nav--vines .primary-nav_ct .children,
+    .hs-feature__primary-nav--vines .primary-nav_ct .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 100%;
+      width: auto;
+      white-space: nowrap;
+      background-color: white;
+      background-color: rgba(255, 255, 255, 0.95); } }
+/* line 85, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .primary-nav_ct .current_page_item > a {
   font-weight: bold;
   text-decoration: none; }
-/* line 66, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn {
+/* line 97, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn {
   position: absolute;
   top: 0;
   right: 0;
@@ -1705,11 +1726,11 @@ q {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: auto; }
-  /* line 86, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:hover, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:focus {
+  /* line 117, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn:hover, .hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn:focus {
     opacity: 1; }
-  /* line 93, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn:after {
+  /* line 124, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -1726,52 +1747,37 @@ q {
     -ms-transition: transform 0.2s;
     -o-transition: transform 0.2s;
     transition: transform 0.2s; }
-/* line 134, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
+  @media only screen and (min-width: 48rem) {
+    /* line 97, ../sass/default/elements/features/_primary-navigation-vines.scss */
+    .hs-feature__primary-nav--vines .primary-sub-nav-toggle_axn {
+      top: 50%;
+      margin-top: -1.5rem; } }
+/* line 171, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .primary-sub-nav-toggle_axn:after {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
-/* line 139, ../sass/default/elements/features/_primary-navigation-vines.scss */
-.hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
+/* line 176, ../sass/default/elements/features/_primary-navigation-vines.scss */
+.hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active.page_item_has_children > .children, .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active.menu-item-has-children > .sub-menu {
   display: table-row; }
 @media only screen and (min-width: 48rem) {
-  /* line 154, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-nav_ct > ul > li {
-    display: inline-block;
-    vertical-align: top; }
-  /* line 162, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-nav_ct li {
-    width: auto; }
-  /* line 168, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-nav_ct .children,
-  .hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    width: auto;
-    white-space: nowrap;
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.95); }
-  /* line 187, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .children,
-  .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .sub-menu {
-    display: block; }
-    /* line 193, ../sass/default/elements/features/_primary-navigation-vines.scss */
-    .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .children > li,
-    .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .sub-menu > li {
-      display: table;
-      width: 100%; }
-      /* line 198, ../sass/default/elements/features/_primary-navigation-vines.scss */
-      .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .children > li a,
-      .hs-feature__primary-nav--vines.js .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
-        text-align: left; }
-  /* line 206, ../sass/default/elements/features/_primary-navigation-vines.scss */
-  .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn {
-    top: 50%;
-    margin-top: -1.5rem; } }
+  /* line 183, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .children,
+  .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .sub-menu {
+    display: block; } }
+@media only screen and (min-width: 48rem) {
+  /* line 194, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .children > li a,
+  .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .sub-menu > li a {
+    text-align: left; } }
+@media only screen and (min-width: 48rem) {
+  /* line 192, ../sass/default/elements/features/_primary-navigation-vines.scss */
+  .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .children > li,
+  .hs-feature__primary-nav--vines .hs-state__primary-nav-item_tree--active > .sub-menu > li {
+    display: table;
+    width: 100%; } }
 
 /* line 4, ../sass/default/elements/features/_search-poppy-seeds.scss */
 .hs-feature__search--poppy-seeds .masthead_cr {
