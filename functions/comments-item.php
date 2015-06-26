@@ -27,19 +27,19 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                         <div class="comp byline_comp comment-entry-byline_comp">
                             <div class="cr byline_cr comment-entry-byline_cr">
 
-                                <div class="comp entry-author_comp comment-entry-author_comp">
-                                    <div class="author vcard cr entry-author_cr comment-entry-author_cr">
+                                <div class="comp author_comp entry-author_comp comment-entry-author_comp">
+                                    <div class="author vcard cr entry-author_cr entry-author_cr comment-entry-author_cr">
                                         <span class="label pred_label"><?php _e( 'Comment by', 'hopscotch' ); ?></span>
-                                        <span class="label subj_label author-name_label comment-entry-author-name_label"><?php comment_author_link(); ?></span>
-                                        <span class="comp author-avatar_comp comment-entry-author-avatar_comp">
-                                            <span class="cr author-avatar_cr comment-entry-author-avatar_cr">
-                                                <a class="axn author-avatar_axn comment-entry-author-avatar_axn url" href=<?php if ( get_comment_author_url( $comment->comment_ID ) ) echo esc_url( get_comment_author_url( $comment->comment_ID ) ); else echo '#' ?>>
+                                        <span class="label subj_label author-name_label entry-author-name_label comment-entry-author-name_label"><?php comment_author_link(); ?></span>
+                                        <span class="comp author-avatar_comp entry-author-avatar_comp comment-entry-author-avatar_comp">
+                                            <span class="cr author-avatar_cr entry-author-avatar_cr comment-entry-author-avatar_cr">
+                                                <a class="axn author-avatar_axn entry-author-avatar_axn comment-entry-author-avatar_axn url" href=<?php if ( get_comment_author_url( $comment->comment_ID ) ) echo esc_url( get_comment_author_url( $comment->comment_ID ) ); else echo '#' ?>>
                                                     <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
                                                 </a>
                                             </span>
                                         </span>
                                     </div>
-                                </div><!-- entry-author_comp -->
+                                </div><!-- comment-entry-author_comp -->
 
                                 <?php
                                 // Comment Entry Published Timestamp

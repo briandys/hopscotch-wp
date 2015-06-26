@@ -739,7 +739,8 @@ svg.icon, .hs-feature__search--poppy-seeds .masthead_sidebar .search_icon {
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
 .comment-entry-reply-axn_axn-item a,
-.article-entry-comments-actions_item a, button, input[type='submit'], input[type='password'], input[type='reset'] {
+.article-entry-comments-actions_item a, button, input[type='submit'], input[type='password'], input[type='reset'], .hs-theme--hopscotch .entry-author-entries_axn,
+.hs-theme--hopscotch .comment-entry-author-name_label, .hs-theme--hopscotch .comment-entry-published-timestamp_comp .timestamp_axn {
   padding: 0.5rem 1rem;
   height: 3rem;
   min-width: 3rem;
@@ -1374,11 +1375,11 @@ q {
   background-image: none !important; }
 
 /* line 1, ../sass/default/elements/components/_author.scss */
-.article-entry-author_cr {
+.entry-author_cr {
   min-height: 3rem; }
 
 /* line 7, ../sass/default/elements/components/_author.scss */
-.author-avatar_axn {
+.entry-author-avatar_axn {
   display: inline-block;
   width: 3rem;
   height: 3rem;
@@ -1386,13 +1387,9 @@ q {
   border-radius: 50%;
   overflow: hidden; }
   /* line 15, ../sass/default/elements/components/_author.scss */
-  .author-avatar_axn img {
+  .entry-author-avatar_axn img {
     width: 100%;
     height: auto; }
-
-/* line 22, ../sass/default/elements/components/_author.scss */
-.author-name_label {
-  margin-right: 0.5rem; }
 
 /* line 6, ../sass/default/elements/components/_colophon.scss */
 .show-top_cr,
@@ -1597,12 +1594,16 @@ q {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   text-decoration: none; }
-/* line 25, ../sass/default/elements/features/_masthead-celery.scss */
+  @media only screen and (min-width: 48rem) {
+    /* line 17, ../sass/default/elements/features/_masthead-celery.scss */
+    .hs-feature__masthead--celery .web-product-header-name_axn {
+      text-align: left; } }
+/* line 30, ../sass/default/elements/features/_masthead-celery.scss */
 .hs-feature__masthead--celery .web-product-header_name {
   display: table;
   width: 100%;
   font-size: 1.5rem; }
-/* line 35, ../sass/default/elements/features/_masthead-celery.scss */
+/* line 40, ../sass/default/elements/features/_masthead-celery.scss */
 .hs-feature__masthead--celery.no-js .web-product-header-name_axn {
   text-align: left; }
 
@@ -2427,35 +2428,75 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
 /* line 144, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch.hs-mod__tag--string-beans .tag_accessible-name {
   margin-left: -0.5rem; }
-/* line 159, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch .article-entry-author_cr {
+/* line 160, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .entry-author_cr {
   position: relative;
   display: inline-block;
   padding-left: 3rem; }
-/* line 166, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch .article-entry-author-avatar_comp {
+/* line 167, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .entry-author-avatar_comp {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -1.5rem; }
-/* line 174, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch .article-entry-author-name_label {
+/* line 175, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .entry-author-name_label {
   margin-right: 0; }
-/* line 180, ../sass/default/elements/themes/_hopscotch.scss */
-.hs-theme--hopscotch .article-entry-author-entries_axn {
+/* line 181, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .entry-author-entries_axn,
+.hs-theme--hopscotch .comment-entry-author-name_label {
   display: table-cell;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 3rem;
-  vertical-align: middle;
+  height: 3rem; }
+/* line 190, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .entry-author-entries_axn {
   text-decoration: none; }
-/* line 194, ../sass/default/elements/themes/_hopscotch.scss */
+@media only screen and (min-width: 30rem) {
+  /* line 6, ../sass/default/utilities/helpers/patch/_clearfix.scss */
+  .hs-theme--hopscotch .comment-entry-byline_cr:before, .hs-theme--hopscotch .comment-entry-byline_cr:after {
+    content: " ";
+    display: table; }
+  /* line 11, ../sass/default/utilities/helpers/patch/_clearfix.scss */
+  .hs-theme--hopscotch .comment-entry-byline_cr:after {
+    clear: both; } }
+@media only screen and (min-width: 30rem) {
+  /* line 204, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch .comment-entry-author_comp {
+    float: left; } }
+@media only screen and (min-width: 30rem) {
+  /* line 212, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch .comment-entry-published-timestamp_comp {
+    float: right; } }
+/* line 221, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .comment-entry-ct_cr {
+  padding-bottom: 0; }
+/* line 229, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .comments-count_comp .article-entry_label {
+  font-weight: bold; }
+/* line 237, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .comment-entry-published-timestamp_comp .timestamp_axn {
+  display: table-cell;
+  font-size: 0.875rem;
+  color: #808080;
+  text-decoration: none; }
+  /* line 246, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch .comment-entry-published-timestamp_comp .timestamp_axn:hover {
+    text-decoration: underline; }
+/* line 252, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .comment-entry-published-timestamp_comp .timestamp-time_label {
+  margin-left: 0.5rem; }
+/* line 258, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .comment-entry-published-timestamp_cr {
+  margin-left: -1rem;
+  margin-right: -1rem; }
+/* line 267, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item a {
   text-decoration: none; }
-/* line 199, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 272, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .hs-state__article-entry-comments--populated .article-entry-comments-actions_item .subj_label {
   vertical-align: middle; }
-/* line 213, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 286, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .article-entry-comments-actions_item .comment-count_label {
   display: inline-block;
   margin-right: .125rem;
@@ -2469,16 +2510,16 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   line-height: 1.5rem;
   font-size: 0.875rem;
   font-weight: bold; }
-/* line 241, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 314, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_comp {
   display: block;
   margin-top: 2rem;
   text-align: center; }
-/* line 248, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 321, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_cr {
   margin-left: 0;
   margin-right: 0; }
-/* line 253, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 326, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .show-more-content_axn {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2487,21 +2528,21 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   color: #fff;
   text-decoration: none; }
 @media only screen and (min-width: 48rem) {
-  /* line 264, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 337, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch .show-more-content_comp {
     display: inline-block; } }
-/* line 271, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 344, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_comp {
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
-/* line 277, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 350, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_cr {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 285, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 358, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries a {
   margin-right: 0.75rem; }
-/* line 290, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 363, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries .post-date {
   display: inline-block;
   background-color: rgba(128, 128, 128, 0.5);
@@ -2511,14 +2552,14 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   font-size: 0.75rem;
   border-radius: 0.125rem; }
 @media only screen and (min-width: 90rem) {
-  /* line 306, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 379, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-hr_cr {
     position: relative; }
-  /* line 312, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 385, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp {
     position: absolute;
     top: 0;
     right: 100%; }
-  /* line 319, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 392, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_cr {
     padding: 0; } }

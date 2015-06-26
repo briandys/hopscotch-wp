@@ -20,6 +20,11 @@
         display: table-cell;
         @include padding-x( 1.5rem );
         text-decoration: none;
+        
+        @include media-query( $viewport-wide )
+        {
+            text-align: left;
+        }
     }
     
     .web-product-header_name

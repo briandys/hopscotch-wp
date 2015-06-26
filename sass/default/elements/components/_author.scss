@@ -1,10 +1,10 @@
-.article-entry-author_cr
+.entry-author_cr
 {
     min-height: $avatar-size;
 }
 
 // Circular Avatar
-.author-avatar_axn
+.entry-author-avatar_axn
 {
     display: inline-block;
     @include dimensions( $avatar-size );
@@ -17,9 +17,4 @@
         width: 100%;
         height: auto;
     }
-}
-
-.author-name_label
-{
-    margin-right: $gutter-xxs;
 }
