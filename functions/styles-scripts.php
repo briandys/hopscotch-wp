@@ -7,7 +7,6 @@ function hopscotch_style_sheets() {
     // Location: css > default.css
     // Source: css > sass > default.scss
     wp_enqueue_style( 'hopscotch-style-default', get_template_directory_uri() . '/css/default.css', array(), '1.0', 'all' );
-    wp_enqueue_style( 'hopscotch-style-mods', get_template_directory_uri() . '/css/mods.css', array(), '1.0', 'all' );
     
     // Fonts
     // Location: functions > fonts.php

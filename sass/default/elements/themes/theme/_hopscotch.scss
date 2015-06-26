@@ -42,7 +42,8 @@
                 {                        
                     @include transition--basic;
 
-                    &:hover
+                    &:hover,
+                    &:focus
                     {
                         background-color: hsla( 0, 0%, 0%, .125 );
                     }
@@ -78,6 +79,13 @@
                     // Uses SVG to have hi-res icon
                     background-image: url( ../img/icon-arrow-down-rev.svg );
                 }
+                
+                &:hover,
+                &:focus
+                {
+                    background-color: hsla( 0, 0%, 0%, .0625 );
+                }
+                
             }
             
             @include media-query( $viewport-wide )

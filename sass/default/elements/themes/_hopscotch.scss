@@ -22,16 +22,22 @@
         }
     }
     
-    @include media-query( $viewport-wide )
+    &.js
     {
-        .masthead_cr
-        {
-            @include hs-patch--clearfix;
-        }
-
         .web-product-header_comp
         {
-            float: left;
+            @include media-query( $viewport-wide )
+            {
+                float: left;
+            }
+        }
+    }
+    
+    .masthead_cr
+    {
+        @include media-query( $viewport-wide )
+        {
+            @include hs-patch--clearfix;
         }
     }
     

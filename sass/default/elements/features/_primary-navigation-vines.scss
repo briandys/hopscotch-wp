@@ -1,6 +1,6 @@
 .hs-feature__primary-nav--vines
 {
-    // Default
+    //------------------------- Default
     .primary-nav_ct
     {
         ul
@@ -13,12 +13,6 @@
             display: table;
             width: 100%;
             word-break: break-word;
-            
-            @include media-query( $viewport-wide )
-            {
-                // Counter
-                width: auto;
-            }
 
             a
             {
@@ -29,25 +23,12 @@
                 text-align: left;
             }
         }
-        
-        > ul
-        {
-            > li
-            {
-                @include media-query( $viewport-wide )
-                {
-                    // Juxtapose
-                    display: inline-block;
-                    vertical-align: top;
-                }
-            }
-        }
 
         .page_item_has_children,
         .menu-item-has-children
         {
             position: relative;
-
+            
             > a
             {
                 padding-right: $block-l;
@@ -58,27 +39,6 @@
         .sub-menu
         {
             display: none;
-            z-index: $layer2;
-
-            // Do not show sibling of active nav item
-            > .hs-type__primary-nav-item_tree--inactive-sibling
-            {
-                @extend %hs-patch--visually-hidden !optional;
-            }
-            
-            @include media-query( $viewport-wide )
-            {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                min-width: 100%;
-                width: auto;
-                white-space: nowrap;
-
-                // Vis
-                background-color: white;
-                background-color: hsla( 0, 100%, 100%, .95 );
-            }
         }
 
         // Current Item Indicator
@@ -89,135 +49,242 @@
         }
     }
 
-    // Component: Primary Sub-Navigation Toggle Action
-    // - Object that appears as a button if a navigation item has sub-navigation items under it
-    // - <button> is used for accessibility
-
-    // Default
-    .primary-sub-nav-toggle_axn
+    //------------------------- JS
+    &.js
     {
-        @extend %hs-reset--deflate !optional;
-
-        // Enables the use of pseudo-element with position: absolute
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        opacity: .75;
-        @include transition--basic;
-
-        // Counter-Effect
-        width: auto;
-
-        .toggle_label
+        // Default
+        .primary-nav_ct
         {
-            @extend %hs-patch--visually-hidden !optional;
-        }
-
-        &:hover,
-        &:focus
-        {
-            opacity: 1;
-        }
-
-        // Icon
-        &:after
-        {
-            $icon-size: 1rem;
-
-            // Creates the pseudo-element
-            content: '';
-
-            // Absolutely-positions the element
-            position: absolute;
-
-            // Sets the element to be centered vertically; partered with an offset using margin-top
-            top: 50%;
-
-            // Position to the right
-            right: 50%;
-
-            // Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75)
-            margin-top: -$icon-size / 2;
-
-            // Sets a space to the right
-            margin-right: -$icon-size / 2;
-
-            // Sets the visual size of the actual icon
-            @include dimensions( $icon-size );
-
-            // Uses SVG to have hi-res icon
-            background-image: url( ../img/icon-arrow-down.svg );
-
-            // Prevents the tiling of the background-image
-            background-repeat: no-repeat;
-
-            // Occupies the space of the width and height
-            background-size: cover;
-
-            // For animation
-            @include transition( transform .2s );
-        }
-        
-        @include media-query( $viewport-wide )
-        {
-            top: 50%;
-            margin-top: convertRem( -$utility-block-unitless / 2 );
-        }
-    }
-
-    .hs-state__primary-nav-item_tree--active
-    {
-        > .primary-sub-nav-toggle_axn:after
-        {
-            @include transform( rotate( -180deg ) );
-        }
-
-        &.page_item_has_children > .children,
-        &.menu-item-has-children > .sub-menu
-        {
-            // Counter-Effect
-            display: table-row;
-        }
-        
-        > .children,
-        > .sub-menu
-        {
-            @include media-query( $viewport-wide )
+            li
             {
-                // Counter-Effect
-                display: block;
+                @include media-query( $viewport-wide )
+                {
+                    // Counter
+                    width: auto;
+                }
             }
-            
-            > li
+
+            > ul
             {
-                a
+                > li
                 {
                     @include media-query( $viewport-wide )
                     {
-                        text-align: left;
+                        // Juxtapose
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                    
+                    // Second-level onwards sub-menu
+                    .children,
+                    .sub-menu
+                    {
+                        .primary-sub-nav-toggle_axn
+                        {
+                            // Correction
+                            margin-right: - 1px;
+                            
+                            @include media-query( $viewport-wide )
+                            {
+                                // Counter
+                                margin-right: 0 !important;
+                            }
+                        }
+                        
+                        .children,
+                        .sub-menu
+                        {
+                            .primary-sub-nav-toggle_axn
+                            {
+                                margin-right: -2px;
+                            }
+                        
+                            .children,
+                            .sub-menu
+                            {
+                                .primary-sub-nav-toggle_axn
+                                {
+                                    margin-right: -3px;
+                                }
+                        
+                                .children,
+                                .sub-menu
+                                {
+                                    .primary-sub-nav-toggle_axn
+                                    {
+                                        margin-right: -4px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                
+            }
+
+            .children,
+            .sub-menu
+            {
+                z-index: $layer2;
+
+                // Do not show sibling of active nav item
+                > .hs-type__primary-nav-item_tree--inactive-sibling
+                {
+                    @extend %hs-patch--visually-hidden !optional;
+                }
+
                 @include media-query( $viewport-wide )
                 {
-                    display: table;
-                    width: 100%;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 100%;
+                    width: auto;
+                    white-space: nowrap;
+
+                    // Vis - Default
+                    background-color: white;
+                    background-color: hsla( 0, 100%, 100%, .95 );
+                }
+            }
+        }
+
+        // Component: Primary Sub-Navigation Toggle Action
+        // - Object that appears as a button if a navigation item has sub-navigation items under it
+        // - <button> is used for accessibility
+
+        // Default
+        .primary-sub-nav-toggle_axn
+        {
+            @extend %hs-reset--deflate !optional;
+
+            // Enables the use of pseudo-element with position: absolute
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            opacity: .75;
+            @include transition--basic;
+
+            // Counter-Effect
+            width: auto;
+
+            // Reset
+            border-radius: 0;
+
+            .toggle_label
+            {
+                @extend %hs-patch--visually-hidden !optional;
+            }
+
+            &:hover,
+            &:focus
+            {
+                opacity: 1;
+            }
+
+            // Icon
+            &:after
+            {
+                $icon-size: 1rem;
+
+                // Creates the pseudo-element
+                content: '';
+
+                // Absolutely-positions the element
+                position: absolute;
+
+                // Sets the element to be centered vertically; partered with an offset using margin-top
+                top: 50%;
+
+                // Position to the right
+                right: 50%;
+
+                // Offset top: 50% by dividing the height by 2 (1.5 / 2 = .75)
+                margin-top: -$icon-size / 2;
+
+                // Sets a space to the right
+                margin-right: -$icon-size / 2;
+
+                // Sets the visual size of the actual icon
+                @include dimensions( $icon-size );
+
+                // Uses SVG to have hi-res icon
+                background-image: url( ../img/icon-arrow-down.svg );
+
+                // Prevents the tiling of the background-image
+                background-repeat: no-repeat;
+
+                // Occupies the space of the width and height
+                background-size: cover;
+
+                // For animation
+                @include transition( transform .2s );
+            }
+            
+            @include media-query( $viewport-wide )
+            {
+                top: 50%;
+                margin-top: convertRem( -$utility-block-unitless / 2 );
+            }
+        }
+        
+        .hs-state__primary-nav-item_tree--active
+        {   
+            > .primary-sub-nav-toggle_axn:after
+            {
+                @include transform( rotate( -180deg ) );
+            }
+
+            &.page_item_has_children > .children,
+            &.menu-item-has-children > .sub-menu
+            {
+                // Counter-Effect
+                display: table-row;
+            }
+
+            > .children,
+            > .sub-menu
+            {
+                @include media-query( $viewport-wide )
+                {
+                    // Counter-Effect
+                    display: block;
+                }
+
+                > li
+                {
+                    a
+                    {
+                        @include media-query( $viewport-wide )
+                        {
+                            text-align: left;
+                        }
+                    }
+
+                    @include media-query( $viewport-wide )
+                    {
+                        display: table;
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 
-    &.js
-    {}
-        
+    //------------------------- No JS
     &.no-js
     {
-        .masthead_sidebar
+        .primary-nav_ct
         {
-            .search_comp
+            li
             {
-                
+                display: block;
+            }
+            
+            .children,
+            .sub-menu
+            {
+                display: block;
             }
         }
     }

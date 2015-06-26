@@ -21,16 +21,6 @@
         }
     }
     
-    .web-product-header_cr
-    {
-        @include padding-x( $utility-block );
-        
-        @include media-query( $viewport-wide )
-        {
-            @include padding-x( 0 );
-        }
-    }
-    
     &.js
     {        
         .primary-nav-masthead-sidebar-toggle_axn
@@ -40,9 +30,7 @@
             position: absolute;
             top: 0;
             left: 0;
-
-            // Correction
-            margin-top: -$one;
+            
             z-index: $layer1;
 
             // Counter-effect
@@ -51,6 +39,8 @@
             
             width: $utility-block;
             height: $utility-block;
+            
+            border-radius: 0;
             
             .dismiss_icon
             {
@@ -61,6 +51,16 @@
             .toggle_label
             {
                 @extend %hs-patch--visually-hidden !optional;
+            }
+        }
+    
+        .web-product-header_cr
+        {
+            @include padding-x( $utility-block );
+
+            @include media-query( $viewport-wide )
+            {
+                @include padding-x( 0 );
             }
         }
 

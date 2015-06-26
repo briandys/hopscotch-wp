@@ -81,6 +81,8 @@ $radius-xs: convertRem( $px-size-base * .125 );
 $radius-s: convertRem( $px-size-base * .25 );
 $radius: convertRem( $px-size-base * .5 );
 
+$radius-button: $radius-xs;
+
 // Color Palette
 $white: #fff;
 $black: #222;

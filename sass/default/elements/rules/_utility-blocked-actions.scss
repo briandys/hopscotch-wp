@@ -11,6 +11,7 @@
 #{$button-objects}
 {
     @extend %hs-nature--utility-blocker !optional;
+    @include padding-x( $gutter );
 }
 
 .entry-admin_grp,

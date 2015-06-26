@@ -1,34 +1,40 @@
 .hs-feature__masthead--celery
-{
+{   
+    //------------------------- Default
     .masthead_cr
     {
         min-height: $utility-block;
     }
     
-    .web-product-header_comp
+    .web-product-header_name
     {
-        .web-product_name
-        {
-            word-break: break-word;
-            
-            // Reset
-            line-height: 1;
-        }
-        
-        .web-product-name_axn
-        {
-            @extend %hs-nature--utility-blocker !optional;
-            display: table-cell;
-            @include padding-x( 1.5rem );
-            text-decoration: none;
-        }
+        word-break: break-word;
+
+        // Reset
+        line-height: 1;
+    }
+
+    .web-product-header-name_axn
+    {
+        @extend %hs-nature--utility-blocker !optional;
+        display: table-cell;
+        @include padding-x( 1.5rem );
+        text-decoration: none;
     }
     
     .web-product-header_name
     {
         display: table;
         width: 100%;
-        text-align: center;
         font-size: 1.5rem;
+    }
+    
+    //------------------------- No JS
+    &.no-js
+    {
+        .web-product-header-name_axn
+        {
+            text-align: left;
+        }
     }
 }

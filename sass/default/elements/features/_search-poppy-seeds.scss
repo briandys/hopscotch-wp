@@ -7,16 +7,7 @@
     }
 
     .masthead_sidebar
-    {
-        .widget_search
-        {
-            .widget_cr
-            {
-                // Counter-Effect
-                padding: 0;
-            }
-        }
-        
+    {   
         .search-form_label
         {    
             @extend %hs-nature--inline-icon-cr !optional;
@@ -80,21 +71,19 @@
         }   
     }
     
-    .web-product-header_cr
-    {
-        @include padding-x( $utility-block );
-
-        @include media-query( $viewport-wide )
-        {
-            @include padding-x( 0 );
-        }
-    }
-    
     //------------------------- JS
     &.js
     {
         .masthead_sidebar
         {
+            .widget_search
+            {
+                .widget_cr
+                {
+                    // Counter-Effect
+                    padding: 0;
+                }
+            }
             .search_comp
             {
                 position: absolute;
@@ -167,6 +156,16 @@
                 position: absolute;
                 top: 0;
                 right: 0;
+            }
+        }
+    
+        .web-product-header_cr
+        {
+            @include padding-x( $utility-block );
+
+            @include media-query( $viewport-wide )
+            {
+                @include padding-x( 0 );
             }
         }
 

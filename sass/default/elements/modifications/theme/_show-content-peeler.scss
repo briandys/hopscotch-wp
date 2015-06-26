@@ -1,13 +1,12 @@
 .hs-mod__show-content--peeler
-{    
-    .hs-state__show-content-axn--active
+{   
+    //------------------------- JS
+    &.js
     {
-        .container_cr
+        .show-content_axn
         {
-            &:after
-            {
-                background-color: $color-bg;
-            }
+            color: $white;
+            background-color: $color-button-primary;
         }
     }
 }

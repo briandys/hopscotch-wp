@@ -1,12 +1,10 @@
 // Skip Link
 
+//------------------------- Default
 .show-content_axn
 {
     @extend %hs-patch--visually-hidden !optional;
-}
-
-.show-content_axn
-{
+    
     &:focus,
     &:active
     {
@@ -14,6 +12,7 @@
     }
 }
 
+//------------------------- JS
 .js
 {
     .show-content_comp
@@ -24,6 +23,7 @@
     }
 }
 
+//------------------------- No JS
 .no-js
 {
     .show-content_axn
