@@ -666,7 +666,7 @@ legend, .comment-entry-admin_accessible-name,
 .show-more-content_comp .slash_label,
 .show-more-content_comp .article-entry-title_label, .web-product_desc,
 .web-product-page_accessible-name, .primary-nav_accessible-name, .breadcrumb-nav_accessible-name, .article-entry-nav_accessible-name, .page .article-entry_nav, .hs-feature__primary-nav-masthead-sidebar--hamburger.js .primary-nav-masthead-sidebar-toggle_axn .toggle_label, .hs-feature__primary-nav--vines.js .primary-nav_ct .children > .hs-type__primary-nav-item_tree--inactive-sibling,
-.hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_label .subj_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn .verb_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom.js .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
+.hs-feature__primary-nav--vines.js .primary-nav_ct .sub-menu > .hs-type__primary-nav-item_tree--inactive-sibling, .hs-feature__primary-nav--vines.js .primary-sub-nav-toggle_axn .toggle_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_label .subj_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-reset_axn .verb_label, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form_input, .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn:not(:focus), .hs-feature__search--poppy-seeds.js .masthead_sidebar .search-form-submit_axn .verb_label, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form_label, .hs-mod__tag--string-beans .tag_comp .comma_separator, .hs-mod__show-top--mushroom .show-top-label_text, .hs-mod__search--blank-fill .content-hr_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .content_sidebar .search-form-submit_axn .verb_label,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form-submit_axn .verb_label, .hs-mod__search--blank-fill .content-hr_sidebar .search-form_label,
 .hs-mod__search--blank-fill .content-hr_sidebar .search-form-reset_axn,
@@ -717,7 +717,7 @@ select, button, input[type='submit'], input[type='reset'], .hs-feature__primary-
   padding: 0; }
 
 /* line 20, ../sass/default/utilities/helpers/nature/_inline-icon.scss */
-.hs-feature__search--poppy-seeds .masthead_sidebar .search-form_label, .hs-feature__search--poppy-seeds .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn, .hs-mod__show-top--mushroom.js .show-top_label {
+.hs-feature__search--poppy-seeds .masthead_sidebar .search-form_label, .hs-feature__search--poppy-seeds .masthead_sidebar .search-form-submit_axn, .hs-feature__search--poppy-seeds.js .hs-state__search_poppy-seeds--active .masthead_sidebar .search-form-reset_axn, .hs-mod__show-top--mushroom .show-top_label {
   display: table-cell;
   width: 3rem;
   height: 3rem;
@@ -2056,21 +2056,25 @@ q {
 .hs-mod__content--superhero .web-product-page-nav_cr {
   text-align: center; }
 
-/* line 7, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.js .show-top_axn {
+/* line 4, ../sass/default/elements/modifications/_show-top-mushroom.scss */
+.hs-mod__show-top--mushroom .show-top_axn {
   display: block; }
-/* line 12, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.js .show-top_label {
+/* line 9, ../sass/default/elements/modifications/_show-top-mushroom.scss */
+.hs-mod__show-top--mushroom .show-top_label {
   width: 3rem;
   height: 3rem; }
-/* line 24, ../sass/default/elements/modifications/_show-top-mushroom.scss */
-.hs-mod__show-top--mushroom.js .show-top_comp {
+/* line 20, ../sass/default/elements/modifications/_show-top-mushroom.scss */
+.hs-mod__show-top--mushroom .show-top_comp {
   position: fixed;
   right: 0;
   bottom: -3rem;
   transition: bottom .5s ease-in-out; }
-/* line 35, ../sass/default/elements/modifications/_show-top-mushroom.scss */
+/* line 33, ../sass/default/elements/modifications/_show-top-mushroom.scss */
 .hs-mod__show-top--mushroom.js .hs-state__show-top--active .show-top_comp {
+  bottom: 0;
+  z-index: 1000; }
+/* line 43, ../sass/default/elements/modifications/_show-top-mushroom.scss */
+.hs-mod__show-top--mushroom.no-js .show-top_comp {
   bottom: 0;
   z-index: 1000; }
 

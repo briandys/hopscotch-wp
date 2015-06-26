@@ -1,34 +1,32 @@
 // Component
 .hs-mod__show-top--mushroom
-{    
-    &.js
+{   
+    .show-top_axn
     {
-        // Default
-        .show-top_axn
-        {
-            display: block;
-        }
-        
-        .show-top_label
-        {
-            @extend %hs-nature--inline-icon-cr !optional;    
-            @include dimensions( $utility-block );
-        }
+        display: block;
+    }
 
-        .show-top-label_text
-        {
-            @extend %hs-patch--visually-hidden !optional;
-        }
-        
-        // Default / Inactive
-        .show-top_comp
-        {
-            position: fixed;
-            right: 0;
-            bottom: -$utility-block;
-            transition: bottom .5s ease-in-out;
-        }
-        
+    .show-top_label
+    {
+        @extend %hs-nature--inline-icon-cr !optional;    
+        @include dimensions( $utility-block );
+    }
+
+    .show-top-label_text
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+
+    .show-top_comp
+    {
+        position: fixed;
+        right: 0;
+        bottom: -$utility-block;
+        transition: bottom .5s ease-in-out;
+    }
+    
+    &.js
+    {   
         // Active
         .hs-state__show-top--active
         {
@@ -37,6 +35,15 @@
                 bottom: 0;
                 z-index: 1000;
             }
+        }
+    }
+    
+    &.no-js
+    {
+        .show-top_comp
+        {
+            bottom: 0;
+            z-index: 1000;
         }
     }
 }
