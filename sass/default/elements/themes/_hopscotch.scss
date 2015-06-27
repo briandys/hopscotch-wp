@@ -1,6 +1,6 @@
 .hs-theme--hopscotch
 {
-    .web-product-header-name_axn,
+    //------------------------- Default
     .primary-nav_ct li a
     {
         text-decoration: none;
@@ -8,6 +8,8 @@
     
     .web-product-header-name_axn
     {
+        text-decoration: none;
+        
         &:hover
         {
             @include transition--basic;
@@ -22,6 +24,7 @@
         }
     }
     
+    //------------------------- JS
     &.js
     {
         .web-product-header_comp
@@ -41,7 +44,7 @@
         }
     }
     
-    // Vines
+    //------------------------- Vines - Sub-Nav
     &.hs-feature__primary-nav--vines
     {
         // Var
@@ -75,20 +78,20 @@
             }
         }
         
-        @include media-query( $viewport-wide )
+        // First-Level Items only
+        .primary-nav_ct
         {
-            // First-Level Items only
-            .primary-nav_ct
+            > ul
             {
-                > ul
+                > .current_page_item
                 {
-                    > .current_page_item
+                    > a:after
                     {
-                        > a:after
+                        @include media-query( $viewport-wide )
                         {
                             // Counter
                             top: auto;
-                            
+
                             bottom: 0;
                             @include dimensions( 100%, $vines-current-page-indicator-size );
                         }
@@ -126,7 +129,7 @@
         }
     }
     
-    // Entry Byline
+    //------------------------- String Beans - Tag
     &.hs-mod__tag--string-beans
     {        
         .tag_cr
@@ -147,117 +150,12 @@
         }
     }
     
+    //------------------------- Entry - Article and Comments
     .article-entry-modified-timestamp_comp,    
     .article-entry-author_cr .pred_label,    
-    .category-tag_accessible-name,
-    .comment-entry-author_cr .pred_label,
-    .comment-entry-published-timestamp_cr .pred_label
+    .category-tag_accessible-name
     {
         @extend %hs-patch--visually-hidden !optional;
-    }
-    
-    //------------------------- Custom: Author
-    .entry-author_cr
-    {
-        position: relative;
-        display: inline-block;
-        padding-left: $avatar-size;
-    }
-
-    .entry-author-avatar_comp
-    {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin-top: convertRem( -$avatar-size-unitless / 2 );
-    }
-
-    .entry-author-name_label
-    {
-        // Reset
-        margin-right: 0;
-    }
-
-    .entry-author-entries_axn,
-    .comment-entry-author-name_label
-    {
-        @extend %hs-nature--utility-blocker !optional;
-        display: table-cell;
-        @include padding-x( .5rem );
-        height: $avatar-size;
-    }
-    
-    .entry-author-entries_axn
-    {
-        text-decoration: none;
-    }
-    
-    //------------------------- Custom: Comments
-    .comment-entry-byline_cr
-    {
-        @include media-query( $moblet )
-        {
-            @include hs-patch--clearfix;
-        }
-    }
-    
-    .comment-entry-author_comp
-    {
-        @include media-query( $moblet )
-        {
-            float: left;
-        } 
-    }
-    
-    .comment-entry-published-timestamp_comp
-    {
-        @include media-query( $moblet )
-        {
-            float: right;
-        } 
-    }
-    
-    //------------------------- Comments
-    .comment-entry-ct_cr
-    {
-        // Reset
-        padding-bottom: 0;
-    }
-    
-    .comments-count_comp
-    {
-        .article-entry_label
-        {
-            font-weight: bold;
-        }
-    }
-    
-    .comment-entry-published-timestamp_comp
-    {
-        .timestamp_axn
-        {
-            @extend %hs-nature--utility-blocker !optional;
-            display: table-cell;
-            
-            font-size: $font-s;
-            color: $gray;
-            text-decoration: none;
-            
-            &:hover
-            {
-                text-decoration: underline;
-            }
-        }
-        
-        .timestamp-time_label
-        {
-            margin-left: $gutter-xxs;
-        }
-    }
-    
-    .comment-entry-published-timestamp_cr
-    {
-        @include margin-x( - $gutter-s );
     }
     
     .hs-state__article-entry-comments--populated
@@ -274,6 +172,17 @@
                 vertical-align: middle;
             }
         }        
+    }
+    
+    .hs-state__article-entry-comments--closed
+    {
+        &.hs-state__article-entry-comments--empty
+        {
+            .article-entry-comments-actions_comp
+            {
+                @extend %hs-patch--visually-hidden !optional;
+            }
+        }
     }
     
     .article-entry-comments-actions_item
@@ -299,23 +208,17 @@
         }
     }
     
-    .hs-state__article-entry-comments--closed
-    {
-        &.hs-state__article-entry-comments--empty
-        {
-            .article-entry-comments-actions_comp
-            {
-                @extend %hs-patch--visually-hidden !optional;
-            }
-        }
-    }
-    
-    // Read More
+    //------------------------- Read More / Show More Content
     .show-more-content_comp
     {
         display: block;
         margin-top: $gutter-l;
         text-align: center;
+        
+        @include media-query( $viewport-wide )
+        {
+            display: inline-block;
+        }
     }
     
     .show-more-content_cr
@@ -332,15 +235,7 @@
         text-decoration: none;
     }
     
-    @include media-query( $viewport-wide )
-    {
-        .show-more-content_comp
-        {
-            display: inline-block;
-        }
-    }
-    
-    // Comments
+    //------------------------- Comments
     .comment-entry_comp
     {
         margin-bottom: $gutter;
@@ -352,7 +247,13 @@
         border: $one dotted $faint;
     }
     
-    // Widgets
+    .comment-entry-author_cr .pred_label,
+    .comment-entry-published-timestamp_cr .pred_label
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+    
+    //------------------------- Widgets
     .widget_recent_entries
     {
         a
@@ -371,7 +272,7 @@
         }
     }
     
-    // Timestamp
+    //------------------------- Old China Shop - Timestamp
     &.hs-mod__timestamp--old-china-shop
     {
         @include media-query( $moviehouse )

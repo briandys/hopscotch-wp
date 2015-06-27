@@ -1,0 +1,78 @@
+.hs-mod__author--bloop
+{
+    .entry-author_cr
+    {
+        position: relative;
+        display: inline-block;
+        padding-left: $avatar-size;
+    }
+
+    .entry-author-avatar_comp
+    {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: convertRem( -$avatar-size-unitless / 2 );
+    }
+
+    .entry-author-name_label
+    {
+        // Reset
+        margin-right: 0;
+    }
+
+    .entry-author-entries_axn,
+    .comment-entry-author-name_label
+    {
+        @extend %hs-nature--utility-blocker !optional;
+        display: table-cell;
+        @include padding-x( .5rem );
+        height: $avatar-size;
+    }
+
+    .entry-author-entries_axn
+    {
+        text-decoration: none;
+    }
+
+    // Var
+    $breakpoint-comment: $moblet;
+
+    // Author and Timestamp Side-by-Side
+    .comment-entry-author_comp
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            float: left;
+        } 
+    }
+
+    .comment-entry-published-timestamp_comp
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            float: right;
+        } 
+    }
+
+    .comment-entry-byline_cr
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            @include hs-patch--clearfix;
+        }
+    }
+
+    .comment-entry-admin_comp
+    {
+        clear: both;
+    }
+
+    .entry-author_cr
+    {
+        @include media-query( $breakpoint-comment, max )
+        {
+            display: block;
+        }
+    }
+}

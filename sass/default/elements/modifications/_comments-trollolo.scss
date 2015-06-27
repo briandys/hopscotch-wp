@@ -1,0 +1,44 @@
+.hs-mod__comments--trollolo
+{
+    .comment-entry-ct_cr
+    {
+        // Reset
+        padding-bottom: 0;
+    }
+
+    .comments-count_comp
+    {
+        .article-entry_label
+        {
+            font-weight: bold;
+        }
+    }
+
+    .comment-entry-published-timestamp_comp
+    {
+        .timestamp_axn
+        {
+            @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
+
+            font-size: $font-s;
+            color: $gray;
+            text-decoration: none;
+
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+
+        .timestamp-time_label
+        {
+            margin-left: $gutter-xxs;
+        }
+    }
+
+    .comment-entry-published-timestamp_cr
+    {
+        @include margin-x( - $gutter-s );
+    }
+}
