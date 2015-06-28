@@ -48,12 +48,22 @@
             margin-right: - $gutter-xs;
         }
     }
-
+    
     .comment-entry-published-timestamp_cr
     {
-        @include margin-x( - $gutter-s );
+        display: table;
+        width: 100%;
+        text-align: center;
+        
+        @include media-query( $breakpoint-comment, max )
+        {
+            // Counter
+            margin-top: - $gutter-s;
+        }
+        
+        // Reset
+        @include margin-x( 0 );
     }
-    
     
     .comment-entry_cr
     {
@@ -66,6 +76,7 @@
     // Author and Timestamp Side-by-Side
     .comment-entry-author_comp
     {
+        text-align: center;
         @include media-query( $breakpoint-comment )
         {
             //float: left;

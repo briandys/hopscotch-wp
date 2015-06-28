@@ -32,7 +32,7 @@ $gutter-l: convertRem( $px-size-base * 2 );
 
 // Action Padding
 $axn-padding: $gutter-xxs $gutter-s;
-$axn-padding-counter: -$gutter-s;
+$axn-padding-counter: - $gutter-s;
 
 $utility-block: $block;
 $text-block: $block-xxs;

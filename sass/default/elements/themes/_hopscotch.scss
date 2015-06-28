@@ -256,12 +256,11 @@
     #cancel-comment-reply-link
     {
         @extend %hs-nature--utility-blocker !optional;
-        display: inline-block;
+        display: table-cell;
         
         text-decoration: none;
         
-        background-color: $color-button;
-        
+        /*
         &:after
         {
             content: '';
@@ -269,6 +268,7 @@
             height: 100%;
             vertical-align: middle;
         }
+        */
     
         .subj_label
         {

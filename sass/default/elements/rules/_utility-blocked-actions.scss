@@ -19,10 +19,10 @@
 .comment-entry-axn_grp,
 .show-more-content_cr,
 .hs-state__article-entry-comments--open .article-entry-comments-actions_grp,
-.hs-state__article-entry-comments--populated .article-entry-comments-actions_grp
+.hs-state__article-entry-comments--populated .article-entry-comments-actions_grp,
+.comment-entry-published-timestamp_cr
 {
-    margin-left: $axn-padding-counter;
-    margin-right: $axn-padding-counter;
+    @include margin-x( - $gutter-s );
 }
 
 .show-more-content_cr

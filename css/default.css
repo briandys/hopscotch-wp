@@ -2251,12 +2251,22 @@ q {
     margin-right: -0.75rem; } }
 /* line 52, ../sass/default/elements/modifications/_comments-trollolo.scss */
 .hs-mod__comments--trollolo .comment-entry-published-timestamp_cr {
-  margin-left: -1rem;
-  margin-right: -1rem; }
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0; }
+  @media only screen and (max-width: 29.9375rem) {
+    /* line 52, ../sass/default/elements/modifications/_comments-trollolo.scss */
+    .hs-mod__comments--trollolo .comment-entry-published-timestamp_cr {
+      margin-top: -1rem; } }
 @media only screen and (min-width: 30rem) {
-  /* line 58, ../sass/default/elements/modifications/_comments-trollolo.scss */
+  /* line 68, ../sass/default/elements/modifications/_comments-trollolo.scss */
   .hs-mod__comments--trollolo .comment-entry_cr {
     position: relative; } }
+/* line 77, ../sass/default/elements/modifications/_comments-trollolo.scss */
+.hs-mod__comments--trollolo .comment-entry-author_comp {
+  text-align: center; }
 
 /* line 4, ../sass/default/elements/rules/_breathing-space.scss */
 .article-entry-comments-actions_cr,
@@ -2403,7 +2413,8 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
 .comment-entry-axn_grp,
 .show-more-content_cr,
 .hs-state__article-entry-comments--open .article-entry-comments-actions_grp,
-.hs-state__article-entry-comments--populated .article-entry-comments-actions_grp {
+.hs-state__article-entry-comments--populated .article-entry-comments-actions_grp,
+.comment-entry-published-timestamp_cr {
   margin-left: -1rem;
   margin-right: -1rem; }
 
@@ -2547,15 +2558,17 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
 /* line 256, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch #cancel-comment-reply-link {
-  display: inline-block;
+  display: table-cell;
   text-decoration: none;
-  background-color: #00aaff; }
-  /* line 265, ../sass/default/elements/themes/_hopscotch.scss */
-  .hs-theme--hopscotch #cancel-comment-reply-link:after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle; }
+  /*
+  &:after
+  {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+  }
+  */ }
 /* line 281, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-reply-title small {
   display: block; }
