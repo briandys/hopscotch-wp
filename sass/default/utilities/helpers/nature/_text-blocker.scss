@@ -1,0 +1,11 @@
+@mixin hs-nature--text-blocker
+{
+    padding: $axn-padding-text;
+    text-align: center;
+    line-height: 1;
+}
+
+%hs-nature--text-blocker
+{
+    @include hs-nature--text-blocker;
+}

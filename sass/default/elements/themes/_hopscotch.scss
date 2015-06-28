@@ -255,20 +255,8 @@
     
     #cancel-comment-reply-link
     {
-        @extend %hs-nature--utility-blocker !optional;
-        display: table-cell;
-        
-        text-decoration: none;
-        
-        /*
-        &:after
-        {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
-        }
-        */
+        @extend %hs-nature--text-blocker !optional;
+        display: inline-block;
     
         .subj_label
         {

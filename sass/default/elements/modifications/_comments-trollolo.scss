@@ -52,17 +52,18 @@
     .comment-entry-published-timestamp_cr
     {
         display: table;
+        margin-top: - $gutter-s;
         width: 100%;
         text-align: center;
         
-        @include media-query( $breakpoint-comment, max )
-        {
-            // Counter
-            margin-top: - $gutter-s;
-        }
-        
         // Reset
         @include margin-x( 0 );
+        
+        @include media-query( $breakpoint-comment )
+        {
+            // Counter
+            margin-top: 0;
+        }
     }
     
     .comment-entry_cr
@@ -79,41 +80,7 @@
         text-align: center;
         @include media-query( $breakpoint-comment )
         {
-            //float: left;
-        }
-        
-        @include media-query( $breakpoint-comment, max )
-        {
-            //margin-top: $gutter-s;
-        }
-    }
-
-    .comment-entry-published-timestamp_comp
-    {
-        @include media-query( $breakpoint-comment )
-        {
-            //float: right;
-        } 
-    }
-
-    .comment-entry-byline_cr
-    {
-        @include media-query( $breakpoint-comment )
-        {
-            //@include hs-patch--clearfix;
-        }
-    }
-
-    .comment-entry-admin_comp
-    {
-        //clear: both;
-    }
-
-    .entry-author_cr
-    {
-        @include media-query( $breakpoint-comment, max )
-        {
-            //display: block;
+            text-align: left;
         }
     }
 }
