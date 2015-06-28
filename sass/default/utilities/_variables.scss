@@ -76,6 +76,8 @@ $font-l: convertRem( $px-size-base * 1.375 );
 $font-xl: convertRem( $px-size-base * 1.75 );
 $font-xxl: convertRem( $px-size-base * 2.25 );
 
+$font-reset: convertRem( $px-size-base * 1 );
+
 // Radius
 $radius-xs: convertRem( $px-size-base * .125 );
 $radius-s: convertRem( $px-size-base * .25 );

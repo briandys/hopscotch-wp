@@ -676,7 +676,8 @@ legend, .comment-entry-admin_accessible-name,
 .hs-mod__search--blank-fill .colophon_sidebar .search-form-reset_axn, .hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp .pred_label, .hs-mod__show-content--peeler.js .show-content_comp, .web-product-page-nav_friendly-name, .hs-theme--hopscotch .article-entry-modified-timestamp_comp,
 .hs-theme--hopscotch .article-entry-author_cr .pred_label,
 .hs-theme--hopscotch .category-tag_accessible-name, .hs-theme--hopscotch .hs-state__article-entry-comments--closed.hs-state__article-entry-comments--empty .article-entry-comments-actions_comp, .hs-theme--hopscotch .article-entry-comments-actions_item .pred_label .verb_label, .hs-theme--hopscotch .comment-entry-author_cr .pred_label,
-.hs-theme--hopscotch .comment-entry-published-timestamp_cr .pred_label {
+.hs-theme--hopscotch .comment-entry-published-timestamp_cr .pred_label, .hs-theme--hopscotch #cancel-comment-reply-link .subj_label, .hs-theme--hopscotch .comment-reply-link .prep_label,
+.hs-theme--hopscotch .comment-reply-link .subj_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -739,7 +740,7 @@ svg.icon, .hs-feature__search--poppy-seeds .masthead_sidebar .search_icon {
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
 .comment-entry-reply-axn_axn-item a,
-.article-entry-comments-actions_item a, button, input[type='submit'], input[type='password'], input[type='reset'] {
+.article-entry-comments-actions_item a, button, input[type='submit'], input[type='password'], input[type='reset'], .hs-theme--hopscotch #cancel-comment-reply-link {
   padding: 0.5rem 1rem;
   height: 3rem;
   min-width: 3rem;
@@ -1229,6 +1230,11 @@ q {
   /* line 61, ../sass/default/elements/components/_comments.scss */
   .comments_grp .comment .children {
     margin-left: 1.5rem; } }
+/* line 68, ../sass/default/elements/components/_comments.scss */
+#cancel-comment-reply-link {
+  font-size: 1rem;
+  font-weight: normal; }
+
 /* line 3, ../sass/default/utilities/helpers/nature/_child-normalize.scss */
 .ct > *:first-child,
 .cr > *:first-child,
@@ -2211,56 +2217,46 @@ q {
   display: table-cell;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 3rem; }
-/* line 33, ../sass/default/elements/modifications/_entry-author-bloop.scss */
+  height: 3rem;
+  text-align: left; }
+/* line 34, ../sass/default/elements/modifications/_entry-author-bloop.scss */
 .hs-mod__author--bloop .entry-author-entries_axn {
   text-decoration: none; }
-@media only screen and (min-width: 30rem) {
-  /* line 42, ../sass/default/elements/modifications/_entry-author-bloop.scss */
-  .hs-mod__author--bloop .comment-entry-author_comp {
-    float: left; } }
-@media only screen and (min-width: 30rem) {
-  /* line 50, ../sass/default/elements/modifications/_entry-author-bloop.scss */
-  .hs-mod__author--bloop .comment-entry-published-timestamp_comp {
-    float: right; } }
-@media only screen and (min-width: 30rem) {
-  /* line 6, ../sass/default/utilities/helpers/patch/_clearfix.scss */
-  .hs-mod__author--bloop .comment-entry-byline_cr:before, .hs-mod__author--bloop .comment-entry-byline_cr:after {
-    content: " ";
-    display: table; }
-  /* line 11, ../sass/default/utilities/helpers/patch/_clearfix.scss */
-  .hs-mod__author--bloop .comment-entry-byline_cr:after {
-    clear: both; } }
-/* line 66, ../sass/default/elements/modifications/_entry-author-bloop.scss */
-.hs-mod__author--bloop .comment-entry-admin_comp {
-  clear: both; }
-@media only screen and (max-width: 29.9375rem) {
-  /* line 71, ../sass/default/elements/modifications/_entry-author-bloop.scss */
-  .hs-mod__author--bloop .entry-author_cr {
-    display: block; } }
 
-/* line 3, ../sass/default/elements/modifications/_comments-trollolo.scss */
+/* line 6, ../sass/default/elements/modifications/_comments-trollolo.scss */
 .hs-mod__comments--trollolo .comment-entry-ct_cr {
   padding-bottom: 0; }
-/* line 11, ../sass/default/elements/modifications/_comments-trollolo.scss */
+/* line 14, ../sass/default/elements/modifications/_comments-trollolo.scss */
 .hs-mod__comments--trollolo .comments-count_comp .article-entry_label {
   font-weight: bold; }
-/* line 19, ../sass/default/elements/modifications/_comments-trollolo.scss */
+/* line 22, ../sass/default/elements/modifications/_comments-trollolo.scss */
 .hs-mod__comments--trollolo .comment-entry-published-timestamp_comp .timestamp_axn {
   display: table-cell;
   font-size: 0.875rem;
   color: #808080;
   text-decoration: none; }
-  /* line 28, ../sass/default/elements/modifications/_comments-trollolo.scss */
+  /* line 31, ../sass/default/elements/modifications/_comments-trollolo.scss */
   .hs-mod__comments--trollolo .comment-entry-published-timestamp_comp .timestamp_axn:hover {
     text-decoration: underline; }
-/* line 34, ../sass/default/elements/modifications/_comments-trollolo.scss */
+/* line 37, ../sass/default/elements/modifications/_comments-trollolo.scss */
 .hs-mod__comments--trollolo .comment-entry-published-timestamp_comp .timestamp-time_label {
   margin-left: 0.5rem; }
-/* line 40, ../sass/default/elements/modifications/_comments-trollolo.scss */
+@media only screen and (min-width: 30rem) {
+  /* line 20, ../sass/default/elements/modifications/_comments-trollolo.scss */
+  .hs-mod__comments--trollolo .comment-entry-published-timestamp_comp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -0.75rem;
+    margin-right: -0.75rem; } }
+/* line 52, ../sass/default/elements/modifications/_comments-trollolo.scss */
 .hs-mod__comments--trollolo .comment-entry-published-timestamp_cr {
   margin-left: -1rem;
   margin-right: -1rem; }
+@media only screen and (min-width: 30rem) {
+  /* line 58, ../sass/default/elements/modifications/_comments-trollolo.scss */
+  .hs-mod__comments--trollolo .comment-entry_cr {
+    position: relative; } }
 
 /* line 4, ../sass/default/elements/rules/_breathing-space.scss */
 .article-entry-comments-actions_cr,
@@ -2549,10 +2545,24 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
 /* line 245, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .comment-entry_cr {
   border: 0.0625rem dotted rgba(128, 128, 128, 0.5); }
-/* line 259, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 256, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch #cancel-comment-reply-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #00aaff; }
+  /* line 265, ../sass/default/elements/themes/_hopscotch.scss */
+  .hs-theme--hopscotch #cancel-comment-reply-link:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+/* line 281, ../sass/default/elements/themes/_hopscotch.scss */
+.hs-theme--hopscotch .comment-reply-title small {
+  display: block; }
+/* line 299, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries a {
   margin-right: 0.75rem; }
-/* line 264, ../sass/default/elements/themes/_hopscotch.scss */
+/* line 304, ../sass/default/elements/themes/_hopscotch.scss */
 .hs-theme--hopscotch .widget_recent_entries .post-date {
   display: inline-block;
   background-color: rgba(128, 128, 128, 0.5);
@@ -2562,14 +2572,14 @@ button, input[type='submit'], input[type='password'], input[type='reset'] {
   font-size: 0.75rem;
   border-radius: 0.125rem; }
 @media only screen and (min-width: 90rem) {
-  /* line 280, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 320, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-hr_cr {
     position: relative; }
-  /* line 286, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 326, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_comp {
     position: absolute;
     top: 0;
     right: 100%; }
-  /* line 293, ../sass/default/elements/themes/_hopscotch.scss */
+  /* line 333, ../sass/default/elements/themes/_hopscotch.scss */
   .hs-theme--hopscotch.hs-mod__timestamp--old-china-shop .article-entry-published-timestamp_cr {
     padding: 0; } }

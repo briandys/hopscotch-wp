@@ -253,6 +253,46 @@
         @extend %hs-patch--visually-hidden !optional;
     }
     
+    #cancel-comment-reply-link
+    {
+        @extend %hs-nature--utility-blocker !optional;
+        display: inline-block;
+        
+        text-decoration: none;
+        
+        background-color: $color-button;
+        
+        &:after
+        {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    
+        .subj_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+    
+    .comment-reply-title
+    {
+        small
+        {
+            display: block;
+        }
+    }
+    
+    .comment-reply-link
+    {
+        .prep_label,
+        .subj_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+    
     //------------------------- Widgets
     .widget_recent_entries
     {

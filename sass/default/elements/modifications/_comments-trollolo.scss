@@ -1,5 +1,8 @@
 .hs-mod__comments--trollolo
 {
+    // Var
+    $breakpoint-comment: $moblet;
+    
     .comment-entry-ct_cr
     {
         // Reset
@@ -15,7 +18,7 @@
     }
 
     .comment-entry-published-timestamp_comp
-    {
+    {   
         .timestamp_axn
         {
             @extend %hs-nature--utility-blocker !optional;
@@ -35,10 +38,71 @@
         {
             margin-left: $gutter-xxs;
         }
+        
+        @include media-query( $breakpoint-comment )
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: - $gutter-xs;
+            margin-right: - $gutter-xs;
+        }
     }
 
     .comment-entry-published-timestamp_cr
     {
         @include margin-x( - $gutter-s );
+    }
+    
+    
+    .comment-entry_cr
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            position: relative;
+        }
+    }
+
+    // Author and Timestamp Side-by-Side
+    .comment-entry-author_comp
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            //float: left;
+        }
+        
+        @include media-query( $breakpoint-comment, max )
+        {
+            //margin-top: $gutter-s;
+        }
+    }
+
+    .comment-entry-published-timestamp_comp
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            //float: right;
+        } 
+    }
+
+    .comment-entry-byline_cr
+    {
+        @include media-query( $breakpoint-comment )
+        {
+            //@include hs-patch--clearfix;
+        }
+    }
+
+    .comment-entry-admin_comp
+    {
+        //clear: both;
+    }
+
+    .entry-author_cr
+    {
+        @include media-query( $breakpoint-comment, max )
+        {
+            //display: block;
+        }
     }
 }

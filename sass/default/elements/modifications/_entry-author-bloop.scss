@@ -28,51 +28,11 @@
         display: table-cell;
         @include padding-x( .5rem );
         height: $avatar-size;
+        text-align: left;
     }
 
     .entry-author-entries_axn
     {
         text-decoration: none;
-    }
-
-    // Var
-    $breakpoint-comment: $moblet;
-
-    // Author and Timestamp Side-by-Side
-    .comment-entry-author_comp
-    {
-        @include media-query( $breakpoint-comment )
-        {
-            float: left;
-        } 
-    }
-
-    .comment-entry-published-timestamp_comp
-    {
-        @include media-query( $breakpoint-comment )
-        {
-            float: right;
-        } 
-    }
-
-    .comment-entry-byline_cr
-    {
-        @include media-query( $breakpoint-comment )
-        {
-            @include hs-patch--clearfix;
-        }
-    }
-
-    .comment-entry-admin_comp
-    {
-        clear: both;
-    }
-
-    .entry-author_cr
-    {
-        @include media-query( $breakpoint-comment, max )
-        {
-            display: block;
-        }
     }
 }
