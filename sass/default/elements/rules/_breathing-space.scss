@@ -53,17 +53,20 @@
     @include padding-y( $gutter );
 }
 
-.widget-title,
 .article-entry-nav_cr,
 .comment-entry_cr
 {
     @include padding-y( $gutter-xs );
 }
 
-.widget_cr,
 .web-product-page-nav_cr
 {
     padding: $gutter;
+}
+
+.widget_cr
+{
+    padding: $gutter-l $gutter;
 }
 
 th,

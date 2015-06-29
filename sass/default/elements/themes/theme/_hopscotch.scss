@@ -194,9 +194,15 @@
     }
     
     //------------------------- Articles
-    .comments_cr
+    .comments_cr,
+    .widget_cr
     {
         border-top: $one dotted $faint;
+        
+        @include media-query( $viewport-wide )
+        {
+            border-top: 0;
+        }
     }
     
     .article-entry_comp
