@@ -3,129 +3,109 @@
     //------------------------- Background Colors
     .masthead
     {
-        background-color: $color-bg-rev;
+        background-color: $color-masthead-bg;
     }
 
     .hs-container--screen
     {
-        background-color: $white;
+        background-color: $color-container-bg;
     }
 
     &.html,
     .colophon
     {
-        background-color: hsla( 0, 0%, 50%, .0625 );
+        background-color: $color-colophon-bg;
     }
     
     .web-product-header-name_axn
     {
         &:hover
         {
-            background-color: hsla( 0, 0%, 0%, .125 );
+            background-color: $color-masthead-bg-hover;
         }
     }
 
     .web-product-header-name_axn,
     .primary-nav_ct li a
     {
-        color: $white;
+        color: $color-masthead-text;
     }
 
     //------------------------- Vines
     &.hs-feature__primary-nav--vines
     {
-        &.js
+        .primary-nav_ct
         {
-            .primary-nav_ct
+            a
             {
-                a
-                {                        
-                    @include transition--basic;
-
-                    &:hover,
-                    &:focus
-                    {
-                        background-color: hsla( 0, 0%, 0%, .125 );
-                    }
-                }
-                
-                .current_page_ancestor
-                {
-                    > a:after
-                    {
-                        background-color: hsla( 0, 0%, 0%, .0625 );
-                    }
-                }
-                
-                .current_page_item
-                {
-                    > a:after
-                    {
-                        background-color: hsla( 0, 0%, 0%, .25 );
-                    }
-                }
-                
-                .hs-state__primary-nav-item_tree--active
-                {
-                    background-color: hsla( 0, 0%, 0%, .0625 );
-                }
-            }
-            
-            .primary-sub-nav-toggle_axn
-            {
-                // Icon
-                &:after
-                {
-                    // Uses SVG to have hi-res icon
-                    background-image: url( ../img/icon-arrow-down-rev.svg );
-                }
-                
                 &:hover,
                 &:focus
                 {
-                    background-color: hsla( 0, 0%, 0%, .0625 );
+                    background-color: $color-masthead-bg-hover;
                 }
-                
             }
-            
-            @include media-query( $viewport-wide )
+
+            .current_page_item
             {
-                .primary-nav_ct
+                > a:after
                 {
-                    > ul
+                    background-color: $color-nav-current-view-indicator;
+                }
+            }
+
+            .hs-state__primary-nav-item_tree--active
+            {
+                background-color: $color-nav-active;
+            }
+        }
+
+        .primary-sub-nav-toggle_axn
+        {                
+            &:hover,
+            &:focus
+            {
+                background-color: $color-nav-active;
+            }
+
+        }
+
+        @include media-query( $viewport-wide )
+        {
+            .primary-nav_ct
+            {
+                > ul
+                {
+                    > .hs-state__primary-nav-item_tree--active
                     {
-                        > .hs-state__primary-nav-item_tree--active
+                        background-color: $color-nav-wide-active-level-1;
+
+                        .children,
+                        .sub-menu
                         {
-                            background-color: darken( $color-bg-rev, 2.5% );
-                            
-                            .children,
-                            .sub-menu
+                            background-color: $color-nav-wide-active-level-1;
+
+                            .hs-state__primary-nav-item_tree--active
                             {
-                                background-color: darken( $color-bg-rev, 2.5% );
-                                
-                                .hs-state__primary-nav-item_tree--active
+                                background-color: $color-nav-wide-active-level-2;
+
+                                .children,
+                                .sub-menu
                                 {
-                                    background-color: darken( $color-bg-rev, 5% );
+                                    background-color: $color-nav-wide-active-level-2;
 
-                                    .children,
-                                    .sub-menu
+                                    .hs-state__primary-nav-item_tree--active
                                     {
-                                        background-color: darken( $color-bg-rev, 5% );
-                                        
-                                        .hs-state__primary-nav-item_tree--active
-                                        {
-                                            background-color: darken( $color-bg-rev, 7.5% );
+                                        background-color: $color-nav-wide-active-level-3;
 
-                                            .children,
-                                            .sub-menu
-                                            {
-                                                background-color: darken( $color-bg-rev, 7.5% );
-                                            }
+                                        .children,
+                                        .sub-menu
+                                        {
+                                            background-color: $color-nav-wide-active-level-3;
                                         }
                                     }
                                 }
-                            }                            
-                        }
+                            }
+                        }                            
                     }
                 }
             }
@@ -167,8 +147,7 @@
                         {
                             &:after
                             {                            
-                                @include filter-gradient( #ffffff, #00aaff, horizontal );
-                                @include background-image( linear-gradient( left,  hsla( 0, 0%, 100%, 0 ) 0%, hsla( 200, 100%, 50%, 1 ) 75% ) );
+                                @include background-image( linear-gradient( left,  rgba( $color-masthead-bg, 0 ) 0%, $color-masthead-bg 75% ) );
                             }
                         }
                     }
@@ -194,48 +173,24 @@
     }
     
     //------------------------- Articles
+    .article-entry_comp
+    {
+        border-bottom-color: $faint;
+    }
+    
     .comments_cr,
     .widget_cr
     {
-        border-top: $one dotted $faint;
-        
-        @include media-query( $viewport-wide )
-        {
-            border-top: 0;
-        }
+        border-top-color: $faint;
     }
     
-    .article-entry_comp
-    {
-        border-bottom: $one dotted $faint;
-        
-        &:last-of-type
+    //------------------------- Comments
+    .article-entry-comments-actions_item
+    {   
+        .comment-count_label
         {
-            // Reset
-            border-bottom: 0;
-        }
-    }
-    
-    .article-sub-entry_comp
-    {
-        .article-entry_comp
-        {
-            border-bottom: 0;
-        }
-    }
-    
-    .hs-state__content-sidebar--disabled
-    {
-        &.page
-        {
-            .article-entry_comp
-            {
-                &:last-of-type
-                {
-                    // Reset
-                    border-bottom: 0;
-                }
-            }
+            color: $color-button-text;
+            background-color: $color-button-primary;
         }
     }
     
@@ -244,28 +199,28 @@
     {
         .tag_comp a
         {
-            color: $white;
-            background-color: $color-secondary;
+            color: $color-tag-text;
+            background-color: $color-tag-bg;
         }
         
         .category-tag_comp a
         {
-            color: $white;
-            background-color: $color-secondary;
+            color: $color-tag-text;
+            background-color: $color-tag-bg;
             
             &:hover
             {
-                background-color: darken( $color-secondary, 5% );
+                background-color: $color-tag-bg-hover;
             }
         }
         
         .tag-tag_comp a
         {
-            background-color: $faint;
+            background-color: $color-minor-box-bg;
             
             &:hover
             {
-                background-color: darken( $faint, 15% );
+                background-color: $color-minor-box-bg-hover;
             }
         }
     }
@@ -277,20 +232,66 @@
         {
             color: $white;
             background-color: $color-button;
-            @include transition--basic;
-            
-            // Reset
-            border: 0;
             
             &:hover,
             &:focus
             {
-                background-color: darken( $color-button, 5% );
+                background-color: $color-button-hover;
             }
+        }
+    }
+    
+    //------------------------- Read More / Show More Content    
+    .show-more-content_axn
+    {
+        color: $color-button-text;
+        background-color: $color-button-primary;
             
-            &:active
+        &:hover,
+        &:focus
+        {
+            background-color: $color-button-hover;
+        }
+    }
+    
+    //------------------------- Widgets
+    .widget_recent_entries
+    {        
+        .post-date
+        {
+            color: $color-minor-box-text;
+            background-color: $color-minor-box-bg;
+        }
+    }
+    
+    //------------------------- Old China Shop - Timestamp
+    &.hs-mod__timestamp--old-china-shop
+    {
+        .article-entry-published-timestamp_comp
+        {
+            .timestamp-day_label,
+            .timestamp-month_label,
+            .timestamp-year_label
             {
-                @include transform( translate-y( -1px ) );
+                color: $color--text--minor;
+            }
+        }
+        
+        .timestamp_axn
+        {
+            border-color: $color--line--minor;
+        }
+    }
+    
+    // Peeler
+    &.hs-mod__show-content--peeler
+    {
+        &.js
+        {
+            .show-content_axn
+            {
+                color: $color--button--fg;
+                background-color: $color--button--bg;
             }
         }
     }

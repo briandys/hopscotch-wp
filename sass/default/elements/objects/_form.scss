@@ -59,3 +59,19 @@ label[for]
         cursor: pointer;
     }
 }
+
+#{$text-input-objects},
+.text_input,
+select
+{
+    background-color: white;
+    border: 1px solid #808080;
+    border-radius: .125rem;
+}
+
+#{$button-objects}
+{
+    background-color: transparent;
+    border: 1px solid #808080;
+    border-radius: .125rem;
+}

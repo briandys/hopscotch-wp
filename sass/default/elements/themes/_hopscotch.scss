@@ -44,6 +44,39 @@
         }
     }
     
+    //------------------------- Content Sidebar
+    .hs-state__content-sidebar--disabled
+    {
+        &.page
+        {
+            .article-entry_comp
+            {
+                &:last-of-type
+                {
+                    // Reset
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    //------------------------- Form
+    form
+    {
+        input[type="submit"]
+        {
+            @include transition--basic;
+            
+            // Reset
+            border: 0;
+            
+            &:active
+            {
+                @include transform( translate-y( -1px ) );
+            }
+        }
+    }
+    
     //------------------------- Vines - Sub-Nav
     &.hs-feature__primary-nav--vines
     {
@@ -52,6 +85,11 @@
         
         .primary-nav_ct
         {
+            a
+            {                        
+                @include transition--basic;
+            }
+            
             .current_page_item
             {
                 > a
@@ -125,6 +163,13 @@
                 {
                     outline: 0;
                 }
+                
+                // Icon
+                &:after
+                {
+                    // Uses SVG to have hi-res icon
+                    background-image: url( ../img/icon-arrow-down-rev.svg );
+                }
             }
         }
     }
@@ -196,15 +241,15 @@
         {
             display: inline-block;
             margin-right: .125rem;
-            vertical-align: middle;
-            color: $white;
-            background-color: $color-primary;
-            border-radius: 50%;
             @include dimensions( 1.5rem );
+            vertical-align: middle;
+            
+            border-radius: 50%;
+            
+            font-size: $font-s;
+            font-weight: bold;            
             text-align: center;
             line-height: 1.5rem;
-            font-size: $font-s;
-            font-weight: bold;
         }
     }
     
@@ -229,10 +274,9 @@
     .show-more-content_axn
     {
         @include padding-x( $gutter );
-        background-color: $color-primary;
         border-radius: $radius-s;
-        color: $white;
         text-decoration: none;
+        @include transition--basic;
     }
     
     //------------------------- Comments
@@ -281,38 +325,64 @@
         }
     }
     
-    //------------------------- Articles
+    //------------------------- Articles    
+    .article-entry_comp
+    {
+        border-bottom-width: $one;
+        border-bottom-style: dotted;
+        
+        &:last-of-type
+        {
+            // Reset
+            border-bottom: 0;
+        }
+    }
+    
     .article-sub-entry_comp
     {
         .article-entry-title_name
         {
             text-align: left;
         }
+        
+        .article-entry_comp
+        {
+            border-bottom: 0;
+        }
+    }
+    
+    .comments_cr,
+    .widget_cr
+    {
+        border-top-width: $one;
+        border-top-style: dotted;
+        
+        @include media-query( $viewport-wide )
+        {
+            border-top: 0;
+        }
     }
     
     //------------------------- Widgets
     .widget_recent_entries
-    {
-        a
-        {
-            margin-right: $gutter-xs;
-        }
-        
+    {        
         .post-date
         {
             display: inline-block;
-            background-color: $faint;
             @include padding-x( $gutter-xxxs );
-            color: white;
-            font-size: $font-xs;
+            
             border-radius: $radius-xs;
+            
+            font-size: $font-xs;
+            
+            white-space: nowrap;
         }
     }
     
     //------------------------- Old China Shop - Timestamp
     &.hs-mod__timestamp--old-china-shop
     {
-        @include media-query( $moviehouse )
+        @include media-query( $desktop + 96  )
         {
             .article-entry-hr_cr
             {
@@ -331,6 +401,19 @@
             {
                 // Reset
                 padding: 0;
+            }
+        }
+    }
+    
+    // Peeler
+    &.hs-mod__show-content--peeler
+    {
+        &.js
+        {
+            .show-content_axn
+            {
+                text-decoration: none;
+                border-radius: $radius-button;
             }
         }
     }

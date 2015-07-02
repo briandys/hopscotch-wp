@@ -210,6 +210,12 @@
                             top: 0;
                             right: 100%;
                             @include dimensions( convertRem( $utility-block-unitless * 2 ), 100% );
+                            
+                            @include media-query( $viewport-wide )
+                            {
+                                @include filter-gradient( #ffffff, #ffffff, horizontal );
+                                @include background-image( linear-gradient( left,  hsla( 0, 0%, 100%, 0 ) 0%, hsla( 0, 0%, 100%, 0 ) 75% ) );
+                            }
                         }
                     }
                 }

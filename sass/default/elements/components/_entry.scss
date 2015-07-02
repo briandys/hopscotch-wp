@@ -82,6 +82,24 @@
     {
         text-decoration: none;
     }
+    
+    .home &,
+    .search &,
+    .archive &
+    {
+        text-decoration: none;
+        color: $color--link--fg--default;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+    
+    .sticky &
+    {
+        font-weight: bold;
+    }
 }
 
 .article-entry-title_name

@@ -1,9 +1,6 @@
 @import 'default/utilities/perceptuals/style-guide';
 
 //------------------------- Color Pairs
-$color-paper-fg: $black;
-$color-paper-bg: $white;
-
 $color-light: $white;
 $color-dark: $color-primary;
 
@@ -32,3 +29,43 @@ $color-caption-rev: $white;
 // Form
 $color-button: $color-primary;
 $color-button-primary: $color-primary;
+$color-button-text: $white;
+$color-button-hover: darken( $color-button, 5% );
+
+// Masthead
+$color-masthead-bg: $color-primary;
+$color-masthead-text: $color-light;
+$color-masthead-bg-hover: rgba( $black, .125 );
+
+// Navigation
+$color-nav-current-view-indicator: rgba( $black, .25 );
+$color-nav-active: rgba( $black, .0625 );
+
+$color-nav-wide-active-level-1: darken( $color-masthead-bg, 2.5% );
+$color-nav-wide-active-level-2: darken( $color-masthead-bg, 5% );
+$color-nav-wide-active-level-3: darken( $color-masthead-bg, 7.5% );
+
+// Content
+$color-container-bg: $white;
+
+// Colophon
+$color-colophon-bg: rgba( $gray, .0625 );
+
+// Minor Boxes
+$color-minor-box-text: $white;
+$color-minor-box-bg: $faint;
+$color-minor-box-bg-hover: darken( $color-minor-box-bg, 5% );
+
+$color--text--minor: $gray;
+$color--line--minor: $faint;
+
+// Tag
+$color-tag-bg: $color-secondary;
+$color-tag-bg-hover: darken( $color-tag-bg, 5% );
+$color-tag-text: $white;
+
+//-------------------------New Style
+
+//------------------------- Button
+$color--button--fg: $white;
+$color--button--bg: $color-primary;

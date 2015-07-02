@@ -1,12 +1,3 @@
-// Visibility
-.comment-entry-admin_accessible-name,
-.comment-form-admin-actions_accessible-name,
-.comments-entry-nav_accessible-name,
-.comment-entry-axn_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
 .comment-form
 {
     label
@@ -69,4 +60,28 @@
 {
     font-size: $font-reset;
     font-weight: normal;
+}.comments_accessible-name
+{   
+    font-size: $font-l;
+}
+
+// By Post Author
+.bypostauthor
+{
+    .author-name_label
+    {
+        a
+        {
+            font-weight: bold;
+        }
+    }
+}
+
+// Visibility
+.comment-entry-admin_accessible-name,
+.comment-form-admin-actions_accessible-name,
+.comments-entry-nav_accessible-name,
+.comment-entry-axn_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

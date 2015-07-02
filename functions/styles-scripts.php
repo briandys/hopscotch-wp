@@ -1,7 +1,7 @@
 <?php
 
 // Style Sheets
-function hopscotch_style_sheets() {
+function hopscotch_styles_scripts() {
     
     // Default Style Sheet
     // Location: css > default.css
@@ -10,8 +10,7 @@ function hopscotch_style_sheets() {
     
     // Fonts
     // Location: functions > fonts.php
-    // Temp disabled for faster development    
-    // wp_enqueue_style( 'hopscotch-fonts', hopscotch_fonts_url(), array(), null );
+    wp_enqueue_style( 'hopscotch-fonts', hopscotch_fonts_url(), array(), null );
     
     if( ! is_admin() ) {
         
@@ -41,4 +40,4 @@ function hopscotch_style_sheets() {
            wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action('wp_enqueue_scripts', 'hopscotch_style_sheets');
+add_action('wp_enqueue_scripts', 'hopscotch_styles_scripts');

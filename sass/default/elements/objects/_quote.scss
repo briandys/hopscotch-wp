@@ -1,7 +1,11 @@
 blockquote,
 q
-{
+{    
     @include margin-x( 0 );
+    
+    font-family: Georgia, serif;
+    font-size: $font-l;
+    font-style: italic;
     
     @include media-query( $moblet )
     {

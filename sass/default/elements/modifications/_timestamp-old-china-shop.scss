@@ -14,12 +14,14 @@
 
         .timestamp_axn
         {
-            display: block;
+            display: inline-block;
             padding: $gutter-xxxs $gutter-xs;
+            width: $block-l;
             border-width: $one;
             border-style: solid;
             border-radius: $radius-s;
             line-height: 1;
+            text-decoration: none;
         }
 
         .timestamp-day_label
@@ -37,18 +39,7 @@
         {
             text-transform: uppercase;
         }
-
-        .timestamp_axn
-        {
-            display: inline-block;
-            width: $block-l;
-            text-decoration: none;
-        }
-    }
-    
-    // Visibility
-    .article-entry-published-timestamp_comp
-    {
+        
         .pred_label
         {
             @extend %hs-patch--visually-hidden !optional;

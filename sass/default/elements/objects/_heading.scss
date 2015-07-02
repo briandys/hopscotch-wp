@@ -2,3 +2,10 @@
 {
     @include margin-y( $gutter );
 }
+
+h4,
+h5,
+h6
+{
+    font-size: $font;
+}

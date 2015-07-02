@@ -3,14 +3,14 @@ $primary-content-comp_width: ( 640 / $desktop ) * 100%;
 $content-sidebar_width: 100% - $primary-content-comp_width;
 
 .hs-state__content-sidebar--enabled
-{
+{    
     @include media-query( $viewport-wide )
     {
         .content_ct
         {   
             @include hs-patch--clearfix;
             @include hs-nature--center-block;
-            max-width: convertRem( $widescreen );
+            max-width: convertRem( $monitor );
         }
 
         .primary-content_comp
@@ -28,6 +28,14 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
         .colophon-sidebar_cr
         {
             @include hs-nature--center-block;
+            max-width: convertRem( $widescreen );
+        }
+    }
+    
+    @include media-query( $moviehouse )
+    {
+        .content_ct
+        {
             max-width: convertRem( $widescreen );
         }
     }

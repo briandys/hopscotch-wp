@@ -20,8 +20,6 @@
         .show-content_axn
         {
             @include padding-x( $gutter );
-            text-decoration: none;
-            border-radius: $radius-button;
         }
     
         .hs-state__show-content-axn--active

@@ -187,6 +187,7 @@
             searchInput = $( '.search-form_input' ),
 
             mastheadSidebar = $( '#masthead_sidebar' ),
+            contentHeaderSidebar = $( '#content-hr_sidebar' ),
             contentSidebar = $( '#content_sidebar' ),
             colophonSidebar = $( '#colophon_sidebar' ),
 
@@ -194,6 +195,9 @@
             mastheadSidebarSearchFormInput = mastheadSidebar.find( '.search-form_input' ),
             mastheadSidebarSearchFormLabel = mastheadSidebar.find( '.search-form_label' ),
             mastheadSidebarSearchFormResetAction = mastheadSidebar.find( '.search-form_label' ),
+
+            contentHeaderSidebarSearchFormInput = contentHeaderSidebar.find( '.search-form_input' ),
+            contentHeaderSidebarSearchFormLabel = contentHeaderSidebar.find( '.search-form_label' ),
 
             contentSidebarSearchFormInput = contentSidebar.find( '.search-form_input' ),
             contentSidebarSearchFormLabel = contentSidebar.find( '.search-form_label' ),
@@ -231,6 +235,9 @@
           return;
 
         if( ! mastheadSidebarSearchFormLabel )
+          return;
+
+        if( ! contentHeaderSidebarSearchFormInput )
           return;
 
         if( ! contentSidebarSearchFormInput )
@@ -285,6 +292,9 @@
         });
 
         //-------------------------  Differentiate the ID of Search Inputs
+        contentHeaderSidebarSearchFormInput.attr( 'id', 'search-form-content-header-sidebar_input' );
+        contentHeaderSidebarSearchFormLabel.attr( 'for', 'search-form-content-header-sidebar_input' );
+        
         contentSidebarSearchFormInput.attr( 'id', 'search-form-content-sidebar_input' );
         contentSidebarSearchFormLabel.attr( 'for', 'search-form-content-sidebar_input' );
 

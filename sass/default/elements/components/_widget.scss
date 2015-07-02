@@ -12,11 +12,12 @@
 }
 
 .widget_archive,
-.widget_category
+.widget_category,
+.widget_recent_entries
 {
     a
     {
-        margin-right: .5rem;
+        margin-right: $gutter-xs;
     }
 }
 

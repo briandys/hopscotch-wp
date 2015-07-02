@@ -21,6 +21,7 @@ if ( ! function_exists( 'hopscotch_ui_settings_templates_html_class' ) ) :
         echo ' hs-mod__timestamp--old-china-shop';
         echo ' hs-mod__author--bloop';
         echo ' hs-mod__comments--trollolo';
+        echo ' hs-mod__show-content--peeler';
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_templates_html_class');
 endif;
