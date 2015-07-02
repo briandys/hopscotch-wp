@@ -39,20 +39,6 @@
     }
 }
 
-.content-hr_sidebar,
-.content_sidebar,
-.colophon_sidebar
-{
-    .widget_search
-    {
-        .widget_cr
-        {
-            @include hs-nature--center-block;
-            max-width: $mobile-l-size;
-        }
-    }
-}
-
 .widget_calendar
 {
     .widget_cr
@@ -69,4 +55,10 @@
     {
         margin-top: 0;
     }
+}
+
+.ui-state__widget-comp--empty,
+.tagcloud:empty
+{
+    display: none;
 }

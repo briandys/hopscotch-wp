@@ -27,6 +27,8 @@
             font-size: $font-s;
             color: $gray;
             text-decoration: none;
+            
+            white-space: nowrap;
 
             &:hover
             {
@@ -45,7 +47,7 @@
             top: 0;
             right: 0;
             margin-top: - $gutter-xs;
-            margin-right: - $gutter;
+            overflow: hidden;
         }
     }
     
@@ -62,6 +64,7 @@
         @include media-query( $breakpoint-comment )
         {
             // Counter
+            margin-right: - $gutter-s;
             margin-top: 0;
         }
     }
@@ -81,6 +84,20 @@
         @include media-query( $breakpoint-comment )
         {
             text-align: left;
+        }
+    }
+    
+    .comment-entry-published-timestamp_cr .pred_label
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
+    
+    .comment-reply-link
+    {
+        .prep_label,
+        .subj_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
         }
     }
 }

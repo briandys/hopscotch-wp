@@ -62,13 +62,16 @@
             right: 0;
         }
     }
-        
-    .primary-nav_cr
+    
+    .hs-state__masthead-sidebar--enabled
     {
-        @include media-query( $viewport-wide )
+        .primary-nav_cr
         {
-            padding-right: $utility-block;
-        }   
+            @include media-query( $viewport-wide )
+            {
+                padding-right: $utility-block;
+            }   
+        }
     }
     
     //------------------------- JS

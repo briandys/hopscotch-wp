@@ -345,6 +345,9 @@
     // Name the more-link container
     $( '.more-link' ).parents( 'p' ).addClass( 'more-link_cr' );
     
+    // Hide empty Tag Cloud
+    $( '.tagcloud:empty' ).parents( '.widget_tag_cloud' ).addClass( 'ui-state__widget-comp--empty' );
+    
 
     $( document ).ready( function() {
         $window = $( window );

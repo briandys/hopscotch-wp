@@ -12,8 +12,15 @@
         .accessible-name
         {
             display: inline-block;
-            margin: .25rem;
-            padding: $gutter-xxxs $gutter-xs;
+            margin: $gutter-xxs;
+            padding: $gutter-xxs $gutter-xs;
+            line-height: 1;
+        }
+        
+        .accessible-name
+        {            
+            // Counter-Effect
+            margin-right: -$gutter-xxs;
         }
 
         .comma_separator
@@ -22,17 +29,11 @@
         }
     }
 
-    .tag_accessible-name
-    {
-        // Counter-Effect
-        margin-right: -$gutter-xs;
-    }
-
     .tag_cr
     {
         @extend %hs-patch--clearfix !optional;
 
         // Counter-Effect
-        margin: -.25rem -1rem;
+        margin: -$gutter-xxs -1.25rem;
     }
 }

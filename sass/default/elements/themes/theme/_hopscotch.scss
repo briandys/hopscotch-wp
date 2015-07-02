@@ -30,6 +30,15 @@
     {
         color: $color-masthead-text;
     }
+    
+    .masthead_sidebar
+    {
+        .widget_comp,
+        a
+        {
+            color: $color-masthead-text;
+        }
+    }
 
     //------------------------- Vines
     &.hs-feature__primary-nav--vines
@@ -179,7 +188,7 @@
     }
     
     .comments_cr,
-    .widget_cr
+    .content-sidebar_cr
     {
         border-top-color: $faint;
     }

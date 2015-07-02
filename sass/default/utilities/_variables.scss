@@ -29,6 +29,8 @@ $gutter-xs: convertRem( $px-size-base * .75 );
 $gutter-s: convertRem( $px-size-base * 1 );
 $gutter: convertRem( $px-size-base * 1.5 );
 $gutter-l: convertRem( $px-size-base * 2 );
+$gutter-xl: convertRem( $px-size-base * 2.5 );
+$gutter-xxl: convertRem( $px-size-base * 3 );
 
 // Action Padding
 $axn-padding: $gutter-xxs $gutter-s;
@@ -64,6 +66,8 @@ $lifebook: 3200;
 $viewport-narrow: 0;
 $viewport-wide: $tablet;
 
+$size-min: convertRem( $mobile );
+
 // Device-Based Size
 $mobile-size: convertRem( $mobile );
 $mobile-l-size: convertRem( $mobile-l );
@@ -76,6 +80,7 @@ $font: convertRem( $px-size-base * 1.125 );
 $font-l: convertRem( $px-size-base * 1.375 );
 $font-xl: convertRem( $px-size-base * 1.75 );
 $font-xxl: convertRem( $px-size-base * 2.25 );
+$font-xxxl: convertRem( $px-size-base * 3 );
 
 $font-reset: convertRem( $px-size-base * 1 );
 

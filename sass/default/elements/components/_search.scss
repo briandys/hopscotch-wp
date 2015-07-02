@@ -35,3 +35,16 @@
 {    
     @include hs-nature--cursor-pointer;
 }
+
+.content-hr_sidebar,
+.colophon_sidebar
+{
+    .widget_search
+    {
+        .widget_cr
+        {
+            @include hs-nature--center-block;
+            max-width: $mobile-l-size;
+        }
+    }
+}

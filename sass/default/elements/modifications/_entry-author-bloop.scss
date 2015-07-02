@@ -35,4 +35,10 @@
     {
         text-decoration: none;
     }
+    
+    
+    .entry-author_cr .pred_label
+    {
+        @extend %hs-patch--visually-hidden !optional;
+    }
 }

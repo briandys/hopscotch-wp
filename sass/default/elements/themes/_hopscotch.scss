@@ -177,9 +177,9 @@
     //------------------------- String Beans - Tag
     &.hs-mod__tag--string-beans
     {        
-        .tag_cr
+        .article-entry-category-tag_cr
         {
-            @include margin-x( -.25rem );
+            @include margin-x( -$gutter-xxs );
         }
         
         .tag_comp a
@@ -188,16 +188,10 @@
             border-radius: $radius-xs;
             @include transition--basic;
         }
-        
-        .tag_accessible-name
-        {
-            margin-left: -$gutter-xxs;
-        }
     }
     
     //------------------------- Entry - Article and Comments
-    .article-entry-modified-timestamp_comp,    
-    .article-entry-author_cr .pred_label,    
+    .article-entry-modified-timestamp_comp,  
     .category-tag_accessible-name
     {
         @extend %hs-patch--visually-hidden !optional;
@@ -253,6 +247,18 @@
         }
     }
     
+    .comment-entry-published-timestamp_cr
+    {
+        // Var
+        $breakpoint-comment: $moblet;
+        
+        @include media-query( $breakpoint-comment )
+        {
+            // Counter
+            margin-right: - $gutter;
+        }
+    }
+    
     //------------------------- Read More / Show More Content
     .show-more-content_comp
     {
@@ -291,16 +297,11 @@
         border: $one dotted $faint;
     }
     
-    .comment-entry-author_cr .pred_label,
-    .comment-entry-published-timestamp_cr .pred_label
-    {
-        @extend %hs-patch--visually-hidden !optional;
-    }
-    
     #cancel-comment-reply-link
     {
         @extend %hs-nature--text-blocker !optional;
         display: inline-block;
+        @include margin-x( -$gutter );
     
         .subj_label
         {
@@ -313,15 +314,6 @@
         small
         {
             display: block;
-        }
-    }
-    
-    .comment-reply-link
-    {
-        .prep_label,
-        .subj_label
-        {
-            @extend %hs-patch--visually-hidden !optional;
         }
     }
     
@@ -352,7 +344,7 @@
     }
     
     .comments_cr,
-    .widget_cr
+    .content-sidebar_cr
     {
         border-top-width: $one;
         border-top-style: dotted;
