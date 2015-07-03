@@ -397,7 +397,7 @@
         }
     }
     
-    // Peeler
+    //------------------------- Peeler
     &.hs-mod__show-content--peeler
     {
         &.js
@@ -408,5 +408,12 @@
                 border-radius: $radius-button;
             }
         }
+    }
+    
+    //------------------------- Author
+    .entry-author-avatar_axn
+    {
+        border-radius: 50%;
+        overflow: hidden;
     }
 }

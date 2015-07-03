@@ -5,8 +5,7 @@
 
 .wp-caption-text
 {
-    padding-top: $block-xxxs;
-    padding-bottom: $block-xxxs;
+    @include padding-y( $gutter-xs );
     @include hs-nature--child-normalize;
 }
 
@@ -14,5 +13,4 @@
 .gallery-caption
 {
     font-size: $font-s;
-    color: $color-caption;
 }

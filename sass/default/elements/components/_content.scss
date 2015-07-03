@@ -9,7 +9,7 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
         .content_ct
         {   
             @include hs-patch--clearfix;
-            @include hs-nature--center-block;
+            @include margin-x( auto );
             max-width: convertRem( $monitor );
         }
 
@@ -27,7 +27,7 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
 
         .colophon-sidebar_cr
         {
-            @include hs-nature--center-block;
+            @include margin-x( auto );
             max-width: convertRem( $widescreen );
         }
     }
@@ -49,7 +49,7 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     .web-product-page-nav_cr,
     .article-entry-nav_cr
     {   
-        @include hs-nature--center-block;
+        @include margin-x( auto );
         max-width: convertRem( $tablet );
     }
 }

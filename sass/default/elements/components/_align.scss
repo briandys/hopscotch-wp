@@ -28,6 +28,6 @@
 }
 
 .aligncenter {
-    display: block;
-    @include hs-nature--center-block;
+    display: block;    
+    @include margin-x( auto );
 }

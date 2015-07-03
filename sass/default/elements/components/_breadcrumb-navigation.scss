@@ -1,13 +1,12 @@
-.breadcrumb-nav_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
 .breadcrumb_nav
 {
     .article-sub-entry_comp &
     {
-        // Hide Breadcrumb Navigation if Entry is a Sub-Entry
-        @extend %hs-patch--hidden !optional;
+        display: none;
     }
+}
+
+.breadcrumb-nav_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

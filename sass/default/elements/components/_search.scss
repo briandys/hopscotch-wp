@@ -43,7 +43,7 @@
     {
         .widget_cr
         {
-            @include hs-nature--center-block;
+            @include margin-x( auto );
             max-width: $mobile-l-size;
         }
     }

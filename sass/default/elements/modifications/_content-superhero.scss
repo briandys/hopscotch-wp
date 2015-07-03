@@ -20,7 +20,7 @@
 
             .primary-content_cr
             {
-                @include hs-nature--center-block;
+                @include margin-x( auto );
                 max-width: $tablet-size;
             }
 
@@ -35,7 +35,7 @@
     {        
         .colophon-sidebar_cr
         {
-            @include hs-nature--center-block;
+            @include margin-x( auto );
             max-width: $tablet-size;
         }
     }
