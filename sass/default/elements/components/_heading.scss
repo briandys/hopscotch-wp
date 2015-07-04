@@ -1,18 +1,12 @@
 .article-entry-title_name
 {
     font-size: $font-xxl;
-}
-
-.article-sub-entry_comp
-{
-    .article-entry-title_name
+    
+    .article-sub-entry_comp &
     {
         font-size: $font-xl;
-    }
-    
-    .article-sub-entry_comp
-    {
-        .article-entry-title_name
+        
+        .article-sub-entry_comp &
         {
             font-size: $font-l;
         }

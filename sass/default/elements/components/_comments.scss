@@ -4,7 +4,7 @@
     {
         &:hover
         {
-            @include hs-nature--cursor-pointer;
+            cursor: pointer;
         }
     }
 }
@@ -31,12 +31,14 @@
     margin-bottom: 0;
 }
 
+// By Post Author
 .bypostauthor
 {
     .author-name_label
     {
         a
         {
+            font-weight: bold;
             text-decoration: none;
             
             &:hover
@@ -65,18 +67,6 @@
 .comments_accessible-name
 {   
     font-size: $font-l;
-}
-
-// By Post Author
-.bypostauthor
-{
-    .author-name_label
-    {
-        a
-        {
-            font-weight: bold;
-        }
-    }
 }
 
 // Visibility

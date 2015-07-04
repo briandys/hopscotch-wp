@@ -1,10 +1,9 @@
 // Read More
-
 .show-more-content_comp
 {
+    .article-entry-title_label,
     .pred_label,
-    .slash_label,
-    .article-entry-title_label
+    .slash_label
     {
         @extend %hs-patch--visually-hidden !optional;
     }

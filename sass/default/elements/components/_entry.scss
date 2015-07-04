@@ -1,21 +1,10 @@
 // Entry (Article and Comment)
-
-// Visibility
-.article-entry-comments-actions_accessible-name,
-.article-entry-admin_accessible-name,
-.article-entry-blank_notice,
-.article-entry-page-nav_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
 .entry_cr
 {
     @extend %hs-patch--clearfix !optional;
 }
 
-.entry-ct_cr {
-    
+.entry-ct_cr {    
     // Clear all Heading Objects
     @each $item in $heading-objects {
         > #{$item} {
@@ -88,7 +77,6 @@
     .archive &
     {
         text-decoration: none;
-        color: $color--link--fg--default;
 
         &:hover
         {
@@ -111,7 +99,7 @@
 }
 
 // Tags
-.tag_accessible-name:after
+.tag_accessible-name
 {
     @include hs-nature--colonizer;
 }
@@ -130,4 +118,13 @@
             margin-bottom: 0;
         }
     }
+}
+
+// Visibility
+.article-entry-comments-actions_accessible-name,
+.article-entry-admin_accessible-name,
+.article-entry-blank_notice,
+.article-entry-page-nav_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

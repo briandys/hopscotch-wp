@@ -1,5 +1,11 @@
 // Components
 @import '../../elements/components/theme/caption';
+@import '../../elements/components/theme/colophon';
+@import '../../elements/components/theme/entry';
+@import '../../elements/components/theme/notice';
+
+// Modifications
+@import '../../elements/modifications/theme/show-content-peeler';
 
 // Themes
 @import '../../elements/themes/theme/hopscotch';

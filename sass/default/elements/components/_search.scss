@@ -1,22 +1,3 @@
-// Hidden Objects
-.search_form legend,
-.widget_search .accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
-.hs-template__search--default
-{
-    .masthead_sidebar
-    {
-        .search_icon,
-        .dismiss_icon
-        {
-            @extend %hs-patch--visually-hidden !optional;
-        }
-    }
-}
-
 // Search Icon
 .content-hr_sidebar,
 .content_sidebar,
@@ -33,7 +14,7 @@
 // Search Form Label
 .search-form_label
 {    
-    @include hs-nature--cursor-pointer;
+    cursor: pointer;
 }
 
 .content-hr_sidebar,
@@ -45,6 +26,25 @@
         {
             @include margin-x( auto );
             max-width: $mobile-l-size;
+        }
+    }
+}
+
+// Visibility
+.search_form legend,
+.widget_search .accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
+.hs-template__search--default
+{
+    .masthead_sidebar
+    {
+        .search_icon,
+        .dismiss_icon
+        {
+            @extend %hs-patch--visually-hidden !optional;
         }
     }
 }

@@ -5,8 +5,8 @@
 
 .wp-caption-text
 {
-    @include padding-y( $gutter-xs );
-    @include hs-nature--child-normalize;
+    @extend %hs-nature--child-normalize !optional;
+    @include padding-y( $gutter-xs );    
 }
 
 .wp-caption .wp-caption-text,

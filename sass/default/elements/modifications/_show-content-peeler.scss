@@ -1,14 +1,5 @@
 .hs-mod__show-content--peeler
-{   
-    //------------------------- Default
-    
-    .show-content_axn
-    {
-        @extend %hs-patch--visually-hidden-reverse !optional;
-        @extend %hs-nature--utility-blocker !optional;
-        display: table-cell;
-    }
-    
+{    
     //------------------------- JS
     &.js
     {
@@ -19,6 +10,9 @@
         
         .show-content_axn
         {
+            @extend %hs-patch--visually-hidden-reverse !optional;
+            @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
             @include padding-x( $gutter );
         }
     
@@ -37,7 +31,6 @@
                     left: 0;
                     @include dimensions( 100% );
                     
-                    background-color: $white;
                     z-index: $layer2;
                     opacity: .9;
                 }
@@ -54,21 +47,5 @@
                 z-index: $layer1;
             }
         }
-    }
-    
-    //------------------------- No JS
-    &.no-js
-    {
-        .show-content_cr
-        {
-            display: table;
-            width: 100%;
-        }
-        
-        .show-content_axn
-        {
-            @include padding-x( $gutter );
-            text-align: left;
-        }
-    }
+    }    
 }

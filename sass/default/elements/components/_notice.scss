@@ -16,12 +16,12 @@
 
 .notice_cr
 {
-    border: $one dotted $faint;
+    border-width: $one;
+    border-style: dotted;
     border-radius: $radius-xs;
 }
 
 .note
 {
     font-style: italic;
-    color: $gray;
 }

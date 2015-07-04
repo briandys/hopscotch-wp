@@ -1,8 +1,3 @@
-.colophon_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
 .show-top_cr,
 .web-product-theme-info_cr,
 .copyright-info_cr
@@ -13,6 +8,16 @@
 .web-product-theme-info_label,
 .copyright-info_label
 {
+    margin: 0;
     font-size: $font-s;
-    color: $gray;
+}
+
+.colophon_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
+}
+
+.copyright-info_comp
+{
+    margin-top: $gutter-s;
 }

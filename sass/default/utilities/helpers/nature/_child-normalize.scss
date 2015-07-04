@@ -10,3 +10,8 @@
         margin-bottom: 0;
     }
 }
+
+%hs-nature--child-normalize
+{
+    @include hs-nature--child-normalize
+}

@@ -3,45 +3,58 @@ $primary-content-comp_width: ( 640 / $desktop ) * 100%;
 $content-sidebar_width: 100% - $primary-content-comp_width;
 
 .hs-state__content-sidebar--enabled
-{    
-    @include media-query( $viewport-wide )
+{
+    .content_ct
     {
-        .content_ct
-        {   
+        @include media-query( $viewport-wide )
+        {
             @include hs-patch--clearfix;
             @include margin-x( auto );
             max-width: convertRem( $monitor );
         }
+        
+        @include media-query( $moviehouse )
+        {
+            max-width: convertRem( $widescreen );
+        }
+    }
 
-        .primary-content_comp
+    .primary-content_comp
+    {
+        @include media-query( $viewport-wide )
         {
             float: left;
             width: $primary-content-comp_width;
         }
+    }
 
-        .content_sidebar
+    .content_sidebar
+    {
+        @include media-query( $viewport-wide )
         {
             float: right;
             width: $content-sidebar_width;
         }
+    }
 
-        .colophon-sidebar_cr
+    .colophon-sidebar_cr
+    {
+        @include media-query( $viewport-wide )
         {
             @include margin-x( auto );
-            max-width: convertRem( $widescreen );
-        }
-    }
-    
-    @include media-query( $moviehouse )
-    {
-        .content_ct
-        {
             max-width: convertRem( $widescreen );
         }
     }
 }
 
 // With Content Sidebar disabled or no content
+
+%width-limit
+{
+    @include margin-x( auto );
+    max-width: convertRem( $tablet );
+}
+
 .hs-state__content-sidebar--disabled
 {
     .article-entry_cr,
@@ -49,8 +62,20 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     .web-product-page-nav_cr,
     .article-entry-nav_cr
     {   
-        @include margin-x( auto );
-        max-width: convertRem( $tablet );
+        @extend %width-limit !optional;
+    }
+    
+    .format-gallery
+    {
+        .article-entry_cr
+        {
+            max-width: none;
+        }
+        
+        .article-entry-hr_cr
+        {
+            @extend %width-limit !optional;
+        }
     }
 }
 

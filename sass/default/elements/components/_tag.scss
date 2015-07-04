@@ -1,6 +1,4 @@
 .tag_accessible-name
 {
-    &:after{
-        content: ':';
-    }
+    @extend %hs-nature--colonizer !optional;
 }

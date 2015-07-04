@@ -1,20 +1,24 @@
-// Skip Link
-
 //------------------------- Default
 .show-content_axn
 {
-    @extend %hs-patch--visually-hidden !optional;
-    
-    &:focus,
-    &:active
-    {
-        @extend %hs-patch--visually-hidden-reverse !optional;
-    }
+    display: none;
 }
 
 //------------------------- JS
 .js
 {
+    .show-content_axn
+    {
+        display: block;
+        @extend %hs-patch--visually-hidden !optional;
+    
+        &:focus,
+        &:active
+        {
+            @extend %hs-patch--visually-hidden-reverse !optional;
+        }
+    }
+    
     .show-content_comp
     {
         position: absolute;
@@ -28,6 +32,8 @@
 {
     .show-content_axn
     {
-        @extend %hs-patch--visually-hidden-reverse !optional;
+        
+            @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
     }
 }

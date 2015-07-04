@@ -1,22 +1,4 @@
-.web-product_desc,
-.web-product-page_accessible-name
-{
-    @extend %hs-patch--visually-hidden !optional;
-}
-
 .web-product_name
-{
-    // Reset
-    margin: 0;
-}
-
-.copyright-info_comp
-{
-    margin-top: $gutter-s;
-}
-
-.web-product-theme-info_label,
-.copyright-info_label
 {
     margin: 0;
 }
@@ -24,4 +6,10 @@
 .web-product-info_cr
 {
     padding: $gutter;
+}
+
+.web-product_desc,
+.web-product-page_accessible-name
+{
+    @extend %hs-patch--visually-hidden !optional;
 }

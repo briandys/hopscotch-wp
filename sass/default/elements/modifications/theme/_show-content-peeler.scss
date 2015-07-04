@@ -1,0 +1,17 @@
+.hs-mod__show-content--peeler
+{    
+    //------------------------- JS
+    &.js
+    {    
+        .hs-state__show-content-axn--active
+        {
+            .container_cr
+            {
+                &:after
+                {
+                    background-color: $white;
+                }
+            }
+        }
+    }    
+}

@@ -1,13 +1,52 @@
 .gallery-item
 {
-    // Reset
-    margin: 0;
-    
     display: inline-block;
+    margin: 0;
     padding: $gutter;
     width: 100%;
     text-align: center;
     vertical-align: top;
+        
+    @include media-query( $moblet )
+    {
+        max-width: ( 100% / 2 );
+        text-align: left;
+    }
+    
+    @include media-query( $tablet )
+    {
+        max-width: ( 100% / 3 );
+    }
+    
+    @include media-query( $monitor )
+    {
+        max-width: ( 100% / 4 );
+    }
+    
+    @include media-query( $widescreen )
+    {
+        max-width: ( 100% / 5 );
+    }
+    
+    @include media-query( $moviehouse )
+    {
+        max-width: ( 100% / 6 );
+    }
+    
+    @include media-query( $theater )
+    {
+        max-width: ( 100% / 7 );
+    }
+    
+    @include media-query( $minorityreport )
+    {
+        max-width: ( 100% / 8 );
+    }
+    
+    @include media-query( $cinema )
+    {
+        max-width: ( 100% / 9 );
+    }
     
     // Columns
     .gallery-columns-1 &
@@ -17,49 +56,65 @@
     
     .gallery-columns-2 &
     {
-        max-width: 50%;
+        @include media-query( $moblet )
+        {
+            max-width: ( 100% / 2 );
+        }
     }
-    
-    @include media-query( $moblet )
-    {
-        &
-        {
-            text-align: left;
-        }
         
-        .gallery-columns-3 &
+    .gallery-columns-3 &
+    {
+        @include media-query( $tablet )
         {
-            max-width: 33.33%;
+            max-width: ( 100% / 3 );
         }
+    }
 
-        .gallery-columns-4 &
+    .gallery-columns-4 &
+    {
+        @include media-query( $monitor )
         {
-            max-width: 25%;
+            max-width: ( 100% / 4 );
         }
+    }
 
-        .gallery-columns-5 &
+    .gallery-columns-5 &
+    {
+        @include media-query( $widescreen )
         {
-            max-width: 20%;
+            max-width: ( 100% / 5 );
         }
+    }
 
-        .gallery-columns-6 &
+    .gallery-columns-6 &
+    {
+        @include media-query( $moviehouse )
         {
-            max-width: 16.66%;
+            max-width: ( 100% / 6 );
         }
+    }
 
-        .gallery-columns-7 &
+    .gallery-columns-7 &
+    {
+        @include media-query( $theater )
         {
-            max-width: 14.28%;
+            max-width: ( 100% / 7 );
         }
+    }
 
-        .gallery-columns-8 &
+    .gallery-columns-8 &
+    {
+        @include media-query( $minorityreport )
         {
-            max-width: 12.5%;
+            max-width: ( 100% / 8 );
         }
+    }
 
-        .gallery-columns-9 &
+    .gallery-columns-9 &
+    {
+        @include media-query( $cinema )
         {
-            max-width: 11.11%;
+            max-width: ( 100% / 9 );
         }
     }
 }

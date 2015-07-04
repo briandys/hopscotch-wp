@@ -27,7 +27,11 @@ select
     @include appearance( none );
     
     width: 100%;
-    @include hs-nature--cursor-pointer;
+    
+    &:hover
+    {
+        cursor: pointer;
+    }
 }
 
 legend
