@@ -420,7 +420,7 @@
     {
         .comment-entry_cr
         {
-            @include padding-y( $gutter );
+            padding-bottom: $gutter;
         }
     }
     
