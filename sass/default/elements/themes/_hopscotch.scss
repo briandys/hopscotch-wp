@@ -441,6 +441,16 @@
         
         .logged-in
         {
+            .article-entry-hr_hr
+            {
+                text-align: center;
+                
+                @include media-query( $viewport-wide )
+                {
+                    text-align: left;
+                }
+            }
+            
             .article-entry-title_name,
             .comment-admin-sign-in_comp,
             .comment-entry-author_comp
