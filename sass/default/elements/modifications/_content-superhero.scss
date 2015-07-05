@@ -5,26 +5,35 @@
 {
     .hs-state__content-sidebar--enabled
     {
-        @include media-query( $theater )
+        .content_ct
         {
-            .content_ct
+            @include media-query( $theater )
             {
                 max-width: none;
             }
+        }
 
-            .primary-content_comp
+        .primary-content_comp
+        {
+            @include media-query( $theater )
             {
                 margin-right: -100%;
                 width: 100%;
             }
+        }
 
-            .primary-content_cr
+        .primary-content_cr
+        {
+            @include media-query( $theater )
             {
                 @include margin-x( auto );
                 max-width: $tablet-size;
             }
+        }
 
-            .content_sidebar
+        .content_sidebar
+        {
+            @include media-query( $theater )
             {
                 max-width: $mobile-l-size;
             }
@@ -35,8 +44,11 @@
     {        
         .colophon-sidebar_cr
         {
-            @include margin-x( auto );
-            max-width: $tablet-size;
+            @include media-query( $theater )
+            {
+                @include margin-x( auto );
+                max-width: $tablet-size;
+            }
         }
     }
     

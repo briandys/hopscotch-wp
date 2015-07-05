@@ -22,7 +22,7 @@
 
 .comment-pending_notice
 {
-    margin-top: $gutter-l;
+    margin-bottom: $gutter-s;
 }
 
 .comments_accessible-name
@@ -67,6 +67,14 @@
 .comments_accessible-name
 {   
     font-size: $font-l;
+}
+
+.comments-count_note
+{
+    .article-entry-title_label
+    {
+        font-weight: bold;
+    }
 }
 
 // Visibility

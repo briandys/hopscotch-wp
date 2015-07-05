@@ -33,16 +33,16 @@ function hopscotch_entry_add_class( $classes ) {
         $classes[] = "hs-type__article-entry--excerpt";
     endif;
     
-    // Comments
+    //------------------------- Comments
     $num_comments = get_comments_number();
-        
+
     $comment_count_class = 'hs-type__article-entry-comments--zero';
-    $number = (int) get_comments_number( get_the_ID() );
+    $comment_number = (int) get_comments_number( get_the_ID() );
 
     // Defines the class depending on the comment count
-    if ( 1 === $number )
+    if ( 1 === $comment_number )
         $classes[] = 'hs-type__article-entry-comments--single';
-    elseif ( 1 < $number )
+    elseif ( 1 < $comment_number )
         $classes[] = 'hs-type__article-entry-comments--multiple';
 
     // CSS Class for Closed or Open Comments
@@ -50,7 +50,7 @@ function hopscotch_entry_add_class( $classes ) {
         $classes[] = 'hs-state__article-entry-comments--open';
     else
         $classes[] = 'hs-state__article-entry-comments--closed';
-    
+
     if ( get_comments_number( get_the_ID() ) )
         $classes[] = 'hs-state__article-entry-comments--populated';
     else

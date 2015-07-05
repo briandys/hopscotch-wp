@@ -349,6 +349,7 @@
     $( '.tagcloud:empty' ).parents( '.widget_tag_cloud' ).addClass( 'ui-state__widget-comp--empty' );
     
 
+    //-------------------------  Document Ready
     $( document ).ready( function() {
         $window = $( window );
         

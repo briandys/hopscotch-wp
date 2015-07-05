@@ -1,8 +1,10 @@
 .entry-admin_item a,
 .comment-form-admin-actions-sign-out_item a,
 .show-more-content_axn,
-.comment-entry-reply-axn_axn-item a,
-.article-entry-comments-actions_item a
+.comment-entry-reply_item a,
+.article-entry-comments-actions_item a,
+.comment-entry-admin_item a,
+.comment-reply-title a
 {
     @extend %hs-nature--utility-blocker !optional;
     display: table-cell;
@@ -20,7 +22,8 @@
 .show-more-content_cr,
 .hs-state__article-entry-comments--open .article-entry-comments-actions_grp,
 .hs-state__article-entry-comments--populated .article-entry-comments-actions_grp,
-.comment-entry-published-timestamp_cr
+.comment-entry-published-timestamp_cr,
+.comment-reply-title small
 {
     @include margin-x( - $gutter-s );
 }

@@ -31,7 +31,12 @@
     {
         display: table;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: $font;
+        
+        @include media-query( $viewport-wide )
+        {  
+            font-size: $font-l;
+        }
     }
     
     //------------------------- No JS

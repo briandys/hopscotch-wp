@@ -49,6 +49,31 @@ function hopscotch_body_class( $classes ) {
         $classes[] = 'hs-state__colophon-sidebar--enabled';
     else
         $classes[] = 'hs-state__colophon-sidebar--disabled';
+    
+    //------------------------- Comments
+    if ( is_singular() ) {
+        $num_comments = get_comments_number();
+
+        $comment_count_class = 'hs-type__article-entry-comments--zero';
+        $comment_number = (int) get_comments_number( get_the_ID() );
+
+        // Defines the class depending on the comment count
+        if ( 1 === $comment_number )
+            $classes[] = 'hs-type__article-entry-comments--single';
+        elseif ( 1 < $comment_number )
+            $classes[] = 'hs-type__article-entry-comments--multiple';
+
+        // CSS Class for Closed or Open Comments
+        if ( comments_open( get_the_ID() ) )
+            $classes[] = 'hs-state__article-entry-comments--open';
+        else
+            $classes[] = 'hs-state__article-entry-comments--closed';
+
+        if ( get_comments_number( get_the_ID() ) )
+            $classes[] = 'hs-state__article-entry-comments--populated';
+        else
+            $classes[] = 'hs-state__article-entry-comments--empty';
+    }
 
     return $classes;
 }

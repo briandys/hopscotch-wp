@@ -113,7 +113,7 @@ if ( ! function_exists( 'hopscotch_comments_item' ) ) :
                             <div class="cr comment-entry-axn_cr">
                                 <p class="accessible-name comment-entry-axn_accessible-name"><?php _e( 'Comment Actions', 'hopscotch' ); ?></p>
                                 <ul class="grp comment-entry-axn_grp">
-                                    <li class="item reply_axn-item comment-entry-reply-axn_axn-item">
+                                    <li class="item reply_axn-item comment-entry-reply_item">
                                         <?php comment_reply_link( array_merge( $args,
                                             array(
                                                 'add_below'     => $add_below,

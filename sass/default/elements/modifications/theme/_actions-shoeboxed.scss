@@ -1,0 +1,14 @@
+.hs-mod__actions--shoeboxed
+{
+    .article-entry-admin_item,
+    .comment-form-admin-actions-sign-out_item,
+    .comment-entry-admin_item,
+    .comment-entry-reply_item,
+    .comment-reply-title
+    {
+        a
+        {
+            border-color: $faint;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@mixin hs-nature--text-decor-reverse
+{
+    text-decoration: none;
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
+}

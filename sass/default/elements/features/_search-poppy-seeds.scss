@@ -243,6 +243,16 @@
                     margin-top: -$one;
                 }
             }
+            
+            .web-product-header_name
+            {
+                visibility: hidden;
+                
+                @include media-query( $viewport-wide )
+                {
+                    visibility: visible;
+                }
+            }
         }
 
         &.hs-feature__primary-nav-masthead-sidebar--hamburger

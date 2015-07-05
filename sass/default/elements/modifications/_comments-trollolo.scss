@@ -6,7 +6,7 @@
     .comment-entry-ct_cr
     {
         // Reset
-        padding-bottom: 0;
+        @include padding-y( 0 );
     }
 
     .comments-count_comp
@@ -25,7 +25,6 @@
             display: table-cell;
 
             font-size: $font-s;
-            color: $gray;
             text-decoration: none;
             
             white-space: nowrap;
@@ -84,20 +83,6 @@
         @include media-query( $breakpoint-comment )
         {
             text-align: left;
-        }
-    }
-    
-    .comment-entry-published-timestamp_cr .pred_label
-    {
-        @extend %hs-patch--visually-hidden !optional;
-    }
-    
-    .comment-reply-link
-    {
-        .prep_label,
-        .subj_label
-        {
-            @extend %hs-patch--visually-hidden !optional;
         }
     }
 }

@@ -47,6 +47,23 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
     }
 }
 
+.hs-state__colophon-sidebar--enabled
+{        
+    .colophon-sidebar_cr
+    {
+        @include media-query( $viewport-wide )
+        {
+            @include margin-x( auto );
+            max-width: convertRem( $monitor );
+        }
+        
+        @include media-query( $moviehouse )
+        {
+            max-width: convertRem( $widescreen );
+        }
+    }
+}
+
 // With Content Sidebar disabled or no content
 
 %width-limit

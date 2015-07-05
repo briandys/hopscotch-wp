@@ -16,12 +16,9 @@
         }
     }
     
-    .masthead_sidebar
+    .search-form_input:focus
     {
-        .search-form_input:focus
-        {
-            outline: none;
-        }
+        outline: none;
     }
     
     //------------------------- JS
@@ -213,14 +210,19 @@
         }        
     }
     
-    .hs-state__article-entry-comments--closed
-    {
-        &.hs-state__article-entry-comments--empty
+    .hs-state__article-entry-comments--empty
+    {    
+        &.hs-state__article-entry-comments--closed
         {
             .article-entry-comments-actions_comp
             {
                 @extend %hs-patch--visually-hidden !optional;
             }
+        }
+        
+        .blank-comments_notice
+        {
+            @extend %hs-patch--visually-hidden !optional;
         }
     }
     
@@ -299,10 +301,6 @@
     
     #cancel-comment-reply-link
     {
-        @extend %hs-nature--text-blocker !optional;
-        display: inline-block;
-        @include margin-x( -$gutter );
-    
         .subj_label
         {
             @extend %hs-patch--visually-hidden !optional;
@@ -415,5 +413,72 @@
     {
         border-radius: 50%;
         overflow: hidden;
+    }
+    
+    //------------------------- Trollolo - Comments
+    &.hs-mod__comments--trollolo
+    {
+        .comment-entry_cr
+        {
+            @include padding-y( $gutter );
+        }
+    }
+    
+    //------------------------- Showboxed - Actions
+    &.hs-mod__actions--shoeboxed
+    {
+        .article-entry-title_name,
+        .article-entry-admin_comp,
+        .comment-admin-sign-in_comp,
+        .comment-form-admin-actions_comp,
+        .comment-entry-author_comp,
+        .comment-entry-admin_comp,
+        .comment-reply-title small
+        {
+            display: inline-block;
+            vertical-align: middle
+        }
+        
+        .logged-in
+        {
+            .article-entry-title_name,
+            .comment-admin-sign-in_comp,
+            .comment-entry-author_comp
+            {
+                margin-right: -$gutter-l;
+            }
+        }
+        
+        .comment-reply-title small
+        {
+            margin-left: $gutter;
+        }
+    }
+        
+    // Visibility
+    .article-entry-admin_item,
+    .comment-entry-admin_item
+    {
+        .subj_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+    
+    .comment-entry-published-timestamp_cr
+    {
+        .pred_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
+    }
+    
+    .comment-reply-link
+    {
+        .prep_label,
+        .subj_label
+        {
+            @extend %hs-patch--visually-hidden !optional;
+        }
     }
 }

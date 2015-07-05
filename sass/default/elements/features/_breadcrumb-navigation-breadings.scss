@@ -5,7 +5,7 @@
         @extend %hs-reset--unlist !optional;
         
         // Counter-Effect
-        @include margin-x( $axn-padding-counter );
+        @include margin-x( -$gutter-s );
     }
 
     .breadcrumb-nav_item
@@ -32,9 +32,10 @@
         $breadcrumb-nav-axn-dimensions: 12;
         
         @extend %hs-nature--utility-blocker !optional;
+        display: table-cell;
         
         position: relative;
-
+        
         &:after
         {
             content: '';
