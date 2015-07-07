@@ -120,6 +120,21 @@
     }
 }
 
+.article-entry-comments-actions_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.article-entry-nav_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.article-entry-admin_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
 // Visibility
 .article-entry-comments-actions_accessible-name,
 .article-entry-admin_accessible-name,

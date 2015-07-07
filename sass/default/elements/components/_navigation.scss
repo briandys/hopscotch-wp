@@ -9,12 +9,6 @@
     font-weight: bold;
 }
 
-// Article Entry Page Navigation
-.web-product-page-nav_cr > .page-numbers
-{
-    @extend %hs-reset--unlist !optional;
-}
-
 .article-entry-page-nav_friendly-name,
 .article-entry-page-nav_grp
 {
@@ -56,7 +50,7 @@
     > .page-numbers
     {
         @extend %hs-reset--unlist !optional;
-
+        
         @include margin-x( $axn-padding-counter );
 
         li

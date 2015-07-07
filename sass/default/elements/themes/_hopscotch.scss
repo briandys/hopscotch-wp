@@ -464,6 +464,44 @@
             margin-left: $gutter;
         }
     }
+    
+    // Center Text
+    // Places the text of a content at the center of the container
+    @include media-query( $viewport-wide, max )
+    {
+        .article-entry-title_name,
+        .article-entry-hr_ct,
+        .article-entry-nav_grp,
+        .web-product-info_cr,
+        .article-entry-page-nav_cr,
+        .web-product-theme-info_label,
+        .article-entry-admin_cr,
+        .copyright-info_label,
+        .content-hr_accessible-name,
+        .primary-content_desc,
+        .comments-count_cr,
+        .comment-admin_cr,
+        .comment-reply-title,
+        .comments_accessible-name,
+        .comments-commenting-disabled_note,
+        .breadcrumb-nav_cr,
+        .comment-reply-title small
+        {
+            text-align: center;
+        }
+
+        .article-entry-admin_item,
+        .article-entry-comments-actions_item,
+        .comment-form-admin-actions-sign-out_item
+        {
+            display: inline-block;
+        }
+
+        .comment-reply-title small
+        {
+            display: block;
+        }
+    }
         
     // Visibility
     .article-entry-admin_item,

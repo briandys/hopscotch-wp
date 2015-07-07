@@ -77,6 +77,34 @@
     }
 }
 
+.comments_grp
+{
+    @extend %hs-reset--unlist !optional;
+    
+    .comment
+    {
+        .children
+        {
+            @extend %hs-reset--unlist !optional;
+        }
+    }
+}
+
+.comment-entry-axn_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.comment-entry-admin_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
+.comment-form-admin-actions_grp
+{
+    @extend %hs-reset--unlist !optional;
+}
+
 // Visibility
 .comment-entry-admin_accessible-name,
 .comment-form-admin-actions_accessible-name,
