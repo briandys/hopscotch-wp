@@ -21,6 +21,7 @@
         .search-form-reset_axn
         {
             display: none;
+            background-color: transparent;
         }
 
         .search_icon
@@ -42,6 +43,8 @@
         {
             @extend %hs-reset--deflate !optional;
             @extend %hs-nature--inline-icon-cr !optional;
+            
+            background-color: transparent;
 
             &:not( :focus )
             {

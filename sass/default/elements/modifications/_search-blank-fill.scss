@@ -14,7 +14,6 @@
             // Reset
             border: 0;
             border-radius: 0;
-            padding-right: $utility-block;
             border-bottom: .125rem solid $black;
             @include transition--basic;
             
@@ -22,6 +21,11 @@
             {
                 border-bottom-color: $black;
             }
+        }
+        
+        .search-form-input-field_cr
+        {
+            padding-right: $utility-block;            
         }
 
         .search-form-axn_field
