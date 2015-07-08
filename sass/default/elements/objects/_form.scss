@@ -16,17 +16,25 @@ select
 {
     @extend %hs-reset--deflate !optional;
     padding: $gutter-xxs;
+    border-width: $one;
+    border-style: solid;
 }
 
 
 #{$button-objects}
 {
     @extend %hs-reset--deflate !optional;
+    @extend %hs-nature--utility-blocker !optional;
     
     // To enable padding
-    @include appearance( none );
+    @include appearance( none );    
+    
+    @include padding-x( $gutter );
     
     width: 100%;
+    
+    border-width: $one;
+    border-style: solid;
     
     &:hover
     {
@@ -62,20 +70,4 @@ label[for]
     {
         cursor: pointer;
     }
-}
-
-#{$text-input-objects},
-.text_input,
-select
-{
-    background-color: white;
-    border: 1px solid #808080;
-    border-radius: .125rem;
-}
-
-#{$button-objects}
-{
-    background-color: transparent;
-    border: 1px solid #808080;
-    border-radius: .125rem;
 }

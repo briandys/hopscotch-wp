@@ -156,6 +156,8 @@
         .primary-sub-nav-toggle_axn
         {
             @extend %hs-reset--deflate !optional;
+            @extend %hs-nature--utility-blocker !optional;
+            display: table-cell;
 
             // Enables the use of pseudo-element with position: absolute
             position: absolute;
@@ -166,7 +168,8 @@
             @include transition--basic;
 
             // Counter-Effect
-            width: auto;
+            width: auto;            
+            background-color: transparent;
 
             // Reset
             border-radius: 0;

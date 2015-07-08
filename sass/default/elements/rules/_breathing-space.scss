@@ -1,6 +1,20 @@
 // Spacing around components
 // Not to be used on elements to increase padding
 
+//------------------------- Gutter
+.web-product-page-nav_cr
+{
+    padding: $gutter;
+}
+
+//------------------------- Gutter XXS
+th,
+td
+{
+    padding: $gutter-xxs;
+}
+
+//------------------------- Gutter XXS
 .article-entry-comments-actions_cr,
 .entry-author_comp,
 .entry-timestamp_cr,
@@ -13,12 +27,14 @@
     padding: $gutter-xxs $gutter;
 }
 
+//------------------------- Gutter XS
 .comments-count_cr,
 .comment-reply-title
 {
     padding: $gutter-xs $gutter;
 }
 
+//------------------------- Gutter-x
 .comments_accessible-name,
 .article-entry-title_name,
 .comment-subscription-form,
@@ -33,6 +49,29 @@
     @include padding-x( $gutter );
 }
 
+//------------------------- Gutter-y
+.entry-ct_cr
+{
+    @include padding-y( $gutter );
+}
+
+//------------------------- Gutter-y - XS
+.article-entry-nav_cr,
+.comment-entry_cr
+{
+    @include padding-y( $gutter-xs );
+}
+
+//------------------------- Gutter-y - S
+@include media-query( $viewport-wide )
+{
+    .content-sidebar_cr
+    {
+        @include padding-y( $gutter-s );
+    }
+}
+
+//------------------------- Gutter-y - L
 .article-entry_cr,
 .comments_cr,
 .content-hr_cr
@@ -40,45 +79,11 @@
     @include padding-y( $gutter-l );
 }
 
+//------------------------- Gutter-y - Zero
 .article-sub-entry_comp
 {
     .article-entry_cr
     {
         @include padding-y( 0 );
-    }
-}
-
-.entry-ct_cr
-{
-    @include padding-y( $gutter );
-}
-
-.article-entry-nav_cr,
-.comment-entry_cr
-{
-    @include padding-y( $gutter-xs );
-}
-
-.web-product-page-nav_cr
-{
-    padding: $gutter;
-}
-
-.widget_cr
-{
-    padding: $gutter-l $gutter;
-}
-
-th,
-td
-{
-    padding: $gutter-xxs;
-}
-
-@include media-query( $viewport-wide )
-{
-    .content-sidebar_cr
-    {
-        @include padding-y( $gutter-s );
     }
 }

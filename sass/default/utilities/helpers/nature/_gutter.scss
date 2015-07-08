@@ -1,0 +1,50 @@
+@mixin hs-nature--gutter-xxs
+{
+    padding: $gutter-xxs $gutter;
+}
+
+@mixin hs-nature--gutter-xs
+{
+    padding: $gutter-xs $gutter;
+}
+
+@mixin hs-nature--gutter-s
+{
+    padding: $gutter-s $gutter;
+}
+
+@mixin hs-nature--gutter
+{   
+    padding: $gutter;
+}
+
+@mixin hs-nature--gutter-l
+{
+    padding: $gutter-l $gutter;
+}
+
+
+%hs-nature--gutter-xxs
+{
+    @include hs-nature--gutter-xxs;
+}
+
+%hs-nature--gutter-xs
+{
+    @include hs-nature--gutter-xs;
+}
+
+%hs-nature--gutter-s
+{
+    @include hs-nature--gutter-s;
+}
+
+%hs-nature--gutter
+{
+    @include hs-nature--gutter;
+}
+
+%hs-nature--gutter-l
+{
+    @include hs-nature--gutter-l;
+}

@@ -4,11 +4,6 @@
     .primary_nav
     {
         display: none;
-        
-        @include media-query( $viewport-wide )
-        {
-            display: block;
-        }
     }
     
     .primary-nav-masthead-sidebar-toggle_axn

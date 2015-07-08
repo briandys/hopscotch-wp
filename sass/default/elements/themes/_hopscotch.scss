@@ -276,11 +276,14 @@
     
     .show-more-content_cr
     {
+        display: inline-block;
         @include margin-x( 0 );
     }
     
     .show-more-content_axn
     {
+        @extend %hs-nature--utility-blocker !optional;
+        display: table-cell;
         @include padding-x( $gutter );
         border-radius: $radius-s;
         text-decoration: none;
@@ -372,27 +375,43 @@
     //------------------------- Old China Shop - Timestamp
     &.hs-mod__timestamp--old-china-shop
     {
-        @include media-query( $desktop + 96  )
+        // Var
+        $timestamp-width: 96;
+        
+        .article-entry-hr_cr
         {
-            .article-entry-hr_cr
+            @include media-query( $desktop + $timestamp-width  )
             {
                 position: relative;
             }
+        }
 
-            // Timestamp
-            .article-entry-published-timestamp_comp
+        // Timestamp
+        .article-entry-published-timestamp_comp
+        {
+            @include media-query( $desktop + $timestamp-width  )
             {
                 position: absolute;
                 top: 0;
                 right: 100%;
             }
 
-            .article-entry-published-timestamp_cr
+            .timestamp_axn
+            {
+                border-radius: $radius-s;
+            }
+        }
+
+        .article-entry-published-timestamp_cr
+        {
+            @include media-query( $desktop + $timestamp-width  )
             {
                 // Reset
                 padding: 0;
             }
         }
+        
+        
     }
     
     //------------------------- Peeler
@@ -439,6 +458,18 @@
             vertical-align: middle
         }
         
+        .article-entry-admin_item,
+        .comment-form-admin-actions-sign-out_item,
+        .comment-entry-admin_item,
+        .comment-entry-reply_item,
+        .comment-reply-title
+        {
+            a
+            {
+                border-radius: $radius-xs;
+            }
+        }
+        
         .logged-in
         {
             .article-entry-hr_hr
@@ -463,6 +494,16 @@
         {
             margin-left: $gutter;
         }
+    }
+    
+    // Forms
+    
+    #{$text-input-objects},
+    .text_input,
+    select,
+    #{$button-objects}
+    {
+        border-radius: $radius-s;
     }
     
     // Center Text
@@ -508,14 +549,6 @@
     .comment-entry-admin_item
     {
         .subj_label
-        {
-            @extend %hs-patch--visually-hidden !optional;
-        }
-    }
-    
-    .comment-entry-published-timestamp_cr
-    {
-        .pred_label
         {
             @extend %hs-patch--visually-hidden !optional;
         }
