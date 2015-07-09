@@ -30,7 +30,7 @@ endif;
 // Theme
 if ( ! function_exists( 'hopscotch_ui_settings_themes_html_class' ) ) :
 	function hopscotch_ui_settings_themes_html_class() {
-        echo ' hs-theme--hopscotch';
+        //echo ' hs-theme--hopscotch';
     }
     add_action( 'hopscotch_html_class', 'hopscotch_ui_settings_themes_html_class');
 endif;

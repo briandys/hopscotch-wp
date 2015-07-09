@@ -97,7 +97,7 @@ Class: article-entry_comp
             <div class="cr entry-ct_cr article-entry-ct_cr">
             
             <?php
-            if ( ! is_search() ) :
+            if ( !is_search() || !is_author() ) :
                 the_content();
             else :
                 the_excerpt();

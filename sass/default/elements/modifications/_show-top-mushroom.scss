@@ -1,11 +1,6 @@
 // Component
 .hs-mod__show-top--mushroom
-{   
-    .show-top_axn
-    {
-        display: block;
-    }
-
+{
     .show-top_label
     {
         @extend %hs-nature--inline-icon-cr !optional;    
