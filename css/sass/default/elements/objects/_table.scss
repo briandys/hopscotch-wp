@@ -1,0 +1,53 @@
+table {
+	width: 100%;
+    
+    @include mq( $mobile, $query1: max ) {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+}
+
+col.min {
+    width: 1px;
+}
+
+col.max {
+	width: 100%;
+}
+
+th, td {
+    padding: .75rem 1rem;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    
+    tr {
+        @include table-border-single(bottom, .125rem);
+    }
+    
+}
+
+tbody {
+    
+    tr {
+        @include table-border-single(top);
+        
+        &:last-child {
+            @include table-border-single(bottom);
+        }
+        
+        /*
+        &:nth-child( even ) {
+            background-color: $darken5;
+        }
+        */
+    
+    }
+
+}

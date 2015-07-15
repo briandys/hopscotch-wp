@@ -1,0 +1,12 @@
+.site-info {
+    
+    .web-designer,
+    .copyright {
+        color: $faint;
+    }
+    
+    a {
+        @include linkstyle-faint-theme;
+    }
+    
+}

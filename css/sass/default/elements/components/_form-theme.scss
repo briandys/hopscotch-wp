@@ -1,0 +1,64 @@
+#{$form-input-type-text} {
+    box-shadow: 0 0 0 $one $color-form-line;
+    @include transition( box-shadow );
+    
+    &:hover {
+        box-shadow: 0 0 0 $one $color-form-line-hover;
+    }
+    
+    [data-state-form-element="focused"] & {
+        box-shadow: 0 0 0 .125rem $color-form-line-hover;
+    }
+    
+}
+
+
+.sudo-input-text {
+    box-shadow: 0 0 0 $one $color-form-line;
+    @include transition( box-shadow );
+    
+    &:hover {
+        box-shadow: 0 0 0 $one $color-form-line-hover;
+    }
+    
+    &[data-state-form-element="focused"] {
+        box-shadow: 0 0 0 .125rem $color-form-line-hover;
+    }
+    
+}
+
+
+#{$form-buttons} {
+    color: $color-form-rev-fg;
+    background-color: $color-form-rev-bg;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: $color-form-rev-hover-bg;
+    }
+    
+}
+
+
+input[type='reset'],
+button[type='reset'] {
+    background-color: $gray65;
+    
+    [data-state-form-element="focused"] &,
+    &:hover {
+        background-color: $gray55;
+    }
+    
+}
+
+
+.sudo-button {
+    color: $color-form-rev-fg;
+    background-color: $color-form-rev-bg;
+    
+    &[data-state-form-element="focused"],
+    &:hover {
+        background-color: $color-form-rev-hover-bg;
+    }
+    
+}

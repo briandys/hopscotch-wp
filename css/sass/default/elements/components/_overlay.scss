@@ -1,0 +1,23 @@
+.status-overlay-active {
+    
+    &.html {
+        overflow: hidden;
+        
+        &:after {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            @include size(100%);
+            @include background-image( linear-gradient(top,  hsla( 0,0%,0%,0.9 ) 0%, hsla( 0,0%,0%,0.85 ) 100% ) );
+
+            @include z($layer2);
+        }
+        
+    }
+    
+    & body {
+        overflow: hidden;
+    }
+
+}

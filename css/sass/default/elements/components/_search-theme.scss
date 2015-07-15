@@ -1,0 +1,69 @@
+.search--sudo-button {
+    
+    // Focused state and hovered
+    &[data-state-form-element="focused"] {
+        
+        .header-sidebar &,
+        &:hover {            
+            
+            .icon {
+                fill: $color-search-fg;
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+.header-sidebar {
+
+    .search--sudo-button {
+        background-color: transparent;
+        
+        &:hover {
+            
+            .icon {
+                fill: $color-search-fg;
+            }
+            
+        }
+        
+    }
+    
+    .search-form {
+        
+        [data-state-search="active"] & {
+
+            @include mq( $tablet, $query1: max ) {
+                background-color: $color-search-bg;
+            }
+
+        }
+        
+    }
+    
+    .search-control {
+        
+        // If Mobile Main Nav is active and Search is active
+        .status-mobile-main-nav-active [data-state-search="inactive"] & {
+            
+            .icon {
+                
+                @include mq( $tablet, $query1: max ) {
+                    fill: $color-search-rev-fg;
+                    
+                    &:hover {
+                        fill: $color-search-rev-bg;
+                    }
+                    
+                }
+                
+            }
+
+        }
+        
+    }
+    
+}

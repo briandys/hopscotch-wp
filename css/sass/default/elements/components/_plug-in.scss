@@ -1,0 +1,52 @@
+//------------------------- WP Plugin: Jetpack
+.sharedaddy {
+    
+    .sd-title {
+        @extend %vhide;
+    }
+    
+    ul {
+        @include unlist;
+        margin-bottom: auto;
+        padding-left: 0;
+    }
+    
+    li {
+        display: inline-block;
+    }
+}
+
+.g-follow-wrapper {
+    margin-left: 1rem;
+}
+
+
+.contact-form {
+    
+    #{$form-input-type-text} {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .contact-submit {
+        margin-top: 1rem;
+    }
+    
+    textarea {
+        min-height: 4.5rem;
+    }
+
+}
+
+
+//------------------------- WP Plugin: Codepen.io
+iframe[src*="codepen.io"] {
+    border-bottom: $one solid #ccc;
+}
+
+
+//------------------------- WP Plugin: SyntaxHighlighter
+.syntaxhighlighter {
+    padding: 1rem;
+    border-radius: $radius-s;
+}

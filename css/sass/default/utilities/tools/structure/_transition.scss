@@ -1,0 +1,20 @@
+//------------------------- Transition
+@mixin transition (
+    $property: all,
+    $duration: .125s,
+    $easing: ease
+    ) {
+    -webkit-transition: $property $duration $easing;
+    -moz-transition: $property $duration $easing;
+    -ms-transition: $property $duration $easing;
+    -o-transition: $property $duration $easing;
+    transition: $property $duration $easing;
+}
+
+@mixin transition-bg-color {
+    @include transition(background-color);
+}
+
+%transition-bg-color {
+    @include transition(background-color);
+}

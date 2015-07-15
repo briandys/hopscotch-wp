@@ -1,0 +1,18 @@
+tr {
+    @include transition( background-color );
+    
+    &:hover {
+        background-color: $color-table-hover-bg;
+    }
+    
+    // Zebra-stripes
+    &:nth-child( even ) {
+        background-color: $color-table-zebra-bg;
+        
+        &:hover {
+            background-color: $color-table-hover-bg;
+        }
+        
+    }
+    
+}

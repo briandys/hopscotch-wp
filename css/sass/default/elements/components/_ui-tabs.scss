@@ -1,0 +1,70 @@
+.ui-tablist {
+    @extend %cf;
+    @include unlist;
+    margin-left: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.ui-tablist-item {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: bottom;
+    
+    a {
+        display: block;
+        margin-right: -1px;
+        padding: .75rem;
+        min-width: 8rem;
+        border-width: $one;
+        border-style: solid;
+        border-bottom: none;
+        white-space: nowrap;
+        text-align: center;
+        
+        &[aria-selected="true"] {
+            position: relative;
+            top: 1px;
+            margin-left: -1px;
+            
+        }
+        
+        &[aria-selected="false"] {
+            margin-top: .5rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+        
+    }
+    
+    &:first-child {
+        
+        [aria-selected="true"] {
+            margin-left: auto;
+        }
+        
+    }
+    
+    &:last-child {
+        
+        [aria-selected="true"] {
+            margin-right: auto;
+        }
+        
+    }
+    
+}
+
+[aria-hidden="true"] {
+    display: none;
+}
+
+[aria-hidden="false"] {
+    display: block;
+}
+
+.ui-tabpanel {
+    padding: 1rem;
+    border-width: $one;
+    border-style: solid;
+}

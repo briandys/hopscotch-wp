@@ -1,0 +1,53 @@
+//------------------------- Media Query
+// http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+
+@mixin mq($device-width, $ie9: iefixOff, $query1: min, $query2: width) {
+    @if $ie9 == iefixOn {
+        .lt-ie9 & {
+            @content;
+        }
+    }
+    
+    @if $query1 == 'max' {
+
+        @media only screen and (#{$query1}-#{$query2}: ($device-width - 1) / $font-size-base + rem) {
+            @content;
+        }
+
+    } @else {
+        
+        @media only screen and (#{$query1}-#{$query2}: $device-width / $font-size-base + rem) {
+            @content;
+        }
+
+    }
+
+}
+
+
+//------------------------- Media Query Max Width
+@mixin mq-max($device-width) {
+    @media only screen and (max-width: $device-width+px - 1) {
+        @content 
+    }
+}
+
+
+//------------------------- IE Fix Classes
+@mixin lt-ie9-fix {
+    .lt-ie9 & {
+        @content;
+    }
+}
+
+@mixin lt-ie9-fix-attach {
+    &.lt-ie9 {
+        @content;
+    }
+}
+
+@mixin lt-ie8-fix {    
+    .lt-ie8 {
+        @content;
+    }
+}

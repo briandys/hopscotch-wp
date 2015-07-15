@@ -1,0 +1,127 @@
+.masthead-cr {
+    
+    min-height: $block-l;
+    
+    @include mq( $tablet ) {
+        position: relative;
+        text-align: center;
+    }
+
+}
+
+
+.site-title-heading {
+        
+    @include mq( $tablet ) {
+        margin-bottom: auto;
+    }
+    
+    .status-mobile-main-nav-inactive [data-state-search="inactive"] & {
+        
+        @include mq( $tablet, $query1: max ) {
+            opacity: 1;
+            @include transition( opacity );
+        }
+        
+    }
+        
+    .status-mobile-main-nav-inactive [data-state-search="active"] & {
+        
+        @include mq( $tablet, $query1: max ) {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+.site-title-link {
+
+    @include mq( $tablet ) {
+        display: inline-block;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+}
+
+
+
+// Header style for narrow viewports
+// Default for parent and child
+@include mq( $tablet, $query1: max ) {
+    
+    @include header-compact;
+    
+}
+
+
+// Fixed Header
+.ui-type__masthead--fixed-header {
+    
+    .main {
+        padding-top: $block-l;
+    }
+
+    .masthead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include z( $layer1 );
+
+        // Shadow
+        .status-mobile-main-nav-inactive &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: .5rem;
+            @include background-image( linear-gradient( top, rgba( 0, 0, 0, 0.15 ) 0%, rgba( 0, 0, 0, 0 ) 100% ) );
+        }
+
+    }
+
+
+    // Offset for fixed header
+    #comments,
+    #respond,
+    .comment {
+
+        &:before { 
+            content: '';
+            display: block; 
+            margin-top: -$block-l;
+            height: $block-l;
+            visibility: hidden;
+        }
+
+    }
+
+} // ui-type__masthead--fixed-header
+
+
+
+.ui-type__masthead--fixed-header.admin-bar {
+    
+    .main {
+        padding-top: 0;
+    }
+
+    .status-mobile-main-nav-inactive  & .masthead {
+        position: static;
+    
+        &:after {
+            display: none;
+        }
+
+    }
+    
+}
+
+
+.ui-state__main-nav--active .admin-bar #wpadminbar {
+    @extend %vhide;
+}

@@ -1,0 +1,10 @@
+// Base Font Family
+html {
+    font-family: $font-family-custom, Helvetica, Arial, sans-serif;
+}
+
+
+blockquote,
+q {
+    font-family: $font-family-quote, serif;
+}

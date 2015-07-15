@@ -1,0 +1,311 @@
+//------------------------- Layout SASS
+// Usage: Rules concerning design layout
+
+
+@mixin fixed-header {
+    
+    
+    
+}
+
+
+// Positions the search at the top-right corner of the header
+@mixin corner-search {
+    
+    .masthead-cr {
+        position: relative;
+    }
+    
+    .header-sidebar {
+        
+        .search {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+    }
+    
+}
+
+
+// Reverses the effect of corner-search
+@mixin corner-search-rev {
+    
+    .masthead-cr {
+        position: static;
+    }
+    
+    .header-sidebar {
+        
+        .search {
+            position: static;
+            top: auto;
+            right: auto;
+        }
+        
+    }
+    
+}
+
+
+//------------------------- Header for Narrow Mode
+@mixin header-compact {
+    
+    .masthead-cr {
+        @include cf;        
+        position: relative;
+        // height: $block-l;
+    }
+    
+    .masthead-header {
+        display: table;
+        padding-left: $block-l;
+        padding-right: $block-l;
+        @include size( 100%, $block-l );
+        text-align: center;
+    }
+    
+    .site-title-heading {
+        display: table-cell;
+        margin-bottom: auto;
+        @include font-size-rem($font-m-l);
+        font-weight: 700;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    
+    .header-sidebar {
+    
+        .widget_search {
+            @include position($t: 0, $r: 0);
+            @include z($layer1);
+        }
+        
+    }
+    
+    .site-description {
+        @include vhide;
+    }
+    
+    .main-navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .main-navigation-heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 0;
+        line-height: $block-l;
+        @include z($layer1+1);
+    
+        .status-mobile-main-nav-active & {
+            
+            .icon {
+                fill: #fff;
+                opacity: .85;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            
+        }
+        
+    }
+
+}
+
+
+//------------------------- Search theme light
+@mixin search-header-reverse {
+    
+    .header-sidebar .search-control {
+        opacity: .75;
+        @include transition( opacity );
+        
+        &:hover {
+            opacity: 1;
+        }
+        
+    }
+    
+    .header-sidebar {
+        
+        .search-input {
+            background-color: transparent;
+        }
+        
+    }
+    
+    [data-state-search="active"] {
+        
+        .header-sidebar {
+        
+            .search-submit {
+                opacity: .5;
+                @include transition( opacity );
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+            
+            [data-state-form-element="focused"] .search-submit {
+                opacity: 1;
+                
+                &:active {
+                    background-color: transparent;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+//------------------------- Header Search - fading color to overlap other elements
+@mixin searchbar-side-fade {
+
+    .header-sidebar {
+
+        .search-form {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 100%;
+                width: $block-l;
+                height: 100%;
+            }
+
+        }
+
+    }
+    
+}
+
+
+//------------------------- Header for Wide Mode
+@mixin header-semi-compact {
+    
+    // Colored bg, white icon
+    @include corner-search-rev;
+    
+    // Mobile first
+    @include header-compact;
+    
+    // Colors
+    @include header-semi-compact-theme;
+    
+    // Search
+    @include search-header-reverse;
+    @include search-header-reverse-theme;
+    @include searchbar-side-fade;
+    @include searchbar-side-fade-theme;
+    
+    .masthead-cr {
+        text-align: left;
+        height: auto;
+    }
+    
+    .masthead-header {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+    
+    .site-title-heading {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+    
+    .site-title-link {
+        padding: 0 1rem;
+        line-height: $block-l;
+        
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .main-navigation {
+        @include valign-mid;
+        position: static;
+        top: auto;
+        left: auto;
+        
+    }
+    
+    div.nav-menu {
+        
+        > ul > li > a {
+            
+            &:hover {
+                text-decoration: none;
+            }
+            
+        }
+        
+        &:hover {
+            @include z( $layer1 + 1 );
+        }
+        
+    }
+    
+    .main-navigation {
+        float: none;
+    }
+
+}
+
+
+//------------------------- Simple Header
+@mixin header-plain-text {
+    
+    .masthead-cr {
+        position: relative;
+        padding-bottom: 1rem;
+    }
+    
+    .masthead-header {
+        padding: 1rem
+    }
+    
+    .site-title-heading {
+        margin-bottom: auto;
+        @include font-size-rem($font-xl);
+        line-height: normal;
+    } 
+    
+    .site-title-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .header-sidebar {
+        margin-top: auto;
+        @include position($t: 0, $r: 0);
+    }
+    
+    .main-navigation {
+        display: inline-block;
+    }
+
+    .site-description {
+        @include faint;
+    }
+    
+    @include corner-search;
+
+}

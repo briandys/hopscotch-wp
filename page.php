@@ -1,1 +1,1 @@
-<?php get_template_part( 'index' ); ?>
+<?php get_template_part('single'); ?>

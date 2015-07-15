@@ -1,0 +1,473 @@
+// WordPress uses two instances of .nav-menu:
+// one is for the default navigation as: <div class="nav-menu"><ul><li>...
+// second is if you use a custom menu as: <ul class="nav-menu"><li>...
+// As general usage for WordPress and others (like plain HTML), refer to .nav-menu as div.nav-menu
+// and the <ul> as .nav-menu > ul
+
+
+div.nav-menu {
+    position: relative;
+    @include z($layer1);
+    
+    > ul {
+        
+        @include mq( $tablet ) {
+            display: inline-block;
+            @include center-list;
+        }
+
+        > {
+            
+            .page_item_has_children,
+            .menu-item-has-children {
+
+                &.status-sub-nav-active {
+                    
+                    @include pseudo-content(before) {
+
+                        @include mq( $tablet ) {
+                            display: none;
+                        }
+
+                    }
+                    
+                }
+                
+                &.status-sub-nav-inactive {
+                    
+                    &:after {
+                        
+                        @include background-image-icon( '../img/more-light.svg' );
+                    
+                        // More icon shown beside the main nav parents
+                        @include mq( $tablet ) {
+                            opacity: .5;
+                        }
+                        
+                    }
+                    
+                }
+
+                &.status-sub-nav-inactive:hover:after {
+
+                    @include mq( $tablet ) {
+                        opacity: .75;
+                    }
+
+                }
+
+            }
+                
+            li > {
+                
+                a,
+                *:first-child {
+                    white-space: nowrap;
+                }
+
+            }
+            
+            .page_item,
+            .menu-item {
+                
+                // Wide mode
+                @include mq( $tablet ) {
+                    border-bottom: none;
+                }
+                
+            }
+            
+        }
+
+    }        
+
+    ul {        
+        @extend %unlist;
+    }
+
+    li {
+        margin-bottom: auto;
+        @include transition(background-color);
+
+        // Non-mobile mode
+        @include mq( $tablet ) {
+            vertical-align: top;
+        }
+
+        &:last-child {
+            margin-right: auto;
+        }
+
+    }
+    
+    a {
+        @include linkstyle-reset;
+        display: block;
+        padding: 1rem;
+        min-height: $block-l;
+        @include transition-bg-color;  
+        
+        @include mq( $tablet ) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        &:hover {
+
+            @include mq($tablet, $query1: max) {
+                text-decoration: none;
+            }
+
+        }
+        
+    }
+    
+    .page_item,
+    .menu-item {
+        
+        @include borderstyle-perforated;
+
+        &:last-child {
+            border-bottom: none;
+        }
+        
+    }
+    
+    .status-sub-nav-active {
+        
+        .page_item,
+        .menu-item {
+            
+            &:hover:last-child {
+                
+                @include mq( $tablet ) {
+                    border-radius: 0 0 $radius-s $radius-s;
+                    overflow: hidden;
+                }
+                
+                &.status-sub-nav-active {
+                    
+                    @include mq( $tablet ) {
+                        border-radius: 0;
+                        overflow: visible;
+                    }
+                    
+                }
+                
+            }
+            
+            &:first-child,
+            &:hover:first-child {
+                
+                @include mq( $tablet ) {
+                    border-top-right-radius: $radius-s;
+                }
+                
+            }
+            
+            &.status-sub-nav-active {
+                
+                @include mq( $tablet ) {
+                    border-bottom: none;
+                }
+                
+            }
+            
+        }
+        
+        .current_page_item,
+        .current-menu-item,
+        .current_page_ancestor,
+        .current-menu-ancestor {
+        
+            // Sub nav highlight
+            @include mq( $tablet ) {
+                
+                @include pseudo-content(before) {
+                    left: 0;
+                    top: 0;
+                    @include size(.5rem, 100%);
+                    border-radius: 0;
+                }
+                
+            }
+            
+        }
+        
+    }
+        
+    .current_page_item,
+    .current-menu-item,
+    .current_page_ancestor,
+    .current-menu-ancestor {
+        
+        @include pseudo-content(before) {            
+            
+            @include mq( $tablet ) {
+                left: 0;
+                bottom: 0;
+                @include size(100%, .5rem);
+                border-radius: $radius-xs $radius-xs 0 0;
+            }
+            
+        }
+        
+        &:hover:before {
+            border-radius: 0;
+        }
+        
+        > a {
+            font-weight: 600;
+        }
+        
+    }
+
+    .status-mobile-main-nav-active & {
+
+        // Mobile mode
+        @include mq($tablet, $query1: max) {
+            @include size(100%);
+            overflow-x: hidden;
+            overflow-y: auto;
+
+        }
+
+    }
+
+    .children,
+    .sub-menu {
+        @include vhide;
+        
+        @include mq( $tablet ) {
+            border-radius: 0 $radius-s $radius-s $radius-s;
+        }
+    }
+
+    .page_item_has_children,
+    .menu-item-has-children {
+        position: relative;
+
+        > a {
+            margin-right: $block-l;
+
+            @include mq( $tablet ) {
+                @include pseudo-content;
+                margin-right: $block-m;
+                
+                &:after {
+                    top: 50%;
+                    right: 0;
+                    margin-top: -.75rem;
+                    @include size($one, 1.5rem);
+                    border-right-width: $one;
+                    border-right-style: dotted;
+                }
+                
+            }
+
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        // Pseudo-element for the more icon
+        &:after {
+            $icon-size: .75rem;
+            @include sudo-ct;
+            @include position-offset( $icon-size );
+            @include size( $icon-size );
+            margin-right: 1.25rem;
+            @include transition( opacity );
+            opacity: .5;
+            z-index: 90;
+
+            @include mq($tablet, $query1: max) {
+                top: 1.65rem;
+                @include size(1rem);
+            }
+
+        }
+        
+        &:hover:after {
+            opacity: .75;
+        }
+
+        // More icon during an active sub menu
+        &.status-sub-nav-active:after {
+            @include transform(rotate(180deg));
+            opacity: .5;
+        }
+
+        &.status-sub-nav-active:hover:after {
+            opacity: 1;
+        }
+
+        &.status-sub-nav-active {
+            // Themed
+            @include transition(background-color);
+
+            a {
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+            }
+
+            > {
+
+                .children,
+                .sub-menu {                        
+                     @include vhide-rev;
+                }
+
+            }
+
+            .children,
+            .sub-menu {
+                $fold-size: .75rem;
+                text-align: left;
+                z-index: 91;
+
+                // Non-mobile mode
+                @include mq( $tablet ) {
+                    @include position($t: 100%);
+                    min-width: 100%;
+                    white-space: nowrap;
+                    
+                    // Folding list
+                    margin-top: -$fold-size;
+                    margin-left: $fold-size;
+                
+                }
+                
+                li {
+                    @include transition(background-color);
+                }
+                
+                // White line
+                &:before {
+                    
+                    // Non-mobile mode
+                    @include mq( $tablet ) {
+                        @include sudo-ct;
+                        top: 0;
+                        left: 0;
+                        @include size(100%, $one);
+                        z-index: 90;
+                    }
+                    
+                }
+                
+                // Triangle shadow
+                &:after {
+                    
+                    // Non-mobile mode
+                    @include mq( $tablet ) {
+                        @include sudo-ct;
+                        top: 0;
+                        left: 0;
+                        margin-left: -$fold-size;
+                        @include size(0);
+                        border-style: solid;
+                        border-width: 0 0 $fold-size $fold-size;
+                        z-index: 90;
+                    }
+                    
+                }
+
+            }
+
+        }            
+
+        > {
+
+            .children,
+            .sub-menu {                        
+                @include vhide;
+            }
+
+        }
+
+    }
+
+}
+
+
+// Main Nav - Mobile Toggle
+.main-navigation-heading {
+    margin-bottom: auto;
+    
+    @include mq( $tablet ) {
+        @include vhide;
+    }
+    
+    .svg-icon-cr {
+        
+        @include mq( $tablet, $query1: max ) {    
+            
+            @include size( $block-l );
+            @include svg-iconize;
+            display: inline-block !important;
+       
+        }
+        
+    }
+    
+    .icon {
+        
+        @include mq( $tablet, $query1: max ) {
+
+            @include size( $block-s );
+            @include transition(fill);
+
+            .modernizr-no-inlinesvg & {
+                @include vhide-rev;
+            }
+
+        }
+        
+    }
+    
+    &:hover {
+        
+        @include mq( $tablet, $query1: max ) {
+            cursor: pointer;
+        }
+        
+    }
+    
+    .label {
+        
+        @include mq( $tablet, $query1: max ) {
+            @include vhide;
+        }
+        
+    }
+
+}
+
+
+.main-navigation-ct {
+    
+    @include mq($tablet, $query1: max) {
+        position: fixed;
+        left: 0;
+        bottom: 0;        
+        padding-top: $block-l;
+        @include size(100%);
+        @include transform(translate(0, 100%));
+        text-align: left;
+    }
+
+    .status-mobile-main-nav-active & {
+        
+        @include mq($tablet, $query1: max) {
+            @include transform(translate(0, 0));
+            @include z($layer1);
+        }
+        
+    }
+
+}

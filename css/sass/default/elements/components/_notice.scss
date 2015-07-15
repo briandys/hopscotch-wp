@@ -1,0 +1,24 @@
+.notice-cr {
+	position: relative;
+	padding: .5rem .75rem;
+    @include corner-radius( $radius-s );
+}
+
+.notice {
+    
+    p {
+        margin-top: 0;
+        
+        &:only-child {
+            margin-bottom: 0;
+        }
+        
+    }
+    
+}
+
+// Regular
+.notice-cr {
+	border-width: .125rem;
+    border-style:solid;
+}

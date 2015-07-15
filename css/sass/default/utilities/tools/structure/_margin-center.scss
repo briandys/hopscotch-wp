@@ -1,0 +1,9 @@
+//------------------------- Center using margin auto
+@mixin margin-center {
+    
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    
+}

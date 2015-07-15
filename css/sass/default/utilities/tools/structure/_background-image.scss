@@ -1,0 +1,13 @@
+//------------------------- Background Image
+@mixin bg-img (
+    $repeat: no-repeat,
+    $position: center center,
+    $size: cover) {
+    
+    background: {
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+    }
+        
+}

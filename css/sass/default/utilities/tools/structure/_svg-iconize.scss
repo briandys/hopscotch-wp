@@ -1,0 +1,10 @@
+//------------------------- Icon Block using Table Cell (apply to icon images)
+@mixin svg-iconize {
+    display: table-cell !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+%svg-iconize {
+    @include svg-iconize;
+}

@@ -1,0 +1,10 @@
+.entry-ct-cr {
+    
+    * {
+        @include font-size-rem( $font-m-l );
+    }
+    
+    @include heading;
+    @include quote;
+    
+}

@@ -1,0 +1,19 @@
+@mixin box-distribution {
+    
+    @include mq( $tablet ) {
+        width: 50%;
+    }
+
+    @include mq( $desktop ) {
+        width: 33.33%;
+    }
+
+    @include mq( $widescreen ) {
+        width: 25%;
+    }
+
+    @include mq( $minorityreport ) {
+        width: 20%;
+    }
+    
+}

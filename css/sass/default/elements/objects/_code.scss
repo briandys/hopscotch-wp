@@ -1,0 +1,17 @@
+code,
+kbd {
+    border-radius: $radius-s;
+    padding: .125rem .35rem;
+}
+
+pre {
+    padding: 1rem;
+    border-width: $one;
+    border-style: solid;
+    border-radius: $radius-s;
+    
+    p:first-child {
+        margin-top: 0;
+    }
+    
+}

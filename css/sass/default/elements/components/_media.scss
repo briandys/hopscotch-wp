@@ -1,0 +1,60 @@
+.wp-caption {
+    @extend %responsive-media;
+}
+
+
+iframe,
+embed {
+    max-width: 100%;
+}
+
+//------------------------- Responsive Video
+// http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/
+.video-cr {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    
+    iframe,
+    embed,
+    object {
+        position: absolute;
+        top:0;
+        left: 0;
+        @include size( 100% );
+    }
+    
+}
+
+.video-cr:last-child {
+    margin-bottom: auto;
+}
+
+.video-cr-4x3 {
+    padding-bottom: 75%;
+}
+
+
+// CodePen
+iframe[src*="codepen"] {
+    margin-bottom: 1rem;
+}
+
+
+svg.icon {
+    margin: $one; // Corrects cut edges
+    fill: $gray25;
+
+    .modernizr-no-inlinesvg & {
+        display: none;
+    }
+    
+}
+
+
+// Alignment
+.img-alignment-center {
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+//------------------------- Text Styles
+
+
+@mixin textstyle-label-primary {
+    @include font-size-rem($font-s);
+    color: $faint;
+    text-transform: uppercase;
+}
+
+
+@mixin input-type-text-style {
+    padding: .75rem;
+    min-height: $block-m;
+}
+
+//------------------------- Faint
+@mixin faint {
+    color: $gray50;
+}
+
+%faint {
+    @include faint;
+}

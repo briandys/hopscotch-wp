@@ -1,0 +1,12 @@
+blockquote {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    
+    cite {
+        display: block;
+        margin-top: 1rem;
+    }
+    
+}
+
+@include quote;

@@ -1,0 +1,130 @@
+//------------------------- Link Styles
+
+
+@mixin linkstyle-reset {
+    text-decoration: none;
+    border: none;
+}
+
+
+// A simple link with border as underline
+@mixin linkstyle-faint {
+    @include linkstyle-reset;
+    border-bottom-width: $one;
+    border-bottom-style: dotted;
+    @include transition( color );
+    
+    &:hover {
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
+}
+
+
+
+
+
+
+@mixin linkstyle-primary {
+    @include linkstyle-reset;
+    
+    color: $color-primary;
+    
+    &:hover {
+        color: $color-primary;
+        border-bottom: $one dotted currentColor;
+    }
+    
+}
+
+@mixin linkstyle-secondary {
+    @include linkstyle-reset;
+    
+    color: rgba($color-link-tertiary, .75);
+    border-bottom: $one dotted currentColor;
+    
+    &:hover {
+        color: rgba($color-link-tertiary, 1);
+        border-bottom: none;
+        text-decoration: none;
+    }
+}
+
+
+@mixin linkstyle-tertiary {
+    @include linkstyle-reset;  
+    
+    @include linkstyle-secondary;
+    border-bottom: none;  
+    
+    &:hover {
+        border-bottom: $one dotted currentColor;
+    }
+    
+}
+
+
+@mixin linkstyle-cube {
+    @include linkstyle-reset; 
+    display: inline-block;
+    padding: 1rem;
+    min-width: $block-m;
+    min-height: $block-m;
+    border-radius: $radius-s;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+@mixin linkstyle-nudge {
+    
+    &:active {
+        transform: translateY( 1px );
+    }
+    
+}
+
+
+// Colored box (used for Tags, Categories)
+@mixin linkstyle-boxed {
+    @include linkstyle-reset; 
+    display: inline-block;
+    margin: .25rem;
+    margin-left: -.25rem;
+    margin-right: .5rem;
+    padding: .25rem .5rem;
+    border-radius: $radius-s;
+    @include transition( background-color );
+    vertical-align: middle;
+    line-height: normal;
+    
+    &:active {
+        transform: translateY( 1px );
+    }
+    
+}
+
+
+@mixin buttonizer {
+    display: inline-block;
+    padding: .25rem .5rem; 
+    border-width: $one;
+    border-style: solid;
+    border-color: currentColor;
+    border-radius: $radius-s;
+    text-transform: uppercase;
+    border-radius: $radius-s;
+    overflow: hidden;
+    @include transition( background-color );
+    
+    &:hover {
+        text-decoration: none;
+        border-color: transparent;
+    }
+    
+    &:active {
+        @include linkstyle-nudge;
+    }
+    
+}

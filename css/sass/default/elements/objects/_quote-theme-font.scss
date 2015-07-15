@@ -1,0 +1,4 @@
+blockquote,
+q {
+    @include font-size-rem( $font-xl );
+}

@@ -1,0 +1,48 @@
+@mixin linkstyle-highlight-theme {
+    color: $color-link-primary;
+
+    &:hover {
+        background-color: rgba( $color-link-primary, .1 );
+    }
+    
+}
+
+
+@mixin linkstyle-highlight-current-theme {
+    color: $white;
+    background-color: $color-primary;
+}
+
+
+
+@mixin linkstyle-faint-theme {
+    color: $color-faint-fg;
+    border-bottom-color: $color-faint-fg;
+    
+    &:hover {
+        color: $color-faint-hover-fg;
+    }
+    
+}
+
+@mixin linkstyle-boxed-theme {
+    color: $color-linkstyle-boxed-rev-fg;
+    background-color: $color-linkstyle-boxed-rev-bg;
+
+    &:hover {
+        color: $color-linkstyle-boxed-rev-hover-fg;
+        background-color: $color-linkstyle-boxed-rev-hover-bg;
+    }
+    
+}
+
+
+@mixin buttonizer-theme {
+    color: $color-hollow-box-fg;
+    
+    &:hover {
+        color: $color-hollow-box-rev-hover-fg;
+        background-color: $color-hollow-box-rev-hover-bg;
+    }
+    
+}

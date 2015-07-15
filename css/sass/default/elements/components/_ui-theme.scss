@@ -1,0 +1,25 @@
+.ui-tablist-item a {
+    color: $color-primary;
+}
+
+.ui-tabpanel {
+    border-color: #ccc;
+    background-color: $white;
+}
+
+.ui-tablist-item {
+    display: inline-block;
+    margin-bottom: auto;
+    vertical-align: bottom;
+    
+    a {
+        background-color: $white;
+        border-color: #ccc;
+        
+        &[aria-selected="true"] {
+            color: currentColor;
+        }
+        
+    }
+    
+}

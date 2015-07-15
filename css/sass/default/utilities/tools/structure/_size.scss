@@ -1,0 +1,27 @@
+//------------------------- Width and Height Size
+@mixin size(
+    $width,
+    $height: $width
+    ) {
+    width: $width;
+    height: $height;
+}
+
+
+// Ratios
+// Returns the ratio for specified dimensions
+@function ratio($width, $height) {
+  @return percentage( $height / $width);
+}
+
+@mixin generateRatios($width, $height, $prefix: "ratio-") {
+  $class-name: $prefix + $width + "x" + $height;
+ 
+  .#{$class-name} {
+    padding-bottom: ratio($height, $width);
+  }
+  // Output example: .ratio-16x9 {}
+}
+ 
+// @include generateRatios(16,9); // 16x9
+// @include generateRatios(4,3);  // 4x3

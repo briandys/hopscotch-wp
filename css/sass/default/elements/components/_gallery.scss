@@ -1,0 +1,64 @@
+.gallery-item {
+    margin-bottom: 2rem;
+    
+    &:last-child {
+        margin-bottom: auto;
+    }
+    
+}
+
+@include mq( $phablet, iefixOff ) {
+    
+    .gallery-item {
+        display: inline-block;
+        margin-top: $gutter;
+        margin-bottom: $gutter;
+        vertical-align: top;
+
+        .gallery-columns-1 & {
+            width: 100%;
+        }
+
+        .gallery-columns-2 & {
+            width: 50%;
+        }
+
+        .gallery-columns-3 & {
+            width: 33%;
+        }
+
+        .gallery-columns-4 & {
+            width: 25%;
+        }
+
+    }
+    
+    .gallery-icon {
+        margin-left: $gutter;
+        margin-right: $gutter;
+    }
+    
+}
+
+.gallery-icon {
+    text-align: center;
+    
+    a {
+        display: inline-block;
+        padding: $gutter / 2;
+        @include size( 10rem + $gutter );
+        @include border( $alpha: .15 );
+        @include corner-radius( $radius-s );
+        @include transition( border );
+        
+        &:hover {
+            @include border( $alpha: .10 );
+        }
+        
+    }
+    
+}
+
+.gallery-caption {
+    text-align: center;
+}

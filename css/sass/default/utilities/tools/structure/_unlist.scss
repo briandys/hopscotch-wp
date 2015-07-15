@@ -1,0 +1,10 @@
+//------------------------- Unlist
+@mixin unlist {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+}
+
+%unlist {
+    @include unlist;
+}

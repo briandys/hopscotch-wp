@@ -1,0 +1,505 @@
+$entry-byline-avatar-size: 2rem;
+
+.entry {
+    @extend %cf;
+    
+    .show-more-content {
+        margin-top: 2rem;
+        text-align: center;
+
+        .more-link {
+            display: inline-block;
+            padding: .75rem 1rem;
+            border-bottom: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+            
+            @include mq( $phablet ) {
+                margin-left: -1rem;
+            }
+            
+        }
+        
+        @include mq( $phablet ) {
+            text-align: left;
+        }
+        
+    }
+    
+    .show-more-content-entry-title {
+        @extend %vhide;
+    }
+    
+}
+
+
+.entry-cr {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    // Extra top space for the topmost .entry with thumbnail
+    // .entry:first-child[data-entry-thumbnail-state="active"] &,
+    .entry:first-child & {
+        
+        @include mq( $tablet ) {
+            margin-top: 1rem;
+        }
+        
+        .child-page & {
+            
+            @include mq( $tablet ) {
+                margin-top: 0;
+            }
+            
+        }
+        
+        .category & {
+            
+            @include mq( $tablet ) {
+                margin-top: 0;
+            }
+            
+        }
+        
+    }
+    
+    @include mq( $tablet ) {
+        margin-bottom: 1rem;
+    }
+    
+    .main-content-ct > .entry:last-of-type & {
+        margin-bottom: 0;
+    }
+    
+}
+
+
+.entry-title {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: normal;
+    word-wrap: break-word;
+    
+    @include mq( $tablet, $query1: max ) {
+        @include font-size-rem( $font-xl );
+    }
+    
+}
+
+
+.entry-hr {
+    margin-bottom: 2rem;
+    
+}
+
+
+.entry-hr-cr {
+    padding-left: $gutter;
+    padding-right: $gutter;
+    padding-bottom: 2rem;
+    text-align: center;
+    @include borderstyle-perforated;
+    
+    @include mq( $phablet ) {
+        text-align: left;
+    }
+    
+    .entry-meta {
+        margin-top: 1rem;
+        
+        .page & {
+            @extend %vhide;
+        }
+        
+    }
+    
+    // Entry Thumbnail
+    $entry_thumbnail_size: 2.5rem;
+    
+    .entry-thumbnail--active & {
+        position: relative;
+        
+        @include mq( $monitor, $query1: max ) {
+            padding-left: $entry_thumbnail_size + 2rem;
+        }
+        
+        @include mq( $tablet, $query1: max ) {
+            padding-left: $gutter;
+        }
+        
+    }
+    
+    .entry-thumbnail {
+        
+        .entry-thumbnail--active & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            @include mq( $tablet, $query1: max ) {
+                @include vhide;
+            }
+            
+            @include mq( $monitor, $query1: max ) {
+                margin-left: $gutter;
+            }
+            
+            @include mq( $monitor ) {
+                left: auto;
+                right: 100%;
+                margin-top: -1.25rem;
+            }
+            
+        }
+        
+    }
+    
+    .entry-thumbnail-link {
+        
+        .entry-thumbnail--active & {
+            
+            @include size( $entry_thumbnail_size );
+        
+            @include mq( $monitor ) {
+                @include size( 5rem );
+            }
+            
+        }
+        
+    }
+    
+    .entry-user-action {
+        margin-top: 1rem;
+    }
+    
+    .entry-user-action--action-item {
+        margin-bottom: 0;
+    }
+
+}
+
+
+    
+.entry-timestamp {
+    display: inline-block;
+    
+    .entry-hr &,
+    .entry-fr & {
+        margin-right: 1rem;
+    }
+    
+}
+
+.entry-timestamp-link {
+    @include linkstyle-faint;
+}
+
+.entry-byline {
+    @extend %cf;
+    display: inline-block;
+    margin-top: .25rem;
+    line-height: $entry-byline-avatar-size;
+    
+    .avatar {
+        float: left;
+        margin-right: .5rem;
+        @include size( $entry-byline-avatar-size );
+        @include circle;
+    }
+    
+    .mid-label {
+        margin-right: .5rem;
+    }
+    
+    .author a {
+        @include linkstyle-faint;
+    }
+    
+}
+
+.entry-admin-action {
+    display: inline-block;
+}
+
+.entry-ct {
+    
+    > * {
+        margin-bottom: 2rem;
+    
+        &:last-child {
+            margin-bottom: auto;
+        }
+        
+    }
+    
+}
+
+
+// Entry Content Container
+.entry-ct-cr {
+    padding-left: $gutter;
+    padding-right: $gutter;
+    
+    .img-cr,
+    .wp-caption {
+
+        > a {
+            display: inline-block;
+            max-width: 100%;
+            border-bottom: 0;
+        }
+
+    }
+        
+    ol,
+    ul {
+        margin-left: 1.5rem;
+    }
+    
+    // Entry Links
+    a {
+        @include linkstyle-faint;
+    }
+    
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    p,
+    pre,
+    dd,
+    dl,
+    ul,
+    ol,
+    table,
+    .field,
+    .notice {
+        margin-bottom: 1.5rem;
+    }
+    
+    blockquote,
+    form {
+        margin-bottom: 2rem;
+    }
+    
+    blockquote {
+        margin-left: $gutter;
+        margin-right: $gutter;
+        
+        @include mq( $tablet ) {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        
+    }
+    
+    p {
+        margin-top: 1.5rem;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+        
+    }
+
+    // Reset bottom spacing on elements
+    p:last-child,
+    li:last-child,
+    .field:last-child,
+    .field-action,
+    table:last-child {
+        margin-bottom: auto;
+    }
+    
+    // For paragraphs inside lists
+    li {
+        margin-bottom: 1rem;
+        
+        p:last-child {
+            margin-bottom: 2rem;
+        }
+        
+        &:last-child p:last-child {
+            margin-bottom: 0;
+        }
+        
+    }
+    
+    .pull-quote {
+
+        @include mq( $tablet ) {            
+            float: left;
+            margin-left: auto;
+            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-right: 0;
+            width: 30%;
+            @include font-size-rem( $font-xl );        
+        }
+
+    }
+    
+    .ellipsis {
+        margin-left: .25rem;
+        letter-spacing: .125rem;
+
+        &:after {
+            content: '.';
+        }
+        
+    }
+    
+    @each $item in $heading-tags {
+
+        > #{$item} {
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            
+            &:first-child {
+                margin-top: auto;
+            }
+            
+        }
+
+    }
+    
+    h3 {
+        font-weight: 600;
+    }
+    
+    h6 {
+        text-transform: uppercase;
+    }
+
+    // Fix SVG <img> width and height in Galleries
+    img[src*=".svg"],
+    img[src*=".png"] {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgb3BhY2l0eT0iMC4xNSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiLz48L2c+PC9zdmc+);
+        background-size: 1.125rem;
+    }
+    
+    img[src*=".svg"][width="1"] {
+        width: 100%;
+        height: auto;
+    }
+    
+    // WP Caption Text
+    .wp-caption-text {
+        margin-top: 0;
+    }
+    
+    > {
+        
+        * {
+            word-wrap: break-word;            
+
+            &:last-child {
+                margin-bottom: auto;
+            }
+            
+        }
+        
+        p {
+            line-height: 1.75;
+        }
+        
+    }
+    
+     // Format: Status
+    .format-status & {
+        
+        > p {
+            @include font-size-rem($font-xxl);
+        }
+        
+    }
+    
+} // .entry-ct-cr
+
+.entry-fr {
+    
+    .entry-meta {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+.entry-fr-cr {
+    margin-top: 3rem;
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+
+.entry-admin-action {
+    @include transform(translate(0, 0.25rem));
+}
+
+.action-edit-entry {
+    margin-bottom: 0;
+}
+
+
+.post-edit-link {
+    @include font-size-rem($font-s);
+    @include buttonizer;
+    
+    .label-verb-subject {
+        @extend %vhide;
+    }
+    
+}
+
+
+.entry-subtitle {
+    margin-top: .5rem;
+    @include font-size-rem($font-xl);    
+    
+    @include mq( $tablet, $query1: max ) {
+        @include font-size-rem( $font-l );
+    }
+    
+    p:only-child {
+        margin-bottom: 0;
+    }
+    
+    .label {
+        @extend %vhide;
+    }
+    
+    a {
+        @include linkstyle-faint;
+    }
+    
+}
+
+.entry-meta {
+    @include font-size-rem($font-s-m);
+}
+
+
+// Post Format: Status
+.format-status {
+    
+    .entry-hr {
+        @extend %vhide;
+    }
+    
+    .entry-fr-cr {
+        
+        .entry-meta {
+            display: inline-block;
+        }
+        
+        .entry-admin-action {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+    }
+    
+}

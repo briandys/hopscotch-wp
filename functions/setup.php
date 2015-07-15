@@ -1,11 +1,6 @@
 <?php
-// HopScotch Setup
 
-// HopScotch only works in WordPress 4.1 or later
-if ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) {
-    require get_template_directory() . '/functions/back-compatibility.php';
-}
-
+//------------------------- HopScotch Setup
 function hopscotch_setup() {
 	
     /*
@@ -38,6 +33,7 @@ function hopscotch_setup() {
 	
     // Register Primary Navigation
     register_nav_menu( 'primary-navigation', __( 'Primary Navigation', 'hopscotch' ) );
+    register_nav_menu( 'social-navigation', __( 'Social Navigation', 'hopscotch' ) );
     
     // Removes the <p> tags from category description
     remove_filter('term_description','wpautop');
@@ -72,6 +68,7 @@ function hopscotch_setup() {
     update_option('large_size_w', 1920);
     update_option('large_size_h', 1920);
     
+    // Adds extra custom sizes for thumbnails (see functions > entry-thumbnail.php)
     add_image_size( 'hopscotch-small', 320 );
     add_image_size( 'hopscotch-medium', 640 );
     add_image_size( 'hopscotch-regular', 800 );
@@ -81,14 +78,7 @@ function hopscotch_setup() {
 add_action( 'after_setup_theme', 'hopscotch_setup' );
 
 
-// Content Width
+//------------------------- Content Width
 if ( ! isset( $content_width ) ) {
     $content_width = 960;
 }
-
-
-// JS Detection
-function hopscotch_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'hopscotch_javascript_detection', 0 );

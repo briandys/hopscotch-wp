@@ -1,0 +1,11 @@
+//------------------------- Truncate Text
+@mixin truncate {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%truncate {
+    @include truncate;
+}

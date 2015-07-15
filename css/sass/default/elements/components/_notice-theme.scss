@@ -1,0 +1,11 @@
+// Regular
+.notice-cr {	
+	background-color: $color-notice-reg-rev-bg;
+    border-color: $color-notice-line-reg;
+}
+
+// Error
+.notice-error .notice-cr {	
+	background-color: $color-notice-error-rev-bg;
+    border-color: $color-notice-line-error;
+}

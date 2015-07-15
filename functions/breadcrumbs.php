@@ -1,0 +1,32 @@
+<?php
+
+//------------------------- Breadcrumbs
+// Displays the parent pages of a page 
+
+function hopscotch_breadcrumbs() {
+    global $post;
+    
+    if ( ( is_page() && $post->post_parent > 0 ) || is_search() ) {
+
+        $ancestors = get_post_ancestors($post);
+
+        if ( $ancestors ) {
+            $ancestors = array_reverse($ancestors);
+            ?>
+            <div class="action-items breadcrumbs">
+            <p class="assistive-text">Breadcrumbs:</p>
+            <ul class="action-list breadcrumb-list">
+            
+            <?php
+            foreach ($ancestors as $crumb) {
+                echo '<li class="action-item breadcrumb-item"><a href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a></li>';
+            }
+            ?>
+            </ul>
+            </div>
+        <?php
+        }
+        
+    }
+    
+}
