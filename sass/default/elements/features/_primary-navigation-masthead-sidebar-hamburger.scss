@@ -15,6 +15,9 @@
     {
         display: block;
         
+        // Reset
+        background-color: transparent;
+        
         @include media-query( $viewport-wide )
         {
             display: none;

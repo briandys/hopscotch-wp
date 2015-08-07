@@ -93,6 +93,11 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
         {
             @extend %width-limit !optional;
         }
+        
+        .article-entry-fr_cr
+        {
+            @extend %width-limit !optional;
+        }
     }
 }
 

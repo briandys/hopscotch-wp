@@ -11,6 +11,8 @@
 
         .search-form_input
         {
+            padding-right: $utility-block;
+            
             // Reset
             border: 0;
             border-radius: 0;
@@ -21,11 +23,6 @@
             {
                 border-bottom-color: $black;
             }
-        }
-        
-        .search-form-input-field_cr
-        {
-            padding-right: $utility-block;            
         }
 
         .search-form-axn_field
@@ -40,6 +37,9 @@
             border: 0;
             padding: 0;
             width: auto;
+            
+            // Reset
+            background-color: transparent;
 
             .verb_label
             {

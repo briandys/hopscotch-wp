@@ -3,6 +3,11 @@
 {
     width: 100%;
     min-height: $utility-block;
+    
+    label &:hover
+    {
+        cursor: text;
+    }
 }
 
 select
