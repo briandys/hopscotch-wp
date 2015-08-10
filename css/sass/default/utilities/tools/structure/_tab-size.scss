@@ -1,7 +1,0 @@
-//------------------------- Adjust the size of keyboard Tab
-@mixin tab-size( $size: 4 ) {
-    tab-size: $size;
-	-moz-tab-size: $size;
-	-o-tab-size:  $size;
-    white-space: pre-wrap;
-}

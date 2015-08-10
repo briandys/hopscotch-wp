@@ -1,9 +1,0 @@
-//------------------------- Columns
-@mixin columns( $count: 1, $gap: 0 ) {
-    -webkit-column-count: $count;
-    -webkit-column-gap: $gap;
-    -moz-column-count: $count;
-    -moz-column-gap: $gap;
-    column-count: $count;
-    column-gap: $gap;
-}

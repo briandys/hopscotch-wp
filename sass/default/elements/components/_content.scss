@@ -74,7 +74,9 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
 
 .hs-state__content-sidebar--disabled
 {
-    .article-entry_cr,
+    .article-entry-hr_cr,
+    .article-entry-ct_cr,
+    .article-entry-fr_cr,
     .comments_cr,
     .web-product-page-nav_cr,
     .article-entry-nav_cr
@@ -90,11 +92,6 @@ $content-sidebar_width: 100% - $primary-content-comp_width;
         }
         
         .article-entry-hr_cr
-        {
-            @extend %width-limit !optional;
-        }
-        
-        .article-entry-fr_cr
         {
             @extend %width-limit !optional;
         }

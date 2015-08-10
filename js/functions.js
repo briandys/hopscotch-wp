@@ -1,465 +1,374 @@
-(function ($) {
-	var html    = $( 'html' ),
-		body    = $( 'body' ),
-	    _window = $( window ),
-        wideViewportClass = 'type-wide-viewport';
+// Based on WordPress Twentyfifteen functions file.
+// Contains handlers for navigation and widget area.
 
-	
-    //------------------------- Media query for wide or narrow viewport
-    ( function() {
+( function ( $ ) {
+    
+    //------------------------- Generic Variables
+    var $body = $( document.body ),        
+        $html = $( 'html' ),
+        $window, windowWidth, resizeTimer,
+    
+        viewportNarrowClass = 'hs-viewport--narrow',
+        viewportWideClass = 'hs-viewport--wide',
         
-        $(window).on('resize', function(){
-            
-            var windowWidth = $(window).width(),
-                nonMobileWidth = 768,
-                narrowViewportClass = 'type-narrow-viewport';
-            
-            function mqNonMobile() {
-                html.addClass( wideViewportClass );
-                html.removeClass( narrowViewportClass );
-                
-            };
+        // UI Template Variables
+        priNavMastheadSidebarHamburgerClass = 'hs-feature__primary-nav-masthead-sidebar--hamburger',
+        statePriNavMastheadSidebarHamburgerInactiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--inactive',
+        statePriNavMastheadSidebarHamburgerActiveClass = 'hs-state__primary-nav-masthead-sidebar_hamburger--active',
+        
+        searchPoppySeedsClass = 'hs-feature__search--poppy-seeds',           
+        stateSearchPoppySeedsActiveClass = 'hs-state__search_poppy-seeds--active',
+        stateSearchPoppySeedsInactiveClass = 'hs-state__search_poppy-seeds--inactive',
+        
+        priNavVinesClass = 'hs-feature__primary-nav--vines',
+        
+        showTopMushroomClass = 'hs-mod__show-top--mushroom',
+        
+        showContentPeelerClass = 'hs-mod__show-content--peeler';
+    
+    //------------------------- Primary Navigation Variables
+    var priNav = $( '#primary_nav' ),
+        priNavItem = priNav.find( '.nav-item, .page_item, .menu-item' ),
+        parentPriNavItem = priNav.find( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ),
+        parentPriNavItemAction = priNav.find( '.parent_nav-item > a, .page_item_has_children > a, .menu-item-has-children > a' ),
+        priNavItemTreeClass = 'hs-type__primary-nav-item--tree',
+        priNavItemTreeActiveClass = 'hs-state__primary-nav-item_tree--active',
+        priNavItemTreeInactiveClass = 'hs-state__primary-nav-item_tree--inactive',
+        priSubNavToggleAction = '<button class="axn toggle_axn primary-sub-nav-toggle_axn" title="Toggle Sub-Navigation"><span class="label toggle_label">Toggle Sub-Navigation</span></button>',
+        priNavItemTreeInactiveSiblingClass = 'hs-type__primary-nav-item_tree--inactive-sibling';
 
-            function mqMobile() {
-                html.addClass( narrowViewportClass );
-                html.removeClass( wideViewportClass );
-            };
-            
-            ( windowWidth >= nonMobileWidth ) ? mqNonMobile() : mqMobile();
-        
-        }).resize();
-    
-    } )();
-    
-    
-    //------------------------- Main navigation toggle for narrow viewport mode
-	( function() {
-		
-		var mainNav = $( '#main-navigation' ),
-            mainNavControl = mainNav.find( '#main-navigation-heading' ),
-            mainNavContent = mainNav.find( '.main-navigation-ct' ),
-            navMenu = mainNav.find( 'div.nav-menu > ul' );
-		
-        if ( ! mainNav )
-			return;
-		
-		if ( ! mainNavControl )
-			return;
-        
-		if ( ! mainNavContent )
-			return;
-		
-		if ( ! navMenu || ! navMenu.children().length ) {
-			mainNavControl.hide();
-			return;
-		}
-		
-		mainNavActive = 'status-mobile-main-nav-active';
-		uiStateMainNavActive = 'ui-state__main-nav--active';
-		mainNavInactive = 'status-mobile-main-nav-inactive';
-		mainNavStateInactive = 'ui-state__main-nav--inactive';
-        overlayActive = 'status-overlay-active';
+    if( ! priNav )
+        return;
 
-		function navToggle() {
-			$( html ).toggleClass( mainNavActive ).toggleClass( uiStateMainNavActive ).toggleClass( mainNavInactive ).toggleClass( mainNavStateInactive ).toggleClass( overlayActive );
-		};
-		
-        // Activates the nav
-		mainNavControl.on( 'click.hopscotch', function(e) {
-			navToggle();
-            
-            if ( body.hasClass( searchActive )) {
-				searchToggle();
-                searchDeactivate();
-			}
-            
-			e.stopPropagation();
-		} );
-		
-        // Prevents the actual nav to deactivate the nav
-		navMenu.on( 'click.hopscotch', function(e) {
-			e.stopPropagation();
-		});
-		
-        // Overlay deactivates the nav
-		mainNavContent.on( 'click.hopscotch', function(e) {
-			if ( html.hasClass( uiStateMainNavActive )) {
-				navToggle();
-			}
-		});
-		
-		$(document).on( 'keydown.hopscotch', function(e) {
-			if (e.which === 27 && html.hasClass( uiStateMainNavActive )  ) {
-				navToggle();
-			}
-		});
-        
-    } )();
+    if( ! priNavItem )
+        return;
+
+    if( ! parentPriNavItem )
+        return;
+
+    if( ! parentPriNavItemAction )
+        return;
     
+    //------------------------- Primary Navigation & Masthead Sidebar Variables
+    var priNavMastheadSidebarComp = $( '#primary-nav-masthead-sidebar_comp' ),
+        priNavMastheadSidebarToggleAxn = $( '#primary-nav-masthead-sidebar-toggle_axn' );
+
+    if ( ! priNavMastheadSidebarComp ) {
+        return;
+    }
+
+    if ( ! priNavMastheadSidebarToggleAxn ) {
+        return;
+    }    
     
-    //------------------------- Sub navigation toggle for narrow and wide viewport
-    ( function() {
-		
-        var subNavMenuMain = $( 'div.nav-menu' ),
-            subNavMenuParent = subNavMenuMain.find( '.page_item_has_children, .menu-item-has-children' ),
-            subNavMenuChildren = subNavMenuParent.find( '.children, .sub-menu' ),
-            subNavMenuControl = subNavMenuParent.children( 'a' ),
-            subNavMenu = subNavMenuParent.find( '.children, .sub-menu' ),
-            subNavActive = 'status-sub-nav-active',
-            subNavInactive = 'status-sub-nav-inactive',            
-            subNavMenuSecondParent = subNavMenu.find( subNavMenuParent );
-        
-        if( ! subNavMenuMain )
-            return;
-        
-        if ( ! subNavMenuParent )
-            return;
-        
-        if ( ! subNavMenuControl )
-            return;
-        
-        if ( ! subNavMenu || ! subNavMenu.children().length ) {
-            subNavMenu.hide();
-            return;
-        }
-        
-        function subNavToggle() {
-            subNavMenuParent.addClass( subNavInactive );
-			subNavMenuParent.removeClass( subNavActive ).siblings().removeClass( subNavActive );
-		};
-        
-        subNavToggle();
-        
-        
-        // Toggle list item; on second activation, go to link
-        subNavMenuParent.on('click.hopscotch', function(e) {
-            
-            // If the element is inactive
-            if ( ! $(this).hasClass( subNavActive ) ) {
-                
-                // Make it active
-                $(this).addClass( subNavActive ).removeClass( subNavInactive );
-                
-                // Deactivate the siblings
-                $(this).siblings( '.page_item_has_children, .menu-item-has-children' ).removeClass( subNavActive ).addClass( subNavInactive );
-                e.preventDefault();
-            
-            // Otherwise, if the element is active
-            } else {
-                
-                // Make it inactive
-                $(this).addClass( subNavInactive ).removeClass( subNavActive );
-            }            
-        });
-        
-        
-        // Activating anywhere will close the active nav
-		html.on( 'click.hopscotch', function(e) {
-			if ( subNavMenuParent.hasClass( subNavActive )) {
-				subNavToggle();
-			}
-		});
-        
-        // ESC key toggle
-        $(document).on( 'keydown.hopscotch', function(e) {
-			if (e.which === 27 && subNavMenuParent.hasClass( subNavActive )  ) {
-				subNavToggle();
-			}
-		});
-		
-        subNavMenuChildren.on( 'click.hopscotch', function(e) {
-			e.stopPropagation();
-		});
-        
-        // Sub nav toggle for wide viewport
-        subNavMenuSecondParent.on('click.hopscotch', function() {            
-            if ( html.hasClass( wideViewportClass )) {				
-                if ( $(this).hasClass( 'status-sub-nav-active' )) {                
-                    $(this).nextAll().hide();
-                } else {
-                    $(this).nextAll().show();
-                }                
-			}            
-        });
-		
-	} )();
-    
-    
-    //------------------------- Search located on header
-    ( function() {
-        
-        var search = $( '#header-sidebar .search' ),
-			searchControl = $( '#search-control' ),
-            searchField = $( '#header-sidebar .search-input' ),
-			searchActive = 'status-search-active',
-			searchInactive = 'status-search-inactive';
-        
-        if( ! search )
-            return;
-        
-        if( ! searchControl )
-            return;
-        
-        if( ! searchField )
-            return;
-		
-        if ( body.hasClass( searchInactive )) {
-            searchDeactivate();
+    //-------------------------  Viewport Resizing
+    function resize() {
+        console.log( 'Resize' );
+        windowWidth = $window.width();
+
+        //-------------------------  Narrow or Wide Viewport
+        // If Tablet Size (768) is greater than the window width, then that must mean the viewport is either equal to 768 or narrower.
+        if ( 769 > windowWidth ) {
+            $html.addClass( viewportNarrowClass );
+            $html.removeClass( viewportWideClass );
         } else {
-            searchActivate();
+            $html.addClass( viewportWideClass );
+            $html.removeClass( viewportNarrowClass );
         }
-		
-		searchControl.on( 'click.hopscotch', function(e){
-			searchToggle();
-            
-            if ( body.hasClass( searchActive )) {
-                searchActivate();
+        
+        function priNavMastheadSidebarHamburgerActivate() {
+            $body.addClass( statePriNavMastheadSidebarHamburgerActiveClass ).removeClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+        }
+        
+        function priNavMastheadSidebarHamburgerDeactivate() {
+            $body.addClass( statePriNavMastheadSidebarHamburgerInactiveClass ).removeClass( statePriNavMastheadSidebarHamburgerActiveClass );
+        }
+        
+        //------------------------- Hamburger: Activate or Deactivate based on Viewport Width
+        if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) ) {
+            if ( $html.hasClass( viewportNarrowClass ) ) {
+                priNavMastheadSidebarHamburgerDeactivate();
+            } else {
+                priNavMastheadSidebarHamburgerActivate();
             }
-            
-			$( searchField ).focus();
-			e.stopPropagation();
-		});
-		
-		search.on( 'click.hopscotch', function(e){
-			e.stopPropagation();
-		});
-		
-		// Hide main nav
-		function searchToggle() {
-			body.toggleClass( searchActive ).toggleClass( searchInactive );
-		};
+        }
         
-        function searchActivate() {
-            body.attr('data-state-search', 'active');
-        };
+        // Deactivate Hamburger on External Activations
+        // https://css-tricks.com/dangers-stopping-event-propagation/
+        $( document ).on( 'click.hopscotch', function( e ) {
+            if ( $html.hasClass( viewportNarrowClass ) && $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) && !$( event.target ).closest( '#primary-nav-masthead-sidebar-toggle_axn, #primary-nav-masthead-sidebar_comp' ).length ) {
+                priNavMastheadSidebarHamburgerDeactivate();
+            }                
+        }); 
+    }
+    
 
-        function searchDeactivate() {
-            body.attr('data-state-search', 'inactive');
-        };
-		
-		$(document).on( 'click.hopscotch', function() {
-			if ( body.hasClass( searchActive )) {
-				searchToggle();
-                searchDeactivate();
-			}
-		});
-		
-		$(document).on( 'keydown.hopscotch', function(e) {
-			if (e.which === 27 && body.hasClass( searchActive )) {
-				searchToggle();
-                searchDeactivate();
-			}
-		});
-        
+    //-------------------------  Generic: Add Tree Class to Parent Items
+    parentPriNavItem.addClass( priNavItemTreeClass );
+    
+
+    //-------------------------  Show Content Action
+    ( function() {        
+        if ( $html.hasClass( showContentPeelerClass ) ) {
+            var showContentAction = $( '#show-content_axn' );
+                showContentActionActiveClass = 'hs-state__show-content-axn--active';
+
+            showContentAction.on( 'focus.hopscotch', function() {
+                $body.addClass( showContentActionActiveClass );
+            } );      
+
+            showContentAction.on( 'blur.hopscotch', function() {
+                $body.removeClass( showContentActionActiveClass );
+            } );
+        }
     } )();
 
-	
-	//-------------------------  WP: Twenty Fourteen - Makes "skip to content" link work correctly in IE9 and Chrome for better accessibility
-	( function() {
+    
+    //-------------------------  Vines
+    // Tree-like structure of navigation items
+    ( function() {
+        if ( $html.hasClass( priNavVinesClass ) ) {
+            console.log( 'Vines' );
+
+            // Add <button> element to Toggle Sub Nav
+            parentPriNavItemAction.after( priSubNavToggleAction );
+
+            // Set default state of Vine elements (inactive)
+            parentPriNavItem.addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', parentPriNavItem.hasClass( priNavItemTreeInactiveClass ) ? 'false' : 'true' );
+
+            // Vines Toggle Action
+            $( '.primary-sub-nav-toggle_axn' ).on( 'click.hopscotch', function( e ) {
+                var _this = $( this );
+                e.preventDefault();
+
+                // Deactivate Siblings
+                _this.parent( parentPriNavItem ).siblings( '.parent-nav_item, .page_item_has_children, .menu-item-has-children' ).removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', $( this ).hasClass( priNavItemTreeInactiveClass ) ? 'true' : 'false' );
+
+                // Activate Tree
+                _this.parent( parentPriNavItem ).toggleClass( priNavItemTreeInactiveClass + " " + priNavItemTreeActiveClass ).attr( 'aria-expanded', _this.parent( parentPriNavItem ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+                // Identify Siblings of Active Tree Nav Item
+                if (_this.parent( parentPriNavItem ).hasClass( priNavItemTreeActiveClass ) ) {
+                    _this.parent( parentPriNavItem ).siblings().addClass( priNavItemTreeInactiveSiblingClass );
+                } else {
+                    _this.parent( parentPriNavItem ).siblings().removeClass( priNavItemTreeInactiveSiblingClass );
+                }
+            } );
+        }
         
-        _window.on( 'hashchange', function() {
-            var element = document.getElementById( location.hash.substring( 1 ) );
+        //-------------------------  Deactivate Vines on external interaction (similar to Resetting the state of each Vine element)
+        $( document ).on( 'click.hopscotch', function( e ) {
+            if ( $html.hasClass( priNavVinesClass ) && !$( event.target ).closest( '.primary-sub-nav-toggle_axn' ).length ) {
+                parentPriNavItem.removeClass( priNavItemTreeActiveClass ).addClass( priNavItemTreeInactiveClass ).attr( 'aria-expanded', parentPriNavItem.hasClass( priNavItemTreeInactiveClass ) ? 'false' :  'true' );
+                parentPriNavItem.siblings().removeClass( priNavItemTreeInactiveSiblingClass );
+            }                
+        });
+    } )();
 
-            if ( element ) {
-                if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) )
-                    element.tabIndex = -1;
-
-                element.focus();
+    
+    //-------------------------  Hamburger
+    // Toggle Action of Primary Navigation and Masthead Sidebar
+    ( function() {
+        priNavMastheadSidebarToggleAxn.on( 'click.hopscotch', function() {
+            if ( $html.hasClass( priNavMastheadSidebarHamburgerClass ) && $html.hasClass( viewportNarrowClass ) ) {
+                console.log( 'Toggle Clicked and Burger Narrow');
+                $body.toggleClass( statePriNavMastheadSidebarHamburgerInactiveClass + " " + statePriNavMastheadSidebarHamburgerActiveClass );
+                priNavMastheadSidebarComp.attr( 'aria-expanded', $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) ? 'true' : 'false' );
             }
         } );
-        
     } )();
     
-    
-    //-------------------------  Smooth scroll
+
+    //-------------------------  Search Component
     ( function() {
-        
-        $('a[href*=#]:not([href=#]):not(.ui a)').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                        $('body').animate({
-                                scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    } else {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
+
+        var search = $( '.search_comp' ),
+            searchLabel = $( '.search-form_label' ),
+            searchInput = $( '.search-form_input' ),
+
+            mastheadSidebar = $( '#masthead_sidebar' ),
+            contentHeaderSidebar = $( '#content-hr_sidebar' ),
+            contentSidebar = $( '#content_sidebar' ),
+            colophonSidebar = $( '#colophon_sidebar' ),
+
+            mastheadSidebarSearch = mastheadSidebar.find( '.search_comp' ),
+            mastheadSidebarSearchFormInput = mastheadSidebar.find( '.search-form_input' ),
+            mastheadSidebarSearchFormLabel = mastheadSidebar.find( '.search-form_label' ),
+            mastheadSidebarSearchFormResetAction = mastheadSidebar.find( '.search-form_label' ),
+
+            contentHeaderSidebarSearchFormInput = contentHeaderSidebar.find( '.search-form_input' ),
+            contentHeaderSidebarSearchFormLabel = contentHeaderSidebar.find( '.search-form_label' ),
+
+            contentSidebarSearchFormInput = contentSidebar.find( '.search-form_input' ),
+            contentSidebarSearchFormLabel = contentSidebar.find( '.search-form_label' ),
+
+            colophonSidebarSearchFormInput = colophonSidebar.find( '.search-form_input' ),
+            colophonSidebarSearchFormLabel = colophonSidebar.find( '.search-form_label' ),
+            
+            mastheadSidebarSearchClass = '#masthead_sidebar .search_comp',
+
+            stateSearchFocused = 'hs-state__search--focused',
+            stateSearchUnfocused = 'hs-state__search--unfocused';
+
+        if( ! search )
+          return;
+
+        if( ! searchLabel )
+          return;
+
+        if( ! searchInput )
+          return;
+
+        if( ! mastheadSidebar )
+          return;
+
+        if( ! contentSidebar )
+          return;
+
+        if( ! colophonSidebar )
+          return;
+
+        if( ! mastheadSidebarSearch )
+          return;
+
+        if( ! mastheadSidebarSearchFormInput )
+          return;
+
+        if( ! mastheadSidebarSearchFormLabel )
+          return;
+
+        if( ! contentHeaderSidebarSearchFormInput )
+          return;
+
+        if( ! contentSidebarSearchFormInput )
+          return;
+
+        if( ! contentSidebarSearchFormLabel )
+          return;
+
+        if( ! colophonSidebarSearchFormInput )
+          return;
+
+        if( ! colophonSidebarSearchFormLabel )
+          return;
+
+        //-------------------------  Search Poppy Seeds        
+        if ( $html.hasClass( searchPoppySeedsClass ) ) {
+
+            // Set Default Class (inactive)
+            $body.addClass( stateSearchPoppySeedsInactiveClass );
+
+            // Deactivates the Search
+            function searchPoppySeedsDeactivate() {
+                if ( $body.hasClass( stateSearchPoppySeedsActiveClass ) ) {
+                    $body.removeClass( stateSearchPoppySeedsActiveClass ).addClass( stateSearchPoppySeedsInactiveClass );
                 }
             }
-        });
-        
-    } )();
-	
-	
-	//-------------------------  Scroll Top
-	( function() {
-		
-        $(window).on('scroll', function(){
-			
-            var scrollTopActive = 'status-scroll-top-active',
-                scrollTopInactive = 'status-scroll-top-inactive';
-			
-            function scrollTopActivate() {
-                body.addClass( scrollTopActive );
-                body.removeClass ( scrollTopInactive );
-            };
-			
-            function scrollTopDeactivate() {
-                body.addClass( scrollTopInactive );
-                body.removeClass ( scrollTopActive );
-            };
-            
-            if ( $(window).scrollTop() > ( $( window ).height() / 2)) {
-				scrollTopActivate();
-			} else {
-                scrollTopDeactivate();
-            }
-            
-		}).scroll();
-		
-	} )();
-    
-    
-    //-------------------------  Giving height to absolute elements
-    ( function() {
-        
-        var entryMain = $( '.post.ui-type__entry-meta--meta-dashboard' );
-        
-        $( entryMain ).each(function(){
-            
-            var entryMetaHeight = $( this ).find( '.entry-hr .entry-meta' ).outerHeight( true ) + 48;
-            $( this ).find( '.entry-cr' ).css( 'min-height', entryMetaHeight + 'px' );
-        
-        });
-        
-    } )();
-    
-    
-    //-------------------------  UI Tabs
-	( function() {
-		
-		$( '.ui-tablist-item a' ).on( 'click', function(e) {
-            
-            var tab_id = $( this ).attr('aria-controls');
-            
-            $( '.ui-tablist-item a' ).attr('aria-selected', 'false');
-            $( '.ui-tabpanel-item' ).attr('aria-hidden', 'true');
-            
-            $( this ).attr('aria-selected', 'true');
-            $( "#"+tab_id ).attr('aria-hidden', 'false');
-            
-            e.preventDefault();
-        })
-        
-    } )();
-    
-    
-    //-------------------------  Focusing on form elements
-	( function() {
-		
-		// Focusing on form UIs
-		var ui_tabs = $( 'ui-tabs' ),
-            form = $( 'form' ),
-            form_elements = $( 'input, textarea, button' );
-		
-		form.on('focus', 'input, textarea, button', function() {
-			$(this).parent().attr('data-state-form-element', 'focused');
-		});
-		
-        form.on('focusout', 'input, textarea, button', function() {
-			$(this).parent().attr('data-state-form-element', 'unfocused');
-		});
-        
-        form_elements.on( 'focus', function() {
-            $(this).parent().attr('data-state-form-element', 'focused');
-        });
-        
-        form_elements.on( 'focusout', function() {
-            $(this).parent().attr('data-state-form-element', 'unfocused');
-        });
-        
-    } )();
-    
-    
-    //-------------------------  <label> elements that enclose <input> elements
-	( function() {
-        $( 'label:has( input )' ).addClass( 'label-cr' );
-    } )();
-    
-    
-    //-------------------------  Adding 'parent-menu' to nav items with children
-    ( function() {
-		$('.menu-item:has(.children, .sub-menu), .page_item:has(.children, .sub-menu)').addClass('parent-menu');
-	} )();
-    
-    
-    //-------------------------  Define orientation of images
-    ( function() {	
-		
-        $('.entry-ct img').each(function(){			
-            if (this.width == this.height) {
-                $(this).parents( '.img-cr' ).addClass( 'img-orientation-square' );
-            } else if (this.width > this.height) {
-                $(this).parents( '.img-cr' ).addClass( 'img-orientation-landscape' );
-            } else if (this.width < this.height) {
-                $(this).parents( '.img-cr' ).addClass( 'img-orientation-portrait' );
-            }
-		});
-   
-    } )();
-    
-    
-    //-------------------------  WP: remove "novalidate" from Comment Form
-    ( function() {
-        $("#comment-form").removeAttr("novalidate");	
-    } )();
-    
-    
-    // Add alignment classes to image containers
-	( function() {
-		
-        $('.entry-ct img').each(function(){			
-            if ( $(this).is( '.alignleft' ) ) {
-                $(this).parents( '.img-cr' ).addClass( 'img-alignment-left' );
-            } else if ( $(this).is( '.alignright' ) ) {
-                $(this).parents( '.img-cr' ).addClass( 'img-alignment-right' );
-            } else if ( $(this).is( '.aligncenter' ) ) {
-                $(this).parents( '.img-cr' ).addClass( 'img-alignment-center' );
-            } else if ( $(this).is( '.alignnone' ) ) {
-                $(this).parents( '.img-cr' ).addClass( 'img-alignment-none' );
-            };
-		});
-   
-    } )();
-    
-    
-    //------------------------- Sticky Header
-    $( function() {
-        
-        if ( $( body ).hasClass( 'ui-type__masthead--fixed-header' ) && ! $( body ).hasClass( 'admin-bar' ) ) {
-            
-            $(window).on('resize', function(){
 
-                var mastheadHeight = $('#masthead').outerHeight( true ),
-                    main = $( '#main' );          
+            // Activate Search on Focus on Input
+            mastheadSidebarSearchFormInput.on( 'focus.hopscotch', function() {
+                $body.removeClass( stateSearchPoppySeedsInactiveClass ).addClass( stateSearchPoppySeedsActiveClass );
+                
+                // Deactivate Hamburger on Search Focus
+                if ( $body.hasClass( statePriNavMastheadSidebarHamburgerActiveClass ) && $html.hasClass( viewportNarrowClass ) ) {
+                    $body.removeClass( statePriNavMastheadSidebarHamburgerActiveClass ).addClass( statePriNavMastheadSidebarHamburgerInactiveClass );
+                }
+            } );
 
-                function mainApplyPadding() {
-                    main.css( 'padding-top', mastheadHeight + 'px' );
+            // Deactivate Search if input is empty and user activates Reset
+            $( '#search-form-reset_axn' ).on( 'click.hopscotch', function() {
+                if ( $( '#search-form_input' ).val() == '' ) {
+                    searchPoppySeedsDeactivate();
+                }                
+            } );
+        }
+
+        //-------------------------  Deactivate Search on click on the document body
+        $( document ).on( 'click.hopscotch', function( e ) {
+            if ( $body.hasClass( stateSearchPoppySeedsActiveClass ) && !$( event.target ).closest( mastheadSidebarSearchClass ).length ) {
+                console.log( 'Poppy Seeds Deactivated Externally');
+                searchPoppySeedsDeactivate();
+            }                
+        });
+
+        //-------------------------  Differentiate the ID of Search Inputs
+        contentHeaderSidebarSearchFormInput.attr( 'id', 'search-form-content-header-sidebar_input' );
+        contentHeaderSidebarSearchFormLabel.attr( 'for', 'search-form-content-header-sidebar_input' );
+        
+        contentSidebarSearchFormInput.attr( 'id', 'search-form-content-sidebar_input' );
+        contentSidebarSearchFormLabel.attr( 'for', 'search-form-content-sidebar_input' );
+
+        colophonSidebarSearchFormInput.attr( 'id', 'search-form-colophon-sidebar_input' );
+        colophonSidebarSearchFormLabel.attr( 'for', 'search-form-colophon-sidebar_input' );
+
+    } )();
+    
+
+    //-------------------------  Show Top
+    ( function() {
+        if ( $html.hasClass( showTopMushroomClass ) ) {
+            
+            $( window ).on( 'scroll.hopscotch', function(){			
+                var showTopActiveClass = 'hs-state__show-top--active',
+                    showTopInactiveClass = 'hs-state__show-top--inactive';
+
+                // Activate
+                function showTopActivate() {
+                    $body.addClass( showTopActiveClass ).removeClass( showTopInactiveClass );
                 };
 
-                mainApplyPadding();
+                // Deactivate
+                function showTopDeactivate() {
+                    $body.addClass( showTopInactiveClass ).removeClass( showTopActiveClass );
+                };
 
-            }).resize();
-            
-        };
+                // Activation if near bottom
+                if ( $( window ).scrollTop() > ( $( window ).height() / 2) ) {
+                    showTopActivate();
+                } else {
+                    showTopDeactivate();
+                }
+            }).scroll();
+        }
+    } )();
     
+
+    //-------------------------  WordPress Inadequacies
+    
+    // Remove <p>&nbsp;</p>
+    $( '.post p' ).each( function() {
+        var $this = $( this );
+        if( $this.html().replace( /\s|&nbsp;/g, '' ).length == 0 )
+            $this.remove();
     } );
     
-	
+    // Name the more-link container
+    $( '.more-link' ).parents( 'p' ).addClass( 'more-link_cr' );
+    
+    // Hide empty Tag Cloud
+    $( '.tagcloud:empty' ).parents( '.widget_tag_cloud' ).addClass( 'ui-state__widget-comp--empty' );
+    
+
+    //-------------------------  Document Ready
+    $( document ).ready( function() {
+        $window = $( window );
+        
+        // Set a delay for loading of elements
+        setTimeout( function() {
+            $html.addClass( 'hs-state__document--ready' );
+        }, 500);
+
+        $window.on( 'resize.hopscotch', function() {
+            clearTimeout( resizeTimer );
+            resizeTimer = setTimeout( resize, 0 );
+        } );
+
+        resize();
+
+        // Unsure about why it sets it multiple times
+        for ( var i = 1; i < 6; i++ ) {
+            setTimeout( resize, 100 * i );
+        }
+    });
+    
 } )( jQuery );

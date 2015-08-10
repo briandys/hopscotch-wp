@@ -446,18 +446,7 @@
     //------------------------- Showboxed - Actions
     &.hs-mod__actions--shoeboxed
     {
-        .article-entry-hr_hr
-        {
-            @include padding-x( $gutter );
-        }
-        
-        .article-entry-title_name
-        {
-            display: inline;
-            @include padding-x( 0 );
-            vertical-align: middle;
-        }
-        
+        .article-entry-title_name,
         .article-entry-admin_comp,
         .comment-admin-sign-in_comp,
         .comment-form-admin-actions_comp,
@@ -497,7 +486,7 @@
             .comment-admin-sign-in_comp,
             .comment-entry-author_comp
             {
-                // margin-right: -$gutter-l;
+                margin-right: -$gutter-l;
             }
         }
         
