@@ -3,6 +3,17 @@
     // Var
     $breakpoint-comment: $moblet;
     
+    .comment-entry_comp
+    {
+        margin-bottom: $gutter;
+        @include padding-x( $gutter );
+    }
+    
+    .comment-entry_cr
+    {
+        border: $one dotted $faint;
+    }
+    
     .comment-entry-ct_cr
     {
         // Reset

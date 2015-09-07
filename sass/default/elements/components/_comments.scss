@@ -12,6 +12,16 @@
 .comment-respond
 {
     @include hs-nature--child-normalize;
+    
+    .comment &
+    {
+        margin-bottom: $gutter;
+    }
+    
+    .comment:last-child &
+    {
+        margin-bottom: 0;
+    }
 }
 
 .form-submit,

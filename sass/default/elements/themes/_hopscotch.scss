@@ -185,6 +185,16 @@
             border-radius: $radius-xs;
             @include transition--basic;
         }
+        
+        .article-entry-tag_cr
+        {
+            margin-left: -$radius;
+        }
+        
+        .tag-tag_accessible-name
+        {
+            margin-left: -$gutter-xxxs;
+        }
     }
     
     //------------------------- Entry - Article and Comments
@@ -291,17 +301,6 @@
     }
     
     //------------------------- Comments
-    .comment-entry_comp
-    {
-        margin-bottom: $gutter;
-        @include padding-x( $gutter );
-    }
-    
-    .comment-entry_cr
-    {
-        border: $one dotted $faint;
-    }
-    
     #cancel-comment-reply-link
     {
         .subj_label

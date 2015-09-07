@@ -71,3 +71,11 @@ label[for]
         cursor: pointer;
     }
 }
+
+label
+{
+    input:hover
+    {
+        cursor: text;
+    }
+}

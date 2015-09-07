@@ -2,8 +2,7 @@
 // Not to be used on elements to increase padding
 
 //------------------------- Gutter
-.web-product-page-nav_cr,
-.widget_cr
+.web-product-page-nav_cr
 {
     padding: $gutter;
 }
@@ -45,9 +44,15 @@ td
 .comments_ct .blank-comments_notice,
 .content-hr_accessible-name,
 .primary-content_desc,
-.comments-commenting-disabled_note
+.comments-commenting-disabled_note,
+.widget_cr
 {
     @include padding-x( $gutter );
+}
+
+.widget_cr
+{
+    @include padding-y( $gutter-l );
 }
 
 //------------------------- Gutter-y
