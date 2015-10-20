@@ -10,7 +10,7 @@ function hopscotch_styles_scripts() {
     
     // Fonts
     // Location: functions > fonts.php
-    wp_enqueue_style( 'hopscotch-fonts', hopscotch_fonts_url(), array(), null );
+    // wp_enqueue_style( 'hopscotch-fonts', hopscotch_fonts_url(), array(), null );
     
     if( ! is_admin() ) {
         

@@ -1,9 +1,10 @@
 <?php
 // HTML Class
 
-if ( ! function_exists( 'hopscotch_detection_html_class' ) ) :
-	function hopscotch_detection_html_class() {
+if ( ! function_exists( 'hopscotch_top_hookup_html_class' ) ) :
+	function hopscotch_top_hookup_html_class() {
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
+        global $post;
         
         // Default
         echo ' html';
@@ -33,7 +34,19 @@ if ( ! function_exists( 'hopscotch_detection_html_class' ) ) :
         // View
         if ( ! is_front_page() ) echo ' hs-view--inner';
         else echo ' hs-view--front';
+        
+        
+        // Article Entry Slug as Class
+        // Format: <Post Type>--<Slug>
+        // Example: If type is Post then: post--page-title
+
+        // Conditional: If the page is a blog page, do not classify because there are numerous posts
+        
+        // Name of Post or Page
+        if ( isset( $post ) && ! ( is_front_page() && is_home() ) )
+            echo ' hs-type__view--' . $post->post_type;
+            echo ' hs-type__' . $post->post_type . '--' . $post->post_name;
     
     }
-    add_action( 'hopscotch_html_class', 'hopscotch_detection_html_class');
+    add_action( 'hopscotch_html_class', 'hopscotch_top_hookup_html_class');
 endif;

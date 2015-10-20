@@ -8,24 +8,6 @@ function hopscotch_body_class( $classes ) {
     // Default
     $classes[] = 'body';
 
-    // Article Entry Slug as Class
-    // Format: <Post Type>--<Slug>
-    // Example: If type is Post then: post--page-title
-    if ( isset( $post ) &&  ! is_front_page() ) {		
-        $classes[] = 'hs-type__' . $post->post_type . '--' . $post->post_name;
-        $classes[] = 'hs-type__view--' . $post->post_type;
-    } else {        
-        $classes[] = 'hs-type__view--front';
-    }
-
-    // Article Entry Category as Class
-    // Format: category--<Category-Name>
-    // Example: category--uncategorized
-    if ( is_single() ) {
-        foreach( ( get_the_category( $post->ID ) ) as $category )
-        $classes[] = 'hs-category__article-entry--' .$category->category_nicename;
-    }
-
     // Masthead Sidebar Class
     if ( is_active_sidebar( 'masthead-sidebar' ) )
         $classes[] = 'hs-state__masthead-sidebar--enabled';
